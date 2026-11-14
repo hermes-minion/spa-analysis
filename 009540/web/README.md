@@ -48,30 +48,18 @@ La cola (`queue`) admite nombres sin informe; se muestran como *candidata* y no 
 
 ## Servido
 
-- `equity-coverage.service` (systemd --user): `python3 -m http.server 9120 --bind 127.0.0.1` sobre `web/`.
-- `equity-coverage-tunnel.service`: Cloudflare Quick Tunnel, **URL pública actual**: <https://drama-dicke-easily-cbs.trycloudflare.com>.
-  La URL cambia si el túnel se reinicia: `grep -o 'https://[a-z0-9-]*\.trycloudflare\.com' ~/.hermes/logs/equity-coverage-tunnel.log | tail -1`.
-  Para que no cambie, `Restart=always` ya está puesto; si el proceso muere, la URL nueva aparece en ese log.
+- **Producción**: Worker `spa-analysis` con static assets → <https://spa-analysis.sergiovalle.workers.dev> (detalle en «Despliegue en Cloudflare»).
 - Copia estable (requiere login del dashboard): `https://hermes.minion.dpdns.org/analyses/`.
 
-### URL permanente — analyses.minion.dpdns.org
+**Retirado el 14-nov-2026** (decisión del usuario): `equity-coverage.service` (`python3 -m http.server` en `:9120`) y `equity-coverage-tunnel.service` (quick tunnel → `drama-dicke-easily-cbs.trycloudflare.com`). Ambos quedan `disabled`, sin ficheros en `~/.config/systemd/user/` y archivados en `~/.hermes/backup/units/`. El puerto 9120 está cerrado y esa URL responde **530**: ya no hay preview por túnel.
 
-El túnel con nombre es **token-managed** (`cloudflared tunnel run --token-file`): su ingress vive en el panel, no en un `config.yml` local. Por eso el hostname se añade en Cloudflare, no aquí.
+Para previsualizar en local sin servicio:
 
-**Panel (2 minutos):**
-1. Zero Trust → Networks → Tunnels → túnel `fbf64571-5d11-4246-926e-18f01c24fcb4` → *Public hostname* → **Add**.
-2. Subdomain `analyses`, domain `minion.dpdns.org`, service `HTTP` → `127.0.0.1:9120`, path vacío. Guardar (crea el CNAME proxied solo).
-3. Si la zona tiene una Access application con wildcard `*.minion.dpdns.org`, añadir una política **Bypass** para `analyses.minion.dpdns.org` o quedará detrás del login.
-
-**API (un comando), si prefieres token:**
 ```bash
-CLOUDFLARE_API_TOKEN=... python3 cf_setup_subdomain.py
+python3 -m http.server 9120 --bind 127.0.0.1 --directory ~/stocks/009540/web
 ```
-El token necesita *Account → Cloudflare Tunnel: Edit* y *Zone → DNS: Edit* sobre `minion.dpdns.org`. El script lee account/tunnel del propio token de cloudflared, inserta la regla antes del catch-all (sin tocar las demás), crea o actualiza el CNAME a `fbf64571-5d11-4246-926e-18f01c24fcb4.cfargotunnel.com` y verifica `https://analyses.minion.dpdns.org/analyses.json`.
 
-Estado (14-nov-2026): **aplazado por decisión del usuario** — se mantiene la quick tunnel como URL pública. `cf_setup_subdomain.py` queda listo para ejecutarlo el día que se quiera fijar el subdominio; no hay registro DNS creado.
-
-Alternativa sin DNS propio: desplegar `web/` como Cloudflare Pages (`wrangler pages deploy web`), que da un `*.pages.dev` estable.
+El plan de fijar `analyses.minion.dpdns.org` sobre el túnel (y `cf_setup_subdomain.py`) queda **sin objeto**: el Worker ya tiene URL fija. `cf_setup_subdomain.py` sigue en el directorio como herramienta interna, fuera del sitio publicado por `.assetsignore`.
 
 ## Despliegue en Cloudflare
 
