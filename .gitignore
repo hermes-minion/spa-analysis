@@ -15,3 +15,6 @@
 
 # Volcado interno del pipeline (no lo usa la SPA ni Pages)
 009540/web/entries_generated.json
+
+# secretos locales (token de despliegue)
+.env
