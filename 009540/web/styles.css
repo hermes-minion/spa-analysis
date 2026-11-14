@@ -69,6 +69,7 @@ tbody tr:hover{background:rgba(94,234,212,.05)}
 .hold{background:rgba(143,163,184,.12);color:var(--muted);border:1px solid var(--line)}
 .notes{background:rgba(147,197,253,.12);color:#93c5fd;border:1px solid rgba(147,197,253,.32)}
 .regime{background:rgba(240,171,252,.12);color:#f0abfc;border:1px solid rgba(240,171,252,.32)}
+.review{background:rgba(165,180,252,.12);color:#a5b4fc;border:1px solid rgba(165,180,252,.32)}
 .minitag{display:inline-block;margin:4px 4px 0 0;padding:1px 6px;border-radius:999px;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--line);color:var(--muted)}
 .minitag.ia{color:#a78bfa;border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.10)}
 .minitag.hugo{color:var(--acc2);border-color:rgba(242,193,78,.4);background:rgba(242,193,78,.10)}

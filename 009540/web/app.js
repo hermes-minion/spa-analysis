@@ -39,6 +39,7 @@
     if (s.includes("infravalor")) return "buy";
     if (s.includes("bullish") || s.includes("alcista")) return "buy";
     if (s.includes("notas")) return "notes";
+    if (s.includes("revisión") || s.includes("revision") || s.includes("auditoría")) return "review";
     if (s.includes("régimen") || s.includes("regimen")) return "regime";
     if (s.includes("especul")) return "spec";
     if (s.includes("bajista") || s.includes("venta") || s.includes("bearish") ||

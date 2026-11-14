@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-14",
-  "base_note": "USD/CAD/EUR/JPY/KRW según ficha; precio al cierre indicado en cada informe",
+  "base_note": "USD/CAD/EUR/JPY/KRW/IDX según ficha; cierres del 13-nov-2026; TGB es un índice base 100",
   "analyses": [
     {
       "ticker": "009540",
@@ -1555,11 +1555,11 @@
       "rating_class": "hold",
       "price": 100,
       "currency": "IDX",
-      "central": 112.4,
+      "central": 126.0,
       "expected": 112.4,
-      "bear": 72,
+      "bear": 72.0,
       "bull": 152.5,
-      "upside": 0.124,
+      "upside": 0.26,
       "expected_upside": 0.124,
       "dividend_yield": null,
       "score": null,
@@ -1624,25 +1624,25 @@
       ],
       "scenarios": [
         {
-          "name": "Re-rating completo (FV nota)",
-          "prob": 0.2,
-          "value": 152.5,
-          "ret": 0.525
+          "name": "Bajista",
+          "prob": 0.35,
+          "value": 72.0,
+          "ret": -0.28
         },
         {
-          "name": "Base: la mitad del hueco",
+          "name": "Base",
           "prob": 0.45,
           "value": 126.0,
           "ret": 0.26
         },
         {
-          "name": "La disrupción se impone",
-          "prob": 0.35,
-          "value": 72.0,
-          "ret": -0.28
+          "name": "Alcista",
+          "prob": 0.2,
+          "value": 152.5,
+          "ret": 0.525
         }
       ],
-      "scenario_note": "Índice equiponderado de los 10 nombres, base 100 al cierre del 13-nov-2026. Probabilidades subjetivas; el valor esperado (112,4) equivale a +2,5-4% anualizado a 3-5 años."
+      "scenario_note": "Índice equiponderado de los 10 nombres, base 100 al cierre del 13-nov-2026. El valor central es el escenario Base; el esperado (112,4) pondera los tres y equivale a +2,5-4% anualizado a 3-5 años, por debajo del bono al 5,15%."
     },
     {
       "ticker": "VPG",
