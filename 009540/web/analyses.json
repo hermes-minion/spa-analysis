@@ -120,7 +120,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Tsugami designs and manufactures precision machine tools — automatic lathes (the core), machining centers and grinding machines — plus related services. Customers are in automotive (fuel injection, drivetrain), semiconductor equipment, medical devices and general precision parts.",
+      "summary": "Price: ¥3,875 (Tokyo close, 13 Nov 2026) · Market cap: ¥179.4B ($1.12B) · EV: ¥173.5B · P/E TTM: 9.5x · EV/EBITDA: 4.2x · FCF yield: 14.7%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -149,7 +149,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Sony is a collection of leadership franchises. Image sensors (IMX) are a genuine technology moat: stacked CMOS, global shutter, automotive-grade qualification, and a customer list that includes every major smartphone OEM. Music owns publishing and recorded catalogs (a royalty annuity with pricing power). Games has the PS5 platform, digital store economics and IP (God of War, Spider-Man, The Last of Us). Pictures/Crun",
+      "summary": "Price: ¥4,353 (Tokyo close, 13 Nov 2026) · Market cap: ¥25.4T ($159B) · EV: ¥26.0T · P/E TTM: n/a (net loss) · P/E FY2027E: 19.9x · EV/EBITDA: 11.2x · Dividend yield: 0.8%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -282,7 +282,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Aeva designs FMCW 4D lidar — sensors measuring velocity per point as well as range — on a silicon-photonics \"lidar-on-chip\" (CoreVision) plus a custom SoC (Aeva X1) (FACT, 10-K).",
+      "summary": "Price used for valuation: $10.58 (Nasdaq close, 13 Nov 2026, −10.3% on the day). Market cap $739.5M; net cash $45.7M; enterprise value $693.9M (StockAnalysis).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -311,7 +311,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Argan's main subsidiary, Gemma Power Systems, provides engineering, procurement and construction (EPC) for gas-fired power plants, LNG terminals and industrial projects. Other subsidiaries provide telecom infrastructure and consulting.",
+      "summary": "Price: $306.48 (NYSE close, 13 Nov 2026) · Market cap: $4.30B · EV: $3.28B · P/E TTM: 24.2x · Fwd P/E: 22.2x · EV/EBITDA: 17.7x · FCF yield: 12.7%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -340,7 +340,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Ambarella designs fabless, low-power AI systems-on-chip (SoCs) and the software stack that runs on them. The chip integrates the image signal processor, the CVflow neural-network accelerator, CPUs, video encoder and system functions on one die — the architectural bet being that at the edge, unlike in the data centre, \"everything on one chip\" beats \"a collection of discrete parts\" on power, latency and cost (Citi TMT ",
+      "summary": "Price used for valuation: $60.12 (Nasdaq close, 13 Nov 2026). Market cap $2.65B; enterprise value $2.39B; net cash $259.7M [$5.88/share].",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -369,7 +369,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Amazon has three engines: North America retail (e-commerce, advertising, logistics), International retail and AWS (cloud infrastructure, database, AI services). Advertising is the highest-margin piece and is growing >20%; AWS is the profit pool (~60% of operating income).",
+      "summary": "Price: $266.66 (Nasdaq close, 13 Nov 2026) · Market cap: $2.88T · EV: $3.07T · P/E TTM: 21.6x · Fwd P/E: 27.0x · EV/EBITDA: 16.7x · FCF: -$46.9B",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -398,7 +398,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "AppLovin's core is AXON, a machine-learning ad-recommendation engine that matches advertisers to mobile inventory. It earns a take rate on ad spend, plus software-platform fees. The economic magic is that AXON's models improve with data density: more spend → better predictions → higher return on ad spend → more spend. That flywheel produced 55% growth at 78% operating margins.",
+      "summary": "Price: $409.10 (Nasdaq close, 13 Nov 2026) · Market cap: $135.5B · EV: $135.9B · P/E TTM: 27.4x · Fwd P/E: 20.8x · EV/EBITDA: 22.5x · FCF yield: ~3.6%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -427,7 +427,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Broadcom sells semiconductors (custom ASICs, networking, wireless, broadband, storage) and infrastructure software (VMware, CA, Symantec enterprise). The moat is design-win lock-in: custom AI chips are co-designed with hyperscalers over years, and networking silicon is the industry standard. VMware has high switching costs.",
+      "summary": "Price: $347.01 (Nasdaq close, 13 Nov 2026) · Market cap: $1.66T · EV: $1.69T · P/E TTM: 44.3x · Fwd P/E: 19.9x · EV/EBITDA: 32.3x · FCF yield: 2.4%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -456,7 +456,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "BigBear.ai sells applied AI and analytics to the US national-security apparatus, delivered as people-plus-software on government contracts. One reporting segment; the useful decomposition is by capability [2][8]:",
+      "summary": "Price used for valuation: $1.91 (NYSE close, 13 Nov 2026, −7.73% on the day). Market cap $919.5M on 481.39M shares; total liquidity $399.0M; debt $22.5M; net cash $376.5M [$0.78/share]; EV $543.0M.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -485,7 +485,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Booking earns a commission (roughly 15-20% of gross booking value) from hotels and other accommodation providers. Its moat is demand aggregation: 30M+ listings, brand, loyalty (Genius), and the largest paid-search budget in travel. Hotels value the incremental demand; travellers value selection and price transparency.",
+      "summary": "Price: $159.58 (Nasdaq close, 13 Nov 2026; post-split) · Market cap: $118.7B · EV: $123.9B · P/E TTM: 17.4x · Fwd P/E: 13.6x · EV/EBITDA: 12.6x · FCF yield: 7.8%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -514,7 +514,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "BlackSky owns a small-satellite constellation plus a tasking/analytics platform (Spectra) and sells three things out of that stack (FY2025 10-K):",
+      "summary": "Price used for valuation: $23.80 (NYSE close, 13 Nov 2026). Market cap $985.3M on 41,398,708 shares (10-Q cover, 2 Nov 2026); EV ≈ $1.00B; net debt ≈ $7M (cash and short-term investments ex-restricted $212.8M less debt $219.9M).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -543,7 +543,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "CarGurus operates a car-shopping marketplace: consumers search listings, dealers pay for leads/subscriptions, and manufacturers pay for advertising. Revenue is mostly US dealer subscriptions (~70%), with international and product revenue (CarOffer, financing) making up the rest.",
+      "summary": "Price: $34.81 (Nasdaq close, 13 Nov 2026) · Market cap: $3.11B · EV: $3.13B · P/E TTM: 22.7x · Fwd P/E: 11.8x · EV/EBITDA: 11.3x · FCF yield: 10.5%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -572,7 +572,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "CEVA licenses silicon and software IP that other companies embed in their own chips. It sells no chips. Three layers, which are also the revenue disclosure:",
+      "summary": "Price: $25.59 (Nasdaq close, 13 Nov 2026). Market cap $730.0M; net cash $204.0M [$7.15/sh]; EV $526.0M.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -601,7 +601,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Cognex sells industrial machine vision: cameras, lenses and lighting, embedded vision systems, and the software that converts pixels into a pass/fail, a measurement or a robot coordinate. Management sizes its served market at ~$7B growing 10–11% through the cycle (Baird, 10 Nov 2026 — company estimate).",
+      "summary": "Price: $50.01 (Nasdaq close, 13 Nov 2026; after-hours $49.00). Market cap $8.42B on 168.38M shares; cash and investments $846M ($5.02/share); no funded debt; EV $7.64B; net cash $775.6M ($4.61/share).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -630,7 +630,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Celestica provides design, manufacturing and supply-chain services to OEMs and hyperscalers: networking switches, servers, storage, aerospace/defense electronics and industrial hardware. The AI networking business (800G/1.6T switches) is the growth engine.",
+      "summary": "Price: C$342.32 (TSX close, 13 Nov 2026) · Market cap: C$43.2B ($30.3B) · EV: C$39.0B · P/E TTM: 22.7x · Fwd P/E: 13.2x · EV/EBITDA: 15.7x · FCF yield: 1.8%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -659,7 +659,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Edenred issues and manages prepaid benefit and mobility solutions: meal vouchers, fuel/fleet cards, gift cards and corporate payments. Revenue comes from issuer fees, merchant commissions and float income. The model is a two-sided network: employers distribute benefits, employees spend them at affiliated merchants.",
+      "summary": "Price: €25.52 (Euronext Paris close, 13 Nov 2026) · Market cap: €5.89B ($6.5B) · EV: €7.78B · P/E TTM: 12.4x · Fwd P/E: 11.2x · EV/EBITDA: 7.0x · Dividend yield: 5.2%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -688,7 +688,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "FIX operates through regional mechanical/electrical contractors (Comfort Systems, Walker, MMC, etc.), executing design-build and installation work. The model is low-capital-intensity: customers fund projects, FIX is paid progress billing, and working capital is a source of cash when backlogs grow.",
+      "summary": "Price: $1,112.50 (NYSE close, 13 Nov 2026) · Market cap: $38.9B · EV: $37.0B · P/E TTM: 24.0x · Fwd P/E: 17.8x · EV/EBITDA: 16.2x · FCF yield: 6.3%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -717,7 +717,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Alphabet is three businesses: Google Services (Search, YouTube, Maps, Play, subscriptions), Google Cloud (GCP, Workspace, TPU/AI infrastructure) and Other Bets (Waymo, Verily, etc.). Advertising is still ~75% of revenue; Cloud is the growth and margin engine.",
+      "summary": "Price: $295.77 (Nasdaq close, 13 Nov 2026) · Market cap: $3.64T · EV: $3.52T · P/E TTM: 15.4x · Fwd P/E: 21.5x · EV/EBITDA: 19.0x · FCF yield: 0.5%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -746,7 +746,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "IES Holdings operates through regional electrical/mechanical contractors (IES Commercial, IES Residential, IES Communications). It designs and installs electrical systems, data/communications infrastructure, HVAC and plumbing for data centers, warehouses, hospitals, schools and homes.",
+      "summary": "Price: $170.28 (Nasdaq close, 13 Nov 2026) · Market cap: $6.79B · EV: $6.47B · P/E TTM: 15.1x · Fwd P/E: 13.5x · EV/EBITDA: 11.8x · FCF yield: 3.4%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -775,7 +775,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "indie designs mixed-signal SoCs and system solutions for automotive perception — radar, vision, LiDAR, ultrasound — plus in-cabin user-experience silicon and, since TeraXion/Exalos, photonics. Fabless except photonics assembly in Quebec and Switzerland; ~800 employees; 360+ issued patents (FY2025 10-K).",
+      "summary": "Price used for valuation: $2.10 (Nasdaq close, 13 Nov 2026). Market cap $505.7M; enterprise value $815.7M; net debt $310.1M.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -804,7 +804,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Innodata is a data engineering services company re-positioned around generative AI. Four capability blocks [3]:",
+      "summary": "Price for valuation: $35.46 (Nasdaq close, 13 Nov 2026; −2.29%). Market cap $1.22B on 34.41M shares; net cash $160.4M; EV $1.06B.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -833,7 +833,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Intuit monetises recurring compliance and financial workflows. QuickBooks is the system of record for millions of small businesses (subscription + payments + payroll + lending); TurboTax is the consumer tax franchise (unit sales plus paid upgrades); Credit Karma is an advertising/marketplace business; Mailchimp is SMB email/automation.",
+      "summary": "Price: $341.70 (Nasdaq close, 13 Nov 2026) · Market cap: $91.3B · EV: $92.5B · P/E TTM: 20.8x · Fwd P/E: 14.4x · EV/EBITDA: 13.5x · FCF yield: 9.5%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -862,11 +862,65 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "IonQ builds trapped-ion quantum computers and sells systems, cloud access and services. It has a differentiated modality (trapped ions have high gate fidelity and all-to-all connectivity) and a growing patent portfolio. The 2025-26 acquisition spree bought photonics, networking and quantum-safe cryptography assets — a bet on becoming a full-stack quantum platform.",
+      "summary": "Price: $28.88 (NYSE close, 13 Nov 2026) · Market cap: $12.5B · EV: $11.6B · EV/Sales TTM: 30.4x · FCF: -$689M · Net cash: $915M",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
       "kind": null
+    },
+    {
+      "ticker": "IREN",
+      "exchange": "NASDAQ",
+      "name": "IREN Limited",
+      "country": "Estados Unidos",
+      "sector": "—",
+      "date": "2026-11-13",
+      "status": "published",
+      "rating": "Notas",
+      "price": 18.17,
+      "currency": "USD",
+      "central": null,
+      "expected": null,
+      "bear": null,
+      "bull": null,
+      "upside": null,
+      "dividend_yield": null,
+      "score": null,
+      "score_max": 100,
+      "report": "reports/IREN.html",
+      "tags": [],
+      "summary": "Documento: notas verificadas, no un informe de valoración. Cada cifra lleva su fuente; lo que no se pudo verificar está marcado como [NF].",
+      "thesis": [],
+      "metrics": [],
+      "scenarios": [],
+      "kind": "Notas"
+    },
+    {
+      "ticker": "KEEL",
+      "exchange": "NASDAQ",
+      "name": "Keel Infrastructure",
+      "country": "Estados Unidos",
+      "sector": "—",
+      "date": "2026-11-13",
+      "status": "published",
+      "rating": "Notas",
+      "price": 1.86,
+      "currency": "USD",
+      "central": null,
+      "expected": null,
+      "bear": null,
+      "bull": null,
+      "upside": null,
+      "dividend_yield": null,
+      "score": null,
+      "score_max": 100,
+      "report": "reports/KEEL.html",
+      "tags": [],
+      "summary": "Documento: notas verificadas, no un informe de valoración. Lo que no se pudo verificar está marcado como [NF].",
+      "thesis": [],
+      "metrics": [],
+      "scenarios": [],
+      "kind": "Notas"
     },
     {
       "ticker": "LFMD",
@@ -992,7 +1046,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Lattice sells low-power, small-form-factor programmable logic and, since July 2026, platform firmware. The pitch is not raw compute — it is instant-on, deterministic, sub-watt control and connectivity next to sensors, actuators and main processors.",
+      "summary": "Price used for valuation: $112.35 (Nasdaq close, 13 Nov 2026, −5.47% in a sector-wide semis selloff). Market cap $15.98B; EV $16.78B; net debt $797M (−$5.60/share).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1021,7 +1075,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Mobileye sells perception and driving-decision systems for vehicles, delivered as a tightly coupled stack of purpose-built silicon (EyeQ SoC), software (perception, REM mapping, RSS driving policy) and, increasingly, full ECUs/systems.",
+      "summary": "Price used for valuation: $5.56 (Nasdaq close, 13 Nov 2026). Market cap $4.73B; enterprise value $3.32B; net cash $1.41B [$1.66/share].",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1050,7 +1104,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Meta sells advertising across Facebook, Instagram, WhatsApp, Messenger and Threads. Revenue is ~98% advertising; Reality Labs (VR/AR) is a loss-making option. The moat is the largest social graph and the most sophisticated ad-targeting/measurement engine outside Google, plus 3B+ daily users.",
+      "summary": "Price: $641.69 (Nasdaq close, 13 Nov 2026) · Market cap: $1.64T · EV: $1.67T · P/E TTM: 21.9x · Fwd P/E: 19.5x · EV/EBITDA: 14.4x · FCF yield: 1.7%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1079,7 +1133,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Microsoft sells productivity software (Microsoft 365, Teams), cloud infrastructure (Azure), developer tools (GitHub), gaming (Xbox/Activision), LinkedIn and Windows. The moat is enterprise switching costs, the Windows/Office standard, and Azure's hybrid-cloud footprint. AI is being layered across all of it (Copilot, Azure OpenAI, Fabric).",
+      "summary": "Price: $523.88 (Nasdaq close, 13 Nov 2026) · Market cap: $3.89T · EV: $3.96T · P/E TTM: 27.4x · Fwd P/E: 25.2x · EV/EBITDA: 19.3x · FCF yield: 1.5%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1108,7 +1162,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Micron sells DRAM, NAND and HBM memory to data-center, mobile, PC and automotive customers. The moat is technology/manufacturing scale in a consolidated oligopoly (Samsung, SK Hynix, Micron). Memory is a commodity with cyclical pricing, but HBM is more differentiated (custom packaging, qualification with Nvidia/AMD).",
+      "summary": "Price: $778.31 (Nasdaq close, 13 Nov 2026) · Market cap: $880.6B · EV: $812.3B · P/E TTM: 10.5x · Fwd P/E: 4.4x · EV/EBITDA: 7.5x · Net cash: $68.3B",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1137,7 +1191,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Netflix is the largest subscription streaming service (~300M+ paid households) with a growing advertising tier. Revenue comes from subscriptions (price × members) and advertising. The moat is content scale, recommendation data and global distribution; the risk is competition (Disney+, Amazon, YouTube) and the maturity of the pay-TV replacement cycle.",
+      "summary": "Price: $62.15 (Nasdaq close, 13 Nov 2026, post 10-for-1 split) · Market cap: $255.2B · EV: $264.5B · P/E TTM: 18.0x · Fwd P/E: 17.3x · EV/EBITDA: 16.6x · FCF yield: 4.5%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1166,7 +1220,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Nvidia designs GPUs, networking and AI systems (DGX/HGX) and the CUDA software stack. Revenue comes from data-center AI (the vast majority), gaming, professional visualization and automotive. The moat is the CUDA ecosystem, the cadence of new architectures, and the systems-level integration (GPU+NVLink+networking+software).",
+      "summary": "Price: $162.85 (Nasdaq close, 13 Nov 2026) · Market cap: $3.93T · EV: $3.91T · P/E TTM: 20.6x · Fwd P/E: 13.5x · EV/EBITDA: 19.3x · FCF yield: 3.2%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1195,7 +1249,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "NXP is a broad-line semiconductor company selling microcontrollers, application processors, communication processors, connectivity chipsets, analog/interface devices, RF power transistors and security controllers, plus a growing layer of system middleware and software (FY2025 10-K, filed 19 Feb 2026).",
+      "summary": "Price used for valuation: $265.09 (Nasdaq close, 13 Nov 2026). Market cap $66.82B; enterprise value $73.85B; net debt $7.03B (1.3x TTM adjusted EBITDA).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1224,7 +1278,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Oklo designs small fast reactors (liquid-metal-cooled) and plans to own/operate them, selling electricity under long-term contracts. It also intends to build a fuel-recycling capability (using DOE material) — a potential cost advantage and a political lightning rod.",
+      "summary": "Price: $23.92 (NYSE close, 13 Nov 2026) · Market cap: $4.67B · EV: $2.17B · Revenue TTM: $3.1M · FCF: -$452M · Net cash: $2.50B",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1253,7 +1307,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "onsemi sells power semiconductors and sensing silicon — components, not systems or software. Three reportable segments (Q3 FY2026, 10-Q):",
+      "summary": "Price used for valuation: $71.06 (Nasdaq close, 13 Nov 2026; after-hours $70.00). Market cap $27.66B; enterprise value $27.80B (net debt ~$0.14B). 52-week range $44.56–$134.92.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1282,11 +1336,38 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Ouster sells sensing and perception hardware plus software to machines that need to see. Four product families:",
+      "summary": "Price used for valuation: $33.48 (Nasdaq close, 13 Nov 2026, −8.5% on the day). Market cap $2.44B; enterprise value $2.04B; net cash $404.4M [$5.54/share].",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
       "kind": null
+    },
+    {
+      "ticker": "PBR",
+      "exchange": "NYSE",
+      "name": "Petrobras",
+      "country": "Brasil",
+      "sector": "—",
+      "date": "2026-11-13",
+      "status": "published",
+      "rating": "Régimen",
+      "price": 18.34,
+      "currency": "USD",
+      "central": null,
+      "expected": null,
+      "bear": null,
+      "bull": null,
+      "upside": null,
+      "dividend_yield": null,
+      "score": null,
+      "score_max": 100,
+      "report": "reports/PBR.html",
+      "tags": [],
+      "summary": "Estudio de régimen, no una recomendación de inversión. Qué dicen los datos, qué no sostiene el relato y qué cambia al corregir el método (v2 corregida).",
+      "thesis": [],
+      "metrics": [],
+      "scenarios": [],
+      "kind": "Régimen"
     },
     {
       "ticker": "QCOM",
@@ -1311,7 +1392,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "Qualcomm sells semiconductor platforms and patent licences. FY2026 revenue split: equipment and services $36,895M (86%), licensing $6,225M (14%) (10-K).",
+      "summary": "Price used for valuation: $172.47 (Nasdaq close, 13 Nov 2026). Market cap $184.54B; enterprise value ~$192.0B; net debt $7.43B (−$7.7/share).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1340,7 +1421,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Quantinuum sells quantum computing hardware (H-series trapped-ion systems), cloud access, and software (TKET compiler, InQuanto chemistry, Quantum Origin cryptographic keys). Customers are governments, research labs, banks and industrials. Honeywell's backing gives it engineering discipline and a balance sheet.",
+      "summary": "Price: $35.40 (Nasdaq close, 13 Nov 2026) · Market cap: $9.4B · EV: $7.5B · EV/Sales TTM: 256x · FCF: -$362M · Net cash: $1.90B",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1369,7 +1450,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Regeneron discovers and commercialises biologics. Revenue comes from Dupixent (atopic dermatitis, asthma, COPD, eosinophilic oesophagitis — shared economics with Sanofi), EYLEA/EYLEA HD (AMD, diabetic retinopathy), Libtayo (oncology), Praluent/Kevzara (legacy) and a growing oncology/immunology pipeline. It also has a large manufacturing footprint and a productive R&D engine (VelocImmune mouse platform).",
+      "summary": "Price: $955.47 (Nasdaq close, 13 Nov 2026) · Market cap: $95.9B · EV: $79.7B · P/E TTM: 21.2x · P/E FY2026E: 13.9x · EV/EBITDA: 14.1x · FCF yield: 4.0%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1398,7 +1479,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Sanofi is a global pharma with three growth engines: Immunology (Dupixent, the largest), Vaccines (flu, Beyfortus RSV, meningitis) and Oncology/rare disease (Sarclisa, Cablivi, plus acquired assets). It also has a Consumer Healthcare carve-out in progress and a legacy diabetes/ cardiovascular portfolio in decline.",
+      "summary": "Price: €87.60 (Euronext Paris close, 13 Nov 2026) · Market cap: €104.9B ($115.7B) · EV: €119.2B · P/E TTM: 25.3x · P/E 2027E: ~9.4x · EV/EBITDA: 8.0x · Dividend yield: 4.7%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1427,7 +1508,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "NuScale designs the NuScale Power Module (77 MWe light-water SMR), the first design to receive NRC certification. Revenue comes from engineering services, licensing and project development; the long-term model is selling modules and providing fuel/services through ENTRA1, its commercialization partner.",
+      "summary": "Price: $4.66 (NYSE close, 13 Nov 2026) · Market cap: $2.00B · EV: $1.08B · Revenue TTM: $2.7M · FCF: -$608M · Net cash: $927M",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1456,7 +1537,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Sterling provides site preparation, earthwork, foundations, paving and infrastructure construction. Its e-infrastructure segment builds the civil works for data centers and semiconductor fabs — a scarce capability with high barriers (permits, equipment, skilled labour).",
+      "summary": "Price: $292.39 (Nasdaq close, 13 Nov 2026) · Market cap: $8.92B · EV: $8.87B · P/E TTM: 16.4x · Fwd P/E: 10.8x · EV/EBITDA: 9.8x · FCF yield: 5.3%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1485,7 +1566,7 @@
       "tags": [
         "IA física"
       ],
-      "summary": "VPG makes precision measurement and sensing components and systems: Bulk Metal® foil resistors, foil strain gauges, load cells and force transducers, onboard vehicle-weighing systems, and specialised measurement systems for steel mills, materials research and crash testing. It was spun out of Vishay Intertechnology on 6 July 2010; the foil technology dates to Felix Zandman's work in the early 1960s (FY2025 10-K, Item",
+      "summary": "Price used for valuation: $50.90 (NYSE close, 13 Nov 2026). Market cap $678.0M; net cash $64.9M (cash $80.9M − $16.0M revolver); EV $613.2M. Including $23.3M of operating leases, EV is $636.1M.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1514,7 +1595,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "Vertiv sells the plumbing and electrical backbone of data centers: UPS, power distribution, busway, thermal management (including liquid cooling), racks and monitoring software, plus a global service network. Customers are hyperscalers, colocation providers (Equinix, Digital Realty) and enterprises.",
+      "summary": "Price: $202.07 (NYSE close, 13 Nov 2026) · Market cap: $77.8B · EV: $77.5B · P/E TTM: 37.8x · Fwd P/E: 21.7x · EV/EBITDA: 24.2x · FCF yield: 4.1%",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1543,7 +1624,7 @@
       "tags": [
         "Hugo"
       ],
-      "summary": "X-energy designs small modular high-temperature gas-cooled reactors (Xe-100) and manufactures TRISO fuel through TRISO-X. Revenue today comes from fuel sales, engineering services and government contracts; the long-term model is selling reactors and/or fuel to industrial customers (Dow, Amazon) and utilities.",
+      "summary": "Price: $11.08 (Nasdaq close, 13 Nov 2026) · Market cap: $4.50B · EV: $2.97B · EV/Sales TTM: 16.9x · FCF: -$489M · Net cash: $1.53B",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1570,7 +1651,7 @@
       "score_max": 100,
       "report": "reports/DND.TO.html",
       "tags": [],
-      "summary": "The equity is not a claim on earnings; it is a 2.2-year call option on enterprise value, struck at 6.25x EBITDA. At C$1.62 the market capitalisation is C$108.8M against C$1,351M of enterprise value — the shares are 8.0% of the capital structure. Every turn of EBITDA multiple is worth roughly C$3 per share, and 0.5x of multiple compression is worth the entire market cap. The option is roughly fairly priced today: the ",
+      "summary": "Report date: 9 November 2026 · Balance date: 30 June 2026 (audited) · Price: C$1.62 (TSX close, 6 Nov 2026)",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1624,7 +1705,7 @@
       "score_max": 100,
       "report": "reports/NBIS.html",
       "tags": [],
-      "summary": "Nebius es la antigua Yandex N.V. reconvertida en nube de IA: alquila capacidad de GPU a empresas de inteligencia artificial, neolabs, fondos cuantitativos y hyperscalers. En dos años ha pasado de US$9.8 millones de ingresos a US$1,355 millones (TTM), con US$3,000 millones de ARR a junio de 2026 y 5 GW de potencia contratada objetivo a cierre de 2026.",
+      "summary": "Fecha: 5 de noviembre de 2026 · Precio de referencia: US$120.37 (cierre Nasdaq) · Capitalización: US$33,000 M · EV (pro forma 2026E, capitalización básica): US$41,500 M",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1651,65 +1732,11 @@
       "score_max": 100,
       "report": "reports/AEM.html",
       "tags": [],
-      "summary": "",
+      "summary": "Fecha de investigación: 4 de noviembre de 2026 (datos de mercado con cierre del 3 de noviembre de 2026 y preapertura del 4 de noviembre).",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
       "kind": null
-    },
-    {
-      "ticker": "IREN",
-      "exchange": "NASDAQ",
-      "name": "IREN Limited",
-      "country": "Estados Unidos",
-      "sector": "—",
-      "date": "2026-11-04",
-      "status": "published",
-      "rating": "Notas",
-      "price": null,
-      "currency": "USD",
-      "central": null,
-      "expected": null,
-      "bear": null,
-      "bull": null,
-      "upside": null,
-      "dividend_yield": null,
-      "score": null,
-      "score_max": 100,
-      "report": "reports/IREN.html",
-      "tags": [],
-      "summary": "3. ~5GW of executed grid-connection capacity; 5,610MW of announced sites; only ~40MW of AI Cloud capacity operating at 30-Jun-26.",
-      "thesis": [],
-      "metrics": [],
-      "scenarios": [],
-      "kind": "Notas"
-    },
-    {
-      "ticker": "KEEL",
-      "exchange": "NASDAQ",
-      "name": "Keel Infrastructure",
-      "country": "Estados Unidos",
-      "sector": "—",
-      "date": "2026-11-04",
-      "status": "published",
-      "rating": "Notas",
-      "price": null,
-      "currency": "USD",
-      "central": null,
-      "expected": null,
-      "bear": null,
-      "bull": null,
-      "upside": null,
-      "dividend_yield": null,
-      "score": null,
-      "score_max": 100,
-      "report": "reports/KEEL.html",
-      "tags": [],
-      "summary": "Rule applied: audited/reported figures are labelled \"reported\"; site/pipeline figures are \"management-defined\". Where a number does not exist in a primary source it says NOT FOUND.",
-      "thesis": [],
-      "metrics": [],
-      "scenarios": [],
-      "kind": "Notas"
     },
     {
       "ticker": "MARA",
@@ -1732,7 +1759,7 @@
       "score_max": 100,
       "report": "reports/MARA.html",
       "tags": [],
-      "summary": "2. Compró dos activos de poder: Long Ridge ($1.5B, 505 MW de gas en Ohio, pendiente de FERC) y 2 GW de terreno energizado en Matagorda County, Texas ($600M por hitos) [VF, 8-K 25-jun y 8-K 25-sep-2026].",
+      "summary": "Precio de referencia: cierre del 28-oct-2026, $7.35 (Nasdaq). Última operación a 13:41 UTC del 29-oct: $7.08 (−3.7% intradía). Todas las cuentas usan el cierre; el intradía solo se cita como contexto.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1759,38 +1786,11 @@
       "score_max": 100,
       "report": "reports/QTRX.html",
       "tags": [],
-      "summary": "2. La amenaza competitiva ya no es solo regulatoria, es comercial. Quest Diagnostics anunció (9-sep) que lanzará en Q4-2026 un test AD-Detect basado en el pTau217 de Roche (FDA-cleared 24-ago) y que lanzará su propio panel multi-analyte LDT (Aβ42/40 + p-tau217 + ApoE, con tasa de indeterminados del 10%) a finales de septiembre. Es exactamente el segmento de LucentAD Complete, con el canal nacional de Quest (~2.000 ce",
+      "summary": "Fecha de análisis: 26 de octubre de 2026, 20:30 UTC · Cierre 26-oct-2026 (16:00 ET): $2.83 ($2.90 after-hours) · Datos de filings hasta 26-oct-2026.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
       "kind": null
-    },
-    {
-      "ticker": "PBR",
-      "exchange": "NYSE",
-      "name": "Petrobras",
-      "country": "Brasil",
-      "sector": "—",
-      "date": "2026-10-23",
-      "status": "published",
-      "rating": "Régimen",
-      "price": null,
-      "currency": "USD",
-      "central": null,
-      "expected": null,
-      "bear": null,
-      "bull": null,
-      "upside": null,
-      "dividend_yield": null,
-      "score": null,
-      "score_max": 100,
-      "report": "reports/PBR.html",
-      "tags": [],
-      "summary": "2. La revalorización fue mayoritariamente sectorial. El múltiplo de PBR pasó de 1,62x a 4,83x (×2,98), pero la mediana de pares pasó de 3,03x a 6,07x (×2,00). Solo ~1,49x es re-rating específico de PBR (estrechamiento del descuento), no ×2,98.",
-      "thesis": [],
-      "metrics": [],
-      "scenarios": [],
-      "kind": "Régimen"
     },
     {
       "ticker": "SMR/OKLO",
@@ -1813,7 +1813,7 @@
       "score_max": 100,
       "report": "reports/SMR_OKLO.html",
       "tags": [],
-      "summary": "2. Milestone-and-option valuation — each company's fair value is decomposed into (a) net liquid resources, (b) the risk-adjusted value of the licensing→orders→construction→generation chain, priced per project/unit with explicit assumptions and shown subject to sensitivity, and (c) the cost of financing that chain to completion (dilution) (§7, §8).",
+      "summary": "Analysis date: 14 October 2026 · Market-data timestamp: 2026-10-14 ~15:50–16:05 UTC (intraday, US market open) · Data cutoff: SEC filings through 2026-10-14; price series through 2026-10-13 close.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1840,7 +1840,7 @@
       "score_max": 100,
       "report": "reports/HUMA.html",
       "tags": [],
-      "summary": "2. El binario que importa. El sBLA para acceso vascular en diálisis se filea en nov-2026 (confirmado por la compañía tras discusiones con FDA); si obtiene revisión prioritaria, PDUFA ~may-2027; lanzamiento objetivo fin de Q2-2027. Casi todo el valor de la empresa depende de este evento y de su reembolso posterior.",
+      "summary": "Fecha: 13 de octubre de 2026 · Cierre: $0.374 (mínimo 52s: $0.3633, marcado ese mismo día) · Market cap: ~$103.9M · EV: ~$90.9M · Shares: 277.8M · Consenso PT: $1.63 (6 analistas)",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1867,7 +1867,7 @@
       "score_max": 100,
       "report": "reports/MGY.html",
       "tags": [],
-      "summary": "",
+      "summary": "Fecha del informe: 3-oct-2026 · Datos de mercado: cierre del 2-oct-2026 (NYSE) · Carácter: análisis educativo; no es consejo de inversión.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1894,7 +1894,7 @@
       "score_max": 100,
       "report": "reports/PROP.html",
       "tags": [],
-      "summary": "2. It is not sector or commodity weakness. WTI ~$89.7 and +56% YTD (Iran-war spike above $105/114 mid-September, now correcting), XLE +39.7% YTD, XOP +46.3% YTD, small-cap E&Ps +11% to +89% YTD. PROP is an extreme negative outlier on every window. See §1.",
+      "summary": "Research date: 2026-09-22 (UTC). Market data through the 2026-09-21 close; the 2026-09-22 session references are marked \"9/22\" (pre-market / intraday). Report language: English; figures in USD unless noted.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1921,7 +1921,7 @@
       "score_max": 100,
       "report": "reports/OBE.html",
       "tags": [],
-      "summary": "2. El mecanismo central: en 2026 las coberturas hacían que ±US$1 de WTI moviera el FFO sólo ±C$2,3M [V]. Con el libro de coberturas agotado en nov-2026, en 2027 cada ±US$1 de WTI mueve el FFO ±C$9,6–10,1M [E]. Cada US$10 de crudo ≈ C$96–101M de FFO ≈ C$5,9/acción al múltiplo de 4x ≈ 34% del precio actual de la acción. Traducido: OBE es hoy una de las formas más directas (y más arriesgadas) de expresar una visión sobr",
+      "summary": "Fecha del informe: 20-sep-2026 (rev. v4.1, mismo día: añade §12, dossier operativo verificado) · Datos de mercado: cierre del viernes 18-sep-2026",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1948,7 +1948,7 @@
       "score_max": 100,
       "report": "reports/BSX.html",
       "tags": [],
-      "summary": "Compiled from primary sources (SEC filings incl. FY25 10-K and Q1/Q2-26 10-Qs; FDA; ClinicalTrials.gov; peer-reviewed trials; company PRs/decks/transcripts), supplemented by dated trade press. Every material claim is labeled: [FILED]/[FACT] (primary-verified), [MGMT CLAIM], [ANALYST], [ESTIMATE], [ASSUMPTION], [OPINION]. \"Data unavailable\" = not found in sources reviewed. Not investment advice; no recommendation is g",
+      "summary": "Reference price: $44.36 (16-Sep-2026 intraday; 15-Sep close $43.87). Market cap ~$64.3B (1,449M shares). Net debt $12.1B (Jun-30-26); ~$22-23B pro-forma at Penumbra close. FY26 guidance withdrawn after the Aug-25 cyberattack.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -1975,7 +1975,7 @@
       "score_max": 100,
       "report": "reports/LTRN.html",
       "tags": [],
-      "summary": "Compiled from primary sources: SEC EDGAR filings (CIK 0001763950), ClinicalTrials.gov, FDA, peer-reviewed publications, company press releases and presentations. Secondary sources used only to supplement. Not investment advice; this is a research exercise.",
+      "summary": "As of 16-Sep-2026. Last close (15-Sep-2026): $1.70. Market cap ~$21.7M (12,784,146 shares x $1.70). Cash+securities $7.36M, no debt -> EV ~$14.4M.",
       "thesis": [],
       "metrics": [],
       "scenarios": [],
@@ -2002,7 +2002,7 @@
       "score_max": 100,
       "report": "reports/VKTX.html",
       "tags": [],
-      "summary": "",
+      "summary": "Fecha: 14-sep-2026 · Analista: Sergio (retail, apolítico, data-driven) · Fuentes: SEC (T1), PRs IR (T2), peer-reviewed (T1), terceros (T3)",
       "thesis": [],
       "metrics": [],
       "scenarios": [],

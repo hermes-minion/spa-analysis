@@ -38,6 +38,8 @@
     if (s.includes("compra")) return "buy";
     if (s.includes("infravalor")) return "buy";
     if (s.includes("bullish") || s.includes("alcista")) return "buy";
+    if (s.includes("notas")) return "notes";
+    if (s.includes("régimen") || s.includes("regimen")) return "regime";
     if (s.includes("especul")) return "spec";
     if (s.includes("bajista") || s.includes("venta") || s.includes("bearish") ||
         s.includes("sobrevalor") || s.includes("sell")) return "sell";
