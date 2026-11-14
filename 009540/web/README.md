@@ -81,10 +81,11 @@ En 2026 Cloudflare crea los sitios estáticos como **Worker con static assets** 
 
 Resultado: **https://spa-analysis.sergiovalle.workers.dev** (desplegado 14-nov-2026; el Worker se llama `spa-analysis` y sirve `009540/web` como assets). Sin `wrangler.jsonc`, `wrangler deploy` dispara *autoconfig* y abre un PR en vez de desplegar.
 
-El token de API y el account id viven en `~/stocks/.env` (ignorado por git; plantilla versionada en `.env.example`, que solo lleva marcadores). No se exporta el token a mano ni se pega en la línea de comandos:
+El token de API vive en `~/stocks/.env` (ignorado por git; plantilla versionada en `.env.example`, que solo lleva marcadores). El token no se pega en la línea de comandos; el account id no es secreto y se pasa en el comando:
 
 ```bash
-cd ~/stocks && set -a && . ./.env && set +a && npx wrangler@latest deploy
+cd ~/stocks && set -a && . ./.env && set +a && \
+  CLOUDFLARE_ACCOUNT_ID=92cdc275ad658f9f2dd89c50d2296ebb npx wrangler@latest deploy
 ```
 
 **Ámbito verificado del token guardado (14-nov-2026):** `verify` lo da por activo y caduca el 12-feb-2027, pero es de **solo lectura** — lee zona `minion.dpdns.org`, cuenta, el Worker `spa-analysis`, Pages y el subdominio `sergiovalle`, y devuelve 401/403 en DNS, configuración del túnel y despliegue. Vale para consultar estado; para publicar hace falta otro token con **Workers Scripts: Edit**.
