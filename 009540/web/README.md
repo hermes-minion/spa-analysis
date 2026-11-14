@@ -37,7 +37,11 @@ Dos etiquetas se pintan como chip en la tabla (y como tag en la ficha):
 
 El resto de tags de una ficha (sector, tesis) se ven solo en el detalle, no en el índice.
 
-## Añadir una compañía a mano
+### Búsqueda y orden
+
+La tabla del índice se filtra en vivo (ticker, compañía, mercado, sector, país, rating, tags y resumen; sin distinguir mayúsculas ni acentos) y cualquier columna se ordena al pulsar su cabecera: alterna ascendente/descendente con indicador ▲/▼. Los valores sin dato (`—`) quedan siempre al final, en ambos sentidos.
+
+### Añadir una compañía a mano
 
 1. Copia el markdown del análisis a `HD_<TICKER>_informe.md` (o ajusta `build_report.py`).
 2. Añade una entrada al array `analyses` de `web/analyses.json` con ticker, mercado, rating, precio, valor central, escenarios, score y `report`.

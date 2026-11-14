@@ -32,6 +32,86 @@
     x.expected == null ? "—" : esc(x.currency) + " " + money(x.expected);
 
   let DATA = null;
+  const view = { q: "", key: null, dir: 1 };
+  const fold = (s) =>
+    String(s == null ? "" : s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  const SORTS = {
+    ticker: (x) => fold(x.ticker),
+    name: (x) => fold(x.name),
+    rating: (x) => fold(x.rating),
+    date: (x) => x.date || "",
+    price: (x) => x.price,
+    central: (x) => x.central,
+    upside: (x) => x.upside,
+    score: (x) => x.score,
+  };
+
+  function visibleRows() {
+    const all = DATA.analyses || [];
+    const q = fold(view.q).trim();
+    let rows = !q ? all.slice() : all.filter((x) =>
+      fold([
+        x.ticker, x.name, x.exchange, x.sector, x.country, x.rating,
+        (x.tags || []).join(" "), x.summary,
+      ].join(" ")).includes(q));
+    if (view.key) {
+      const get = SORTS[view.key];
+      rows.sort((p, r) => {
+        const A = get(p), B = get(r);
+        const an = A == null || A === "", bn = B == null || B === "";
+        if (an && bn) return 0;
+        if (an) return 1; // sin dato, siempre al final
+        if (bn) return -1;
+        if (A < B) return -view.dir;
+        if (A > B) return view.dir;
+        return 0;
+      });
+    }
+    return rows;
+  }
+
+  function rowHtml(x) {
+    return `
+      <tr data-ticker="${esc(x.ticker)}">
+        <td><span class="tick">${esc(x.ticker)}</span><div class="sub">${esc(x.exchange)}</div></td>
+        <td><span class="co">${esc(x.name)}</span><div class="sub">${[x.sector, x.country].filter((v) => v && v !== "—").join(" · ")}</div>${tagChips(x)}</td>
+        <td><span class="badge ${ratingClass(x.rating)}">${esc(x.rating)}</span></td>
+        <td class="num">${esc(x.date)}</td>
+        <td class="num">${esc(x.currency)} ${money(x.price)}</td>
+        <td class="num">${esc(x.currency)} ${money(x.central)}</td>
+        <td class="num ${x.upside >= 0 ? "pos" : "neg"}">${pct(x.upside)}</td>
+        <td class="num">${scoreTxt(x)}</td>
+      </tr>`;
+  }
+
+  function paintRows() {
+    const tb = $("#rows");
+    if (!tb) return;
+    const all = DATA.analyses || [];
+    const rows = visibleRows();
+    if (!all.length) {
+      tb.innerHTML = `<tr><td colspan="8" class="empty">Todavía no hay análisis publicados.</td></tr>`;
+    } else if (!rows.length) {
+      tb.innerHTML = `<tr><td colspan="8" class="empty">Sin resultados para «${esc(view.q)}».</td></tr>`;
+    } else {
+      tb.innerHTML = rows.map(rowHtml).join("");
+    }
+    const count = $("#tcount");
+    if (count) count.textContent = rows.length + " de " + all.length + (view.q ? " · filtrado" : "");
+    document.querySelectorAll("#rows tr[data-ticker]").forEach((tr) => {
+      tr.addEventListener("click", () => { location.hash = "#/a/" + tr.dataset.ticker; });
+    });
+  }
+
+  function updateArrows() {
+    document.querySelectorAll("th.sortable").forEach((th) => {
+      const on = th.dataset.key === view.key;
+      th.setAttribute("aria-sort", on ? (view.dir > 0 ? "ascending" : "descending") : "none");
+      const a = th.querySelector(".arrow");
+      if (a) a.textContent = on ? (view.dir > 0 ? "▲" : "▼") : "↕";
+    });
+  }
 
   function ratingClass(r) {
     const s = String(r || "").toLowerCase();
@@ -50,17 +130,8 @@
   function renderIndex() {
     const a = DATA.analyses || [];
     const q = DATA.queue || [];
-    const rows = a.map((x) => `
-      <tr data-ticker="${esc(x.ticker)}">
-        <td><span class="tick">${esc(x.ticker)}</span><div class="sub">${esc(x.exchange)}</div></td>
-        <td><span class="co">${esc(x.name)}</span><div class="sub">${[x.sector, x.country].filter((v) => v && v !== "—").join(" · ")}</div>${tagChips(x)}</td>
-        <td><span class="badge ${ratingClass(x.rating)}">${esc(x.rating)}</span></td>
-        <td class="num">${esc(x.date)}</td>
-        <td class="num">${esc(x.currency)} ${money(x.price)}</td>
-        <td class="num">${esc(x.currency)} ${money(x.central)}</td>
-        <td class="num ${x.upside >= 0 ? "pos" : "neg"}">${pct(x.upside)}</td>
-        <td class="num">${scoreTxt(x)}</td>
-      </tr>`).join("");
+    const th = (key, label, num) =>
+      `<th class="sortable${num ? " num" : ""}" data-key="${key}" tabindex="0" role="columnheader" aria-sort="none">${label}<span class="arrow">↕</span></th>`;
 
     $("#app").innerHTML = `
       <section class="hero">
@@ -79,13 +150,16 @@
       <section class="section">
         <div class="section-head">
           <h2>Análisis publicados</h2>
-          <span class="hint">Pulsa una fila para abrir la ficha</span>
+          <span class="hint" id="tcount">${a.length} de ${a.length}</span>
+        </div>
+        <div class="toolbar">
+          <input id="q" class="search" type="search" value="${esc(view.q)}" placeholder="Buscar ticker, compañía, sector, tag o tesis…" autocomplete="off" spellcheck="false" aria-label="Buscar análisis">
+          <button id="qclear" class="btn" type="button">Limpiar</button>
         </div>
         <div class="table-wrap">
-          ${a.length ? `<table><thead><tr>
-            <th>Ticker</th><th>Compañía</th><th>Rating</th><th>Fecha</th>
-            <th class="num">Precio</th><th class="num">Valor central</th><th class="num">Upside</th><th class="num">Score</th>
-          </tr></thead><tbody>${rows}</tbody></table>` : `<div class="empty">Todavía no hay análisis publicados.</div>`}
+          <table><thead><tr>
+            ${th("ticker", "Ticker")}${th("name", "Compañía")}${th("rating", "Rating")}${th("date", "Fecha", 1)}${th("price", "Precio", 1)}${th("central", "Valor central", 1)}${th("upside", "Upside", 1)}${th("score", "Score", 1)}
+          </tr></thead><tbody id="rows"></tbody></table>
         </div>
       </section>
 
@@ -115,8 +189,25 @@
         </div>
       </section>`;
 
-    document.querySelectorAll("tbody tr[data-ticker]").forEach((tr) => {
-      tr.addEventListener("click", () => { location.hash = "#/a/" + tr.dataset.ticker; });
+    paintRows();
+    updateArrows();
+    const inp = $("#q");
+    inp.addEventListener("input", () => { view.q = inp.value; paintRows(); });
+    $("#qclear").addEventListener("click", () => {
+      view.q = ""; inp.value = ""; paintRows(); inp.focus();
+    });
+    document.querySelectorAll("th.sortable").forEach((h) => {
+      const run = () => {
+        const k = h.dataset.key;
+        if (view.key === k) view.dir = -view.dir;
+        else { view.key = k; view.dir = 1; }
+        paintRows();
+        updateArrows();
+      };
+      h.addEventListener("click", run);
+      h.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); run(); }
+      });
     });
   }
 
