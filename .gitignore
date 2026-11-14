@@ -1,0 +1,14 @@
+# Este repositorio publica SOLO el SPA de Equity Coverage (lo que sirve
+# equity-coverage.service y lo que despliega Cloudflare Pages).
+# ~/stocks pesa 1,8 GB: 10-Ks, capturas, JSON de cotizaciones y notas de
+# trabajo se quedan locales. Añadir un ticker al repo = publicarlo en web/.
+
+/*
+!/.gitignore
+
+!/009540/
+/009540/*
+!/009540/web/
+
+# Volcado interno del pipeline (no lo usa la SPA ni Pages)
+009540/web/entries_generated.json

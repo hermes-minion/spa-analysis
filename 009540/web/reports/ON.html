@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ON · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>ON · 2026-11-13</span></div>
+<div class="wrap">
+<h1 id="onsemi-nasdaq-on-physical-ai-equity-research">onsemi (NASDAQ: ON) — Physical AI Equity Research</h1>
+<p><strong>Price used for valuation:</strong> $71.06 (Nasdaq close, 13 Nov 2026; after-hours $70.00). Market cap <strong>$27.66B</strong>; enterprise value <strong>$27.80B</strong> (net debt ~$0.14B). 52-week range $44.56–$134.92.
+<strong>Fiscal year:</strong> calendar (FY2025 ended 31 Dec 2025; Q3 FY2026 ended 2 Oct 2026).
+<strong>Stance:</strong> research, not financial advice; no position sizing. Facts, management claims, estimates and my opinion are labelled separately, and every figure is dated.</p>
+<hr />
+<h2 id="0-classification-mandatory">0. Classification (mandatory)</h2>
+<p><strong>Profile B — profitable but cyclical.</strong> TTM revenue $6.37B, gross margin 41.4% (up from a 36.0% trough), FCF $1.62B (25.4%) and minimal net debt. The P&amp;L is mid-recovery rather than at a peak, so trailing multiples still flatter the cycle; I anchor on mid-cycle EPS.
+<strong>Business model:</strong> IDM/fab-lite — own fabs plus foundry — selling power, analog, sensor and SiC devices into automotive, industrial and AI data centre.
+<strong>Metrics that matter:</strong> EV/EBITDA, P/E on mid-cycle EPS, utilisation, inventory days and FCF.</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive summary</h2>
+<ul>
+<li><strong>The cyclical inflection is real and is now in the numbers.</strong> Q3 FY2026 revenue $1,722.3M (+11.1% YoY, +7% QoQ), GAAP gross margin 41.4% (the fifth consecutive quarterly expansion, +190bp QoQ), GAAP operating margin 22.0%, non-GAAP EPS $0.90 (+43% YoY) and free cash flow $489M (28% of revenue) (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm">Q3 FY2026 release</a>, 2 Nov 2026; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q</a>). Q4 guidance of $1.715–1.815B implies <strong>+15.3% YoY</strong> at the midpoint — the fastest growth since mid-2022 and a clean break from ten consecutive quarters of decline.</li>
+<li><strong>But the fastest-growing business is not Physical AI.</strong> AI data-centre revenue was $180.2M in Q3 (+175% YoY, +39% QoQ), 10.5% of revenue, and management guides ~$620M for FY2026 (+140%) and "double" in 2027 (~$1.24B) (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>, 2 Nov 2026). That is power conversion for GPU racks — digital-AI infrastructure, not AI that perceives and acts in the physical world. Counting it as Physical AI would be the single easiest way to inflate this company's purity, and I do not.</li>
+<li><strong>Physical AI is ~16% of revenue today, and that is the honest number.</strong> Intelligent Sensing Group (image sensors, SiPM, iToF) was $235.1M, or 13.6% of Q3 revenue, plus roughly 3% of PSG/AMG revenue shipped into ADAS, robotics and drone power. My estimate for FY2029 is <strong>~21%</strong> (range 18–24%) as sensing outgrows the corporate average, robotics/drones scale from a small base and Synaptics' Astra edge-AI MCUs consolidate from mid-2027. Reasoning is shown in §3; it is an estimate, not a disclosure.</li>
+<li><strong>Automotive — 45% of revenue — is still shrinking.</strong> Auto was $776.7M in Q3, −1% YoY and −1% QoQ, because management deliberately reallocated constrained supply to AI data centre and industrial, and guided auto <strong>down high-single-digits in Q4</strong> before normalising in Q1 2027 (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q MD&amp;A</a>; Q3 call). Utilisation is 83%, inventory 186 days (down 6), distributor inventory 9.9 weeks. Management calls this timing, not share loss — a claim I accept directionally but cannot verify.</li>
+<li><strong>The Synaptics acquisition is the largest strategic variable and it is under-appreciated.</strong> Revised on 1 Oct 2026 from $7B all-stock to <strong>$5.7B all-cash ($123/share)</strong>, closing mid-2027, funded with cash on hand plus a committed <strong>$2.45B senior secured term loan</strong> (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q</a>; <a href="https://finance.yahoo.com/news/onsemi-revises-synaptics-acquisition-cash-111712324.html">Quartz/Yahoo</a>, 2 Oct 2026). It buys a genuine edge-AI asset (Astra NPU-enabled MCUs) at ~4.75x sales, but takes onsemi from ~net-debt-neutral to an estimated <strong>~$6.3B net debt (~2.8x pro forma EBITDA)</strong> and pauses buybacks.</li>
+<li><strong>Valuation is mid-cycle, not distressed.</strong> At $71.06 the stock is on 4.2x FY2026E EV/sales, 21.6x FY2026E non-GAAP EPS ($3.29) and 15.0x FY2027E ($4.74 consensus), with a 5.9% FCF yield. That is rich versus STMicro (2.9x EV/sales) and cheap versus Texas Instruments (13.6x), and it sits in the <strong>top third of its own five-year EV/sales range</strong> but only the 50th percentile of its forward P/E range — because margins are still 1,200bp below the 53% target.</li>
+<li><strong>Position in the watchlist:</strong> a high-quality, fab-lite power-semiconductor cyclical with a real sensing franchise and a fast-growing AI-power kicker — not a Physical AI pure play.</li>
+</ul>
+<p><strong>Verdict: NEUTRAL — conviction Medium.</strong> 12–18 month fair value ~$78 (base case), ~10% above the current price. The earnings cycle, margin trajectory and AI-power ramp are all pointing the right way; the auto destocking, the Synaptics leverage and a 4.3x sales multiple cap the risk/reward. I would turn constructive below ~$60 or on evidence that auto re-accelerates while gross margin holds above 43%.</p>
+<hr />
+<h2 id="2-business-overview">2. Business overview</h2>
+<h3 id="what-they-sell">What they sell</h3>
+<p>onsemi sells <strong>power semiconductors and sensing silicon</strong> — components, not systems or software. Three reportable segments (Q3 FY2026, <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Q3 FY2026 revenue</th>
+<th>% of total</th>
+<th>What it is</th>
+<th>Gross margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Power Solutions Group (PSG)</strong></td>
+<td>$889.9M</td>
+<td>51.7%</td>
+<td>SiC MOSFETs/modules (EliteSiC), silicon MOSFETs, IGBTs, GaN, discrete power, SiC JFETs</td>
+<td>31.4% (9M)</td>
+</tr>
+<tr>
+<td><strong>Analog &amp; Mixed-Signal Group (AMG)</strong></td>
+<td>$597.3M</td>
+<td>34.7%</td>
+<td>Gate drivers, PMICs, controllers, sensors, connectivity (10BASE-T1S), signal conditioning</td>
+<td>52.3% (9M)</td>
+</tr>
+<tr>
+<td><strong>Intelligent Sensing Group (ISG)</strong></td>
+<td>$235.1M</td>
+<td>13.6%</td>
+<td>CMOS image sensors, image signal processors, SiPM (lidar), indirect time-of-flight</td>
+<td>37.3% (9M)</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$1,722.3M</strong></td>
+<td>100%</td>
+<td></td>
+<td>41.4%</td>
+</tr>
+</tbody>
+</table>
+<p>The strategic pivot since 2020 has been to exit commodity discrete businesses, concentrate on automotive and industrial, and shift manufacturing to a <strong>fab-lite model</strong>: capex was 1.6% of revenue in Q3 and is guided to ~2% for FY2026, versus 18.6% in FY2023 (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q</a>; <a href="https://stockanalysis.com/stocks/on/financials/cash-flow-statement/">StockAnalysis cash flow</a>). The company closed the sale of a Philippines back-end plant in Q3 and is exiting the Mountaintop fab by end-2027 (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>), and on 6 Nov 2026 <strong>cancelled a planned $2B silicon-carbide expansion in Rožnov, Czech Republic</strong> (<a href="https://finance.yahoo.com/technology/articles/onsemi-czech-ministry-cancel-2-211736822.html">Investing.com/Yahoo</a>, 6 Nov 2026). Management's own explanation — cheaper Chinese wafers make owning capacity uneconomic — is as good a summary as any of the SiC pricing environment.</p>
+<h3 id="to-whom-and-how-they-get-paid">To whom, and how they get paid</h3>
+<p>Essentially all revenue is <strong>product sales</strong> (~100%; NRE/product-development agreements were 1% a year ago). Sales run through distributors (<strong>54% of FY2025 revenue</strong>) and direct OEM/Tier-1 customers (46%); one distributor accounted for <strong>11% of FY2025 revenue</strong> and <strong>15% of Q3 FY2026 revenue</strong> (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm">10-K</a>; 10-Q). No end-OEM is disclosed above 10%.</p>
+<h3 id="end-market-mix">End-market mix</h3>
+<table>
+<thead>
+<tr>
+<th>End market</th>
+<th>Q3 FY2026</th>
+<th>%</th>
+<th>Q3 FY2025</th>
+<th>9M FY2026</th>
+<th>FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automotive</td>
+<td>$776.7M</td>
+<td>45.1%</td>
+<td>$787.3M</td>
+<td>$2,355.3M</td>
+<td>$3,080.8M (51%)</td>
+</tr>
+<tr>
+<td>Industrial</td>
+<td>$466.8M</td>
+<td>27.1%</td>
+<td>$426.3M</td>
+<td>$1,306.5M</td>
+<td>$1,674.8M (28%)</td>
+</tr>
+<tr>
+<td>AI data centre</td>
+<td>$180.2M</td>
+<td>10.5%</td>
+<td>$65.6M</td>
+<td>$413.2M</td>
+<td>~$258M (4%)</td>
+</tr>
+<tr>
+<td>Other (computing, consumer, networking)</td>
+<td>$298.6M</td>
+<td>17.3%</td>
+<td>$271.7M</td>
+<td>$764.1M</td>
+<td>$1,239.8M (21%)</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$1,722.3M</strong></td>
+<td>100%</td>
+<td><strong>$1,550.9M</strong></td>
+<td><strong>$4,839.1M</strong></td>
+<td><strong>$5,995.4M</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">Q3 FY2026 10-Q, Note 2</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm">FY2025 10-K</a>. FY2025 AI data centre is derived from the 10-Q comparatives (9M 2025 $179.0M) and management's statement that 2026 revenue of ~$620M represents +140%.</p>
+<p>By <strong>product technology</strong>, Q3 FY2026 was 53.3% intelligent power ($918.8M), 17.2% intelligent sensing ($296.2M) and 29.4% other ($507.3M). Note the gap versus segment revenue: "intelligent sensing" as a technology ($296.2M) is larger than ISG segment revenue ($235.1M) because some sensing content sits inside AMG.</p>
+<p><strong>Geography</strong> is Asia-centric and billed where products ship, not where they are consumed: Hong Kong 33.0%, Singapore 25.4%, United Kingdom 18.4%, United States 17.1%, other 6.2% (Q3 FY2026). 22,600 employees (<a href="https://stockanalysis.com/stocks/on/">StockAnalysis</a>, 13 Nov 2026).</p>
+<hr />
+<h2 id="3-physical-ai-exposure">3. Physical AI exposure</h2>
+<h3 id="where-it-sits-in-the-stack">Where it sits in the stack</h3>
+<p>onsemi occupies the <strong>bottom two layers</strong> of the physical-AI stack and nothing above them:</p>
+<p><code>SENSING                 COMPUTE / SILICON          DATA        SOFTWARE/PERCEPTION     SYSTEMS
+Image sensors (ADAS,    Power delivery for AI      none        none                    none
+machine vision)         compute (SiC/GaN/Si)
+SiPM / iToF depth       Motor drive &amp; power for
+                        robots, drones, EVs
+        ▲                                                
+        └── Synaptics Astra (from mid-2027): edge-AI MCUs with NPU — the only "compute" asset</code></p>
+<p>It is a <strong>component supplier to the perceivers and actors</strong>, not a perception-system vendor. That is a different position from Mobileye (full stack) or a humanoid maker: onsemi sells the camera that sees and the transistor that moves, and its content per robot or vehicle is measured in dollars to low hundreds of dollars, not thousands.</p>
+<h3 id="of-revenue-tied-to-physical-ai">% of revenue tied to Physical AI</h3>
+<p>onsemi does not disclose Physical-AI revenue, so this is my build. I define Physical AI strictly: silicon whose end application perceives the environment and acts on it (ADAS/AV, robots, drones, machine vision). I exclude AI data centre (digital infrastructure), EV traction power (electrification), grid/ESS (energy infrastructure) and consumer/medical sensing.</p>
+<table>
+<thead>
+<tr>
+<th>Bucket (FY2026E, my estimate)</th>
+<th>Revenue</th>
+<th>% of total</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISG — automotive imaging/ADAS</td>
+<td>~$0.52B</td>
+<td>7.9%</td>
+<td>~55% of ISG; ISG TTM $949.8M; auto is the largest ISG end market and fell $13.7M YoY in Q3</td>
+</tr>
+<tr>
+<td>ISG — industrial machine vision, robotics, drones</td>
+<td>~$0.29B</td>
+<td>4.3%</td>
+<td>~30% of ISG; management cites &gt;10 drone OEM engagements and humanoid wins</td>
+</tr>
+<tr>
+<td>ISG — other (medical, security, consumer)</td>
+<td>~$0.14B</td>
+<td>2.2%</td>
+<td>~15% of ISG — <strong>excluded</strong> from Physical AI</td>
+</tr>
+<tr>
+<td>PSG/AMG power into ADAS, robotics, drones</td>
+<td>~$0.20B</td>
+<td>3.0%</td>
+<td>~3% of non-ISG revenue: ECU power, motor drive, gate drivers</td>
+</tr>
+<tr>
+<td><strong>Physical AI total</strong></td>
+<td><strong>~$1.01B</strong></td>
+<td><strong>~15–16%</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>AI data centre (excluded)</td>
+<td>~$0.62B</td>
+<td>9.4%</td>
+<td>Digital AI infrastructure, not Physical AI</td>
+</tr>
+<tr>
+<td>EV traction / grid / ESS (excluded)</td>
+<td>~$2.6B</td>
+<td>~39%</td>
+<td>Electrification, not autonomy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three-year view (FY2029E): ~21% (range 18–24%).</strong> Reasoning: (i) total revenue ~$8.8B, a ~10% CAGR from $6.6B, in line with management's "10 points above the market" Investor Day framing and consensus's 12.4% three-year growth; (ii) ISG grows ~11%/yr to ~$1.30B (14.8% of revenue) as ADAS camera content per vehicle rises and machine vision recovers — 85% counted, so ~12.6% of revenue; (iii) power into robotics/ADAS/drones roughly doubles to ~$0.44B (5.0%), driven by humanoid motor drive and drone power; (iv) Synaptics Astra adds ~$0.20B (2.3%) of edge-AI MCU revenue post-close. Sum ≈ <strong>20–21%</strong>. If humanoids surprise, 24%; if ISG's industrial recovery stalls, 18%.</p>
+<p><strong>What this means.</strong> onsemi is a <strong>power-semiconductor cyclical with a real but minority Physical-AI franchise</strong>. The bull case that matters for the next 12 months is AI data-centre power and the auto/industrial cycle — not robotics.</p>
+<h3 id="key-end-markets">Key end markets</h3>
+<table>
+<thead>
+<tr>
+<th>End market</th>
+<th>Exposure today</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADAS / autonomous driving</strong></td>
+<td>~8% of revenue</td>
+<td>ISG automotive imaging, plus SiPM for lidar and ADAS ECU power; management claims "market-leading positions in automotive" imaging (10-K) — specific unit share <strong>not disclosed/unverified</strong></td>
+</tr>
+<tr>
+<td><strong>Industrial automation / machine vision</strong></td>
+<td>~4–5%</td>
+<td>ISG machine vision; "factory automation" cited as an industrial strength in Q3</td>
+</tr>
+<tr>
+<td><strong>Robotics / humanoids</strong></td>
+<td>~1–2% (my estimate)</td>
+<td>"Multiple new design wins with leading U.S. humanoid makers across power, connectivity, and sensing"; iToF depth resolution of 1mm, claimed 10x better than competitors (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>) — <strong>claim, no revenue disclosed</strong></td>
+</tr>
+<tr>
+<td><strong>Drones / defence</strong></td>
+<td>&lt;1%</td>
+<td>2MP and 8MP Hyperlux sensors shipping for FPV drones; &gt;10 drone manufacturers engaged (Q3 call)</td>
+</tr>
+<tr>
+<td><strong>Smart infrastructure</strong></td>
+<td>~1% counted (grid/ESS excluded as electrification)</td>
+<td>Solid-state transformers, SiC JFET breakers, Sungrow/Sineng hybrid SiC module wins — infrastructure, not perception</td>
+</tr>
+<tr>
+<td><strong>Space</strong></td>
+<td>&lt;0.5%</td>
+<td>LEO satellite power referenced in the 10-Q; no disclosed revenue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="side-note-synaptics-syna-separate-ticker">Side-note: Synaptics (SYNA — separate ticker)</h3>
+<p>The watchlist pairs "ON Semiconductor / Synaptics"; they are now the <strong>same trade</strong>. onsemi agreed on 25 Jun 2026 to acquire Synaptics, revised on 1 Oct 2026 to <strong>$123.00/share cash, ~$5.7B</strong>, closing mid-2027 (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q</a>). SYNA trades at <strong>$118.14</strong> (13 Nov 2026), a 4.1% discount to the cash price — the market assigns a high completion probability. Synaptics brings ~$1.20B of TTM revenue at a 46% gross margin and, importantly, the <strong>Astra SL-series</strong>, an NPU-enabled MCU family aimed at edge AI in consumer, automotive and industrial devices (<a href="https://stockanalysis.com/stocks/syna/statistics/">StockAnalysis SYNA</a>). That is the closest thing to "compute" in onsemi's stack. It is also a low-growth (9.5% three-year consensus), consumer-skewed business bought at ~4.75x sales — strategically logical, financially full.</p>
+<hr />
+<h2 id="4-competitive-position-moat">4. Competitive position &amp; moat</h2>
+<h3 id="market-position">Market position</h3>
+<ul>
+<li><strong>SiC power:</strong> onsemi is one of four credible Western suppliers (with Infineon, STMicroelectronics, Wolfspeed and ROHM), vertically integrated from SiC crystal growth through modules, and claims wins at NIO (1,200V traction inverter for a flagship sedan) and Geely's ZEEKR export models, plus silicon-carbide and silicon MOSFETs in Google AI data-centre PSUs (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>). <strong>onsemi does not disclose SiC revenue or share</strong>; any "top-2 in SiC" statement should be treated as a management claim.</li>
+<li><strong>Automotive imaging:</strong> ISG is one of a handful of automotive-qualified image-sensor suppliers (with Sony, Omnivision and Samsung), and in Sep 2026 partnered with Valens on a cost-optimised 3MP A-PHY sensor for high-volume auto cameras (<a href="https://finance.yahoo.com/technology/articles/valens-semiconductor-collaborate-onsemi-cost-103000616.html">Valens/Yahoo</a>, 22 Sep 2026). Management claims "market-leading positions in automotive and industrial" (10-K); I could not verify a specific share figure and flag it as unverified.</li>
+<li><strong>Analog/power breadth:</strong> the 10-K names Texas Instruments, ADI, Infineon, STMicro, Renesas, MPS and NXP as AMG competitors — a crowded field where onsemi is a specialist, not the scale leader.</li>
+</ul>
+<h3 id="the-moat-real-but-narrower-than-the-narrative">The moat: real, but narrower than the narrative</h3>
+<table>
+<thead>
+<tr>
+<th>Source of advantage</th>
+<th>Strength</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qualification and design-in cycle</strong></td>
+<td>Strong</td>
+<td>AEC-Q100/ISO 26262 qualification plus 2–4 years to SOP and 5–10 years of production creates procedural switching costs. This is the single best defence in auto semis.</td>
+</tr>
+<tr>
+<td><strong>SiC vertical integration</strong></td>
+<td>Medium-strong</td>
+<td>Owning crystal growth through module (and the Qorvo SiC JFET technology bought for $118.8M in Jan 2025) supports cost and supply control. But Chinese substrate capacity is collapsing wafer prices — the reason the $2B Czech expansion was cancelled.</td>
+</tr>
+<tr>
+<td><strong>Packaging IP (EPP)</strong></td>
+<td>Medium, rising</td>
+<td>Embedded Power Platform uses the silicon wafer as the package; management claims 50% smaller and 20% cooler solid-state breakers, patents on process as well as idea (<a href="https://stockanalysis.com/stocks/on/transcripts/612251-investor-day-2026/">Investor Day</a>, 16 Sep 2026). Unproven at volume.</td>
+</tr>
+<tr>
+<td><strong>Portfolio breadth across the power tree</strong></td>
+<td>Medium-strong</td>
+<td>Being able to sell from grid (SiC JFET, SST) to core (Vcore, smart power stages) is a genuine systems-selling advantage in AI data centre; management argues only two companies can do the full tree. Claim.</td>
+</tr>
+<tr>
+<td><strong>Scale/cost in discrete power</strong></td>
+<td><strong>Weak</strong></td>
+<td>Chinese and Japanese competitors price aggressively; power discretes are the most commoditised part of the portfolio.</td>
+</tr>
+<tr>
+<td><strong>Image-sensor IP</strong></td>
+<td>Strong but challenged</td>
+<td>Automotive dynamic range and LED-flicker handling are hard; Sony is the technology leader overall and is investing in auto.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="competitive-threats-ranked">Competitive threats, ranked</h3>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where</th>
+<th>Threat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infineon</strong></td>
+<td>SiC, auto power, AI data-centre power</td>
+<td><strong>High</strong> — the closest like-for-like competitor, with greater scale and a similar 800V/48V roadmap</td>
+</tr>
+<tr>
+<td><strong>STMicroelectronics</strong></td>
+<td>SiC, auto power</td>
+<td><strong>High</strong> — vertically integrated SiC, large auto franchise, cheaper multiple</td>
+</tr>
+<tr>
+<td><strong>Chinese SiC (BYD Semi, SICC, TankeBlue) and Chinese analog</strong></td>
+<td>Substrate, discrete SiC, low-end analog</td>
+<td><strong>High and structural</strong> — drove the Czech cancellation and price deflation in 2025-26</td>
+</tr>
+<tr>
+<td><strong>Texas Instruments / ADI / MPS</strong></td>
+<td>Analog, PMIC, power stages</td>
+<td>Medium-high — TI's cost advantage in 300mm analog is a permanent price threat</td>
+</tr>
+<tr>
+<td><strong>Wolfspeed</strong></td>
+<td>SiC</td>
+<td>Low near-term (post-restructuring, $623M revenue) but a technology benchmark</td>
+</tr>
+<tr>
+<td><strong>Sony / Omnivision / Samsung</strong></td>
+<td>Image sensors</td>
+<td>Medium — Sony dominates premium automotive imaging</td>
+</tr>
+<tr>
+<td><strong>Synaptics' own competitors (NXP, TI, Renesas)</strong></td>
+<td>Edge-AI MCU post-merger</td>
+<td>Medium — onsemi is buying into a fight it has not fought before</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer-concentration">Customer concentration</h3>
+<p>Moderate and stable: one distributor at <strong>15% of Q3 FY2026 revenue</strong> (11% in FY2025), distributors 54% of revenue, no disclosed OEM above 10%. Auto Tier-1 concentration means underlying end-customer concentration is higher than the filing suggests — a structural feature of auto semis, not a red flag.</p>
+<hr />
+<h2 id="5-financials">5. Financials</h2>
+<h3 id="quarterly-and-annual-table">Quarterly and annual table</h3>
+<p>$M unless stated. GAAP unless marked adj. FCF = operating cash flow − capex.</p>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Revenue</th>
+<th>YoY</th>
+<th>GM</th>
+<th>OM</th>
+<th>GAAP EPS</th>
+<th>Adj EPS</th>
+<th>FCF</th>
+<th>SBC % rev</th>
+<th>Dil. shares</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q4 FY2024</td>
+<td>1,722.5</td>
+<td>−14.6%</td>
+<td>45.2%</td>
+<td>23.7%</td>
+<td>0.88</td>
+<td>0.95</td>
+<td>422.4</td>
+<td>2.2%</td>
+<td>430</td>
+</tr>
+<tr>
+<td>Q1 FY2025</td>
+<td>1,445.7</td>
+<td>−22.4%</td>
+<td>20.3%</td>
+<td>−39.7%</td>
+<td>(1.15)</td>
+<td>0.55</td>
+<td>454.7</td>
+<td>2.3%</td>
+<td>421</td>
+</tr>
+<tr>
+<td>Q2 FY2025</td>
+<td>1,468.7</td>
+<td>−15.4%</td>
+<td>37.6%</td>
+<td>13.2%</td>
+<td>0.41</td>
+<td>0.53</td>
+<td>106.1</td>
+<td>2.3%</td>
+<td>415</td>
+</tr>
+<tr>
+<td>Q3 FY2025</td>
+<td>1,550.9</td>
+<td>−12.0%</td>
+<td>37.9%</td>
+<td>17.0%</td>
+<td>0.63</td>
+<td>0.63</td>
+<td>372.4</td>
+<td>2.5%</td>
+<td>408</td>
+</tr>
+<tr>
+<td>Q4 FY2025</td>
+<td>1,530.1</td>
+<td>−11.2%</td>
+<td>36.0%</td>
+<td>13.1%</td>
+<td>0.45</td>
+<td>0.64</td>
+<td>485.4</td>
+<td>2.5%</td>
+<td>402</td>
+</tr>
+<tr>
+<td>Q1 FY2026</td>
+<td>1,513.0</td>
+<td>+4.7%</td>
+<td>38.5%</td>
+<td>−3.5%</td>
+<td>(0.08)</td>
+<td>0.64</td>
+<td>217.2</td>
+<td>2.5%</td>
+<td>394*</td>
+</tr>
+<tr>
+<td>Q2 FY2026</td>
+<td>1,603.5</td>
+<td>+9.2%</td>
+<td>38.4%</td>
+<td>16.1%</td>
+<td>0.56</td>
+<td>0.74</td>
+<td>425.4</td>
+<td>2.3%</td>
+<td>404</td>
+</tr>
+<tr>
+<td>Q3 FY2026</td>
+<td>1,722.3</td>
+<td>+11.1%</td>
+<td>41.4%</td>
+<td>22.0%</td>
+<td>0.79</td>
+<td>0.90</td>
+<td>488.6</td>
+<td>2.2%</td>
+<td>397</td>
+</tr>
+<tr>
+<td><strong>FY2023</strong></td>
+<td><strong>8,253.0</strong></td>
+<td>−0.9%</td>
+<td>47.1%</td>
+<td>30.8%</td>
+<td>4.89</td>
+<td>5.16</td>
+<td>438.4</td>
+<td>1.5%</td>
+<td>447</td>
+</tr>
+<tr>
+<td><strong>FY2024</strong></td>
+<td><strong>7,082.3</strong></td>
+<td>−14.2%</td>
+<td>45.4%</td>
+<td>25.0%</td>
+<td>3.63</td>
+<td>3.98</td>
+<td>1,212</td>
+<td>1.9%</td>
+<td>433</td>
+</tr>
+<tr>
+<td><strong>FY2025</strong></td>
+<td><strong>5,995.4</strong></td>
+<td>−15.4%</td>
+<td>33.1%</td>
+<td>1.4%</td>
+<td>0.29</td>
+<td>2.35</td>
+<td>1,419</td>
+<td>2.4%</td>
+<td>412</td>
+</tr>
+<tr>
+<td><strong>TTM (Q4'25–Q3'26)</strong></td>
+<td><strong>6,368.9</strong></td>
+<td>+2.9%</td>
+<td>38.7%</td>
+<td>12.3%</td>
+<td>1.72</td>
+<td>—</td>
+<td>1,616.6</td>
+<td>2.3%</td>
+<td>401</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">Q3 FY2026 10-Q</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm">Q3 FY2026 release</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000114036126018868/ef20072220_ex99-1.htm">Q1 FY2026 release</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000114036126004405/ef20065070_ex99-1.htm">FY2025 release</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000119312525023201/d926041dex991.htm">FY2024 release</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000119312524023485/d610011dex991.htm">FY2023 release</a>; <a href="https://stockanalysis.com/stocks/on/financials/?p=quarterly">StockAnalysis quarterly financials</a>. *Q1 FY2026 was a GAAP loss, so diluted = basic. TTM GAAP margins are depressed by $375M of restructuring/impairment in 9M FY2026; StockAnalysis shows a 39.9% TTM gross margin because it reclassifies restructuring out of COGS.</p>
+<h3 id="what-the-numbers-say">What the numbers say</h3>
+<ul>
+<li><strong>Q1 FY2025 was the trough, and it was self-inflicted as much as cyclical.</strong> Revenue fell 22% and GAAP gross margin collapsed to 20.3% on <strong>$235.8M of excess and obsolete inventory charges</strong> (of which $230.3M hit ISG), plus $496M of manufacturing impairment for the year (<a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm">10-Q MD&amp;A</a>; <a href="https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm">FY2025 10-K</a>). Ex-charge, Q1 FY2025 gross margin would have been ~40%.</li>
+<li><strong>The recovery is margin-led, not just volume-led.</strong> Five consecutive quarters of gross-margin expansion from 36.0% to 41.4%, on utilisation recovering from 77% to 83% and a richer mix (AI data centre, new products). Management's rule of thumb is 25–30bp of gross margin per point of utilisation — which implies another ~400–500bp from running the fabs fuller (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>).</li>
+<li><strong>Operating leverage is visible.</strong> Q3 revenue +11% YoY produced +43% non-GAAP EPS growth, because opex is being held roughly flat (R&amp;D $145.0M vs $141.9M; SG&amp;A $66.8M vs $62.8M) while gross profit rose $126M.</li>
+<li><strong>Cash conversion is exceptional.</strong> TTM FCF $1.62B on $6.37B of revenue (25.4%), 28% in Q3. Capex at 2% of revenue means almost all operating cash flow drops through — the payoff from the fab-lite strategy and the 2023-25 capex peak ($1.54B in FY2023).</li>
+<li><strong>SBC is modest and falling:</strong> 2.15% of revenue in Q3 versus 2.5% a year ago and 1.5% in FY2023. Total SBC $149.6M TTM against $1.62B of FCF — not a dilution problem.</li>
+</ul>
+<hr />
+<h2 id="6-balance-sheet-dilution-risk">6. Balance sheet &amp; dilution risk</h2>
+<p><strong>Pre-Synaptics, the balance sheet is close to net-debt-neutral</strong> (2 Oct 2026): cash and short-term investments <strong>$4,367.7M</strong>; gross debt <strong>$4,504.7M</strong> (0.50% converts due 2029 $1,500M; 0% converts due 2031 $1,500M; 0% converts due 2027 $804.7M; 3.875% notes due 2028 $700M); carrying value $4,463.0M → <strong>net debt ~$137M</strong>, or ~0.07x TTM EBITDA. Liquidity is $5.9B including a $1.75B revolver (upsized from $1.5B on 12 Nov 2026 — <a href="https://www.sec.gov/Archives/edgar/data/1097864/000114036126043431/ef20085485_8k.htm">8-K</a>). Debt/EBITDA is 2.3x gross, interest coverage 22.6x (<a href="https://stockanalysis.com/stocks/on/statistics/">StockAnalysis</a>).</p>
+<p><strong>Post-Synaptics it will not be.</strong> The $5.7B cash consideration plus ~$0.5B of assumed Synaptics net debt, funded with a <strong>$2.45B senior secured term loan</strong> and ~$3.25B of cash, takes my estimated pro forma net debt to <strong>~$6.3B, or ~2.8x pro forma EBITDA</strong> (estimate; Synaptics is not consolidated until close). Management has said deleveraging will be the top priority after closing (<a href="https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/">Q3 call</a>). That is investment-grade-manageable but removes the balance-sheet optionality that supported the stock through the downturn.</p>
+<p><strong>Dilution mechanics:</strong>
+- <strong>2027 0% converts ($804.7M, conversion price $52.97)</strong> are deeply in the money at $71 and are classified as current debt; holders can convert this quarter. The concurrent capped call covers dilution up to $74.34, so at today's price there is <strong>no economic dilution</strong> — onsemi settles principal in cash and the hedge absorbs the shares.
+- <strong>2029 0.50% converts ($1.5B, $103.87)</strong> and <strong>2031 0% converts ($1.5B, $161.30)</strong> are both far out of the money; the $351.6M hedge and $281.0M of warrants sold cap 2031 dilution at $211.54.
+- <strong>Share count is shrinking:</strong> 389.26M shares outstanding at 2 Oct 2026 versus 396.74M at 31 Dec 2025 and 408M diluted a year ago — <strong>−4.07% YoY</strong>. onsemi bought back $1.21B TTM and $1.41B in FY2025, but only <strong>$20M in Q3 FY2026</strong>, constrained by trading restrictions around the Synaptics process. Buybacks are effectively paused until the deal closes; expect them to resume in H2 2027 only after leverage falls. There is no ATM and no preferred stock.</p>
+<hr />
+<h2 id="7-valuation">7. Valuation</h2>
+<p><strong>At $71.06 (13 Nov 2026):</strong> market cap $27.66B; EV $27.80B; EV/sales 4.38x TTM and <strong>4.21x FY2026E</strong> ($6.60B) / 3.66x FY2027E ($7.59B consensus); P/E 41.3x GAAP TTM, <strong>21.6x FY2026E non-GAAP</strong> ($3.29) and <strong>15.0x FY2027E</strong> ($4.74); EV/EBITDA 14.3x; P/FCF 17.1x; FCF yield 5.9%; dividend nil.</p>
+<h3 id="peer-comparison-all-13-nov-2026">Peer comparison (all 13 Nov 2026)</h3>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Mkt cap</th>
+<th>EV</th>
+<th>EV/sales (TTM)</th>
+<th>Fwd P/E</th>
+<th>FY2025 rev growth</th>
+<th>TTM revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>onsemi (ON)</strong></td>
+<td>$27.66B</td>
+<td>$27.80B</td>
+<td><strong>4.38x</strong></td>
+<td><strong>16.0x</strong></td>
+<td>−15.4%</td>
+<td>$6.37B</td>
+</tr>
+<tr>
+<td>Infineon (IFX.DE)</td>
+<td>€64.87B</td>
+<td>€70.06B</td>
+<td>4.32x</td>
+<td>18.2x</td>
+<td>n/a</td>
+<td>€16.35B</td>
+</tr>
+<tr>
+<td>STMicroelectronics (STM)</td>
+<td>$41.64B</td>
+<td>$40.21B</td>
+<td>2.92x</td>
+<td>18.1x</td>
+<td>−11.1%</td>
+<td>$13.67B</td>
+</tr>
+<tr>
+<td>NXP (NXPI)</td>
+<td>$66.82B</td>
+<td>$73.85B</td>
+<td>5.30x</td>
+<td>15.1x</td>
+<td>−2.7%</td>
+<td>$13.80B</td>
+</tr>
+<tr>
+<td>Texas Instruments (TXN)</td>
+<td>$277.42B</td>
+<td>$282.83B</td>
+<td>13.60x</td>
+<td>26.6x</td>
+<td>+13.1%</td>
+<td>$20.77B</td>
+</tr>
+<tr>
+<td>Wolfspeed (WOLF)</td>
+<td>$1.33B</td>
+<td>$2.12B</td>
+<td>3.41x</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>$0.62B</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://stockanalysis.com/stocks/on/statistics/">StockAnalysis statistics pages</a>, 13 Nov 2026. Forward P/E is on non-GAAP/consensus EPS; ON's 16.0x is NTM, 21.6x is FY2026E.</p>
+<p><strong>Read-across:</strong> onsemi trades in line with Infineon and NXP on sales but at a discount to both on forward earnings, at a 50% premium to STMicro, and at a 70% discount to Texas Instruments — the right ordering given ON's automotive cyclicality and 2%-of-revenue capex model versus TI's 300mm analog franchise. The peer group is not cheap: on 2026 estimates it has re-rated on the AI-power theme (SOXX +49.6% total return over 12 months, <a href="https://stockanalysis.com/etf/soxx/">StockAnalysis</a>).</p>
+<h3 id="its-own-history">Its own history</h3>
+<table>
+<thead>
+<tr>
+<th>Fiscal year-end</th>
+<th>EV/sales (P/S proxy)</th>
+<th>Forward P/E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021</td>
+<td>4.34x</td>
+<td>20.0x</td>
+</tr>
+<tr>
+<td>FY2022</td>
+<td>3.24x</td>
+<td>13.6x</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>4.36x</td>
+<td>17.9x</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>3.79x</td>
+<td>15.6x</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>3.63x</td>
+<td>20.0x</td>
+</tr>
+<tr>
+<td><strong>Now</strong></td>
+<td><strong>4.33x</strong></td>
+<td><strong>16.0x</strong></td>
+</tr>
+<tr>
+<td>5-year range</td>
+<td>2.13x – 5.73x</td>
+<td>13.4x – 27.0x</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://stockanalysis.com/stocks/on/financials/ratios/?p=quarterly">StockAnalysis ratios</a>, accessed 13 Nov 2026.</p>
+<p>The sales multiple is in the <strong>top third of its five-year range</strong> (peak 5.73x in Q2 FY2026, trough 2.13x in Q1 FY2025); the forward earnings multiple is at the <strong>~50th percentile</strong>. Both are true at once because the "E" is depressed relative to the "S": at mid-cycle 46–48% gross margins, this revenue base would earn $5.50–6.00 of EPS, putting the stock on 12–13x. <strong>What is priced in is a recovery to roughly $4.60–4.75 of FY2027 EPS and a 43–44% gross margin — not the 53% target.</strong> That is a reasonable, not a demanding, bar; the risk is that consensus FY2027 of $4.74 assumes both auto recovery and AI-power doubling, and one of those can slip.</p>
+<hr />
+<h2 id="8-catalysts-next-12-months">8. Catalysts (next 12 months)</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early Feb 2027</td>
+<td><strong>Q4 FY2026 results</strong> — guide $1.715–1.815B, non-GAAP GM 41.5–43.5%, EPS $0.95–1.07</td>
+<td>Fastest growth since 2022; the GM exit rate sets the 2027 trajectory</td>
+</tr>
+<tr>
+<td>Feb–Apr 2027</td>
+<td><strong>Q1 FY2027 auto normalisation</strong></td>
+<td>Management promises auto returns to "high-single-digit above SAAR" growth as capacity comes online; the single most important proof point of the cyclical call</td>
+</tr>
+<tr>
+<td>Q4 2026</td>
+<td><strong>Ferric acquisition closes</strong> ($600M + up to $175M earnout)</td>
+<td>Adds integrated voltage regulators at the GPU; raises 2030 AI data-centre target to &gt;$3B</td>
+</tr>
+<tr>
+<td>H1 2027</td>
+<td><strong>Synaptics shareholder vote and remaining regulatory approvals</strong> (FTC cleared Aug 2026)</td>
+<td>Deal re-cut once already; a second renegotiation or a block would be a major sentiment event</td>
+</tr>
+<tr>
+<td>Mid-2027</td>
+<td><strong>Synaptics closes</strong></td>
+<td>$5.7B of cash out, ~2.8x leverage in, Astra edge-AI revenue consolidated</td>
+</tr>
+<tr>
+<td>Through 2027</td>
+<td><strong>AI data-centre revenue doubling</strong> (~$620M → ~$1.24B)</td>
+<td>Google PSU ramp, 800VDC/sidecar architecture, solid-state breakers; the market's main reason to own the stock</td>
+</tr>
+<tr>
+<td>2027</td>
+<td><strong>EliteSiC M4 and EPP ramps</strong></td>
+<td>M4 (launched 10 Nov 2026) claims 30% higher power density and 35% lower losses (<a href="https://www.globenewswire.com/news-release/2026/11/10/3399176/0/en/onsemi-s-elitesic-m4-pushes-power-density-higher-as-energy-demands-grow.html">GlobeNewswire</a>); EPP design wins convert to SOPs in 2027-28</td>
+</tr>
+<tr>
+<td>H2 2027</td>
+<td><strong>Buyback resumption</strong></td>
+<td>The $6B authorisation announced in late 2025 remains in place; a restart would support the share-count story</td>
+</tr>
+<tr>
+<td>Any quarter</td>
+<td><strong>SiC pricing and Chinese wafer supply</strong></td>
+<td>The Czech cancellation signals a buyers' market; further price deflation would hit PSG margins</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-risks-ranked-by-probability-impact">9. Risks, ranked by probability × impact</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Prob.</th>
+<th>Impact</th>
+<th>Score</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Auto/industrial cyclical double-dip</strong></td>
+<td>Medium-high (55%)</td>
+<td>High</td>
+<td><strong>8.3</strong></td>
+<td>Auto is 45% of revenue and still contracting; a weaker 2027 SAAR would break the "high-single-digit above SAAR" promise and the $4.74 FY2027 EPS consensus</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Synaptics integration and leverage</strong></td>
+<td>Medium (45%)</td>
+<td>High</td>
+<td><strong>6.8</strong></td>
+<td>$5.7B cash at ~4.75x sales for a 9.5%-growth, consumer-skewed business; pro forma leverage ~2.8x; buybacks paused; management bandwidth</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Chinese SiC/analog price deflation</strong></td>
+<td>High (70%)</td>
+<td>Medium</td>
+<td><strong>6.3</strong></td>
+<td>The $2B Czech project was cancelled because buying wafers is cheaper; structural margin pressure in PSG (31.4% GM)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>AI data-centre capex pause</strong></td>
+<td>Medium (35%)</td>
+<td>High</td>
+<td><strong>5.3</strong></td>
+<td>AI DC is the growth engine (10.5% of revenue, doubling in 2027); a hyperscaler digestion phase would hit both revenue and the multiple</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Valuation compression</strong></td>
+<td>Medium (45%)</td>
+<td>Medium</td>
+<td><strong>5.0</strong></td>
+<td>4.3x sales is in the top third of its five-year range; a de-rating to 3.5x on the same revenue is −19%</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Customer/distributor concentration</strong></td>
+<td>Medium (40%)</td>
+<td>Medium</td>
+<td><strong>4.4</strong></td>
+<td>One distributor 15% of revenue; underlying auto Tier-1 concentration higher than disclosed</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Technology substitution (GaN vs SiC; IGBT in low-cost EVs)</strong></td>
+<td>Low-medium (30%)</td>
+<td>Medium</td>
+<td><strong>3.6</strong></td>
+<td>onsemi hedges by owning both SiC and vertical GaN, which reduces but does not eliminate the risk</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Geopolitics/tariffs/China</strong></td>
+<td>Medium (40%)</td>
+<td>Medium</td>
+<td><strong>3.6</strong></td>
+<td>58% of revenue billed from Hong Kong and Singapore; China is both a major demand market and the source of the price competition</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Execution/management stretch</strong></td>
+<td>Medium (35%)</td>
+<td>Medium</td>
+<td><strong>3.2</strong></td>
+<td>Two acquisitions (Ferric, Synaptics) plus a manufacturing realignment plus a supply reallocation in the same 12 months</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Dilution</strong></td>
+<td>Low (15%)</td>
+<td>Low</td>
+<td><strong>1.2</strong></td>
+<td>Converts hedged; 2027 notes covered to $74.34; SBC 2.2% of revenue</td>
+</tr>
+</tbody>
+</table>
+<p><em>Score is my 1–10 composite of probability and impact; the table is ranked by it.</em></p>
+<hr />
+<h2 id="10-ownership-sentiment">10. Ownership &amp; sentiment</h2>
+<ul>
+<li><strong>Institutional ownership is effectively the whole register</strong> — 103.05% of shares outstanding reported (the figure exceeds 100% because of double-counting across filers), insiders 0.32% (<a href="https://stockanalysis.com/stocks/on/statistics/">StockAnalysis</a>). There is no controlling shareholder, no dual-class structure and no activist disclosed.</li>
+<li><strong>Short interest: 28.62M shares, 7.35% of shares outstanding and 7.38% of float, 2.71 days to cover</strong> — down from 30.41M the prior month but still a high absolute short for a $28B semiconductor name, consistent with the stock's 2.15 beta and the M&amp;A arbitrage around Synaptics.</li>
+<li><strong>Insider activity in the last six months is minimal and slightly negative.</strong> Form 4 filings show <strong>one open-market sale</strong>: Group President Sudhir Gopalswamy sold 15,578 shares at $80.00 on 2 Oct 2026 (~$1.25M), plus 470 shares withheld for taxes at $127.00. There were <strong>no open-market purchases</strong>; the only other activity was director grants of 1,986 shares each at $0 on 18 May 2026 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001097864&amp;type=4">SEC Form 4s</a>). Neither the CEO nor the CFO sold stock in the period — a mildly reassuring signal.</li>
+<li><strong>Analyst consensus: Buy, but thinly.</strong> 29 analysts: 13 Strong Buy, 2 Buy, 14 Hold, 0 Sell. Average price target <strong>$96.16</strong> (+35%), median $90, range <strong>$75–$125</strong> (<a href="https://stockanalysis.com/stocks/on/forecast/">StockAnalysis forecast</a>). The dispersion is unusually wide and skewed by bull-case AI-power models (Roth $125, Susquehanna $120) against holds at $80–95 (Citi cut to $80 on 4 Nov; Goldman $95; Stifel $80; Cantor $90).</li>
+<li><strong>Sentiment is fragile.</strong> The stock fell from $118.74 at the June Synaptics announcement to ~$80 by the October revision, closed at $63.20 on 6 Nov and has rebounded 12% to $71.06 — a 47% drawdown from the high with no change in fundamentals other than the deal structure.</li>
+</ul>
+<hr />
+<h2 id="11-technical-snapshot">11. Technical snapshot</h2>
+<ul>
+<li><strong>Price $71.06</strong> is <strong>below both</strong> the 50-day ($74.06) and 200-day ($82.78) moving averages — a downtrend with a bearish MA cross in place since the autumn.</li>
+<li><strong>52-week range $44.56–$134.92</strong>: the stock is 47.3% below its high and 59.4% above its low, sitting in the lower third of the range.</li>
+<li><strong>RSI 47.5</strong> — neutral, no oversold signal. Average volume 11.2M shares/day (20-day), beta 2.15.</li>
+<li><strong>Relative strength:</strong> ON +44.3% over 52 weeks versus SOXX +49.6% total return — a modest lag, and on 13 Nov it fell 3.62%, exactly in line with SOXX's −3.61% (broad semi selloff, not company-specific).</li>
+<li><strong>Read:</strong> no technical support for a bottom call, but the 200-day at $82.78 is the level to reclaim for the trend to turn; $63–65 (the November low) is the level that would confirm the bear case.</li>
+</ul>
+<hr />
+<h2 id="12-scenarios-1224-months">12. Scenarios (12–24 months)</h2>
+<p>All scenarios are <strong>standalone onsemi</strong> (excluding Synaptics, which closes mid-2027) and use FY2027 non-GAAP EPS × a target P/E, cross-checked on EV/sales.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Prob.</th>
+<th>Assumptions</th>
+<th>FY2027 EPS</th>
+<th>Multiple</th>
+<th>Implied price</th>
+<th>vs $71.06</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bear</strong></td>
+<td>25%</td>
+<td>Auto stays down through 2027 (−5%); AI DC grows only 40% to ~$870M; GM stalls at 39–40% on SiC pricing; Synaptics leverage forces a de-rating</td>
+<td>$3.30</td>
+<td>14x</td>
+<td><strong>$46</strong></td>
+<td>−35%</td>
+</tr>
+<tr>
+<td><strong>Base</strong></td>
+<td>50%</td>
+<td>Auto +8% as supply normalises; AI DC doubles to ~$1.24B; GM 43.5%; opex held flat; FCF ~$1.9B</td>
+<td>$4.60</td>
+<td>17x</td>
+<td><strong>$78</strong></td>
+<td>+10%</td>
+</tr>
+<tr>
+<td><strong>Bull</strong></td>
+<td>25%</td>
+<td>Auto +12% on content gains (48V/zonal, 900V EV); AI DC $1.4B+; GM 46%; Ferric/EPP contribute early; multiple re-rates toward the 2026 peak</td>
+<td>$5.40</td>
+<td>20x</td>
+<td><strong>$108</strong></td>
+<td>+52%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Probability-weighted value ≈ $77.5</strong> (0.25 × 46 + 0.50 × 78 + 0.25 × 108), i.e. <strong>~$78, +10%</strong>. Adding Synaptics would raise FY2027 EPS by roughly $0.20–0.30 in the stub period but add ~$120M of interest and ~2.8x leverage; I treat it as roughly value-neutral at $123/share and therefore not a reason to change the base case.</p>
+<p>The asymmetry is decent but not compelling: a 35% downside in the bear case versus 52% upside in the bull, with half the probability mass at +10%. That is a "hold for a better entry or better evidence" setup.</p>
+<hr />
+<h2 id="13-physical-ai-scorecard">13. Physical AI scorecard</h2>
+<p>Fixed weights as specified; scores 1–10.</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Weight</th>
+<th>Score</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical-AI purity</strong></td>
+<td>20%</td>
+<td><strong>3</strong></td>
+<td>~16% of revenue today, ~21% in three years. The largest and fastest-growing piece (AI data centre, 9.4%) is not Physical AI; EVs and grid are electrification</td>
+</tr>
+<tr>
+<td><strong>Growth</strong></td>
+<td>15%</td>
+<td><strong>7</strong></td>
+<td>FY2026 +10%, FY2027 +15% consensus; AI DC +140% then doubling; but auto (45%) is still shrinking and the 3-year revenue CAGR is only ~10–12%</td>
+</tr>
+<tr>
+<td><strong>Profitability</strong></td>
+<td>15%</td>
+<td><strong>7</strong></td>
+<td>41.4% GM and rising for five quarters, 22% OM, 28% FCF margin; but still 1,200bp below the 53% target and 8pt below FY2022–23 levels</td>
+</tr>
+<tr>
+<td><strong>Balance sheet</strong></td>
+<td>10%</td>
+<td><strong>6</strong></td>
+<td>Net-debt-neutral now, but ~$6.3B/~2.8x pro forma after Synaptics; converts hedged; strong FCF</td>
+</tr>
+<tr>
+<td><strong>Moat</strong></td>
+<td>15%</td>
+<td><strong>7</strong></td>
+<td>Auto qualification cycles, SiC vertical integration and packaging IP are real; commodity exposure in discretes and Chinese substrate competition cap it</td>
+</tr>
+<tr>
+<td><strong>Valuation</strong></td>
+<td>15%</td>
+<td><strong>6</strong></td>
+<td>4.2x FY2026E EV/sales (top third of its five-year range) but 15x FY2027E EPS and 5.9% FCF yield — fair, not cheap</td>
+</tr>
+<tr>
+<td><strong>Management/execution</strong></td>
+<td>10%</td>
+<td><strong>7</strong></td>
+<td>El-Khoury/Trent have executed the fab-lite and margin story; but two M&amp;A deals, a re-cut merger and a cancelled $2B project in six months is a lot of strategic churn</td>
+</tr>
+<tr>
+<td><strong>Weighted total</strong></td>
+<td><strong>100%</strong></td>
+<td><strong>5.95</strong></td>
+<td>0.20×3 + 0.15×7 + 0.15×7 + 0.10×6 + 0.15×7 + 0.15×6 + 0.10×7 = 0.60+1.05+1.05+0.60+1.05+0.90+0.70 = <strong>5.95</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>5.95/10 → Neutral.</strong> The score is held down almost entirely by purity and valuation, not by business quality. On a "power semiconductor quality" scorecard this would be a 7; on a Physical-AI scorecard it is a 6 because two-thirds of the thesis is cycle and AI-power, not perception and action.</p>
+<hr />
+<p><strong>Normalised score: 60/100</strong> (5.95/10 weighted on the scorecard above).</p>
+<hr />
+<h2 id="14-what-would-change-my-mind">14. What would change my mind</h2>
+<p><strong>To turn bullish (any two of these):</strong>
+1. <strong>Q1 FY2027 auto revenue returns to double-digit YoY growth while gross margin holds ≥43%</strong> — proof that the Q3/Q4 auto weakness was supply allocation, not demand.
+2. <strong>AI data-centre quarterly revenue exceeds $350M by Q2 FY2027</strong> (versus $180M in Q3 FY2026), with a disclosed design win at a second hyperscaler beyond Google.
+3. <strong>Synaptics closes on schedule with pro forma leverage below 2.5x and no guidance cut</strong>, and the buyback restarts within two quarters.
+4. <strong>Gross margin reaches 44–45% by mid-2027</strong>, keeping the 53% target credible and forcing consensus EPS upgrades rather than multiple compression.</p>
+<p><strong>To turn bearish (any two):</strong>
+1. <strong>Gross margin stalls below 41% for two consecutive quarters</strong>, particularly if PSG (31.4% GM) deteriorates on SiC pricing.
+2. <strong>Auto revenue declines again in 2027</strong> despite normalising supply — evidence of share loss to Chinese or in-house suppliers.
+3. <strong>AI data-centre growth decelerates below 50% YoY</strong> or a major PSU customer re-sources, which would remove the only growth engine supporting the multiple.
+4. <strong>Synaptics is re-cut a second time, blocked by a regulator, or financed with more debt than the $2.45B term loan</strong>, taking leverage above 3x.</p>
+<hr />
+<h3 id="entry-zones-invalidation-and-position-size">Entry zones, invalidation and position size</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Price</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggressive</td>
+<td>$65–68</td>
+<td>November low; 15.5x FY2027E</td>
+</tr>
+<tr>
+<td>Ideal</td>
+<td>$60–63</td>
+<td>13.5–14x FY2027E; mid-cycle support</td>
+</tr>
+<tr>
+<td>Margin of safety</td>
+<td>$52–55</td>
+<td>~12x FY2027E; bear-case valuation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invalidation:</strong> a weekly close below $63 (bear-case confirmation) or auto revenue declining through 2027. <strong>Size:</strong> 2–3% of a diversified book; cyclical, so size below a core compounder.</p>
+<hr />
+<h2 id="15-sources">15. Sources</h2>
+<p>All accessed <strong>13 November 2026</strong>.</p>
+<ol>
+<li>onsemi, Q3 FY2026 Form 10-Q (quarter ended 2 Oct 2026), filed 2 Nov 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000109786426000021/on-20261002.htm</li>
+<li>onsemi, Q3 FY2026 earnings release (Form 8-K Exhibit 99.1), 2 Nov 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm</li>
+<li>onsemi, Q3 FY2026 earnings call transcript, 2 Nov 2026 — https://stockanalysis.com/stocks/on/transcripts/722808-q3-2026/</li>
+<li>onsemi, FY2025 Form 10-K (year ended 31 Dec 2025), filed 9 Feb 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm</li>
+<li>onsemi, Q4/FY2025 earnings release, 9 Feb 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000114036126004405/ef20065070_ex99-1.htm</li>
+<li>onsemi, Q4/FY2024 earnings release, 10 Feb 2025 — https://www.sec.gov/Archives/edgar/data/1097864/000119312525023201/d926041dex991.htm</li>
+<li>onsemi, Q4/FY2023 earnings release, 5 Feb 2024 — https://www.sec.gov/Archives/edgar/data/1097864/000119312524023485/d610011dex991.htm</li>
+<li>onsemi, Q1 FY2026 earnings release, 4 May 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000114036126018868/ef20072220_ex99-1.htm</li>
+<li>onsemi, Q1 FY2025 earnings release, 5 May 2025 — https://www.sec.gov/Archives/edgar/data/1097864/000114036125017228/ef20048379_ex99-1.htm</li>
+<li>onsemi, Q2 FY2025 earnings release, 4 Aug 2025 — https://www.sec.gov/Archives/edgar/data/1097864/000114036125028492/ef20053137_ex99-1.htm</li>
+<li>onsemi, Investor Day 2026 transcript, 16 Sep 2026 — https://stockanalysis.com/stocks/on/transcripts/612251-investor-day-2026/</li>
+<li>onsemi, Form 8-K (amended and restated $1.75B credit agreement), 12 Nov 2026 — https://www.sec.gov/Archives/edgar/data/1097864/000114036126043431/ef20085485_8k.htm</li>
+<li>StockAnalysis, ON statistics (price, market cap, EV, short interest, ownership) — https://stockanalysis.com/stocks/on/statistics/</li>
+<li>StockAnalysis, ON quarterly financials — https://stockanalysis.com/stocks/on/financials/?p=quarterly</li>
+<li>StockAnalysis, ON annual financials and cash flow — https://stockanalysis.com/stocks/on/financials/cash-flow-statement/</li>
+<li>StockAnalysis, ON analyst forecast and ratings — https://stockanalysis.com/stocks/on/forecast/ ; https://stockanalysis.com/stocks/on/ratings/</li>
+<li>StockAnalysis, ON ratio history (five-year multiple range) — https://stockanalysis.com/stocks/on/financials/ratios/?p=quarterly</li>
+<li>Investing.com via Yahoo Finance, "Onsemi and Czech ministry cancel $2 billion chip facility expansion", 6 Nov 2026 — https://finance.yahoo.com/technology/articles/onsemi-czech-ministry-cancel-2-211736822.html</li>
+<li>Quartz via Yahoo Finance, "onsemi revises Synaptics acquisition to all-cash $5.7B deal", 2 Oct 2026 — https://finance.yahoo.com/news/onsemi-revises-synaptics-acquisition-cash-111712324.html</li>
+<li>InvestorsHub via Yahoo Finance, "ON Semiconductor Shares Rise 3% as Q3 Earnings Beat Forecasts", 3 Nov 2026 — https://finance.yahoo.com/technology/articles/semiconductor-shares-rise-3-q3-135135279.html</li>
+<li>24/7 Wall St, "Onsemi Is Walking Away From a $2 Billion Chip Bet It Made in 2024", 7 Nov 2026 — https://247wallst.com/investing/2026/11/07/onsemi-is-walking-away-from-a-2-billion-chip-bet-it-made-in-2024/</li>
+<li>GlobeNewswire, "onsemi's EliteSiC M4 Pushes Power Density Higher", 10 Nov 2026 — https://www.globenewswire.com/news-release/2026/11/10/3399176/0/en/onsemi-s-elitesic-m4-pushes-power-density-higher-as-energy-demands-grow.html</li>
+<li>StockAnalysis, peer statistics: IFX.DE, STM, NXPI, TXN, WOLF — https://stockanalysis.com/quote/etr/IFX/statistics/ ; https://stockanalysis.com/stocks/stm/statistics/ ; https://stockanalysis.com/stocks/nxpi/statistics/ ; https://stockanalysis.com/stocks/txn/statistics/ ; https://stockanalysis.com/stocks/wolf/statistics/</li>
+<li>StockAnalysis, Synaptics (SYNA) statistics — https://stockanalysis.com/stocks/syna/statistics/</li>
+<li>StockAnalysis, iShares Semiconductor ETF (SOXX) — https://stockanalysis.com/etf/soxx/</li>
+<li>SEC EDGAR, onsemi Form 4 filings, May–Nov 2026 — https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001097864&amp;type=4</li>
+<li>Valens Semiconductor via Yahoo Finance, "Valens Semiconductor to Collaborate with onsemi on a Cost-Optimized Integrated Sensor Based on the MIPI A-PHY Standard", 22 Sep 2026 — https://finance.yahoo.com/technology/articles/valens-semiconductor-collaborate-onsemi-cost-103000616.html</li>
+</ol>
+<hr />
+<p><em>Research only. Not investment advice. No position sizing. Estimates are labelled as such; figures I could not verify from a primary source are flagged in the text.</em></p>
+</div>
+</body></html>

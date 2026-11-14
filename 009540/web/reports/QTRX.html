@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QTRX · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>QTRX · 2026-10-26</span></div>
+<div class="wrap">
+<h1 id="quanterix-corporation-nasdaq-qtrx-actualizacion-del-analisis">Quanterix Corporation (NASDAQ: QTRX) — Actualización del análisis</h1>
+<p><strong>Fecha de análisis: 26 de octubre de 2026, 20:30 UTC</strong> · Cierre 26-oct-2026 (16:00 ET): <strong>$2.83</strong> ($2.90 after-hours) · Datos de filings hasta 26-oct-2026.
+<strong>Documento base:</strong> <code>~/qtrx_final.md</code> (informe institucional del 11-sep-2026; precio $2.56). Se reutilizan sus escenarios y valores por escenario; <strong>los inputs cambian solo donde se dice</strong>. Incluye una <strong>corrección aritmética</strong> del valor ponderado del informe original (ver §0 y §4).
+<strong>Convención numérica:</strong> formato US (1,234.5; $133.8M; +10.5%).</p>
+<p><strong>Etiquetas:</strong> [VF] verificado (SEC, regulador, exchange/API); [MC] dirección; [3P] terceros; [AA] supuesto propio; [NOT FOUND] buscado y no encontrado.</p>
+<hr />
+<h2 id="0-resumen-ejecutivo-el-precio-sube-la-tesis-no-cambia-y-una-correccion-de-calculo">0 — Resumen ejecutivo: el precio sube, la tesis no cambia (y una corrección de cálculo)</h2>
+<p><strong>En una frase:</strong> QTRX ha subido <strong>+10.5%</strong> desde el informe del 11-sep ($2.56 → $2.83) en un movimiento que coincide con el anuncio de acceso IVD en China, un PT más alto de TD Cowen y un rebote técnico desde el mínimo de agosto, pero sigue <strong>−55.5% YTD</strong>, por debajo de su caso base ($4.94) y con la amenaza competitiva ahora <strong>comercializada</strong> —Quest lanzará el pTau217 de Roche en Q4 y su propio panel multi-analyte—; la estructura de opción (caja = 45% del market cap, EV/Sales 0.48×) sigue intacta, pero el catalizador clínico se ha debilitado.</p>
+<p><strong>Corrección importante del informe base.</strong> El informe del 11-sep decía "prob-ponderado ≈ $4.43". Con <strong>sus propios valores</strong> (bear $1.73 / base $4.94 / bull $10.37) y <strong>sus propios pesos</strong> (30/50/20), la suma es <strong>$5.06</strong>, no $4.43: <code>0.30×1.73 + 0.50×4.94 + 0.20×10.37 = $5.06</code>. La diferencia (+14%) es material para el upside. No cambio ningún escenario; <strong>corrijo la aritmética</strong> y muestro la sensibilidad (40/45/15 → $4.47). El rango relevante es <strong>$4.5–5.1</strong>, no $4.43.</p>
+<p><strong>Lo que NO ha cambiado (verificado):</strong>
+- <strong>No hay 8-K desde el 10-ago-2026</strong> (resultados Q2). Entre el 11-sep y el 26-oct solo hay Form 4 y un S-8 (plan de inducción, 11-sep). <strong>No hay pre-anuncio ni cambio de guía.</strong> [VF, EDGAR]
+- <strong>Guía FY26 intacta:</strong> ingresos <strong>$142–148M</strong>; cash de fin de año ~<strong>$80M</strong>; breakeven de cash-flow <strong>2027</strong> (tercer aplazamiento). [MC]
+- <strong>Caja $93.5–96.9M</strong> (30-jun, según se mida efectivo solo o efectivo+equivalentes), sin deuda financiera relevante; <strong>caja neta ~$60M</strong> (incluyendo ~$33M de leases). Runway ~18–24 meses sin inflexión; el cash cubre hasta ~2028 sin emitir equity. [VF/AA]
+- <strong>Dilución estructural:</strong> 47.29M acciones (+21% YoY); SBC ~13–15% de ingresos. [VF]
+- <strong>Sin compras open-market de insiders</strong> en la ventana; las transacciones son RSU/option withholding (CTO Miller) y grants a consejeros (Donnelly, Mendel) a $3.41 el 1-oct. [VF, Form 4]</p>
+<p><strong>Lo que SÍ ha cambiado:</strong>
+1. <strong>China: aprobación NMPA (7-oct).</strong> Innovita —socio comercial de Quanterix en China desde 2024— recibió aprobación de la NMPA para los instrumentos <strong>HD-X y SR-X</strong> y kits de cuatro biomarcadores neurológicos: <strong>p-Tau 217, GFAP, p-Tau 181 y NfL</strong>. Es el primer acceso IVD real de Simoa al mercado chino, pero <strong>no se han divulgado términos económicos, volúmenes ni precios</strong>. [VF — PR de QTRX/Innovita; T2 — CLP]
+2. <strong>La amenaza competitiva ya no es solo regulatoria, es comercial.</strong> Quest Diagnostics anunció (9-sep) que lanzará en <strong>Q4-2026</strong> un test AD-Detect basado en el <strong>pTau217 de Roche</strong> (FDA-cleared 24-ago) y que lanzará su <strong>propio panel multi-analyte LDT</strong> (Aβ42/40 + p-tau217 + ApoE, con tasa de indeterminados del 10%) a finales de septiembre. Es exactamente el segmento de LucentAD Complete, con el canal nacional de Quest (~2.000 centros) y sin necesidad de Simoa. [T2 — Quest/Medical Update]
+3. <strong>El 510(k) de LucentAD Complete sigue pendiente.</strong> La presentación fue el <strong>3-feb-2026</strong>; a 26-oct no hay comunicado de clearance ni entrada en el registro de FDA. ~8.7 meses de revisión, muy por encima de los ~90 días estándar de un 510(k). Puede ser normal para un test algorítmico multi-analyte, pero <strong>la ausencia de noticia es información</strong>: el catalizador de 2026 no ha llegado. [VF por ausencia; no confirma una denegación]
+4. <strong>Sell-side:</strong> TD Cowen subió el PT de <strong>$3.00 a $3.50</strong> (13-oct, mantiene Hold); Canaccord mantiene Hold con <strong>$3</strong> (17-ago). Cobertura mínima: <strong>3 analistas, todos Hold</strong>, PT medio <strong>$3.17</strong> (rango $3.00–3.50). [3P]
+5. <strong>Q3-26: ~9–10 de noviembre</strong> (estimado; la empresa aún no ha anunciado fecha oficial). Consenso: EPS ~<strong>−$0.42</strong>; revenue FY26 <strong>$143.4M</strong>. [3P]
+6. <strong>Nueva investigación legal:</strong> Migliaccio &amp; Rathod anunció (17-oct) una investigación sobre la fusión Quanterix/Akoya de jul-2025 y la información financiera previa. Es una investigación de despacho, no una demanda colectiva admitida; materialidad baja. [T3]
+7. <strong>Precio:</strong> $2.56 (11-sep) → <strong>$2.83</strong> (+10.5%), pero <strong>−13.5% en el último mes</strong> y <strong>−55.5% YTD</strong> (desde $6.36 al 31-dic-2025). El máximo de 12 meses fue <strong>$8.06</strong> (9-ene-2026); el mínimo, <strong>$2.42</strong> (10-ago-2026). [VF]</p>
+<p><strong>Conclusión:</strong> rating <strong>HOLD</strong> sin cambios; <strong>zona de compra ≤$2.10</strong> sin cambios. A $2.83 el upside al valor ponderado corregido es <strong>+79%</strong> (base +75%, bull +266%), pero el downside al bear es <strong>−39%</strong> y el catalizador clínico (510(k) + LucentAD) se ha retrasado mientras Quest/Roche se comercializan. La asimetría sigue siendo favorable en estructura (caja + opción), no en ejecución. <strong>No compro a $2.83; esperaría ≤$2.10 o una prueba de que el 510(k) y el pull-through de LucentAD existen.</strong></p>
+<hr />
+<h2 id="1-snapshot-de-mercado-26-oct-2026">1 — Snapshot de mercado (26-oct-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>11-sep-2026 (informe)</th>
+<th>26-oct-2026</th>
+<th>Δ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precio</td>
+<td>$2.56</td>
+<td><strong>$2.83</strong> ($2.90 after-hours)</td>
+<td><strong>+10.5%</strong></td>
+</tr>
+<tr>
+<td>YTD 2026</td>
+<td>—</td>
+<td><strong>−55.5%</strong> (desde $6.36)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1 mes</td>
+<td>—</td>
+<td><strong>−13.5%</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>5 días / 10 días</td>
+<td>—</td>
+<td>+2.2% / −10.4%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Rango 52 semanas</td>
+<td>—</td>
+<td><strong>$2.42–8.06</strong></td>
+<td>máximo 9-ene; mínimo 10-ago</td>
+</tr>
+<tr>
+<td>Capitalización</td>
+<td>~$122M</td>
+<td><strong>$133.8M</strong> (47.29M sh)</td>
+<td>+9.7%</td>
+</tr>
+<tr>
+<td>Caja neta</td>
+<td>~$60M</td>
+<td><strong>~$60.1M</strong> ($1.27/sh)</td>
+<td>≈ plana</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td>~$62M</td>
+<td><strong>~$73.7M</strong></td>
+<td>+19%</td>
+</tr>
+<tr>
+<td>EV / Sales TTM ($153.4M)</td>
+<td>0.38×</td>
+<td><strong>0.48×</strong></td>
+<td>+0.10×</td>
+</tr>
+<tr>
+<td>EV / Sales FY26 guide ($145M mid)</td>
+<td>—</td>
+<td><strong>~0.51×</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Short interest</td>
+<td>4.73M; 10.0% SO; ~12.5% float; DTC 4–6</td>
+<td><strong>5.05M; 10.67% SO; 13.29% float; DTC 5.60</strong></td>
+<td>+0.32M sh</td>
+</tr>
+<tr>
+<td>Volumen medio 20d</td>
+<td>~0.6M</td>
+<td><strong>0.51M</strong></td>
+<td>−15%</td>
+</tr>
+<tr>
+<td>RSI (14d)</td>
+<td>—</td>
+<td><strong>41.8</strong></td>
+<td>neutral</td>
+</tr>
+<tr>
+<td>Beta 5Y</td>
+<td>—</td>
+<td>1.01</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Analistas</td>
+<td>—</td>
+<td><strong>3; todos Hold; PT medio $3.17 (rango $3.00–3.50)</strong></td>
+<td>TD Cowen $3.50 (13-oct)</td>
+</tr>
+<tr>
+<td>Consenso FY26</td>
+<td>—</td>
+<td><strong>revenue $143.4M; EPS −$2.08; FCF −$43.5M</strong></td>
+<td>guía $142–148M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura del snapshot.</strong> La acción ha subido desde el informe, pero no por una mejora de fundamentales: el movimiento se explica por el anuncio de China (7-oct), el PT de TD Cowen (13-oct) y un rebote técnico desde el mínimo de agosto ($2.42). El <strong>EV/Sales de 0.48×</strong> sigue siendo de liquidación para una empresa con ~86% de ingresos recurrentes/semi-recurrentes; el problema no es el múltiplo, es que el crecimiento es ~0% y el catalizador clínico no llega.</p>
+<h2 id="composicion-del-precio-caja-neta-127accion-45-del-precio-el-mercado-paga-156accion-737m-por-el-negocio-no-es-el-82-de-smr-ni-el-63-de-oklo-pero-sigue-siendo-una-opcion-relativamente-barata"><strong>Composición del precio:</strong> caja neta $1.27/acción = <strong>45% del precio</strong>; el mercado paga <strong>$1.56/acción (~$73.7M)</strong> por el negocio. No es el 82% de SMR ni el 63% de OKLO, pero sigue siendo una opción relativamente barata.</h2>
+<h2 id="2-delta-11-sep-26-oct-los-hechos-nuevos">2 — Delta 11-sep → 26-oct: los hechos nuevos</h2>
+<h3 id="21-china-la-primera-aprobacion-ivd-real-de-simoa-7-oct">2.1 China: la primera aprobación IVD real de Simoa (7-oct)</h3>
+<p><strong>Qué se aprobó.</strong> Innovita Biological Technology (SSE: 688253.SH), socio comercial de Quanterix en China desde 2024, recibió aprobación de la <strong>NMPA</strong> para:
+- los instrumentos <strong>HD-X</strong> y <strong>SR-X</strong> de Quanterix; y
+- kits de cuatro biomarcadores neurológicos: <strong>p-Tau 217, GFAP, p-Tau 181 y NfL</strong>.</p>
+<p>El comunicado las presenta como el primer acceso IVD de la tecnología Simoa al mercado chino, con planes de "additional regulatory submissions" por parte de Innovita. [VF — PR QTRX/Innovita 7-oct; T2 — CLP, Bioanalysis Zone]</p>
+<p><strong>Qué significa:</strong>
+- <strong>Es un catalizador real, no una LOI.</strong> Una aprobación NMPA de instrumentos + reactivos es la puerta para vender en laboratorios clínicos chinos; el modelo es partner-led (Innovita desarrolla, registra y comercializa), lo que reduce el capex de Quanterix pero también captura menos margen.
+- <strong>El mercado chino es grande y menos dominado por Roche/Siemens que el americano</strong>, pero es un mercado de precio bajo y competencia local (snibe, Mindray, hotgen). El valor para QTRX dependerá de los términos del acuerdo con Innovita, que <strong>no se han divulgado</strong> (royalty, transferencia de instrumentos, precio de reactivos). [NOT FOUND]
+- <strong>No cambia el caso base por sí sola.</strong> No hay guidance de ingresos China, ni volumen mínimo, ni fecha de lanzamiento comercial. Es una opción de 2027+ que el mercado puede descontar, pero que todavía no está en números.</p>
+<p><strong>La reacción del mercado fue reveladora:</strong> la acción subió a <strong>$3.44</strong> el 6-oct (víspera del anuncio), cerró <strong>$3.325</strong> el 7-oct (día de la noticia) y desde entonces ha caído a <strong>$2.83</strong>. Es decir, el mercado compró el rumor/anticipación y <strong>vendió la noticia</strong>. [VF, precios]</p>
+<h3 id="22-questroche-la-amenaza-ya-esta-comercializada-9-sep">2.2 Quest/Roche: la amenaza ya está comercializada (9-sep)</h3>
+<p>El 9-sep-2026 Quest Diagnostics anunció dos movimientos que atacan directamente el espacio de LucentAD Complete:
+1. <strong>Distribución del pTau217 de Roche:</strong> Quest lanzará en <strong>Q4-2026</strong> un test AD-Detect basado en el <strong>Elecsys pTau217</strong> de Roche (FDA-cleared el 24-ago-2026), el primer test de un solo analito con indicación rule-in/rule-out para amiloide en atención primaria y especializada. Quest lo integrará en paneles en 2027.
+2. <strong>Panel multi-analyte propio:</strong> Quest lanzará a finales de septiembre un LDT AD-Detect con <strong>Aβ42/40 + p-tau217 + ApoE</strong>, con una tasa de indeterminados del <strong>10%</strong> (frente al 15–20% que recomienda CEOi). Se ofrece a través de ~<strong>2.000</strong> centros de extracción de Quest.</p>
+<p>[Fuente: Quest/Medical Update Online, 9-sep-2026 — T2; Roche PR 24-ago — T1]</p>
+<p><strong>Por qué importa más que el 510(k) de Roche:</strong>
+- El argumento de QTRX no era "Roche no puede medir pTau217", sino "Roche no puede hacerlo con la sensibilidad/multiplexación de Simoa". <strong>Quest acaba de lanzar un panel multi-analyte sin Simoa</strong>, con un canal nacional y un precio de laboratorio. Eso erosiona la diferenciación de LucentAD Complete justo en su Segmento clave (EE.UU., atención primaria, multi-biomarcador).
+- Quest es el <strong>mayor laboratorio de referencia de EE.UU.</strong>; su adopción marca el estándar de reembolso y de flujo de trabajo. Si el test de Quest demuestra una sensibilidad adecuada, el "premium femto" de QTRX queda reducido a nichos (ensayos clínicos, neurology specialty, investigación).
+- <strong>Matiz justo:</strong> el panel de Quest usa p-tau217 de un tercero y espectrometría de masas para Aβ42/40/ApoE; no es idéntico a Simoa y su validación clínica es un LDT, no un IVD. Pero para el pagador y el médico, es un test de sangre multi-analyte disponible en 2.000 puntos, que es lo que compite con LucentAD Complete.</p>
+<p><strong>Esto no estaba en el informe del 11-sep.</strong> El informe citaba la clearance de Roche (24-ago) y C2N (20-ago), pero no la distribución de Quest ni su panel multi-analyte (anunciado el 9-sep). Es el cambio competitivo más importante desde entonces.</p>
+<h3 id="23-el-510k-de-lucentad-complete-sigue-sin-clearance">2.3 El 510(k) de LucentAD Complete sigue sin clearance</h3>
+<ul>
+<li><strong>Presentado:</strong> 3-feb-2026 (PR de Quanterix). Panel de cinco analitos: p-Tau 217, Aβ42, Aβ40, GFAP y NfL; algoritmo propietario.</li>
+<li><strong>Estado a 26-oct-2026:</strong> <strong>sin comunicado de clearance</strong> en la página de prensa de Quanterix, sin 8-K y sin entrada pública identificada en la base de datos de FDA. ~<strong>8.7 meses</strong> desde la presentación, frente a los ~90 días estándar de un 510(k) (aunque un test algorítmico multi-analyte es una revisión más compleja). [VF por ausencia; no prueba denegación]</li>
+<li><strong>Qué implica:</strong> sin 510(k), LucentAD Complete sigue siendo un <strong>LDT</strong> (laboratory-developed test), no un IVD. Puede facturarse a $897 con CMS y tener cobertura de Anthem, pero no escala como un producto de dispositivo (no se vende a otros laboratorios, no tiene label, no tiene reembolso nacional homogéneo). El 510(k) era el puente del bull case.</li>
+<li><strong>Riesgo a vigilar:</strong> un CRL o una solicitud de información adicional (deficiency letter) no se disclosa hasta que la empresa lo decida; la ausencia de noticia a 9 meses es una señal de retraso, no de fracaso, pero el catalizador de 2026 ya no se ha cumplido.</li>
+</ul>
+<h3 id="24-q3-26-910-de-noviembre-estimado-no-confirmado">2.4 Q3-26: ~9–10 de noviembre (estimado, no confirmado)</h3>
+<p>La empresa <strong>no ha anunciado fecha oficial</strong>; los calendarios estiman <strong>lunes 9 o martes 10 de noviembre</strong>, después del cierre. [3P — MarketBeat/TipRanks/AskTheDate]
+Consenso: <strong>EPS ~−$0.42</strong>; revenue FY26 <strong>$143.4M</strong> (guía $142–148M). [3P]
+<strong>Qué mirar:</strong>
+1. <strong>Revenue Q3 vs el implied de H2:</strong> H1 fue $69.3M; para llegar al midpoint ($145M) H2 necesita <strong>~$75.7M</strong>, es decir, ~$37–38M por trimestre vs $32.9M en Q2. Si Q3 sale por debajo de ~$35M, el midpoint de la guía queda en riesgo.
+2. <strong>Cash:</strong> $96.9M al 30-jun; guía ~$80M a fin de año → burn H2 ~$17M. Un Q3 con burn &gt;$12M o cash &lt;$85M sería negativo.
+3. <strong>LucentAD Complete:</strong> cualquier cifra de volumen, tests/trimestre o crecimiento secuencial. Sigue siendo [NOT FOUND] en los filings.
+4. <strong>China:</strong> primer comentario de management sobre el lanzamiento de Innovita y términos económicos.
+5. <strong>510(k):</strong> cualquier actualización sobre el timing de la FDA.
+6. <strong>Guía:</strong> reiteración o segundo recorte (el primero fue en agosto; un segundo sería el kill thesis del informe).</p>
+<h3 id="25-sell-side-short-interest-e-insiders">2.5 Sell-side, short interest e insiders</h3>
+<ul>
+<li><strong>Cobertura mínima:</strong> 3 analistas, <strong>todos Hold</strong>. TD Cowen subió el PT a <strong>$3.50</strong> desde $3.00 (13-oct); Canaccord mantiene <strong>$3</strong> (17-ago). PT medio <strong>$3.17</strong>, mediana $3.00. [3P]</li>
+<li><strong>Short interest:</strong> <strong>5.05M acciones = 10.67% del capital / 13.29% del float</strong>; DTC <strong>5.6</strong>; mes anterior 4.98M. Subida moderada, sin squeeze setup (float 38M). [3P]</li>
+<li><strong>Insiders:</strong> sin compras open-market en la ventana. El CTO Miller convirtió RSU/opciones y vendió 467 acciones a $3.07 para pagar impuestos (15-oct) — no es una venta discrecional. Donnelly y Mendel recibieron <strong>grants</strong> de 6,964 y 4,398 acciones a $3.41 (1-oct), no compras. [VF, Form 4]</li>
+<li><strong>Nueva investigación legal:</strong> Migliaccio &amp; Rathod (17-oct) investiga si los accionistas de Akoya recibieron información incompleta sobre la condición financiera de Quanterix antes de la fusión de jul-2025. Es una investigación de despacho; no hay demanda colectiva admitida ni 8-K. [T3]</li>
+</ul>
+<h3 id="26-silencio-documental">2.6 Silencio documental</h3>
+<p>Entre el 11-sep y el 26-oct <strong>no hay ningún 8-K, 10-Q ni 10-K nuevo</strong>. Solo:
+- <strong>S-8</strong> del 11-sep (plan de inducción de 2025; registro de acciones para nuevos empleados) — señal de dilución futura, no de un evento operativo.
+- <strong>6 Form 4</strong> (CTO, consejeros) y ningún 424B5. [VF, EDGAR]</p>
+<h2 id="consecuencia-no-hay-ningun-hecho-financiero-nuevo-que-explique-el-105-el-movimiento-es-noticia-sectorial-china-analista-td-cowen-y-rebote-tecnico-el-q3-del-9-10-nov-sera-el-primer-dato-duro-desde-el-10-ago"><strong>Consecuencia:</strong> no hay ningún hecho financiero nuevo que explique el +10.5%; el movimiento es noticia sectorial (China), analista (TD Cowen) y rebote técnico. El Q3 del 9-10 nov será el primer dato duro desde el 10-ago.</h2>
+<h2 id="3-estado-fundamental-lo-que-sigue-siendo-verdad">3 — Estado fundamental: lo que sigue siendo verdad</h2>
+<table>
+<thead>
+<tr>
+<th>Hecho</th>
+<th>Estado a 26-oct-2026</th>
+<th>Qué implica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Negocio</strong></td>
+<td>Inmunoensayos ultrasensibles <strong>Simoa</strong> (digital ELISA, fg/mL) + biología espacial <strong>Akoya</strong> (PhenoCycler/PhenoImager) desde jul-2025</td>
+<td>Plataforma técnicamente superior; el problema es comercial, no científico</td>
+</tr>
+<tr>
+<td><strong>Mix de ingresos FY25</strong></td>
+<td>Consumibles <strong>$75.1M</strong> (54%), servicios <strong>$44.2M</strong> (32%), instrumentos <strong>$17.9M</strong> (13%)</td>
+<td>~86% recurrente/semi-recurrente; razor-and-blades, pero el razor está saturado</td>
+</tr>
+<tr>
+<td><strong>Crecimiento</strong></td>
+<td>FY25 <strong>+1.1%</strong>; Q2-26 <strong>−23% pro-forma</strong> (aunque +34% as-reported por Akoya); guía FY26 <strong>$142–148M</strong> (recortada desde $169–174M en agosto)</td>
+<td>El crecimiento orgánico es negativo; la guía asume una mejora secuencial en H2</td>
+</tr>
+<tr>
+<td><strong>Márgenes</strong></td>
+<td>GAAP GM <strong>44.6% TTM</strong> / 38.5% en Q2; adj. EBITDA <strong>−$44.9M FY25</strong> (~−$48M TTM)</td>
+<td>El mix Akoya y la absorción de costes han comprimido el margen; el modelo no paga su estructura</td>
+</tr>
+<tr>
+<td><strong>Caja y burn</strong></td>
+<td>Cash <strong>$93.5–96.9M</strong> (30-jun; según efectivo vs. efectivo+equivalentes); caja neta <strong>~$60M</strong>; burn ajustado Q2 <strong>$4.0M</strong> (con one-off; subyacente ~$8–10M); guía cash fin-26 <strong>~$80M</strong></td>
+<td>Runway <strong>~18–24 meses</strong> sin inflexión; el cash cubre hasta ~2028 sin emitir equity — la financiación es una decisión, no una necesidad</td>
+</tr>
+<tr>
+<td><strong>Dilución</strong></td>
+<td><strong>47.29M acciones</strong>, +21% YoY; SBC $20.7M FY25 (~15% de ingresos)</td>
+<td>El accionista absorbe ~4%/año de dilución incluso con ingresos planos; S-8 de inducción (11-sep) añade presión futura</td>
+</tr>
+<tr>
+<td><strong>Deuda</strong></td>
+<td>Sin deuda financiera; ~$33M de leases (el "debt" que muestra el vendor)</td>
+<td>No hay riesgo de covenants; el balance es una fortaleza relativa</td>
+</tr>
+<tr>
+<td><strong>Break-even</strong></td>
+<td>Guiado a <strong>2027</strong> (tercer aplazamiento: 2025 → 2026 → 2027)</td>
+<td>La credibilidad de la dirección está descontada; el mercado no paga por la promesa</td>
+</tr>
+<tr>
+<td><strong>Producto clínico</strong></td>
+<td><strong>LucentAD Complete</strong> LDT a <strong>$897 CMS</strong>; cobertura comercial de <strong>Anthem</strong> desde jul-2026; <strong>510(k) presentado 3-feb-2026, sin clearance a 26-oct</strong></td>
+<td>El LDT funciona; el salto a IVD (escala) sigue bloqueado</td>
+</tr>
+<tr>
+<td><strong>China</strong></td>
+<td><strong>NMPA aprobó HD-X, SR-X + 4 assays</strong> (p-tau217, GFAP, p-tau181, NfL) vía Innovita (7-oct)</td>
+<td>Primera puerta IVD real; términos económicos <strong>no divulgados</strong>; opción 2027+</td>
+</tr>
+<tr>
+<td><strong>Competencia</strong></td>
+<td>Roche pTau217 <strong>cleared</strong> (24-ago) en &gt;4.500 cobas; C2N PrecivityAD2 <strong>cleared</strong> (20-ago); <strong>Quest lanzará AD-Detect pTau217 en Q4-26 y su propio panel multi-analyte</strong></td>
+<td>La comoditización del pTau217 ya no es una tesis: es un producto en el mercado</td>
+</tr>
+<tr>
+<td><strong>IP</strong></td>
+<td>Patente core US8846415B2 expira <strong>23-sep-2028</strong>; familia 2010 ~2031-32</td>
+<td>El moat tiene fecha de caducidad; coincide con la ventana de comoditización</td>
+</tr>
+<tr>
+<td><strong>Gestión</strong></td>
+<td>CEO <strong>Everett Cunningham</strong> (desde 19-ene-2026); CFO Faessler (jun-26); CCO Gute (ago-26); <strong>CMO Dr. Yuri Fesko (14-sep-26)</strong></td>
+<td>C-suite renovado; primer año con miss, recorte de guía y −40% en la acción; sin track record</td>
+</tr>
+<tr>
+<td><strong>Litigios</strong></td>
+<td>Investigación de Migliaccio &amp; Rathod sobre la fusión Akoya (17-oct); historial de restatement FY22-23 y aviso Nasdaq</td>
+<td>Overhang de gobernanza, no de solvencia</td>
+</tr>
+</tbody>
+</table>
+<p><strong>El caso en una frase:</strong> Quanterix tiene la tecnología de detección más sensible del mercado, ~86% de ingresos recurrentes y una caja que cubre la mitad de la capitalización, pero <strong>el biomarcador de mayor volumen (p-tau217) ya no necesita su sensibilidad</strong>, y los grandes laboratorios (Quest, Labcorp) están lanzando tests multi-analyte sin Simoa; el valor depende de que LucentAD y China abran un nicho antes de que el cash se agote.</p>
+<hr />
+<h2 id="4-valoracion-escenarios-intactos-correccion-aritmetica-y-precio-actual">4 — Valoración: escenarios intactos, corrección aritmética y precio actual</h2>
+<h3 id="41-los-tres-escenarios-del-informe-base-sin-cambios">4.1 Los tres escenarios del informe base (sin cambios)</h3>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Prob. [AA]</th>
+<th>Revenue FY30</th>
+<th>EBITDA margin FY30</th>
+<th>FCF FY30</th>
+<th>Equity</th>
+<th>Acciones</th>
+<th>Valor / acción</th>
+<th>Vs $2.83</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bear</strong></td>
+<td>30%</td>
+<td>$143M (flat)</td>
+<td>−2%</td>
+<td>+$6M</td>
+<td>$97M</td>
+<td>56M</td>
+<td><strong>$1.73</strong></td>
+<td><strong>−39%</strong></td>
+</tr>
+<tr>
+<td><strong>Base</strong></td>
+<td>50%</td>
+<td>$194M (+7–8%)</td>
+<td>+6%</td>
+<td>+$23M</td>
+<td>$267M</td>
+<td>54M</td>
+<td><strong>$4.94</strong></td>
+<td><strong>+75%</strong></td>
+</tr>
+<tr>
+<td><strong>Bull</strong></td>
+<td>20%</td>
+<td>$273M (+15–18%)</td>
+<td>+15%</td>
+<td>+$57M</td>
+<td>$539M</td>
+<td>52M</td>
+<td><strong>$10.37</strong></td>
+<td><strong>+266%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Los múltiplos de salida implícitos son ~1.4× EV/Sales (bear), ~3.4× (base) y ~3.9× (bull), por debajo del rango histórico de plataformas diagnósticas (5–7×). <strong>No requieren un re-rating heroico.</strong></p>
+<h3 id="42-la-correccion-el-ponderado-del-informe-era-506-no-443">4.2 La corrección: el ponderado del informe era $5.06, no $4.43</h3>
+<p>El informe del 11-sep declaraba "prob-ponderado ≈ $4.43" con pesos 30/50/20. La aritmética con sus propios valores es:</p>
+<p><code>0.30 × $1.73 + 0.50 × $4.94 + 0.20 × $10.37 = $0.519 + $2.470 + $2.074 = **$5.06**</code></p>
+<p><strong>$4.43 no es reproducible con esos inputs.</strong> El valor más cercano aparece si se usan pesos <strong>40/45/15</strong> ($4.47), lo que sugiere que el informe original pudo mezclar los pesos del escenario con los de otro cálculo. No es un cambio de tesis: es un error de suma que <strong>aumenta el upside declarado</strong> de +73% a <strong>+79%</strong> a $2.83 (y a +98% a $2.56).</p>
+<table>
+<thead>
+<tr>
+<th>Pesos (bear/base/bull)</th>
+<th>Valor ponderado</th>
+<th>Vs $2.83</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>30 / 50 / 20 (los del informe)</strong></td>
+<td><strong>$5.06</strong></td>
+<td><strong>+79%</strong></td>
+</tr>
+<tr>
+<td>35 / 45 / 20</td>
+<td>$4.90</td>
+<td>+73%</td>
+</tr>
+<tr>
+<td>40 / 45 / 15 (más bearish)</td>
+<td>$4.47</td>
+<td>+58%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura honesta:</strong> incluso con los pesos más bearish, el precio está un <strong>58% por debajo</strong> del valor ponderado. La conclusión (asimetría favorable) no depende de la corrección; lo que cambia es la magnitud y la comparación con la zona de compra.</p>
+<h3 id="43-que-implica-el-precio-actual">4.3 Qué implica el precio actual</h3>
+<ul>
+<li>Capitalización: 47.29M × $2.83 = <strong>$133.8M</strong>.</li>
+<li>Caja neta: <strong>~$60.1M</strong> ($1.27/acción); EV <strong>~$73.7M</strong>.</li>
+<li><strong>EV/Sales TTM ($153.4M) = 0.48×</strong>; EV/Sales FY26 midpoint ($145M) = <strong>0.51×</strong>.</li>
+<li><strong>El 45% de la capitalización es caja neta</strong>; el mercado paga ~$1.56/acción por el negocio.</li>
+<li>A <strong>$2.10</strong> (zona de compra del informe): mcap $99.3M; EV <strong>$39.2M</strong>; EV/Sales <strong>0.27×</strong>. Ahí el mercado paga casi nada por la opción clínica.</li>
+<li>A <strong>$1.73</strong> (bear): mcap $81.8M; EV <strong>$21.7M</strong>; EV/Sales 0.15× — el nivel en que el negocio vale menos que la caja menos burn.</li>
+</ul>
+<h3 id="44-reverse-dcf-que-descuenta-el-precio">4.4 Reverse DCF: qué descuenta el precio</h3>
+<p>Con EV $73.7M, WACC 13% y perpetuo 3%, el precio implica aproximadamente:
+- FCF <strong>−$12M (2027) → ~0 (2028) → +$5M (2029) → +$12M (2030)</strong>, con margen FCF steady-state ~4–5%.
+- Crecimiento implícito <strong>~0% perpetuo</strong>; el mercado no paga por la recuperación de márgenes ni por LucentAD.
+- <strong>¿Razonable?</strong> Razonable-bajo si se cree que el negocio puede estabilizarse en ~$145M de ingresos y 4–5% de margen FCF; <strong>demasiado alto</strong> si el crecimiento orgánico sigue en −20% y el 510(k) no llega. La asimetría sigue estando en el precio, no en la calidad del negocio.</p>
+<h3 id="45-takeout-el-suelo-probabilistico">4.5 Takeout: el suelo probabilístico</h3>
+<ul>
+<li>Compradores naturales: <strong>Thermo Fisher, Danaher, Roche/Siemens, Bio-Techne</strong>.</li>
+<li>Atractivo: ~900 Simoa instalados, cartera femto, Accelerator, caja neta $60M, IP con fecha de caducidad (techo de precio bajo para el comprador).</li>
+<li>Precio probable: <strong>40–60% de prima</strong> sobre $2.83 → <strong>$3.96–4.53/acción</strong> (equity ~$187–214M), en línea con el caso base ($4.94) y por encima del precio actual.</li>
+<li><strong>Probabilidad a 3 años: 35–45%</strong> (sin cambios). La aprobación china y el 510(k) pendiente no la mueven mucho: el comprador paga por la plataforma, no por un mercado que aún no factura.</li>
+</ul>
+<hr />
+<h2 id="5-countdown-los-proximos-90-dias">5 — Countdown: los próximos 90 días</h2>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Evento</th>
+<th>Tipo</th>
+<th>Por qué importa</th>
+<th>Anticipación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>~9–10 nov-2026</strong></td>
+<td><strong>Resultados Q3-26 + 10-Q</strong> (después del cierre; fecha no confirmada)</td>
+<td>Fundamental</td>
+<td>Primer dato duro desde el 10-ago: revenue vs el implied de H2, cash, GM, LucentAD, China, 510(k). Consenso EPS ~−$0.42</td>
+<td><strong>Alta</strong> [3P]; la empresa aún no ha anunciado la fecha oficial</td>
+</tr>
+<tr>
+<td><strong>Q4-2026</strong></td>
+<td><strong>Quest lanza AD-Detect pTau217 (Roche)</strong></td>
+<td>Competencia</td>
+<td>Primera comercialización a escala nacional del pTau217 de Roche; prueba de que el canal de laboratorio se mueve más rápido que el IVD de QTRX</td>
+<td><strong>Anunciado</strong> [T2]</td>
+</tr>
+<tr>
+<td><strong>Q4-2026 (ventana)</strong></td>
+<td><strong>Decisión FDA del 510(k) de LucentAD Complete</strong></td>
+<td>Regulador</td>
+<td>Presentado el 3-feb-2026; ~8.7 meses. Un clearance re-rating; un CRL/retraso, golpe al bull case</td>
+<td><strong>Desconocida</strong> [NOT FOUND]</td>
+</tr>
+<tr>
+<td><strong>Q4-2026</strong></td>
+<td><strong>Ramp de Anthem + LucentAD</strong></td>
+<td>Comercial</td>
+<td>La cobertura de Anthem (jul-2026) y el precio CMS $897 son la única prueba de tracción clínica; la empresa no publica volúmenes</td>
+<td>Baja visibilidad</td>
+</tr>
+<tr>
+<td><strong>2027</strong></td>
+<td><strong>HD-X 510(k) IVD filing</strong> (target de la empresa)</td>
+<td>Regulador</td>
+<td>El salto de "research tool" a "medical device" recurrente; depende de que el 510(k) de LucentAD se resuelva primero</td>
+<td>Target [MC]</td>
+</tr>
+<tr>
+<td><strong>2027</strong></td>
+<td><strong>Break-even de cash-flow</strong> (tercer target)</td>
+<td>Financiero</td>
+<td>Si se retrasa otra vez, la credibilidad de la dirección queda en cero y el mercado descontará una ampliación</td>
+<td>Target [MC]</td>
+</tr>
+<tr>
+<td><strong>Feb–mar 2027</strong></td>
+<td><strong>10-K FY26</strong></td>
+<td>Financiero</td>
+<td>Tabla de commitments, SBC, litigios, detalle de Akoya/impairments</td>
+<td>Esperado</td>
+</tr>
+<tr>
+<td><strong>Sep-2028</strong></td>
+<td><strong>Expiración de US8846415B2</strong></td>
+<td>IP</td>
+<td>Primera patente core; el moat empieza a caducar</td>
+<td>Conocido</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Los dos eventos que importan:</strong> el <strong>Q3 del 9–10 nov</strong> (¿se sostiene la guía y el cash?) y la <strong>decisión del 510(k)</strong> (¿existe el puente a IVD?). La aprobación china es una opción de 2027, no un catalizador de trimestre.</p>
+<hr />
+<h2 id="6-falsificadores-que-confirmaria-y-que-mataria-la-tesis">6 — Falsificadores: qué confirmaría y qué mataría la tesis</h2>
+<table>
+<thead>
+<tr>
+<th>Afirmación</th>
+<th>Se falsifica si…</th>
+<th>Estado a 26-oct-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>QTRX: la guía FY26 es alcanzable</strong></td>
+<td>Q3 revenue &lt;$35M o management recorta la guía por segunda vez</td>
+<td>H1 $69.3M; H2 necesita ~$75.7M; Q2 $32.9M. <strong>En el filo</strong></td>
+</tr>
+<tr>
+<td><strong>QTRX: el burn está controlado</strong></td>
+<td>Cash &lt;$85M al 30-sep o &lt;$70M a fin de año; burn trimestral &gt;$12M</td>
+<td>Cash $96.9M (jun); guía ~$80M (dic); burn subyacente $8–10M/q. <strong>Cumple por ahora</strong></td>
+</tr>
+<tr>
+<td><strong>QTRX: LucentAD es un producto escalable</strong></td>
+<td>El 510(k) no se aprueba en 2026; o no se divulgan volúmenes/crecimiento en Q3/Q4</td>
+<td><strong>510(k) presentado 3-feb, sin clearance a 26-oct</strong>; volúmenes [NOT FOUND]</td>
+</tr>
+<tr>
+<td><strong>QTRX: el multi-analyte es un foso</strong></td>
+<td>Quest/Labcorp lanzan paneles multi-analyte con sensibilidad clínica suficiente y sin Simoa</td>
+<td><strong>Quest lo anunció el 9-sep</strong>: panel Aβ42/40 + p-tau217 + ApoE, 10% indeterminados, 2.000 centros</td>
+</tr>
+<tr>
+<td><strong>QTRX: China es una opción real</strong></td>
+<td>No hay lanzamiento comercial ni términos económicos en 2027; o el precio de venta es de commodity</td>
+<td>Aprobación NMPA 7-oct; <strong>sin economics divulgados</strong></td>
+</tr>
+<tr>
+<td><strong>QTRX: el balance protege el downside</strong></td>
+<td>Cash &lt;$50M sin inflexión; nueva ampliación dilutiva &gt;10%</td>
+<td>Caja neta $60M; runway ~18–24 meses; sin deuda financiera. <strong>Protege, pero no es un suelo duro</strong></td>
+</tr>
+<tr>
+<td><strong>QTRX: la dirección ejecuta</strong></td>
+<td>Segundo guidance cut; nuevo impairment/restatement; salida de otro CFO/CEO</td>
+<td>Historial: 3 aplazamientos de breakeven, 2 impairments, 1 restatement. <strong>Track record negativo</strong></td>
+</tr>
+<tr>
+<td><strong>QTRX: el takeout es probable</strong></td>
+<td>No hay interés estratégico en 24–36 meses; o el precio de la acción sigue &lt;$2.10 sin comprador</td>
+<td>35–45% [AA]; sin rumores verificados</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lo que haría subir el valor razonable (no el precio):</strong>
+1. <strong>Clearance del 510(k) de LucentAD Complete</strong> y guía de lanzamiento como IVD.
+2. <strong>Primera divulgación de volúmenes de LucentAD</strong> (tests/trimestre, crecimiento, reembolso).
+3. <strong>Términos económicos de China</strong> (royalty, precios, unidades) que permitan modelar el mercado.
+4. <strong>Estabilización del revenue orgánico</strong> (dos trimestres consecutivos ≥+5% pro-forma).
+5. <strong>Takeout</strong> a $4–5/acción.</p>
+<p><strong>Lo que lo haría bajar:</strong>
+1. Segundo recorte de guía en el Q3.
+2. Cash &lt;$85M al 30-sep o burn &gt;$12M.
+3. CRL/retraso del 510(k) más allá de 2027.
+4. Quest/Labcorp ganan contratos de pagadores con su panel multi-analyte.
+5. Nuevo impairment de Akoya o una ampliación de equity a estos precios.</p>
+<hr />
+<h2 id="7-conclusion-la-caja-pone-el-suelo-el-510k-pone-el-techo">7 — Conclusión: la caja pone el suelo, el 510(k) pone el techo</h2>
+<ul>
+<li><strong>Rating HOLD sin cambios; zona de compra ≤$2.10 sin cambios.</strong> A $2.83 la acción ofrece un <strong>+79% de upside al valor ponderado corregido ($5.06)</strong>, +75% al caso base y −39% al bear. La asimetría sigue siendo favorable, pero el precio ya no está en la zona de compra: está <strong>35% por encima</strong> de ella.</li>
+<li><strong>Lo bueno:</strong> la caja neta cubre el <strong>45% de la capitalización</strong>; el EV/Sales es <strong>0.48×</strong>; no hay deuda financiera; el negocio tiene ~86% de ingresos recurrentes; la aprobación china abre una opción real; y el short interest (10.7%) no es un problema de solvencia.</li>
+<li><strong>Lo malo:</strong> el crecimiento orgánico sigue negativo, la guía se recortó un 16% en agosto, el breakeven se ha retrasado tres veces, el 510(k) lleva ~9 meses sin resolverse, y <strong>Quest/Roche acaban de comercializar el test que ataca el corazón de LucentAD</strong>. El foso técnico existe, pero el mercado ya no paga por él.</li>
+<li><strong>Qué esperar:</strong> el Q3 del 9–10 nov puede mover la acción ±10–15% (micro-cap, 0.5M de volumen). Si la guía se sostiene y el cash está cerca de $85M, el rebote puede continuar hacia $3.00–3.20 (PT de la calle). Si hay un segundo recorte o el burn se acelera, el bear ($1.73) vuelve a la mesa.</li>
+<li><strong>La frase que resume el caso:</strong> Quanterix tiene la mejor sensibilidad del mercado y una caja que paga casi la mitad de la capitalización, pero <strong>el biomarcador que iba a monetizar esa sensibilidad ya se vende sin ella</strong>. La caja limita el downside; el 510(k) y LucentAD son los que tienen que justificar el upside.</li>
+</ul>
+<hr />
+<h2 id="8-fuentes-metodo-y-huecos-de-evidencia">8 — Fuentes, método y huecos de evidencia</h2>
+<h3 id="81-fuentes">8.1 Fuentes</h3>
+<p><strong>T1 — primarias:</strong>
+- Informe base: <code>~/qtrx_final.md</code> (11-sep-2026), con los escenarios bear/base/bull y el detalle de 10-K FY21–25 / 10-Q Q2-26.
+- SEC EDGAR, CIK <strong>1503274</strong>, <em>submissions API</em>: índice completo hasta 26-oct-2026; último 8-K/10-Q: 10-ago-2026; S-8 de inducción: 11-sep-2026; Form 4 del CTO y consejeros: 15-sep–16-oct. https://data.sec.gov/submissions/CIK0001503274.json
+- Quanterix / Innovita, PR 7-oct-2026: aprobaciones NMPA de HD-X, SR-X y cuatro kits (p-Tau 217, GFAP, p-Tau 181, NfL). https://ir.quanterix.com/news-releases/news-release-details/quanterix-and-innovita-expand-ivd-access-china-national-medical
+- Quanterix, PR 3-feb-2026: presentación del 510(k) de LucentAD Complete (cinco analitos: p-Tau 217, Aβ42, Aβ40, GFAP, NfL).
+- Quanterix, PR 14-sep-2026: Dr. Yuri Fesko, Chief Medical Officer; PR 25-sep-2026: contenido de spatial biology en ESSB 2026.
+- Roche, PR 24-ago-2026: FDA clearance de Elecsys pTau217. https://diagnostics.roche.com/us/en/news-listing/2026/fda-elecsys-ptau217-alzheimers-blood-test.html
+- Quest Diagnostics / Medical Update Online, 9-sep-2026: lanzamiento de AD-Detect pTau217 (Roche) en Q4-26 y panel multi-analyte propio. https://medicalupdateonline.com/2026/09/quest-diagnostics-to-offer-fda-cleared-roche-ptau217-blood-test-for-alzheimers-disease-assessment-quest-diagnostics/</p>
+<p><strong>T2 — secundarias:</strong>
+- CLP / Bioanalysis Zone / LabPress (7–8-oct-2026): detalle de las aprobaciones NMPA y los cuatro biomarcadores.
+- MarketBeat / TipRanks / AskTheDate: estimación de la fecha del Q3 (9–10-nov-2026) y consenso EPS ~−$0.42.
+- Migliaccio &amp; Rathod LLP (17-oct-2026): investigación sobre la fusión Quanterix/Akoya.</p>
+<p><strong>T3 — vendors (solo cross-check):</strong>
+- stockanalysis.com/stocks/qtrx/statistics y /forecast (S&amp;P Global): market cap, caja neta, short interest, consenso y PT.
+- stockanalysis.com API de histórico diario: cierres para el gráfico y los retornos.</p>
+<h3 id="82-metodo">8.2 Método</h3>
+<ol>
+<li><strong>Escenarios sin cambios:</strong> se reutilizan los valores del informe base (bear $1.73 / base $4.94 / bull $10.37; probabilidades 30/50/20). No se tocó ningún input operativo.</li>
+<li><strong>Corrección aritmética:</strong> se recalcula el ponderado con los valores y pesos declarados: <code>0.30×1.73 + 0.50×4.94 + 0.20×10.37 = $5.06</code>. Se muestra la sensibilidad (35/45/20 → $4.90; 40/45/15 → $4.47) para que el lector elija.</li>
+<li><strong>Capitalización y EV a mano:</strong> 47.29M × $2.83 = $133.8M; caja neta ~$60.1M (cash $93.5M − debt/leases $33.4M; el informe base usaba $96.9M de cash y ~$60M netos); EV $73.7M. Se contrasta con stockanalysis.</li>
+<li><strong>EV/Sales:</strong> TTM $153.4M → 0.48×; guía FY26 midpoint $145M → 0.51×.</li>
+<li><strong>Reverse DCF:</strong> se actualiza el del informe base con el EV actual ($73.7M vs $62M), WACC 13%, perpetuo 3%.</li>
+<li><strong>Takeout:</strong> prima 40–60% sobre $2.83 → $3.96–4.53/acción; se compara con el caso base.</li>
+</ol>
+<h3 id="83-huecos-de-evidencia-not-found">8.3 Huecos de evidencia (NOT FOUND)</h3>
+<ol>
+<li><strong>Fecha oficial del Q3:</strong> no anunciada; la estimación 9–10-nov es de calendarios de terceros [3P].</li>
+<li><strong>Estado del 510(k) de LucentAD Complete:</strong> no hay comunicado de clearance ni entrada pública identificada en FDA a 26-oct. <strong>La ausencia no prueba denegación</strong>; puede ser revisión en curso o una deficiency letter no divulgada.</li>
+<li><strong>Términos económicos de China:</strong> no se han divulgado royalty, precios, volúmenes ni fecha de lanzamiento comercial. [NOT FOUND]</li>
+<li><strong>Volúmenes de LucentAD:</strong> la empresa no publica tests/trimestre ni ingresos por LucentAD. [NOT FOUND]</li>
+<li><strong>Detalle del "debt" de $33.4M del vendor:</strong> el informe base dice que no hay deuda financiera; probablemente son leases. No se ha verificado línea a línea en el 10-Q de Q2.</li>
+<li><strong>Consenso trimestral:</strong> EPS ~−$0.42 proviene de AskTheDate/Fiscal AI [3P], no de la empresa.</li>
+<li><strong>Reacción de QTRX al 510(k):</strong> no hay fecha de decisión; el mercado no tiene un catalizador datado.</li>
+</ol>
+<h3 id="84-como-actualizar-esto-tu-mismo">8.4 Cómo actualizar esto tú mismo</h3>
+<ul>
+<li><strong>Q3:</strong> IR de Quanterix (press releases) y EDGAR CIK 1503274 → 8-K/10-Q.</li>
+<li><strong>510(k):</strong> página de prensa de Quanterix + base de datos de FDA 510(k) (product code / applicant).</li>
+<li><strong>China:</strong> IR de Quanterix e Innovita (SSE 688253) → anuncios de lanzamiento y términos.</li>
+<li><strong>Competencia:</strong> PR de Quest/Labcorp y de Roche; adopción de pagadores (CMS/Anthem).</li>
+<li><strong>Caja y dilución:</strong> 10-Q (cash, shares, SBC) y S-8/424B5.</li>
+</ul>
+<hr />
+<h2 id="9-hilo-para-x-6-posts-280-caracteres">9 — Hilo para X (6 posts, ≤280 caracteres)</h2>
+<p><strong>1/6</strong>
+QTRX a $2.83: +10.5% desde el informe del 11-sep, pero −55.5% YTD. La subida es China + TD Cowen + rebote técnico; los fundamentales no han mejorado. Hilo. 🧵</p>
+<p><strong>2/6</strong>
+Lo bueno: la NMPA aprobó los instrumentos HD-X y SR-X y 4 assays (p-tau217, GFAP, p-tau181, NfL) vía Innovita. Primera puerta IVD real en China. Pero sin términos económicos: es una opción 2027, no un número.</p>
+<p><strong>3/6</strong>
+Lo malo: Quest lanzará en Q4 el pTau217 de Roche y su propio panel multi-analyte (Aβ42/40 + p-tau217 + ApoE, 10% indeterminados) en ~2.000 centros. Es el corazón de LucentAD, sin Simoa.</p>
+<p><strong>4/6</strong>
+El 510(k) de LucentAD Complete sigue pendiente: presentado el 3-feb, ~9 meses sin clearance. Sin IVD, LucentAD es un LDT; el puente al bull case no está.</p>
+<p><strong>5/6</strong>
+Valoración: bear $1.73 / base $4.94 / bull $10.37; ponderado 30/50/20 = $5.06, no $4.43 (corrijo la suma del informe). A $2.83: +79% al ponderado, −39% al bear. EV/Sales 0.48×; caja neta 45% del mcap.</p>
+<p><strong>6/6</strong>
+Conclusión: HOLD, compra ≤$2.10. El Q3 (9–10 nov) y el 510(k) son los binarios. La caja pone el suelo; el 510(k) pone el techo.</p>
+<hr />
+<p><em>Actualización preparada el 26-oct-2026. No es recomendación de inversión. Los escenarios son los del informe del 11-sep-2026; la única corrección es aritmética (valor ponderado) y se documenta en §4.2.</em></p>
+</div>
+</body></html>

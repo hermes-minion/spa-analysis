@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VKTX · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>VKTX · 2026-09-14</span></div>
+<div class="wrap">
+<h1 id="viking-therapeutics-vktx-informe-de-analisis-profundo">Viking Therapeutics (VKTX) — Informe de análisis profundo</h1>
+<p><strong>Fecha:</strong> 14-sep-2026 · <strong>Analista:</strong> Sergio (retail, apolítico, data-driven) · <strong>Fuentes:</strong> SEC (T1), PRs IR (T2), peer-reviewed (T1), terceros (T3)</p>
+<hr />
+<h2 id="1-conclusion-ejecutiva">1. Conclusión ejecutiva</h2>
+<p><strong>Tesis larga condicional.</strong> Viking Therapeutics es un biotech clínico puro con un solo activo material real en Fase 3 (VK2735, dual GLP-1/GIP — el mismo compuesto con formulación SC semanal y oral diaria). Datos de Fase 2 con <strong>-14,7% SC</strong> y <strong>-12,2% oral</strong> a 13 semanas, sin meseta, perfil seguro limpio. VANQUISH-1 y VANQUISH-2 están <strong>completamente matriculados</strong> (~5.500-5.650 pacientes) con top-line esperados en 2027. Balance Q2-2026: <strong>$502M de liquidez</strong> con ~$102M/trim de burn → runway ~1T-2T 2027 (dilución probable en 2H-2026 / 1H-2027). El 3T26 trae un catalizador binario menor: <strong>datos de mantenimiento del VK2735 SC</strong> (esquema mensual vs semanal) que decide si el diferenciador estructural del "dosis mensual" compite directamente con MariTide de Amgen.</p>
+<p><strong>Posición de la tesis larga:</strong> BUY con tamaño moderado (2-5% de la cartera), esperando datos, con el riesgo principal (1) falla VANQUISH, (2) dilución antes del readout, (3) separación oral tardía (2028 vs hecho 2028).</p>
+<p><strong>Hedge:</strong> short interest alto (19,65% float, DTC 9,79) — el mercado está asumido en el precio; a pesar del short-pair cualquier noticia contraria originado en la clase SEO.</p>
+<hr />
+<h2 id="2-control-table-sec-verificado">2. Control table (SEC verificado)</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th style="text-align: right;">30-jun-2026</th>
+<th style="text-align: right;">30-mar-2026</th>
+<th style="text-align: right;">31-dic-2025</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash + equivalentes</td>
+<td style="text-align: right;"><strong>$125.75M</strong></td>
+<td style="text-align: right;">$118.1M</td>
+<td style="text-align: right;">—</td>
+<td>↓ del raise</td>
+</tr>
+<tr>
+<td>Inversiones ST (AFS)</td>
+<td style="text-align: right;"><strong>$375.91M</strong></td>
+<td style="text-align: right;">$484.85M</td>
+<td style="text-align: right;">—</td>
+<td>T-Bills/money market</td>
+</tr>
+<tr>
+<td><strong>Liquidez total</strong></td>
+<td style="text-align: right;"><strong>$501.9M</strong></td>
+<td style="text-align: right;"><strong>$602.9M</strong></td>
+<td style="text-align: right;">$706M</td>
+<td>Runway SEC-declared ≥ Sep-2027</td>
+</tr>
+<tr>
+<td>Shares outstanding</td>
+<td style="text-align: right;"><strong>116.652.937</strong></td>
+<td style="text-align: right;">116.105.643</td>
+<td style="text-align: right;">115.554.295</td>
+<td>Crecimiento dilución ~1,7% anual</td>
+</tr>
+<tr>
+<td>Total assets</td>
+<td style="text-align: right;">$521.90M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Total liabilities (current)</td>
+<td style="text-align: right;">$109.66M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>Solo leases + payables; cero deuda</td>
+</tr>
+<tr>
+<td>Equity</td>
+<td style="text-align: right;">$408.3M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>Equity positivo</td>
+</tr>
+<tr>
+<td>Accumulated deficit</td>
+<td style="text-align: right;">-$1.133.9M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>Historial clínico</td>
+</tr>
+<tr>
+<td>OCF trim Q2</td>
+<td style="text-align: right;"><strong>-$125.17M</strong></td>
+<td style="text-align: right;">-$113.98M</td>
+<td style="text-align: right;">—</td>
+<td>Net loss $128M Q2</td>
+</tr>
+<tr>
+<td>R&amp;D Q2</td>
+<td style="text-align: right;">$115.75M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>+92% YoY</td>
+</tr>
+<tr>
+<td>G&amp;A Q2</td>
+<td style="text-align: right;">$16.84M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>Leverage opex</td>
+</tr>
+<tr>
+<td>SBC H1</td>
+<td style="text-align: right;">$21.47M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>7% de opex</td>
+</tr>
+<tr>
+<td>Weighted-avg (6M)</td>
+<td style="text-align: right;">116.263k</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>Basic = diluted</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aclaración de un dato erróneo en la brief:</strong> el "cash $603M Q2-2026" extiende portador que viene desde fuera con fuentes T3 — <strong>$603M es el dato Q1-2026 (30-mar-2026)</strong>, nadie lo puede comparar con runway Q2. El dato <strong>Q2ol (correcto) es $501.9M</strong> de la MD&amp;A del 10-Q Q2-2026 (T1 SEC).</p>
+<hr />
+<h2 id="3-pipeline-y-datos-clinicos">3. Pipeline y datos clínicos</h2>
+<h3 id="31-vk2735-dual-glp-1gip-misma-molecula-dos-formulaciones">3.1 VK2735 — dual GLP-1/GIP, <strong>misma molécula</strong> dos formulaciones</h3>
+<h4 id="sc-inyeccion-semanal">SC (inyección semanal)</h4>
+<table>
+<thead>
+<tr>
+<th>Estudio</th>
+<th>Fase</th>
+<th>Duración</th>
+<th style="text-align: right;">N</th>
+<th>Eficacia top-line</th>
+<th>Estado 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VENTURE</strong></td>
+<td>2</td>
+<td>13 semanas</td>
+<td style="text-align: right;">~176</td>
+<td><strong>-14.7%</strong> (vs -13.1% placebo), hasta 88% ≥10%</td>
+<td>peer-reviewed Obesity jan-2026 (T1)</td>
+</tr>
+<tr>
+<td><strong>VANQUISH-1</strong></td>
+<td>3</td>
+<td><strong>78 semanas</strong></td>
+<td style="text-align: right;"><strong>~4.500</strong></td>
+<td>pending</td>
+<td>~Nov-2025 matriculado, readout est. <strong>1T-2T 2027</strong></td>
+</tr>
+<tr>
+<td><strong>VANQUISH-2</strong></td>
+<td>3</td>
+<td><strong>78 semanas</strong></td>
+<td style="text-align: right;"><strong>~1.000</strong></td>
+<td>pending</td>
+<td>Matriculado mar-2026, readout probable 1T-2T 2027</td>
+</tr>
+<tr>
+<td><strong>Mantenimiento dose-range</strong></td>
+<td>1</td>
+<td>“180” pts</td>
+<td style="text-align: right;">180</td>
+<td>pending</td>
+<td><strong>Resultados 3T26 (inminente)</strong> — semanal / c/2 semanas / mensual</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Seguridad VENTURE (peer-reviewed):</strong> 92% de TEAEs leves/moderados; <strong>náusea 43%</strong> (vs 20% placebo); <strong>vómito 18%</strong> (vs 0%); discontinuación 13% (placebo 14%); solo 1 SAE relacionada (deshidratación). DdessPK extension nov-2024: mantienen kilo perdido ≥4 semanas post-dose.</p>
+<h4 id="oral-comprimido-diario">Oral (comprimido diario)</h4>
+<table>
+<thead>
+<tr>
+<th>Estudio</th>
+<th>Fase</th>
+<th>Duración</th>
+<th>N</th>
+<th>Eficacia top-line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 MAD</strong></td>
+<td>1</td>
+<td>28 días</td>
+<td>–</td>
+<td>-8.2%</td>
+</tr>
+<tr>
+<td><strong>VENTURE-Oral</strong></td>
+<td>2</td>
+<td>13 semanas</td>
+<td>–</td>
+<td><strong>-12.2%</strong>, hasta 80% ≥10%</td>
+</tr>
+<tr>
+<td><strong>Fase 3 oral</strong></td>
+<td>3</td>
+<td>TBD</td>
+<td>–</td>
+<td><strong>inicio 4T26</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Perfil oral</strong>: en el rango de dosis que Viking quiere explorar, GI incidence comparable a placebo. Posicionamiento: <strong>primer dual oral GLP-1/GIP del mundo</strong> (compete frente a orforglipron de Lilly "Foundayo", approval expected 2026-27, y Wegovy oral de NVO aprobada dic-2025).</p>
+<h4 id="diferenciadores-de-vk2735-vs-clase">Diferenciadores de VK2735 vs clase</h4>
+<ul>
+<li><strong>Oral + SC con la misma molécula</strong> — único dual en dos formulaciones.</li>
+<li><strong>Mantenimiento mensual potencial</strong> (impulsado por datos 3T26) — match directo MariTide de Amgen.</li>
+<li><strong>Propiedad absoluta</strong> de la molécula (sin partner) — flexibilidad para farmacopartnering.</li>
+</ul>
+<h3 id="32-vk3019-dual-amilinacalcitonina-dacra">3.2 VK3019 — dual amilina/calcitonina (DACRA)</h3>
+<ul>
+<li>IND presentado en <strong>1T2026</strong>; <strong>Fase 1 SAD iniciada 2T2026</strong> en adultos sanos BMI≥27, dosis SC únicas.</li>
+<li>Preclínico ADA 2024: hasta -8% peso (72h ratas lean), -10% en DIO ratones, reducción glucosa -24%; comparable a cagrilintida.</li>
+<li>Tesis: pacientes intolerantes a GLP-1 / combinación con VK2735.</li>
+<li>Prob. éxito hasta aprobación: &lt;&lt;15% (estimación de clase).</li>
+</ul>
+<h3 id="33-vk0214-tr-x-ald-amn">3.3 VK0214 (TRβ — X-ALD / AMN)</h3>
+<ul>
+<li>Designación huérfana FDA.</li>
+<li><strong>Fase 1b</strong> en varones con AMN, resultados oct-2024: -reducciones VLCFA y C26:0-LPC significativas (biomarkers), bien tolerado en 20/40 mg.</li>
+<li>Niche orphan — no game-changer.</li>
+</ul>
+<h3 id="34-vk0207">3.4 VK0207</h3>
+<ul>
+<li>No existe; probablemente confusión con <strong>VK2809</strong> (TRβ liver-directed, MASH Fase 2b) que sí está en el pipeline (compuesto non-major value driver).</li>
+</ul>
+<hr />
+<h2 id="4-competencia-glp-1obesidad-2026">4. Competencia GLP-1/obesidad (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Clase / fármaco</th>
+<th>Mecanismo</th>
+<th>Eficacia</th>
+<th>Estado 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zepbound (LLY tirzepatida)</strong></td>
+<td>dual GLP-1/GIP</td>
+<td>-22.5% (SURMOUNT-1, 72 w)</td>
+<td>aprobado, share-taking</td>
+</tr>
+<tr>
+<td><strong>CagriSema (NVO)</strong></td>
+<td>GLP-1 semaglutida + amilina cagrilintida</td>
+<td>-22.7% (REDEFINE-1)</td>
+<td>Fase 3 en curso</td>
+</tr>
+<tr>
+<td><strong>Retatrutida (LLY)</strong></td>
+<td>triple GIP/GLP-1/glucagón</td>
+<td><strong>-28.3% a 80 sem</strong> (TRIUMPH-1); -30.3% en 104 sem</td>
+<td><strong>BLA 1T2027</strong> — llega ~2028</td>
+</tr>
+<tr>
+<td><strong>MariTide (AMGN)</strong></td>
+<td>anti-GIPR antibody + GLP-1 peptide, dos mensual</td>
+<td>-20% a 52 sem sin T2D</td>
+<td>Fase 3 MARITIME matriculada</td>
+</tr>
+<tr>
+<td><strong>Orforglipron (LLY)</strong></td>
+<td>oral GLP-1 mono</td>
+<td>~valores aprobados en 2026-27</td>
+<td>comercializing</td>
+</tr>
+<tr>
+<td><strong>Wegovy oral (NVO)</strong></td>
+<td>oral semaglutida</td>
+<td>aprobado dic-2025</td>
+<td>comercial</td>
+</tr>
+<tr>
+<td><strong>VK2735 SC</strong></td>
+<td>dual GLP-1/GIP</td>
+<td>-14.7% a 13 sem (VENTURE); VANQUISH 78 sem pending</td>
+<td>Fase 3 readout 2027</td>
+</tr>
+<tr>
+<td><strong>VK2735 oral</strong></td>
+<td>dual GLP-1/GIP</td>
+<td>-12.2% a 13 sem</td>
+<td>Fase 3 inicio 4T26</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Síntesis competitiva 2026:</strong>
+- <strong>Retatrutida es la nueva frontiera de máxima eficacia (~28%+ vs ~22% de VK2735 proyectado si VANQUISH replica VENTURE)</strong>. Amén — para buscar Predicate_37 vs Zepbound-level, VK2735 necesita ≥-20% a 78 semanas, que es plausible a la dosis 15 mg + en extensión (VENTURE mostró no-plateau a 13 semanas).
+- <strong>VK2735 no es el máximo-efficacy leader</strong>: la tesis que funciona es la de <strong>effic luggage douse class tik</strong> + <strong>formulación oral</strong> + <strong>la firma potencial de la mantención mensual</strong> en un mercado con TAM de $100-150B a 2030. Se necesita que el patient-oriented data of humaniste;pecifico META pieza --- VK3019 — no sea el driver principal (capacity aquí es "expected 3T26": catalizador binario menor).
+- <strong>Retatrutida shift the class standard máximamente</strong> en 2026 (BLA 1T27), por eso VK2735 SC necesita algo que retatrutida no tiene (diferenciador estructural) para justificar la tesis.</p>
+<hr />
+<h2 id="5-valoracion">5. Valoración</h2>
+<h3 id="51-base-financiero-14-sep-2026-pre-cierre">5.1 Base financiero (14-sep-2026, pre-cierre)</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th style="text-align: right;">Valor</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precio</strong></td>
+<td style="text-align: right;">$31.71</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Market cap</strong></td>
+<td style="text-align: right;"><strong>$3.70B</strong></td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Shares outstanding</strong></td>
+<td style="text-align: right;">116,652,937</td>
+<td>10-Q balance (T1)</td>
+</tr>
+<tr>
+<td><strong>Liquidez total (30-jun-26)</strong></td>
+<td style="text-align: right;"><strong>$501.9M</strong></td>
+<td>10-Q MD&amp;A (T1)</td>
+</tr>
+<tr>
+<td><strong>Burn por trimestre</strong></td>
+<td style="text-align: right;">~$102M</td>
+<td>H1-2026 Δcash/2</td>
+</tr>
+<tr>
+<td><strong>Runway hasta</strong></td>
+<td style="text-align: right;">~1T-3T 2027</td>
+<td>estimación</td>
+</tr>
+<tr>
+<td><strong>EPS TTM</strong></td>
+<td style="text-align: right;">-$4.67</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Beta 3m</strong></td>
+<td style="text-align: right;">0.68</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Analista PT (20)</strong></td>
+<td style="text-align: right;"><strong>$92.39</strong> (+191%)</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Próx. earnings</strong></td>
+<td style="text-align: right;">21-oct-2026</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Cash ATM restante (antiguo)</strong></td>
+<td style="text-align: right;">$0 (ATM terminado 29-jul-2026)</td>
+<td>10-Q S-3ASR filing</td>
+</tr>
+<tr>
+<td><strong>NUEVO ATM + shelf (30-jul-26)</strong></td>
+<td style="text-align: right;">hasta <strong>$500M</strong> each</td>
+<td>S-3ASR jul-2026</td>
+</tr>
+<tr>
+<td><strong>Repurchase program</strong></td>
+<td style="text-align: right;">$500M / 3 años</td>
+<td>10-Q MD&amp;A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-nav-risk-adjusted-estimacion-propia-no-citar-como-dato-externo">5.2 NAV risk-adjusted (estimación propia — NO citar como dato externo)</h3>
+<p>Sin variante de prob. de éxito Fase 3 especifica VK2735 (NOT FOUND), se usan rangos de clase como proxy (BPI/Informa: fase 2→fase 3 ~70%; fase 3→approval condicional ~85%). El redante no dirigido:</p>
+<p><strong>Base-case (prob. ~70%, VANQUISH positivo, readout ≥ -17% a 78 semanas):</strong>
+- Peak-sales estimate (analogía t de evidencia aprobada): $8B (narrow) — $25B (bull). Discount 30% + dilución futura 15-25% antes de readout (S-3 filed jul-2026): <strong>stock price implied $80–160</strong>, de lectura conservadora.</p>
+<p><strong>Bull-case (prob. ~20-25%), incluye datos VENTURE -20%+", mensual viable, pricing sanos, and data (VANQUISH + VANQUISH-2 + mantenimiento):</strong>
+- Implied mkt cap $20-35B ⇒ <strong>precio $180–250</strong> (horizonte 2029-30).</p>
+<p><strong>Bear-case (&lt;25-30%), VANQUISH falla en ambos arms:</strong>
+- Piso técnico: cash de liquidación + oral Fase 3 + VK3019 prescaler → <strong>$10–15/share</strong> (~-60% desde hoy).</p>
+<p><strong>Summary valuation asimétrico: PAYOFF médio P50 ~3-4x upside en bull / -60% en bear</strong> — el ratio depende críticamente del outcome del <strong>evento binario del 3T26</strong> (mantenimiento) y de la positiva outcome del readout 2027.</p>
+<h3 id="53-comparables-14-sep-2026-t2t3">5.3 Comparables (14-sep-2026, T2/T3)</h3>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Empresa</th>
+<th style="text-align: right;">Mkt cap</th>
+<th style="text-align: right;">Cash Q2-2026</th>
+<th>Programa principal</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VKTX</strong></td>
+<td>Viking</td>
+<td style="text-align: right;"><strong>$3.70B</strong></td>
+<td style="text-align: right;"><strong>$502M</strong></td>
+<td>VK2735 dual GLP-1/GIP SC + oral, Fase 3</td>
+<td>el focus de este informe</td>
+</tr>
+<tr>
+<td>ALT</td>
+<td>Altimmune</td>
+<td style="text-align: right;">$643.9M</td>
+<td style="text-align: right;">$519M</td>
+<td>pemvidutida GLP-1/glucagón, Fase 3 MASH/AUD</td>
+<td>data 2029</td>
+</tr>
+<tr>
+<td>TERN</td>
+<td>Terns</td>
+<td style="text-align: right;">$6.11B</td>
+<td style="text-align: right;">$1B (Ene-26)</td>
+<td>TERN-701 CML</td>
+<td><strong>MRK la compró $6.7B en may-2026</strong></td>
+</tr>
+<tr>
+<td>AMGN</td>
+<td>Amgen</td>
+<td style="text-align: right;">$203.98B</td>
+<td style="text-align: right;">—</td>
+<td>MariTide Fase 3 obesidad</td>
+<td>no comparable directo</td>
+</tr>
+<tr>
+<td>LLY</td>
+<td>Eli Lilly</td>
+<td style="text-align: right;">$1.02T</td>
+<td style="text-align: right;">—</td>
+<td>Zepbound / orforglipron / retatrutida</td>
+<td>clásico peer</td>
+</tr>
+<tr>
+<td>NVO</td>
+<td>Novo Nordisk</td>
+<td style="text-align: right;">(est. $250-270B)</td>
+<td style="text-align: right;">—</td>
+<td>CagriSema, oral semaglutida</td>
+<td>clásico peer</td>
+</tr>
+</tbody>
+</table>
+<p>VKTX se valoriza (EV/cash ~4x) entre ALT (~1x) y TERN (~5x pre-acquisition). El deal MRK-TERN en $6.7B sugiere una bola de rendimiento de <strong>$4-8B en un buyout potencial</strong> si VANQUISH-1 sale bien. Nota: no hay señales M&amp;A activas para VKTX a esta fecha (NOT FOUND announcement).</p>
+<h3 id="54-riesgos">5.4 Riesgos</h3>
+<p><strong>T1 (material, cercano en el tiempo):</strong>
+- <strong>Datos 3Q26 de mantenimiento VK2735</strong> — evento binario near-term. Si el resultado indica que semanal sigue siendo el gold standard (dosis mensual no viable o pérdida notable), el diferenciador de la tesis se reproduce mucho en seguro delік dáta.
+- <strong>Dilución necesaria antes de 2027</strong> (raíces S-3 new ATM $500M ya Seattle). Si se ejecuta a un precio bajo (&lt;$25/share), dilution aggressiva 10-20%.
+- <strong>No data significativa hasta 2027</strong> — VANQUISH-1/2son top-line ~1T-2T 2027, leídos el mejor escenario.
+- <strong>Erosión de pricing</strong> bajo IRA (Reuters 31-ago-2026 — la nueva administración de precios ya ha implementado halving para la clase GLP-1 en la segment Medicare-priced) — pressures the multiple P/S accepted.</p>
+<p><strong>T2 (estructural):</strong>
+- <strong>VANQUISH-2 (T2D)</strong> con ~1.000 pacientes vs ~4.500 VANQUISH-1: data readout en T2D tiene más margen de discrepancia (menores muestra).
+- <strong>Competition de retatrutida 2028</strong> con ~-28%: recorta potencial mercado remaining. VK2735 oral-SC combo tiene que re-establecer su valor 2028+.
+- <strong>Beta-sector GLP-1</strong> (obesidad equity) decae continuo desde 2024-25 peak.</p>
+<p><strong>T3 (fondo):</strong>
+- No data a rate: p.ej. conforming biotech micro caps - mid biotechs seestable with perturbations.
+- Controle a IRA-pricing or pricing caps → NONE BETTER for broader market multiples transition.
+- El short/variación en el <strong>investor base</strong> del commercial pipeline de obesidad sigue dominando en los tenues path: pans de volumen gananciosos, estímulo INFLUINDIA 17,5% del mercado.</p>
+<hr />
+<h2 id="6-tesis-de-inversion-y-tamano-de-posicion">6. Tesis de inversión y tamaño de posición</h2>
+<p><strong>Underwriting (convicción media-alta en stage temprano):</strong>
+Para la bolsa del closest-SEGMENT, <strong>VKTX es el mejor risk-reward GLP-1 novel en 2026</strong> — tema combinable con compuesto dual (oral+SC, dual mechanism) que puede alimentar tanto la SC Fase 3 road en 2027 quanto el oral en 2028. Es fuera del alcance de las next-generations pipelines de NVO/LLY pero <strong>pequeño y diluible</strong>. El factor de asignación depende de cuán <strong>prudente</strong> se quiere ser antes del event de 2027 VANQUISH.</p>
+<p><strong>Rango de precio objetivo (estimación propia; NO citar como fuente externa):</strong>
+- <strong>Base-case 2-3 años:</strong> $65–85.
+- <strong>Bull-case:</strong> $180–250 (si VANQUISH ≥ -20% + monthly viability + pricing no-wrecked).
+- <strong>Bear-case (VANQUISH falla):</strong> $10–15.</p>
+<p><strong>Tamaño sugerido:</strong> 2-3% en core; hedging/barrent fur en funding arriba de 2028.</p>
+<hr />
+<h2 id="7-cronologia-de-catalizadores">7. Cronología de catalizadores</h2>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Evento</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3T26 (imminente)</strong></td>
+<td>Datos estudio maintenance dose (mensual/c2 seman)</td>
+<td>Evento binario menor (diferenciador estructural vs Maritide)</td>
+</tr>
+<tr>
+<td>21-oct-2026</td>
+<td>Q3-2026 earnings + pipeline update</td>
+<td>operativo</td>
+</tr>
+<tr>
+<td><strong>4T26</strong></td>
+<td>Inicio Fase 3 oral VK2735</td>
+<td>management of capex y runway</td>
+</tr>
+<tr>
+<td><strong>Est. 1T-2T 2027</strong></td>
+<td>Top-line VANQUISH-1 (78 semanas, obesidad)</td>
+<td>Evento binario mayor</td>
+</tr>
+<tr>
+<td>Est. 1T-2T 2027</td>
+<td>Top-line VANQUISH-2 (T2D)</td>
+<td>Evento binario secundario</td>
+</tr>
+<tr>
+<td>1T2027</td>
+<td>Retatrutida BLA (competencia, Lilly)</td>
+<td>competitive landscape re-estimation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-not-found-supuestos-clave">8. NOT-FOUND / supuestos clave</h2>
+<ul>
+<li><strong>Fecha exacta top-line VANQUISH-1/2</strong>: NOT FOUND — sólo "data expected in 2027" de transcript Jefferies (T3).</li>
+<li>
+<p><strong>Full 13F Q2-2026 ranking</strong>: NOT VERIFIED (no consolidado public en EDGAR hasta 45-d; PRs and outer data muestra par).</p>
+</li>
+<li>
+<p><strong>FINRA short volume diario</strong>: NOT FOUND esta sesión.</p>
+</li>
+<li><strong>Prob. éxito Fase 3 específica VK2735</strong>: NOT FOUND; usamos rangos de clase proxy (BPI / Informa).</li>
+<li><strong>RKCV 13F data / RKCV institutional ranking</strong>: no cubierto.</li>
+<li><strong>SEC FTD data</strong>: NOT FOUND esta sesión.</li>
+<li><strong>VK0207</strong>: probablemente error de ticker (VK2809 es el compuesto MASH real). No hay programa VK0207 en las fuentes revisadas.</li>
+<li><strong>Stats de prescripción GLP-1 2026</strong>: no extraídas en esta sesión; to refine in future pass comparando Lilly/Novo 10-K.</li>
+<li><strong>NVO market cap numerico exacto</strong>: no extraído directo, estimación citada $250-270B (T3).</li>
+<li><strong>Nota práctica:</strong> cualquier número marcado "ESTIMATE" es el trabajo analítico propio — solo utiliza el rango si no hay un dato de fuente externo.</li>
+</ul>
+<hr />
+<h2 id="9-fuentes-primarias-y-enlaces">9. Fuentes primarias y enlaces</h2>
+<p><strong>SEC (T1):</strong>
+- Company facts XBRL: https://data.sec.gov/api/xbrl/companyfacts/CIK0001607678.json
+- Q2-2026 10-Q: https://www.sec.gov/Archives/edgar/data/1607678/000119312526324219/vktx-20260630.htm (filed 2026-07-29)
+- S-3ASR jul-2026: https://www.sec.gov/Archives/edgar/data/1607678/000119312526324455/vktx-20260730.htm
+- Form 4s: ownership.xml (ver notes_financials.md para URLs individuales)
+- CIK correcto (0001607678), todos los filing index. Error subyacente priorizada para un CIK incórrero (1600031/1600046) — requirió re-verificación.</p>
+<p><strong>PRs IR (T2):</strong>
+- Q2-2026 PR: https://www.prnewswire.com/news-releases/viking-therapeutics-reports-second-quarter-2026-financial-results-and-provides-corporate-update-302838212.html
+- VANQUISH-2 completion (26-mar-2026): https://ir.vikingtherapeutics.com/2026-03-26-Viking-Therapeutics-Announces-Completion-of-Enrollment-in-Phase-3-VANQUISH-2-Trial-of-VK2735
+- Pipeline page: https://vikingtherapeutics.com/pipeline/vk2735
+- Obesity paper (peer-reviewed, 2026): https://vikingtherapeutics.com/wp-content/uploads/2026/05/Treatment-with-Oral-VK2735-Results-in-Significant-Weight-Loss-The-Randomized-Placebo-Controlled-Dose-Finding-VENTURE-Oral-Study.pdf</p>
+<p><strong>Competencia (T1 peer-reviewed / T2 PRs):</strong>
+- Obesity journal (Bays 2026): peer-reviewed, VENTURE SC results
+- Lilly TRUIMPH-1 (mayo-2026) y TRIUMPH-2/3 (23-jul-2026): investor.lilly.com
+- Amgen MariTide Phase 2 (ADA 2025): NEJM
+- Novo REDEFINE 1 (jun-2025): NEJM/ADA</p>
+<p><strong>Terciario (T2a/T3):</strong>
+- stockanalysis.com/stocks/vktx (live market data 14-sep-2026)
+- Notes from sibling agents (notas_sec, notes_pipeline, notes_valuation): sí en /home/hermes/vktx_analysis/</p>
+<p><strong>Archivo completo en:</strong>
+- /home/hermes/vktx_analysis/informe_VKTX.md (este informe)
+- /home/hermes/vktx_analysis/notes_pipeline.md / notes_valuation.md / notes_financials.md / resumen_es.md (detalles por subtarea)</p>
+</div>
+</body></html>

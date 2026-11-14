@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PBR · régimen</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>PBR · 2026-10-23</span></div>
+<div class="wrap">
+<h1 id="petrobras-pbr-petr4-lula-vs-bolsonaro-v2-corregida">Petrobras (PBR / PETR4): Lula vs. Bolsonaro — v2 corregida</h1>
+<h3 id="que-dicen-los-datos-que-no-sostiene-el-relato-y-que-cambia-al-corregir-el-metodo">Qué dicen los datos, qué no sostiene el relato y qué cambia al corregir el método</h3>
+<p><strong>Corte:</strong> 23-oct-2026 (cierre previo al balotaje del 25-oct, que ganó Lula con 51,8% vs. 48,2%).
+<strong>Activos:</strong> PBR (ADR de ordinarias, USD, retorno total), PETR4 (preferentes, BRL y USD, retorno total), Ibovespa (BRL y USD), Brent, USD/BRL y pares (XOM, CVX, SHEL, EC, TTE, EQNR).
+<strong>Fuentes:</strong> Yahoo Finance (precios y dividendos por fecha ex), stockanalysis.com (EBITDA, CapEx, deuda, múltiplos), Petrobras/Agência Petrobras (producción, planes, dividendos declarados), Reuters/CNBC (eventos y elecciones). Cálculos propios.
+<strong>Esta v2 corrige:</strong> fechas de corte, atribución circular, mezcla PBR/PETR4, comparación con Ibovespa en monedas distintas, dividendos declarados vs. fecha ex, ventanas de eventos y dirección del múltiplo cuando cae el crudo.</p>
+<hr />
+<h2 id="1-que-cambia-y-que-no">1. Qué cambia y qué no</h2>
+<p><strong>Lo que no cambia:</strong>
+- Lula 3 tuvo un retorno muy superior al de Bolsonaro en casi cualquier fecha de corte.
+- El grueso del retorno de Lula 3 vino de la revalorización del múltiplo, no del crecimiento del EBITDA.
+- El petróleo y el punto de partida de valoración explican más que la ideología del gobierno.</p>
+<p><strong>Lo que sí cambia tras la crítica:</strong>
+1. <strong>El gap se estrecha si se usan fechas de corte limpias.</strong> Con Bolsonaro hasta la víspera electoral (28-oct-2022) y Lula desde el día siguiente (31-oct-2022), el retorno es +86,5% vs. +276,5%, no +66,6% vs. +321,4%. La conclusión se mantiene, pero la magnitud no.
+2. <strong>La revalorización fue mayoritariamente sectorial.</strong> El múltiplo de PBR pasó de 1,62x a 4,83x (×2,98), pero la mediana de pares pasó de 3,03x a 6,07x (×2,00). Solo ~1,49x es re-rating específico de PBR (estrechamiento del descuento), no ×2,98.
+3. <strong>El EBITDA de Bolsonaro no fue “gestión”.</strong> En BRL creció +204%, pero con Brent +60% y BRL -27% el crecimiento en USD fue ~+123%. El de Lula cayó -31% en BRL y ~-28% en USD, con Brent -29% en 2023-25. En ambos casos manda el crudo.
+4. <strong>PBR no es PETR4.</strong> PBR son ordinarias (PETR3) y PETR4 preferentes. En Lula 3, PETR4 en USD rindió ~+371% vs. +321% de PBR: 50 pp de diferencia por clase, no por FX.
+5. <strong>La comparación con el Ibovespa estaba mal hecha.</strong> PBR (USD, retorno total) vs. Ibovespa (BRL, precio) no es comparable. En USD, el Ibovespa cayó ~-8,3% con Bolsonaro y subió ~+95,1% con Lula. La outperformance de PBR es +75 pp y +226 pp, respectivamente, no +41 pp y +235 pp.
+6. <strong>Los dividendos mezclaban bases.</strong> La tabla de v1 usaba fecha ex para 2019-2024 y total declarado para 2025-2026. En base fecha ex, Lula 3 suma US$ 7,44/ADR; en base declarada, US$ 7,83. No son intercambiables.</p>
+<hr />
+<h2 id="2-retornos-con-fechas-de-corte-alternativas">2. Retornos con fechas de corte alternativas</h2>
+<h3 id="21-cuadro-principal-base-fecha-ex-retorno-total">2.1 Cuadro principal (base fecha ex, retorno total)</h3>
+<table>
+<thead>
+<tr>
+<th>Periodo</th>
+<th style="text-align: right;">PBR (USD)</th>
+<th style="text-align: right;">PETR4 (BRL)</th>
+<th style="text-align: right;">PETR4 (USD)</th>
+<th style="text-align: right;">Ibovespa (BRL)</th>
+<th style="text-align: right;">Ibovespa (USD)</th>
+<th style="text-align: right;">Brent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bolsonaro</strong> 1-ene-19 → 30-dic-22</td>
+<td style="text-align: right;"><strong>+66,6%</strong></td>
+<td style="text-align: right;">+120,0%</td>
+<td style="text-align: right;">+61,5%</td>
+<td style="text-align: right;">+25,2%</td>
+<td style="text-align: right;"><strong>-8,3%</strong></td>
+<td style="text-align: right;">+59,7%</td>
+</tr>
+<tr>
+<td><strong>Lula 3</strong> 1-ene-23 → 23-oct-26</td>
+<td style="text-align: right;"><strong>+321,4%</strong></td>
+<td style="text-align: right;">+350,1%</td>
+<td style="text-align: right;"><strong>+371,0%</strong></td>
+<td style="text-align: right;">+86,4%</td>
+<td style="text-align: right;"><strong>+95,1%</strong></td>
+<td style="text-align: right;">+35,9%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura correcta:</strong> PBR batió al Ibovespa en USD en ~75 pp con Bolsonaro y ~226 pp con Lula. La comparación original (+41 pp / +235 pp) mezclaba monedas y sobreestimaba la diferencia a favor de Lula.</p>
+<h3 id="22-sensibilidad-a-la-fecha-de-corte">2.2 Sensibilidad a la fecha de corte</h3>
+<table>
+<thead>
+<tr>
+<th>Corte</th>
+<th style="text-align: right;">PBR (USD)</th>
+<th style="text-align: right;">PETR4 (BRL)</th>
+<th style="text-align: right;">PETR4 (USD)</th>
+<th style="text-align: right;">Brent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bolsonaro 1-ene-19 → <strong>28-oct-22</strong> (víspera)</td>
+<td style="text-align: right;"><strong>+86,5%</strong></td>
+<td style="text-align: right;">+173,3%</td>
+<td style="text-align: right;">+98,6%</td>
+<td style="text-align: right;">+78,0%</td>
+</tr>
+<tr>
+<td>Bolsonaro 1-ene-19 → 30-dic-22</td>
+<td style="text-align: right;">+66,6%</td>
+<td style="text-align: right;">+120,0%</td>
+<td style="text-align: right;">+61,5%</td>
+<td style="text-align: right;">+59,7%</td>
+</tr>
+<tr>
+<td>Bolsonaro 1-ene-19 → 3-ene-23</td>
+<td style="text-align: right;">+48,6%</td>
+<td style="text-align: right;">+100,6%</td>
+<td style="text-align: right;">+45,2%</td>
+<td style="text-align: right;">+52,6%</td>
+</tr>
+<tr>
+<td>Lula <strong>31-oct-22</strong> → 23-oct-26</td>
+<td style="text-align: right;"><strong>+276,5%</strong></td>
+<td style="text-align: right;">+262,2%</td>
+<td style="text-align: right;">+279,3%</td>
+<td style="text-align: right;">+21,9%</td>
+</tr>
+<tr>
+<td>Lula 1-ene-23 → 23-oct-26</td>
+<td style="text-align: right;">+321,4%</td>
+<td style="text-align: right;">+350,1%</td>
+<td style="text-align: right;">+371,0%</td>
+<td style="text-align: right;">+35,9%</td>
+</tr>
+<tr>
+<td>Lula 3-ene-23 → 23-oct-26</td>
+<td style="text-align: right;">+321,4%*</td>
+<td style="text-align: right;">+381,1%</td>
+<td style="text-align: right;">+410,7%</td>
+<td style="text-align: right;">+35,9%</td>
+</tr>
+<tr>
+<td>Lula 1-feb-23 → 23-oct-26</td>
+<td style="text-align: right;">+286,9%</td>
+<td style="text-align: right;">+323,0%</td>
+<td style="text-align: right;">+324,9%</td>
+<td style="text-align: right;">+38,1%</td>
+</tr>
+</tbody>
+</table>
+<p>* El ADR no cotizó el 2-ene-2023 (feriado en EE.UU.); su base sigue siendo el 30-dic-2022. PETR4 sí cotizó el 2-ene y cayó -6,45%, por eso el retorno desde el 3-ene es mayor: excluye esa sesión.</p>
+<p><strong>El periodo de transición importa.</strong> Del 28-oct-2022 al 30-dic-2022, PBR rindió <strong>-10,7%</strong> en total return (el precio cayó -20,8%, pero hubo un dividendo de US$ 1,296/ADR con fecha ex 22-nov-2022). Atribuir esa caída entera a Lula o a Bolsonaro es arbitrario. La comparación más limpia es <strong>+86,5% (Bolsonaro hasta la víspera) vs. +276,5% (Lula desde el día siguiente)</strong>: el gap baja de 255 pp a 190 pp.</p>
+<h3 id="23-ano-a-ano-pbr-retorno-total">2.3 Año a año (PBR, retorno total)</h3>
+<table>
+<thead>
+<tr>
+<th>Año</th>
+<th style="text-align: right;">PBR</th>
+<th style="text-align: right;">PETR4</th>
+<th style="text-align: right;">Ibovespa BRL</th>
+<th style="text-align: right;">Brent</th>
+<th style="text-align: right;">USD/BRL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019</td>
+<td style="text-align: right;">+23,7</td>
+<td style="text-align: right;">+37,5</td>
+<td style="text-align: right;">+31,9</td>
+<td style="text-align: right;">+22,7</td>
+<td style="text-align: right;">+3,7</td>
+</tr>
+<tr>
+<td>2020</td>
+<td style="text-align: right;">-28,9</td>
+<td style="text-align: right;">-6,1</td>
+<td style="text-align: right;">+2,9</td>
+<td style="text-align: right;">-21,5</td>
+<td style="text-align: right;">+29,3</td>
+</tr>
+<tr>
+<td>2021</td>
+<td style="text-align: right;">+20,4</td>
+<td style="text-align: right;">+23,5</td>
+<td style="text-align: right;">-12,1</td>
+<td style="text-align: right;">+50,2</td>
+<td style="text-align: right;">+7,3</td>
+</tr>
+<tr>
+<td>2022</td>
+<td style="text-align: right;">+57,2</td>
+<td style="text-align: right;">+37,9</td>
+<td style="text-align: right;">+5,0</td>
+<td style="text-align: right;">+10,5</td>
+<td style="text-align: right;">-5,1</td>
+</tr>
+<tr>
+<td>2023</td>
+<td style="text-align: right;">+89,2</td>
+<td style="text-align: right;">+96,8</td>
+<td style="text-align: right;">+22,0</td>
+<td style="text-align: right;">-10,3</td>
+<td style="text-align: right;">-8,2</td>
+</tr>
+<tr>
+<td>2024</td>
+<td style="text-align: right;">-2,3</td>
+<td style="text-align: right;">+19,1</td>
+<td style="text-align: right;">-10,4</td>
+<td style="text-align: right;">-3,1</td>
+<td style="text-align: right;">+27,4</td>
+</tr>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">-1,1</td>
+<td style="text-align: right;">-5,2</td>
+<td style="text-align: right;">+34,0</td>
+<td style="text-align: right;">-18,5</td>
+<td style="text-align: right;">-11,4</td>
+</tr>
+<tr>
+<td>2026 YTD</td>
+<td style="text-align: right;">+130,3</td>
+<td style="text-align: right;">+102,5</td>
+<td style="text-align: right;">+27,3</td>
+<td style="text-align: right;">+91,8</td>
+<td style="text-align: right;">-9,3</td>
+</tr>
+</tbody>
+</table>
+<p>La discrepancia 2024 entre PBR (-2,3%) y PETR4 (+19,1%) es real: son clases distintas y el BRL se depreció 27,4%. En USD, PETR4 rindió ~-6,5%, más cerca de PBR.</p>
+<hr />
+<h2 id="3-la-descomposicion-del-multiplo-lo-que-sostiene-la-tesis">3. La descomposición del múltiplo (lo que sostiene la tesis)</h2>
+<h3 id="31-multiplos-consistentes-en-brl">3.1 Múltiplos consistentes, en BRL</h3>
+<p>Para evitar mezclar fuentes y tipos de cambio, calculo EV y EBITDA en BRL:</p>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th style="text-align: right;">Market cap (R$ bn)</th>
+<th style="text-align: right;">Deuda neta (R$ bn)</th>
+<th style="text-align: right;">EV (R$ bn)</th>
+<th style="text-align: right;">EBITDA (R$ bn)</th>
+<th style="text-align: right;">EV/EBITDA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018</td>
+<td style="text-align: right;">329,1</td>
+<td style="text-align: right;">268,6</td>
+<td style="text-align: right;">597,7</td>
+<td style="text-align: right;">115,9*</td>
+<td style="text-align: right;"><strong>5,16x</strong></td>
+</tr>
+<tr>
+<td>2022</td>
+<td style="text-align: right;">345,6</td>
+<td style="text-align: right;">224,5</td>
+<td style="text-align: right;">570,1</td>
+<td style="text-align: right;">352,3</td>
+<td style="text-align: right;"><strong>1,62x</strong></td>
+</tr>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">408,0</td>
+<td style="text-align: right;">333,4</td>
+<td style="text-align: right;">741,4</td>
+<td style="text-align: right;">208,1</td>
+<td style="text-align: right;"><strong>3,56x</strong></td>
+</tr>
+<tr>
+<td>TTM jun-26</td>
+<td style="text-align: right;">807,0</td>
+<td style="text-align: right;">366,5</td>
+<td style="text-align: right;">1.173,5</td>
+<td style="text-align: right;">243,0</td>
+<td style="text-align: right;"><strong>4,83x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>* 2018: EBITDA derivado de deuda neta R$ 268,6 bn y ratio deuda neta/EBITDA 2,32x publicado por Petrobras. Misma base BRL que el resto; no es una cifra reportada directamente.</p>
+<h3 id="32-la-aritmetica-que-faltaba">3.2 La aritmética que faltaba</h3>
+<p><strong>Bolsonaro (2018 → 2022):</strong>
+- EBITDA: R$ 115,9 bn → R$ 352,3 bn = <strong>+204%</strong>
+- Múltiplo: 5,16x → 1,62x = <strong>-68,6%</strong>
+- EV: R$ 597,7 bn → R$ 570,1 bn = <strong>-4,6%</strong>
+- Comprobación: 3,04 × 0,314 = 0,955 → EV -4,5%. Cuadra.</p>
+<p><strong>Lula (2022 → TTM):</strong>
+- EBITDA: R$ 352,3 bn → R$ 243,0 bn = <strong>-31,0%</strong>
+- Múltiplo: 1,62x → 4,83x = <strong>+198%</strong>
+- EV: R$ 570,1 bn → R$ 1.173,5 bn = <strong>+105,8%</strong>
+- Comprobación: 0,690 × 2,98 = 2,056 → EV +105,6%. Cuadra.</p>
+<p><strong>El punto del crítico:</strong> el ×2,98 del múltiplo no es un re-rating del 198% en términos de EV. Como el EBITDA cayó -31%, el EV solo subió +105,8%. El múltiplo sube porque el denominador cae; el re-rating “limpio” es ~×2,06, no ×2,98.</p>
+<h3 id="33-cuanto-es-sectorial-y-cuanto-es-pbr">3.3 ¿Cuánto es sectorial y cuánto es PBR?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">2022</th>
+<th style="text-align: right;">Actual</th>
+<th style="text-align: right;">Cambio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBR EV/EBITDA</td>
+<td style="text-align: right;">1,62x</td>
+<td style="text-align: right;">4,83x</td>
+<td style="text-align: right;">×2,98</td>
+</tr>
+<tr>
+<td>Mediana pares*</td>
+<td style="text-align: right;">3,03x</td>
+<td style="text-align: right;">6,07x</td>
+<td style="text-align: right;">×2,00</td>
+</tr>
+<tr>
+<td>Descuento de PBR</td>
+<td style="text-align: right;">-46,5%</td>
+<td style="text-align: right;">-20,4%</td>
+<td style="text-align: right;">+26,1 pp</td>
+</tr>
+</tbody>
+</table>
+<p>* XOM, CVX, SHEL, TTE, EC; mediana de los múltiplos EV/EBITDA de cada año.</p>
+<p><strong>Lectura:</strong> de la revalorización de PBR, <strong>×2,00 es sectorial</strong> (los pares también se re-rating) y <strong>×1,49 es específico de PBR</strong> (estrechamiento del descuento). El stock no hizo un re-rating único: hizo el mismo re-rating del sector más la mitad de la convergencia de su descuento político. Eso cambia la narrativa: no es “Lula revalorizó PBR”, es “el sector se revalorizó y PBR cerró parte de su descuento”.</p>
+<h3 id="34-el-ebitda-tambien-es-crudo-no-gestion">3.4 El EBITDA también es crudo, no gestión</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">BRL</th>
+<th style="text-align: right;">USD*</th>
+<th style="text-align: right;">Brent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bolsonaro 2018 → 2022</td>
+<td style="text-align: right;">+204%</td>
+<td style="text-align: right;"><strong>+123%</strong></td>
+<td style="text-align: right;">+59,7%</td>
+</tr>
+<tr>
+<td>Lula 2022 → TTM</td>
+<td style="text-align: right;">-31,0%</td>
+<td style="text-align: right;"><strong>-27,9%</strong></td>
+<td style="text-align: right;">-29,2% (2023-25)</td>
+</tr>
+</tbody>
+</table>
+<p>* EBITDA en USD = EBITDA BRL / USD/BRL del periodo. 2018: 115,9/3,872 = US$ 29,9 bn; 2022: 352,3/5,285 = US$ 66,7 bn; TTM: 243,0/5,05 = US$ 48,1 bn.</p>
+<p>El “+204%” de Bolsonaro se reduce a <strong>+123% en USD</strong> cuando se descuenta la depreciación del real. El “-41%” de Lula se queda en <strong>-28% en USD</strong>, en línea con el Brent. En ninguno de los dos periodos el EBITDA creció o cayó por gestión: siguió al crudo y al tipo de cambio.</p>
+<h3 id="35-la-atribucion-circular">3.5 La atribución circular</h3>
+<p>En v1, el de-rating de 2022 se cargaba a Bolsonaro, pero el propio texto lo explicaba por el miedo a que ganara Lula. Es circular. La secuencia correcta:</p>
+<ul>
+<li><strong>2019-2021:</strong> intervención de Bolsonaro en precios de combustibles y dos cambios de CEO (Castello Branco, feb-2021; Luna). El múltiplo empieza a comprimirse.</li>
+<li><strong>2022:</strong> el Brent sube +10,5%, el EBITDA marca récord, pero el mercado descuenta la victoria de Lula y el riesgo de cambios en la política de precios, dividendos e impuestos. El múltiplo cae a 1,62x.</li>
+<li><strong>2023-2026:</strong> Lula gobernando resulta menos radical que el miedo; el múltiplo se normaliza. Pero la normalización es en gran parte sectorial (§3.3).</li>
+</ul>
+<p><strong>Conclusión:</strong> “el mercado nunca le pagó a Bolsonaro” no se sostiene. El mercado le pagó el EBITDA de 2022 con un múltiplo de transición, no con un múltiplo de régimen. Y el rebote posterior es la reversión de ese descuento de transición, no una validación de Lula.</p>
+<hr />
+<h2 id="4-dividendos-base-fecha-ex-vs-base-declarada">4. Dividendos: base fecha ex vs. base declarada</h2>
+<h3 id="41-base-fecha-ex-la-que-usa-el-retorno-total">4.1 Base fecha ex (la que usa el retorno total)</h3>
+<table>
+<thead>
+<tr>
+<th>Año</th>
+<th style="text-align: right;">Dividendo/ADR (US$)</th>
+<th style="text-align: right;">Yield sobre precio de inicio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019</td>
+<td style="text-align: right;">0,15</td>
+<td style="text-align: right;">1,2%</td>
+</tr>
+<tr>
+<td>2020</td>
+<td style="text-align: right;">0,09</td>
+<td style="text-align: right;">0,5%</td>
+</tr>
+<tr>
+<td>2021</td>
+<td style="text-align: right;">2,08</td>
+<td style="text-align: right;">18,5%</td>
+</tr>
+<tr>
+<td>2022</td>
+<td style="text-align: right;">6,57</td>
+<td style="text-align: right;">59,9%</td>
+</tr>
+<tr>
+<td>2023</td>
+<td style="text-align: right;">2,94</td>
+<td style="text-align: right;">27,6%</td>
+</tr>
+<tr>
+<td>2024</td>
+<td style="text-align: right;">2,87</td>
+<td style="text-align: right;">18,0%</td>
+</tr>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">0,83</td>
+<td style="text-align: right;">6,5%</td>
+</tr>
+<tr>
+<td>2026 YTD</td>
+<td style="text-align: right;">0,80</td>
+<td style="text-align: right;">6,7%</td>
+</tr>
+<tr>
+<td><strong>Suma Lula 3 (2023-26)</strong></td>
+<td style="text-align: right;"><strong>7,44</strong></td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-base-declarada-ejercicio-fiscal">4.2 Base declarada (ejercicio fiscal)</h3>
+<table>
+<thead>
+<tr>
+<th>Ejercicio</th>
+<th style="text-align: right;">Total declarado</th>
+<th style="text-align: right;">Por acción</th>
+<th style="text-align: right;">Por ADR*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td style="text-align: right;">R$ 73,9 bn</td>
+<td style="text-align: right;">R$ 5,73</td>
+<td style="text-align: right;">~US$ 2,13</td>
+</tr>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">R$ 41,23 bn</td>
+<td style="text-align: right;">R$ 3,199</td>
+<td style="text-align: right;">~US$ 1,15</td>
+</tr>
+</tbody>
+</table>
+<p>* Conversión a tipo de cambio medio; no coincide con la suma por fecha ex porque los pagos cruzan el cambio de año.</p>
+<p><strong>La corrección:</strong> la tabla de v1 mezcló ambas bases. El total de US$ 7,44 es correcto en base fecha ex; el de US$ 7,83 sale de sustituir 2025-26 por los totales declarados. No se pueden sumar. Para el retorno total, la base correcta es fecha ex.</p>
+<h3 id="43-payout-no-dividendo-por-adr">4.3 Payout, no dividendo por ADR</h3>
+<ul>
+<li>El dividendo por ADR en base fecha ex cayó <strong>-87%</strong> de 2022 (US$ 6,57) a 2025 (US$ 0,83).</li>
+<li>El <strong>payout ratio</strong> no cayó -83%: pasó de ~103% en 2022 a ~32% en 2025.</li>
+<li>La política del 45% del FCF <strong>no es fija ni original de Lula</strong>: el board la aprobó en julio de 2023, bajándola desde el 60%. Es un cambio de política del propio gobierno de Lula, no una regla inmutable.</li>
+<li>El “yield de hoy” del 4,5% es forward sobre el precio actual (US$ 1,18 / US$ 26,16). El 10% que aparecía en v1 era el yield sobre el precio de inicio de 2025 (US$ 1,15 / US$ 11,85), no el yield actual. Son métricas distintas y deben etiquetarse.</li>
+</ul>
+<hr />
+<h2 id="5-eventos-pbr-vs-petr4-y-ventanas-correctas">5. Eventos: PBR vs. PETR4 y ventanas correctas</h2>
+<p>| Fecha | Evento | PBR 1d | PETR4 1d | Brent 1d | Lectura |
+|---|---|---|---:|---:|---:|---|
+| 29-oct-2018 | Bolsonaro gana 2ª vuelta | -4,2% | -4,3% | -0,4% | Sin reacción positiva inicial |
+| 02-ene-2019 | Bolsonaro asume | +7,7% | +6,1% | +2,1% | Euforia inicial |
+| 22-feb-2021 | Cese de Castello Branco | <strong>-21,0%</strong> | <strong>-20,7%</strong> | +3,7% | El mayor castigo político |
+| 31-oct-2022 | Lula gana 2ª vuelta | -4,7% | <strong>-8,5%</strong> | -1,0% | PBR cayó la mitad que PETR4 |
+| 02-03 ene-2023 | Lula asume | -10,8%* | <strong>-8,8%</strong> | -4,4% | Dos sesiones de B3 |
+| 17-may-2023 | Nueva política de precios | -0,3% | -2,4% | +2,7% | Menos malo de lo temido |
+| 08-mar-2024 | Board retiene dividendo extra | <strong>-11,5%</strong> | -9,1% | -1,1% | Golpe real |
+| 15-may-2024 | Cese de Prates | -6,8% | -6,0% | +0,4% | Golpe real |
+| 05-oct-2026 | 1ª vuelta: Flávio Bolsonaro adelante | <strong>+11,5%</strong> | +8,2% | -1,9% | El mercado premia el riesgo Bolsonaro |</p>
+<p>* PBR no cotizó el 2-ene-2023; el -10,8% del 3-ene incluye la caída de PETR4 del 2-ene (-6,45%) y la del 3-ene (-2,53%). Por eso no es comparable con un movimiento de un solo día.</p>
+<p><strong>Correcciones:</strong>
+- El -4,7% del 31-oct-2022 es el ADR; PETR4 cayó -8,5% ese día. La diferencia es clase + FX, no una reacción distinta.
+- El -10,8% del 3-ene-2023 no es un evento de un día: suma dos sesiones de B3.
+- Los “dos golpes grandes con Lula” de v1 omitían el -8,8% de PETR4 en la toma de posesión. Corregido.</p>
+<hr />
+<h2 id="6-contexto-historico-sin-cambios-sustanciales">6. Contexto histórico (sin cambios sustanciales)</h2>
+<table>
+<thead>
+<tr>
+<th>Periodo</th>
+<th>Presidente</th>
+<th style="text-align: right;">PBR TR (USD)</th>
+<th style="text-align: right;">Brent</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2003-2006</td>
+<td>Lula 1</td>
+<td style="text-align: right;"><strong>+729,4%</strong></td>
+<td style="text-align: right;">+95,7%*</td>
+<td>Boom de commodities y pre-sal</td>
+</tr>
+<tr>
+<td>2007-2010</td>
+<td>Lula 2</td>
+<td style="text-align: right;">+67,8%</td>
+<td style="text-align: right;">+49,7%</td>
+<td>Crisis 2008 (-80% DD) y ampliación 2010</td>
+</tr>
+<tr>
+<td>2011-2016</td>
+<td>Rousseff</td>
+<td style="text-align: right;"><strong>-73,2%</strong></td>
+<td style="text-align: right;">-50,4%</td>
+<td>Precios congelados, subsidios, Lava Jato</td>
+</tr>
+<tr>
+<td>2016-2018</td>
+<td>Temer</td>
+<td style="text-align: right;">+43,7%</td>
+<td style="text-align: right;">+14,4%</td>
+<td>Restauración de la paridad de importación</td>
+</tr>
+<tr>
+<td>2019-2022</td>
+<td>Jair Bolsonaro</td>
+<td style="text-align: right;">+66,6%</td>
+<td style="text-align: right;">+59,7%</td>
+<td>EBITDA récord, múltiplo comprimido</td>
+</tr>
+<tr>
+<td>2023-2026</td>
+<td>Lula 3</td>
+<td style="text-align: right;"><strong>+321,4%</strong></td>
+<td style="text-align: right;">+35,9%</td>
+<td>Reversión del descuento + crudo 2026</td>
+</tr>
+</tbody>
+</table>
+<p>* WTI como proxy en 2003-2006.</p>
+<p>La ideología sigue sin ser la variable: Lula 1 fue el mejor tramo y Rousseff el peor. Pesan el crudo, la autonomía de precios y el punto de partida.</p>
+<hr />
+<h2 id="7-la-reeleccion-de-lula-y-el-impuesto-del-12">7. La reelección de Lula y el impuesto del 12%</h2>
+<ul>
+<li>Lula ganó el balotaje con <strong>51,8% vs. 48,2%</strong> (TSE), después de perder la primera vuelta <strong>47,03% vs. 45,16%</strong>. Es la primera vez desde 1989 que un candidato gana la segunda vuelta tras perder la primera.</li>
+<li>El rival de 2026 era <strong>Flávio Bolsonaro</strong>, hijo de Jair Bolsonaro, no Jair.</li>
+<li>El <strong>EWZ cayó ~18-20% en la noche</strong> y el BRL ~9%; Bolsonaro no reconoció el resultado y pedirá la anulación.</li>
+<li>El <strong>impuesto del 12% a las exportaciones de crudo</strong> se introdujo en marzo de 2026, se prorrogó en julio otros 60 días (hasta el 9-sep) y se volvió a prorrogar a finales de agosto otros 60 días (hasta ~8-nov), con impugnaciones judiciales de por medio. No es una medida de julio que expira en julio: sigue viva y vence en noviembre.</li>
+<li>PBR cerró el 23-oct en <strong>US$ 26,16</strong>, +130% YTD, 4,83x EV/EBITDA TTM y 6,3x P/E. La muestra termina antes de la reacción al balotaje.</li>
+</ul>
+<hr />
+<h2 id="8-que-vigilar-corregido">8. Qué vigilar (corregido)</h2>
+<p><strong>A favor:</strong>
+- Brent &gt; US$ 100 y disrupción de Ormuz sostenida.
+- Producción &gt; 3,2 mboe/d y pre-sal al 82%.
+- FCF TTM US$ 21.200 M; FCF yield ~13%; deuda neta/EBITDA 1,3x.
+- Plan 2026-2030 de US$ 109.000 M con foco en pre-sal.</p>
+<p><strong>En contra:</strong>
+- Yield forward de 4,5% vs. 60% en 2022: el argumento de renta se debilitó.
+- CapEx de ~US$ 20.000 M/año compite con dividendos; el DPS cayó -87% en base fecha ex.
+- Impuesto del 12% a las exportaciones (vigente hasta ~8-nov, con litigios) y riesgo de nuevas medidas fiscales.
+- Valoración ya normalizada: 4,83x TTM no es el 1,62x de 2022.
+- <strong>Si el crudo cae, el EBITDA baja y, con el precio de la acción constante, el múltiplo sube; lo que cae es la acción.</strong> La frase de v1 (“el EBITDA y el múltiplo caen a la vez”) era mecánicamente incorrecta.</p>
+<hr />
+<h2 id="9-conclusion-corregida">9. Conclusión corregida</h2>
+<p>La comparación simple (+321,4% vs. +66,6%) es real, pero exagera el efecto Lula por tres vías: fechas de corte, mezcla de clases y comparación con el Ibovespa en monedas distintas. La comparación más limpia (+276,5% desde el día después de la elección vs. +86,5% hasta la víspera) sigue mostrando una diferencia enorme, pero menor.</p>
+<p>La descomposición del múltiplo es la que manda:
+- PBR pasó de 1,62x a 4,83x EV/EBITDA, pero <strong>×2,00 del ×2,98 es sectorial</strong>; solo ×1,49 es específico de PBR.
+- El EBITDA de Bolsonaro creció +204% en BRL pero +123% en USD, con Brent +60% y BRL -27%.
+- El EBITDA de Lula cayó -31% en BRL y -28% en USD, con Brent -29% en 2023-25.</p>
+<p><strong>Veredicto:</strong> la tesis central aguanta —petróleo, punto de partida y múltiplo pesan más que quién gobierna—, pero el relato de v1 era demasiado favorable a Lula y demasiado duro con Bolsonaro. El re-rating de PBR fue sobre todo sectorial y de reversión de un descuento de transición, no una validación de la gestión de Lula. Y el crecimiento de EBITDA de Bolsonaro fue crudo y FX, no gestión. En ambos casos, la política explica el timing y el descuento, no el nivel de largo plazo.</p>
+<hr />
+<h2 id="fuentes-y-notas">Fuentes y notas</h2>
+<ul>
+<li>Yahoo Finance chart API: precios diarios y dividendos por fecha ex de PBR, PETR4.SA, ^BVSP, BZ=F, BRL=X, XOM, CVX, SHEL, EC, TTE, EQNR y ^GSPC. Descarga propia, 24-26 oct 2026.</li>
+<li>stockanalysis.com/stocks/pbr/financials/ y /ratios/: EBITDA, CapEx, deuda neta, EV/EBITDA, payout y múltiplos 2021-2025/TTM.</li>
+<li>Petrobras/Agência Petrobras: producción 2025 (2,99 mboe/d; 2,40 mb/d; +11%), 1T26 (3,225 mboe/d), plan 2026-2030 (US$ 109.000 M), dividendo declarado 2024 (R$ 73,9 bn) y 2025 (R$ 41,23 bn).</li>
+<li>Reuters: 8-mar-2024 (retención de dividendo), 16-may-2023 (nueva política de precios), 19-feb-2021 (cese de Castello Branco), 9-jul-2026 y 27-ago-2026 (impuesto del 12% y prórrogas), 20-jun-2022 (debate sobre windfall tax).</li>
+<li>CNBC (26-oct-2026): Lula 51,8%; EWZ ~-20% overnight.</li>
+<li>Brazil Energy Insight / Petrobras: producción 2018 (2,63 mboe/d; 2,03 mb/d de crudo en Brasil).</li>
+<li>MarketScreener/Petrobras: deuda neta 2018 US$ 69.378 M y ratio deuda neta/EBITDA 2,32x.</li>
+</ul>
+<p><strong>Notas metodológicas:</strong>
+- Retorno total con precios ajustados por dividendos (Yahoo adjusted close). La simulación propia de reinversión dio +63,1% (Bolsonaro) y +320,1% (Lula 3) vs. +66,6% y +321,4% con adjusted close. Diferencias por timing de reinversión.
+- PBR es el ADR de ordinarias (PETR3); PETR4 es preferente. No son equivalentes y la identidad PBR ≈ PETR4/USDBRL no se cumple, sobre todo en Lula 3.
+- El Ibovespa se convierte a USD con el tipo de cambio de cada fecha; la comparación con PBR ya es homogénea en moneda y base (precio vs. retorno total se indica en cada tabla).
+- Los eventos de 1 día usan el primer cierre posterior al hecho; cuando B3 y EE.UU. no comparten calendario, se indica la ventana exacta y se usa PETR4 para la reacción local.
+- 2018 EBITDA es derivado (deuda neta / ratio publicado), no reportado directamente. Marcado como cálculo propio.
+- Este documento es análisis histórico, no recomendación de inversión.</p>
+</div>
+</body></html>

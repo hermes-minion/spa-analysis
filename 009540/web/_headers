@@ -1,0 +1,6 @@
+# Cloudflare Pages: reglas de caché para el manifiesto y los informes.
+/analyses.json
+  Cache-Control: no-cache, must-revalidate
+
+/reports/*
+  Cache-Control: public, max-age=600

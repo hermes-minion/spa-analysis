@@ -1,0 +1,1479 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMBA · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>AMBA · 2026-11-13</span></div>
+<div class="wrap">
+<h1 id="ambarella-inc-nasdaq-amba-physical-ai-equity-research">Ambarella, Inc. (NASDAQ: AMBA) — Physical AI Equity Research</h1>
+<p><strong>Price used for valuation:</strong> $60.12 (Nasdaq close, 13 Nov 2026). Market cap $2.65B; enterprise value $2.39B; net cash $259.7M [$5.88/share].
+<strong>Fiscal year:</strong> ends 31 January. FY2026 ended 31 Jan 2026; the latest reported quarter is <strong>Q2 FY2027, ended 31 Jul 2026</strong> (10-Q filed 4 Sep 2026). Q3 FY2027 (quarter ended 31 Oct 2026) reports on <strong>24 Nov 2026</strong> — after this note's cut-off.
+<strong>Analyst stance:</strong> research, not financial advice. FACTS, MANAGEMENT CLAIMS and OPINION are labelled separately. Every figure is dated.</p>
+<hr />
+<h2 id="0-classification-mandatory">0. Classification (mandatory)</h2>
+<p><strong>Profile C — growth, close to break-even.</strong> FY2026 revenue $390.7M (+20% YoY), Q4 GAAP operating margin −7.5% and GAAP EPS −$0.15 versus non-GAAP EPS +$0.18; Q4 FCF −$7.1M after −$29.6M in Q3. Net cash $259.7M. GAAP P/E is not meaningful; the equity is a call on the CV3/CV8 and N1 cycles reaching operating leverage.
+<strong>Business model:</strong> fabless edge-AI vision SoCs (automotive ADAS, security/IoT, robotics), sold through distributors and direct OEM design wins.
+<strong>Metrics that matter:</strong> EV/sales, non-GAAP gross margin (59.3%), design-win pipeline and FCF conversion.</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive summary</h2>
+<ul>
+<li><strong>This is now a growth-again story trading at a growth-stock price.</strong> Revenue went $226M (FY2024) → $285M (FY2025) → $391M (FY2026, +37.2%), and TTM revenue is $417.8M (+20.0% YoY) as of the July 2026 quarter (<a href="https://stockanalysis.com/stocks/amba/statistics/">statistics</a>). FY2027 consensus is $441M (+12.9%) and guidance is "10–15%". At $60.12 the stock is <strong>5.7x EV/TTM sales, 5.4x EV/FY2027E sales, ~75x FY2027E adjusted EPS and ~246x TTM FCF</strong>. That is a premium multiple for mid-teens growth.</li>
+<li><strong>The reported NXP process is the single largest swing factor in the equity.</strong> The FT reported on 31 Jul 2026 that NXP was in talks to buy Ambarella, with other bidders possible, when the market cap was ~$3.25B (<a href="https://www.siliconangle.com/2026/07/31/nxp-reportedly-talks-acquire-vehicle-chip-supplier-ambarella/">SiliconANGLE</a>, 31 Jul 2026). On 30 Oct 2026 several outlets reported Ambarella had moved into <strong>exclusive talks</strong> with NXP (<a href="https://www.tipranks.com/news/the-fly/ambarella-takeover-rumor-highlighted-in-betaville-blog-thefly-news-3">The Fly/Seeking Alpha headline</a>). <strong>No 8-K, no merger agreement and no company confirmation exists as of 13 Nov 2026</strong> — I checked the EDGAR filing index. Treat as an unconfirmed media report.</li>
+<li><strong>The market is not pricing a deal.</strong> The shares are $60.12, <strong>18% below</strong> the ~$73.6/share implied by the pre-rumour $3.25B market cap, and 38% below the 52-week high of $96.36. The stock fell 2.3% on the day the "exclusive talks" story ran, on 3.3M shares. If a deal were viewed as likely at a premium, the spread would not be this wide. <strong>OPINION:</strong> the market is either discounting the report or pricing a low-ball number.</li>
+<li><strong>"Physical AI" is a real but overstated label. Automotive is only ~22% of revenue</strong> (<a href="https://www.eetimes.com/nxp-eying-ambarella-is-it-about-automotive-or-edge-ai/">EE Times, 11 Nov 2026</a>); IoT was ~80% of FY2026 revenue, split roughly 50/50 CapEx-driven (enterprise security, body cams, video conferencing) and consumer (action/360 cameras, drones, wearables) per the CFO (<a href="https://stockanalysis.com/stocks/amba/transcripts/415683-q4-2026/">Q4 FY2026 call</a>). The <strong>largest end customer in FY2026 was Arashi Vision (Insta360)</strong> — a consumer camera maker — and <strong>one distributor, WT Microelectronics, was ~70% of revenue</strong> (FY2026 10-K). Robotics + drones + industrial automation is, by my estimate, <strong>~9% of revenue</strong>.</li>
+<li><strong>The income statement is still GAAP-loss-making and cash-consumptive.</strong> GAAP operating margin was −7.5% in Q2 FY2027 and −14.9% TTM; stock-based compensation is <strong>21% of revenue</strong>; TTM free cash flow is <strong>$9.7M (2.3% margin)</strong> because inventory rose from 99 to 157 days and payables fell. Consensus FY2027 FCF is roughly <strong>zero to negative</strong> (<a href="https://stockanalysis.com/stocks/amba/forecast/">forecast</a>).</li>
+<li><strong>The product pipeline is genuinely interesting and is the reason to own it standalone.</strong> An $800M+ ten-year LTA with Hanwha, 15+ robotic design wins worth &gt;$100M lifetime, a $13B automotive opportunity set for FY2027–32, the 2nm CV8 semi-custom SoC (production H1 FY2028), the X7 standalone AI accelerator, and a lift in the five-year SAM from $8.5B (FY2027) to $22.9B (FY2032), a 20% CAGR (<a href="https://stockanalysis.com/stocks/amba/transcripts/682015-q2-2027/">Q2 FY2027 call</a>; <a href="https://stockanalysis.com/stocks/amba/transcripts/572341-q1-2027/">Q1 FY2027 call</a>). All of these are <strong>management claims</strong>, not contracted revenue, except the Hanwha LTA which is contractual but back-end loaded.</li>
+<li><strong>Insiders are selling into strength and nobody is buying.</strong> In the six months to 13 Nov 2026 there were <strong>20 open-market sales totalling $8.65M and zero open-market purchases</strong>; the CEO alone sold 6 tranches for $5.24M, including at $90.08–$92.05 in late May 2026 (Form 4s, CIK 1280263).</li>
+</ul>
+<p><strong>Verdict: NEUTRAL — conviction Medium.</strong> 12-month probability-weighted value ~$68 (+13%). The takeover process, the Hanwha LTA and the 2027–28 product cycle put a floor under the equity around $45–50; the 75x adjusted P/E, 21% SBC load, negative FCF and consumer-customer concentration cap the re-rating. I would turn constructive below ~$48 standalone, or on a confirmed deal at ≥$80.</p>
+<hr />
+<h2 id="2-business-overview">2. Business overview</h2>
+<h3 id="what-they-sell">What they sell</h3>
+<p>Ambarella designs <strong>fabless, low-power AI systems-on-chip (SoCs)</strong> and the software stack that runs on them. The chip integrates the image signal processor, the CVflow neural-network accelerator, CPUs, video encoder and system functions on one die — the architectural bet being that at the edge, unlike in the data centre, "everything on one chip" beats "a collection of discrete parts" on power, latency and cost (<a href="https://stockanalysis.com/stocks/amba/transcripts/725745-citi-s-2026-global-tmt-conference/">Citi TMT conference</a>, 9 Sep 2026).</p>
+<table>
+<thead>
+<tr>
+<th>Product family</th>
+<th>Node</th>
+<th>What it is</th>
+<th>Status (Nov 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CV2</strong> (CV22/CV25/CV28)</td>
+<td>10nm</td>
+<td>Second-gen CVflow, CNN-era</td>
+<td>Still shipping in volume; the bulk of the ~$1B cumulative edge-AI revenue (management, Feb 2026)</td>
+</tr>
+<tr>
+<td><strong>CV5 / CV52</strong></td>
+<td>5nm</td>
+<td>AI vision SoC, 8K</td>
+<td>Mature ramp</td>
+</tr>
+<tr>
+<td><strong>CV7 / CV72 / CV75</strong></td>
+<td>5nm</td>
+<td>Third-gen CVflow, transformer-capable</td>
+<td><strong>Steep production ramp</strong>; the main growth driver in FY2027</td>
+</tr>
+<tr>
+<td><strong>CV3-AD</strong></td>
+<td>5nm</td>
+<td>Central domain controller for L2+ to L4, sensor fusion + path planning</td>
+<td>Design wins with Continental, Bosch; L4 truck program with Aurora (management commentary) — no disclosed high-volume OEM win</td>
+</tr>
+<tr>
+<td><strong>N1 / N1-655</strong></td>
+<td>5nm</td>
+<td>Edge AI SoC running LLMs up to 34B parameters on-device</td>
+<td>In production; edge-infrastructure and robotics wedge</td>
+</tr>
+<tr>
+<td><strong>CV8</strong></td>
+<td><strong>2nm</strong></td>
+<td>Semi-custom AI SoC (first LTA product), Samsung Foundry</td>
+<td>Tape-out Jan 2026; <strong>production H1 FY2028</strong></td>
+</tr>
+<tr>
+<td><strong>X7</strong></td>
+<td>n/a</td>
+<td>First standalone AI accelerator (co-processor for ARM/x86 hosts), 4–5W, ~4MB memory for LLM workloads</td>
+<td><strong>Sampling now</strong>; design wins expected in edge infrastructure</td>
+</tr>
+<tr>
+<td><strong>Cooper</strong></td>
+<td>—</td>
+<td>Unified SDK across the whole SoC portfolio (200+ model architectures in production)</td>
+<td>The real lock-in asset</td>
+</tr>
+</tbody>
+</table>
+<p>Revenue is <strong>product revenue</strong> (SoC units), plus a small, undisclosed amount of NRE/development funding and software licensing. There is no SaaS line, no data business and no recurring software attach. Blended SoC ASP was <strong>~$15 in Q1 FY2027</strong> (management); ASP rises with AI performance because die size rises, not because pricing power improves.</p>
+<h3 id="to-whom-and-how-they-get-paid">To whom, and how they get paid</h3>
+<p>Ambarella sells to <strong>ODMs and OEMs</strong>, overwhelmingly through distribution. The channel structure is the most important and least-discussed fact in the file:</p>
+<ul>
+<li><strong>WT Microelectronics (Taiwan) = ~70% of FY2026 revenue</strong>, 63% in FY2025 and 53% in FY2024; 60.7% in Q1 FY2027 and 60.2% in Q2 FY2027 (10-K; earnings calls). WT is a non-exclusive logistics/fulfilment partner, not an end customer.</li>
+<li><strong>Hakuto (Japan) = 11% of Q2 FY2027 revenue.</strong></li>
+<li><strong>Top 10 end customers ≈ 67% of FY2026 revenue.</strong> The <strong>largest end customer was Arashi Vision (Insta360)</strong>, supplied indirectly through WT and several ODMs (FY2026 10-K).</li>
+</ul>
+<h3 id="segments-and-geographic-mix">Segments and geographic mix</h3>
+<p>Ambarella reports <strong>one segment</strong> — it collapsed the old IoT/Automotive disclosure in FY2026, which reduces transparency. End-market colour now comes only from earnings calls: <strong>IoT ~80% of FY2026 revenue; automotive ~22%</strong> (EE Times, Nov 2026). The mix is drifting up on commercial-vehicle telematics: management put IoT at "about three-quarters" in Q1 FY2027 and automotive at ~30% in September 2026, so the current run-rate is probably 25–30% automotive.</p>
+<p>Geographic revenue is reported by <strong>bill-to location</strong>, which makes it close to meaningless analytically:</p>
+<table>
+<thead>
+<tr>
+<th>Geography (FY2026, bill-to)</th>
+<th>$M</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taiwan</td>
+<td>271.9</td>
+<td>69.6%</td>
+</tr>
+<tr>
+<td>Asia-Pacific ex-Taiwan</td>
+<td>71.0</td>
+<td>18.2%</td>
+</tr>
+<tr>
+<td>North America ex-US</td>
+<td>21.8</td>
+<td>5.6%</td>
+</tr>
+<tr>
+<td>Europe</td>
+<td>20.1</td>
+<td>5.1%</td>
+</tr>
+<tr>
+<td>United States</td>
+<td>5.8</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>390.7</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>"Taiwan" is where WT takes title. True end demand is Western automotive Tier-1s, Chinese consumer camera brands (Insta360, DJI-adjacent), Korean and Japanese security brands (Hanwha Vision, IDIS, i-PRO), and US enterprise/telematics customers (Motorola, Lytx, Garmin). <strong>US-domiciled customers are ~1.5% of reported revenue</strong> — an unusual profile for a US-listed semi.</p>
+<hr />
+<h2 id="3-physical-ai-exposure">3. Physical AI exposure</h2>
+<h3 id="where-it-sits-in-the-stack">Where it sits in the stack</h3>
+<p><code>SENSING            COMPUTE/SILICON         DATA                  SOFTWARE/PERCEPTION       SYSTEMS/DEPLOYMENT
+Camera/radar        CVflow SoCs (CV2→CV8)   None (no data asset)  Cooper SDK, AI ISP,       Reference designs;
+(sold to, not by)   + X7 accelerator        customer-owned data   ADAS/radar algorithms      perception modules;
+                    fabbed at Samsung                                                    domain-controller BOMs</code></p>
+<ul>
+<li><strong>Sensing:</strong> Ambarella does not make sensors. It processes their output. It has adaptive-AI-radar <em>software</em> for 4D imaging radar but no radar chip.</li>
+<li><strong>Compute/silicon:</strong> this is the whole company. Single-foundry dependence on <strong>Samsung Foundry</strong> for leading edge — management says Ambarella is Samsung's only "exclusive" leading-edge customer, and Samsung publicly named NVIDIA and Ambarella as its 2nm customers (<a href="https://stockanalysis.com/stocks/amba/transcripts/572341-q1-2027/">Q1 FY2027 call</a> — management claim; I did not verify the Samsung release).</li>
+<li><strong>Data:</strong> <strong>none.</strong> This is the structural difference versus Mobileye's REM. Ambarella has no proprietary data asset, no fleet, no map. Its "data" story is a labelling/auto-annotation <em>service</em> sold to customers.</li>
+<li><strong>Software:</strong> Cooper SDK, AI ISP, ADAS/radar algorithms. Real and sticky, but it is an enablement layer, not a monetised stack — it exists to sell more silicon.</li>
+<li><strong>Systems:</strong> reference designs and perception modules; increasingly semi-custom ASICs (CV8) where the customer defines the spec.</li>
+</ul>
+<p><strong>Verdict on stack position:</strong> a <strong>compute-layer pure-play</strong> with software as a moat-enabler, not a revenue line. It is one layer, not four.</p>
+<h3 id="of-revenue-tied-to-physical-ai">% of revenue tied to Physical AI</h3>
+<p>The company says "the Physical AI markets … represent a vast majority of our total revenue today" (<a href="https://stockanalysis.com/stocks/amba/transcripts/682015-q2-2027/">Q2 FY2027 call</a>). That is true only under a very loose definition. I separate three tiers:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>FY2027E revenue</th>
+<th>%</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1 — autonomy/action loop</strong> (robots, drones, AMRs, ADAS/L2+ domain controllers)</td>
+<td>~$55M</td>
+<td><strong>~12%</strong></td>
+<td>Perceives <em>and</em> acts; autonomous decision</td>
+</tr>
+<tr>
+<td><strong>Tier 2 — physical-world inference, human in the loop</strong> (enterprise/public security, body cams, telematics/ADAS cameras, industrial vision)</td>
+<td>~$250M</td>
+<td><strong>~57%</strong></td>
+<td>Perceives the physical world; a human or simple rule acts</td>
+</tr>
+<tr>
+<td><strong>Tier 3 — consumer imaging</strong> (Insta360-class action/360 cameras, consumer drones, wearables)</td>
+<td>~$135M</td>
+<td><strong>~31%</strong></td>
+<td>AI-assisted capture; not physical AI in any meaningful sense</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~$441M</strong></td>
+<td>100%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Broad Physical-AI purity (Tier 1 + Tier 2) ≈ 70% today. Strict autonomy-linked exposure ≈ 12%.</strong></p>
+<p><strong>Reasoning for the split (my model, not company data):</strong> FY2026 IoT was ~80% of revenue and IoT splits "roughly 50/50" CapEx vs consumer (CFO, Feb 2026) → consumer ≈ 40% of total. I haircut that to ~31% for FY2027 because automotive and enterprise are growing faster than consumer. Automotive is 22% (EE Times). Robotics + drones + industrial: management disclosed <strong>15+ robotic design wins with lifetime revenue &gt;$100M</strong> and 30+ customers in the pipeline (Q1 FY2027); lifetime revenue of $100M spread over a typical 3–4 year life is $25–35M/yr, and drones added a full quarter of production revenue in Q4 FY2026. I use ~9% (~$40M) for robotics/drones/industrial, plus ~3% for the ADAS/autonomy slice of automotive.</p>
+<p><strong>Three years out (FY2030E):</strong> I model revenue ~$660M (~14.5% CAGR, in line with consensus' 14.95% three-year growth forecast). Mix shifts to roughly: security 27%, consumer 16%, automotive 28%, robotics/drones/industrial 20%, edge infrastructure 10%. That gives <strong>broad purity ~80–84%</strong> and <strong>strict autonomy-linked ~20%</strong>. The direction is right; the pace depends almost entirely on robotics, which is currently a $40M business with small, fragmented customers — the CEO himself calls it "autonomous driving seven years ago."</p>
+<h3 id="key-end-markets">Key end markets</h3>
+<table>
+<thead>
+<tr>
+<th>End market</th>
+<th>Exposure today</th>
+<th>Evidence</th>
+<th>My read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Robotics / humanoids</strong></td>
+<td>~5% (incl. AMRs, quadrupeds, fixed automation)</td>
+<td>15+ design wins, &gt;$100M lifetime revenue, 30+ pipeline customers (Q1 FY2027); CV72 quadruped win (Q2 FY2027); "a couple" humanoid wins but "the volume is not really … going to change materially about our financial performance" (CEO, Citi, Sep 2026)</td>
+<td>Real but tiny. Humanoids explicitly immaterial per management.</td>
+</tr>
+<tr>
+<td><strong>ADAS / autonomous driving</strong></td>
+<td>~22% automotive, of which autonomy is a small minority; the bulk is <strong>commercial-vehicle telematics, DMS/CMS and DVRs</strong></td>
+<td>Automotive record in Q1 and Q2 FY2027; "all of it Western" (CEO); $13B opportunity set FY2027–32; Tier-1 relationships with Continental and Bosch; Aurora L4 truck program named</td>
+<td>The $13B number is a bid pipeline, not backlog. No high-volume L2+ OEM win has ever been announced.</td>
+</tr>
+<tr>
+<td><strong>Drones / defence</strong></td>
+<td>~4% (consumer/prosumer drones)</td>
+<td>First full quarter of production drone revenue in Q4 FY2026; Antigravity A1 8K drone on CV5; Aero drones cited in robotic wins</td>
+<td>Growing consumer category. <strong>Defence revenue: not disclosed; I could not verify any material defence program.</strong></td>
+</tr>
+<tr>
+<td><strong>Industrial automation</strong></td>
+<td>~4%</td>
+<td>Warehouse robotics win, AI barcode readers (Hanwha Vision), machine-vision inspection on CV72/N1-655</td>
+<td>Early, fragmented, high-growth off a small base</td>
+</tr>
+<tr>
+<td><strong>Smart infrastructure</strong></td>
+<td>~30% (enterprise/public security — the largest single bucket)</td>
+<td>i-PRO, Axis/Canon, IDIS, IQSIGHT (ex-Bosch), Hanwha Vision, Suprema</td>
+<td>The cash cow. AI analytics attach is real but pricing is competitive and Chinese SoC vendors are aggressive.</td>
+</tr>
+<tr>
+<td><strong>Consumer imaging</strong> (not one of the six physical-AI categories, but AMBA's single largest bucket)</td>
+<td><strong>~31%</strong></td>
+<td>Insta360 (largest end customer), 360/action cameras, high-end handheld; CEO sizes the category at 10–20M units/yr (Citi, Sep 2026)</td>
+<td>The swing factor in the P&amp;L and the least "physical AI" revenue in the company</td>
+</tr>
+<tr>
+<td><strong>Space</strong></td>
+<td><strong>0%</strong></td>
+<td>No product, no disclosed program</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scepticism check.</strong> Ambarella's "full-stack Physical AI platform provider" language (CEO, Sep 2026) is marketing layered on a genuine but narrower asset: a very good low-power vision SoC franchise with an unusually broad customer base (370+ unique customers, 50M+ units shipped — company figures). The Physical-AI <em>narrative</em> is being priced; the Physical-AI <em>revenue</em> is ~12% under a strict definition. Investors should underwrite the security-camera and consumer-camera business they actually have, and treat robotics/edge infrastructure as free options.</p>
+<hr />
+<h2 id="4-competitive-position-moat">4. Competitive position &amp; moat</h2>
+<h3 id="market-position">Market position</h3>
+<ul>
+<li><strong>~50M cumulative AI SoCs shipped</strong> and <strong>370+ unique customers</strong> with products in production (Q2 FY2027 release; Q4 FY2026 call).</li>
+<li><strong>12–15 AI SoCs</strong> spanning ~1 TOPS to "hundreds of TOPS-like" performance, with a claim of up to 100B-parameter support in future parts (Citi, Sep 2026).</li>
+<li><strong>~$1B cumulative edge-AI revenue</strong>, mostly CV2 (management, Feb 2026).</li>
+<li>In security cameras, Ambarella is the reference premium supplier; in consumer action/360 cameras it is the incumbent in the high end (Insta360 is the largest end customer); in automotive it is a <strong>challenger</strong>, not an incumbent.</li>
+</ul>
+<h3 id="the-moat-real-at-the-low-end-thin-at-the-top">The moat: real at the low end, thin at the top</h3>
+<table>
+<thead>
+<tr>
+<th>Source of advantage</th>
+<th>Strength</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Performance per watt</strong></td>
+<td><strong>Strong</strong></td>
+<td>The core, defensible claim. The CEO's framing — customers start on a GPU for generation one, then hit power/thermal walls and move to Ambarella — is credible and is corroborated by design-win patterns in battery-powered devices (body cams, drones, doorbells).</td>
+</tr>
+<tr>
+<td><strong>Cooper unified SDK</strong></td>
+<td><strong>Strong-ish</strong></td>
+<td>One software stack across 12+ SoCs means a customer can port a product up or down the portfolio without a rewrite. This is a genuine switching cost and is why the semi-custom/LTA model works.</td>
+</tr>
+<tr>
+<td><strong>Video/ISP quality</strong></td>
+<td><strong>Strong</strong></td>
+<td>20 years of image-processing IP; AI ISP (neural denoise) is a real differentiator in low light.</td>
+</tr>
+<tr>
+<td><strong>Design-win stickiness</strong></td>
+<td><strong>Medium</strong></td>
+<td>12–18 months to revenue in IoT, 3–4 years in automotive OEM; once designed in, the SoC lives for the product's life. But IoT product life is only 12–24 months — the lock-in expires fast in the biggest segment.</td>
+</tr>
+<tr>
+<td><strong>Scale/cost</strong></td>
+<td><strong>Medium</strong></td>
+<td>Fabless at ~$440M revenue; Samsung gives it leading-edge access that a sub-$500M company would not otherwise get, but it has no cost advantage over Qualcomm or Chinese vendors.</td>
+</tr>
+<tr>
+<td><strong>Pricing power</strong></td>
+<td><strong>Weak</strong></td>
+<td>ASP rises only because die size rises ("it's not that we're going to increase our gross margin" — CEO). Gross margin has drifted from 62.7% (FY2022) to 58.5% TTM.</td>
+</tr>
+<tr>
+<td><strong>Data / network effects</strong></td>
+<td><strong>None</strong></td>
+<td>No proprietary data asset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="competition">Competition</h3>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where they compete</th>
+<th>Threat</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qualcomm</strong></td>
+<td>Edge AI SoCs, AI accelerators, automotive</td>
+<td><strong>High</strong> — the CEO calls Qualcomm "the biggest competitor to us" (Citi, Sep 2026)</td>
+<td>QCOM has more efficient silicon than NVIDIA and is closing on Ambarella's power advantage</td>
+</tr>
+<tr>
+<td><strong>NVIDIA</strong> (Jetson Thor/Orin, IGX)</td>
+<td>Robotics, edge infrastructure, automotive</td>
+<td><strong>High and rising</strong> — but on power efficiency Ambarella wins</td>
+<td>CEO: NVIDIA "can deliver really high performance. That's their strength," but GPU power is "a well-documented problem"</td>
+</tr>
+<tr>
+<td><strong>Chinese SoC vendors</strong> (SigmaStar, Fullhan, Novatek, Ingenic)</td>
+<td>Security cameras, consumer IoT</td>
+<td><strong>High on price</strong>, low on AI performance</td>
+<td>Not named in the 10-K by name, but the 10-K flags Chinese competition and China-for-China localisation</td>
+</tr>
+<tr>
+<td><strong>Synaptics / onsemi</strong></td>
+<td>Low-end edge AI (1–10 TOPS)</td>
+<td><strong>Low-medium</strong> — limited overlap per CEO; now consolidated under onsemi ($5.7B cash deal, revised 1 Oct 2026)</td>
+<td><a href="https://www.eetimes.com/synaptics-acquisition-by-onsemi-affirms-edge-ai-is-for-real/">EE Times</a></td>
+</tr>
+<tr>
+<td><strong>Mobileye / Horizon Robotics</strong></td>
+<td>Automotive ADAS/autonomy</td>
+<td><strong>Medium</strong> — different architecture (Mobileye is a closed system)</td>
+<td>Not a direct SoC competitor for Ambarella's merchant model</td>
+</tr>
+<tr>
+<td><strong>In-house ASICs</strong> (large OEMs, Hanwha previously)</td>
+<td>Security, consumer</td>
+<td><strong>Medium</strong> — Hanwha <em>had</em> its own silicon and chose Ambarella instead, which cuts both ways</td>
+<td>Citi transcript, Sep 2026</td>
+</tr>
+</tbody>
+</table>
+<h3 id="company-specific-questions">Company-specific questions</h3>
+<p><strong>(a) The NXP/M&amp;A process.</strong> Reported 31 Jul 2026 (FT), with "other industry players" possible; Qualcomm reported interested 9 Oct 2026; a "third bidder" reported 16 Oct; NVIDIA reported as a possible third bidder 21 Oct; <strong>exclusive talks with NXP reported 30 Oct 2026</strong>. No 8-K, no confirmation, no disclosed price. The only EDGAR filing dated 30 Oct 2026 was a <strong>Vanguard Portfolio Management Schedule 13G/A</strong> (3,107,820 shares, ~7.0%) — a routine index-holder amendment, not a deal document. The one hard datapoint is the <strong>pre-rumour market cap of ~$3.25B (~$73.6/share)</strong>, before a 16% pop. <strong>OPINION:</strong> a strategic buyer's logic is straightforward — 58% of NXP's semiconductor revenue is automotive (EE Times) and it needs camera-perception silicon plus an edge-AI software stack; Ambarella is the cheapest scaled merchant asset with Samsung 2nm access. A price of 6–7x FY2027 sales ($2.6–3.1B EV, $65–75/share) is the plausible zone, and the FT reported that bids would likely value Ambarella above its pre-rumour market cap.</p>
+<p><strong>(b) China exposure.</strong> Not disclosed as a percentage anymore. Chinese consumer brands (Insta360) are a large share of the consumer bucket, and WT's Taiwan billing obscures the true end-demand geography. Management says automotive demand is "all Western" and that China-for-China localisation is a structural headwind it cannot fix (Citi, Sep 2026).</p>
+<p><strong>(c) The LTAs are the most important new fact.</strong> The Hanwha agreement (&gt;$800M over &gt;10 years, covering physical security, operational automation, life sciences and robotics) is the first of its kind in edge-AI semis and reframes Ambarella from a spot-pricing SoC vendor to a multi-generation platform partner. If two or three more follow, the revenue durability argument changes materially. <strong>But:</strong> the revenue is spread over a decade, back-end loaded, and dependent on Hanwha winning in its own markets.</p>
+<hr />
+<h2 id="5-financials">5. Financials</h2>
+<h3 id="last-8-quarters-usd-millions-except-per-share">Last 8 quarters (USD millions except per share)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Q3 FY25 (Oct'24)</th>
+<th>Q4 FY25 (Jan'25)</th>
+<th>Q1 FY26 (Apr'25)</th>
+<th>Q2 FY26 (Jul'25)</th>
+<th>Q3 FY26 (Oct'25)</th>
+<th>Q4 FY26 (Jan'26)</th>
+<th>Q1 FY27 (Apr'26)</th>
+<th>Q2 FY27 (Jul'26)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>82.65</td>
+<td>84.02</td>
+<td>85.87</td>
+<td>95.51</td>
+<td>108.45</td>
+<td>100.87</td>
+<td>100.36</td>
+<td>108.13</td>
+</tr>
+<tr>
+<td>YoY growth</td>
+<td>+63.4%</td>
+<td>+62.8%</td>
+<td>+57.6%</td>
+<td>+49.9%</td>
+<td>+31.2%</td>
+<td>+20.1%</td>
+<td>+16.9%</td>
+<td>+13.2%</td>
+</tr>
+<tr>
+<td>Gross margin (GAAP)</td>
+<td>60.55%</td>
+<td>59.97%</td>
+<td>60.01%</td>
+<td>58.87%</td>
+<td>59.55%</td>
+<td>58.41%</td>
+<td>58.38%</td>
+<td>57.73%</td>
+</tr>
+<tr>
+<td>Gross margin (non-GAAP)</td>
+<td>62.6%</td>
+<td>62.0%</td>
+<td>61.9%*</td>
+<td>60.5%</td>
+<td>60.9%</td>
+<td>59.8%</td>
+<td>59.9%</td>
+<td>59.3%</td>
+</tr>
+<tr>
+<td>Operating margin (GAAP)</td>
+<td>−30.9%</td>
+<td>−30.2%</td>
+<td>−30.1%</td>
+<td>−23.0%</td>
+<td>−15.0%</td>
+<td>−18.3%</td>
+<td>−19.4%</td>
+<td>−7.5%</td>
+</tr>
+<tr>
+<td>EPS diluted (GAAP)</td>
+<td>−0.58</td>
+<td>−0.48</td>
+<td>−0.58</td>
+<td>−0.47</td>
+<td>−0.35</td>
+<td>−0.38</td>
+<td>−0.41</td>
+<td>−0.15</td>
+</tr>
+<tr>
+<td>EPS diluted (non-GAAP)</td>
+<td>0.11</td>
+<td>0.11</td>
+<td>0.07</td>
+<td>0.15</td>
+<td>0.27</td>
+<td>0.13</td>
+<td>0.11</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>Free cash flow</td>
+<td>4.12</td>
+<td>21.25</td>
+<td>10.24</td>
+<td>1.38</td>
+<td>31.41</td>
+<td>14.97</td>
+<td><strong>−29.58</strong></td>
+<td><strong>−7.08</strong></td>
+</tr>
+<tr>
+<td>SBC ($M)</td>
+<td>26.85</td>
+<td>27.31</td>
+<td>26.13</td>
+<td>25.19</td>
+<td>25.74</td>
+<td>20.98</td>
+<td>21.89</td>
+<td>22.70</td>
+</tr>
+<tr>
+<td>SBC % of revenue</td>
+<td>32.5%</td>
+<td>32.5%</td>
+<td>30.4%</td>
+<td>26.4%</td>
+<td>23.7%</td>
+<td>20.8%</td>
+<td>21.8%</td>
+<td>21.0%</td>
+</tr>
+<tr>
+<td>Cash + investments</td>
+<td>226.5</td>
+<td>250.3</td>
+<td>259.4</td>
+<td>261.2</td>
+<td>295.3</td>
+<td>312.6</td>
+<td>277.8</td>
+<td>272.3</td>
+</tr>
+<tr>
+<td>Total debt</td>
+<td>5.97</td>
+<td>5.27</td>
+<td>4.39</td>
+<td>3.44</td>
+<td>13.65</td>
+<td>13.44</td>
+<td>13.27</td>
+<td>12.64</td>
+</tr>
+</tbody>
+</table>
+<p>* Q1 FY2026 non-GAAP GM derived from the 6-month figure (61.2%) and Q2 (60.5%). Sources: quarterly earnings releases (8-K Ex-99.1), 10-Qs, and <a href="https://stockanalysis.com/stocks/amba/financials/?p=quarterly">stockanalysis.com quarterly financials</a>. SBC from 10-Q Note 11 and 10-K cash-flow statement; Q4 figures derived as FY minus 9M.</p>
+<h3 id="last-3-fiscal-years">Last 3 fiscal years</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FY2024 (Jan'24)</th>
+<th>FY2025 (Jan'25)</th>
+<th>FY2026 (Jan'26)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>226.47</td>
+<td>284.87</td>
+<td>390.70</td>
+</tr>
+<tr>
+<td>YoY growth</td>
+<td>−32.9%</td>
+<td>+25.8%</td>
+<td>+37.2%</td>
+</tr>
+<tr>
+<td>Gross margin (GAAP)</td>
+<td>60.41%</td>
+<td>60.49%</td>
+<td>59.19%</td>
+</tr>
+<tr>
+<td>Gross margin (non-GAAP)</td>
+<td>n/v</td>
+<td>62.7%</td>
+<td>60.7%</td>
+</tr>
+<tr>
+<td>Operating margin (GAAP)</td>
+<td>−68.3%</td>
+<td>−44.4%</td>
+<td>−21.1%</td>
+</tr>
+<tr>
+<td>Net income (GAAP)</td>
+<td>−169.42</td>
+<td>−117.13</td>
+<td>−75.87</td>
+</tr>
+<tr>
+<td>EPS diluted (GAAP)</td>
+<td>−4.25</td>
+<td>−2.84</td>
+<td>−1.78</td>
+</tr>
+<tr>
+<td>EPS diluted (non-GAAP)</td>
+<td>n/v</td>
+<td><strong>−0.16</strong></td>
+<td><strong>+0.62</strong></td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>19.02</td>
+<td>33.84</td>
+<td>73.52</td>
+</tr>
+<tr>
+<td>Free cash flow</td>
+<td>7.05</td>
+<td>23.46</td>
+<td>58.01</td>
+</tr>
+<tr>
+<td>FCF margin</td>
+<td>3.1%</td>
+<td>8.2%</td>
+<td>14.8%</td>
+</tr>
+<tr>
+<td>SBC ($M)</td>
+<td>111.32</td>
+<td>107.80</td>
+<td>98.04</td>
+</tr>
+<tr>
+<td>SBC % of revenue</td>
+<td><strong>49.2%</strong></td>
+<td><strong>37.8%</strong></td>
+<td><strong>25.1%</strong></td>
+</tr>
+<tr>
+<td>Cash + investments</td>
+<td>219.93</td>
+<td>250.27</td>
+<td>312.57</td>
+</tr>
+<tr>
+<td>Total debt</td>
+<td>5.34</td>
+<td>5.27</td>
+<td>13.44</td>
+</tr>
+<tr>
+<td>Diluted shares (M, derived)</td>
+<td>39.9</td>
+<td>41.2</td>
+<td>42.6</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: FY2026 10-K; Q4 FY2026 release; Q3 FY2026 10-Q; stockanalysis.com annual data.</p>
+<h3 id="what-the-numbers-say">What the numbers say</h3>
+<ol>
+<li><strong>The turnaround is real, and it is decelerating.</strong> Revenue compounded 31% a year from FY2024 to FY2026, but growth has fallen from +63% (Q3 FY2025) to +13.2% (Q2 FY2027) as the easy comparisons roll off. Guidance for FY2027 is 10–15%; consensus +12.9%.</li>
+<li><strong>Gross margin is leaking slowly and steadily</strong> (GAAP basis): 62.7% (FY2022) → 60.5% (FY2025) → 59.2% (FY2026) → 57.7% (Q2 FY2027). Non-GAAP tells the same story (62.7% → 60.7% → 59.3%). Mix (more automotive/telematics, more semi-custom), rising wafer and packaging costs and competitive pricing are the causes. Management's long-term target is 59–62% — i.e., <strong>the current level is the bottom of the range, not the middle</strong>.</li>
+<li><strong>Operating leverage is arriving but from a deep hole.</strong> GAAP operating margin improved from −30.9% to −7.5% over eight quarters on roughly flat OpEx ($56–58M/qtr non-GAAP). Every incremental dollar of revenue now drops through at ~59% gross margin. That is the bull case in one sentence.</li>
+<li><strong>The non-GAAP profit is entirely an SBC construct.</strong> Q2 FY2027 non-GAAP net income of $8.2M becomes a GAAP loss of $6.7M after $22.7M of SBC. At 21% of revenue, SBC is roughly equal to the entire non-GAAP operating profit plus change. <strong>On a fully loaded basis the company is still loss-making.</strong></li>
+<li><strong>Cash conversion has broken down.</strong> FY2026 FCF was a healthy $58M (14.8% margin). Then inventory went from 99 days (Jan 2026) to 145 (Apr 2026) to 157 (Jul 2026), and payables fell $26M — producing <strong>−$29.6M FCF in Q1 FY2027 and −$7.1M in Q2</strong>, and TTM FCF of just $9.7M. Management frames the inventory build as "to better service our customers in the face of a number of new product cycles." That may be true; it is also exactly what a company says before a demand air-pocket. <strong>This is the single number I would watch most closely on 24 November.</strong></li>
+<li><strong>Q2 FY2027 contained a $9.0M one-time credit.</strong> R&amp;D fell to $50.6M from $59.7M because Ambarella released a deposit liability after an automotive autonomy customer cancelled a development project. Excluding it, the GAAP operating loss would have been ~$17M, not $8.1M. The non-GAAP numbers exclude it, correctly — but the headline "operating loss halved" is flattered.</li>
+</ol>
+<hr />
+<h2 id="6-balance-sheet-dilution">6. Balance sheet &amp; dilution</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>31 Jul 2026</th>
+<th>31 Jan 2026</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash &amp; equivalents</td>
+<td>101.9</td>
+<td>191.0</td>
+<td></td>
+</tr>
+<tr>
+<td>Marketable debt securities</td>
+<td>170.5</td>
+<td>121.6</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total cash &amp; investments</strong></td>
+<td><strong>272.3</strong></td>
+<td><strong>312.6</strong></td>
+<td>−$40M in six months</td>
+</tr>
+<tr>
+<td>Total debt</td>
+<td>12.6</td>
+<td>13.4</td>
+<td>Finance/lease liabilities. <strong>No funded debt, no convertibles</strong></td>
+</tr>
+<tr>
+<td><strong>Net cash</strong></td>
+<td><strong>259.7</strong></td>
+<td><strong>299.1</strong></td>
+<td>$5.88/share; 9.8% of market cap</td>
+</tr>
+<tr>
+<td>Goodwill</td>
+<td>303.6</td>
+<td>303.6</td>
+<td>From the 2021 Oculii acquisition; no impairment FY2024–26</td>
+</tr>
+<tr>
+<td>Total equity</td>
+<td>620.3</td>
+<td>n/d</td>
+<td>Book value $14.05/share</td>
+</tr>
+<tr>
+<td>Current ratio</td>
+<td>2.85</td>
+<td>n/d</td>
+<td></td>
+</tr>
+<tr>
+<td>Debt/equity</td>
+<td>0.02</td>
+<td>n/d</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Runway:</strong> not a solvency question. $260M of net cash against a ~$230M annual non-GAAP OpEx base and positive (if volatile) operating cash flow gives 3+ years of runway even in a severe downturn, and the company has no debt covenants.</li>
+<li><strong>Convertibles / warrants / ATM:</strong> <strong>none.</strong> The capital structure is clean: 44.14M ordinary shares, 200M authorised, 20M preference shares authorised and <strong>none issued</strong> (10-Q cover).</li>
+<li><strong>Buyback:</strong> a <strong>$50M programme authorised in Q2 FY2027</strong>, valid to 30 Jun 2027, replacing the prior programme. Q1 FY2027 repurchased 47,798 shares for $2.4M at $51.04; <strong>Q2 repurchased nothing.</strong> At 1.5% of market cap the programme is token — it exists to offset dilution, not to return capital.</li>
+<li><strong>Dilution:</strong> shares outstanding 43.31M (31 Jan 2026) → 44.14M (31 Jul 2026), <strong>+1.9% in six months and +3.3% YoY</strong>. SBC of ~$90M/yr against a $2.65B market cap is <strong>~3.4% of equity per year</strong> if unoffset, and the buyback offsets less than half. This is a permanent, structural drag on per-share value and is the main reason GAAP EPS will lag the non-GAAP narrative for years.</li>
+</ul>
+<p><strong>Verdict:</strong> fortress-ish balance sheet, no financing risk, but the equity is being slowly diluted at 3%+ a year while free cash flow is roughly zero. Net cash covers 10% of the market cap — supportive, not transformative.</p>
+<hr />
+<h2 id="7-valuation">7. Valuation</h2>
+<p><strong>Price $60.12 (13 Nov 2026).</strong> Shares 44.14M; market cap $2,653M; net cash $259.7M; <strong>EV $2,393M</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>AMBA</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV/Sales (TTM)</td>
+<td><strong>5.68x</strong></td>
+<td>$2,393M / $417.8M</td>
+</tr>
+<tr>
+<td>EV/Sales (FY2027E)</td>
+<td><strong>5.43x</strong></td>
+<td>$2,393M / $441.1M consensus</td>
+</tr>
+<tr>
+<td>EV/Sales (FY2028E)</td>
+<td>4.84x</td>
+<td>$2,393M / $494.0M consensus</td>
+</tr>
+<tr>
+<td>P/Sales</td>
+<td>6.30x</td>
+<td></td>
+</tr>
+<tr>
+<td>P/E (FY2027E, non-GAAP)</td>
+<td><strong>75.2x</strong></td>
+<td>$0.80 consensus adj. EPS</td>
+</tr>
+<tr>
+<td>P/E (FY2028E, non-GAAP)</td>
+<td>56.7x</td>
+<td>$1.06 consensus</td>
+</tr>
+<tr>
+<td>EV/adj. EBITDA (FY2027E)</td>
+<td>~40x</td>
+<td>~$34M adj. op income + ~$26M D&amp;A</td>
+</tr>
+<tr>
+<td>EV/EBITDA (SBC-inclusive)</td>
+<td><strong>negative</strong></td>
+<td>Adj. op income $34M − SBC ~$90M</td>
+</tr>
+<tr>
+<td>EV/FCF (TTM)</td>
+<td><strong>246x</strong></td>
+<td>$9.7M TTM FCF</td>
+</tr>
+<tr>
+<td>P/FCF</td>
+<td>273x</td>
+<td></td>
+</tr>
+<tr>
+<td>FCF yield</td>
+<td>0.37%</td>
+<td></td>
+</tr>
+<tr>
+<td>P/B</td>
+<td>4.28x</td>
+<td>Book $14.05</td>
+</tr>
+<tr>
+<td>Net cash / market cap</td>
+<td>9.8%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="peer-comparison-all-data-13-nov-2026-stockanalysiscom">Peer comparison (all data 13 Nov 2026, stockanalysis.com)</h3>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Price</th>
+<th>Market cap</th>
+<th>EV/Sales (TTM)</th>
+<th>Rev growth (TTM)</th>
+<th>Gross margin</th>
+<th>FCF margin</th>
+<th>Fwd P/E</th>
+<th>52-wk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ambarella (AMBA)</strong></td>
+<td><strong>$60.12</strong></td>
+<td><strong>$2.65B</strong></td>
+<td><strong>5.68x</strong></td>
+<td><strong>+20.0%</strong></td>
+<td><strong>58.5%</strong></td>
+<td><strong>2.3%</strong></td>
+<td><strong>67.7x¹</strong></td>
+<td><strong>−37%</strong></td>
+</tr>
+<tr>
+<td>NVIDIA (NVDA)</td>
+<td>$162.85</td>
+<td>$3.93T</td>
+<td>12.82x</td>
+<td>+83.4%</td>
+<td>74.7%</td>
+<td>~42%</td>
+<td>13.5x</td>
+<td>−16%</td>
+</tr>
+<tr>
+<td>Qualcomm (QCOM)</td>
+<td>$172.47</td>
+<td>$184.5B</td>
+<td>4.47x</td>
+<td>−2.6%</td>
+<td>53.1%</td>
+<td>20.1%</td>
+<td>18.0x</td>
+<td>−2%</td>
+</tr>
+<tr>
+<td>Mobileye (MBLY)</td>
+<td>$5.56</td>
+<td>$4.73B</td>
+<td>1.63x</td>
+<td>+3.4%</td>
+<td>48.6%</td>
+<td>15.8%</td>
+<td>12.9x</td>
+<td>−55%</td>
+</tr>
+<tr>
+<td>Synaptics (SYNA)</td>
+<td>$118.14</td>
+<td>$4.69B</td>
+<td>4.35x</td>
+<td>+8.1%</td>
+<td>45.9%</td>
+<td>~1.4%</td>
+<td>22.0x</td>
+<td>+75%</td>
+</tr>
+<tr>
+<td>indie Semiconductor (INDI)</td>
+<td>$2.10</td>
+<td>$0.51B</td>
+<td>3.26x</td>
+<td>+14.0%</td>
+<td>−28.4%</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>−51%</td>
+</tr>
+</tbody>
+</table>
+<p>¹ StockAnalysis's "forward P/E" is next-twelve-months; on FY2027E consensus EPS of $0.80 the multiple is 75.2x. All other rows use the same NTM convention, so the comparison is internally consistent.</p>
+<p><strong>Reading the table.</strong> Ambarella carries the <strong>second-highest EV/sales in the peer set</strong> (after NVIDIA) and also the <strong>second-highest growth</strong> (after NVIDIA) — so the multiple is internally consistent rather than an anomaly. On growth-adjusted terms it sits mid-pack: EV/sales ÷ TTM growth = 0.28 for AMBA, 0.15 for NVDA, 0.54 for SYNA, 0.23 for INDI, 0.48 for MBLY. The problem is not the relative multiple. It is that AMBA is <strong>unprofitable on a GAAP basis with ~zero free cash flow</strong>, whereas QCOM earns a 20% FCF margin and NVDA ~42%. You are paying a growth multiple for revenue that does not yet convert into cash.</p>
+<p><strong>The strategic-comparable anchor is the most useful one.</strong> onsemi agreed to buy Synaptics for <strong>$5.7B all-cash</strong> (revised 1 Oct 2026; originally $7B all-stock on 25 Jun 2026) — roughly <strong>~5.2x EV/sales</strong> (equity $5.7B plus ~$0.51B net debt) for $1.2B of revenue growing 8% at a 46% gross margin with negative operating income. Ambarella grows faster (13–20%) at a higher gross margin (59%). Applying 5–7x FY2027 sales gives <strong>$2.2–3.1B EV, or $55–75/share</strong> — bracketing today's price. <strong>The stock is already trading at a strategic-buyer multiple.</strong></p>
+<h3 id="historical-multiple-range-own-history">Historical multiple range (own history)</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>P/S</th>
+<th>Fwd P/E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022 (Jan'22)</td>
+<td>15.63x</td>
+<td>76.2x</td>
+</tr>
+<tr>
+<td>FY2023 (Jan'23)</td>
+<td>10.31x</td>
+<td>171.8x</td>
+</tr>
+<tr>
+<td>FY2024 (Jan'24)</td>
+<td>9.34x</td>
+<td>179.5x</td>
+</tr>
+<tr>
+<td>FY2025 (Jan'25)</td>
+<td>11.23x</td>
+<td>179.5x</td>
+</tr>
+<tr>
+<td>FY2026 (Jan'26)</td>
+<td>7.06x</td>
+<td>113.8x</td>
+</tr>
+<tr>
+<td><strong>Now (Nov'26)</strong></td>
+<td><strong>6.30x</strong></td>
+<td><strong>67.7x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The stock has de-rated from ~15.6x sales at the 2022 peak to 6.3x today, despite revenue nearly doubling from $226M to $418M. <strong>That de-rating is the whole story of the share price</strong>: the business grew, the multiple halved twice. At 6.3x sales AMBA is at the low end of its own five-year range — but the range itself was built during a zero-rate, "AI-for-everything" period. <strong>OPINION:</strong> 5.5–6.5x forward sales is a fair clearing level for a 13% grower with 59% gross margins and no FCF; the upside case is a return to 7–8x, not to 10x.</p>
+<hr />
+<h2 id="8-catalysts-next-12-months">8. Catalysts (next 12 months)</h2>
+<table>
+<thead>
+<tr>
+<th>Date / window</th>
+<th>Catalyst</th>
+<th>What to watch</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>24 Nov 2026</strong></td>
+<td><strong>Q3 FY2027 results</strong> (confirmed)</td>
+<td>Q3 guide is $115–124M (+6–14% YoY), GM 59–60%, OpEx $56.5–59.5M. Watch (i) Q4 guide, (ii) inventory days, (iii) whether the memory shortage is hitting customer volumes, (iv) any comment on the NXP process</td>
+<td><strong>Very high</strong> — 11 days away</td>
+</tr>
+<tr>
+<td>Any time</td>
+<td><strong>NXP / third-party bid</strong></td>
+<td>An 8-K with a definitive merger agreement; deal price per share; regulatory path (China SAMR is the obvious risk for NXP)</td>
+<td><strong>Very high</strong>, two-sided</td>
+</tr>
+<tr>
+<td>Dec 2026</td>
+<td>Semi-sector sentiment / AI capex wobble</td>
+<td>SOXX is 32% off its 52-week high; AMBA's beta is 2.36</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Jan 2027</td>
+<td><strong>CES 2027</strong> product briefing</td>
+<td>CV8/2nm details, X7 design wins, robotics reference platforms</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Feb 2027</td>
+<td><strong>Q4 FY2027 results + FY2028 guidance</strong></td>
+<td>First full-year guide off a 2nm product; LTA revenue start</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>H1 FY2028 (Feb–Jul 2027)</strong></td>
+<td><strong>CV8 2nm production start</strong></td>
+<td>Yield, customer name, ASP uplift vs the $15 corporate average</td>
+<td><strong>High</strong> — the proof point for the semi-custom/LTA model</td>
+</tr>
+<tr>
+<td>Through FY2027</td>
+<td>CV7 full production</td>
+<td>Volume ramp of the 5nm transformer part</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Through 2027</td>
+<td>Hanwha LTA first material revenue; Macnica/Capgemini channel</td>
+<td>Management guided "meaningful revenue in 2–3 years" — early proof would re-rate the durability argument</td>
+<td>Medium-high</td>
+</tr>
+<tr>
+<td>Mar 2027</td>
+<td>Embedded World / ISC West</td>
+<td>New ISV partners, edge-infrastructure logos</td>
+<td>Low-medium</td>
+</tr>
+<tr>
+<td>Any time</td>
+<td>Additional LTA announcements</td>
+<td>A second $500M+ multi-year agreement would be transformative</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Ongoing</td>
+<td>Robotics design-win conversion</td>
+<td>15+ wins → production revenue; any named humanoid program</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>—</td>
+<td><strong>Index changes / lock-ups</strong></td>
+<td><strong>None identified.</strong> Ambarella has been listed since 2012, so there is no IPO lock-up; no index add/delete is pending and the free float is 95.5%</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-risks-ranked-by-probability-impact">9. Risks (ranked by probability × impact)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Prob.</th>
+<th>Impact</th>
+<th>Score</th>
+<th>Evidence / comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>NXP talks collapse and no bid materialises</strong></td>
+<td>Medium-high (55%)</td>
+<td>Very high</td>
+<td><strong>9</strong></td>
+<td>The stock is 18% below the pre-rumour price; a clean "no deal" takes it back toward $45–50. Reported exclusivity (30 Oct) raises the near-term probability of a resolution but not necessarily a deal.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Multiple compression in a semi downturn</strong></td>
+<td>High (60%)</td>
+<td>High</td>
+<td><strong>8</strong></td>
+<td>Beta 2.36; SOXX −32% from its high; AMBA at 75x FY2027 adjusted EPS has no valuation cushion if growth slips below 10%.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Memory shortage cuts customer volumes in Q4 FY2027 / H1 FY2028</strong></td>
+<td>Medium-high (55%)</td>
+<td>Medium-high</td>
+<td><strong>7</strong></td>
+<td>Management flagged it explicitly: "In Q4, we continue to talk to customers to make sure we can secure enough memory." Memory does <strong>not</strong> hit Ambarella's gross margin (it doesn't buy memory) — it hits unit volumes.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Customer concentration</strong></td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td><strong>7</strong></td>
+<td>WT = 70% of FY2026 revenue; top-10 end customers = 67%; largest end customer is a consumer camera brand (Insta360). A single consumer product cycle or a channel change is a $30–50M revenue event.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Consumer/action-camera cyclicality</strong></td>
+<td>Medium-high (55%)</td>
+<td>Medium</td>
+<td><strong>6</strong></td>
+<td>~30% of revenue is consumer imaging, exposed to Insta360/DJI/GoPro product cycles and to Chinese consumer demand. Q1 FY2027 saw a "double-digit sequential decline in consumer IoT."</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Competitive pressure from Qualcomm/NVIDIA and Chinese SoC vendors</strong></td>
+<td>High (70%)</td>
+<td>Medium</td>
+<td><strong>6</strong></td>
+<td>Qualcomm is the CEO's own "biggest competitor"; Chinese vendors compress security-camera pricing. Gross margin has already fallen 420bp in four years.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Negative free cash flow persists</strong></td>
+<td>Medium (45%)</td>
+<td>Medium</td>
+<td><strong>6</strong></td>
+<td>−$36.7M of FCF in H1 FY2027; inventory at 157 days; consensus FY2027 FCF ≈ zero. A second year of cash burn would undermine the "self-funding growth" story.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Dilution</strong></td>
+<td>High (already occurring)</td>
+<td>Low-medium</td>
+<td><strong>5</strong></td>
+<td>SBC 21% of revenue; shares +3.3% YoY; buyback offsets less than half.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Execution on 2nm CV8 at Samsung</strong></td>
+<td>Medium (35%)</td>
+<td>Medium-high</td>
+<td><strong>6</strong></td>
+<td>First 2nm product, first semi-custom ASIC, single foundry. A slip pushes the LTA revenue model right by a year.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>China / Taiwan geopolitics and tariffs</strong></td>
+<td>Medium (30%)</td>
+<td>Medium</td>
+<td><strong>5</strong></td>
+<td>70% of revenue bills through Taiwan; consumer end-demand is Chinese; management says the environment is "not getting worse or improving."</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>"Physical AI" narrative de-rates</strong></td>
+<td>Medium (40%)</td>
+<td>Medium</td>
+<td><strong>5</strong></td>
+<td>If robotics stays at ~5% of revenue for another two years, the platform premium erodes and AMBA re-rates toward a cyclical semi multiple (3–4x sales).</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Governance / insider selling</strong></td>
+<td>Low-medium</td>
+<td>Low</td>
+<td><strong>3</strong></td>
+<td>CEO sold $5.2M in six months with no open-market buys by anyone. The sales come in small, regular tranches consistent with a pre-set plan, but I did not read the 10b5-1 footnotes; optically poor either way at $90.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-ownership-sentiment">10. Ownership &amp; sentiment</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Date / source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Institutional ownership</td>
+<td><strong>81.76% of shares out</strong></td>
+<td>stockanalysis.com, 13 Nov 2026</td>
+</tr>
+<tr>
+<td>Insider ownership</td>
+<td><strong>4.53%</strong></td>
+<td>same</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>42.14M shares (95.5% of shares out)</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Short interest</td>
+<td><strong>4.65M shares = 10.54% of shares out, 11.04% of float, 3.22 days to cover</strong> (prior month 4.72M)</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Analyst consensus</td>
+<td><strong>Buy</strong> (4 Strong Buy, 2 Buy, 8 Hold, 0 Sell = 14 analysts)</td>
+<td>S&amp;P Global via stockanalysis, Nov 2026</td>
+</tr>
+<tr>
+<td>Price target</td>
+<td><strong>Average $86.64; median $81; range $65–$120</strong> (last updated 18 Sep 2026)</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Recent actions</td>
+<td>Morgan Stanley Buy $96 (18 Sep); Northland Buy $101 (4 Sep); Susquehanna Buy $110; Rosenblatt Buy $120; Needham Buy $100; Stifel Buy $106→$90; Roth MKM Hold $90→$65 (4 Sep); Oppenheimer Hold (4 Sep)</td>
+<td><a href="https://stockanalysis.com/stocks/amba/ratings/">ratings</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Insider transactions, last 6 months (Form 4s, CIK 1280263, filed 13 May–13 Nov 2026):</strong></p>
+<ul>
+<li><strong>Open-market sales: 20 transactions, $8.65M total.</strong></li>
+<li>Fermi Wang (CEO): 6 sales totalling <strong>$5.24M</strong> — 32,500 shares at $90.38–92.05 (26 May), 16,250 at $90.08 (1 Jul), 6,086 at $64.83 (17 Sep).</li>
+<li>Ju Chi-Hong (SVP Systems): $1.16M across 3 sales ($67.87–88.84).</li>
+<li>Chen Yun-Lung (VP Business Development): $1.13M across 2 sales.</li>
+<li>John Young (CFO): $0.71M across 5 sales.</li>
+<li>Lee Chan W (COO): $0.39M across 2 sales.</li>
+<li>Christopher Paisley (director): 500 shares, $0.05M.</li>
+<li><strong>Open-market purchases: zero.</strong></li>
+<li><strong>Other:</strong> a 10,000-share gift by the CEO (17 Jun); 3,151-share RSU grants to each of seven directors (8 Sep) — compensation, not conviction.</li>
+</ul>
+<p><strong>Read:</strong> the stock has a <strong>crowded-enough short at 11% of float</strong> and a <strong>sell-side that is 43% Buy with an $86.64 average target</strong> — a target that is 44% above the price and, notably, was last refreshed on 18 September, i.e. <strong>before</strong> the October deal reports and the November sell-off. The analyst targets are stale and the insider signal is unambiguously negative: management sold heavily into the May–July strength at $88–92 and has not bought a share. <strong>OPINION:</strong> the combination of a stale bull consensus, a 44% upside target and 11% short interest is a recipe for a violent move on 24 November in either direction.</p>
+<hr />
+<h2 id="11-technical-snapshot-as-of-13-nov-2026">11. Technical snapshot (as of 13 Nov 2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price</td>
+<td>$60.12</td>
+</tr>
+<tr>
+<td>50-day MA</td>
+<td><strong>$64.96</strong> (price 7.4% below)</td>
+</tr>
+<tr>
+<td>200-day MA</td>
+<td><strong>$67.14</strong> (price 10.5% below)</td>
+</tr>
+<tr>
+<td>52-week range</td>
+<td><strong>$48.30 – $96.36</strong> (38% below the high, 24% above the low)</td>
+</tr>
+<tr>
+<td>RSI (14)</td>
+<td>43.96 — neutral, no oversold signal</td>
+</tr>
+<tr>
+<td>20-day average volume</td>
+<td>1.41M shares (~$85M/day)</td>
+</tr>
+<tr>
+<td>Beta (5Y)</td>
+<td><strong>2.36</strong></td>
+</tr>
+<tr>
+<td>52-week change</td>
+<td><strong>−37.2%</strong></td>
+</tr>
+<tr>
+<td>YTD change</td>
+<td><strong>−15.1%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relative strength.</strong> AMBA has underperformed comprehensively. <strong>SOXX is $149.40, 32% below its 52-week high of $218.65, yet +49.6% on a one-year total-return basis. QQQ is $679.89, 11% below its high, +10.0% over one year.</strong> AMBA's −37% against SOXX's +50% is roughly <strong>87 percentage points of underperformance</strong> in twelve months — the stock has missed the entire 2026 semiconductor rally despite 20% revenue growth. Both moving averages are above the price and declining; the stock is in a lower-highs downtrend since the November 2025 peak. The levels that matter are <strong>$48.30</strong> (52-week low, and roughly the standalone no-deal value) and <strong>$67</strong> (200-day), a reclaim of which would be the first evidence of a trend change.</p>
+<hr />
+<h2 id="12-scenarios-1224-months">12. Scenarios (12–24 months)</h2>
+<p>All scenarios use 44.6M diluted shares and current net cash, grown modestly for FCF. "Implied price" = (EV + net cash) / diluted shares. Revenue and margin assumptions are mine unless labelled consensus.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Bear (30%)</strong></th>
+<th><strong>Base (45%)</strong></th>
+<th><strong>Bull (25%)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assumptions</strong></td>
+<td>NXP walks in Q1 2027; memory shortage cuts Q4 FY2027 and H1 FY2028 volumes; consumer action-cam demand softens; robotics stays &lt;10%; FY2028 revenue $460M; non-GAAP op margin 5%; multiple compresses to 3.75x</td>
+<td>No deal, but execution holds: FY2028 revenue $495M (+12%, consensus); non-GAAP op margin 9%; CV8 ships in H1 FY2028; one more LTA; multiple re-rates modestly to 5.75x</td>
+<td>NXP (or a rival) acquires at ~$86/share, or standalone re-rates to 7.0x FY2028 sales on robotics/auto design-win conversion and a second large LTA</td>
+</tr>
+<tr>
+<td>FY2028 revenue</td>
+<td>$460M</td>
+<td>$495M</td>
+<td>$520M</td>
+</tr>
+<tr>
+<td>Non-GAAP op margin</td>
+<td>5%</td>
+<td>9%</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>EV/Sales applied</td>
+<td>3.75x</td>
+<td>5.75x</td>
+<td>7.0x</td>
+</tr>
+<tr>
+<td>Implied EV</td>
+<td>$1.73B</td>
+<td>$2.85B</td>
+<td>$3.64B</td>
+</tr>
+<tr>
+<td>+ net cash</td>
+<td>$0.30B</td>
+<td>$0.33B</td>
+<td>$0.36B</td>
+</tr>
+<tr>
+<td><strong>Implied price</strong></td>
+<td><strong>$45.40</strong></td>
+<td><strong>$71.20</strong></td>
+<td><strong>$89.70</strong></td>
+</tr>
+<tr>
+<td>Upside/downside</td>
+<td>−24%</td>
+<td>+19%</td>
+<td>+49%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Probability-weighted value:</strong> 0.30 × $45.40 + 0.45 × $71.20 + 0.25 × $89.70 = $13.62 + $32.04 + $22.43 = <strong>$68.09 (+13% vs $60.12).</strong></p>
+<p><strong>Cross-check on the M&amp;A path.</strong> If I instead price a 55% probability of a deal at $78 (6.9x FY2028 sales) and a 45% probability of standalone value at $52 (4.6x sales), I get <strong>$66.30</strong> — within 3% of the scenario output. Two independent methods land at <strong>$66–68</strong>, i.e. <strong>10–13% upside</strong>. That is not enough asymmetry for a Bullish rating given a 30% chance of a 24% drawdown.</p>
+<p><strong>On a 24-month view</strong> the base case adds the CV8/2nm revenue and a second LTA into the multiple: 6.0x FY2029E sales of ~$560M = $3.36B EV + $0.40B cash = $3.76B = <strong>$84/share</strong>. The bear case has a hard floor around $40–45: net cash is $5.88/share and the franchise would still be strategically valuable to NXP or Qualcomm.</p>
+<hr />
+<h2 id="13-physical-ai-scorecard">13. Physical AI scorecard</h2>
+<p>Weights are fixed across the watchlist for comparability: <strong>Purity 20% · Growth 15% · Profitability 15% · Balance sheet 10% · Moat 15% · Valuation 15% · Management/execution 10%.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1–10)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical-AI purity</strong></td>
+<td><strong>6</strong></td>
+<td>~70% of revenue is AI inference silicon in machines that perceive the physical world, but only <strong>~12%</strong> is autonomy-linked (robots, drones, ADAS domain controllers). ~31% is consumer imaging. No data or software revenue.</td>
+</tr>
+<tr>
+<td><strong>Growth</strong></td>
+<td><strong>7</strong></td>
+<td>+37% FY2026, +20% TTM, +13–15% FY2027E, 14.95% three-year consensus. Genuine, broad-based (IoT + auto + robotics) — but decelerating fast and off a small base.</td>
+</tr>
+<tr>
+<td><strong>Profitability</strong></td>
+<td><strong>3</strong></td>
+<td>59% gross margin is good; GAAP operating margin is −7.5% (Q2) and −14.9% (TTM); SBC is 21% of revenue; FCF margin 2.3%. Non-GAAP profitability exists only because SBC is excluded.</td>
+</tr>
+<tr>
+<td><strong>Balance sheet</strong></td>
+<td><strong>9</strong></td>
+<td>$259.7M net cash, zero funded debt, no convertibles, 2.85x current ratio, Altman Z 11.65. Only knock: goodwill $304M and a working-capital build.</td>
+</tr>
+<tr>
+<td><strong>Moat</strong></td>
+<td><strong>6</strong></td>
+<td>Performance-per-watt leadership, a genuinely sticky SDK, 50M units and 370+ customers are real. But no pricing power (GM falling), no data asset, a consumer OEM as the largest customer, and Qualcomm/NVIDIA above it.</td>
+</tr>
+<tr>
+<td><strong>Valuation</strong></td>
+<td><strong>4</strong></td>
+<td>5.4x FY2027E EV/sales, 75x adjusted P/E, 246x EV/FCF for 13% growth and negative FCF. Cheap versus its own history (6.3x vs 9–15x) and roughly mid-pack on growth-adjusted EV/sales, but expensive in absolute cash terms. The takeover option is the only real support.</td>
+</tr>
+<tr>
+<td><strong>Management / execution</strong></td>
+<td><strong>6</strong></td>
+<td>Founder-CEO with 22 years at the wheel; executed a genuine pivot from video processors to edge AI and beat guidance through FY2026. But the FY2024 collapse (−33% revenue) destroyed credibility, SBC remains egregious at 21% of revenue, the "Physical AI" narrative outruns the numbers, and insiders are net sellers.</td>
+</tr>
+<tr>
+<td><strong>Weighted total</strong></td>
+<td><strong>5.70 / 10</strong></td>
+<td>(6×0.20)=1.20 + (7×0.15)=1.05 + (3×0.15)=0.45 + (9×0.10)=0.90 + (6×0.15)=0.90 + (4×0.15)=0.60 + (6×0.10)=0.60 = <strong>5.70</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>The scorecard measures Physical-AI quality and valuation support, not expected 12-month return. AMBA scores well on balance sheet and growth, poorly on profitability and valuation — which is precisely why the stock is stuck between a strategic bid and a 75x earnings multiple.</em></p>
+<hr />
+<p><strong>Normalised score: 57/100</strong> (5.70/10 weighted on the scorecard above).</p>
+<hr />
+<h2 id="14-what-would-change-my-mind">14. What would change my mind</h2>
+<p><strong>Bullish signals (would move me to Buy):</strong>
+1. <strong>A definitive merger agreement at ≥$78/share</strong> (≥6.9x FY2028 sales) with a credible regulatory path. That is the cleanest exit and would validate the strategic value of the franchise.
+2. <strong>A second large LTA</strong> of ≥$500M over 5+ years with a Western OEM or Tier-1, proving Hanwha is a template rather than a one-off. This is the single most valuable non-M&amp;A development.
+3. <strong>Q3 FY2027 beat with a Q4 guide above $120M AND inventory days falling below 130.</strong> That would show the working-capital build was demand-driven, not a channel stuff, and would restore the FCF story.
+4. <strong>A named high-volume L2+ automotive OEM win.</strong> Management has talked about this "wildcard" for years; a $200M+ lifetime design win at a Western OEM would move automotive from 22% to 30%+ of revenue and lift the mix.
+5. <strong>Robotics/drones revenue disclosed above 15% of revenue</strong> with a named humanoid or AMR program in production.</p>
+<p><strong>Bearish signals (would move me to Sell):</strong>
+1. <strong>NXP formally walks away</strong> (or the exclusivity lapses with no deal) — the stock loses its floor and re-tests $48.
+2. <strong>FY2028 guidance below 10% growth</strong> or a Q4 FY2027 guide implying a sequential decline beyond normal seasonality. At 75x earnings there is no room for a growth scare.
+3. <strong>Inventory days above 170 with another negative FCF quarter.</strong> Two consecutive years of cash burn in a "growth" story is a de-rating event.
+4. <strong>Gross margin below 58%</strong> on a non-GAAP basis — that would break the 59–62% target and signal that semi-custom/automotive mix is structurally dilutive.
+5. <strong>A large customer loss or a disclosed channel change at WT/Insta360</strong>, or evidence that Chinese SoC vendors are taking the enterprise-security socket.</p>
+<hr />
+<h3 id="entry-zones-invalidation-and-position-size">Entry zones, invalidation and position size</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Price</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggressive</td>
+<td>$55–58</td>
+<td>4.7–5.0x FY2028E sales; above the 52-week low</td>
+</tr>
+<tr>
+<td>Ideal</td>
+<td>$48–50</td>
+<td>4.0–4.2x FY2028E sales; at the $48.30 low</td>
+</tr>
+<tr>
+<td>Margin of safety</td>
+<td>$42–45</td>
+<td>3.5–3.8x FY2028E sales; near the bear case</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invalidation:</strong> NXP walks and a weekly close below $48.30; or Q3 FY2027 revenue below $100M. <strong>Size:</strong> 1–1.5%; the M&amp;A outcome is binary.</p>
+<hr />
+<h2 id="15-sources">15. Sources</h2>
+<p>All accessed 13 November 2026 unless otherwise noted. Primary filings are SEC EDGAR, CIK 0001280263.</p>
+<ol>
+<li>Ambarella, <strong>Q2 FY2027 earnings release</strong> (3 Sep 2026), Form 8-K Ex-99.1 — https://www.sec.gov/Archives/edgar/data/1280263/000119312526381923/d88952dex991.htm</li>
+<li>Ambarella, <strong>Form 10-Q for the quarter ended 31 Jul 2026</strong> (filed 4 Sep 2026) — https://www.sec.gov/Archives/edgar/data/1280263/000119312526383365/amba-20260731.htm</li>
+<li>Ambarella, <strong>Form 10-K for FY2026</strong> (year ended 31 Jan 2026; filed 23 Mar 2026) — https://www.sec.gov/Archives/edgar/data/1280263/000119312526119321/amba-20260131.htm</li>
+<li>Ambarella, <strong>Q3 FY2026 earnings release</strong> (25 Nov 2025), Form 8-K Ex-99.1 — https://www.sec.gov/Archives/edgar/data/1280263/000119312525297233/d70593dex991.htm</li>
+<li>Ambarella, <strong>Q4 &amp; FY2026 earnings release</strong> (26 Feb 2026), Form 8-K Ex-99.1 — https://www.sec.gov/Archives/edgar/data/1280263/000119312526076823/d108529dex991.htm</li>
+<li>Ambarella, <strong>Form 10-Q for the quarter ended 31 Oct 2025</strong> (filed 4 Dec 2025) — https://www.sec.gov/Archives/edgar/data/1280263/000119312525307917/amba-20251031.htm</li>
+<li>Ambarella <strong>Q2 FY2027 earnings call transcript</strong> (3 Sep 2026) — https://stockanalysis.com/stocks/amba/transcripts/682015-q2-2027/</li>
+<li>Ambarella <strong>Q1 FY2027 earnings call transcript</strong> (28 May 2026) — https://stockanalysis.com/stocks/amba/transcripts/572341-q1-2027/</li>
+<li>Ambarella <strong>Q4 FY2026 earnings call transcript</strong> (26 Feb 2026) — https://stockanalysis.com/stocks/amba/transcripts/415683-q4-2026/</li>
+<li>Ambarella at <strong>Citi's 2026 Global TMT Conference, transcript</strong> (9 Sep 2026) — https://stockanalysis.com/stocks/amba/transcripts/725745-citi-s-2026-global-tmt-conference/</li>
+<li>StockAnalysis.com — <strong>AMBA statistics</strong> (price, market cap, EV, short interest, moving averages, ownership) — https://stockanalysis.com/stocks/amba/statistics/</li>
+<li>StockAnalysis.com — <strong>AMBA quarterly financials</strong> — https://stockanalysis.com/stocks/amba/financials/?p=quarterly</li>
+<li>StockAnalysis.com — <strong>AMBA annual financials and ratios</strong> — https://stockanalysis.com/stocks/amba/financials/</li>
+<li>StockAnalysis.com — <strong>AMBA analyst forecast and price targets</strong> — https://stockanalysis.com/stocks/amba/forecast/</li>
+<li>StockAnalysis.com — <strong>AMBA analyst ratings history</strong> — https://stockanalysis.com/stocks/amba/ratings/</li>
+<li>StockAnalysis.com — <strong>AMBA revenue history and geography</strong> — https://stockanalysis.com/stocks/amba/revenue/</li>
+<li>StockAnalysis.com — <strong>AMBA daily price history</strong> (used for the post-rumour price path) — https://stockanalysis.com/stocks/amba/history/</li>
+<li>SEC EDGAR — <strong>Form 4 filings</strong> by Wang, Young, Ju, Lee, Chen and Paisley, filed 28 May–28 Sep 2026 (24 filings parsed) — https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001280263&amp;type=4</li>
+<li>SiliconANGLE — <strong>"NXP reportedly in talks to acquire vehicle chip supplier Ambarella"</strong> (31 Jul 2026), citing the FT — https://www.siliconangle.com/2026/07/31/nxp-reportedly-talks-acquire-vehicle-chip-supplier-ambarella/</li>
+<li>EE Times — <strong>"NXP Eying Ambarella: Is It About Automotive or Edge AI?"</strong> (11 Nov 2026) — https://www.eetimes.com/nxp-eying-ambarella-is-it-about-automotive-or-edge-ai/</li>
+<li>The Fly / Seeking Alpha / TradingView / GuruFocus — <strong>"Ambarella in exclusive talks with NXP Semiconductors — report"</strong> (30 Oct 2026). <strong>Headline verified via Google News; full article text was paywalled and could not be read.</strong> — https://www.tipranks.com/news/the-fly/ambarella-takeover-rumor-highlighted-in-betaville-blog-thefly-news-3</li>
+<li>EE Times — <strong>"Synaptics Acquisition by Onsemi Affirms Edge AI Is for Real"</strong> (26 Jun 2026); Reuters/Quartz on the revised $5.7B all-cash terms (1 Oct 2026) — https://www.eetimes.com/synaptics-acquisition-by-onsemi-affirms-edge-ai-is-for-real/</li>
+<li>GlobeNewswire — <strong>"Ambarella Announces Third Quarter Fiscal Year 2027 Earnings Conference Call to be Held November 24, 2026"</strong> (5 Nov 2026) — https://www.globenewswire.com/news-release/2026/11/06/3397291/23306/en/ambarella-announces-third-quarter-fiscal-year-2027-earnings-conference-call-to-be-held-november-24-2026.html</li>
+<li>StockAnalysis.com — <strong>SOXX ETF</strong> (52-week range, performance) — https://stockanalysis.com/etf/soxx/ ; <strong>QQQ ETF</strong> — https://stockanalysis.com/etf/qqq/</li>
+<li>StockAnalysis.com — <strong>peer statistics</strong>: NVDA, QCOM, MBLY, SYNA, INDI — https://stockanalysis.com/stocks/nvda/statistics/ (and equivalents)</li>
+</ol>
+<h3 id="verification-flags">Verification flags</h3>
+<ul>
+<li><strong>The NXP exclusive-talks report is unconfirmed.</strong> No 8-K, no press release, no merger agreement and no comment from either company as of 13 Nov 2026. The 31 Jul FT report is corroborated by Reuters and SiliconANGLE; the 30 Oct "exclusive talks" story is headline-verified only. <strong>Do not treat the deal as fact.</strong></li>
+<li><strong>The 22% automotive split is a third-party figure</strong> (EE Times, 11 Nov 2026). Ambarella stopped disclosing the split when it moved to a single reporting segment in FY2026; the company's own last public figure was "IoT ~80% of FY2026 revenue" (Q4 FY2026 call), which implies ~20% automotive. The two are consistent.</li>
+<li><strong>The Insta360 end-customer figure is FY2026 only</strong> and comes from the 10-K's customer-concentration discussion; it is an end-customer attribution made by the company, not a filed percentage.</li>
+<li><strong>My FY2027E end-market revenue split (§3) and the FY2030E mix are my model</strong>, built from disclosed percentages and management commentary. They are not company data and should be treated as estimates with ±5pt error bars.</li>
+<li><strong>The $13B automotive "opportunity" and the $22.9B SAM are management's own forward-looking estimates</strong>, not backlog. The Hanwha $800M LTA is contractual but its timing and recognition profile are not disclosed.</li>
+<li><strong>The 2nm/Samsung exclusivity claim</strong> ("the only one exclusive with Samsung") is the CEO's statement on the Q1 FY2027 call; I did not independently verify it against Samsung disclosures.</li>
+<li><strong>SBC for Q4 FY2025 and Q4 FY2026 is derived</strong> as the fiscal-year total minus the nine-month total from the respective 10-Qs.</li>
+<li><strong>FY2024 non-GAAP EPS and non-GAAP gross margin are marked n/v</strong> — the FY2024 release was not retrieved.</li>
+<li><strong>Free cash flow is defined as operating cash flow minus capex</strong> (tangible and intangible).</li>
+</ul>
+<p><em>This is research, not financial advice. No position-sizing recommendations are made.</em></p>
+</div>
+</body></html>

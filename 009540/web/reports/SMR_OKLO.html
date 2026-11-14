@@ -1,0 +1,1870 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMR/OKLO · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>SMR_OKLO · 2026-10-14</span></div>
+<div class="wrap">
+<h1 id="nuscale-power-nyse-smr-vs-oklo-inc-nyse-oklo-independent-deep-dive-equity-research">NuScale Power (NYSE: SMR) vs Oklo Inc. (NYSE: OKLO) — Independent Deep-Dive Equity Research</h1>
+<p><strong>Analysis date: 14 October 2026</strong> · Market-data timestamp: 2026-10-14 ~15:50–16:05 UTC (intraday, US market open) · Data cutoff: SEC filings through 2026-10-14; price series through 2026-10-13 close.</p>
+<p><strong>Author stance:</strong> institutional-style, skeptical, no position in either security. This is research, not investment advice. No rating is issued as a single word; §7 and §11 state the evidence and assumptions under which different investment conclusions (own it / avoid it / size it as a lottery ticket) would each be justified.</p>
+<h2 id="how-to-read-this-report">How to read this report</h2>
+<p><strong>Evidence tags</strong> (used inline; per the requester's §13 standard): [VF] = verified fact (SEC filing, regulator, or exchange/API data); [MC] = management claim or guidance; [3P] = third-party estimate (sell-side, vendor data, reputable press); [AA] = analyst assumption (the author's own modeled input — never presented as fact); [SP] = speculative possibility. Source tiers in the numbered source list: <strong>T1</strong> primary (SEC/NRC/DOE/exchange data), <strong>T2</strong> reputable secondary reporting, <strong>T3</strong> aggregator/vendor (used only for market-data cross-checks and clearly flagged).</p>
+<p><strong>Method.</strong> Both companies are pre-revenue with binary, long-dated milestones, so a conventional DCF is not the primary tool — it would manufacture false precision. The framework is:</p>
+<ol>
+<li><strong>Verified financial base</strong> — cash, burn, commitments, dilution — built bottom-up from filings (§2, §3, §6).</li>
+<li><strong>Milestone-and-option valuation</strong> — each company's fair value is decomposed into (a) net liquid resources, (b) the risk-adjusted value of the licensing→orders→construction→generation chain, priced per project/unit with explicit assumptions and <em>shown subject to sensitivity</em>, and (c) the cost of financing that chain to completion (dilution) (§7, §8).</li>
+<li><strong>Reverse valuation</strong> — working backward from the current enterprise value to the deployment/margins it implies (§8).</li>
+<li><strong>Scenario probabilities are subjective</strong> analyst constructs, disclosed and stress-tested (a probability-weighted number is presented <em>and</em> shown not to replace judgment about permanent capital loss) (§7.4).</li>
+<li>Where a datum could not be verified, it is marked <strong>NOT FOUND</strong> with the consequence stated, rather than estimated silently (§13).</li>
+</ol>
+<p><strong>Number convention:</strong> US format throughout (1,311.8; $2.56B; −38.9%). Fiscal years = calendar years (both are December filers). "H1-26" = six months ended 2026-06-30; latest reported period for both companies.</p>
+<p><strong>Key corrections to our prior internal pass (2026-08-27) that readers of that version must note:</strong> (1) NuScale's liquid resources are <strong>$1.89B, not $1.07B</strong> (the prior pass omitted $820.8M of longer-dated investments) and its economically recurring burn is ≈ <strong>$230–280M/yr, not ~$779M/yr</strong> (the difference was the one-time ENTRA1 Milestone-1 payment and LLM prepayments); (2) Oklo's capital raised in 2026 totals <strong>~$2.2B</strong> (not a single raise), executed at average prices of ~$97 (Q1) and ~$55.6 (Q2–Q3); (3) Oklo's burn has entered a construction phase (H1-26 net burn −$192M; consensus FY26 FCF −$522M [3P]) — runway framing updated from "8–9 years" to <strong>~4–6 years</strong>; (4) the ENTRA1 fee architecture (NuScale pays milestones <em>to</em> its commercialization partner) is a first-order part of NuScale's economics and was previously under-described. Prior fair-value bands from that pass are superseded in full by §7.</p>
+<p><strong>A note on what "no rating" means here.</strong> The request explicitly prohibits a simplistic buy/hold/sell label. Instead, each company gets: bear/base/bull fair-value ranges with stated assumptions, a probability-weighted value with sensitivity, a reverse-valuation ("what the price demands"), and a scorecard (§11). The conclusions are conditional: e.g., "OKLO is a defensible speculation below $X if Y converts; at $29.7 it requires Z" — with X, Y, Z specified.</p>
+<h1 id="1-executive-summary">1 — Executive summary</h1>
+<p><strong>What this is.</strong> An independent, skeptical investigation of NuScale Power (NYSE: SMR) and Oklo Inc. (NYSE: OKLO) as of <strong>14 October 2026</strong>, written at the one-year anniversary of their October-2025 peak closes and with both stocks making new 52-week lows intraday. No simplistic rating is issued; instead, each company gets bear/base/bull fair-value bands, a reverse-valuation test of what its price demands, and explicit conditions for different investment conclusions.</p>
+<h2 id="11-headline-comparison-intraday-2026-10-14">1.1 Headline comparison (intraday 2026-10-14)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>NuScale (SMR)</strong></th>
+<th><strong>Oklo (OKLO)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Share price / market cap</td>
+<td>$5.95 / $2.56B</td>
+<td>$29.72 / $5.72B</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td><strong>~$0.67B</strong></td>
+<td><strong>~$2.6B</strong></td>
+</tr>
+<tr>
+<td>Fully diluted shares</td>
+<td>439.2M [VF]</td>
+<td>~202M [VF-derived]</td>
+</tr>
+<tr>
+<td>Cash + investments / debt / net cash</td>
+<td>$1.893B / none / <strong>$1.89B</strong> [VF]</td>
+<td>$3.006B / ~none / <strong>~$3.1B</strong> [VF/AA]</td>
+</tr>
+<tr>
+<td>Recurring cash burn (underlying)</td>
+<td>~$230–280M/yr; runway 3–7.5 yr by scenario [AA]</td>
+<td>FY26 guided $520–650M total cash use; runway ~4–6 yr [MC/AA]</td>
+</tr>
+<tr>
+<td>Commercialization stage</td>
+<td><strong>Design approved (only two NRC-approved SMR designs); zero commercial licenses; zero orders; revenue ≈ $0</strong></td>
+<td><strong>Test reactor operating (DOE path); demo under construction on federal site; NO NRC license application pending; no binding PPA</strong></td>
+</tr>
+<tr>
+<td>First power (company targets)</td>
+<td>RoPower first module ~2033 (conditional); US: none scheduled</td>
+<td>INL demo: 2028 target [MC]</td>
+</tr>
+<tr>
+<td>Signed / binding / financed projects</td>
+<td>Signed: RoPower licensing + conditional FID; <strong>binding orders: 0; financed: 0</strong></td>
+<td>Executed: Meta prepayment mechanism; <strong>binding offtake: 0; financed plants: 0</strong></td>
+</tr>
+<tr>
+<td>Capital needed before meaningful OCF</td>
+<td>~$0.3–0.8B + contingent ENTRA1 milestones (up to ~$2.87B) [AA]</td>
+<td>~$0.5–1.0B to first criticality + fuel infra; project capital beyond [AA]</td>
+</tr>
+<tr>
+<td><strong>Bear / Base / Bull fair value</strong></td>
+<td><strong>$2.40–3.00 / $4.50–5.50 / $6–8.50</strong></td>
+<td><strong>$7–10 / $14–17 / $18–24</strong></td>
+</tr>
+<tr>
+<td>Probability-weighted (base weights)</td>
+<td><strong>~$4.3–4.8 (−20% to −28% vs spot)</strong></td>
+<td><strong>~$13–14.5 (−51% to −55% vs spot)</strong></td>
+</tr>
+<tr>
+<td>Principal upside driver</td>
+<td>First US COLA filing + RoPower financial close</td>
+<td>INL criticality + first binding PPA + an NRC license path for the fleet</td>
+</tr>
+<tr>
+<td>Principal risk</td>
+<td>Zero orders while the ENTRA1 fee structure taxes future ones; dilution at $6</td>
+<td>Paying ~$2.6B for a pipeline with no binding offtake; dilution at $30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Classification per the brief's standard:</strong> NuScale = <em>credible design + regulatory authorization (design-level)</em>, <strong>not</strong> a financed project, <strong>not</strong> cash-generating. Oklo = <em>credible execution (test-scale) + DOE authorization for its demonstration</em>, <strong>not</strong> an NRC-licensed commercial project, <strong>not</strong> cash-generating. Neither is anywhere near commercial electricity revenue; both are call options with cash cushions.</p>
+<h2 id="12-the-smr-case-in-five-lines">1.2 The SMR case in five lines</h2>
+<p>NuScale owns the only two NRC-approved SMR designs in existence — a real moat — and <strong>nobody has filed to build one with it</strong> (pre-application only; the strongest competitor's design, GE Vernova's BWRX-300, just received a construction permit at TVA in 14 months). Its flagship RoPower project is stalled on risk-sharing terms four days before this writing (Romanian press: &gt;80% of conditional-FID requirements unmet). Its cash pile ($1.89B) makes it solvent for years, but ~27% share growth in nine months and a $750M ATM armed at $6 make dilution the dominant near-term variable; and its commercialization agreement pays ENTRA1 up to ~$3.4B across future milestones <em>for orders not yet placed</em>. At $5.95 the stock sits between our base and bull cases: not obviously cheap, not obviously broken — a coin-toss that pays ~+14% in the bull and −55% in the bear. <strong>Requires: a US COLA filing and/or RoPower financial close to get interesting; avoidable below ~$4.5 if you want the asymmetry.</strong></p>
+<h2 id="13-the-oklo-case-in-five-lines">1.3 The OKLO case in five lines</h2>
+<p>Oklo has done something no peer can claim — <strong>built and started a reactor (Groves) in ~11 months</strong> — and raised the largest war chest in advanced nuclear ($3.0B), giving it ~5 years of runway. But its commercial fleet has <strong>no NRC application pending</strong> (the 2020 COLA was denied; the company is "evaluating the timing and form" of future applications), its customer stack is LOIs/frameworks (Meta's prepayment mechanism is the only executed instrument; zero binding PPAs), and its stock — even after −83% — still prices an enterprise value of ~$2.6B, equivalent to ~29 units (~2.1 GWe) of <em>fully-operating</em> capacity at our modeled economics, or ~5.5× our probability-weighted deployment value. The founders' monthly sales (two tranches without 10b5-1 cover) and three fully-sold ATMs at $97→$63.5→$44→$30 complete the picture. <strong>At $29.7 you are paying bull-case-plus prices for a story that has earned base-case respect. We would need ~$14–17 to underwrite it; the next raise price, not the next press release, is the stock's tell.</strong></p>
+<h2 id="14-what-different-investment-conclusions-require">1.4 What different investment conclusions require</h2>
+<ul>
+<li><strong>To buy SMR today</strong>: you must believe a US COLA is filed by 2027 <em>and</em> RoPower closes, <em>and</em> that NuScale nets ≥$40M/module after the ENTRA1 toll — then bull ($6–8.5) is reachable and entry at $5.95 leaves thin but real upside. Falsified by an empty docket and a dead Romanian project by mid-2027.</li>
+<li><strong>To buy OKLO today</strong>: you must believe ≥5 units (375+ MWe) are operating/funded by 2033 at ≥$90M NPV each <em>and</em> that the next capital raise is priced above $35. At $29.7 that is a bet on the bull case at ~60%+ probability. We do not share that; at ≤$17 the same option costs half as much.</li>
+<li><strong>For both</strong>: this is a "wait for evidence or wait for a lower price" situation. The sector crash has removed the mania but not the premium: SMR trades ~1.7× our expected deployment value, OKLO ~5.5×. Patience is the position.</li>
+</ul>
+<h1 id="2-current-market-and-financial-snapshot">2 — Current market and financial snapshot</h1>
+<p><strong>Analysis date:</strong> 14 October 2026. <strong>Market-data timestamp:</strong> quotes pulled 2026-10-14, 15:50–16:05 UTC (11:50–12:05 ET), intraday while US markets were open; last completed close 2026-10-13. All prices in USD. Number convention: US (1,311.8).</p>
+<p><strong>Evidence tags used throughout:</strong> [VF] verified fact (primary source/filing), [MC] management claim, [3P] third-party estimate, [AA] analyst assumption (ours), [SP] speculative possibility. Sources: numbered list, back of report.</p>
+<p>Both stocks are making new 52-week lows <em>while this analysis is written</em>, one year to the day after their October-2025 peak closes. The entire advanced-nuclear complex (SMR, OKLO, Centrus, Nano Nuclear, URA ETF) is being sold off together; neither name has company-specific good news to lean on right now. That is the market the reader is being asked to underwrite.</p>
+<h2 id="21-headline-market-data-intraday-2026-10-14">2.1 Headline market data (intraday 2026-10-14)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>NuScale (SMR)</strong></th>
+<th><strong>Oklo (OKLO)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price (intraday)</td>
+<td>$5.95</td>
+<td>$29.72</td>
+</tr>
+<tr>
+<td>Day change</td>
+<td>−8.2%</td>
+<td>−6.5%</td>
+</tr>
+<tr>
+<td>52-week range (intraday)</td>
+<td>$5.92 – $57.42</td>
+<td>$29.66 – $193.84</td>
+</tr>
+<tr>
+<td>Last close (2026-10-13)</td>
+<td>$6.49</td>
+<td>$31.78</td>
+</tr>
+<tr>
+<td>Peak close / date</td>
+<td>$53.43 on 2025-10-15</td>
+<td>$174.14 on 2025-10-14</td>
+</tr>
+<tr>
+<td>From peak</td>
+<td><strong>−88.9%</strong></td>
+<td><strong>−82.9%</strong></td>
+</tr>
+<tr>
+<td>Close on 2025-12-31</td>
+<td>$14.17</td>
+<td>$71.76</td>
+</tr>
+<tr>
+<td>YTD 2026</td>
+<td><strong>−58.0%</strong></td>
+<td><strong>−58.6%</strong></td>
+</tr>
+<tr>
+<td>Since 2026-08-27 (prior internal pass)</td>
+<td>−38.9%</td>
+<td>−30.1%</td>
+</tr>
+<tr>
+<td>Average close Q3-2026</td>
+<td>$8.99</td>
+<td>$42.23</td>
+</tr>
+<tr>
+<td>Market cap</td>
+<td><strong>$2.56B</strong> [VF, 429.7M sh]</td>
+<td><strong>$5.72B</strong> [VF-derived, ~192.4M sh; vendor $5.53B uses stale Aug-4 count]</td>
+</tr>
+<tr>
+<td>Net cash (cash + investments − debt)</td>
+<td><strong>$1.89B</strong> [VF Jun-30-26, pro-forma for nothing else]</td>
+<td><strong>~$3.15B</strong> [VF Jun-30 $3.006B + Q3 ATM net ~$293M − Q3 burn ~$140M, AA]</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td><strong>~$0.67B</strong></td>
+<td><strong>~$2.56B</strong> [AA]</td>
+</tr>
+<tr>
+<td>Net cash per FD share</td>
+<td>~$4.30</td>
+<td>~$15.5 [AA]</td>
+</tr>
+<tr>
+<td>EV per FD share</td>
+<td>~$1.53</td>
+<td>~$12.8 [AA]</td>
+</tr>
+<tr>
+<td>Shares out</td>
+<td>429.72M (410.37 Class A + 19.33 Class B, 2026-07-30) [VF]</td>
+<td>~192.4M [VF-derived: 186.0M at Aug-4 + ATM sales through Sep-10]</td>
+</tr>
+<tr>
+<td>Fully diluted (incl. options/RSUs; Class B economic)</td>
+<td>~439M [VF-derived]</td>
+<td>~200M [AA]</td>
+</tr>
+<tr>
+<td>Short interest</td>
+<td>76.4M sh = 17.8% SO / 18.9% float; days-to-cover 2.1 [3P, mid-Sep settlement]</td>
+<td>32.8M sh = 17.6% SO / 20.8% float; DTC 3.4 [3P]</td>
+</tr>
+<tr>
+<td>Beta (5y, vendor)</td>
+<td>2.37</td>
+<td>1.22</td>
+</tr>
+<tr>
+<td>RSI (14d)</td>
+<td>~27 (oversold)</td>
+<td>~30</td>
+</tr>
+<tr>
+<td>Avg volume (20d)</td>
+<td>34.4M sh/day</td>
+<td>9.6M sh/day</td>
+</tr>
+</tbody>
+</table>
+<p>Both companies are priced at a large premium to net cash while carrying a large discount to their former expectations — the precise framing of what investors are paying for: <strong>SMR buyers pay $2.56B for a company holding $1.89B of liquid resources — i.e., ~$0.67B (26% of market cap) for the entire operating story; OKLO buyers pay $5.72B against ~$3.15B of liquidity — i.e., ~$2.56B (45% of market cap) for the operating story.</strong></p>
+<h2 id="22-the-capital-raises-timeline-how-the-cash-was-accumulated">2.2 The capital-raises timeline (how the cash was accumulated)</h2>
+<p><strong>SMR — NuScale.</strong> Cash has been raised almost entirely through at-the-market (ATM) programs, into a falling market — and the pace accelerated dramatically in the last 12 months:</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Period</th>
+<th>Shares sold</th>
+<th>Avg price</th>
+<th>Gross / net</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023–2024 ATMs ($220M combined)</td>
+<td>2023 – Aug-2025</td>
+<td>21.5M (FY24) + 4.55M (H1-25)</td>
+<td>~$9.8 (FY23) to $22.68 (H1-25)</td>
+<td>$210.1M (FY24) + $102.4M (H1-25)</td>
+<td>Terminated Aug-2025 [VF]</td>
+</tr>
+<tr>
+<td>Q3-2025 ATM ($500M)</td>
+<td>Aug–Sep 2025</td>
+<td>~13.2M</td>
+<td>~$35.02</td>
+<td>~$462.6M</td>
+<td>Completed [VF]</td>
+</tr>
+<tr>
+<td><strong>Q4-2025 ATM ($750M)</strong></td>
+<td>Nov–Dec 2025</td>
+<td>~43.9M</td>
+<td>~$17</td>
+<td><strong>$750M (fully sold by Dec-31-25)</strong></td>
+<td>Completed [VF]</td>
+</tr>
+<tr>
+<td><strong>2026 ATM ($1.0B)</strong></td>
+<td>Feb–Jun 2026</td>
+<td><strong>89.7M</strong></td>
+<td><strong>$11.14 avg ($11.11 in Q2)</strong></td>
+<td><strong>$1,000M / $984.5M</strong></td>
+<td><strong>Completed Jun-2026 [VF]</strong></td>
+</tr>
+<tr>
+<td><strong>New ATM ($750M)</strong></td>
+<td>from Aug-11-2026</td>
+<td><strong>0 sold as disclosed</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>Armed; Q3 10-Q due Nov-5</strong> [VF]</td>
+</tr>
+</tbody>
+</table>
+<p>FY25 ATM totals: 57.1M shares, $1,327.6M gross, WAP <strong>$23.25</strong>. Cumulative ATM gross since FY23: <strong>≈$2.55B</strong>. The pricing trend is the story: <strong>$35 → $17 → $11.14 → $9.18 (Aug-10 close) → $5.95 today</strong> — each successive program sells more shares for less money.</p>
+<p><strong>OKLO — Oklo.</strong> Larger and faster, and the sales came partly <em>before</em> the big declines:</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Period</th>
+<th>Shares sold</th>
+<th>Avg price</th>
+<th>Gross / net</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025 ATM ($1.5B, Dec-2025)</td>
+<td>Q1-26</td>
+<td>12.38M</td>
+<td>~$96.95 (net)</td>
+<td>$1,199.9M / $1,181.9M</td>
+<td>Completed Mar-2026 [VF]</td>
+</tr>
+<tr>
+<td>2026 ATM ($1.0B, May-13-26)</td>
+<td>May–Sep-10-26</td>
+<td>17.97M total (10.71M in Q2)</td>
+<td>~$55.6 avg overall ($63.51 in Q2)</td>
+<td>$1,000M / ~$985M net</td>
+<td>Completed Sep-10-26 [VF]</td>
+</tr>
+<tr>
+<td><strong>New ATM ($1.0B)</strong></td>
+<td>from Sep-11-2026</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>Unused so far [AA]</strong> [VF on existence]</td>
+</tr>
+</tbody>
+</table>
+<p>Total equity raised from mid-2025 through today: <strong>SMR ≈ $2.33B</strong> ($1.33B in FY25 + $1.0B in H1-26) and <strong>OKLO ≈ $3.5B</strong> ($2.2B in 2026 alone across three fully-sold ATM programs). Both companies' financing history is now a monotonically worsening price ladder, and both have fresh ATM capacity armed: at today's prices, filling the new programs would add ~+125M shares (SMR, +22% of the post-issue count) or ~+33M shares (OKLO, +15%).</p>
+<h2 id="23-sell-side-snapshot-as-of-2026-10-14">2.3 Sell-side snapshot (as of 2026-10-14)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyst count / consensus</td>
+<td>18 / Hold</td>
+<td>24 / Buy</td>
+</tr>
+<tr>
+<td>Avg price target</td>
+<td>$11.77 (median $11; range $6–20) [3P]</td>
+<td>$75.38 (median $74.5; range $14–130) [3P]</td>
+</tr>
+<tr>
+<td>Implied vs spot</td>
+<td>+97%</td>
+<td>+154%</td>
+</tr>
+<tr>
+<td>Notable recent changes</td>
+<td><strong>UBS downgrade to Sell, PT cut to $6 (Sep-11)</strong>; Texas Capital Buy $12 (Aug-20); BofA Hold $12 (Aug-12); RBC Hold $10 (Aug-11)</td>
+<td>BofA Buy $80 reiteration (Oct-3); Piper Buy $55 (Oct-1); UBS Hold raise $41→$55 (Sep-28); William Blair Buy (Oct-2)</td>
+</tr>
+</tbody>
+</table>
+<p>The sell-side is split in an unusual way: on SMR, the low target ($6) now <em>is</em> the market price — analysts have chased it down; on OKLO, targets ($55–80) sit 85–170% above spot and have not been cut meaningfully during a −58% YTD slide. Both patterns say the same thing: analysts are lagging price, and the consensus case rests on long-dated deployment that has yet to be de-risked.</p>
+<h2 id="24-what-changed-since-our-2026-08-27-internal-pass-for-continuity">2.4 What changed since our 2026-08-27 internal pass (for continuity)</h2>
+<ul>
+<li><strong>SMR $9.74 → $5.95; OKLO $42.53 → $29.72.</strong> No company-specific collapse event in the interim — this is sector de-rating plus flow (short into weakness, no incremental buyers at these durations).</li>
+<li><strong>SMR's liquidity was understated in the prior pass</strong> (only cash + short-term investments were counted): total liquid resources are $1.89B including $820.8M of longer-dated investments; the "16–18 months of runway" framing is superseded. The huge apparent burn was substantially the one-time ENTRA1 Milestone-1 payment ($259.9M paid in H1-26 of a $507.4M accrued expense) plus long-lead-materials prepayments — see §6.</li>
+<li><strong>NuScale set up a new $750M ATM on 2026-08-11</strong>; Oklo rolled its completed $1B ATM into a new $1B ATM on 2026-09-11. Both programs are dry powder <em>and</em> overhangs.</li>
+<li><strong>Oklo's burn profile changed</strong>: capex is ramping hard (Q2-26 alone: $94.1M capex + prepayments) — the "8–9 years of runway" of the prior pass now looks more like 4–6 years at a full construction cadence [AA].</li>
+</ul>
+<h1 id="3-company-by-company-fundamental-analysis">3 — Company-by-company fundamental analysis</h1>
+<p>Everything in this section is verified against filings, regulators, or company primary sources unless tagged otherwise. Cross-company comparison and pipeline detail follow in §4–§5.</p>
+<h2 id="31-nuscale-power-nyse-smr">3.1 NuScale Power (NYSE: SMR)</h2>
+<p><strong>What it is.</strong> A reactor-technology and licensing company: it designs the NuScale Power Module (NPM) — a light-water SMR, 77 MWe gross per module in the current "US460" configuration (6 modules = 462 MWe plant) — and monetizes it through technology licenses, engineering services, and future equipment supply, with modules manufactured by Doosan Enerbility in South Korea [VF, 10-Q]. It does not own power plants; it does not (currently) earn electricity revenue. Its exclusive commercialization partner is <strong>ENTRA1 Energy</strong>, a private company that leads project development and customer contracting (see §5 for the economics — NuScale <em>pays</em> ENTRA1 milestone fees).</p>
+<p><strong>Regulatory ladder (what exists vs what doesn't).</strong>
+| Status | Milestone | Date | What it authorizes | What it does NOT |
+|---|---|---|---|---|
+| US600 design certification (50 MWe, 12 modules) | Final rule effective | 2023-02-21 | Referencing in COL applications | Nothing built; no site rights |
+| US460 standard design approval (77 MWe, 6 modules, 462 MWe) | SDA issued May-2025 (FR 2025-06-04) | 2025 | Referencing in CP/OL/COL/ML applications | Any construction or operation |
+| <strong>US460 combined license (COLA)</strong> | <strong>NOT FILED — pre-application docket 99902078 only</strong> | as of 2026-10-14 | (would authorize construction + conditional operation at a specific site) | Currently does not exist; no applicant has filed to build a NuScale plant anywhere [VF, NRC] |</p>
+<p>The nuance that matters: NuScale holds the <strong>only two NRC-approved SMR designs in existence</strong> (a real, defensible moat), but a design approval is shelf-ware until a customer files a site license — and 5+ months after the uprated design approval (and 3.5 years after the first), <strong>no such application exists</strong>. NuScale's own Regulatory Engagement Plan (Aug-2025) describes a future client pursuing up to 12 modules (~920 MWe) — a plan, not an application [VF, ML25238A096]. The first COLA referencing an SDA would also be first-of-a-kind procedurally: there is no regulation yet for assessing SDA→COLA design changes [VF].</p>
+<p><strong>Commercial status.</strong> One international customer structure (RoPower, Romania, 6 modules) and one large-but-nonbinding US framework (ENTRA1–TVA, "up to 6 GW / up to 72 NPMs", signed Sep-2025). <strong>As of four days before this report, the Romanian project publicly stumbled</strong>: Romanian press reported (&gt;80% of the conditional FID requirements unmet; Romania demanding staged module payments with performance guarantees NuScale declined; no framework agreement; NuScale proposing share warrants as part of risk-sharing; RoPower cutting project spending to a minimum) [T2 — Romanian media; no company confirmation yet; treat as serious but unvindicated signal]. The company's own 10-Q states no pre-EPC contract is expected "until [RoPower has] secured financing" [VF]. <strong>Revenue has collapsed to ~zero ($0.6M in H1-26)</strong> because the FEED-2 work that generated 2024–25 revenue is complete [VF].</p>
+<p><strong>Financial condition (details in §6).</strong> $1.89B liquid, no debt, ~$230–280M/yr underlying burn, ~27% share-count growth in nine months (89.7M shares sold at ~$11.14 via the 2026 ATM), a fresh $750M ATM armed (Aug-11), and a contingent obligation structure (up to ~$2.87B of additional ENTRA1 milestone payments) that is unique in the sector [VF]. Two securities actions (class action re ENTRA1 disclosures, derivative stay) pending [VF].</p>
+<p><strong>Management.</strong> CEO John Hopkins, CFO Ramsey Hamady. The board added Dr. Dale Klein (former NRC Chairman) and Stuart Harshaw as directors in June 2026 [VF]. Track record to date: technically excellent licensing execution (two design approvals, reviews completed ahead of schedule), commercially zero signed construction orders in the four years since certification, and a distribution of economics to ENTRA1 (15% milestone pool expensed = $507M) that only makes sense if module volumes eventually flow in multiples of what has been contracted. The class action adds an ENTRA1-disclosure dimension. Assessment detail in §11.</p>
+<p><strong>The equity story in one sentence:</strong> you are buying the option value of the only NRC-approved SMR designs, funded today by a cash pile raised in a falling market, with the company's own commercialization structure taxing future orders — the question is whether any order appears before the next financing window, and at what price.</p>
+<h2 id="32-oklo-inc-nyse-oklo">3.2 Oklo Inc. (NYSE: OKLO)</h2>
+<p><strong>What it is.</strong> A build-own-operate advanced-nuclear developer: fast-spectrum "Aurora" powerhouses (~75 MWe class for grid power, designed for factory repeat builds), intended to be owned by Oklo and monetized via long-term power sales; plus a fuel-recycling ambition (convert used fuel into usable energy), plus a real isotopes business-in-formation (Oklo Isotopes; Atomic Alchemy acquisition; the Groves test reactor). It also sells engineering services through two small June-2026 acquisitions (ARMEC, Creative Engineers) — the source of essentially all of its $1.2M H1-26 revenue [VF].</p>
+<p><strong>Demonstrated operational capability — the Groves milestone.</strong> On 2026-08-05, Oklo's <strong>Groves Isotope Test Reactor (Lockhart, Texas) achieved first criticality</strong> under DOE's Reactor Pilot Program — built from a greenfield private site in <strong>~11 months</strong>, components (including fuel) manufactured or procured, operating programs developed in-house; DOE counts Groves as the <strong>fifth</strong> advanced reactor to go critical under the program this summer (joining Antares, Valar, Deployable Energy, Aalo) [VF, DOE + company PR]. This is the strongest verified execution datapoint either company holds. It proves Oklo's <em>construction and startup</em> muscles for a small, low-power machine. It does <strong>not</strong> license, build, or validate the 75 MWe commercial Aurora, which requires an NRC license and sells a wholly different product (grid electricity).</p>
+<p><strong>Regulatory status — the nuance that decides this story.</strong> Oklo's actual posture is <em>not</em> what the market often assumes, and it cuts both ways. There is <strong>no pending NRC combined license application</strong>: the company's earlier Aurora COLA (docket 52-049, filed 2020) was <strong>denied without prejudice in January 2022</strong>, and as of this report Oklo is only in <em>pre-application</em> engagement with the NRC (pre-application docket 99902095; Phase-1 readiness assessment completed, Phase-2 audit under way, Principal Design Criteria topical report approved in 2026). The company states verbatim it is "evaluating the timing and form of future NRC applications" in light of the Part 53/Part 57 frameworks [VF, 10-Q]. What <em>has</em> started — construction of the INL demonstration unit — proceeds under <strong>DOE authorization</strong> (Reactor Pilot Program: OTA → NSDA approved Mar-2026 → PDSA approved Jun-11-2026 → final safety analysis DSA and startup authorization remaining), which the company says "provides full authority to construct and operate the powerhouse" on the federal site. DOE authorization covers the INL demonstration; <strong>the commercial fleet (Pike County and beyond) requires NRC licensing — and no application for it is pending.</strong> Additional held assets: DOE site-use permit at INL (2019, first ever), an NRC materials license for the Idaho radiochemistry lab (Mar-2026), and 5 metric tons of HALEU-equivalent material recovered from EBR-II fuel; commercial fuel supply (Centrus LOI, Jun-2026) is <strong>not yet under definitive contract</strong> [VF].</p>
+<p><strong>Commercial status.</strong> A large announced-but-nonbinding demand stack (Switch 12 GW MSA, Equinix, hyperscalers, government), anchored by two concrete commercial structures: the <strong>1.2 GW Pike County (southern Ohio) campus</strong> with a <strong>Meta prepayment agreement (Jan-2026)</strong> — a mechanism for Meta to prepay for power/fund deployment, amount undisclosed [VF] — and a $25M customer prepayment (2024, unknown counterparty) tied to a right of first refusal on future capacity [VF]. <strong>No binding PPA with disclosed terms has been signed as of this report; RPO "not material"</strong> [VF]. Full pipeline table in §5.</p>
+<p><strong>Financial condition (details in §6).</strong> $3.0B liquid (largest balance sheet in advanced nuclear), no funded debt, zero going-concern issues, but burn inflecting with construction (guided 2026: OCF −$120–150M + capex $400–500M = <strong>$520–650M of total cash use</strong>). Raised <strong>~$2.2B of gross equity in 2026 across three ATM programs</strong>, each fully sold, at average prices of $95 → $55.6 → (spot $30); a fresh $1B ATM is armed [VF]. Founders and CFO have sold monthly through the decline (~$50M+ combined by the founders; no open-market buys) [VF, Form 4s].</p>
+<p><strong>Management.</strong> Co-founders Jacob DeWitte (CEO) and Caroline Cochran (COO), ~11.1% combined (13D group, Jul-2026); CFO R. Craig Bealmear. Track record: demonstrated nuclear startup execution at Groves; NRC application actually filed (unlike its closest peer); but also a commercial timeline that has slipped (earlier public targets pointed to a 2027 first plant; current stated target 2028+) and a financing cadence that has shifted the burden decisively onto public shareholders as prices fell. Assessment detail in §11.</p>
+<p><strong>The equity story in one sentence:</strong> you are buying the most integrated build-own-operate bet in advanced nuclear — the only one with a reactor actually running today — at an enterprise value that ascribes ~$2.6B to a commercial fleet that does not yet have a license, a binding customer, or a fuel-supply contract.</p>
+<h1 id="4-technology-regulatory-and-commercial-comparison">4 — Technology, regulatory, and commercial comparison</h1>
+<h2 id="41-technology-and-maturity">4.1 Technology and maturity</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th><strong>NuScale (SMR)</strong></th>
+<th><strong>Oklo (OKLO)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reactor type</td>
+<td>Light-water SMR (conventional physics; 77 MWe gross uprated "US460" module; 6-module plant = 462 MWe)</td>
+<td>Sodium-cooled, metal-fueled <strong>fast</strong> reactor ("Aurora"; ~75 MWe class power version; 15 MWt test reactor operating)</td>
+</tr>
+<tr>
+<td>Design approvals</td>
+<td><strong>US600 design certification (eff. Feb-2023)</strong> + <strong>US460 standard design approval (May-2025)</strong> — the only two NRC-approved SMR designs in existence</td>
+<td>None. Principal Design Criteria topical report approved 2026; PDC Rev.1 reviewed; operator-licensing &amp; staffing topical reports under review</td>
+</tr>
+<tr>
+<td>Design maturity</td>
+<td>Derivative of a design already through full NRC review twice; fuel = standard LEU (&lt;5%)</td>
+<td>Novel fast-spectrum design; fuel = HALEU/recycled/plutonium-bearing options (higher complexity, supply-constrained)</td>
+</tr>
+<tr>
+<td>Operating experience</td>
+<td>None anywhere (no unit of either design has been built)</td>
+<td>One test reactor operating (Groves, Aug-2026, &lt;11 months greenfield→critical); no commercial unit</td>
+</tr>
+<tr>
+<td>Manufacturing model</td>
+<td>Modules by Doosan Enerbility (South Korea); long-lead material already produced (~$69M on balance sheet; CFPP material bought back for $32.3M in 2025)</td>
+<td>Own build (Kiewit lead constructor at INL; MOU for Ohio EPC planning); fuel fabrication in-house (A3F at INL; equipment installation/startup targeted 2027)</td>
+</tr>
+<tr>
+<td>What would falsify "credible design"</td>
+<td>A COLA review surfacing fundamental design issues; or failure of another SDA-referenced first-of-a-kind</td>
+<td>PDC/operator/topical reviews failing to progress; first DSA/startup failures at Aurora-INL; fuel qualification issues</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation.</strong> NuScale's technical story is <em>cheaper to believe</em> — conventional light water, twice NRC-reviewed, standard fuel. Oklo's is <em>higher variance in both directions</em>: fast reactors have a poor historical track record, but Oklo is currently the only one of the two with a nuclear reactor actually operating (albeit a test unit). On balance: NuScale has the stronger <em>design credibility</em>, Oklo the stronger <em>demonstrated execution</em> — and neither has the thing that matters commercially: a licensed, financed, operating power plant.</p>
+<h2 id="42-regulatory-status-side-by-side-and-what-each-approval-does-not-mean">4.2 Regulatory status — side by side (and what each approval does NOT mean)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NRC design approval</td>
+<td>US600 DC + US460 SDA [VF]</td>
+<td>None (PDC topical report only) [VF]</td>
+</tr>
+<tr>
+<td>NRC site license (COLA/CP) — <strong>required to build a commercial plant</strong></td>
+<td><strong>None filed by anyone. Pre-application docket 99902078 only</strong> [VF]</td>
+<td><strong>None pending. 2020 COLA denied (2022); pre-application docket 99902095; company "evaluating timing and form" of future applications</strong> [VF]</td>
+</tr>
+<tr>
+<td>DOE/other pathway</td>
+<td>None active (DOE engagement: CFPP material settlement; ORNL studies)</td>
+<td><strong>DOE Reactor Pilot Program: NSDA (Mar-26) + PDSA (Jun-26) approved; DSA + startup authorization remain; demo under "full authority to construct and operate" on federal land</strong> [VF/MC]</td>
+</tr>
+<tr>
+<td>What the gap means commercially</td>
+<td>Design approved for referencing — but no one has referenced it. <strong>Zero commercial authorization anywhere.</strong></td>
+<td>Demonstration unit progressing under DOE authority (federal site); <strong>commercial fleet (Ohio etc.) requires NRC licensing — nothing filed, nothing pending.</strong></td>
+</tr>
+<tr>
+<td>Competitive context</td>
+<td>NRC granted <strong>TVA a construction permit for GE Vernova's BWRX-300 (Clinch River) on 2026-09-29 — 14-month review</strong>, the first US SMR cleared for construction; TerraPower's Natrium also cleared for construction [T2/T3]. NuScale's design approvals have traction rivals now in actual construction.</td>
+<td>Same context. In advanced-reactor terms, five DOE-pilot reactors went critical in summer 2026 (Antares, Valar, Deployable, Aalo, Oklo-Groves) — Oklo is in the group, but was behind the first three on that goal.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reader warning (per the brief's own standard):</strong> a design approval, a pre-application docket, a topical-report approval, a DOE NSDA/PDSA, and a signed MSA are each <em>real</em> — and none of them is permission to build and sell commercial electricity. On that single standard, <strong>both companies currently hold zero commercial authorization</strong>, and the nearest-term machine that will actually generate salable power on US soil under this pair of designs is Oklo's INL demonstration (DOE-authorized), followed — years later — by whatever gets an NRC license.</p>
+<h2 id="43-business-models-compared-and-what-economics-means-for-each">4.3 Business models compared — and what "economics" means for each</h2>
+<ul>
+<li><strong>NuScale = licensing/tech model (asset-light).</strong> Revenue streams: design &amp; licensing fees, engineering services during development/construction, equipment supply (via Doosan), later fuel &amp; services annuities. Capital intensity <em>at NuScale</em> is low; the capital intensity lives with customers/project companies — which is precisely why NuScale cannot book revenue until <em>someone else</em> finances a plant. Its cost structure is ~$230–280M/yr of opex and — unique to it — <strong>milestone payments to its commercialization partner</strong> (up to ~$3.4B pool for 72 modules; $507M already expensed). Estimated per-module economics to NuScale: ~$25–60M NPV band (no primary disclosure — NOT FOUND; anchored on the size of the disclosed ENTRA1 payments and plausible equipment-scope margins).</li>
+<li><strong>Oklo = IPP/owner model (asset-heavy, higher ceiling, higher capital burden).</strong> Revenue begins only when its <em>own</em> plants sell electricity; the payoff per unit is the full merchant/contracted margin on 40–60 years of output (modeled ~$60–150M NPV per unit at $80–100/MWh with $200–300M capex — highly sensitive to both inputs). Oklo must fund construction itself (plus fuel infrastructure), hence the ~$2.2B of equity raised in 2026 and the expectation of project-level capital next. Its vertical integration (fuel recycling, isotopes) is real optionality but also multiplies execution surfaces.</li>
+<li><strong>The structural comparison:</strong> NuScale earns sooner <em>if someone else builds</em> (fees start pre-construction); Oklo earns more <em>if it builds</em> (owns the asset) but nothing before steel and licensing. For equivalent deployed capacity, NuScale's equity value is a <em>toll</em>, Oklo's is an <em>equity stake</em>. The market has historically paid more for the stake (OKLO premium) — this report's arithmetic says the stake's premium is the more fragile part.</li>
+</ul>
+<h2 id="44-nuclear-economics-vs-alternatives-summary-standards">4.4 Nuclear economics vs alternatives (summary standards)</h2>
+<p>Full LCOE/capex tables with sources appear in §13.3 (Economics annex). Here is the framing that matters for decision-making [3P data, wide ranges on purpose]:</p>
+<ul>
+<li><strong>SMR overnight capital cost:</strong> vendor claims history is ugly — NuScale's own UAMPS estimate escalated from ~$10,000/kW (2015$) to <strong>$21,561/kW (2023$)</strong> per IEEFA; independent/govt estimates cluster <strong>$8,936/kW</strong> (EIA/Sargent &amp; Lundy, 6×80 MW reference), <strong>$12,300–17,570/kW</strong> (Lazard v19), <strong>$17,949/kW</strong> (TVA 2025 IRP). The live Romania disclosure ($6–7B for 462 MWe ≈ <strong>$13,000–15,200/kW all-in</strong>, Romanian PM) sits mid-band — empirical evidence against the low-end vendor case.</li>
+<li><strong>LCOE benchmarks:</strong> EIA AEO2026 (with credits) — gas combined-cycle <strong>$77.46/MWh</strong>, solar PV $58.33, advanced nuclear $87.81; Lazard v19 — gas CC $51–129, solar $40–98, large nuclear $175–255, <strong>SMR (illustrative) $214/MWh</strong>, nuclear restart $71. The cheapest "firm clean" alternative in the US today is restarting/upgrading <em>existing</em> nuclear, not building new. No public $/MWh price has been disclosed for any 2024–26 hyperscaler nuclear deal (NOT FOUND).</li>
+<li><strong>Time-to-power and deal evidence:</strong> observed hyperscaler deals (Microsoft-Crane 835MW, Amazon-Talen 1.9GW, Meta 1.1GW Clinton, Google-Constellation 890MW/$4.3B Oct-2026, Amazon-Calvert Cliffs 690MW Sep-2026) all attach to <em>existing or conventional</em> capacity; SMR/OKLO targets are ≥2028-29 vs 2–4 years for gas from decision. <strong>Time is the scarcest input of the AI-power build-out</strong> — that is the de-rating's deeper driver in 2026.</li>
+<li><strong>Fuel:</strong> HALEU at ~$15,000/kg (20% enrichment) vs ~$3,000/kg for standard LEU; advanced-fuel all-in estimates up to ~$30,000/kg [I]. This is OKLO's added cost/complexity layer and NuScale's relative advantage (standard LEU).</li>
+<li><strong>Why vendor LCOEs differ from independent estimates:</strong> vendors quote nth-of-a-kind, overnight-cost, low-WACC, high-capacity-factor cases for <em>mature fleets</em>; independent estimates include first-of-a-kind learning costs, realistic WACC (12%+), and shorter assumed lives. Neither company has a single operating commercial unit to calibrate against — that is the entire problem with buying the math today.</li>
+</ul>
+<h2 id="45-defensible-advantages-scoring-010-aa">4.5 Defensible advantages — scoring (0–10) [AA]</h2>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>SMR</th>
+<th>OKLO</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Licensing/regulatory</td>
+<td><strong>8</strong> (two NRC approvals; but 0 commercial licenses)</td>
+<td>3 (no NRC approval; DOE demo authority only)</td>
+<td>NuScale's moat is the single strongest verifiable asset in the pairing</td>
+</tr>
+<tr>
+<td>Technology maturity</td>
+<td>7</td>
+<td>4</td>
+<td>Light-water + standard fuel vs fast/HALEU</td>
+</tr>
+<tr>
+<td>Deployment speed (demonstrated)</td>
+<td>2</td>
+<td><strong>6</strong> (Groves in &lt;1 yr; but test-grade)</td>
+<td>Oklo built <em>something</em> fastest; NuScale has built nothing</td>
+</tr>
+<tr>
+<td>Cost position</td>
+<td>5</td>
+<td>5</td>
+<td>Both unproven; Romania data warn on NuScale; no cost data at all for Oklo (NOT FOUND)</td>
+</tr>
+<tr>
+<td>Customer relationships</td>
+<td>5 (TVA/ENTRA1 non-binding; RoPower conditional)</td>
+<td>6 (Meta prepayment; richest LOI stack)</td>
+<td>Neither has binding offtake</td>
+</tr>
+<tr>
+<td>Fuel access</td>
+<td>7 (standard LEU; Doosan supply chain)</td>
+<td>4 (EBR-II 5MT; Centrus LOI pending; HALEU scarcity)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Balance-sheet strength</td>
+<td>6 ($1.9B, serial dilution)</td>
+<td><strong>8</strong> ($3.0B, ~5y runway at plan)</td>
+<td>Oklo's cushion is the difference between "wait" and "forced"</td>
+</tr>
+<tr>
+<td>Operating economics</td>
+<td>n/a (toll model)</td>
+<td>n/a (owner model)</td>
+<td>No commercial data for either</td>
+</tr>
+</tbody>
+</table>
+<h1 id="5-project-pipeline-and-probability-weighted-deployment-model">5 — Project pipeline and probability-weighted deployment model</h1>
+<p>The rule applied throughout: <strong>announced capacity is not backlog, an MOU is not an order, a prepayment mechanism is not a PPA, and an approval is not a construction site.</strong> Each company's pipeline is sorted into the six categories requested, then converted into a probability-weighted deployment estimate — with the arithmetic shown — rather than "GW × $/MWh".</p>
+<h2 id="51-nuscale-smr-pipeline">5.1 NuScale (SMR) — pipeline</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Project / instrument</th>
+<th>Detail</th>
+<th>Status Oct-2026</th>
+<th>Source tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Announced interest / MOU</td>
+<td>ORNL techno-economic studies (steam for chemical plants; AI fuel management)</td>
+<td>Non-commercial research collaborations</td>
+<td>Active</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>1. Announced interest / MOU</td>
+<td>International engagement (USTDA grant programs; various markets)</td>
+<td>Grant-supported licensing studies; USTDA repayment obligation up to $7.07M on future revenue</td>
+<td>Ongoing, immaterial</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial arrangements</td>
+<td><strong>ENTRA1–TVA collaboration: "up to 6 GW", up to 72 NPMs, as many as six plants</strong> (Sep-2025)</td>
+<td>Nonbinding; ENTRA1 "working toward a definitive PPA" (Q2-26 language); the nonbinding doc that triggered NuScale's $507M Milestone-1 accrual</td>
+<td><strong>Nonbinding; no definitive PPA</strong></td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial arrangements</td>
+<td>ENTRA1 future US pipeline ("hyperscaler, technology, industrial and micro-grid" interest)</td>
+<td>Company language; no named counterparties</td>
+<td>Early</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>3. Binding agreements with significant outstanding conditions</td>
+<td><strong>RoPower (Romania): technology license agreement executed (Jul-2024); conditional FID (Feb-2026); 6 modules / 462 MWe; first module COD target 2033; est. cost $6–7B (PM statement)</strong></td>
+<td>Conditions: financing close (EXIM/DFC LOIs $3B/$1B <strong>not drawn</strong>), pre-EPC contract (up to 15 months), risk-sharing framework. <strong>Oct-2026 impasse: &gt;80% of FID conditions unmet [T2]; NuScale refused performance guarantees/staged payments; per Romanian press, staff cut ≥60% proposed and Nuclearelectrica says the project "as it was planned can not continue", reassessing SMR technologies; ~30-day resolution window (≈Nov-9-2026)</strong> [T2]</td>
+<td><strong>Stalled on terms; the flagship at risk of replacement</strong></td>
+<td>[T1/T2]</td>
+</tr>
+<tr>
+<td>4. Contracted &amp; financed</td>
+<td>—</td>
+<td>None</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5. Under construction</td>
+<td>—</td>
+<td>None (LLM inventory on balance sheet is pre-build material, not construction)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6. Operational, generating revenue</td>
+<td>—</td>
+<td>Revenue H1-26: $0.6M (residual engineering/fees; FEED-2 completed 2025)</td>
+<td>—</td>
+<td>[T1]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="52-oklo-oklo-pipeline-10-announced-instruments-verified">5.2 Oklo (OKLO) — pipeline (10 announced instruments, verified)</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Project / instrument</th>
+<th>Detail</th>
+<th>Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Executed contract (funding mechanism)</td>
+<td><strong>Meta Prepayment Agreement (Jan-5-2026)</strong> — Pike County, OH campus (1.2 GW; Phase 1 target ~2030, full campus ~2034)</td>
+<td>Meta prepays for power / funds deployment; amounts &amp; power terms undisclosed; 206 acres purchased</td>
+<td><strong>Only executed 2026 commercial instrument; not a PPA</strong></td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>Executed (capacity ROFR)</td>
+<td>Unknown counterparty — $25M nonrefundable prepayment (Mar-2024) + 36-month right of first refusal</td>
+<td>Historic; no announced conversion</td>
+<td>Standing</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial</td>
+<td><strong>Switch, Ltd. — "non-binding Master Power Agreement", 12 GW framework through 2044</strong> (Dec-18-2024)</td>
+<td>Framework; individual PPAs "to be finalized as milestones are reached"; none signed</td>
+<td>Nonbinding</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial</td>
+<td>Equinix — confidential LOI (Feb-2024): ≥100 MW per facility ROFR; utilities/data centers target</td>
+<td>Never upgraded to PPA</td>
+<td>Nonbinding</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial</td>
+<td>Diamondback (50 MW, Permian; intended 20-yr PPA); Prometheus Hyperscale (100 MW); 2 unnamed data centers (~750 MW combined, Nov-2024)</td>
+<td>All LOIs</td>
+<td>Nonbinding</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>2. Nonbinding commercial</td>
+<td>RPower (Jan-2025 MOU, gas→nuclear phased)</td>
+<td><strong>Vanished from 2025-26 disclosure lists</strong> — treat as dormant</td>
+<td>Faded</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>3. Tentative / award-stage</td>
+<td>Eielson AFB (USAF/DLA Energy): "Notice of Intent to Award", ≥5 MWe + steam</td>
+<td>Not finalized; subject to USAF requirements</td>
+<td>Tentative</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>1. Interest / collaboration</td>
+<td>TVA (recycling + potential power); LANL/NVIDIA; Battelle/INL (AI); surplus-plutonium program (advanced negotiations with DOE, May-2026); Standard Nuclear MOU (recycling streams)</td>
+<td>Exploratory/collaboration</td>
+<td>Early</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>5. Under construction</td>
+<td><strong>Aurora-INL demonstration unit</strong> (DOE pathway; Kiewit; PDSA approved Jun-26; DSA pending); A3F fuel fabrication facility (equipment install/startup targeted 2027); site prep Pike County "slated to begin 2026"</td>
+<td>Construction CIP $165M on balance sheet</td>
+<td>Real steel, no license for commercial sales</td>
+<td>[T1]</td>
+</tr>
+<tr>
+<td>6. Operational</td>
+<td><strong>Groves Isotope Test Reactor (15 MWt) — critical Aug-5-2026</strong>; engineering-services subsidiaries (ARMEC, Creative Engineers)</td>
+<td>Groves operational (isotopes commercial variant to follow; lutetium-177 via Groves-2 Forge under DOE Launch Pad, Oct-13-2026)</td>
+<td>Operating, tiny revenue ($1.2M H1-26)</td>
+<td>[T1]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contracted-revenue check (both companies, verbatim standards):</strong> NuScale's filings show no binding equipment orders; Oklo's 10-K states it has "not yet entered into any binding power purchase agreement with any customer" [T1]. The two strongest commercial artifacts in this entire 10-item stack are <strong>one prepayment mechanism with undisclosed economics (Meta)</strong> and <strong>one $25M capacity option (2024)</strong>. Everything else is LOIs, frameworks or collaborations.</p>
+<h2 id="53-probability-weighted-deployment-model-arithmetic-shown">5.3 Probability-weighted deployment model (arithmetic shown)</h2>
+<p><strong>NuScale — expected modules deployed by 2033-2035:</strong> P(bear: 0)×0 + P(base: 10)×0.45 + P(bull: 36)×0.15 = <strong>E ≈ 9.9 modules (~0.76 GWe)</strong>.
+Risk-adjusted value contribution ≈ E[modules] × $40M NPV/module ≈ <strong>$0.40B</strong> (vs $0.67B EV priced in — the market pays ~1.7× our expected value, i.e., it prices closer to the "base+" world, see §8).</p>
+<p><strong>Oklo — expected units deployed by 2033-2035:</strong> 0.35×0.5 + 0.45×5 + 0.20×14 = <strong>E ≈ 5.2 units (~0.39 GWe)</strong>.
+Risk-adjusted value contribution ≈ 5.2 × $90M ≈ <strong>$0.47B of operational NPV</strong> (vs ~$2.6B EV priced in — the market pays ~5.5× our expected deployment value; i.e., OKLO's price is the bull case plus a premium).</p>
+<p><strong>Sanity anchors ("we are not multiplying announcements by price"):</strong> if one <em>did</em> multiply announced capacity by assumptions, the numbers would be $3.4B for NuScale (72 NPMs × $47M ENTRA1-implied economics) and absurd for Oklo (&gt;12 GW × ~$1.2B/GW). Both are myths of different sizes; the discipline of this section is that <strong>only probability-weighted delivered units count</strong>, and the two stocks currently trade at 1.7× and 5.5× those expected values respectively.</p>
+<h2 id="54-aidata-center-demand-evidence-vs-narrative">5.4 AI/data-center demand — evidence vs narrative</h2>
+<ul>
+<li><strong>What is real:</strong> data-center power demand growth is a verified industry backdrop, and premium 24/7 clean power is genuinely scarce. Sector-wide, <em>operating</em> nuclear has captured it (Constellation-Google and peers; the Oct-6-2026 CEG/VST/TLN rally on a Google power deal is the live example [T3]).</li>
+<li><strong>What is not (yet) real for these two companies:</strong> customer commitments to <em>SMR/OKLO</em> capacity with payment obligations. NuScale: zero. Oklo: one prepayment mechanism (Meta) whose size/pricing is undisclosed, plus a 2024 $25M option from an anonymous counterparty. Switch's much-quoted 12 GW is a nonbinding framework; Equinix is an LOI with a ROFR; "14 GW order book" (Jan-2025 remark) is marketing language, not contracts.</li>
+<li><strong>Transmission/economics checks:</strong> Oklo states PJM interconnection applications and transmission studies are "advancing" for the Ohio campus (no executed interconnection agreement disclosed) [VF slides]; for NuScale, no transmission arrangement for any prospective plant was found (NOT FOUND) — scheduling and interconnection risk for late-2020s delivery is entirely unpriced in the narratives.</li>
+</ul>
+<p><strong>Conclusion of §5:</strong> both pipelines are long on logos and short on obligations. That is normal for pre-revenue developers — and it is exactly why §7 values them with scenario probabilities rather than order-book math, and why §8's reverse test finds OKLO's price the more demanding of the two.</p>
+<h1 id="6-financial-runway-and-dilution-analysis">6 — Financial runway and dilution analysis</h1>
+<p>All figures from SEC filings unless tagged otherwise. [VF] verified (filing), [AA] analyst assumption, [3P] third-party, [MC] management claim.</p>
+<h2 id="61-cash-flow-history-the-honest-picture">6.1 Cash-flow history (the honest picture)</h2>
+<p><strong>NuScale (SMR) — it is not an R&amp;D burn; it is mostly contract-structure burn:</strong></p>
+<table>
+<thead>
+<tr>
+<th>FY ($M)</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+<th>H1-26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>2.9</td>
+<td>11.8</td>
+<td>22.8</td>
+<td>37.0</td>
+<td>31.5</td>
+<td><strong>0.6</strong></td>
+</tr>
+<tr>
+<td>Net loss</td>
+<td>−102.5</td>
+<td>−25.9</td>
+<td>−58.4</td>
+<td>−136.6</td>
+<td>−355.8</td>
+<td>−96.7</td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>−99.2</td>
+<td>−148.6</td>
+<td>−183.3</td>
+<td>−108.7</td>
+<td><strong>−459.6</strong></td>
+<td><strong>−372.9</strong></td>
+</tr>
+<tr>
+<td>Capex</td>
+<td>2.0</td>
+<td>2.3</td>
+<td>1.7</td>
+<td>~0</td>
+<td>0.5</td>
+<td>~2.0</td>
+</tr>
+<tr>
+<td>SBC</td>
+<td>6.4</td>
+<td>9.3</td>
+<td>16.2</td>
+<td>13.6</td>
+<td>19.2</td>
+<td>11.8</td>
+</tr>
+</tbody>
+</table>
+<p>The FY25→H1-26 cash figures look apocalyptic (−$776M trailing OCF) until decomposed: they contain the cash-settlement of the <strong>ENTRA1 Partnership Milestones Agreement (PMA)</strong> — an expense of <strong>$507.4M accrued in 2025</strong> for "Milestone Contribution 1" (15% of a milestone pool), triggered merely by ENTRA1 signing a <em>non-binding</em> agreement "relating to 72 NPMs": $247.5M settled in 2025, <strong>$259.9M paid in H1-26</strong> (the bulk of Q1's −$314.7M), plus long-lead-materials (LLM) vendor prepayments. Revenue collapsed to $0.6M in H1-26 because the Fluor-executed FEED Phase 2 work for RoPower ended in 2025 and nothing has replaced it. <strong>NuScale's current-state cash burn is ≈ $55–70M/quarter (~$230–280M/yr) [AA] — not $780M.</strong></p>
+<p><strong>Oklo (OKLO) — a development company starting to pour concrete:</strong></p>
+<table>
+<thead>
+<tr>
+<th>FY ($M)</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+<th>H1-26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>Net loss</td>
+<td>+3.9</td>
+<td>−32.2</td>
+<td>−73.6</td>
+<td>−105.7</td>
+<td>−81.6</td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>−1.0</td>
+<td>−16.0</td>
+<td>−38.4</td>
+<td>−82.2</td>
+<td>−65.5</td>
+</tr>
+<tr>
+<td>Capex + deposits</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.4</td>
+<td>33.2</td>
+<td><strong>126.9</strong></td>
+</tr>
+<tr>
+<td>SBC</td>
+<td>—</td>
+<td>0.8</td>
+<td>12.5</td>
+<td>41.8</td>
+<td>29.9</td>
+</tr>
+</tbody>
+</table>
+<p>OKLO's burn is <em>accelerating into construction</em>: Q2-26 alone was ~$142M (OCF −$47.6M + capex/prepayments −$94.1M); <strong>management guidance (verbatim, T1): FY26 operating cash use of $120–150M plus capex of $400–500M → total 2026 cash use of $520–650M; H2-26 alone implies $273–373M of capex.</strong> Consensus FY26 FCF ≈ −$522M [3P] is consistent with that guidance. The balance sheet shows construction-in-progress and equipment deposits of $165.1M at Jun-30-26 (vs $35.7M at Dec-25) — the INL Aurora powerhouse (Kiewit as lead constructor), the Aurora Fuel Fabrication Facility, and the Groves isotope facility are the main uses of cash. Management states it will fund "powerhouses, fuel recycling facilities and fuel fabrication technology... and expand our radioisotope business" from existing resources [MC].</p>
+<h2 id="62-liquid-resources-and-runway-scenarios">6.2 Liquid resources and runway scenarios</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Liquid (T1, Jun-30-26)</td>
+<td>$1,893M (cash 766.5 + ST inv 305.7 + LT inv 820.8) + $5.1M restricted</td>
+<td><strong>$3,006M</strong> (cash 1,644.7 + marketable debt securities 1,361.6) + $16.9M restricted</td>
+</tr>
+<tr>
+<td>Pro-forma today [AA]</td>
+<td>≈ $1.89B (new $750M ATM untreated)</td>
+<td>≈ $3.15B (incl. ~$293M Q3 ATM net, less ~$140M Q3 burn)</td>
+</tr>
+<tr>
+<td>Debt</td>
+<td>None (negligible leases)</td>
+<td>None ($0.7M)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SMR runway scenarios [AA]:</strong>
+- <em>Dormant/waiting mode</em> (−$250M/yr): <strong>~7.5 years</strong> → mid-2034. The prior "16–18 months" figure was an artifact of counting only cash+ST investments and treating the one-time ENTRA1 payment as recurring.
+- <em>Program activation</em> (RoPower pre-EPC + LLM builds + partial PMA milestones, −$450–650M/yr): <strong>3–4 years</strong>.
+- <em>Full 72-module conversion</em>: PMA calls for another <strong>~$2.87B</strong> (MC2 35% ≈ $16M/NPM + MC3 50% of a ~$3.38B pool, per the 10-K's own arithmetic) payable as documents become binding. This cannot be funded from the balance sheet alone — it would require prepayments/project-level money or massive equity issuance. This contingent liability is the single most important number in NuScale's finances and is barely discussed in the market narrative.</p>
+<p><strong>OKLO runway scenarios [AA]:</strong>
+- <em>Guided 2026 cadence</em> (−$520–650M/yr as per management's own FY26 guidance): <strong>~5 years</strong> → 2031.
+- <em>Construction acceleration</em> (−$650–800M/yr, Ohio campus FID, fuel facilities): <strong>~4 years</strong>.
+- Oklo has no contractual mega-obligations beyond the capex it chooses to spend; it disclosed <strong>no material commitments</strong> at Jun-30-26 [VF]. Its flexibility is real; so is the fact that every operating unit beyond ~2–3 will require project-level debt or partners, not just corporate cash.</p>
+<h2 id="63-dilution-the-clock-that-matters">6.3 Dilution: the clock that matters</h2>
+<p>Both companies are serial issuers, and the <em>price</em> of the next raise is more consequential than its existence:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shares FY25-end → now</td>
+<td>337.9M → <strong>429.7M (+27%)</strong> [VF]</td>
+<td>160.5M → <strong>~192.4M (+20%)</strong> [VF-derived]</td>
+</tr>
+<tr>
+<td>2026 issuance</td>
+<td>89.7M sh via ATM at <strong>$11.14 avg</strong>; +RSUs</td>
+<td>23.1M sh via ATM at <strong>$81.44 avg</strong> (Q1 ~$97; Q2 $63.51; Q3 ~$41) [VF-derived]</td>
+</tr>
+<tr>
+<td>New ATM capacity (unused) [VF/AA]</td>
+<td><strong>$750M</strong> (Aug-11-26)</td>
+<td><strong>$1.0B</strong> (Sep-11-26)</td>
+</tr>
+<tr>
+<td>If fully used at today's price</td>
+<td><strong>+125M sh (+22% of total)</strong> at $6</td>
+<td><strong>+33M sh (+15% of total)</strong> at $30</td>
+</tr>
+<tr>
+<td>Structural overhang</td>
+<td>Options 4.5M + RSUs 4.9M (anti-dilutive list)</td>
+<td>~1.7M RSUs granted H1 alone; options/RSUs ongoing</td>
+</tr>
+<tr>
+<td>The read</td>
+<td>Every ATM dollar sold below ~$11 destroys ~2× more equity value per dollar than the prior raise; at $5–8 the new program is a value-transfer machine — expect it used sparingly, if at all, until the stock recovers</td>
+<td>Q1 sales at ~$97 funded years of runway at minimal dilution; Q3 sales at ~$41 already 2.4× worse. Filling $1B at ~$30 (next raise price) costs ~+15% dilution — acceptable <em>if</em> deployment milestones hold; the ATM is the funding seam that must not tear</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Financing model to first commercial operations [AA]:</strong> NuScale needs roughly $0.3–0.8B of external funding between now and first RoPower module milestones (they can pace this), and materially more if US orders arrive; Oklo needs $0.5–1.0B more through first criticality at INL plus fuel infrastructure (2028–29), and multi-$B project structures beyond that. <strong>Both can survive the next 3–5 years on current resources; neither can reach scale on them.</strong> The differentiator is not solvency — it is whether the next 2–3 capital events are priced at $6 or $16 (SMR) / $30 or $55 (OKLO).</p>
+<p><em>Cross-check against the sell-side/consensus view:</em> Oklo FY26 FCF consensus −$522M [3P] vs the company's disciplined "no material commitments" posture — the swing factor is entirely management's capital-deployment pace, which gives them the option to slow down if financing markets close. NuScale has no such option on the ENTRA1 milestones if ENTRA1 converts its agreements: the payments are contractual triggers, not discretionary capex.</p>
+<h1 id="7-valuation-framework-and-bearbasebull-scenarios">7 — Valuation framework and bear/base/bull scenarios</h1>
+<blockquote>
+<p><strong>Nota (27-oct-2026):</strong> las bandas de <strong>OKLO</strong> de esta sección (v2) han sido sustituidas por el modelo v3 de <code>OKLO_update_2026-10-26.md</code> §10: <strong>bear $7–8 / base $10–12 / bull $17–20, ponderado ~$11.40</strong>. Las bandas de SMR no cambian.</p>
+</blockquote>
+<p><strong>Why not a conventional DCF as the primary method.</strong> Both companies have zero-to-de-minimis revenue, binary licensing/construction milestones, and capital structures that will change (raises) before any steady-state cash flow exists. A 10-year unlevered DCF anchored on guessed 2035 volumes would look precise and be meaningless. The framework therefore is a <strong>risk-adjusted sum-of-the-parts with milestone probabilities</strong>: decompose value into (i) liquid resources, (ii) probability-weighted PV of the commercialization chain (per-module / per-unit economics × deployment count × discount), (iii) adjustments (contingent obligations, segment values), and express everything per <strong>fully diluted</strong> share under explicit future-financing assumptions. Project-level DCF-lite ("per-unit NPV") is used <em>inside</em> (ii), not for whole-company revenue projections. Every parameter is tagged [AA] and stress-tested in §7.4/§8.</p>
+<p><strong>Discount rate:</strong> 12%/yr throughout [AA] — long-duration, pre-revenue equity with binary milestones; the two vendors' own WACC estimates (17.25% SMR / 10.9% OKLO per [3P] aggregators) bracket it. Changing this to 10% or 15% moves the per-module/unit NPVs by roughly ∓10–15% — material but second-order versus deployment-count assumptions, which are the dominant value driver (see §8).</p>
+<h2 id="71-sum-of-the-parts-sotp-decomposition-todays-dollars">7.1 Sum-of-the-parts (SOTP) decomposition, today's dollars</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(i) Liquid resources (Jun-30-26, +Q3 est. OKLO)</td>
+<td><strong>$1,886M</strong> [VF] ($4.30/FD sh)</td>
+<td><strong>~$3,150M</strong> [VF/AA] (~$15.6/FD sh)</td>
+</tr>
+<tr>
+<td>(ii) PV of commercialization chain in each scenario</td>
+<td>$0M bear / $255M base / $1,373M bull [AA]</td>
+<td>$0M bear / $241M base / $874M bull [AA]</td>
+</tr>
+<tr>
+<td>(iii) Adjustments</td>
+<td>Bear: −$800M (4y of $200M burn, then stop) +$100M salvage</td>
+<td>Bear: −$1,600M (4y of $400M burn) +$100M salvage; Base/bull: +$150M radioisotopes/fuel [AA]</td>
+</tr>
+<tr>
+<td>Contingent obligations quantified but NOT in base equity math</td>
+<td>ENTRA1 MC2+MC3 up to <strong>−$2,874M</strong> if binding docs signed for 72 modules → treated as a scenario event in §7.2/§8, not a base deduction</td>
+<td>None material (no commitments disclosed [VF])</td>
+</tr>
+<tr>
+<td>Equity value = (i)+(ii)+(iii)</td>
+<td>$1,186M / $2,291M / $3,559M</td>
+<td>$1,650M / $3,541M / $4,724M</td>
+</tr>
+<tr>
+<td>FD shares (scenario)</td>
+<td>439M / 477M / 522M</td>
+<td>217M / 232M / 238M</td>
+</tr>
+<tr>
+<td><strong>Fair value / FD share</strong></td>
+<td><strong>$2.70 / $4.81 / $6.81</strong></td>
+<td><strong>$7.60 / $15.26 / $19.82</strong></td>
+</tr>
+<tr>
+<td>vs price ($5.95 SMR / $29.72 OKLO)</td>
+<td><strong>−55% / −19% / +14%</strong></td>
+<td><strong>−74% / −49% / −33%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Round the bands: <strong>SMR $2.4–3.0 / $4.5–5.5 / $6–8.5</strong>; <strong>OKLO $7–10 / $14–17 / $18–24</strong> [AA]. Note the asymmetry: SMR's bull case can exceed today's price (+14% at mid); OKLO's cannot at any defensible parameter set we tested (§7.4 shows what would have to be true).</p>
+<h2 id="72-scenario-cards-assumptions-mechanics-what-must-happen">7.2 Scenario cards (assumptions → mechanics → what must happen)</h2>
+<h3 id="smr-nuscale-power">SMR — NuScale Power</h3>
+<p><strong>Bear (P ≈ 40% [AA]) — "certified design, no buyers."</strong> RoPower fails to secure financing for pre-EPC (the gating item <em>per the company's own filing</em> [VF]) and the Oct-2026 risk-sharing impasse hardens past its ~Nov-9 window (≥60% staff-cut proposal; "technology reassessment" signaled [T2]); no US COLA is filed; ENTRA1 signs nothing binding. NuScale rightsizes to ~$200M/yr burn and holds the portfolio; residual ≈ $1.1B equity. <em>Revenue/EBITDA:</em> services-only ~$5–15M/yr, EBITDA −$180M/yr through 2029. <em>Funding:</em> none new beyond ATMs as needed (value-neutral to negative at $6). <em>Permanent loss:</em> −55%. <em>Confirms:</em> RoPower formal stall or pivot to another vendor; pre-EPC not executed by mid-2027; COLA docket stays empty.</p>
+<p><strong>Base (P ≈ 45%) — "Romania happens, America waits."</strong> RoPower closes financing 2027-28 (Romanian state + export credit), pre-EPC (up to 15 months [VF]) starts; 6 modules delivered by ~2034; first US COLA filed ~2027-28 but no construction; services/annuities begin. <em>Revenue:</em> ~$25–60M/yr by 2029-30 (pre-EPC/licensing), rising to $120–200M by 2034; EBITDA negative until ~2032. <em>Funding:</em> ~$0.3B raise at ~$8 [AA]. <em>Fair value $4.5–5.5 — i.e., the stock is roughly fairly valued here.</em></p>
+<p><strong>Bull (P ≈ 15%) — "the COLA era begins."</strong> A US client (ENTRA1/TVA-linked or data-center utility) files a COLA referencing US460 by 2027; RoPower FID; 24–36 modules contracted across US+Romania by 2033; the MC2/MC3 milestone payments become a <em>cost of a real order book</em> rather than a bonfire. <em>Revenue:</em> $80M→$400M+ 2030→2034; EBITDA $60–130M by 2034. <em>Funding:</em> ~$1B at ~$12 (+83M shares — better pricing, ~half the dilution of raising at $6). <em>Fair value $6–8.5.</em> <strong>Even the bull case no longer justifies the prior pass's $30: that earlier number implicitly credited NuScale with module economics roughly 3× what the disclosed ENTRA1 fee architecture implies, and ignored 2026's ~27% share-count inflation.</strong></p>
+<h3 id="oklo-oklo-inc">OKLO — Oklo Inc.</h3>
+<p><strong>Bear (P ≈ 35%) — "regulatory clock slips."</strong> NRC review extends, DOE pilot doesn't reach criticality before 2030; no unit operating through 2031; burn runs ~$400M/yr for four years (construction slowed, not stopped); residual ≈ $1.55B equity. <em>Revenue:</em> isotopes only, &lt;$10M/yr through 2031. <em>Permanent loss:</em> −74% from spot. <em>Confirms:</em> docket slippage, INL construction halt, another raise below $35.</p>
+<p><strong>Base (P ≈ 45%) — "first criticality, slow roll."</strong> INL Aurora reaches first power 2028-29 (management's published target is 2028 [MC]); Pike County (Meta prepayment mechanism [VF]) starts construction by 2029-30; 4–6 units by 2032-33; fuel/isotope lines contribute early revenue; ~$1.2B raised at ~$40. <em>Revenue:</em> $30–60M by 2030-31 → $150–250M by 2034; EBITDA reaches positive ~2031, $50–100M by 2034. <em>Fair value $14–17 — the stock looks expensive even if the base case lands.</em></p>
+<p><strong>Bull (P ≈ 20%) — "the platform works."</strong> INL criticality 2027-28 on schedule; multiple licenses; 12–16 units operating or under construction by 2033; recycling/isotopes + fuel become real segments; power delivered under premium 24/7 contracts. <em>Revenue:</em> $500–800M by 2034; EBITDA $250–350M. <em>Fair value $18–24.</em> <strong>For $29.72 to be justified, this bull case needs to be closer to ~65–70% likely <em>and</em> embedded unit economics near the high end — see §8.</strong></p>
+<h2 id="73-probability-weighted-values-and-sensitivity">7.3 Probability-weighted values and sensitivity</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>P(bear/base/bull)</th>
+<th>Weighted value</th>
+<th>vs spot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SMR</strong></td>
+<td>40/45/15</td>
+<td><strong>$4.27</strong></td>
+<td><strong>−28%</strong></td>
+</tr>
+<tr>
+<td>SMR</td>
+<td>35/45/20</td>
+<td>$4.47</td>
+<td>−25%</td>
+</tr>
+<tr>
+<td>SMR</td>
+<td>25/50/25</td>
+<td>$4.78</td>
+<td>−20%</td>
+</tr>
+<tr>
+<td><strong>OKLO</strong></td>
+<td>35/45/20</td>
+<td><strong>$13.49</strong></td>
+<td><strong>−55%</strong></td>
+</tr>
+<tr>
+<td>OKLO</td>
+<td>40/45/15</td>
+<td>$12.88</td>
+<td>−57%</td>
+</tr>
+<tr>
+<td>OKLO</td>
+<td>25/50/25</td>
+<td>$14.49</td>
+<td>−51%</td>
+</tr>
+</tbody>
+</table>
+<p>The weight-shifting barely moves the conclusion: SMR lands 20–28% below spot across plausible probability sets; OKLO lands 51–57% below. <strong>Making OKLO's weighted value reach its current price requires assigning ~55% to the bull case and ~$28+ to it</strong> — a view this evidence set does not support.</p>
+<h2 id="74-what-must-be-true-falsifiable-conditions-for-the-bull-cases">7.4 What must be true (falsifiable conditions for the bull cases)</h2>
+<ul>
+<li>SMR bull: RoPower financial close executed <strong>and</strong> a named US applicant files a COLA referencing US460 <strong>and</strong> NuScale's net economics per module (after ENTRA1 milestones) exceed ~$40M NPV. Falsify if: no RoPower closing announcement by mid-2027; no COLA docket entry by end-2027.</li>
+<li>OKLO bull: NRC license issued without material delay <strong>and</strong> ≥5 units (375+ MWe) operating or funded by 2033 <strong>and</strong> unit economics ≥ $90M NPV (requires capex discipline near $200-250M/unit and realized power prices ≥$85/MWh). Falsify if: first criticality slips past 2029; cap-ex per unit prints above ~$350M; additional raises occur below $30.</li>
+</ul>
+<h2 id="75-fully-diluted-per-share-math-why-every-scenario-divides-by-more-shares">7.5 Fully diluted per-share math (why every scenario divides by more shares)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FD today</td>
+<td>439.1M (429.7 out + 4.5M options + 4.9M RSUs) [VF]</td>
+<td>~202M (192.4M out + ~9M est. equity awards) [AA]</td>
+</tr>
+<tr>
+<td>Scenario FD</td>
+<td>439 / 477 / 522M</td>
+<td>217 / 232 / 238M</td>
+</tr>
+<tr>
+<td>Dilution from here in base</td>
+<td>+9% (base raise $0.3B @ $8)</td>
+<td>+15% ($1.2B @ $40)</td>
+</tr>
+<tr>
+<td>The denominator rule</td>
+<td>Any raise below $11.14 (the price of the last ATM dollars) is <em>value-destructive per dollar raised</em>; assume it anyway — the base case pays it</td>
+<td>The next $1B ATM is worth 40% fewer shares at $30 than the same program would have been at $75</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A closing honesty note</strong> (§8 expands): the probability-weighted figures above ($4.27 SMR / $13.49 OKLO) are <em>not</em> price targets — they are the midpoints of explicit, arguable input sets. A reader who believes US nuclear demand is underrated by ~2× should scale deployment counts (not unit economics) and will land at SMR ~$6–8 / OKLO ~$25–35. The report's key claim is not the decimals; it is that <strong>at today's prices, neither name offers a margin of safety against its own bear case, and OKLO requires the bull case at ~&gt;50% probability before it clears its cost of capital.</strong></p>
+<h1 id="8-reverse-valuation-what-is-the-market-pricing-in">8 — Reverse valuation: what is the market pricing in?</h1>
+<p>Method: subtract verified liquid resources from market capitalization to isolate the <strong>enterprise value the market assigns to the operating story</strong>, then divide by the modeled NPV of one unit of deployment to state the market's implied build-out. This does not claim the market is "wrong" — it makes the bet explicit. All reverse-math is [AA] given the unit-NPV assumptions from §7 (SMR $40M/module; OKLO $90M/unit central, with ranges).</p>
+<h2 id="81-smr-the-market-pays-for-17-modules-13-gwe-of-delivered-economics">8.1 SMR: the market pays for ~17 modules (≈1.3 GWe) of delivered economics</h2>
+<ul>
+<li>Market cap $2.56B − liquid $1.89B = <strong>EV ≈ $0.67B</strong>.</li>
+<li>At $40M NPV per 77 MWe module: <strong>≈ 17 modules ≈ 1.29 GWe</strong> of eventually-delivered, fully-economics-honored deployment.</li>
+<li>Reference points: RoPower's licensed scope = <strong>6 modules</strong> (462 MWe); the ENTRA1 "non-binding agreement relating to 72 NPMs" triggered the 2025 milestone accrual [VF]. So today's price ≈ <strong>RoPower's 6 modules + ~11 more</strong> — significantly better than "nothing," far short of the 72-module TVA-scale framework (which, at the same economics fully discounted to today, would be worth $1.63B of EV — the market pays ~41% of that).</li>
+<li>At the high end of our per-module range ($60M): ~11 modules priced in; at the low end ($25M): ~27 modules.</li>
+</ul>
+<p><strong>Consensus sell-side cross-check [3P]:</strong> average target $11.77 → implied EV ≈ $3.2B → <strong>≈ 79 modules</strong> at $40M each — i.e., the average analyst target prices effectively the entire announced 72-module framework as if delivered. Our view: that is the bull case sold as a base case. (UBS's $6 Sell target, by contrast, prices ~0 modules beyond cash — our bear case.)</p>
+<h2 id="82-oklo-the-market-pays-for-2-gwe-it-has-not-yet-broken-ground-on">8.2 OKLO: the market pays for ~2 GWe it has not yet broken ground on</h2>
+<ul>
+<li>Market cap $5.72B (at ~192.4M sh) − liquid ~$3.15B = <strong>EV ≈ $2.57B</strong> — and 45% of the market cap is net cash, meaning the market pays a <strong>$2.6B option premium</strong> on a company with $1.2M of H1-26 revenue.</li>
+<li>At $90M NPV per 75 MWe unit: <strong>≈ 29 units ≈ 2.14 GWe</strong> implied as eventually built, financed, and operating at our central economics.</li>
+<li>Reference points: Oklo's disclosed pipeline aggregates to <strong>&gt;12 GW of announced MSAs/MOUs</strong> (Switch, Equinix, hyperscaler and government letters — nonbinding, per §5). The market price therefore implies converting <strong>~15–20% of the announced pipeline at full modeled economics</strong> — or, equivalently, all of the first two announced campuses (Idaho INL + the 1.2 GW Pike County, Ohio campus) at 100% conversion with economics at/above central values.</li>
+<li>At $150M/unit (high-end economics): ~17 units ≈ 1.28 GWe. At $60M/unit (low): ~43 units ≈ 3.2 GWe.</li>
+</ul>
+<p><strong>Consensus sell-side cross-check [3P]:</strong> average target $75.38 → implied EV ≈ $11.3B → <strong>≈ 125 units ≈ 9.4 GWe</strong> at $90M each — the sell-side average prices a multi-gigawatt operating fleet before the first kilo-watt-hour has been sold. Piper's $55 ≈ 60 units; BofA's $80 ≈ 140 units. The lowest target found ($14, unnamed firm) ≈ cash + zero.</p>
+<h2 id="83-the-parity-table-what-each-price-level-implies">8.3 The parity table (what each price level implies)</h2>
+<table>
+<thead>
+<tr>
+<th>Price</th>
+<th>SMR implies (EV → modules)</th>
+<th>OKLO implies (EV → units)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear-case mid</td>
+<td>$2.7: EV ≈ −$0.7B → <strong>negative</strong> (cash-only + burns)</td>
+<td>$7.6: EV ≈ −$1.6B → <strong>negative</strong></td>
+</tr>
+<tr>
+<td>Weighted mid</td>
+<td>$4.3: EV ≈ $0.0B → ~0–1 modules</td>
+<td>$13.5: EV ≈ −$0.6B → negative</td>
+</tr>
+<tr>
+<td><strong>Current price</strong></td>
+<td><strong>$5.95: EV $0.67B → ~17 modules</strong></td>
+<td><strong>$29.72: EV $2.57B → ~29 units</strong></td>
+</tr>
+<tr>
+<td>Base-case mid</td>
+<td>$4.8: EV $0.2B → ~5 modules</td>
+<td>$15.3: EV $0.0B → ~0 units</td>
+</tr>
+<tr>
+<td>Bull-case mid</td>
+<td>$6.8: EV $1.05B → ~26 modules</td>
+<td>$19.8: EV $0.9B → ~10 units</td>
+</tr>
+<tr>
+<td>Sell-side avg</td>
+<td>$11.77 → ~79 modules</td>
+<td>$75.38 → ~125 units</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note the asymmetry the table exposes: SMR at spot sits between its base and bull; OKLO at spot sits ~50% above its own bull. That is the single clearest quantitative output of this whole exercise.</em></p>
+<h2 id="84-what-we-would-need-to-underwrite-the-optionality">8.4 What we would need to underwrite the optionality</h2>
+<p>For an investor whose goal is to own these call options at risk-adjusted prices (not the equity at any price):</p>
+<ul>
+<li><strong>SMR:</strong> at <strong>≤ $4.0–4.5</strong>, the buyer pays ≤ $0.2B for the licensing chain — roughly a 2:1 asymmetry to the bull band with the bear case ~−35%. At spot the asymmetry is inverted (−55% / +14%).</li>
+<li><strong>OKLO:</strong> at <strong>≤ $15–17</strong> the buyer pays ~$0–0.5B for a multi-gigawatt pipeline option with $3.1B of committed liquidity underneath. At spot, the option premium is ~$2.6B — a price that embeds execution the sector has never yet delivered (no advanced non-LWR reactor has ever received an operating license in the US).</li>
+</ul>
+<p><strong>The market-implied probability read.</strong> Inverting §7: at OKLO's $29.72, the market is paying roughly the bull case ($19.8) plus half again — i.e., it assigns ≈ 60%+ probability to a scenario (12–16 units built by 2033, premium economics) that requires two unbroken execution chains (NRC + construction + financing) and no macro relapses. At SMR's $5.95, the market assigns ≈ 50–60% to base-or-better outcomes, versus our 60% (base+bull = 60% at the 40/45/15 split — so SMR is roughly <em>fair</em> on probabilities and expensive only on magnitudes; OKLO is expensive on both).</p>
+<h1 id="9-catalyst-calendar-next-24-months">9 — Catalyst calendar (next 24 months)</h1>
+<p>Confirmed dates are [VF]; everything else is an expected window and labeled. "Surprise potential" = whether the outcome is a genuine unknown vs widely anticipated. Mechanism = how it transmits to equity value.</p>
+<h2 id="91-next-6-months-highest-density">9.1 Next 6 months (highest density)</h2>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>Company</th>
+<th>Event</th>
+<th>Type</th>
+<th>Direction if positive</th>
+<th>Mechanism</th>
+<th>Anticipation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2026-11-05 (confirmed)</strong></td>
+<td>SMR</td>
+<td>Q3-26 earnings + 10-Q (5pm ET call; consensus EPS −$0.11 [3P])</td>
+<td>Financial</td>
+<td>↑/↓</td>
+<td>First disclosure since Aug-11 ATM: any Q3 ATM usage, burn, RoPower commentary, ENTRA1 accruals, litigation update</td>
+<td>Scheduled; but the <em>content</em> (ATM usage at $6–8, RoPower setback acknowledgement) is not priced</td>
+</tr>
+<tr>
+<td><strong>~2026-11-10 (expected, not confirmed)</strong></td>
+<td>OKLO</td>
+<td>Q3-26 earnings + 10-Q (consensus EPS ~−$0.18 [3P]; options imply ±14.7% move [T3])</td>
+<td>Financial</td>
+<td>↑/↓</td>
+<td>Capex trajectory vs $400–500M guide; INL construction progress; ATM #3 usage; any customer conversions</td>
+<td>Scheduled; content unknown (ATM usage below $30 would confirm the dilution cadence)</td>
+</tr>
+<tr>
+<td><strong>2026-10-30 → 12-11 (confirmed schedule)</strong></td>
+<td>Both</td>
+<td>Russell December reconstitution (rank day Oct-30; effective Dec-11)</td>
+<td>Flows</td>
+<td>↓ risk for OKLO</td>
+<td>If OKLO is a Russell 1000 member (~$5.5B vs $5.7B June breakpoint), demotion to R2000 = mechanical selling; SMR (R2000) has no deletion risk</td>
+<td>Unresolved for OKLO (NOT FOUND); resolution itself is information</td>
+</tr>
+<tr>
+<td><strong>2026-10-10 → ~11-09 (30-day window)</strong></td>
+<td>SMR</td>
+<td><strong>RoPower: the single nearest binary.</strong> Resolution window on the Oct-10 impasse: risk-sharing terms; Romanian press reports ≥60% staff-cut proposal and "technology reassessment"; deadline ≈ Nov-9</td>
+<td>Commercial</td>
+<td>↑↑ / ↓↓</td>
+<td>A framework agreement de-risks the flagship; a formal stall/pivot-away kills the only non-US deployment and pushes the bear case</td>
+<td>The impasse is days old — barely priced; resolution direction is a coin flip with fat tails</td>
+</tr>
+<tr>
+<td>Q4-2026 (ongoing)</td>
+<td>OKLO</td>
+<td>Pike County site prep "slated to begin in 2026" [MC]; Groves-2 Forge planning under DOE Launch Pad</td>
+<td>Execution</td>
+<td>↑</td>
+<td>Visible pre-construction = schedule credibility for Phase 1 (2030 target)</td>
+<td>Moderately anticipated</td>
+</tr>
+<tr>
+<td>Any time (undated)</td>
+<td>Both</td>
+<td><strong>ATM usage disclosures</strong> (424B5 supplements / prospectus updates)</td>
+<td>Financing</td>
+<td>↓</td>
+<td>SMR $750M program at $6 = up to +125M shares; OKLO $1B at $30 = +33M shares</td>
+<td>Watched by niche; underappreciated as a <em>price-level</em> signal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="92-624-months-the-binary-layer">9.2 6–24 months (the binary layer)</h2>
+<table>
+<thead>
+<tr>
+<th>Window</th>
+<th>Company</th>
+<th>Event</th>
+<th>Direction</th>
+<th>Mechanism</th>
+<th>Anticipation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1-2027 (expected)</td>
+<td>SMR</td>
+<td>RoPower pre-EPC contract (up to 15 months from Feb-2026; conditional on financing) — or its abandonment</td>
+<td>↑↑ / ↓↓</td>
+<td>Pre-EPC = work restarts, revenue resumes, FID path reopens; failure = flagship dead, NRC/US becomes the only story</td>
+<td>The 8-K/PR flow around Nuclearelectrica board decisions will leak first</td>
+</tr>
+<tr>
+<td>H1-2027 (expected)</td>
+<td>SMR</td>
+<td>Romania/EXIM-DFC financing negotiation outcome ($3B/$1B LOIs are letters, not money)</td>
+<td>↑↑</td>
+<td>Financing close is <em>the</em> gating item per company filings</td>
+<td>Widely flagged; timing unknown</td>
+</tr>
+<tr>
+<td>Any time (undated)</td>
+<td>SMR</td>
+<td><strong>First US COLA filing referencing US460 (by ENTRA1-TVA consortium or other)</strong></td>
+<td>↑↑↑ (the single biggest re-rating lever)</td>
+<td>Converts "shelf-ware design" into "plant in licensing"; historically the sector pays up for docketed COLA (see BWRX-300 CP)</td>
+<td>Not expected by market before 2027-28; a 2026-27 filing would surprise positively</td>
+</tr>
+<tr>
+<td>Undated (pending)</td>
+<td>SMR</td>
+<td>ENTRA1–TVA definitive PPA (up to 6 GW program)</td>
+<td>↑↑</td>
+<td>Triggers MC2 milestone <em>payments by NuScale</em> (mixed: validates demand, costs cash) + unlocks COLA prep with customer</td>
+<td>"Advancing discussions" language since 2025 — market assigns modest odds</td>
+</tr>
+<tr>
+<td>~2027 (inference)</td>
+<td>OKLO</td>
+<td>Aurora-INL: DSA approval + DOE startup authorization → fuel load → criticality</td>
+<td>↑↑</td>
+<td>Follows the Groves pattern (~4 months from DSA to criticality, per Groves precedent); converts "construction" into "operating" claims</td>
+<td>No company date published (NOT FOUND) — schedule risk is unpriced both ways</td>
+</tr>
+<tr>
+<td>2027 (company slides)</td>
+<td>OKLO</td>
+<td>A3F fuel-fabrication equipment installation &amp; startup at INL</td>
+<td>↑</td>
+<td>Enables first core loading; reduces fuel-supply doubt</td>
+<td>Low profile</td>
+</tr>
+<tr>
+<td>Undated</td>
+<td>OKLO</td>
+<td><strong>NRC licensing application for commercial fleet (COLA or Part 53/57 pathway)</strong> — currently "evaluating timing and form"</td>
+<td>↑↑</td>
+<td>Until an NRC application exists, the fleet (Ohio, Eielson, beyond) has no regulatory path; docketing ≈ sector-validation event</td>
+<td>Market loosely assumes "2027-28"; company has said nothing specific</td>
+</tr>
+<tr>
+<td>Undated (negotiation)</td>
+<td>OKLO</td>
+<td>Centrus LOI → definitive HALEU contract (deliveries from 2029; prepayment terms open)</td>
+<td>↑</td>
+<td>Fuel certainty for up to 5 units; prepayments would consume cash now</td>
+<td>LOI signed Jun-2026; conversion timing unknown</td>
+</tr>
+<tr>
+<td>2027 mid (expected)</td>
+<td>Both</td>
+<td>FY26 10-Ks (Feb–Mar 2027): commitments table, control persons, litigation, PMA note</td>
+<td>Mixed</td>
+<td>The most information-dense filings of the cycle</td>
+<td>Fully expected</td>
+</tr>
+</tbody>
+</table>
+<h2 id="93-beyond-24-months-context-anchors-not-catalysts">9.3 Beyond 24 months (context anchors, not catalysts)</h2>
+<ul>
+<li>OKLO: Ohio Phase 1 "as early as 2030"; full 1.2 GW "by 2034"; Centrus HALEU deliveries begin 2029 [MC].</li>
+<li>SMR: RoPower first module COD target 2033 [T2].</li>
+<li>Both: any first commercial power sale (the event the entire secular story references) is &gt;24 months away. <strong>Nothing in this calendar produces recurring revenue before 2029.</strong></li>
+</ul>
+<h2 id="94-how-to-read-this-calendar-as-a-trader-vs-an-analyst">9.4 How to read this calendar as a trader vs an analyst</h2>
+<p>For a trader, the near-dated items with genuine unknowns are: the <strong>two earnings prints</strong> (ATM usage at low prices + RoPower language) and the <strong>Russell recon</strong> (Dec-11, OKLO demotion risk). For an analyst/underwriter, the <em>only</em> events that change the long-term fair value materially are the five bolded binaries (RoPower resolution; US COLA filing; TVA PPA; OKLO DSA/criticality; OKLO NRC application). Everything else is noise between binaries — and the price today embeds outcomes for several of those binaries that have not yet begun to be earned.</p>
+<h1 id="10-red-team-risk-assessment-the-strongest-bear-cases-the-strongest-bull-cases-and-what-would-falsify-each">10 — Red-team risk assessment: the strongest bear cases, the strongest bull cases, and what would falsify each</h1>
+<h2 id="101-the-strongest-evidence-based-bear-thesis-smr-nuscale">10.1 The strongest evidence-based bear thesis — SMR (NuScale)</h2>
+<p><em>"The most successful licensing portfolio in SMRs, attached to a business model in which the company pays its own sales partner for hope."</em></p>
+<ol>
+<li><strong>The commercialization chain has not moved one link in 3.5 years.</strong> NRC certified the 50 MWe design in Jan-2023 and approved the 77 MWe US460 standard design in May-2025 — yet <strong>no customer has filed a combined license application to actually build one</strong> [VF, NRC docket 99902078 remains a pre-application docket; nothing docketed as of Oct-14-2026]. A design approval is a hunting license, not a business. The first COLA to reference an SDA is first-of-a-kind with unresolved regulatory questions (no rulebook for SDA→COLA design changes) — i.e., the hard part of licensing has not even started.</li>
+<li><strong>The ENTRA1 architecture pays out on announcements, not on revenue.</strong> $507.4M expensed (15% Milestone-1) triggered by a <em>non-binding</em> 72-module agreement; $259.9M of that settled in cash in H1-26; <strong>up to ~$2.87B more contractually triggered on binding PPAs/OEM docs — payable by NuScale to ENTRA1 regardless of whether the modules are ever built economically.</strong> Contractually, ENTRA1 "retains sole and full discretion to select, contract with, or purchase from NuScale" [VF, 10-Q] while NuScale needs ENTRA1's consent to pursue opportunities without it. This is, economically, a toll booth placed on NuScale's own commercialization by a private counterparty whose experience and qualifications are the subject of a securities class action (<em>Truedson</em>, amended Jul-10-26, adding ENTRA1 as defendant [VF]).</li>
+<li><strong>Revenue is going to zero, not up.</strong> H1-26 revenue $0.6M vs $21.4M H1-25; the Fluor FEED-2 work ended and nothing replaced it (done at a <em>negative</em> gross margin after a June-2026 price settlement with Fluor [VF]). FY26 consensus revenue ≈ $24M and falling [3P].</li>
+<li><strong>RoPower is stalling at the financing gate</strong> — by the company's own language: "We do not anticipate that RoPower will enter into a pre-EPC contract until they have secured financing… once a pre-EPC contract is entered into, we will recommence work" [VF]. Romania's Feb-2026 investment-decision approval authorizes <em>the search for financing</em> — not construction. Until Romanian/European money closes, NuScale's flagship project generates zero work.</li>
+<li><strong>Dilution arithmetic is brutal at $6.</strong> Shares +27% in nine months (337.9M→429.7M); a fresh $750M ATM sits armed (Aug-11); filling it at $6 adds ~125M shares (+29% of the post-issue count). Every raise at these prices converts financial runway into share-count expansion faster than it converts hope into contracts.</li>
+<li><strong>Governance drag:</strong> two live securities actions (federal class action re ENTRA1 disclosures + derivative suit stayed behind it [VF]); a securities-fraud <em>investigation</em> disclosed by Pomerantz LLP on Oct-13 (T3, unverified); Fluor exited completely (no controlling sponsor left); insiders own 0.33%. Offsetting: the board added Dr. Dale Klein, a former NRC Chairman, as a director in June 2026 [VF].</li>
+<li><strong>Valuation:</strong> at spot, bear −55%, bull only +14%. You are paid ~1:4 on the skew, in the wrong direction.</li>
+</ol>
+<h2 id="102-the-strongest-evidence-based-bear-thesis-oklo">10.2 The strongest evidence-based bear thesis — OKLO</h2>
+<p><em>"A $5.7B market cap for a company whose only approved deliverable is a pilot test — funded by selling stock into a falling market, at a cadence that says the plan costs more than it looks."</em></p>
+<ol>
+<li><strong>No commercial plant is licensed or built — and no NRC application is even pending for one.</strong> The 2020 Aurora COLA was denied in 2022; Oklo today is an NRC <em>pre-applicant</em> ("evaluating the timing and form of future NRC applications" [VF]) while the INL demonstration proceeds under <strong>DOE authorization</strong> — a pathway that covers the federal-site demo but not the commercial fleet. The one reactor that runs — Groves at Lockhart, Texas — is a <strong>15 MWt low-power isotope test reactor built under DOE's Reactor Pilot Program</strong> (first criticality 2026-08-05, ~11 months from groundbreaking [VF, DOE/company]). That is a genuine, impressive execution milestone <em>and</em> the strongest single bull datapoint in this report — but a DOE-authorized test reactor on private land is a categorically different licensing and engineering problem from an NRC-licensed 75 MWe power plant selling electricity on the grid; the company's own PR frames Groves as establishing "the operational foundation" for those future deployments, i.e., the future part has not happened yet.</li>
+<li><strong>The customer pipeline is nonbinding and top-heavy in one theme.</strong> Switch's "12 GW master agreement", Equinix, hyperscaler MOUs — these are MSAs/LOIs, not PPAs with take-or-pay; not one dollar of contracted revenue sits in the filings (RPO "not material" [VF]). The strongest binding artifact is a $25M refundable-style prepayment tied to a right of first refusal [VF].</li>
+<li><strong>Capital consumption is inflecting while the stock falls.</strong> H1-26 burn −$192M; FY26 consensus FCF −$522M; capex into construction ($126.9M H1, CIP $165M). Three ATM programs in twelve months raised $2.2B at <em>steeply declining</em> prices ($96.95 → $63.51 → ~$44 → spot $30): each new dollar costs 2–3× the shares of the prior dollar. A $1B program sits armed today.</li>
+<li><strong>Founders and CFO have sold in near-monthly tranches through the entire decline — with two tranches explicitly not under 10b5-1 plans</strong> [VF, Forms 4; see §3], while open-market insider purchases total zero. Management is diversifying out of its own story while telling the market to fund it.</li>
+<li><strong>The "greens" require manufacturing-grade cost discipline that has never existed in first-of-a-kind nuclear.</strong> At vendor-typical overrun rates (2–3× overnight cost is the historical norm — Vogtle, Flamanville, Olkiluoto), a $200–300M unit becomes $500–900M and the $90–150M/unit NPV becomes negative. Oklo's own filings carry no committed construction cost, no committed fuel contract (Centrus is an LOI), and a $1.68B Tennessee fuel-roadmap that is explicitly <strong>not committed</strong> [VF].</li>
+<li><strong>Valuation:</strong> at spot you pay $2.57B of enterprise value for the option — ~50% above the modeled bull ($19.8). The reverse math (125 units implied by the average sell-side target) should be read as evidence about the sell-side, not about OKLO.</li>
+</ol>
+<h2 id="103-the-strongest-bull-cases-and-the-assumptions-they-require">10.3 The strongest bull cases (and the assumptions they require)</h2>
+<p><strong>SMR bull.</strong> NuScale holds something no one else does: <em>two</em> NRC-approved SMR designs, and a US policy environment ordering 400 GWe of nuclear. If the first US COLA is filed by 2027 (ENTRA1/TVA or a data-center utility), the "no one has ever built one" discount starts closing; if RoPower closes financing, both flagship markets move simultaneously; services/annuity streams later add compounding. <em>Required assumptions:</em> (1) Romanian financing closes 2027; (2) a named US applicant files a US460 COLA; (3) NuScale's net economics per module survive the ENTRA1 milestone toll (i.e., module sale economics &gt; $150M revenue and &gt;30% gross margin). If (1)+(2) hold, ±$8–12 becomes reachable <em>before</em> any concrete is poured — the stock is a licensing-events vehicle, not a construction vehicle.</p>
+<p><strong>OKLO bull.</strong> The most integrated strategy in the space: own the plant, the fuel chain (recycling + fabrication), and the isotopes line; site at DOE Idaho with a cooperative host; deepest-liquidity balance sheet in advanced nuclear ($3.0B) giving ~5 years of optionality; a genuinely scarce commodity — <em>power that a hyperscaler can claim is 24/7 carbon-free</em> — in a market where data-center demand is still outstripping contracted supply, with pricing power at premium ($80–110+/MWh) levels; Meta's prepayment mechanism (Jan-2026 agreement) points to customers willing to fund deployment <em>before</em> delivery — the single most important de-risking structure in the space. <em>Required assumptions:</em> (1) NRC license issued without &gt;12-18 month delay; (2) first criticality by 2028-29; (3) unit capex lands ≤$300M and PPAs ≥$85/MWh; (4) no further equity issued below ~$30. If all four hold, the stock is plausibly worth $35–50 by 2029 on the <em>base</em> case of a 3-5 GW construction pipeline — but note three of those four are inside the company's control only partly.</p>
+<h2 id="104-falsification-evidence-specific-checkable">10.4 Falsification evidence (specific, checkable)</h2>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Falsified if (by date)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMR: RoPower is the viable flagship</td>
+<td>No financial-close or pre-EPC execution announcement by mid-2027</td>
+</tr>
+<tr>
+<td>SMR: US market is real for NuScale</td>
+<td>No COLA reference to US460 docketed by end-2027</td>
+</tr>
+<tr>
+<td>SMR: ENTRA1 economics tolerable</td>
+<td>A binding ENTRA1 doc triggers MC2 (&gt;$300M cash call) before any financed order; company issues &gt;50M shares at &lt;$8</td>
+</tr>
+<tr>
+<td>SMR: runway sufficient</td>
+<td>Any going-concern language; usage of the new ATM below $6.50 at scale</td>
+</tr>
+<tr>
+<td>OKLO: 2028 timeline credible</td>
+<td>No fuel-load authorization or construction photos/8-K milestone by end-2027; criticality slips beyond 2029</td>
+</tr>
+<tr>
+<td>OKLO: pipeline converts</td>
+<td>No binding PPA (with take-or-pay economics) signed by end-2027 among Switch/Equinix/hyperscalers</td>
+</tr>
+<tr>
+<td>OKLO: unit economics</td>
+<td>Disclosed first-unit cost &gt; $350M; realized power agreements &lt; $75/MWh equivalent</td>
+</tr>
+<tr>
+<td>OKLO: financing discipline</td>
+<td>A raise priced below $30 (ATM usage in Q4-26/Q1-27 at spot levels)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="105-temporary-vs-permanent">10.5 Temporary vs permanent</h2>
+<ul>
+<li><strong>Temporary (recoverable):</strong> sector de-rating/flows; NRC review extensions (6-18 months); a single delayed milestone; ATM dilution at moderate prices; interest-rate pressure on long duration.</li>
+<li><strong>Permanent (value-destroying):</strong> ENTRA1 architecture proving uneconomic (orders trigger large cash outflows <em>to</em> the partner before any cash flows in) — a structural value leak, not a timing issue; total collapse of RoPower financing (kills the only concrete non-US deployment); a major NRC contention/denial or licensing precedent setback; construction cost blow-out at INL beyond ~2× (kills OKLO's build-own-operate model economics); serial equity issuance at $30-and-down compounding (OKLO: ~15%/yr share-count growth while pre-revenue is a compound wealth tax); securities-litigation outcomes.</li>
+</ul>
+<h1 id="11-comparative-conclusions-key-uncertainties-and-scorecard">11 — Comparative conclusions, key uncertainties, and scorecard</h1>
+<h2 id="111-the-side-by-side-framework-with-the-assumptions-that-make-each-claim-true">11.1 The side-by-side framework (with the assumptions that make each claim true)</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th><strong>SMR</strong></th>
+<th><strong>OKLO</strong></th>
+<th>Notes / the assumption embedded</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology maturity</td>
+<td>Light-water, twice NRC-reviewed; standard LEU fuel</td>
+<td>Fast-spectrum metal-fuel design; one 15 MWt test reactor operating</td>
+<td>SMR's claim holds for <em>design</em> maturity; OKLO's for <em>demonstrated build</em> maturity</td>
+</tr>
+<tr>
+<td>Regulatory progress</td>
+<td>2 design approvals; <strong>no COLA filed by anyone</strong></td>
+<td>No NRC approval; <strong>DOE path for the demo only</strong>; no fleet application pending</td>
+<td>Neither holds commercial authorization; SMR holds more "referenceable" IP, OKLO holds more "operable" hardware</td>
+</tr>
+<tr>
+<td>Business model</td>
+<td>Licensing/services/equipment (toll-booth; asset-light)</td>
+<td>Build-own-operate (equity stake in plants; asset-heavy)</td>
+<td>SMR earns earlier if others build; OKLO earns more if it builds</td>
+</tr>
+<tr>
+<td>Commercial traction</td>
+<td>RoPower (conditional, stalled); ENTRA1–TVA nonbinding</td>
+<td>Meta prepayment mechanism (executed); 10-instrument LOI stack</td>
+<td>"Traction" here means logos and mechanisms, not obligations</td>
+</tr>
+<tr>
+<td>Revenue visibility</td>
+<td>~$0 today; fees restart when someone funds construction</td>
+<td>~$0 today; revenue starts ~2028-30 at earliest (targets)</td>
+<td>Both = zero for at least 2-3 years on any credible timeline</td>
+</tr>
+<tr>
+<td>Capital intensity</td>
+<td>Low at the company; high for its customers</td>
+<td>High at the company (owns plants; funds fuel infra)</td>
+<td>The mirror-image structures — why capital markets treatment has differed</td>
+</tr>
+<tr>
+<td>Cash runway</td>
+<td>3–7.5 yrs (scenario-dependent); $1.89B</td>
+<td>~4–6 yrs at guided cadence; $3.0B</td>
+<td>Both survive near-term; neither reaches scale without more capital</td>
+</tr>
+<tr>
+<td>Dilution risk</td>
+<td><strong>High</strong>: +27% shares in 9 months; $750M ATM at $6 ≈ +29% more</td>
+<td><strong>Moderate-high</strong>: ~$3.5B raised since mid-25; $1B ATM at $30 ≈ +15% more</td>
+<td>The single most certain future for both is more shares</td>
+</tr>
+<tr>
+<td>Fuel dependencies</td>
+<td>Standard LEU via Doosan chain (easier)</td>
+<td>HALEU/recycled/plutonium (harder; Centrus only an LOI; 5 MT EBR-II material on hand)</td>
+<td>OKLO's fuel story is more strategic <em>and</em> more fragile</td>
+</tr>
+<tr>
+<td>Time to first meaningful revenue</td>
+<td>RoPower modules ~2032+ (if close by 2027-28); US unset</td>
+<td>INL 2028 target; merchant revenue later; isotopes sooner (small)</td>
+<td>"Meaningful" = &gt;$50M/yr; nothing credible before 2029-30</td>
+</tr>
+<tr>
+<td>Long-term margins</td>
+<td>License/equipment margins (per-module NPV ~$25–60M; NOT FOUND primary)</td>
+<td>Owned-plant margins (NPV/unit ~$60–150M at $80–100/MWh, $200–300M capex)</td>
+<td>Both unproven; Romania cost data ($13–15k/kW all-in) warns</td>
+</tr>
+<tr>
+<td>Valuation / implied expectations</td>
+<td>EV $0.67B ≈ 17 module-equivalents ≈ 1.7× expected deployment value</td>
+<td>EV $2.6B ≈ 29 units at central economics ≈ 5.5× expected deployment value</td>
+<td>OKLO's price is the more demanding by ~3×</td>
+</tr>
+<tr>
+<td>Principal upside catalysts</td>
+<td>US COLA filing; RoPower close; ENTRA1–TVA PPA</td>
+<td>INL DSA/criticality; first binding PPA; fleet NRC application; Centrus definitive</td>
+<td>All undated; all unearned</td>
+</tr>
+<tr>
+<td>Principal downside risks</td>
+<td>No orders; ENTRA1 toll; ATM at low prices; litigation</td>
+<td>No license path for fleet; burn + dilution; nonbinding pipeline revealed as such</td>
+<td>Permanent-loss mechanisms quantified in §10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="112-conclusions-conditional-not-a-rating">11.2 Conclusions (conditional, not a rating)</h2>
+<ol>
+<li><strong>The structural difference is who bears construction risk.</strong> NuScale's model earns fees <em>before</em> construction but routes a large share of them to a private intermediary (ENTRA1) and cannot book revenue until someone else funds a build. Oklo bears the construction itself: higher ceiling, and its cash pile converts into <em>its own</em> assets rather than payments to a partner. In a slow world, SMR's structure leaks value (non-discretionary milestone payments); OKLO's mainly burns time.</li>
+<li><strong>Both are option-like, and the options are not cheap relative to their own arithmetic.</strong> SMR ≈ fair-to-slightly-rich at $5.95 (weighted ~$4.3–4.8, −20/−28%); OKLO ≈ rich (weighted ~$13–14.5, −51/−55%). Making OKLO's price reachable requires the bull case at majority probability — the market is doing the underwriting this evidence doesn't support yet.</li>
+<li><strong>Neither company is failing; both are early — the debate is price and structure, not existence.</strong> NuScale remains solvent for years with the sector's strongest licensing portfolio; Oklo has executed the sector's most impressive hardware milestone and owns the deepest balance sheet. The stocks crashed 83–89% because they were priced for outcomes that are still years unproven; at today's prices they remain priced for outcomes years unproven.</li>
+<li><strong>What we would do differently at different prices:</strong> SMR becomes a buy-the-option candidate at ≤$4.5 (asymmetry ~2:1 to bull with bear ~−35%); OKLO at ≤$15–17 (pays ~0 for the pipeline vs its $3B cash; bear ~−40%). At spot, discipline says <em>wait for the binaries</em> (COLA filing; RoPower resolution; INL criticality; first binding PPA) — they will resolve long before either stock must be owned.</li>
+</ol>
+<h2 id="113-key-uncertainties-ranked-on-top-of-company-execution">11.3 Key uncertainties (ranked, on top of company execution)</h2>
+<ol>
+<li><strong>US federal nuclear policy durability</strong> (DOE RPP/Launch Pad; Part 53/57; loan programs). Both equities carry a policy beta they do not control; 2026 showed the market will pay and then punish on policy headlines.</li>
+<li><strong>Rates &amp; long-duration equity appetite</strong> (10Y ~5.26% during the crash — the de-rating had a macro engine, not just company news).</li>
+<li><strong>The AI-power premium's persistence</strong> — if gas+grid deals keep winning data centers, the "premium for 24/7 new nuclear" compresses for everyone pre-revenue.</li>
+<li><strong>RoPower politics (Romania)</strong> — a sovereign-adjacent counterparty with its own election/electoral cycles and energy strategy.</li>
+<li><strong>ENTRA1 (private counterparty)</strong> — no published ownership, capital, or financials (NOT FOUND); it sits between NuScale and its customers in a way that concentrates disclosure risk. This is an unresolved structural unknown, not an accusation.</li>
+<li><strong>NRC review capacity/timing for first-of-a-kind SDA-referenced COLAs</strong> — no precedent; schedule is literally blacked out as proprietary in NuScale's own plan (the month figures in its Table 3-2).</li>
+</ol>
+<h2 id="114-scorecard-12-factors-010-aa-scoring-is-the-authors-judgment-shown-for-transparency">11.4 Scorecard (12 factors, 0–10) [AA — scoring is the author's judgment, shown for transparency]</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>SMR</th>
+<th>OKLO</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology/design credibility</td>
+<td>8</td>
+<td>5</td>
+<td>LWR certified twice vs novel fast design</td>
+</tr>
+<tr>
+<td>Regulatory position</td>
+<td>8</td>
+<td>4</td>
+<td>SMR's moat vs OKLO's DOE-only demo path</td>
+</tr>
+<tr>
+<td>Execution track record</td>
+<td>2</td>
+<td>7</td>
+<td>Nobody vs Groves</td>
+</tr>
+<tr>
+<td>Commercial traction</td>
+<td>3</td>
+<td>5</td>
+<td>RoPower-conditional vs Meta-executed + stack</td>
+</tr>
+<tr>
+<td>Revenue visibility</td>
+<td>2</td>
+<td>2</td>
+<td>Both ≈ $0</td>
+</tr>
+<tr>
+<td>Balance sheet</td>
+<td>7</td>
+<td>8</td>
+<td>$1.9B vs $3.0B; both no debt</td>
+</tr>
+<tr>
+<td>Cost position vs alternatives</td>
+<td>4</td>
+<td>4</td>
+<td>Unproven; Romania data warns SMR</td>
+</tr>
+<tr>
+<td>Management quality</td>
+<td>5</td>
+<td>6</td>
+<td>Licensing rigor vs build speed; both dilute heavily</td>
+</tr>
+<tr>
+<td>Governance/alignment</td>
+<td>4</td>
+<td>4</td>
+<td>Litigation/ENTRA1 vs founder sales cadence</td>
+</tr>
+<tr>
+<td>Dilution trajectory</td>
+<td>3</td>
+<td>4</td>
+<td>$6 ATM vs $30 ATM; both serial issuers</td>
+</tr>
+<tr>
+<td>Moat durability</td>
+<td>7</td>
+<td>5</td>
+<td>Design approvals vs integration</td>
+</tr>
+<tr>
+<td>Valuation vs own model</td>
+<td>5</td>
+<td>3</td>
+<td>SMR near-fair; OKLO 2× our bull</td>
+</tr>
+<tr>
+<td><strong>Total /100</strong></td>
+<td><strong>58</strong></td>
+<td><strong>57</strong></td>
+<td>A coincidental tie that hides opposite risk shapes (SMR: cheap-ish, no-demand; OKLO: demand-rich, expensive)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The three factors that matter most:</strong> ① for SMR — <em>conversion of regulatory approval into a filed application</em> (docket 99902078 is the whole story; check it monthly); ② for OKLO — <em>a licensable path for the commercial fleet plus a first binding PPA</em>; ③ for both — <em>the price of the next dilution</em> (SMR below $6.50 and OKLO below $30 would confirm the value-leak; a raise above those levels is a credible sign of institutional conviction).</p>
+<h2 id="115-what-would-change-this-whole-framework">11.5 What would change this whole framework</h2>
+<p>See §10.4 (falsification table) and §12 (monitoring dashboard). The short version: <strong>a docketed US COLA (either company), a RoPower financial close, an executed definitive HALEU contract, a first binding PPA with payment terms, or a financing round at a materially higher price</strong> — any two of those within 12 months would force a substantial upward revision of the deployment probabilities and therefore of fair value. Their absence through mid-2027 would validate the bear cases with equal force.</p>
+<h1 id="12-monitoring-dashboard-quarterly-kpis-and-leading-indicators">12 — Monitoring dashboard: quarterly KPIs and leading indicators</h1>
+<p>The dashboard is designed so that 10–15 minutes of quarterly work (plus 5 minutes monthly) tells you whether each thesis is strengthening or decaying <em>before</em> it shows up in reported revenue or earnings. Leading indicators first; reported financials last. Nothing here requires paid data.</p>
+<h2 id="121-nuscale-smr-kpi-table">12.1 NuScale (SMR) — KPI table</h2>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>Indicator</th>
+<th>Where</th>
+<th>Improving</th>
+<th>Deteriorating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weekly</strong></td>
+<td>NRC docket activity for NuScale pre-app/COLA (docket 99902078) — any new letter, RAIs, or a <em>filed COLA</em></td>
+<td>nrc.gov ADAMS</td>
+<td>A COLA or LWA submission appears (the single biggest re-rating event available to this stock)</td>
+<td>Docket stays empty past mid-2027</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>ATM usage: new 424B5 prospectus supplements / share count in Form 4 filings</td>
+<td>EDGAR</td>
+<td>No sales at $6–8; program stays unused</td>
+<td>Sales resume below $7 at scale</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Insider Form 4s (net purchases vs sales; 10b5-1 flags)</td>
+<td>EDGAR/OpenInsider</td>
+<td>Any open-market buy by an officer/director</td>
+<td>Continued sales (as in Jun–Oct 2026)</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Short interest (shares short, % float, DTC) + borrow fee</td>
+<td>Nasdaq/FINRA API; iborrowdesk</td>
+<td>Short covering on positive news (-20% shares short)</td>
+<td>New short extremes without news (usually anticipates a raise)</td>
+</tr>
+<tr>
+<td>Quarterly (10-Q)</td>
+<td><strong>Liquid resources</strong> (cash + ST inv + LT investments) and quarterly OCF</td>
+<td>10-Q</td>
+<td>OCF better than ~-$60M/q; liquidity stable</td>
+<td>OCF worse than -$100M/q ex-one-timers; liquidity &lt;$1.4B</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>ENTRA1 PMA accruals: any MC2/MC3 liability recognized, any new "binding" docs mentioned</td>
+<td>10-Q notes</td>
+<td>Nothing accrues because nothing became binding + company explains economics recoupment</td>
+<td>An MC2 accrual (&gt;$250M cash call pending) <em>before</em> any financed order</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>RoPower: pre-EPC signature, financing close, Nuclearelectrica disclosures</td>
+<td>Company PR / Romanian govt / Nuclearelectrica filings</td>
+<td>Financing secured; pre-EPC executed; LWA prep</td>
+<td>Silence past mid-2027; Romanian program defunded</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>Revenue + gross margin (currently negative) and RPO/backlog disclosures</td>
+<td>10-Q</td>
+<td>First meaningful pre-EPC/licensing revenue at positive margin</td>
+<td>Another zero-revenue quarter with falling liquidity</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>LLC Class B conversions / share count</td>
+<td>10-Q</td>
+<td>Conversions without cash cost (already ~95% converted)</td>
+<td>New ATM issuance at low prices</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>Litigation: Truedson class action MTD ruling; derivative stay status</td>
+<td>10-Q legal note; court docket</td>
+<td>Dismissal or narrowing</td>
+<td>Survives MTD into discovery with ENTRA1 attached</td>
+</tr>
+</tbody>
+</table>
+<h2 id="122-oklo-oklo-kpi-table">12.2 Oklo (OKLO) — KPI table</h2>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>Indicator</th>
+<th>Where</th>
+<th>Improving</th>
+<th>Deteriorating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weekly–Monthly</strong></td>
+<td>NRC combined-license docket: RAI count/style, review schedule, hearing requests</td>
+<td>nrc.gov ADAMS (Aurora COLA)</td>
+<td>RAIs answered on schedule; hearing requests denied</td>
+<td>Contentions granted; schedule slips</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>INL site progress: construction 8-Ks/photos, DOE pilot program updates, fuel-load authorization</td>
+<td>Company PR / DOE / INL</td>
+<td>Visible construction milestones; fuel-load date set</td>
+<td>Pace stalls; criticality target pushed past 2029</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>ATM usage pace and price ($1B program)</td>
+<td>EDGAR 424B5s</td>
+<td>Program unused &gt;2 quarters or used &gt;$35</td>
+<td>Material usage below $30</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Insider: founder/CFO sales pattern; any buys</td>
+<td>EDGAR</td>
+<td>Purchases (even small); sales halted</td>
+<td>New non-10b5-1 tranches</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Short interest and borrow fee</td>
+<td>Nasdaq/FINRA; iborrowdesk</td>
+<td>Covering into catalysts</td>
+<td>Short adds ahead of raises</td>
+</tr>
+<tr>
+<td>Quarterly (10-Q)</td>
+<td>Liquidity ($3.0B at Jun-30) and burn (OCF + capex): ~-$95M/q H1, FY26 guide -$400–500M capex</td>
+<td>10-Q / releases</td>
+<td>Burn ≤ plan; capex tracking $400-500M with visible assets</td>
+<td>Burn &gt; $175M/q or capex spike without asset progress</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td><strong>Customer conversion quality</strong>: any deal upgraded from MSA/LOI to binding PPA with take-or-pay or prepayment terms (Meta mechanism as template)</td>
+<td>8-K item 1.01 / 10-Q</td>
+<td>First binding PPA with chemistry/price disclosed</td>
+<td>Pipeline grows only by new MOUs; zero conversions</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>Fuel: Centrus LOI → definitive contract; DOE HALEU awards; fuel fab capex</td>
+<td>PR / DOE / 10-Q</td>
+<td>Definitive supply contract; prepayment agreement</td>
+<td>LOI expires; no fuel for the first units</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>Segment emergence: radioisotopes revenue, isotope bookings; fuel-recycling milestones</td>
+<td>10-Q segment note</td>
+<td>A second revenue line becomes real</td>
+<td>All zeros into 2027</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>Construction-in-progress ($165M Jun-30) and equipment deposits vs capex guide</td>
+<td>10-Q</td>
+<td>Monotonic CIP growth tied to named assets</td>
+<td>CIP stalls while cash burns</td>
+</tr>
+</tbody>
+</table>
+<h2 id="123-the-tripwire-shortlist-if-you-only-track-five-things">12.3 The "tripwire" shortlist (if you only track five things)</h2>
+<p><strong>SMR:</strong> ① NRC docket — does <em>anyone</em> file to build? ② RoPower financing close (yes/no). ③ ENTRA1 accrual events in the 10-Q. ④ ATM sales below $7. ⑤ MTD ruling.
+<strong>OKLO:</strong> ① NRC review pace (RAIs/schedule). ② First binding PPA with real payment terms. ③ Centrus → definitive contract. ④ Burn vs $400-500M capex guide with visible CIP. ⑤ Any raise below $30.</p>
+<h2 id="124-reporting-calendar-next-12-months">12.4 Reporting calendar (next 12 months)</h2>
+<ul>
+<li><strong>SMR Q3-26:</strong> 2026-11-05 (confirmed [VF]) — watch: ATM usage since Aug-11, burn, ENTRA1 notes, litigation update.</li>
+<li><strong>OKLO Q3-26:</strong> ~2026-11-10 (estimated [3P]) — watch: capex trajectory, INL progress language, ATM Q3/Q4 usage, any binding deals.</li>
+<li>Thereafter: FY26 10-Ks (Feb–Mar 2027) — full-year commitments tables; NuScale's PMA note is the must-read page in both.</li>
+</ul>
+<h1 id="13-sources-evidence-gaps-and-method-annex">13 — Sources, evidence gaps, and method annex</h1>
+<p><strong>Data cutoffs:</strong> SEC filings through 2026-10-14; market data intraday 2026-10-14 ~15:50–16:30 UTC; news/regulatory sweeps through 2026-10-14. Everything marked NOT FOUND was searched and not located; where an absence is itself a finding (e.g., no COLA docketed), it is stated as a negative-confirmed fact.</p>
+<h2 id="131-source-hierarchy-applied">13.1 Source hierarchy applied</h2>
+<p><strong>T1 (primary — relied on for all load-bearing facts):</strong> SEC EDGAR filings — NuScale: FY25 10-K (2026-02-26), 10-Qs Q1-26 (2026-05-07) and Q2-26 (2026-08-05), all 2026 8-Ks and 424B5s (2026-02-26, 2026-08-11; ATM lineage from FY23–FY25 filings), DEF 14A (2026-04-15), Forms 3/4/144, Schedules 13D/G; Oklo: FY25 10-K (2026-03-17), 10-Q Q1-26 (2026-05-12) and 10-Q/A (2026-06-17), 10-Q Q2-26 (2026-08-07), 8-Ks (2025-12-04, 2026-04-14, 2026-05-13, 2026-06-08, 2026-07-28, 2026-09-11), 424B5s (2025-12-04, 2026-05-13, 2026-09-11), Forms 4/144, 13D/A No.6, 13G/As. Regulators/government: NRC pages (NuScale US460 pre-application docket 99902078; Oklo Aurora pre-application docket 99902095; the 2022 denial of docket 52-049), Federal Register notices (US600 DC 2024-04-05; US460 SDA 2025-06-04), NRC ADAMS (ML25238A096, ML25315A019, ML26132A430, ML26021A199), DOE (Reactor Pilot Program pages; Groves criticality statement 2026-08-06), Centrus investor releases (2026-01-06, 2026-07-01). Exchange/regulatory market data: FINRA consolidated short-interest API; Yahoo Finance chart API; LSEG Russell reconstitution calendar.
+<strong>T2 (major secondary — used for events/context):</strong> World Nuclear News, POWER Magazine, ANS Nuclear Newswire, NucNet, Reuters (via syndication), Romanian outlets (Agerpres, Gândul, RO Times, Romania-Insider) for the Oct-2026 RoPower impasse; company-owned newsroom PRs (tier-1 when self-reporting an action, tier-2 when characterizing outcomes).
+<strong>T3 (vendor/aggregator — market-data cross-checks only, flagged in place):</strong> stockanalysis.com (S&amp;P Global feed), MarketBeat (Benzinga feed), TipRanks, Finviz, Benzinga, iborrowdesk (unreachable), Motley Fool/TIKR/Trefis commentary (narrative color only; never load-bearing).</p>
+<h2 id="132-evidence-gaps-not-found-consequences-noted">13.2 Evidence gaps (NOT FOUND — consequences noted)</h2>
+<ol>
+<li><strong>Oklo unit economics</strong>: no $/kW or LCOE target published by the company; no independent Oklo-specific cost estimate found. Consequence: §7's per-unit NPV ($60–150M) is an explicit [AA] band, and the reverse test reports ranges across it rather than a point.</li>
+<li><strong>NuScale module sale economics</strong>: no primary disclosure of per-module pricing/margins (only the ENTRA1 milestone pool implies magnitude). Consequence: same as above; noted wherever $40M/module is used.</li>
+<li><strong>Meta prepayment amount/price/term</strong> — undisclosed; <strong>ENTRA1 ownership, capital, principles</strong> — not found (a private counterparty; disclosure-risk item, not an accusation).</li>
+<li><strong>Borrow fees / shares available</strong> (iborrowdesk unreachable) and <strong>SMR options-implied move</strong> — not found.</li>
+<li><strong>Oklo Russell 1000 vs 2000 membership</strong> — unresolved (fetch blocked); demotion risk at the Dec-11 reconstitution flagged as inference.</li>
+<li><strong>Aurora-INL fuel-load/criticality dates; RoPower CNCAN schedule; UAMPS COLA withdrawal date; NuScale US460 COLA (none exists — negative confirmed); Oklo Q3-26 earnings date (not yet announced).</strong></li>
+<li><strong>CNCAN/licensing milestones for Doicești</strong> and EBRD involvement: not found.</li>
+<li>Several verification searches returned empty results from the search backend during compilation (rate limits) — those gaps reflect retrieval limits, not confirmed absence: Meta amount; Equinix capacity figure; DOE HALEU allocation to Oklo; "PROJ-0769" (all variants — the term appears to be erroneous; the real identifiers are the pre-application dockets above).</li>
+</ol>
+<h2 id="133-economics-annex-numbers-used-in-44-with-sources">13.3 Economics annex (numbers used in §4.4, with sources)</h2>
+<p><strong>Capex ($/kW overnight, as published):</strong> EIA/Sargent &amp; Lundy reference SMR (6×80 MW): <strong>$8,936</strong> (EIA AEO2025 capital-cost report, 2024-01); Lazard v19 (2026-07): nuclear <strong>$12,300–17,570</strong>, 84-month build; TVA 2025 IRP SMR: <strong>$17,949</strong> (2024$) [via IEEFA]; NuScale UAMPS arc: ~$9,964/kW (2015$) → <strong>$21,561/kW (2023$)</strong> [IEEFA 2024-05-29]; GEH BWRX-300 claim drift: $2,883 (2021) → $12,347 (2023$); Vogtle actuals &gt;$20,000/kW; RoPower implied (Romanian PM, 2026-02): <strong>$13,000–15,200/kW</strong> all-in.
+<strong>LCOE ($/MWh):</strong> EIA AEO2026 (2031 COD, incl. credits): gas CC <strong>$77.46</strong>, solar PV $58.33, wind $56.75, advanced nuclear <strong>$87.81</strong>. Lazard v19: gas CC $51–129, solar PV $40–98, solar+4h $61–156, large nuclear $175–255 (avg 215), <strong>SMR illustrative $214</strong>, nuclear restart <strong>$71</strong>. Takeaway stated in §4.4.
+<strong>Fuel:</strong> HALEU ~<strong>$15,000/kg</strong> (20% enrichment) vs ~$3,000/kg LEU; advanced fuel all-in up to ~$30,000/kg [independent, 2026-03]; SWU average $108.70 (+11% y/y); complete US ban on Russian enriched uranium from 2028; DOE HALEU demand up to 50t/yr by 2035 vs Centrus demo capacity 900kg/yr.
+<strong>Deals (no prices disclosed anywhere):</strong> Microsoft-Crane 835MW (2024), Amazon-Talen 1,920MW (2025), Meta-Clinton 1,121MW (2025), Google-Kairos up to 500MW (2025), Google-Constellation 890MW/$4.3B (2026-10-06), Amazon-Calvert Cliffs 690MW/&gt;$3B (2026-09-30); Oklo-Meta 1.2GW (2026-01) and Oklo-Equinix up-to-500MW LOI (2024-02).</p>
+<h2 id="134-method-caveats-read-before-using-the-numbers">13.4 Method caveats (read before using the numbers)</h2>
+<ul>
+<li>Scenario probabilities (P values) are the author's subjective constructions [AA], disclosed so the reader can swap in their own (the sensitivity table is shown precisely for that).</li>
+<li>The discount rate (12%) and per-unit NPV bands are judgments; deployment counts dominate outcomes (the report's central claim is robust across the unit-economics range tested).</li>
+<li>Prices are intraday on a day both stocks were still falling (−6 to −8%); any figure here will be stale within hours of publication.</li>
+<li>This is research for information only; it is not investment advice, and the author holds no position in any security mentioned.</li>
+</ul>
+<h1 id="appendices">Appendices</h1>
+<h2 id="a-what-must-go-right-the-critical-conditions-for-material-equity-value-increases">A. What must go right — the critical conditions for material equity-value increases</h2>
+<p><strong>NuScale (SMR) — 4 conditions:</strong> ① A named US customer files a combined license application referencing US460 (docket-filling — the single largest re-rating lever; nothing else compensates). ② RoPower resolves its risk-sharing deadlock (framework agreement; financing structured) and signs the pre-EPC, restarting work in Romania. ③ NuScale's economics survive the ENTRA1 toll — i.e., module-supply pricing/margins large enough that the ~$16M/NPM MC2 and 50% MC3 payments remain a fraction of a profitable order. ④ The next capital raise is priced materially above $7–8 (proof institutional money underwrites the chain at higher prices than 2026's ATMs).</p>
+<p><strong>Oklo (OKLO) — 4 conditions:</strong> ① INL Aurora completes the DOE path (DSA → startup authorization → fuel load → criticality) on a 2027-28 cadence, proving the industrial machine end-to-end. ② The company files (and survives the hearing process of) an NRC application creating a commercial <em>fleet</em> pathway — without it, Ohio and Eielson stay narrative. ③ A first <em>binding</em> PPA (Meta conversion or hyperscaler) with take-or-pay/prepayment chemistry that validates unit revenue economics. ④ The next equity/liquidity events price at ≥$35–40 (funding the build without compounding the 2026 share-count damage), and Centrus converts LOI → definitive fuel contract.</p>
+<h2 id="b-what-could-permanently-destroy-shareholder-value">B. What could permanently destroy shareholder value</h2>
+<ol>
+<li><strong>ENTRA1 structure proving value-destroying</strong> (SMR): if binding ENTRA1 docs trigger ~$16M+/NPM cash calls before NuScale books comparable economics, each order <em>destroys</em> equity value rather than creating it — a structural leak, not a delay.</li>
+<li><strong>Romania pivot</strong> (SMR): Nuclearelectrica already signals it "will reassess the SMR technologies" — replacement of NuScale would eliminate the flagship deployment and the credibility anchor of the non-US pipeline.</li>
+<li><strong>Serial dilution at falling prices</strong> (both): three ATMs in 12 months at $97→$30 (OKLO) and $23→$11→$6 (SMR) demonstrate the mechanism; the permanent loss arrives via the share-count denominator (OKLO +30%/yr, SMR +132%/yr in the worst stretch) even if operations improve.</li>
+<li><strong>Cost blow-out at first-of-a-kind builds</strong> (both): at the historical overrun distribution (≥2×), OKLO's owned-plant NPV goes negative and SMR's customers walk — the bear cases' arithmetic engine.</li>
+<li><strong>Regulatory setback for commercial fleets</strong> (OKLO): a contested hearing/discovery phase extending the license beyond ~2030 pushes first commercial revenue past the end of OKLO's current cash and the patience of any buyer at $3B of enterprise value.</li>
+<li><strong>Litigation outcomes</strong> (SMR): the Truedson class action (class period Mar-6-Nov-2025) surviving to discovery with ENTRA1/individuals attached creates headline and (in tail cases) damages risk layered on the dilution.
+NONE of these is a prediction — each is a live, identifiable mechanism with a monitoring proxy in §12.</li>
+</ol>
+<h2 id="c-what-would-change-the-thesis-measurable-milestones">C. What would change the thesis (measurable milestones)</h2>
+<ul>
+<li><strong>Upward revision triggers (any two)</strong>: US460 COLA docketed; RoPower framework agreement/financial close; first binding PPA with disclosed terms (either company); Centrus-Oklo definitive HALEU contract; an equity raise priced ≥$12 (SMR) / ≥$45 (OKLO); OKLO R1000 membership confirmed <em>and retained</em> at Dec-11.</li>
+<li><strong>Downward falsification triggers (any two)</strong>: RoPower formal termination/pivot; another SMR ATM tranche sold below $6; OKLO ATM#3 usage below $30; INL schedule slips past mid-2027 without DSA progress; founder sales accelerating past the current monthly cadence.</li>
+<li><strong>Neutralizers</strong>: sector-wide rate/AI-capex shocks move both names regardless of company evidence — treat macro-driven gaps ≥20% as non-informative about theses.</li>
+</ul>
+<h2 id="d-what-is-the-market-pricing-in-one-paragraph-synthesis-of-8">D. What is the market pricing in (one-paragraph synthesis of §8)</h2>
+<p>SMR at $5.95: EV ≈ $0.67B ≈ ~17 module-equivalents at the economics its own ENTRA1 payments imply — i.e., roughly "RoPower plus eleven more modules," ~1.7× our probability-weighted deployment value; consistent with the average sell-side target ($11.77) pricing the <em>entire</em> 72-module framework, and with UBS's $6 Sell pricing zero of it. OKLO at $29.72: EV ≈ $2.6B ≈ ~29 units (~2.1 GWe) of operating-equivalent value — ~5.5× our weighted deployment value, requiring the bull case at &gt;55–60% probability; the sell-side average ($75) implies ~125 units (~9.4 GWe), i.e., a majority of the announced 12 GW+ pipeline built. Read literally, the market still pays for execution that does not exist yet at either company, and pays ~3× more aggressively for OKLO's version of it.</p>
+<h2 id="e-what-should-be-monitored-quarterly-leading-indicators-full-tables-in-12">E. What should be monitored quarterly (leading indicators — full tables in §12)</h2>
+<p><strong>NuScale:</strong> ① NRC docket 99902078 — any COLA/LWA submission (the king indicator); ② RoPower financing/risk-sharing outcomes (Nuclearelectrica board releases; the ~Nov-9 window first); ③ 10-Q: ENTRA1 accrual events (MC2 = ~$16M/NPM triggers), liquidity, ex-MC1 burn (≈−$55–65M/qtr baseline), ATM usage and price; ④ insider Form 4/144 flow; ⑤ short interest and borrow fee.
+<strong>Oklo:</strong> ① DOE path progress at INL (DSA → readiness → startup authorization) and any published criticality date; ② NRC pre-application → <em>application</em> transition (Phase-2 audit completion is the precursor); ③ capex vs the $400–500M FY26 guide with visible CIP growth; ④ customer conversions (binding PPA or Meta prepayment bookings) and Centrus definitive contract; ⑤ ATM#3 usage price, founder-sale cadence, and the Dec-11 Russell reconstitution outcome.</p>
+<p><em>End of report.</em></p>
+</div>
+</body></html>

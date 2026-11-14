@@ -1,0 +1,1824 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HUMA · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>HUMA · 2026-10-13</span></div>
+<div class="wrap">
+<h1 id="humacyte-inc-nasdaq-huma-informe-de-inversion-y-forense-de-la-caida">HUMACYTE, INC. (NASDAQ: HUMA) — Informe de inversión y forense de la caída</h1>
+<p><strong>Fecha:</strong> 13 de octubre de 2026 · <strong>Cierre:</strong> $0.374 (mínimo 52s: $0.3633, marcado ese mismo día) · <strong>Market cap:</strong> ~$103.9M · <strong>EV:</strong> ~$90.9M · <strong>Shares:</strong> 277.8M · <strong>Consenso PT:</strong> $1.63 (6 analistas)</p>
+<p><em>Metodología: fuentes primarias (SEC EDGAR, FDA, ClinicalTrials.gov, prensa de la compañía) + fuentes de mercado. Etiquetas: <strong>FACT</strong> (verificable en la fuente citada) · <strong>EST</strong> (estimación del analista sobre datos FACT) · <strong>OP</strong> (opinión) · <strong>ASSUMPTION</strong> (supuesto de modelo). Evidencia: T1 (primaria) / T2 (secundaria reputada) / T3 (lead no verificado). Convención numérica: formato US (1,311.8). Nada de este informe es asesoramiento de inversión.</em></p>
+<hr />
+<h2 id="resumen-ejecutivo-10-lineas">Resumen ejecutivo (10 líneas)</h2>
+<ol>
+<li><strong>Qué es.</strong> FACT — Humacyte fabrica el único vaso sanguíneo humano bioingenierizado aprobado por la FDA (Symvess/ATEV, aprobación completa 19-dic-2024, trauma vascular de extremidad con vena autóloga no viable). Es una plataforma (mismo sistema produce ATEV 6mm, CTEV coronario) con un solo producto comercializado y ventas casi simbólicas (FY25 $2.0M; H1-26 $0.9M).</li>
+<li><strong>El binario que importa.</strong> El sBLA para acceso vascular en diálisis se filea en <strong>nov-2026</strong> (confirmado por la compañía tras discusiones con FDA); si obtiene revisión prioritaria, PDUFA ~<strong>may-2027</strong>; lanzamiento objetivo fin de Q2-2027. Casi todo el valor de la empresa depende de este evento y de su reembolso posterior.</li>
+<li><strong>La acción.</strong> Cerró a <strong>$0.374</strong> el 13-oct-2026: <strong>−78.7% en 1 año, −47% en 3 meses, −33% en 1 mes, YTD −62%</strong>, en mínimos de 52 semanas mientras XBI sube +40% en 1 año. La caída es <strong>abrumadoramente idiosincrática</strong> (100+ puntos de exceso vs sector y vs competidores).</li>
+<li><strong>Por qué ha caído (veredicto del forense, §9).</strong> Mezcla: <strong>(b) financiera</strong> dominante — cinco ampliaciones dilutivas en 21 meses a precios decrecientes ($5.28→$0.80→$1.05), shares +170% en 4 años, going concern explícito; <strong>(a) fundamental</strong> — conversión comercial lentísima (20 meses de aprobación a primer implante comercial) y Q2-26 que falló consenso (revenue $0.4M vs ~$1.1M, -63%); <strong>(e) técnica</strong> — Fresenius vendió ~4.7M acciones en agosto (9.5%→4.9%, vía plan 10b5-1), Nasdaq out-of-compliance de nuevo (deadline 27-ene-2027), sin dinero especialista (sin RTW/OrbiMed/RA Capital); <strong>no es (d) sectorial</strong>: XBI +21% YTD.</li>
+<li><strong>Financiero.</strong> Caja $80.3M (30-jun-26); burn neto ~$22-25M/trimestre; runway operativo ~3-4 trimestres antes de necesitar capital nuevo (duda sustancial de continuidad declarada por la compañía y el auditor). Sólo quedan ~272M de acciones autorizadas sin uso (vs 277.8M emitidas) → capacidad de diluir ~100% más sin nueva votación.</li>
+<li><strong>Costo de la dilución a estos precios.</strong> FACT/modelo — una emisión de $75-150M a $0.35-0.60 añadiría <strong>+214-250M acciones (+77-90%)</strong>. Cualquier tesis de precio objetivo debe dividirse por ~1.7× el número actual de acciones en horizonte 2-3 años.</li>
+<li><strong>Evidencia clínica.</strong> V007 (Lancet Digital Health, ago-2026) y V012 (interim, jun-2026): superioridad estadística en endpoints principales, pero con matices duros: más trombosis en ATEV, log-rank de patencia secundaria no significativo en V007, y en V006 el ATEV <strong>pierde durabilidad a 24 meses frente a ePTFE</strong> (67% vs 74%). El caso de uso defendible es el paciente de alto riesgo de fallo de fístula (mujeres; obesos/diabéticos), no toda la población de diálisis.</li>
+<li><strong>Comercial.</strong> 20 grandes sistemas hospitalarios en proceso de adopción en H2-26 (5-50 hospitales cada uno) y estrategia de cuentas nacionales para abrir ~1,000 hospitales adicionales; pero NTAP <strong>denegado</strong> (ago-2025) y precio de lista recortado 18% ($29,500→$24,250) ya señalan el problema estructural: hospitales que pierden dinero por caso. El ramp depende de reembolso, no de capacidad (planta dimensionada para 7,200 uds/año; ~100 vendidas desde el lanzamiento).</li>
+<li><strong>Escenarios (EST; §6).</strong> Bear $0.03-0.10 (30%) / Base $0.35-0.60 (45%) / Bull $1.30-2.00 (25%) → ponderado <strong>~$0.63 (+68%)</strong> vs $0.374, con probabilidad alta de drawdown previo por la ampliación pendiente. Consenso sell-side $1.63 de media (rango $0.50-Barclays a $4.00-HCW con solo 6 analistas): dispersión extrema, calidad baja.</li>
+<li><strong>Veredicto.</strong> <strong>HOLD especulativo / no comprar sin estómago para −60%.</strong> El precio ya descuenta fracaso parcial, pero la combinación "necesita capital + Nasdaq &lt;$1 + aprobación en mayo-27" mantiene el riesgo de ruina dilutiva en primer plano. Zona de compra con margen: <strong>$0.25-0.32 post-ampliación</strong>; sobreprecio &gt;$0.90 antes de la decisión FDA. Indicador que decide todo: <strong>que el filing de noviembre se haga y que la ampliación que lo financia se cierre a ≥$0.50 sin warrants depredadores</strong>.</li>
+</ol>
+<hr />
+<h2 id="1-negocio-y-producto">1. Negocio y producto</h2>
+<h3 id="11-que-es-symvess-el-atev-y-que-problema-resuelve">1.1 Qué es Symvess / el ATEV y qué problema resuelve</h3>
+<p><strong>FACT (T1 — FDA, ficha STN 125812/0; SBRA dic-2024; 10-K FY25)</strong> — Symvess es un <strong>conducto vascular humano acelular de ingeniería tisular</strong> (acellular tissue engineered vessel, ATEV): células de músculo liso vascular humano (línea celular de un único donante, exhaustivamente testada) cultivadas ~8 semanas sobre un andamio polimérico biodegradable en biorreactores, con estiramiento mecánico cíclico; después se <strong>descelulariza</strong> (se eliminan las células) y el producto final es una matriz extracelular humana tubular, sin células vivas ni material sintético permanente, conservada 2-8°C con <strong>caducidad de 36 meses</strong> (extensión autorizada por FDA el 9-sep-2026). Al implante, el organismo del paciente recelulariza el conducto. Es, en palabras del propio material regulatorio, un "vaso humano off-the-shelf": disponible en el quirófano sin cosechar vena del paciente.</p>
+<p><strong>Problema clínico (FACT):</strong>
+- <strong>Trauma vascular de extremidad:</strong> cuando una arteria de brazo/pierna se destruye (accidente, combate), la reparación estándar usa vena autóloga (safena) — que exige tiempo de cosecha, puede no existir/estar dañada, y en shock el paciente no aguanta. Alternativa: injertos sintéticos (ePTFE/Dacron) con altas tasas de infección en heridas contaminadas. El ATEV cubre el nicho "no hay vena utilizable y el injerto sintético tiene riesgo inaceptable de infección". Etiqueta aprobada: <em>adultos, lesión arterial de extremidad, revascularización urgente para evitar pérdida inminente del miembro, cuando el injerto de vena autólogo no es viable</em>.
+- <strong>Acceso vascular para hemodiálisis (indicación en desarrollo — el valor real):</strong> ~500,000 pacientes en diálisis en EE.UU. (PR Q2-26); el estándar es la fístula arteriovenosa (AVF) autóloga, que <strong>falla por no madurar en un 30-60% de casos en pacientes de alto riesgo</strong> (mujeres, obesos, diabéticos), obligando a catéteres (infecciones 6 vs 23 por 100 paciente-año en V012 a favor del ATEV) o a injertos sintéticos.</p>
+<h3 id="12-estado-regulatorio">1.2 Estado regulatorio</h3>
+<table>
+<thead>
+<tr>
+<th>Jurisdicción</th>
+<th>Estado</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EE.UU. — trauma de extremidad</td>
+<td><strong>Aprobado</strong> (BLA completa, 19-dic-2024; STN 125812/0; Priority Review; RMAT; designación de prioridad del Secretario de Defensa)</td>
+<td>FACT T1 — FDA/SBRA</td>
+</tr>
+<tr>
+<td>EE.UU. — diálisis (sBLA)</td>
+<td><strong>Filing previsto nov-2026</strong> (confirmado tras discusiones con FDA); solicitará revisión prioritaria; PDUFA estimado may-2027 (best case) o ago-2027 (review estándar)</td>
+<td>FACT/EST — PR 24-ago-26; call Q2-26</td>
+</tr>
+<tr>
+<td>Israel</td>
+<td>MAA aceptada abr-2026; revisión 180 días laborables → decisión ~Q1-2027</td>
+<td>FACT — PR Q2-26</td>
+</tr>
+<tr>
+<td>Arabia Saudí (KSA)</td>
+<td>Compromiso mínimo de compra $1.475M (educación/evaluación); JV/exclusividad expiró jul-2026 sin acuerdo firmado</td>
+<td>FACT — 10-K FY25; 10-Q Q2-26</td>
+</tr>
+<tr>
+<td>UE/EMA</td>
+<td>Sin expediente; solo elegibilidad para "scientific advice" confirmada. NOT-FOUND: presentaciones</td>
+<td>FACT (ausencia) — 10-K FY25</td>
+</tr>
+<tr>
+<td>Postmarketing (PMR/PMC)</td>
+<td>PMR pediátrico (informe jun-2029), PMR observacional 100+ pacientes (abr-2031), PMC estudio V005 (informe dic-2026) — compromisos con fechas duras</td>
+<td>FACT — SBRA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-pipeline-fact-clinicaltrialsgov-prs">1.3 Pipeline (FACT — ClinicalTrials.gov; PRs)</h3>
+<table>
+<thead>
+<tr>
+<th>Programa</th>
+<th>Indicación</th>
+<th>Fase</th>
+<th>Estado</th>
+<th>Próximo hito</th>
+<th>Rol en la tesis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V007 (NCT03183245)</td>
+<td>Diálisis vs AVF</td>
+<td>3</td>
+<td>Completado; publicado (Lancet Digital Health, 19-ago-26)</td>
+<td>Soporte del sBLA</td>
+<td>Evidencia pivotal</td>
+</tr>
+<tr>
+<td>V012 (NCT05908084)</td>
+<td>Diálisis en mujeres vs AVF</td>
+<td>3</td>
+<td>Interim positivo (jun-26); presentación late-breaking en ASN Kidney Week (21-25 oct-26, Denver)</td>
+<td>Datos completos 2027</td>
+<td>Base del sBLA</td>
+</tr>
+<tr>
+<td>V006 (HUMANITY, NCT02644941)</td>
+<td>Diálisis vs ePTFE</td>
+<td>3</td>
+<td>Completado (histórico)</td>
+<td>—</td>
+<td>Tercera pata + contra-evidencia (ver §1.5)</td>
+</tr>
+<tr>
+<td>CTEV CABG (NCT07730528)</td>
+<td>Bypass coronario</td>
+<td>2a first-in-human (N=10)</td>
+<td>IND aceptada jul-26; inicio previsto Q3-26</td>
+<td>Primeros implantes; datos ~2027-28</td>
+<td>"Lotería" de plataforma</td>
+</tr>
+<tr>
+<td>PAD (NCT02887859 y otros)</td>
+<td>Enfermedad arterial periférica</td>
+<td>2 completado; programa tardío en preparación</td>
+<td>Sin fase 3 pública fechada</td>
+<td>—</td>
+<td>Opción secundaria</td>
+</tr>
+<tr>
+<td>Pediatría (NCT07762313)</td>
+<td>Trauma pediátrico</td>
+<td>3 (PMR)</td>
+<td>No recluta aún</td>
+<td>Extensión de etiqueta 2027-28</td>
+<td>Bajo impacto comercial</td>
+</tr>
+<tr>
+<td>Fase 4 real-world (NCT07762794)</td>
+<td>Trauma extremidad</td>
+<td>4 (N=125)</td>
+<td>No recluta aún</td>
+<td>Evidencia para guías/reembolso</td>
+<td>Soporte de adopción</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-ventaja-competitiva-vs-autologo-sintetico-xenogenico">1.4 Ventaja competitiva (vs autólogo, sintético, xenogénico)</h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Vena autóloga</th>
+<th>ePTFE/Dacron</th>
+<th>Xenoinjerto</th>
+<th><strong>ATEV (HUMA)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilidad</td>
+<td>Cosecha; puede no existir</td>
+<td>Inmediata</td>
+<td>Inmediata</td>
+<td><strong>Inmediata ("off-the-shelf")</strong></td>
+</tr>
+<tr>
+<td>Infección</td>
+<td>Muy baja</td>
+<td>Alta (la debilidad clave)</td>
+<td>Moderada</td>
+<td><strong>Baja</strong> (0.9-2%; 0.93 vs 4.5%/año vs ePTFE en V006)</td>
+</tr>
+<tr>
+<td>Trombosis</td>
+<td>Baja</td>
+<td>Media-alta</td>
+<td>Media</td>
+<td><strong>Más que AVF en V007/V012</strong> (talón de Aquiles; requiere antiagregación)</td>
+</tr>
+<tr>
+<td>Durabilidad</td>
+<td>Alta si madura</td>
+<td>Media</td>
+<td>Media-baja</td>
+<td>Media-alta; <strong>pierde vs ePTFE a 24m en V006 (67% vs 74%)</strong></td>
+</tr>
+<tr>
+<td>Precio/lista</td>
+<td>Bajo (procedimiento)</td>
+<td>$1.5-3k</td>
+<td>$3-6k</td>
+<td><strong>$24,250 lista; ~$17.2k ASP neto</strong></td>
+</tr>
+<tr>
+<td>Evidencia</td>
+<td>Décadas</td>
+<td>Décadas</td>
+<td>Limitada</td>
+<td>RCT fase 3 publicado (V007) + meta-análisis trauma (JAMA Surgery: patencia secundaria 91.5% vs 78.9% sintéticos; amputación 4.5% vs 24.3%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura crítica (OP):</strong> el moat real es la <strong>combinación única de biología humana + disponibilidad inmediata + know-how de fabricación</strong> (15 familias de patentes; core ~2032 + PTE solicitada feb-2025; nadie más tiene un TEVG aprobado). Pero <strong>no compite por precio ni durabilidad bruta</strong>: contra ePTFE, un producto 5-10× más caro que pierde a 24 meses en la población general. Su caso de uso defendible: pacientes sin vena utilizable y/o alto riesgo de infección — un subsegmento, no "toda la diálisis". El competidor TEVG más cercano es <strong>Xeltis aXess</strong> (pivotal N=120 en curso, sin aprobación); Gore/BD (sintéticos) siguen siendo el estándar barato.</p>
+<h3 id="15-evidencia-clinica-clave-sin-el-filtro-del-departamento-de-comunicacion">1.5 Evidencia clínica clave — sin el filtro del departamento de comunicación</h3>
+<ul>
+<li><strong>V012 (mujeres, diálisis), interim jun-26 — FACT:</strong> +91 días sin catéter (220 vs 129; p=0.0007, endpoint primario cumplido); infecciones 6 vs 23/100 paciente-año; SAEs 1.73 vs 4.77. <strong>PERO:</strong> patencia secundaria a 12m 77.5% vs 62.5% con <strong>p=0.16 (no significativo)</strong>; trombosis superior en ATEV (0.75 vs 0.51/paciente-año); el día del anuncio la acción cayó −19.4% (el mercado ya lo había descontado o desconfió).</li>
+<li><strong>V007 (N=242, publicado ago-26) — FACT:</strong> "global relative patency" 1.17 (IC 1.04-1.31; p=0.009) — superioridad; patencia funcional 6m 81.3% vs 66.4%. <strong>PERO:</strong> log-rank de patencia secundaria <strong>no significativo (p=0.296)</strong>; <strong>trombosis 52.1% vs 9.1%</strong> en ATEV vs AVF (94% rescatables); 2 infecciones verdaderas de conducto (2%) vs 0; estudio no ciego; subgrupos con poca potencia.</li>
+<li><strong>V006 vs ePTFE (N=355) — FACT:</strong> patencia secundaria 12m similar (82% vs 80%) pero a <strong>24m el ATEV pierde: 67% vs 74%</strong>. Ventaja clara solo en infección (0.93 vs 4.5%/año). <em>El dato más incómodo de todo el expediente.</em></li>
+<li><strong>Trauma — FACT:</strong> pivotal de un solo brazo (N=54; patencia primaria 30d 67%, secundaria 72%; amputación 9%/15%). La mejor evidencia comparativa es externa (meta-análisis JAMA Surgery vs benchmarks históricos sintéticos). <strong>Boxed warning de fallo del injerto</strong> (ruptura/fallo anastomótico → hemorragia potencialmente mortal).</li>
+</ul>
+<h3 id="16-tam-realista-disciplina-obligatoria">1.6 TAM realista (disciplina obligatoria)</h3>
+<p>FACT — los vendors sitúan el mercado <strong>de dispositivos</strong> de grafts AV en ~$50.7M EE.UU. (Grand View 2023) a ~$285M global (Mordor 2026) o $535-720M (IntelMarket 2025-34). La cifra de "$2.8B/año de gasto en acceso vascular" es gasto total del sistema (fístulas, cuidados), no mercado de dispositivos. Trauma elegible: ~26,000 casos/año EE.UU. (estimación de la propia compañía; verificación independiente: NOT-FOUND). <strong>SAM realista a 5 años (EST): ~$300-700M/año entre diálisis de alto riesgo + trauma + PAD inicial — un orden de magnitud por debajo de las narrativas "multi-billion".</strong></p>
+<hr />
+<h2 id="2-comercializacion">2. Comercialización</h2>
+<h3 id="21-precio-estrategia-de-lanzamiento-y-estado-de-adopcion">2.1 Precio, estrategia de lanzamiento y estado de adopción</h3>
+<p><strong>FACT (T1 — 10-K FY25; PRs):</strong>
+- <strong>Precio:</strong> lista recortada de $29,500 a <strong>$24,250</strong> en jul-2025; ASP neto observado <strong>~$17.2k/unidad</strong> (Q1-26: 29 unidades = $0.5M). Programas de "precio introductorio" y facilidades de prueba activos en 2026 (call Q2-26).
+- <strong>Estrategia:</strong> lanzamiento (mar-2025) dirigido a ~200 Level I Trauma Centers con 12 vendedores. Tras un inicio flojo, <strong>reconstrucción comercial 2026</strong>: James Mercadante (CCO, desde abr-26) remodela el equipo ("relaciones profundas en cirugía vascular"), crea una <strong>figura de national accounts</strong> para abrir ~1,000 hospitales antes inaccesibles, simplifica el proceso de <strong>VAC (Value Analysis Committee)</strong> y ajusta incentivos de precio. Dr. Todd Rasmussen (ex-USAF) como Chief Surgical Officer para educación quirúrgica. [FACT — PR Q2-26; call 12-ago-26]
+- <strong>Adopción tangible:</strong> primer implante comercial post-aprobación solo en <strong>ago-2026</strong> (Dr. Jeromy Brink, Banner University Medical Center, Phoenix — 4 procedimientos en 2 semanas) — es decir, <strong>~20 meses desde la aprobación</strong>. A cierre de Q2-26, "al menos <strong>20 grandes sistemas sanitarios</strong> en proceso de incorporación en H2-26" (5-50 hospitales cada uno). [FACT — PR 18-ago-26; call Q2-26]
+- <strong>Unidades:</strong> FY25 <strong>61 unidades</strong>; Q1-26 <strong>29 unidades</strong>; Q2-26 no divulgadas (~24 est. por revenue/ASP). Contra una capacidad de planta de ~7,200/año, la utilización real es <strong>~1%</strong>.</p>
+<h3 id="22-dod-va-y-canales-publicos">2.2 DoD / VA y canales públicos</h3>
+<p><strong>FACT:</strong> designación de prioridad del Secretario de Defensa (PL 115-92); ~$6.8M en grants DoD históricos; listing ECAT/DLA (jul-2025) como canal de compra; <strong>la DoD Appropriations Act FY2026 incluye financiación dedicada</strong> para "evaluación e incorporación" de conductos biológicos (PR 9-feb-2026) — nótese: <strong>no es un contrato de compra cuantificado</strong> (sin importe público; tratar como pipeline, no ingresos). <strong>VA (may-2026): Symvess queda bajo contrato del VA Strategic Acquisition Center (SAC SING), accesible a 170 hospitales VA</strong> (PR 20-may-26; la acción subió +11.2% ese día). Programa humanitario Ucrania (V017: 93.8% patencia 30d, 0% infección). KSA: solo el compromiso mínimo de $1.475M con JV expirada sin acuerdo. [FACT — 10-K; PRs feb/may/jun/ago-26]</p>
+<h3 id="23-reembolso-el-cuello-de-botella-real">2.3 Reembolso — el cuello de botella real</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Estado</th>
+<th>Implicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ICD-10-PCS</td>
+<td>4 códigos New Technology Group 10, efectivos oct-2024</td>
+<td>Procedimiento codificable</td>
+</tr>
+<tr>
+<td>CPT</td>
+<td>35266/35286/35621-35671 + NDC</td>
+<td>Facturable</td>
+</tr>
+<tr>
+<td><strong>NTAP (pago adicional CMS)</strong></td>
+<td><strong>DENEGADO (ago-2025)</strong> por "falta de mecanismo de acción único", pese a solicitud oct-2024 + réplica jun-2025</td>
+<td><strong>Cada caso en Medicare puede ser pérdida neta para el hospital → frena el ramp</strong></td>
+</tr>
+<tr>
+<td>Presión de precios en diálisis</td>
+<td>Dirección reconoce "mucha presión a la baja en reembolso" de CMS y aseguradoras (call Q2-26)</td>
+<td>Riesgo sobre el ASP futuro en diálisis</td>
+</tr>
+<tr>
+<td>Estrategia activa</td>
+<td>Modelo de impacto presupuestario + datos de claims de Medicare (coste del catéter "$20-40k/año por paciente"); asesores nefrólogos (Kossmann ex-Fresenius, Roy-Chaudhury ex-ASN)</td>
+<td>Preparación de la batalla de reembolso para diálisis 2027</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura crítica (OP):</strong> la compañía insiste en que "solo ~4.3% de los pacientes objetivo de trauma son Medicare", pero el problema de los ~$17k que el hospital debe absorber con un injerto sintético de $2-3k disponible no desaparece: por eso el lanzamiento lleva 20 meses convertido en goteo (FY25 61 unidades; H1-26 ~53 unidades). El NTAP denegado + precio recortado es el mejor indicador adelantado de por qué las ventas no arrancan. <strong>La aprobación FDA en diálisis (may-27) sin una solución de pago adecuada repetiría el patrón.</strong></p>
+<h3 id="24-ingresos-trimestrales-de-symvess-y-comparacion-con-expectativas">2.4 Ingresos trimestrales de Symvess y comparación con expectativas</h3>
+<table>
+<thead>
+<tr>
+<th>Trimestre</th>
+<th>Producto</th>
+<th>Contrato</th>
+<th>Total</th>
+<th>Unidades</th>
+<th>Hito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 2025</td>
+<td>$147k</td>
+<td>$370k</td>
+<td>$517k</td>
+<td>5</td>
+<td>Primera venta comercial (mar-25)</td>
+</tr>
+<tr>
+<td>Q2 2025</td>
+<td>$100k</td>
+<td>$201k</td>
+<td>$301k</td>
+<td>n/d</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Q3 2025</td>
+<td>$703k</td>
+<td>$50k</td>
+<td>$753k</td>
+<td>n/d</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Q4 2025</td>
+<td>$439k</td>
+<td>$28k</td>
+<td>$467k</td>
+<td>n/d</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>FY2025</strong></td>
+<td><strong>$1.389M</strong></td>
+<td><strong>$649k</strong></td>
+<td><strong>$2.038M</strong></td>
+<td><strong>61</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Q1 2026</td>
+<td>$493k</td>
+<td>$2k</td>
+<td>$495k</td>
+<td>29</td>
+<td>Restructuring; spin comercial</td>
+</tr>
+<tr>
+<td><strong>Q2 2026</strong></td>
+<td><strong>$406k</strong></td>
+<td>$0</td>
+<td><strong>$406k</strong></td>
+<td>~24 est.</td>
+<td><strong>Miss de consenso (~$1.1M; -63%); EPS −$0.16 vs −$0.09 (−$0.07)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>[FACT — 10-Q/10-K/PRs; consenso vía Investing.com/MarketBeat]
+- <strong>Secuencialidad:</strong> Q2-26 cayó <strong>-18% vs Q1-26</strong> — el "trimestre de reconstrucción" (dirección dixit) no muestra todavía inflexión. La dirección proyecta que el efecto se verá "en la segunda mitad de 2026" (call 12-ago-26) y <strong>no da guidance formal</strong> de ingresos (NOT-FOUND en filings).
+- <strong>Consenso de la calle:</strong> FY26 $3.51M de media (rango $2.1-5.2M) → implicaría un H2 de ~$2.6M (≈5-6× el H1). FY27 $21.7M — <strong>asume la aprobación de diálisis</strong>. [EST — S&amp;P Global vía stockanalysis]</p>
+<h3 id="25-produccion-coste-unitario-y-trayectoria-del-margen">2.5 Producción, coste unitario y trayectoria del margen</h3>
+<p><strong>FACT (T1 — 10-K FY25; PR/10-Q Q2-26):</strong>
+- <strong>Capacidad:</strong> plataforma modular <strong>LUNA200</strong> en la planta de 83,000 sq ft de Durham (única instalación; finance lease hasta 2037). 8 sistemas instalados = <strong>~7,200 ATEV/año</strong> de capacidad bruta; espacio para 40 sistemas (~36,000/año). Un único lote de células madre (WCS) puede rendir 500k-1M de vasos. <strong>La capacidad NO es el cuello de botella — la demanda y el reembolso sí.</strong> Sin redundancia de planta ni de proveedores críticos (plasma SeraCare, malla Confluent: fuentes únicas).
+- <strong>COGS y margen:</strong> Q2-26 COGS $1.2M de los que solo <strong>$0.2M corresponden a unidades vendidas</strong>; el resto = reserva de inventario ($0.7M) + overhead de capacidad ociosa. H1-26: COGS $3.3M con $0.5M de coste de unidades (≈44% de margen bruto directo sobre $0.9M) + $2.3M de reservas + capacidad ociosa. <strong>Margen bruto reportado profundamente negativo</strong> (el GAAP TTM es -4,054% vía InvestingPro — un artefacto de dividir costes fijos por ventas microscópicas).
+- <strong>Punto de equilibrio (EST):</strong> con opex de caja ~$100M/año, se necesitan <strong>~$143-200M de ingresos anuales</strong> a 50-70% de margen bruto para cubrir opex. Con ~5,000 uds/año (~$86M a $17.2k) el caso base de 2030 <strong>no cubre la estructura</strong> — hacen falta diálisis con adopción real o recorte de costes adicional.
+- <strong>Trayectoria del margen (EST):</strong> direccionalmente mejora solo con volumen (absorción de overhead fijo) y con el programa de reducción de COGS prometido (lote CTEV ya fabricado a escala comercial mejora el aprendizaje). No hay target cuantificado público de costo/unidad (NOT-FOUND — 10-K).</p>
+<hr />
+<h2 id="3-situacion-financiera">3. Situación financiera</h2>
+<h3 id="31-resultados-y-burn-t1-10-k-fy25-10-qs-prs">3.1 Resultados y burn (T1 — 10-K FY25, 10-Qs, PRs)</h3>
+<table>
+<thead>
+<tr>
+<th>($M)</th>
+<th>FY2023</th>
+<th>FY2024</th>
+<th>FY2025</th>
+<th>H1 2026</th>
+<th>TTM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ingresos totales</td>
+<td>0</td>
+<td>0</td>
+<td>2.04</td>
+<td>0.90</td>
+<td>2.12</td>
+</tr>
+<tr>
+<td>— producto (Symvess)</td>
+<td>0</td>
+<td>0</td>
+<td>1.39</td>
+<td>0.90</td>
+<td>1.79</td>
+</tr>
+<tr>
+<td>— contrato/otros</td>
+<td>0</td>
+<td>0</td>
+<td>0.65</td>
+<td>0.00</td>
+<td>0.33</td>
+</tr>
+<tr>
+<td>COGS</td>
+<td>—</td>
+<td>0.0</td>
+<td>9.70</td>
+<td>3.27</td>
+<td>12.6</td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td>n/d</td>
+<td>88.6</td>
+<td>69.30</td>
+<td>37.61</td>
+<td>~69.5</td>
+</tr>
+<tr>
+<td>G&amp;A</td>
+<td>n/d</td>
+<td>25.8</td>
+<td>31.17</td>
+<td>15.96</td>
+<td>~31.2</td>
+</tr>
+<tr>
+<td>Pérdida operativa</td>
+<td>(96.9)</td>
+<td>(114.4)</td>
+<td>(108.1)</td>
+<td>(55.9)</td>
+<td>(110.5)</td>
+</tr>
+<tr>
+<td>Pérdida neta</td>
+<td>(110.8)</td>
+<td>(148.7)</td>
+<td>(40.8)*</td>
+<td>(54.4)</td>
+<td>(96.7)*</td>
+</tr>
+<tr>
+<td>OCF</td>
+<td>—</td>
+<td>(98.1)</td>
+<td>(105.0)</td>
+<td>(47.2)</td>
+<td>(97.2)</td>
+</tr>
+<tr>
+<td>Capex</td>
+<td>—</td>
+<td>(1.6)</td>
+<td>(0.9)</td>
+<td>(0.3)</td>
+<td>(0.4)</td>
+</tr>
+</tbody>
+</table>
+<p>* FY25 y TTM distorsionados por partidas <strong>no-cash</strong>: FY25 incluye +$59.5M de reevaluación del earnout, +$38.8M de derivados y −$22.3M de extinción de deuda; H1-26 incluye el efecto inverso (gasto no-cash por reevaluación en Q2: −$9.8M "other expense"). La pérdida operativa es la métrica limpia.</p>
+<p><strong>Burn trimestral (OCF+capex, FACT):</strong> Q1-25 −$28.8M → Q2-25 −$26.5M → Q3-25 −$24.0M → Q4-25 −$26.2M → Q1-26 −$25.3M → <strong>Q2-26 −$22.2M</strong> (mejorando por el restructuring de may-26: −45 empleados, ~$14.3M de ahorro anualizado).</p>
+<p><strong>Caja (FACT):</strong> $50.5M (31-dic-25) → <strong>$80.3M</strong> (30-jun-26; incluye $54M netos de la ampliación de junio). H1-26 fue <strong>cash-flow positivo en total ($+29.4M)</strong> solo por financiación; la operación sigue quemando ~$22-25M/trimestre. Cash actual estimado (post-Q3, sin nuevas emisiones): <strong>~$58-60M (EST)</strong> — no habrá cifra oficial hasta el 10-Q de Q3 (informe estimado: 11-nov-26).</p>
+<h3 id="32-deuda-y-vencimientos-t1-10-q-q2-26-10-k-fy25">3.2 Deuda y vencimientos (T1 — 10-Q Q2-26; 10-K FY25)</h3>
+<table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Importe</th>
+<th>Condiciones</th>
+<th>Vencimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Term Loan Avenue Venture (senior secured)</td>
+<td>$40.0M dispuestos (capacidad $77.5M)</td>
+<td>Interés ≥11.5%; interés-only hasta dic-2027 (dic-2028 si Tramo 2); luego 24 cuotas de $1.7M; fee final $2.4M; <strong>Tramo 2 $12.5M condicionado (ventana oct-26→mar-27); Tramo 3 $25M a discreción del prestamista</strong></td>
+<td>1-dic-2029</td>
+</tr>
+<tr>
+<td>Finance lease (planta Durham)</td>
+<td>$29.9M</td>
+<td>Implícito; hasta 2037</td>
+<td>mar-2037</td>
+</tr>
+<tr>
+<td>Maturities contractuales</td>
+<td>2026: $0 · 2027: $1.7M · 2028: $20.0M · 2029: $20.7M</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kickers de equity del préstamo:</strong> warrants por $5M nominales (4.27M acciones a <strong>$0.80</strong> — strike reseteado a la baja en mar-2026; un down-round clásico) + derecho de convertir $2.5M de principal a $1.04/acción. [FACT — 10-Q Q2-26 Nota 7]</p>
+<h3 id="33-runway-y-necesidad-de-capital">3.3 Runway y necesidad de capital</h3>
+<ul>
+<li><strong>Going concern (FACT, literal del 10-Q Q2-26):</strong> <em>"We will not have sufficient liquidity to fund our operations beyond one year… substantial doubt about the Company's ability to continue as a going concern."</em> Presente ya en el 10-K FY25 (filed 27-mar-26) y en ambos 10-Qs de 2026.</li>
+<li><strong>Runway operativo (EST):</strong> $80M / ~$23M por trimestre ≈ <strong>3-4 trimestres</strong> (~mediados de 2027), asumiendo burn estable y ningún otro ingreso relevante. La duda de continuidad obliga a financiarse <strong>antes</strong> de agotar la caja; la empresa lo hará (es su modus operandi).</li>
+<li><strong>Nueva ampliación: probabilidad ~95-100% en los próximos 2-3 trimestres (EST).</strong> Escenarios de tamaño: $75-150M. Con la acción a $0.374, cada $75M emitido a ~$0.35 añade <strong>+214M acciones (+77%)</strong>; $150M a $0.60 añadiría +250M (+90%). <strong>El precio de la próxima emisión es LA variable del accionista actual.</strong> [Cálculo: §6]</li>
+<li><strong>Vía probable:</strong> oferta pública/RDO post-filing del sBLA (nov-26) o twin-track con una eventual revalorización por ASN/PDUFA. Lincoln Park ($47.5M, línea de equity) llegó a su ventana de 24 meses en sep-2026 — sin uso en 2026 según el último disclosure (NOT-FOUND su estado actual). El ATM TD Cowen sigue vigente pero con prospectus suspendido desde mar-2026.</li>
+</ul>
+<h3 id="34-dilucion-historica-fact-covers-de-filings">3.4 Dilución histórica (FACT — covers de filings)</h3>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Acciones emitidas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31-dic-2023</td>
+<td>103.7M</td>
+</tr>
+<tr>
+<td>31-dic-2024</td>
+<td>130.0M</td>
+</tr>
+<tr>
+<td>31-dic-2025</td>
+<td>193.0M</td>
+</tr>
+<tr>
+<td>24-mar-2026</td>
+<td>222.0M</td>
+</tr>
+<tr>
+<td>10-ago-2026</td>
+<td><strong>277.8M</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>+168% desde finales de 2023; +45.8% interanual; +18.4% solo en Q2-26.</strong> Autorizado ampliado de 350M a <strong>550M</strong> en la junta de junio-2026 → <strong>~272M de acciones de margen de emisión sin nueva votación</strong> (≈98% del capital actual).</p>
+<p><strong>Levantamientos de capital 2024-2026 (FACT):</strong> mar-24 $43M @$3.00 · oct-24 $28M @$5.28 · nov-24 $14.9M @$5.34 · mar-25 $46.7M @$2.00 · ATM Jefferies ~$16.7M acumulado · oct-25 $56.5M @$2.11 · ATM TD Cowen $4.6M @$1.16 · <strong>mar-26 $18.3M @$0.80</strong> · <strong>jun-26 $53.8M netos @$1.05</strong> · préstamo Avenue $40M. <strong>~$290M levantados en 21 meses con la acción cayendo de $5.28 a $0.37 (−93%).</strong></p>
+<p><strong>Instrumentos vivos (FACT — 10-Q Q2-26):</strong> 42.8M warrants (los mayores: 28.4M RDO @$2.11; 4.27M Avenue @$0.80; 4.25M RDO 2024 @$5.28-5.34 — todos <strong>OTM</strong> a $0.374) + convert $2.5M @$1.04 + 17.4M opciones (WAEP $4.10; la mayoría OTM) + 1.05M RSUs + 15M earnout (triggers $15/$20 — irrelevantes) + <strong>warrants SPAC $11.50 expirados ago-2026 y deslistados (25-NSE 25-ago-26)</strong>. <strong>Nota crítica (OP):</strong> el overhang actual es mayoritariamente profundo OTM; la dilución que llega no son warrants, son <strong>emisiones nuevas a mercado</strong>.</p>
+<h3 id="35-accionistas-insiders-e-institucionales">3.5 Accionistas, insiders e institucionales</h3>
+<ul>
+<li><strong>Institucionales (FACT — 13F Q2-26 + 13D/G):</strong> ~26.9% del capital. Top: Vanguard 10.11M (+41% QoQ); Antipodes 10.10M (+77%); Alyeska 6.02M (nueva); <strong>Davidson Kempner 5.0M (nueva; grupo 12.79M = 4.74% vía 13G jun-26)</strong>; BlackRock 4.84M (−61% QoQ); Great Point 3.75M; AQR 2.60M; Geode (−40%); Citadel/Millennium/Susquehanna (quant). <strong>RTW, OrbiMed, RA Capital: NOT-FOUND — el dinero especialista biotech no está.</strong> Fresenius Medical Care (socio desde 2018): posición <strong>plana en 18.31M acciones de enero a agosto</strong> (los descensos de % — 9.5%→8.4%→6.8% — eran dilución); <strong>vendió 4,709,500 acciones entre el 10 y el 17 de agosto (@ $0.55-0.72) bajo plan 10b5-1 gestionado por Citigroup</strong>, quedando en 13.60M = 4.9% (por debajo del umbral de reporte desde el 17-ago; su ventana de venta llega hasta el 31-oct → oferta residual potencial sin obligación de divulgar). [FACT — 13D/As Nº6-11 + 13F Q2; T1]</li>
+</ul>
+<p><strong>Insiders (FACT — Form 4):</strong> propiedad ~3.6%.
+- <strong>Compras (el único apoyo visible):</strong> Keith A. Jones (director): +30k @$0.59 (17-ago), +10k @$0.69 (20-ago), +10k @$0.56 (14-sep) → 50k. Kathleen Sebelius +56,818 @$0.88 (19-may). Michael Constantino +11k @$0.89 (18-may). Importes simbólicos ($5-50k).
+- <strong>Ventas:</strong> CFO Sander y CMO Parikh −45,887 c/u @$0.90 (18-may) — <strong>no discrecionales: retención fiscal (<em>sell-to-cover</em>) por vesting de RSU</strong>, planes 10b5-1 de dic-2025. Niklason/Dougan: −2.24M acciones c/u @$1.67 (18-ago-2025); <strong>sin ventas de la CEO en 2026, y sin compras tampoco</strong>.
+- <strong>Nuevos directores (sep-oct 2026):</strong> Scott Coward (ex-CLO de Exact Sciences; comité de Auditoría) y Paul Kuznik (ex-CEO Bolton Medical/Terumo Aortic; comité Comercial) — nombrados 22-sep-26; cada uno recibió 125,000 opciones @$0.478 (6-oct-26, vesting 4 años). Kuznik ya poseía 222k acciones (Form 3). <strong>Lectura (OP): refuerzo de gobierno en vísperas de la fase de lanzamiento diálisis; señal cualitativa, no cuantitativa.</strong></p>
+<p><strong>Short interest (FACT/T2):</strong> ~29.4M acciones (10.6% del capital; 11.7% del float; days-to-cover ~6.3) al último settlement (~30-sep-26); venía de un pico de 44.8M en abr-2026 y 31.8M el mes anterior. Nunca ha habido un squeeze sostenido: cada pico de cortos fue absorbido por una emisión. Detalle en §7 y §9.</p>
+<hr />
+<h2 id="4-catalizadores-proximos-12-meses">4. Catalizadores (próximos 12 meses)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Fecha</th>
+<th>Evento</th>
+<th>Prob. (EST)</th>
+<th>Impacto</th>
+<th>Qué confirma / invalida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Jue 22-oct-2026, 16:40 MT</strong></td>
+<td>Presentación <em>late-breaking</em> del interim V012 en ASN Kidney Week (Denver; abstract TH-OR113; presenta Roy-Chaudhury/UNC)</td>
+<td>100% (evento)</td>
+<td>Bajo-medio (sin datos nuevos)</td>
+<td>Nuevo detalle sobre patencia/trombosis; escaparate KOL nefrología antes del filing. Si emerge un subgrupo "más débil de lo esperado": negativo</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>~11 nov 2026</strong></td>
+<td>Resultados Q3-26 (fecha estimada; no confirmada)</td>
+<td>—</td>
+<td>Medio</td>
+<td>Primer test del "ramp de H2": ingresos &gt;$1M = señal; &lt;$0.6M = deterioro; <strong>cifra de caja y nueva language de liquidez</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>nov 2026</strong></td>
+<td><strong>Filing del sBLA de diálisis</strong></td>
+<td>~85%</td>
+<td>Alto (+10-25%)</td>
+<td>Descarrilamiento = golpe severo a credibilidad y a la ventana 2027</td>
+</tr>
+<tr>
+<td>4</td>
+<td>dic-26/ene-27</td>
+<td>Aceptación FDA + decisión sobre revisión prioritaria</td>
+<td>~80% / 60%</td>
+<td>Medio</td>
+<td>Prioridad → PDUFA may-27; estándar → ago-27</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>cualquier momento (2-3 trimestres)</strong></td>
+<td><strong>Nueva ampliación de capital</strong></td>
+<td>~95%</td>
+<td>Negativo (−10-30%)</td>
+<td>Precio y términos: ≥$0.50 sin warrants = soportable; &lt;$0.35 = daño permanente. Overhang añadido: plan 10b5-1 de Fresenius activo hasta el 31-oct</td>
+</tr>
+<tr>
+<td>6</td>
+<td>27-ene-2027</td>
+<td><strong>Deadline Nasdaq (2ª carta)</strong>: recuperar $1.00 × 10 días o plan alternativo</td>
+<td>RS casi seguro si no hay rally</td>
+<td>Medio-alto</td>
+<td>Reverse split (ratio?) o traslado; dilución/operativa para el minorista</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Q1-2027</td>
+<td>Decisión Israel (MAA en revisión, 180 días laborables)</td>
+<td>~75%</td>
+<td>Bajo-medio</td>
+<td>Primera aprobación ex-EE.UU. — simbólico</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>may-2027 (best case)</strong></td>
+<td><strong>PDUFA sBLA diálisis</strong> (o ago-27 si review estándar)</td>
+<td>65-75% favorable</td>
+<td><strong>Muy alto (×2-3)</strong></td>
+<td>El binario que define la compañía. Etiqueta amplia = upside extra; CRL/retraso = colapso</td>
+</tr>
+<tr>
+<td>9</td>
+<td>abr-2027 (aprox.)</td>
+<td>Ventana Tramo 2 Avenue ($12.5M, condicionado a hitos)</td>
+<td>50%</td>
+<td>Neutro</td>
+<td>Si se dispone, señal de que se cumplieron hitos de revenue/liquidez</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2027</td>
+<td>Datos finales V012 (2 años) + PMC V005 (informe dic-26)</td>
+<td>75%</td>
+<td>Medio</td>
+<td>Consistencia con el interim; reversión = riesgo fantasma</td>
+</tr>
+<tr>
+<td>11</td>
+<td>2027-28</td>
+<td>Primeros pacientes/datos CTEV CABG (N=10)</td>
+<td>70% lectura / 40% positivos</td>
+<td>Muy alto si positivos</td>
+<td>El "lottery ticket" de plataforma; sin datos serios antes de 2028</td>
+</tr>
+<tr>
+<td>12</td>
+<td>continuo</td>
+<td>Contratos DoD/VA cuantificados; posible re-solicitud NTAP diálisis</td>
+<td>30-40%</td>
+<td>Medio-alto</td>
+<td>Órdenes concretas o pago CMS para diálisis cambiarían la curva de adopción</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas (OP):</strong> el calendario está <strong>cargado de financiación y regulatorio, no de datos clínicos nuevos</strong> (los de diálisis ya se conocen). El evento dominante es #8; el evento más probablemente dañino a corto plazo es #5 a precio bajo. La secuencia importa: si la ampliación se cierra <strong>después</strong> de un filing exitoso y con la acción estabilizada &gt;$0.50, el daño se reduce; si precede al filing (rumor de caja), se paga doble.</p>
+<h2 id="5-riesgos">5. Riesgos</h2>
+<table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Evidencia (FACT salvo marca)</th>
+<th>Severidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adopción lenta / conversión comercial</strong></td>
+<td>20 meses de aprobación al primer implante comercial; 61 unidades FY25; H1-26 $0.9M; Q2-26 -18% QoQ; "no tan rápido como esperábamos" (CEO)</td>
+<td><strong>Alta — el riesgo #1</strong></td>
+</tr>
+<tr>
+<td><strong>Reembolso</strong></td>
+<td>NTAP denegado ago-25; precio de lista -18%; presión CMS en diálisis reconocida por la dirección; sin pago adicional, el hospital pierde dinero por caso</td>
+<td><strong>Alta</strong></td>
+</tr>
+<tr>
+<td><strong>Financiación / dilución</strong></td>
+<td>Going concern explícito; ~$290M levantados en 21 meses a precios decrecientes; necesidad de $75-150M a ~$0.37 = +77-90% de acciones; 272M autorizadas libres</td>
+<td><strong>Alta</strong></td>
+</tr>
+<tr>
+<td><strong>Regulatorio (sBLA)</strong></td>
+<td>PoS 65-75% (EST); riesgo de etiqueta estrecha, PMRs adicionales, inspección de planta para la nueva indicación; precedente del retraso de 4.5 meses en el BLA original</td>
+<td>Media-alta</td>
+</tr>
+<tr>
+<td><strong>Competencia</strong></td>
+<td>ePTFE más barato y <strong>más duradero a 24m en V006</strong>; Xeltis aXess (pivotal en curso); Gore/BD pueden mejorar superficies antiinfecciosas</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>Manufactura</strong></td>
+<td>Planta única (Durham, NC); fuentes únicas de plasma y malla; historial de Form 483 (oct-2024) y litigio sobre calidad; riesgo de parada → negocio total</td>
+<td>Media (impacto extremo si ocurre)</td>
+</tr>
+<tr>
+<td><strong>Litigio</strong></td>
+<td>Cutshall (class action valores): MTD parcialmente denegada mar-26, <strong>los claims de seguridad del producto sobreviven</strong>; discovery activo desde jun-26; derivativas en <em>stay</em></td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>Nasdaq / estructura</strong></td>
+<td>Fuera de compliance de nuevo desde jul-26 (segunda carta); deadline 27-ene-27; reverse split casi inevitable al ritmo actual</td>
+<td>Media-alta (técnica/operativa)</td>
+</tr>
+<tr>
+<td><strong>Liquidez y volatilidad del minorista</strong></td>
+<td>Beta 2.44; precio $0.37; floats y volumes que amplifican movimientos; históricamente cada repunte fue absorbido por emisiones</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>Short interest</strong></td>
+<td>29-32M acciones (≈11% del float), DTC ~6: presión persistente pero <strong>nunca</strong> un squeeze real; no hay situación hard-to-borrow que fuerce un cierre violento</td>
+<td>Baja-media</td>
+</tr>
+<tr>
+<td><strong>Gobierno corporativo / capital allocation</strong></td>
+<td>5 rondas dilutivas sin partner estratégico; SBC ~$10M/año; evergreen plan +5%/año; compensación CEO $5.2M (2025) en año de −79% para el accionista</td>
+<td>Media</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escenarios-de-fracaso-concretos-assumption">Escenarios de fracaso concretos (ASSUMPTION)</h3>
+<ol>
+<li><strong>CRL / retraso del sBLA de diálisis (PoS fallo ~25-35%):</strong> emisión de emergencia &lt;$0.35 con warrants; equity a $0.10-0.20. </li>
+<li><strong>Aprobación sin reembolso (el escenario "sí pero no"):</strong> diálisis aprobada may-27 pero sin NTAP/pago adicional → ramp clónico del trauma (&lt;$10M/año a 2028) → dilución perpetua; equity $0.15-0.30.</li>
+<li><strong>Evento de seguridad post-aprobación:</strong> rupturas/infecciones a escala comercial → ampliación de boxed warning o retirada; −60-80% además de lo ya perdido.</li>
+<li><strong>Parada de manufactura (única planta):</strong> warning letter de la FDA durante el ramp → ingresos a cero temporal; reinicio incierto.</li>
+<li><strong>Reverse split + salida de índices:</strong> RS 1:5 o similar para Nasdaq; posibles ventas técnicas de fondos; cotización degradada.</li>
+</ol>
+<hr />
+<h2 id="6-valoracion">6. Valoración</h2>
+<h3 id="61-capitalizacion-ev-y-multiplos-fact-13-oct-2026">6.1 Capitalización, EV y múltiplos (FACT — 13-oct-2026)</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precio / 52 semanas</td>
+<td>$0.374 / $0.3633-1.895</td>
+<td>Mínimos de 52s marcados hoy</td>
+</tr>
+<tr>
+<td>Market cap</td>
+<td>~$103.9M</td>
+<td>277.8M sh × $0.374</td>
+</tr>
+<tr>
+<td>Caja (30-jun-26)</td>
+<td>$80.3M</td>
+<td>+$0.3M restricted</td>
+</tr>
+<tr>
+<td>Deuda (incl. lease)</td>
+<td>~$66.9M</td>
+<td>Term loan 36.3M carrying + lease 29.9M + otros</td>
+</tr>
+<tr>
+<td><strong>EV</strong></td>
+<td><strong>~$90.9M</strong></td>
+<td>mcap + deuda − caja</td>
+</tr>
+<tr>
+<td>P/S (TTM $2.12M)</td>
+<td><strong>~49×</strong></td>
+<td>Artefacto de revenue microscópico</td>
+</tr>
+<tr>
+<td>P/S forward (FY26E $3.5M)</td>
+<td>~30×</td>
+<td>Consenso S&amp;P Global</td>
+</tr>
+<tr>
+<td>P/S forward (FY27E $21.7M)</td>
+<td><strong>~4.8×</strong></td>
+<td><strong>Solo tiene sentido si diálisis se aprueba</strong></td>
+</tr>
+<tr>
+<td>EV/Sales TTM</td>
+<td>~43×</td>
+<td>vs comps launch-stage: 1-7×</td>
+</tr>
+</tbody>
+</table>
+<p><strong>La trampa del múltiplo:</strong> a TTM cualquier múltiplo es absurdo (49× P/S), y a FY27 (4.8×) es "barata" <strong>solo si</strong> el consenso (+519% de crecimiento) se materializa. Ambos números dicen lo mismo: el mercado paga opción sobre diálisis, no un negocio actual.</p>
+<h3 id="62-comparables-fact-stockanalysis-13-oct-26">6.2 Comparables (FACT — stockanalysis, 13-oct-26)</h3>
+<table>
+<thead>
+<tr>
+<th>Compañía</th>
+<th>Perfil</th>
+<th>EV</th>
+<th>P/S</th>
+<th>1A precio</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HUMA</strong></td>
+<td>TEVG aprobado, launch</td>
+<td>$0.09B</td>
+<td>49× (TTM) / 4.8× FY27E</td>
+<td><strong>−78.8%</strong></td>
+<td>Going concern; sin reembolso resuelto</td>
+</tr>
+<tr>
+<td>Artivion (AORT)</td>
+<td>Aorta/periférico, integrado</td>
+<td>$1.38B</td>
+<td>2.3×</td>
+<td>−47.0%</td>
+<td>El comparable vascular más cercano — también muy castigado</td>
+</tr>
+<tr>
+<td>LeMaitre (LMAT)</td>
+<td>Grafts/xeno, rentable</td>
+<td>$1.70B</td>
+<td>7.2×</td>
+<td>−3.6%</td>
+<td>Nicho rentable; múltiplo premium por calidad</td>
+</tr>
+<tr>
+<td>PROCEPT (PRCT)</td>
+<td>Medtech robot, ramp</td>
+<td>$0.95B</td>
+<td>3.3×</td>
+<td>−41.8%</td>
+<td>Launch-stage; de-rating sectorial medtech</td>
+</tr>
+<tr>
+<td>Treace (TMCI)</td>
+<td>Medtech pie, RPM</td>
+<td>$0.30B</td>
+<td>1.3×</td>
+<td>−30.8%</td>
+<td>Múltiplo de "medtech roto"</td>
+</tr>
+<tr>
+<td>TransMedics (TMDX)</td>
+<td>Ramp hipercrecimiento</td>
+<td>$3.16B</td>
+<td>4.1×</td>
+<td>−26.1%</td>
+<td>Ejemplo de ramp exitoso ya repreciado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura (OP):</strong> incluso los comparables más castigados (AORT −47%, PRCT −42% en 12 meses) están <strong>30 puntos por encima</strong> de HUMA. El mercado ha decidido que HUMA cotiza como <strong>opción de capital riesgo con riesgo de financiación</strong>, no como medtech en ramp.</p>
+<h3 id="63-escenarios-a-2031-estassumption-modelo-en-val_modelpy">6.3 Escenarios a 2031 (EST/ASSUMPTION — modelo en <code>val_model.py</code>)</h3>
+<p>Supuestos comunes: descuento 25%/año; exit 2031; net cash actual $13M; ventas "pico" 2031; múltiplos de exit sobre ventas; <strong>la dilución se modela explícitamente</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>BEAR (30%)</strong></th>
+<th><strong>BASE (45%)</strong></th>
+<th><strong>BULL (25%)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tesis</td>
+<td>sBLA rechazado/retrasado ≥2029; trauma estancado; 2 ampliaciones de emergencia</td>
+<td>Aprobación 2027 con etiqueta de alto riesgo; ramp lento pero real</td>
+<td>Etiqueta amplia + adopción rápida + PAD asomando</td>
+</tr>
+<tr>
+<td>Ventas 2031</td>
+<td>$8M</td>
+<td>$120M</td>
+<td>$300M</td>
+</tr>
+<tr>
+<td>Margen bruto implícito</td>
+<td>&lt;20% (subescala)</td>
+<td>55-60%</td>
+<td>60-70%</td>
+</tr>
+<tr>
+<td>Múltiplo exit</td>
+<td>2.5×</td>
+<td>4.0×</td>
+<td>6.0×</td>
+</tr>
+<tr>
+<td>EV 2031</td>
+<td>$20M</td>
+<td>$480M</td>
+<td>$1,800M</td>
+</tr>
+<tr>
+<td>PV del EV (25%)</td>
+<td>$7M</td>
+<td>$172M</td>
+<td>$645M</td>
+</tr>
+<tr>
+<td>Acciones (diluidas, 3 años)</td>
+<td>~538M</td>
+<td>~428M</td>
+<td>~388M</td>
+</tr>
+<tr>
+<td><strong>Precio/acción</strong></td>
+<td><strong>$0.04</strong></td>
+<td><strong>$0.43</strong></td>
+<td><strong>$1.70</strong></td>
+</tr>
+<tr>
+<td>Retorno vs $0.374</td>
+<td>−89%</td>
+<td>+15%</td>
+<td>+355%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ponderado (30/45/25): ≈ $0.63 (+68%)</strong> — pero con una distribución brutalmente asimétrica: el bear es ruina parcial (−89%) y ocurre en 3 de cada 10 casos; el base apenas cubre el costo de oportunidad; el bull es el que paga. <strong>El retorno esperado existe solo para quien acepta perder 60-90% en el escenario malo.</strong></p>
+<p><strong>Sensibilidad clave (EST):</strong> el número de acciones es tan importante como las ventas. Si la próxima ampliación se hace a $0.30-0.35 (probable sin un catalizador previo) en vez de $0.60, el caso base baja de ~$0.43 a ~$0.30-0.35. Si las ventas 2031 base son $60M en vez de $120M, el base cae a ~$0.25.</p>
+<h3 id="64-reverse-valuation-que-descuenta-el-precio-actual">6.4 Reverse valuation — ¿qué descuenta el precio actual?</h3>
+<p>EV ~$91M. A 25% de descuento y exit 4×, implica <strong>ventas 2031 de ~$63M incondicionales</strong> (o ~$90-110M ajustadas por una probabilidad de éxito de 60-70%). Es decir: <strong>el mercado ya descuenta aproximadamente "la mitad del caso base"</strong> — ni euforia ni pánico absoluto en el EV; el pánico está en el precio por acción (denominador de acciones) y en la probabilidad de que el capital nuevo se levante a precios ruinosos. En términos de opción: comprar aquí = apostar a que (a) el binario FDA se gana Y (b) el equity no queda destrozado por la financiación intermedia. (b) es casi tan incierto como (a). [Cálculo: <code>val_model.py</code>]</p>
+<h3 id="65-consenso-de-analistas-dispersion-extrema-fact-sp-global-via-stockanalysis-13-oct-26">6.5 Consenso de analistas — dispersión extrema (FACT — S&amp;P Global vía stockanalysis, 13-oct-26)</h3>
+<table>
+<thead>
+<tr>
+<th>Analista</th>
+<th>Firma</th>
+<th>Rating</th>
+<th>PT</th>
+<th>Fecha</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Christopher Pasquale</td>
+<td><strong>Barclays</strong></td>
+<td>Hold (Equal Weight)</td>
+<td><strong>$0.50</strong></td>
+<td>7-oct-26</td>
+<td><strong>Inicio de cobertura</strong></td>
+</tr>
+<tr>
+<td>S. Ramakanth</td>
+<td>H.C. Wainwright</td>
+<td>Buy</td>
+<td>$4.00</td>
+<td>22-sep-26</td>
+<td>Subió de $3 (jun-26)</td>
+</tr>
+<tr>
+<td>Josh Jennings</td>
+<td>TD Cowen</td>
+<td>Buy</td>
+<td>$1.25</td>
+<td>17-jun-26</td>
+<td><strong>Recortó $1.50→$1.25</strong></td>
+</tr>
+<tr>
+<td>Allison Bratzel</td>
+<td>Piper Sandler</td>
+<td>Hold</td>
+<td>$1.00</td>
+<td>17-ago-26</td>
+<td>Mantiene</td>
+</tr>
+<tr>
+<td>Bruce Jackson</td>
+<td>Benchmark</td>
+<td>Speculative Buy</td>
+<td>$1.00</td>
+<td>13-ago-26</td>
+<td><strong>Recortó $2→$1</strong></td>
+</tr>
+<tr>
+<td>Ryan Zimmerman</td>
+<td>BTIG</td>
+<td>Buy</td>
+<td>$2.00</td>
+<td>jul-26</td>
+<td>Mantiene (venía de $3)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consenso (S&amp;P Global vía stockanalysis/Zacks, 13-oct): media $1.63 · mediana $1.13 · rango $0.50-4.00 · 6 analistas (3 Strong Buy / 1 Buy / 2 Hold; 0 Sell en el sell-side activo — Weiss Ratings es la única firma en Sell).</strong> TipRanks: media $1.75 (5 analistas). Notas críticas: (1) la <strong>dispersión (8×)</strong> refleja un modelo económico sin consenso — cada casa descuenta una probabilidad implícita distinta; (2) <strong>los recortes de PTs han sido sistemáticos todo 2026</strong> (BTIG $6→$3, TD Cowen $3.50→$1.00 y Piper $3→$1 en marzo; Benchmark $10→$1 y después $2→$1; fair-value modelado 2.05→1.63): el sesgo del consenso es correctivo, no anticipatorio; (3) cuidado con MarketBeat: su "media $5.63" promedia el PT desactualizado de D. Boral ($25, abr-26) — <strong>artefacto metodológico, no señal</strong>; (4) el PT alto ($4, HCW) subió tras el interim V012 — la casa más estructuralmente alcista con el track record más flojo en esta historia.</p>
+<hr />
+<h2 id="7-analisis-tecnico-y-de-sentimiento">7. Análisis técnico y de sentimiento</h2>
+<p><em>(FACT — Yahoo daily, cierre 13-oct-2026; cortes a medianoche UTC)</em></p>
+<h3 id="71-tendencia">7.1 Tendencia</h3>
+<ul>
+<li><strong>Precio $0.374</strong>, mínimo de 52 semanas marcado <strong>hoy</strong> ($0.3633 intradía). Desde el máximo de 52s ($1.895): <strong>−80%</strong>.</li>
+<li>Retornos: 1S <strong>−21.8%</strong> · 2S −29.8% · 1M <strong>−33.3%</strong> · 3M <strong>−47.1%</strong> · 6M −45.9% · YTD <strong>−61.6%</strong> · 1A <strong>−78.7%</strong>.</li>
+<li><strong>7 sesiones consecutivas de caída</strong> (5-13 oct; cierre $0.522 el 2-oct → $0.374); 9 de las últimas 10 sesiones en rojo. RSI(14) ≈ <strong>20</strong> (sobreventa técnica, sin señal de reversión).</li>
+<li>Medias: 50DMA $0.588 (precio −36% por debajo) · 200DMA $0.850 (−56%). Estructura de <strong>tendencia bajista intacta</strong> (lower lows/lower highs todo el año).</li>
+</ul>
+<h3 id="72-niveles-relevantes">7.2 Niveles relevantes</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nivel</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soporte</td>
+<td><strong>$0.3633</strong></td>
+<td>Mínimo 52s (13-oct) — primer soporte técnico</td>
+</tr>
+<tr>
+<td>Soporte</td>
+<td>$0.35 / $0.30</td>
+<td>Números redondos psicológicos; zona probable de la próxima emisión</td>
+</tr>
+<tr>
+<td>Soporte</td>
+<td>~$0.25</td>
+<td>Precio de "emisión de pánico" implícito si el sBLA se retrasa</td>
+</tr>
+<tr>
+<td>Resistencia</td>
+<td>$0.45-0.48</td>
+<td>Máximos de la semana previa + opciones directores @$0.478</td>
+</tr>
+<tr>
+<td>Resistencia</td>
+<td>$0.55-0.60</td>
+<td>50DMA + techo del rango sep-26</td>
+</tr>
+<tr>
+<td>Resistencia</td>
+<td>$0.70-0.75</td>
+<td>Máximos de ago-26; nivel del "gap" post-earnings</td>
+</tr>
+<tr>
+<td>Resistencia mayor</td>
+<td><strong>$1.00</strong></td>
+<td>Umbral Nasdaq + redondo psicológico; sin él no hay compliance orgánico</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-volumen-y-flujos">7.3 Volumen y flujos</h3>
+<ul>
+<li>Volumen medio 30d: <strong>~5.0M acciones/día</strong> (vs ~2.5-3M en septiembre) — la actividad <strong>se ha intensificado en la caída</strong>.</li>
+<li>Sesiones anómalas recientes: <strong>12-oct: 16.3M acciones</strong> (3.2× media; día del PR de ASN) y <strong>9-oct: 8.6M</strong> (−9.4%). En máximos previos (jun-26) se negociaron hasta 46M en un día (emisión).</li>
+<li>Patrón: <strong>cada rebote de volumen fue distribuido</strong> (agosto: rebote a $0.735 con 21.7M, venta en septiembre-octubre). No hay acumulación institucional visible; el book es quant + index (ver §3.5).</li>
+</ul>
+<h3 id="74-short-interest-y-presion-bajista">7.4 Short interest y presión bajista</h3>
+<ul>
+<li><strong>29,399,293 acciones (10.58% del capital; 11.72% del float)</strong> — settlement <strong>30-sep-26, verificado en FINRA y Nasdaq (figuras idénticas)</strong>; −7.6% vs settlement previo (31.81M) y <strong>−34% desde el pico de abril (44.84M)</strong>. Days-to-cover: 6.3 (base stockanalysis) / 7.3 (base volumen FINRA) — divergencia de denominador, no de dato. [T1/T2 — APIs FINRA+Nasdaq]</li>
+<li><strong>Mercado de préstamo relajado:</strong> coste de préstamo (CTB) <strong>2.07%</strong> con 5.7M acciones disponibles (13-oct) — vs <strong>fees de 17-26% y disponibilidad casi nula en feb-abr-2026</strong> (pico 26.4% el 23-mar). La presión corta agresiva fue un fenómeno de primavera; hoy el corto es pasivo y barato de mantener. FTDs (~37k último dato) sin tensión de liquidación.</li>
+<li>Historia 2026: pico <strong>44.8M (abril)</strong> → covering fuerte hacia la emisión de junio (DTC bajó a 1.25) → reconstrucción a ~30-32M en el verano → 29.4M hoy.</li>
+<li><strong>No hay setup de squeeze</strong> (cuantificado arriba): con la acción a $0.374, un cierre forzado de cortos requeriría un catalizador violento (p.ej. PDUFA positivo). Que el short sea ~11-12% del float es presión <strong>estructural</strong> (cada repunte encuentra oferta), no una mecha encendida.</li>
+<li><strong>Lo llamativo:</strong> el short NO aumentó durante la caída de octubre (sigue ~29-30M) — <strong>quien vende ahora no son solo cortos: son tenedores largos saliendo</strong> (Fresenius reduciendo, fondos sin convicción, tax-loss selling estacional). Eso es más estructural que especulativo.</li>
+</ul>
+<h3 id="75-sentimiento">7.5 Sentimiento</h3>
+<ul>
+<li><strong>Analistas:</strong> 2 de 6 en Hold; el PT medio ($1.63) procede de casas con sesgos históricos; el único PT bajo ($0.50, Barclays) es el más reciente. Sentimiento neto: neutro-deteriorado.</li>
+<li><strong>Minorista/redes:</strong> el flujo visible (StockTwits/Zacks/Benzinga) es mayoritariamente apático-derrotista ("bag holders" del ciclo $1.50-2.50); no hay campaña coordinada anti-HUMA visible desde el NYT (mar-2025) — el desgaste es por agotamiento, no por ataque. (OP sobre base de titulares; sin encuesta formal).</li>
+<li><strong>Señal de capitulación (OP):</strong> el precio cotiza por debajo del precio de la última ampliación ($1.05) un −64% y por debajo del strike reseteado de los warrants del prestamista ($0.80) — <strong>el mercado valora el equity por debajo de los términos de los profesionales que financiaron a la empresa hace 4 meses</strong>. Históricamente, en HUMA, eso ha precedido nuevas emisiones (no rebotes).</li>
+</ul>
+<hr />
+<hr />
+<h2 id="8-conclusion">8. Conclusión</h2>
+<h3 id="81-tesis-alcista-en-5-lineas">8.1 Tesis alcista (en 5 líneas)</h3>
+<ol>
+<li>Es el <strong>único vaso sanguíneo humano bioingenierizado aprobado del mundo</strong>, con un segundo binario (diálisis, PDUFA est. may-2027) dirigido al segmento con necesidad no cubierta documentada (mujeres y pacientes de alto riesgo de fallo de fístula) donde V012/V007 mostraron superioridad estadística en endpoints primarios.</li>
+<li>A $0.374, el EV es ~$91M para un activo que en el caso de éxito genera $150-300M de ventas a 5 años: <strong>el pago de la opción es 5-8× en el bull</strong>, y el mercado ya descuenta fracaso parcial de la mitad del negocio.</li>
+<li>La caja post-ampliación ($80.3M a jun-26), el recorte de costes ($14.3M anualizados) y un burn en descenso (−16% interanual) <strong>compran tiempo hasta el binario</strong> de 2027 sin necesidad de emisión inmediata.</li>
+<li>El calendario de catalizadores es denso (ASN oct, Q3 nov, filing nov, prioridad dic, Israel Q1-27, PDUFA may-27) — <strong>muchas oportunidades de re-rating</strong> en los próximos 6-9 meses.</li>
+<li>Con Fresenius como socio comercial (royalties + compromiso de adopción) y una plataforma sin competidor aprobado, un <strong>take-out estratégico a prima (50-150%)</strong> sobre precios deprimidos es un put de cola razonable (prob. 3 años: 15-25%, EST).</li>
+</ol>
+<h3 id="82-tesis-bajista-en-5-lineas">8.2 Tesis bajista (en 5 líneas)</h3>
+<ol>
+<li>La máquina de convertir aprobaciones en ingresos está <strong>rota</strong>: 20 meses aprobación→primer implante comercial, 61 unidades en FY25, $0.9M en H1-26 y Q2-26 cayendo −18% secuencial — <strong>nivel de ingresos de producto de un ensayo, no de un lanzamiento</strong>.</li>
+<li>La estructura de capital <strong>destruye valor más rápido de lo que el pipeline lo crea</strong>: going concern explícito, acciones +170% en 4 años, ~$290M levantados mientras la acción caía −93%, y una ampliación (95% prob.) que a $0.30-0.40 añadirá +80-100% de acciones — el escenario base apenas renta después de eso.</li>
+<li><strong>Reembolso sin resolver</strong>: NTAP denegado, precio recortado, presión CMS reconocida — incluso una aprobación de diálisis en may-27 puede terminar como el trauma: aprobado, bien clínicamente, y comercialmente muerto.</li>
+<li>Los apoyos que deberían defender el suelo se desmoronan: <strong>Fresenius vendió ~26% de su posición en 2026</strong>, el dinero especialista no está, los insiders compran cantidades ceremoniales ($5-50k) y la CEO no compra desde 2024.</li>
+<li>El diferencial de riesgo es <strong>peor que una apuesta binaria limpia</strong>: aun ganando el binario FDA, el retorno del caso base (~+15% a 5 años) no compensa una pérdida esperada de 60-90% en el 30% de escenarios de fracaso.</li>
+</ol>
+<h3 id="83-que-tendria-que-pasar-para-que-la-inversion-tenga-sentido">8.3 Qué tendría que pasar para que la inversión tenga sentido</h3>
+<ul>
+<li><strong>Ejecución</strong>: sBLA <strong>fileado en noviembre</strong> y aceptado con revisión prioritaria (→ PDUFA may-27). Un solo trimestre de retraso reduce la ventana de caja.</li>
+<li><strong>Financiación no destructiva</strong>: la próxima ampliación ($75-100M) cerrada a <strong>≥$0.50</strong>, idealmente post-filing/ASN y sin warrants full-ratchet. Por debajo de $0.35, cada dólar nuevo destruye ~$2 de equity existente a precios normalizados.</li>
+<li><strong>Visibilidad de pago</strong>: señal concreta de CMS/aseguradoras (NTAP renovado o path de pago específico de diálisis) <strong>antes</strong> de la decisión FDA — sin esto, el bull case es una promesa de laboratorio comercial.</li>
+<li><strong>KPIs comerciales</strong>: Q3-26 con ingresos ≥$1.2-1.5M (ramp real post-rebuild) y sistemas hospitalarios &gt;30 en proceso.</li>
+<li><strong>Precio de entrada</strong>: $0.25-0.35, con posición ≤2-3% de la cartera y asumiendo explícitamente el riesgo de −60-90%.</li>
+</ul>
+<h3 id="84-indicadores-a-seguir-trimestre-a-trimestre-checklist">8.4 Indicadores a seguir trimestre a trimestre (checklist)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Actual (Q2-26)</th>
+<th>Señal ✅ (confirmar tesis)</th>
+<th>Señal ❌ (invalidar)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ingresos producto/trimestre</td>
+<td>$0.4M</td>
+<td>≥$1.5M y creciendo QoQ</td>
+<td>&lt;$0.5M plano/decreciendo</td>
+</tr>
+<tr>
+<td>Unidades/trimestre</td>
+<td>~24-29</td>
+<td>&gt;80</td>
+<td>&lt;40</td>
+</tr>
+<tr>
+<td>Caja</td>
+<td>$80.3M (jun)</td>
+<td>&gt;$60M sin urgencia</td>
+<td>&lt;$40M sin ampliación anunciada</td>
+</tr>
+<tr>
+<td>Burn operativo/trimestre</td>
+<td>$22.2M</td>
+<td>&lt;$18M</td>
+<td>&gt;$25M</td>
+</tr>
+<tr>
+<td>COGS ex-reservas</td>
+<td>$0.5M H1</td>
+<td>trayectoria decreciente</td>
+<td>nueva reserva de inventario</td>
+</tr>
+<tr>
+<td>sBLA diálisis</td>
+<td>previsto nov-26</td>
+<td>filed + aceptado + prioridad</td>
+<td>retraso &gt;1 trimestre / refusal-to-file</td>
+</tr>
+<tr>
+<td>Hospitales ("systems in process")</td>
+<td>20</td>
+<td>&gt;35 por trimestre</td>
+<td>estancamiento o reversión</td>
+</tr>
+<tr>
+<td>Acciones diluidas</td>
+<td>277.8M</td>
+<td>ampliación ≥$0.50</td>
+<td>ampliación &lt;$0.35 con warrants</td>
+</tr>
+<tr>
+<td>Nasdaq / estructura</td>
+<td>fuera de compliance</td>
+<td>plan RS razonable (≤1:4) o recuperación</td>
+<td>RS agresivo &gt;1:10 / delisting</td>
+</tr>
+<tr>
+<td>Fresenius (13D/A)</td>
+<td>13.60M (4.9%)</td>
+<td>estabilización o compra</td>
+<td>nuevas ventas</td>
+</tr>
+<tr>
+<td>Short interest</td>
+<td>29.4M (~10.6%)</td>
+<td>&lt;25M con subida (=cobertura)</td>
+<td>&gt;35M sin catalizador</td>
+</tr>
+<tr>
+<td>DoD/VA</td>
+<td>financiación apropiada sin cifra</td>
+<td>orden de compra cuantificada</td>
+<td>12 meses sin contrato</td>
+</tr>
+</tbody>
+</table>
+<h3 id="85-la-pregunta-clave-sin-respuesta">8.5 La pregunta clave sin respuesta</h3>
+<p><strong>¿Existe un pagador real para el ATEV a ~$17.000/unidad en diálisis — sin NTAP, con CMS y aseguradoras presionando precios en sentido contrario?</strong> La compañía argumenta que los catéteres cuestan $20-40k/paciente-año y que desbloquear la fístula ahorra dinero al sistema; es un argumento plausible <strong>que ningún pagador ha validado todavía</strong>. De esa respuesta depende que la aprobación de may-27 valga $300M de valor o $30M. <strong>No hay dato público que la responda hoy; se sabrá por el pricing real post-lanzamiento (2027-28).</strong></p>
+<h3 id="86-scorecard-0-10-por-factor-total-100">8.6 Scorecard (0-10 por factor; total /100)</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Puntuación</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producto/tecnología única</td>
+<td><strong>9</strong></td>
+<td>Sin competidor aprobado; patentado hasta 2032+</td>
+</tr>
+<tr>
+<td>Evidencia clínica</td>
+<td>6</td>
+<td>Positiva pero con matices serios (trombosis, V006 24m, log-rank NS)</td>
+</tr>
+<tr>
+<td>Pipeline/opcionalidad</td>
+<td>7</td>
+<td>Diálisis + CTEV + PAD; el CTEV es opción real pero lejana</td>
+</tr>
+<tr>
+<td>Ejecución comercial</td>
+<td><strong>2</strong></td>
+<td>61 uds FY25; 20 meses al primer implante; Q2 −18% QoQ</td>
+</tr>
+<tr>
+<td>Reembolso / acceso</td>
+<td><strong>2</strong></td>
+<td>NTAP denegado; precio −18%; sin solución visible</td>
+</tr>
+<tr>
+<td>Balance / liquidez</td>
+<td>2</td>
+<td>Going concern; 3-4 trimestres de runway</td>
+</tr>
+<tr>
+<td>Dilución / capital allocation</td>
+<td>2</td>
+<td>+170% acciones en 4 años; emisiones a precios decrecientes</td>
+</tr>
+<tr>
+<td>Credibilidad de la dirección</td>
+<td>4</td>
+<td>Excelencia científico-regulatoria; pésima conversión y gestión de capital</td>
+</tr>
+<tr>
+<td>Moat de manufactura</td>
+<td>7</td>
+<td>LUNA200 único; pero planta única y riesgos de escala probados en litigio</td>
+</tr>
+<tr>
+<td>Valoración / riesgo-retorno</td>
+<td>5</td>
+<td>Descuento grande, pero denominador (acciones) en riesgo crítico</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>46/100</strong></td>
+<td><strong>Especulativo puro; no apto como posición core</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Los 3 factores que más importan:</strong> (1) la trayectoria de caja/dilución (governs everything), (2) el reembolso real en diálisis, (3) la ejecución del filing/PRIORITY review. Si (1) se rompe, (2) y (3) no importan; si (2) se resuelve, (1) mejora por re-rating.</p>
+<hr />
+<h2 id="9-seccion-adicional-por-que-ha-caido-tanto-huma">9. SECCIÓN ADICIONAL — ¿Por qué ha caído tanto HUMA?</h2>
+<p><em>(Forense de la caída. Fuentes: cinta diaria Yahoo (OHLCV), filings SEC, PRs, prensa financiera. Ventana principal: 6 meses, 14-abr → 13-oct-2026; contexto ene-mar. Etiquetas de causa: <strong>(a) fundamental</strong> / <strong>(b) financiera-dilución</strong> / <strong>(c) regulatoria-clínica</strong> / <strong>(d) mercado-sector</strong> / <strong>(e) técnica-flujos</strong>.)</em></p>
+<h3 id="91-cronologia-reconstruida-contexto-ene-oct-2026">9.1 Cronología reconstruida (contexto ene → oct 2026)</h3>
+<h4 id="contexto-previo-ene-mar-el-primer-gran-derrumbe-del-ano">Contexto previo (ene-mar) — el primer gran derrumbe del año</h4>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Δ día</th>
+<th>Cierre</th>
+<th>Volumen</th>
+<th>Evento asociado</th>
+<th>Causa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9-feb</td>
+<td><strong>+30.1%</strong></td>
+<td>$1.22</td>
+<td>26.9M (5.3×)</td>
+<td>PR: financiación dedicada DoD en la Appropriations Act FY26 para conductos biológicos</td>
+<td>(e) squeeze + noticia; contexto de cortos ~35M</td>
+</tr>
+<tr>
+<td>10-feb</td>
+<td>−13.9%</td>
+<td>$1.05</td>
+<td>13.2M</td>
+<td>Devolución del spike; sin noticia nueva</td>
+<td>(e) reversión de squeeze</td>
+</tr>
+<tr>
+<td>18-mar</td>
+<td>−8.6%</td>
+<td>$1.06</td>
+<td>4.3M</td>
+<td>Víspera del pricing del RDO ($0.80 = −24.5% vs cierre previo); XBI −2.5%; sin "leak" identificado</td>
+<td>(b/e)</td>
+</tr>
+<tr>
+<td><strong>19-mar</strong></td>
+<td><strong>−19.4%</strong></td>
+<td>$0.854</td>
+<td><strong>52.3M (10×)</strong></td>
+<td><strong>RDO de 25M acc. a $0.80 (~$20M bruto; agente Titan; liderado por un inversor life-science nuevo) + suspensión del ATM TD Cowen + avance financiero preliminar FY25</strong>; 8-K ×2 + 424B3</td>
+<td><strong>(b)</strong></td>
+</tr>
+<tr>
+<td>20-mar</td>
+<td>−8.3%</td>
+<td>$0.783</td>
+<td>31.6M</td>
+<td>Cierre del RDO; venta por debajo del precio del deal</td>
+<td>(b)</td>
+</tr>
+<tr>
+<td>26-27-mar</td>
+<td>−17.9% (2 ses.)</td>
+<td>$0.676</td>
+<td>14.6M</td>
+<td><strong>Resultados FY25 (Q4 rev −63% vs consenso) + 10-K con going concern (27-mar); BTIG recorta $6→$3</strong></td>
+<td>(a/b)</td>
+</tr>
+<tr>
+<td>30-mar</td>
+<td>−14.9%</td>
+<td>$0.575</td>
+<td>15.7M</td>
+<td><strong>Recortes de PT post-resultados: TD Cowen $3.50→$1.00 y Piper $3→$1</strong> (XBI plano — 100% idiosincrático)</td>
+<td>(a/e)</td>
+</tr>
+<tr>
+<td>31-mar</td>
+<td>+5.6%</td>
+<td>$0.607</td>
+<td>7.1M</td>
+<td>Rebote técnico + XBI +7.5% ese día</td>
+<td>(d) favorable</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ventana-de-6-meses-14-abr-13-oct-todas-las-caidas-relevantes">Ventana de 6 meses (14-abr → 13-oct) — todas las caídas relevantes</h4>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Δ día</th>
+<th>Cierre</th>
+<th>Volumen</th>
+<th>Evento asociado</th>
+<th>Causa principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27-abr</td>
+<td><strong>+15.1%</strong></td>
+<td>$0.806</td>
+<td>8.1M</td>
+<td>Evento KOL virtual de abril (nefrólogos; Hussain/Roy-Chaudhury) + cobertura de cortos</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>13-may</td>
+<td><strong>+24.2%</strong></td>
+<td>$1.13</td>
+<td>26.1M (5.2×)</td>
+<td>Resultados Q1-26 (rev $0.5M; 29 uds; ahorro $14.3M); short interest en máximos ~44.8M → cobertura</td>
+<td>(a/e)</td>
+</tr>
+<tr>
+<td>14-may</td>
+<td>−11.5%</td>
+<td>$1.00</td>
+<td>10.1M</td>
+<td>Reversión post-print; sin noticia nueva</td>
+<td>(e) digerir</td>
+</tr>
+<tr>
+<td>1-jun</td>
+<td>+11.5%</td>
+<td>$1.45</td>
+<td>11.1M</td>
+<td>Posicionamiento pre-V012 + cobertura de cortos</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>10-jun</td>
+<td>−3.6%</td>
+<td>$1.34</td>
+<td>8.0M</td>
+<td><strong>Lanzamiento de ampliación pública</strong> (8-K 10-jun; 424B5)</td>
+<td>(b)</td>
+</tr>
+<tr>
+<td><strong>11-jun</strong></td>
+<td><strong>−19.4%</strong></td>
+<td>$1.08</td>
+<td><strong>29.5M (5.9×)</strong></td>
+<td><strong>Doble evento: pricing de la ampliación a $1.05 + interim V012 presentado en SVS VAM</strong> (datos positivos pero "sell-the-news" + dilución; prensa: "−22%")</td>
+<td><strong>(b)</strong> + (c) sell-news</td>
+</tr>
+<tr>
+<td>12-18-jun</td>
+<td>−14% acum.</td>
+<td>$0.924</td>
+<td>7-14M</td>
+<td>Post-offering; acción perfora $1.05 → tenedores de la emisión en pérdida</td>
+<td>(b/e)</td>
+</tr>
+<tr>
+<td>18-jun</td>
+<td>−4.6%</td>
+<td>$0.924</td>
+<td>11.3M</td>
+<td><strong>Lista preliminar de elecciones Russell 3000 (FTSE Russell/LSEG)</strong></td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>22-jun</td>
+<td>−9.2%</td>
+<td>$0.839</td>
+<td>23.6M (4.5×)</td>
+<td><strong>Ventas forzadas por deleción del Russell</strong> (23-26 jun) + supply post-emisión; sin noticia corporativa (NOT-FOUND)</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td><strong>23-jun</strong></td>
+<td><strong>−16.6%</strong></td>
+<td>$0.70</td>
+<td><strong>46.2M (9.2×)</strong></td>
+<td>Ídem: venta mecánica de índices + flippers hacia el rebalanceo del 26-jun</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>25-jun</td>
+<td>−11.2%</td>
+<td>$0.62</td>
+<td>25.5M</td>
+<td>Ídem; mínimo intradía $0.61</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>26-jun</td>
+<td>+14.4%</td>
+<td>$0.709</td>
+<td>46.9M</td>
+<td><strong>Reconstitución Russell efectiva tras el cierre (excluida de Russell 3000/2000; no añadida a Microcap): la venta mecánica se agota y rebota</strong></td>
+<td>(e)</td>
+</tr>
+<tr>
+<td><strong>1-jul</strong></td>
+<td><strong>−13.7%</strong></td>
+<td>$0.673</td>
+<td>18.1M (3.6×)</td>
+<td>Reversión del spike sin noticias de fin de junio ("squeeze unwind"); NOT-FOUND catalizador</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>14-jul</td>
+<td>+2.3%</td>
+<td>$0.707</td>
+<td>7.7M</td>
+<td>PR: asesores nefrólogos anunciados (sin reacción relevante)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>27-jul</td>
+<td>+1.0%</td>
+<td>$0.674</td>
+<td>3.8M</td>
+<td>PR: aceptación IND del CTEV; <strong>8-K: 2ª carta Nasdaq (&lt;$1.00), deadline 27-ene-2027</strong></td>
+<td>(c)/(b) overhang</td>
+</tr>
+<tr>
+<td>12-ago</td>
+<td>−6.3%</td>
+<td>$0.665</td>
+<td>11.2M</td>
+<td><strong>Q2-26: miss de consenso (rev $0.4M vs ~$1.1M, −63%; EPS −$0.16 vs −$0.09)</strong>; premarket −10.4%</td>
+<td><strong>(a)</strong></td>
+</tr>
+<tr>
+<td><strong>13-ago</strong></td>
+<td><strong>−17.3%</strong></td>
+<td>$0.55</td>
+<td><strong>32.8M (6.5×)</strong></td>
+<td>Digestión del Q2 + <strong>Benchmark recorta $2→$1 (est. ingresos FY26 a $4.9M desde $6.6M)</strong>; mínimo 52s</td>
+<td>(a)</td>
+</tr>
+<tr>
+<td>14-ago</td>
+<td>+10.0%</td>
+<td>$0.605</td>
+<td>33.1M</td>
+<td>Rebote/cobertura técnica</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>18-ago</td>
+<td>+0.0%</td>
+<td>$0.582</td>
+<td>9.3M</td>
+<td>PR: <strong>primer implante comercial de Symvess</strong> (Banner, Phoenix) — reacción nula</td>
+<td>(a) material</td>
+</tr>
+<tr>
+<td><strong>19-ago</strong></td>
+<td><strong>+26.3%</strong></td>
+<td>$0.735</td>
+<td>21.7M (4.3×)</td>
+<td>Triple: implante + <strong>publicación Lancet Digital Health (V007)</strong> + rally sectorial (XBI +5.9%)</td>
+<td>(c/d/e)</td>
+</tr>
+<tr>
+<td>31-ago/1-sep</td>
+<td>−12.3% (2 ses.)</td>
+<td>$0.57</td>
+<td>13.5M / 16.5M</td>
+<td>Sin noticia corporativa; compatible con la oferta del plan 10b5-1 de Fresenius (ventana 9-ago→31-oct)</td>
+<td>(e)</td>
+</tr>
+<tr>
+<td>9-sep</td>
+<td>+1.4%</td>
+<td>$0.579</td>
+<td>2.4M</td>
+<td>PR: extensión de caducidad 18→36 meses (ignorado por el mercado)</td>
+<td>(c) menor</td>
+</tr>
+<tr>
+<td>28-sep</td>
+<td>−2.6%</td>
+<td>$0.533</td>
+<td>5.0M</td>
+<td>PR: nuevos consejeros (Coward/Kuznik); mercado indiferente</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>5-13-oct</strong></td>
+<td><strong>−28.3% (7 sesiones)</strong></td>
+<td>$0.374</td>
+<td>4-16M</td>
+<td><strong>Sin noticia negativa corporativa (NOT-FOUND)</strong>: incluye Barclays Hold $0.50 (7-oct), recortes de PT/fair-value (9-oct, −9.4%, con XBI <strong>+3.0%</strong> — idiosincrático), PR de ASN sin datos nuevos (12-oct, −3.7%, <strong>16.3M (2.5×)</strong>), nuevo mínimo 52s el 13-oct</td>
+<td><strong>(b/e)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-clasificacion-de-la-caida-de-ene-a-oct-616-ytd-de-maximos-de-52s-80">9.2 Clasificación de la caída (de ene a oct: −61.6% YTD; de máximos de 52s: −80%)</h3>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Peso estimado en la caída</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(b) Financiera / dilución</strong></td>
+<td><strong>~45%</strong></td>
+<td>5 emisiones en 21 meses a precios decrecientes ($5.28→$0.80→$1.05); shares +45.8% YoY; going concern; cada rebote fue absorbido por emisión (mar, jun, oct); los tramos de caída más violentos (−19.4% mar, −19.4% jun, −16.6% jun) coinciden <strong>exactamente</strong> con anuncios/pricing de emisiones</td>
+</tr>
+<tr>
+<td><strong>(a) Fundamental (ventas)</strong></td>
+<td><strong>~25%</strong></td>
+<td>Q2-26 miss (−63% vs consenso); H1-26 $0.9M; 20 meses al primer implante comercial; FY25 61 unidades; COGS subutilización; la conversión comercial no arranca</td>
+</tr>
+<tr>
+<td><strong>(e) Técnica / flujos</strong></td>
+<td><strong>~20%</strong></td>
+<td>Short ~11% del float sin squeeze; Fresenius −4.7M acciones; rally +24%/+26% que se devuelven íntegros; drift de octubre con volumen creciente sin noticia; sin sponsor institucional especialista</td>
+</tr>
+<tr>
+<td><strong>(c) Regulatoria / clínica</strong></td>
+<td><strong>~5%</strong></td>
+<td>Nasdaq &lt;$1 (2 cartas) como overhang estructural; el interim V012 positivo NO subió la acción (sell-news); no hay evento clínico negativo en la ventana</td>
+</tr>
+<tr>
+<td><strong>(d) Mercado / sector</strong></td>
+<td><strong>~5%</strong></td>
+<td>XBI <strong>+39.9% en 1 año</strong> y +21% YTD: el sector es viento de cola, no de cara. Sólo el tramo oct-26 tiene componente sectorial menor (XBI −6.6% en 1 mes). HUMA cayó ~100 puntos más que el sector: <strong>idiosincrático</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión del forense (OP):</strong> la caída está <strong>justificada por los fundamentales financieros y operativos</strong> en su mayor parte — no es un castigo irracional de mercado. La destrucción de valor viene de tres fuerzas reales: (1) la máquina de financiación a precios decrecientes (dilución + descuentos), (2) una curva comercial que no ha despegado 20 meses después de la aprobación, (3) el traslado del riesgo de la FDA al equilibrio "aprobación-vs-reembolso". El sector, en cambio, no explica nada: es un lastre autoinfligido. <strong>En el margen (tramo octubre), sí hay sobrerreacción</strong>: el precio actual ($0.374, EV ~$91M) descuenta menos de la mitad de la probabilidad de éxito del caso base y el flujo vendedor de octubre es compatible con capitulación/tax-loss, no con noticias.</p>
+<h3 id="92b-resultados-reales-vs-direccion-vs-consenso-hubo-incumplimientos">9.2b Resultados reales vs dirección vs consenso — ¿hubo incumplimientos?</h3>
+<table>
+<thead>
+<tr>
+<th>Compromiso / expectativa</th>
+<th>Fecha prometida</th>
+<th>Resultado real</th>
+<th>¿Cumplido?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDUFA BLA trauma</td>
+<td>10-ago-2024</td>
+<td>Retraso → aprobación 19-dic-2024 (4,5 meses tarde; sin CRL pública)</td>
+<td>⚠️ Parcial</td>
+</tr>
+<tr>
+<td>Lanzamiento comercial tras aprobación</td>
+<td>2025</td>
+<td>Primer implante "comercial" <strong>18-ago-2026</strong> (~20 meses)</td>
+<td>❌ Muy lento</td>
+</tr>
+<tr>
+<td>V007 topline</td>
+<td>ago-2024</td>
+<td>Cumplido</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>V012 interim</td>
+<td>"mid-2026"</td>
+<td>Presentado 11-jun-2026</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>sBLA diálisis</td>
+<td>"2H-2026" → "nov-2026"</td>
+<td>Pendiente (filing prometido nov-26)</td>
+<td>⏳ Por verificar</td>
+</tr>
+<tr>
+<td>Guía de ingresos formal</td>
+<td>—</td>
+<td><strong>No existe guía formal</strong> (NOT-FOUND) — la dirección solo declara direccionalmente</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Consenso Q2-26</td>
+<td>rev ~$1.1M; EPS −$0.11</td>
+<td><strong>rev $0.41M (−63%); EPS −$0.16 (−0.05)</strong></td>
+<td>❌ Miss</td>
+</tr>
+<tr>
+<td>Narrativa "el ramp se verá en H2-26"</td>
+<td>call 12-ago-26</td>
+<td>Sin datos aún; Q2 fue −18% QoQ</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Previsiones de analistas</td>
+<td>avg PT $1.85 (sep) → <strong>$1.63</strong> (oct); Barclays nuevo en $0.50; fair-value modelado $2.05→$1.63</td>
+<td>Rebajadas repetidamente</td>
+<td>❌ Recortes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura (OP):</strong> la compañía no guía (lo que evita "incumplimientos" formales de guidance, pero también priva al mercado de un ancla verificable); el incumplimiento relevante es <strong>contra la única narrativa cuantificable — el consensus de ingresos y la curva comercial</strong> — y contra el criterio temporal de "2H-26" para el inflection point. La dirección conserva, sin embargo, un registro perfecto en los hitos clínico-regulatorios auto-fijados (V007, V012, IND CTEV). <strong>El perfil de la empresa es "científicos fiables, comercializadores no fiables" — coherente con un 46/100 en el scorecard.</strong></p>
+<h3 id="93-la-caida-vs-competidores-y-vs-el-sector-fact-yahoo-13-oct-26">9.3 La caída vs competidores y vs el sector (FACT — Yahoo, 13-oct-26)</h3>
+<table>
+<thead>
+<tr>
+<th>Activo</th>
+<th>1 mes</th>
+<th>3 meses</th>
+<th>6 meses</th>
+<th>12 meses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HUMA</strong></td>
+<td><strong>−33.6%</strong></td>
+<td><strong>−47.3%</strong></td>
+<td><strong>−46.1%</strong></td>
+<td><strong>−78.8%</strong></td>
+</tr>
+<tr>
+<td>XBI (biotech)</td>
+<td>−6.6%</td>
+<td>−5.3%</td>
+<td>+8.5%</td>
+<td><strong>+39.9%</strong></td>
+</tr>
+<tr>
+<td>IBB (biotech)</td>
+<td>−2.1%</td>
+<td>+6.2%</td>
+<td>+14.0%</td>
+<td>+32.8%</td>
+</tr>
+<tr>
+<td>AORT (vascular/aorta)</td>
+<td>−13.8%</td>
+<td>−6.9%</td>
+<td>−43.3%</td>
+<td>−47.0%</td>
+</tr>
+<tr>
+<td>LMAT (grafts, rentable)</td>
+<td>+1.9%</td>
+<td>−15.9%</td>
+<td>−29.9%</td>
+<td>−3.6%</td>
+</tr>
+<tr>
+<td>PRCT (medtech launch)</td>
+<td>−8.6%</td>
+<td>−0.5%</td>
+<td>−21.8%</td>
+<td>−41.8%</td>
+</tr>
+<tr>
+<td>TMCI (medtech)</td>
+<td>−10.4%</td>
+<td>−6.5%</td>
+<td>+94.8%</td>
+<td>−30.8%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lectura:</strong> existe una debilidad real del subsector vascular/medtech en 2026 (AORT −47% en 12m, con sus propios problemas; LMAT −30% en 6m), pero está a años luz de HUMA: <strong>HUMA cayó ~30-100 puntos más que cualquier comparable en todos los marcos temporales</strong>, mientras XBI/IBB subían. Atribución estimada: 0-10% sector, 90-100% idiosincrático. (En octubre el componente sectorial sube algo — XBI −6.6% en el mes — pero sigue sin explicar un −33%.)</p>
+<h3 id="94-insiders-e-instituciones-en-los-ultimos-6-meses-detalle-35-resumen-operativo">9.4 Insiders e instituciones en los últimos 6 meses (detalle §3.5 — resumen operativo)</h3>
+<ul>
+<li><strong>Fresenius (el gran socio)</strong>: posición plana en 18.31M acciones hasta agosto (los descensos de % previos eran dilución) y <strong>venta de 4,709,500 acciones entre el 10 y el 17 de agosto (@ $0.55-0.72) vía plan 10b5-1 gestionado por Citigroup</strong>; desde el 17-ago queda al 4.9% (ya sin obligación de reportar) con ventana de venta hasta el 31-oct. El flujo institucional negativo más claro del periodo. [T1 — 13D/As Nº6-11]</li>
+<li><strong>Insiders (Form 4)</strong>: solo tres directores hicieron compras simbólicas ($5-50k: Jones, Sebelius, Constantino, may-sep-26); CFO y CMO "vendieron" 45,887 acciones cada uno @$0.90 en mayo — ventas <strong>no discrecionales (retención fiscal por vesting de RSU)</strong>; CEO sin compras desde nov-2024 (y sin ventas en 2026). <strong>Cero señales fuertes de convicción interna.</strong> Las únicas Form 4 de octubre son grants de opciones a nuevos directores @$0.478 (6-oct, Coward y Kuznik) — no compras.</li>
+<li><strong>Institucionales</strong>: ~26.9% del capital; top holders Vanguard/Antipodes/Alyeska/<strong>Davidson Kempner</strong>/BlackRock; <strong>sin RTW/OrbiMed/RA Capital</strong> (dinero especialista fuera). Q3-26 13Fs (14-nov) mostrarán el impacto del trimestre de caída — a vigilar.</li>
+</ul>
+<h3 id="95-short-interest-y-days-to-cover-presion-sostenida">9.5 Short interest y days-to-cover — ¿presión sostenida?</h3>
+<ul>
+<li><strong>29,399,293 acciones (10.58% del capital, 11.72% del float; DTC 6.3-7.3 según base)</strong> — settlement <strong>30-sep-26, FINRA y Nasdaq idénticos</strong>; −7.6% vs 15-sep (31.81M); <strong>−34% desde el pico de abril (44.84M)</strong>. [T1 — APIs FINRA+Nasdaq]</li>
+<li>El short <strong>no aumentó durante el tramo de octubre</strong> (sigue ~29-30M): quien vende no es (solo) el corto — son <strong>largos saliendo</strong> (Fresenius, flippers de la emisión de junio, tax-loss selling estacional). Eso descarta el relato simple de "ataque bajista sostenido": hay un <strong>desgaste de tenedores</strong>, que en HUMA históricamente precede a nuevas emisiones, no a rebotes.</li>
+<li><strong>Sin setup de squeeze:</strong> CTB <strong>2.07%</strong> y 5.7M acciones prestables (13-oct, datos IBKR vía iborrowdesk/chartexchange); en primavera el CTB llegó a 26.4% (23-mar) por escasez de papel. Hoy el short es oferta estructural barata, no un resorte comprimido.</li>
+</ul>
+<h3 id="96-ruido-temporal-vs-deterioro-estructural-el-test-decisivo">9.6 Ruido temporal vs deterioro estructural (el test decisivo)</h3>
+<table>
+<thead>
+<tr>
+<th>Señal</th>
+<th>Lectura temporal (ruido)</th>
+<th>Lectura estructural (deterioro)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q2-26 miss (−63%)</td>
+<td>"Trimestre de reconstrucción" tras reshuffle de ventas; H2 debería mejorar</td>
+<td>Dos trimestres de $0.4-0.5M con 20 sistemas "en proceso": la conversión es el problema, no el equipo</td>
+</tr>
+<tr>
+<td>Caída de octubre sin noticia</td>
+<td>Tax-loss + capitulación + sector (−6.6% XBI)</td>
+<td>Caída en volumen creciente (16.3M el 12-oct) con short estable = largos estructurales saliendo</td>
+</tr>
+<tr>
+<td>Nasdaq &lt;$1</td>
+<td>Overshoot técnico de precio; recuperable con catalizador</td>
+<td>Segunda carta en 3 meses; RS casi inevitable → posible pérdida de holders minoristas e índices</td>
+</tr>
+<tr>
+<td>Fresenius vendiendo</td>
+<td>Toma de ganancias/gestión de cartera</td>
+<td>El socio con más información operativa del mundo (diálisis) reduce en la caída</td>
+</tr>
+<tr>
+<td>Dokumentación positiva (Lancet, ASN, shelf-life 36m)</td>
+<td>El valor académico se reconoce aunque el mercado no pague por él todavía</td>
+<td>La publicación no mueve el precio: el mercado ya cree los datos — <strong>no cree en el negocio/reembolso</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidencia de apoyo del "ruido":</strong> el Announcement del ASN (12-oct) fue ignorado; el sell-news del V012 (datos excelentes) sugiere que el mercado distingue datos de dinero. <strong>Evidencia de apoyo del "estructural":</strong> el patrón repetido de emisión→pérdida de los participantes→nuevo mínimo, con independencia del sector y de las noticias positivas.</p>
+<h3 id="97-esta-justificada-la-caida-veredicto-y-que-dato-lo-decidira">9.7 ¿Está justificada la caída? Veredicto y qué dato lo decidirá</h3>
+<p><strong>Veredicto (OP): mezcla con dominante fundamental-financiera; ~70% justificada / ~30% sobrerreacción de flujo.</strong>
+- <strong>Justificado:</strong> la dilución (+170% acciones en 4 años a precios decrecientes), el going concern, la conversión comercial fallida (61→~24 unidades/trimestre) y el riesgo de reembolso no están "decorados": son las causas reales, y cualquier accionista que entró a $1.50-2.50 tenía toda esta información disponible en los filings.
+- <strong>Sobrerreacción (en el margen):</strong> a $0.374/EV $91M el mercado descuenta ~la mitad del caso base <strong>antes</strong> de la decisión FDA de may-27; el drift de octubre ocurre sin noticia negativa, con el short sin crecer y con financiación probablemente ya decidida internamente — patrón de <strong>capitulación por flujos</strong> (impuestos, rebalanceos, stop-loss) más que de información nueva.</p>
+<p><strong>El dato que lo decidirá (catalizadores que pueden revertir o empeorar la tendencia):</strong>
+1. <strong>REVERTIR:</strong> filing sBLA puntual en nov + prioridad concedida; una ampliación que se cierre mejor de lo temido (≥$0.50) o un acuerdo no-dilutivo (partner/DoD cuantificado); datos ASN con subgrupos sólidos; sorpresa positiva en Q3 (≥$1.5M rev). El binario PDUFA may-27 es el único evento ×2-3 real.
+2. <strong>EMPEORAR:</strong> retraso del filing &gt;1 trimestre; financiación forzada &lt;$0.35 con warrants; refusal-to-file o petición de datos adicionales; nueva reserva de inventario (señal de demanda muerta); RS agresivo; pérdida de apoyo de sistemas hospitalarios.
+3. <strong>Test falsificable para el próximo trimestre:</strong> si el Q3-26 (11-nov) reporta (i) revenue ≥$1.2M con 30+ sistemas hospitalarios activos y (ii) caja ≥$55M con ampliación no anunciada, la tesis del "capitulación injustificada" gana. Si reporta revenue plano (&lt;$0.6M) y/o ampliación inmediata &lt;$0.40, el "deterioro estructural" confirmado y el precio aún no toca suelo.</p>
+<hr />
+<h2 id="anexo-fuentes-metodologia-y-registro-de-correcciones">Anexo — Fuentes, metodología y registro de correcciones</h2>
+<h3 id="a1-fuentes-primarias-t1">A.1 Fuentes primarias (T1)</h3>
+<p><strong>SEC EDGAR — CIK 1818382 (Humacyte, Inc.):</strong>
+- 10-K FY2025 (filed 2026-03-27, acc. 0001818382-26-000004) y 10-Qs: Q3-25 (2025-11-12), Q1-26 (2026-05-13, acc. 0001193125-26-221755), Q2-26 (2026-08-12, acc. 0001193125-26-347022).
+- 8-Ks 2026: 19-mar (×2: resultados FY25 + RDO $0.80), 24-abr (enmienda Fresenius), 8-may (aviso Nasdaq 1), 5-jun (compliance recuperado), 9-jun (junta anual), 10-jun (lanzamiento de ampliación), 11-jun (pricing $1.05), 31-jul (aviso Nasdaq 2 — deadline 27-ene-27), 12-ago (Q2-26), 28-sep (nombramientos consejo).
+- 424B3 (19-mar-26) y 424B5 (10/11-jun-26); DEF 14A 2026 (junta 9-jun-26: +550M acciones autorizadas).
+- Form 4/3: octubre 2026 (directores Coward/Kuznik, opciones @$0.478); compras 2026 (Jones/Sebelius/Constantino); ventas Sander/Parikh may-26.
+- 13D/As de <strong>Fresenius Medical Care Holdings/AG</strong> (11 enmiendas; 18,312,735 (9.5%) → 13,603,235 (4.9%) al 14-ago-26).
+- 25-NSE (25-ago-26): deslistado de los warrants públicos HUMAW ($11.50, expirados).</p>
+<p><strong>FDA / regulatorio:</strong> ficha Symvess STN 125812/0 y SBRA (19-dic-2024); PR FDA; CDT: ClinicalTrials.gov API v2 (mapa de 15 estudios). PMRs/PMCs del SBRA (fechas duras).
+<strong>Prensa de la compañía (globenewswire/IR):</strong> PRs clave: 9-feb-26 (DoD), 13-may-26 (Q1), 11-jun-26 (V012 interim + ampliación), 14/27-jul-26 (asesores; IND CTEV), 12/18/19/24-ago-26 (Q2; implante; Lancet; sBLA nov), 9/10/28-sep-26 (shelf-life; Wainwright; consejo), 12-oct-26 (ASN Kidney Week late-breaker).
+<strong>Papers:</strong> The Lancet Digital Health (V007, 19-ago-26); JAMA Surgery (meta-análisis trauma); Military Medicine (oct-2025, Ucrania).</p>
+<h3 id="a2-fuentes-de-mercado-y-secundarias-t2t3">A.2 Fuentes de mercado y secundarias (T2/T3)</h3>
+<ul>
+<li><strong>Cinta/precio:</strong> Yahoo Finance chart API (HUMA, XBI, IBB, ^GSPC, LMT/AORT/PRCT/TMCI/MDT/BDX — descargas directas 13-oct-26); volumenes y retornos calculados sobre diarios.</li>
+<li><strong>Estadísticas/consenso:</strong> stockanalysis.com (statistics; forecast; short interest; comps); S&amp;P Global vía stockanalysis (6 analistas; avg $1.63); MarketBeat (Q2: revenue $0.41M) e Investing.com (EPS −$0.16 vs −$0.09; revenue −63% vs consenso); tipranks/zacks/tickernerd (rango $0.50-$4.00, mediana $1.13).</li>
+<li><strong>Transcripciones/cobertura de earnings:</strong> Motley Fool (Q2-26, 19-ago-26: takeaways + transcripción), Investing.com (12-ago-26: miss, guidance PDUFA may-2027/ago-2027), Yahoo/Simply Wall St (9-oct-26: recortes de PT; Barclays $0.50 inicio de cobertura 7-oct).</li>
+<li><strong>Prensa:</strong> Benzinga/Investing.com (jun-26: offering −22% día; DoD feb-26 +11-12%); Friday Furnace (31-jul-26: datos FY25, 61 unidades, 2ª carta Nasdaq); MarketScreener (timeline PRs); StockTitan (resúmenes 8-K; bloqueó scrapers para páginas completas); OpenInsider (Form 4 completo); 13F agregadores (Q2-26); LSEG/FTSE Russell (deleción Russell 3000, jun-26); APIs FINRA/Nasdaq de short interest; iborrowdesk/chartexchange (coste de préstamo); 13D/As Nº6-11 de Fresenius (SEC).</li>
+</ul>
+<h3 id="a3-metodologia">A.3 Metodología</h3>
+<ol>
+<li><strong>Jerarquía:</strong> T1 (SEC/FDA/CT.gov/PRs de la empresa) determina hechos regulatorios y financieros; T2 para mercado/consenso; T3 solo como lead. Cada afirmación material lleva etiqueta FACT/EST/OP y su fuente más cercana.</li>
+<li><strong>Cálculos propios</strong> (<code>val_model.py</code>, <code>price_forensics.py</code>): retornos por ventana, días anómalos, EV implícito, escenarios rNPV, dilución. Todos reproducibles en <code>~/huma_research/refresh_oct2026/</code>.</li>
+<li><strong>Límites reconocidos:</strong> (i) el ASN PR completo (12-oct) no era extraíble de la fuente bloqueada — contenido resumido vía mirrors (MT/S&amp;P CIQ); (ii) short interest se cita de agregador hasta confirmar settlements FINRA/Nasdaq (notas de subinvestigación lo amplían); (iii) las unidades de Q2-26 (~24) son EST por ASP; (iv) cualquier dato de TAM es rango de vendors, no hecho.</li>
+<li><strong>NOT-FOUND relevantes:</strong> importe concreto del programa DoD FY26; guidance formal 2026 (no existe); estado actual del Lincoln Park; ventas de Fresenius post-14-ago; causa pública única de las caídas de 1-jul y 31-ago (barridos sin catalizador); datos de costo/unidad objetivo.</li>
+</ol>
+<h3 id="a4-registro-de-correcciones-respecto-al-informe-de-sep-2026">A.4 Registro de correcciones respecto al informe de sep-2026</h3>
+<ol>
+<li><strong>Nasdaq:</strong> el deadline relevante <strong>ya no es 2-nov-2026</strong> (primera carta, compliance recuperado el 5-jun-26) sino <strong>27-ene-2027</strong> (segunda carta, 31-jul-26). El riesgo de reverse split se movió un trimestre, no desapareció.</li>
+<li><strong>Consejo:</strong> dos directores nuevos (Coward/Kuznik, 22-sep-26) con comités de Auditoría y Comercial.</li>
+<li><strong>Fresenius:</strong> posición actualizada a 13.60M (4.9%) — <strong>no visible/confirmable en 13F agregadores</strong>, resuelto vía 13D/As (T1).</li>
+<li><strong>Warrants SPAC</strong>: expiraron y fueron deslistados (ago-2026) — el overhang técnico baja ~5.2M warrants.</li>
+<li><strong>Hitos de agosto</strong> integrados: primer implante comercial (18-ago), publicación Lancet (19-ago), extensión de caducidad 36 meses (9-sep).</li>
+<li><strong>Consenso de analistas:</strong> actualizado a 6 analistas, media <strong>$1.63</strong> (desde $1.85), incluyendo el inicio de cobertura de Barclays a $0.50 (7-oct-26).</li>
+<li><strong>Correcciones/adiciones de esta edición (13-oct):</strong> el consenso EPS de Q2-26 era −$0.09 (no −$0.11); las ventas de Sander/Parikh (may-26) fueron retención fiscal no discrecional (sell-to-cover); se integran los recortes de PT de marzo (BTIG $6→$3; TD Cowen $3.50→$1.00; Piper $3→$1; Benchmark $10→$1), el contrato VA SAC (may-26, 170 hospitales), la deleción del Russell 3000 (jun-26), el plan 10b5-1 de Fresenius (ventas 10-17 ago) y la posición Davidson Kempner (13G jun-26).</li>
+</ol>
+<hr />
+<p><em>Fin del informe. Elaborado el 13-oct-2026 como análisis independiente. No es asesoramiento financiero. Las posiciones en este tipo de valores conllevan riesgo de pérdida total del capital.</em></p>
+</div>
+</body></html>

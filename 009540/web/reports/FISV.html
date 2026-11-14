@@ -1,0 +1,1532 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FISV · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>FISV · 2026-11-09</span></div>
+<div class="wrap">
+<h1 id="fiserv-nasdaq-fisv">Fiserv (NASDAQ: FISV)</h1>
+<h2 id="is-q3-2026-really-the-bottom">Is Q3 2026 really the bottom?</h2>
+<p><strong>Research note — 9 November 2026</strong>
+Price basis: <strong>$62.88 close, 6 November 2026</strong> (pre-market 9 November: $63.46). US numeric convention throughout (1,234.5; 8.6x).</p>
+<table>
+<thead>
+<tr>
+<th>Snapshot</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price / market cap</td>
+<td>$62.88 / $33.46B</td>
+</tr>
+<tr>
+<td>Shares outstanding</td>
+<td>532.05M</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td>$26.52B</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td>$59.97B</td>
+</tr>
+<tr>
+<td>2026E revenue (consensus, adjusted basis)</td>
+<td>$19.52B</td>
+</tr>
+<tr>
+<td>2026E adjusted EPS</td>
+<td>$7.27</td>
+</tr>
+<tr>
+<td>2026E P/E / 2027E P/E</td>
+<td>8.6x / 7.9x</td>
+</tr>
+<tr>
+<td>EV/EBITDA 2026E</td>
+<td>7.3x</td>
+</tr>
+<tr>
+<td>FCF yield (TTM)</td>
+<td>9.4%</td>
+</tr>
+<tr>
+<td>Dividend</td>
+<td>None</td>
+</tr>
+<tr>
+<td>52-week range</td>
+<td>$43.87 – $70.41</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td><strong>HOLD / Neutral</strong></td>
+</tr>
+<tr>
+<td>Bear / Base / Bull (2028)</td>
+<td><strong>$48 / $80 / $107</strong></td>
+</tr>
+<tr>
+<td>Probability-weighted value</td>
+<td><strong>$79 (+26%)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Fiserv price history" src="price_history.png" /></p>
+<hr />
+<h2 id="1-executive-summary">1. Executive summary</h2>
+<p><strong>The bottom is real. The bargain is not.</strong></p>
+<p>Fiserv has probably passed the revenue trough. Q3 2026 organic revenue was flat after a 4% adjusted-revenue decline in Q2; Financial Solutions returned to +2% organic; Clover processing revenue grew 12%; and management reaffirmed the full year while doubling the Project Elevate savings target to $1B. The shares closed at $62.88 on 6 November, 42% above the $44.36 closing low of 2 October and 21% above the 2 November close, helped by Michael Burry's public $100–$120 buyout value.</p>
+<p>But three things are true at once:</p>
+<ol>
+<li>
+<p><strong>Q3 is the revenue bottom, not the earnings bottom.</strong> Adjusted operating margin was 31.2%, down 580bp year on year; adjusted EPS fell 14% to $1.75; and the full-year guide still implies a Q4 EPS of about $1.92, down 3.5% year on year. The 2026 adjusted EPS guide of $7.20–$7.40 is 16% below 2025's $8.64.</p>
+</li>
+<li>
+<p><strong>The Q4 guide is back-end loaded.</strong> The reaffirmed full-year adjusted revenue guide of −1.5% to −0.5% requires Q4 adjusted revenue growth of <strong>+2.4% to +6.4%</strong> (midpoint +4.4%), versus −1% in Q3, plus a sequential margin step-up to about 32%. Management attributes this to the end of prior-year non-recurring revenue comparisons and a 6–8% Merchant guide. That is an easy comp, not yet proof of underlying demand.</p>
+</li>
+<li>
+<p><strong>The stock is no longer priced for failure.</strong> At $62.88 it trades at 8.6x 2026E and 7.9x 2027E EPS, 7.3x EV/EBITDA, and above the average sell-side target of $61.92. FIS at 5.2x forward earnings and GPN at 6.3x are the "failure" comparables; Fiserv now trades at a premium to both, and at a discount only to the quality name, Jack Henry (23.3x). The market is pricing stagnation and a credibility discount, not a solvency or franchise collapse.</p>
+</li>
+</ol>
+<p><strong>What the analysis supports.</strong> Base-case 2028 EPS of about $8.94 at 9x gives <strong>$80</strong> (+28% over two years, roughly 13% IRR). The bull case — Merchant mid-single-digit growth, 34.5% margins, $2B of annual buybacks — gives <strong>$107</strong> (+71%). The bear case — flat-to-down revenue, 30% margins, no buybacks — gives <strong>$48</strong> (−24%), and a 6x multiple on the same EPS would be <strong>$41</strong> (−35%). Probability-weighted at 25/50/25, the value is <strong>$79 (+26%)</strong>.</p>
+<p><strong>The call.</strong> The operating bottom is probably in; the stock's risk/reward is now adequate, not asymmetric. A new buyer is chasing a 42% five-week rally, an RSI of 82, and a buyout story with no bidder. Existing holders can hold for the 2027 recovery; new money should wait for either a pullback to <strong>$50–55</strong> (about 6.5x 2027E EPS, 6.5x EV/EBITDA) or proof in the February 2027 Q4 print that Merchant growth is underlying, not a comp. The February print is the binary: Q4 Merchant organic growth versus the 6–8% guide, the first 2027 guidance, and FCF conversion versus the 90% target.</p>
+<p><strong>The one-line answer to the question:</strong> Q3 2026 is the bottom in organic revenue and probably in the share price; it is not the bottom in margins, earnings quality, or investor confidence. At $44 the stock was a fat pitch. At $63 it is a fair bet with a catalyst.</p>
+<hr />
+<h2 id="2-what-q3-2026-actually-showed">2. What Q3 2026 actually showed</h2>
+<p>The quarter was in line, not good. Adjusted revenue of $4.85B fell 1%; organic revenue was flat; adjusted EPS of $1.75 beat the $1.72 consensus by three cents; and the company reaffirmed 2026. The GAAP loss was $11.17 per share, driven by a $6.45B non-cash goodwill impairment ($12.04 per share) triggered by the sustained decline in the share price and market capitalization.</p>
+<table>
+<thead>
+<tr>
+<th>Q3 2026</th>
+<th style="text-align: right;">Result</th>
+<th style="text-align: right;">YoY</th>
+<th>Read-through</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAAP revenue</td>
+<td style="text-align: right;">$5.196B</td>
+<td style="text-align: right;">−1.3%</td>
+<td>Postage reimbursements distort the headline</td>
+</tr>
+<tr>
+<td>Adjusted revenue</td>
+<td style="text-align: right;">$4.852B</td>
+<td style="text-align: right;">−1.0%</td>
+<td>In line with the low-single-digit decline guide</td>
+</tr>
+<tr>
+<td>Organic revenue</td>
+<td style="text-align: right;">$4.852B</td>
+<td style="text-align: right;">0.0%</td>
+<td>The revenue trough; Q2 was −4% adjusted</td>
+</tr>
+<tr>
+<td>Merchant organic</td>
+<td style="text-align: right;">$2.530B</td>
+<td style="text-align: right;">−2%</td>
+<td>Small business −1%, enterprise −3%, processing −7%</td>
+</tr>
+<tr>
+<td>Financial organic</td>
+<td style="text-align: right;">$2.322B</td>
+<td style="text-align: right;">+2%</td>
+<td>Issuing +7%, digital flat, banking −5%</td>
+</tr>
+<tr>
+<td>Adjusted operating income</td>
+<td style="text-align: right;">$1.512B</td>
+<td style="text-align: right;">−17%</td>
+<td>Margin 31.2% vs 37.0%</td>
+</tr>
+<tr>
+<td>Adjusted EPS</td>
+<td style="text-align: right;">$1.75</td>
+<td style="text-align: right;">−14%</td>
+<td>9M $5.38 vs $6.65</td>
+</tr>
+<tr>
+<td>GAAP EPS</td>
+<td style="text-align: right;">$(11.17)</td>
+<td style="text-align: right;">n/m</td>
+<td>$6.45B impairment, $50M tax benefit</td>
+</tr>
+<tr>
+<td>Free cash flow (company)</td>
+<td style="text-align: right;">$679M</td>
+<td style="text-align: right;">−48%</td>
+<td>9M $2.039B vs $2.879B</td>
+</tr>
+<tr>
+<td>Gross debt / adjusted EBITDA</td>
+<td style="text-align: right;">3.1x</td>
+<td style="text-align: right;">Improved QoQ</td>
+<td>$800M+ debt paydown in the quarter</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Fiserv Q3 2026 earnings release, 3-Nov-2026 [T1]; Q3 2026 Form 10-Q, 4-Nov-2026 [T1]; Q3 2026 call transcript [T1].</p>
+<p>The segment detail is more revealing than the consolidated line. Merchant's adjusted operating margin fell from 37.2% to 28.7% — an 850bp collapse — on lower high-margin non-recurring revenue, Argentina, hardware, and investment. Financial's margin fell from 42.5% to 38.1% on divestitures and mix. The blended margin decline is therefore mostly a Merchant problem, and Merchant is 52% of revenue.</p>
+<h3 id="21-seven-numbers-in-the-draft-to-correct">2.1 Seven numbers in the draft to correct</h3>
+<p>The draft's framework is sound; several of its inputs are stale or on a different basis. These are the corrections that change the conclusion:</p>
+<table>
+<thead>
+<tr>
+<th>Draft claim</th>
+<th>Verified figure</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Roughly $58 a share… about 8x 2026 adjusted EPS"</td>
+<td><strong>$62.88</strong> close 6-Nov; <strong>8.6x</strong> the $7.27 consensus</td>
+<td>The stock is 8% higher and half a turn more expensive than the draft assumes</td>
+</tr>
+<tr>
+<td>"52-week closing low $44.36 on October 2"</td>
+<td><strong>Confirmed</strong>; intraday low $43.87</td>
+<td>The stock is <strong>+41.7%</strong> off the low, not near it</td>
+</tr>
+<tr>
+<td>"Financial Solutions up 2%"</td>
+<td>Segment <strong>+2%</strong>, but <strong>banking −5%</strong>, digital flat, issuing +7%</td>
+<td>The growth is narrower than the headline; banking is still shrinking</td>
+</tr>
+<tr>
+<td>"FCF conversion 91% on a trailing basis"</td>
+<td>9M company conversion <strong>71%</strong>; FY guide <strong>~90%</strong>; unadjusted OCF−capex conversion <strong>58%</strong></td>
+<td>91% is a target, not the current run-rate; Q4 must deliver ~$1.47B of FCF</td>
+</tr>
+<tr>
+<td>"Total debt $27.06B, about 3.1x trailing adjusted EBITDA"</td>
+<td><strong>Confirmed</strong>: $27.06B face debt, $545M cash, <strong>3.1x</strong> company gross leverage</td>
+<td>Correct, but $2.4B is finance leases (including $613M short-term) and the cash flow statement's $1.326B cash includes ~$781M of settlement cash</td>
+</tr>
+<tr>
+<td>"Guidance was cut again in 2026"</td>
+<td>June reaffirmed 1–3% organic / $8.00–$8.30; <strong>August cut</strong> to −1–0% / $7.20–$7.40</td>
+<td>Two cuts in twelve months; the credibility discount is earned</td>
+</tr>
+<tr>
+<td>"Goldman $61 (Neutral), Baird $70 (Outperform)"</td>
+<td>Not confirmed in the post-print list reviewed; current average <strong>$61.92</strong>, median $60; KBW $70, UBS $68, Cantor $65, B. Riley $60, BofA $48</td>
+<td>The sell-side is <strong>below</strong> spot, not above it; the stock has outrun the analysts</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Yahoo Finance daily bars [T2]; StockAnalysis statistics and forecast pages [T3]; Q3 2026 release and 10-Q [T1]; Q2 2026 release/call [T1].</p>
+<p>Two basis points deserve emphasis. First, the <strong>$27.06B debt</strong> is the face of the balance sheet: $1.254B short-term plus $25.809B long-term. Net debt is <strong>$26.52B</strong>. The cash flow statement shows $1.326B of ending cash because Fiserv includes cash held in settlement assets; the balance-sheet cash line is $545M. Use $545M for net debt, not $1.326B. Second, the <strong>$6.45B impairment</strong> is non-cash but not meaningless: it is management's own mark-down of acquisition-era carrying values, and $30.95B of goodwill remains against $21.08B of equity.</p>
+<hr />
+<h2 id="3-where-the-revenue-and-the-margin-actually-sit">3. Where the revenue and the margin actually sit</h2>
+<p>Fiserv reports two segments and six business lines. The lines matter because the consolidated "flat" hides a small-business franchise that is shrinking in revenue, a banking franchise still losing clients, and an issuing business that is growing.</p>
+<table>
+<thead>
+<tr>
+<th>Business line</th>
+<th style="text-align: right;">Q3 2026 revenue</th>
+<th style="text-align: right;">YoY</th>
+<th style="text-align: right;">Share of segment</th>
+<th>What it is</th>
+<th>Margin / role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Merchant — Small Business</strong></td>
+<td style="text-align: right;">$1,713M</td>
+<td style="text-align: right;">−1.6%</td>
+<td style="text-align: right;">68%</td>
+<td>Clover, non-Clover SMB, Argentina</td>
+<td>The growth engine and the problem child</td>
+</tr>
+<tr>
+<td>— Clover revenue</td>
+<td style="text-align: right;">n/d</td>
+<td style="text-align: right;">+1%</td>
+<td style="text-align: right;">—</td>
+<td>POS, payments, value-added services</td>
+<td>Processing revenue +12%; VAS 23% of Clover, −3%</td>
+</tr>
+<tr>
+<td>— Non-Clover SMB</td>
+<td style="text-align: right;">n/d</td>
+<td style="text-align: right;">−6%</td>
+<td style="text-align: right;">—</td>
+<td>Legacy SMB acquiring</td>
+<td>Declining; drag on mix</td>
+</tr>
+<tr>
+<td><strong>Merchant — Enterprise</strong></td>
+<td style="text-align: right;">$561M</td>
+<td style="text-align: right;">−3.3%</td>
+<td style="text-align: right;">22%</td>
+<td>Commerce Hub, enterprise acquiring</td>
+<td>Transactions +5%; revenue −3% on non-recurring laps</td>
+</tr>
+<tr>
+<td><strong>Merchant — Processing</strong></td>
+<td style="text-align: right;">$247M</td>
+<td style="text-align: right;">−6.8%</td>
+<td style="text-align: right;">10%</td>
+<td>Legacy processing</td>
+<td>Structurally declining</td>
+</tr>
+<tr>
+<td><strong>Merchant total</strong></td>
+<td style="text-align: right;"><strong>$2,521M</strong></td>
+<td style="text-align: right;"><strong>−2.5%</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td></td>
+<td><strong>Adj. op. margin 28.7%</strong> (37.2% Q3-25)</td>
+</tr>
+<tr>
+<td><strong>Financial — Digital Payments</strong></td>
+<td style="text-align: right;">$914M</td>
+<td style="text-align: right;">−2.7%</td>
+<td style="text-align: right;">39%</td>
+<td>Zelle, bill pay, ATM, debit processing</td>
+<td>Organic flat; Zelle transactions +20%; ATM divestiture −300bp</td>
+</tr>
+<tr>
+<td><strong>Financial — Issuing</strong></td>
+<td style="text-align: right;">$840M</td>
+<td style="text-align: right;">+4.7%</td>
+<td style="text-align: right;">36%</td>
+<td>Debit/credit issuing, 1.5B accounts</td>
+<td>Organic +7%; student loan divestiture −400bp in Q4</td>
+</tr>
+<tr>
+<td><strong>Financial — Banking</strong></td>
+<td style="text-align: right;">$577M</td>
+<td style="text-align: right;">−2.5%</td>
+<td style="text-align: right;">25%</td>
+<td>Core banking (DNA, CoreAdvance, Finxact), digital banking</td>
+<td>Organic −5%; core accounts −2%; Finxact &gt;50M accounts</td>
+</tr>
+<tr>
+<td><strong>Financial total</strong></td>
+<td style="text-align: right;"><strong>$2,331M</strong></td>
+<td style="text-align: right;"><strong>0.0%</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td></td>
+<td><strong>Adj. op. margin 38.1%</strong> (42.5% Q3-25)</td>
+</tr>
+<tr>
+<td>Corporate and other</td>
+<td style="text-align: right;">$344M</td>
+<td style="text-align: right;">0.0%</td>
+<td style="text-align: right;">—</td>
+<td>Postage, corporate</td>
+<td>Adjusted revenue nil; adj. op. loss −$99M</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 Form 10-Q, Note 3 revenue disaggregation [T1]; Q3 2026 call [T1].</p>
+<p>Three conclusions follow.</p>
+<p><strong>First, Financial Solutions is the margin pool.</strong> It produced $887M of the $1.512B adjusted operating income (59%) on 48% of revenue, despite a 440bp margin decline. Merchant produced $724M (48%) on 52% of revenue. The corporate loss was $99M. Any mix shift toward Merchant dilutes the consolidated margin, which is exactly what has happened: Merchant's share of revenue has risen while its margin has fallen.</p>
+<p><strong>Second, Small Business is 68% of Merchant and is shrinking in reported revenue.</strong> Clover's payment volume is growing — GPV +9% reported, +11% excluding the gateway conversion — and Clover processing revenue grew 12%. But Clover revenue grew only 1% because hardware and data sales fell, Argentina anticipation income fell, and value-added services declined 3% (23% of Clover revenue, down from 26%). Non-Clover SMB revenue fell 6%. This is the central debate: is Clover a healthy 11% volume grower temporarily dragged by low-margin hardware and Argentina, or a platform whose take rate and attach rates are eroding? The answer is probably both, but the burden of proof is on the 2027 numbers.</p>
+<p><strong>Third, Banking is the structural wound.</strong> Organic revenue fell 5%, core accounts fell 2%, and the segment still reflects the attrition of the past few years. Management's leading indicators — revenue-based core losses down 17% year to date, net attrition down more than 25%, client wins up more than 50%, Finxact above 50 million accounts — are genuine improvements, but they reach revenue in 9–12 months. Banking is 25% of Financial revenue and a much larger share of the franchise value. It is the reason the stock is cheap.</p>
+<hr />
+<h2 id="4-reconstructing-the-reset-what-broke-and-what-is-still-broken">4. Reconstructing the reset: what broke, and what is still broken</h2>
+<p>Fiserv has cut guidance twice in twelve months. The first cut, on 29 October 2025, was the violent one: the shares fell <strong>44.0%</strong> close-to-close, from $126.17 to $70.60, the worst day in the company's history. The second cut, on 6 August 2026, was smaller in price terms but more damaging to the new CEO's credibility because it came weeks after he had reaffirmed the outlook.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Numbers</th>
+<th>Market reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>29-Oct-2025</td>
+<td>Q3 2025 miss and reset</td>
+<td>FY25 organic cut to 3.5–4% (from ~10%); EPS to $8.50–8.60 (from $10.15–10.30); One Fiserv plan; new CFO and co-presidents</td>
+<td><strong>−44%</strong> to $70.60</td>
+</tr>
+<tr>
+<td>1-Dec-2025</td>
+<td>Takis Georgakopoulos and Dhivya Suryadevara become co-presidents</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Feb-2026</td>
+<td>Jana Partners builds a sub-1% stake (~2.2M shares)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>15-Jun-2026</td>
+<td>Lyons leaves for Truist; Takis becomes CEO</td>
+<td>2026 guide reaffirmed: 1–3% organic, $8.00–8.30 EPS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6-Aug-2026</td>
+<td>Q2 miss and second cut</td>
+<td>2026 organic to −1–0%; EPS to $7.20–7.40; portfolio review; $100M+ added tech spend</td>
+<td>−12% pre-market</td>
+</tr>
+<tr>
+<td>28-Sep-2026</td>
+<td>Jana letter</td>
+<td>Push to more than double cost cuts; adopt Palantir</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2-Oct-2026</td>
+<td>52-week closing low</td>
+<td>$44.36</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2-Nov-2026</td>
+<td>Burry Substack post</td>
+<td>$100–$120 buyout value</td>
+<td>Stock +21% over four sessions</td>
+</tr>
+<tr>
+<td>3-Nov-2026</td>
+<td>Q3 in line; guide reaffirmed</td>
+<td>Organic flat; $1.75 EPS; Elevate to $1B; $500M Q4 buyback</td>
+<td><strong>+12.5%</strong> to $58.40</td>
+</tr>
+<tr>
+<td>6-Nov-2026</td>
+<td>Follow-through</td>
+<td>$62.88 close</td>
+<td>+42% off the low</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2025 release and PaymentExpert coverage [T1/T2]; Q2 2026 release/call and PaymentExpert [T1/T2]; Fiserv leadership-transition 8-K, 15-Jun-2026 [T1]; Reuters on Jana, 17-Feb-2026 and 28-Sep-2026 [T2]; Yahoo Finance bars [T2].</p>
+<h3 id="41-one-off-versus-structural">4.1 One-off versus structural</h3>
+<p>The bull case rests on the proposition that most of the damage is cyclical and self-inflicted but reversible. The evidence supports that for 2026 and does not yet support it for 2027.</p>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Type</th>
+<th>Evidence</th>
+<th>Does it lapse?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Argentina anticipation income and peso</td>
+<td>One-off / macro</td>
+<td>90bp headwind to Q2 adjusted revenue; lower Q3 small-business revenue</td>
+<td>Mostly by Q4; Argentina remains volatile</td>
+</tr>
+<tr>
+<td>Prior-year non-recurring revenue</td>
+<td>One-off / comp</td>
+<td>Q3 was "the last quarter of higher non-recurring revenue from the year ago period"</td>
+<td><strong>Yes — Q4 is the clean comparison</strong></td>
+</tr>
+<tr>
+<td>Divestitures (student loan, ATM/MoneyPass, India)</td>
+<td>One-off / portfolio</td>
+<td>~100bp Q3 headwind; 400bp to issuing and 500bp to digital payments in Q4</td>
+<td>Yes, but it lowers the revenue base</td>
+</tr>
+<tr>
+<td>Hardware and data sales</td>
+<td>Mix / cyclical</td>
+<td>Clover revenue −9% from hardware/data in Q2; still a drag in Q3</td>
+<td>Partly; hardware is low-margin anyway</td>
+</tr>
+<tr>
+<td>Deferred investment</td>
+<td>Structural</td>
+<td>Capex 9.3% of total revenue (9.9% of adjusted) in 9M-26 vs 7.3% in 2023; $100M+ cyber/infrastructure spend</td>
+<td>No — this is the catch-up</td>
+</tr>
+<tr>
+<td>Bank client attrition</td>
+<td>Structural</td>
+<td>Banking organic −5%; core accounts −2%; revenue still reflects prior losses</td>
+<td>No — improves in 9–12 months</td>
+</tr>
+<tr>
+<td>Clover pricing and VAS mix</td>
+<td>Structural / competitive</td>
+<td>VAS 23% of Clover revenue vs 26%; VAS −3%; non-Clover SMB −6%</td>
+<td>No — requires product and pricing fixes</td>
+</tr>
+<tr>
+<td>Merchant margin mix</td>
+<td>Structural</td>
+<td>Merchant margin 28.7% vs 37.2%</td>
+<td>No — mix does not reverse quickly</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The draft says Mike Lyons admitted Fiserv had deferred investments and cut costs to flatter short-term margins.</strong> I did not find that verbatim admission in the Q3 2025 release, the Q3 2026 release, or the coverage reviewed. What is documented is consistent with it: the Q3 2025 release opened with "our current performance is not where we want it to be"; the One Fiserv plan explicitly added $100M+ of technology and cybersecurity spending in 2H-26; and the new CEO's first call described a "dispassionate" portfolio review and a company that had underinvested in stability, interoperability, and service. The distinction matters for how much credit to give the "self-help" story: the underinvestment is real, but a quote attributed to the former CEO should not carry the argument unless it is sourced.</p>
+<p>The cleanest way to state the reset is this: <strong>Fiserv spent 2020–2024 buying growth and optimizing the P&amp;L, and it is now paying the bill in capex, attrition, and a lower multiple.</strong> The bill is finite — the one-offs lapse by Q4 2026 — but the structural repairs (banking attrition, Clover product velocity, margin mix) take through 2027.</p>
+<hr />
+<h2 id="5-earnings-quality-the-adjusted-numbers-are-the-problem">5. Earnings quality: the adjusted numbers are the problem</h2>
+<p>The bull case is built on adjusted EPS. The cash flow statement is less flattering. Fiserv's "one-time" costs are recurring, its free cash flow conversion is well below the headline, and its capex intensity has risen to fund the investment it previously deferred. This is the single most important section for anyone underwriting the turnaround.</p>
+<h3 id="51-the-gaap-to-adjusted-bridge">5.1 The GAAP-to-adjusted bridge</h3>
+<table>
+<thead>
+<tr>
+<th>Q3 2026, $M</th>
+<th style="text-align: right;">Amount</th>
+<th style="text-align: right;">Per share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAAP net loss attributable to Fiserv</td>
+<td style="text-align: right;">(5,941)</td>
+<td style="text-align: right;">$(11.17)</td>
+</tr>
+<tr>
+<td>Goodwill impairment, net of tax</td>
+<td style="text-align: right;">6,402</td>
+<td style="text-align: right;">12.04</td>
+</tr>
+<tr>
+<td>Amortization of acquired intangibles</td>
+<td style="text-align: right;">297</td>
+<td style="text-align: right;">0.45</td>
+</tr>
+<tr>
+<td>One Fiserv transformation expenses</td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">0.24</td>
+</tr>
+<tr>
+<td>Severance</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr>
+<td>Merger and integration</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">0.05</td>
+</tr>
+<tr>
+<td>Net gain on dispositions</td>
+<td style="text-align: right;">(15)</td>
+<td style="text-align: right;">0.06</td>
+</tr>
+<tr>
+<td>Early debt extinguishment gain</td>
+<td style="text-align: right;">(26)</td>
+<td style="text-align: right;">(0.04)</td>
+</tr>
+<tr>
+<td>Other / tax</td>
+<td style="text-align: right;">(53)</td>
+<td style="text-align: right;">(0.01)</td>
+</tr>
+<tr>
+<td><strong>Adjusted net income</strong></td>
+<td style="text-align: right;"><strong>936</strong></td>
+<td style="text-align: right;"><strong>$1.75</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 release, reconciliation pages [T1].</p>
+<p>The impairment is genuinely non-cash and should be excluded from an operating earnings measure. The transformation and severance costs are different: they are cash, they recur, and they are the cost of the program that is supposed to produce the $1B of savings. For the first nine months, transformation expenses were <strong>$487M</strong> and severance was <strong>$196M</strong> — <strong>$683M</strong> of pre-tax cash costs, or about <strong>$1.03 per share</strong> after tax. If you treat those as recurring, 2026 "cash EPS" is roughly <strong>$6.25</strong>, not $7.27.</p>
+<p>That is not an argument that the program is value-destroying. Management says Elevate delivers at least a 1:1 return on transformation expense, and the savings target doubled to $1B. It is an argument that capitalizing the adjusted EPS at 8.6x while ignoring the cash cost of the program double-counts the benefit.</p>
+<h3 id="52-free-cash-flow-71-is-not-91">5.2 Free cash flow: 71% is not 91%</h3>
+<table>
+<thead>
+<tr>
+<th>9M 2026, $M</th>
+<th style="text-align: right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating cash flow</td>
+<td style="text-align: right;">3,094</td>
+</tr>
+<tr>
+<td>Capital expenditures</td>
+<td style="text-align: right;">(1,438)</td>
+</tr>
+<tr>
+<td><strong>Unadjusted FCF (OCF − capex)</strong></td>
+<td style="text-align: right;"><strong>1,656</strong></td>
+</tr>
+<tr>
+<td>Add back: severance, merger and integration payments</td>
+<td style="text-align: right;">199</td>
+</tr>
+<tr>
+<td>Add back: One Fiserv transformation payments</td>
+<td style="text-align: right;">251</td>
+</tr>
+<tr>
+<td>Add back: distributions from unconsolidated affiliates</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr>
+<td>Less: distributions paid to noncontrolling interests</td>
+<td style="text-align: right;">(2)</td>
+</tr>
+<tr>
+<td>Less: tax payments on adjustments</td>
+<td style="text-align: right;">(88)</td>
+</tr>
+<tr>
+<td><strong>Company-defined FCF</strong></td>
+<td style="text-align: right;"><strong>2,039</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 release, free cash flow reconciliation [T1].</p>
+<p>Company-defined FCF of $2.039B is <strong>71%</strong> of adjusted net income of $2.876B. The CFO described that as "roughly in line with last year-to-date levels"; last year's 9M conversion was 78%, so the gap is seven points, not zero. The unadjusted conversion is <strong>58%</strong>. The full-year target of ~90% requires Q4 FCF of about <strong>$1.47B</strong>, roughly flat with Q4 2025's $1.50B, after a Q3 in which FCF fell 48% to $679M. That is a high bar.</p>
+<p>The capex line explains part of the gap. Capital expenditures were $1.438B in 9M, or <strong>9.3% of total revenue</strong> (9.9% of adjusted revenue), versus 8.3% in 2025, 7.7% in 2024, and 7.3% in 2023. The company guides to high-single-digit percent of adjusted revenue for the full year. This is the deferred-investment catch-up in cash form: necessary, but it competes with buybacks and debt paydown.</p>
+<h3 id="53-goodwill-the-impairment-is-a-message-not-just-an-accounting-event">5.3 Goodwill: the impairment is a message, not just an accounting event</h3>
+<p>The $6.45B charge reduced goodwill to <strong>$30.95B</strong> against <strong>$21.08B</strong> of equity — goodwill is still <strong>147% of book equity</strong>. The trigger was the sustained decline in the share price and market capitalization, not a sudden collapse in cash flow. That cuts both ways: the charge is an admission that acquisition-era carrying values were too high, and the remaining goodwill is vulnerable to another impairment if the shares stay depressed or if reporting-unit forecasts are cut again. A second impairment would not affect cash flow or covenants, but it would reset the "clean" book value story and is a plausible bear catalyst.</p>
+<h3 id="54-the-quality-verdict">5.4 The quality verdict</h3>
+<p>On a cash basis, Fiserv earned roughly <strong>$6.25 per share</strong> in 2026, not $7.27, and converted about <strong>58%</strong> of adjusted net income into unadjusted free cash flow. The adjusted numbers are not fraudulent; they are aggressively defined. The bull case requires the transformation and severance costs to fade by 2028 and the capex catch-up to normalize. The bear case is that both persist, and the 90% conversion target becomes a permanent promise rather than a result.</p>
+<hr />
+<h2 id="6-the-kpi-dashboard-what-to-track-and-what-q3-says">6. The KPI dashboard: what to track, and what Q3 says</h2>
+<p>A turnaround is a sequence of leading indicators. This is the dashboard I would hold management to, with the Q3 reading and the threshold that would confirm or break the thesis.</p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Q3 2026</th>
+<th>Benchmark / target</th>
+<th>Trend</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic revenue</td>
+<td style="text-align: right;">0.0%</td>
+<td>+2–4% medium term</td>
+<td>Q2 −4% adjusted → Q3 flat</td>
+<td><strong>Troughing</strong></td>
+</tr>
+<tr>
+<td>Merchant organic</td>
+<td style="text-align: right;">−2%</td>
+<td>+6–8% in Q4</td>
+<td>Q2 −1% → Q3 −2%</td>
+<td><strong>Mixed</strong></td>
+</tr>
+<tr>
+<td>Clover GPV</td>
+<td style="text-align: right;">+9% reported; +11% ex-gateway</td>
+<td>10–15% medium term</td>
+<td>Low end of range</td>
+<td><strong>Adequate</strong></td>
+</tr>
+<tr>
+<td>Clover revenue</td>
+<td style="text-align: right;">+1%</td>
+<td>15–20% medium term</td>
+<td>Processing +12%, VAS −3%</td>
+<td><strong>Weak headline</strong></td>
+</tr>
+<tr>
+<td>Clover VAS share</td>
+<td style="text-align: right;">23%</td>
+<td>25%+</td>
+<td>Down from 26%</td>
+<td><strong>Deteriorating</strong></td>
+</tr>
+<tr>
+<td>Non-Clover SMB revenue</td>
+<td style="text-align: right;">−6%</td>
+<td>Stabilize</td>
+<td>Negative</td>
+<td><strong>Weak</strong></td>
+</tr>
+<tr>
+<td>Financial organic</td>
+<td style="text-align: right;">+2%</td>
+<td>Low single digit</td>
+<td>Returned to growth</td>
+<td><strong>Improving</strong></td>
+</tr>
+<tr>
+<td>Banking organic</td>
+<td style="text-align: right;">−5%</td>
+<td>Low single digit</td>
+<td>Still negative</td>
+<td><strong>Weak</strong></td>
+</tr>
+<tr>
+<td>Core accounts</td>
+<td style="text-align: right;">−2%</td>
+<td>Stabilize</td>
+<td>Total accounts +7% incl. Finxact</td>
+<td><strong>Mixed</strong></td>
+</tr>
+<tr>
+<td>Banking attrition</td>
+<td style="text-align: right;">Revenue-based core losses −17% YTD; net attrition −25%+</td>
+<td>Historical levels</td>
+<td>Improving</td>
+<td><strong>Leading indicator positive</strong></td>
+</tr>
+<tr>
+<td>Adjusted operating margin</td>
+<td style="text-align: right;">31.2%</td>
+<td>FY 31–31.5%; long-term 37%</td>
+<td>−580bp YoY</td>
+<td><strong>Bottoming, not recovered</strong></td>
+</tr>
+<tr>
+<td>Project Elevate savings</td>
+<td style="text-align: right;">$1.0B target</td>
+<td>$0.5B prior</td>
+<td>Doubled; back-end weighted beyond 2027</td>
+<td><strong>On track, back-loaded</strong></td>
+</tr>
+<tr>
+<td>FCF conversion</td>
+<td style="text-align: right;">71% company; 58% unadjusted</td>
+<td>~90%</td>
+<td>Q3 FCF −48%</td>
+<td><strong>Weak</strong></td>
+</tr>
+<tr>
+<td>Gross leverage</td>
+<td style="text-align: right;">3.1x</td>
+<td>~3.0x YE26</td>
+<td>Below 3.2x in Q2; improved QoQ</td>
+<td><strong>On track</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 release and call [T1]; Q2 2026 call [T1].</p>
+<h3 id="61-the-q4-guide-is-the-whole-ballgame">6.1 The Q4 guide is the whole ballgame</h3>
+<p>The full-year reaffirmation is not a flat guide. It embeds a sharp Q4 acceleration:</p>
+<table>
+<thead>
+<tr>
+<th>Q4 2026 implied</th>
+<th>Calculation</th>
+<th style="text-align: right;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY adjusted revenue guide</td>
+<td>−1.5% to −0.5% on 2025 adjusted revenue of $19.844B</td>
+<td style="text-align: right;">$19.546–19.745B</td>
+</tr>
+<tr>
+<td>Less 9M adjusted revenue</td>
+<td>—</td>
+<td style="text-align: right;">$14.490B</td>
+</tr>
+<tr>
+<td><strong>Q4 adjusted revenue</strong></td>
+<td>—</td>
+<td style="text-align: right;"><strong>$5.056–5.255B</strong></td>
+</tr>
+<tr>
+<td>Q4 2025 adjusted revenue</td>
+<td>—</td>
+<td style="text-align: right;">$4.940B</td>
+</tr>
+<tr>
+<td><strong>Q4 growth</strong></td>
+<td>—</td>
+<td style="text-align: right;"><strong>+2.4% to +6.4% (mid +4.4%)</strong></td>
+</tr>
+<tr>
+<td>Q4 adjusted EPS</td>
+<td>FY $7.30 midpoint − 9M $5.38</td>
+<td style="text-align: right;"><strong>$1.92 (−3.5% YoY)</strong></td>
+</tr>
+<tr>
+<td>Q4 FCF</td>
+<td>90% of FY adjusted NI (~$3.51B) − 9M $2.039B</td>
+<td style="text-align: right;"><strong>~$1.47B (roughly flat YoY)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 release [T1]; author calculations. Q4 2025 adjusted EPS is derived as FY2025 $8.64 − 9M-25 $6.65 = $1.99.</p>
+<p>This is the analytical crux. The stock rose 12.5% on a quarter in which organic revenue was flat because management reaffirmed a guide that requires Q4 to be much better than Q3. The sell-side's 2026 revenue estimate of about $19.52B sits near the low end of the guide, implying Q4 growth of only about 1.8% — below the ~4.4% the midpoint requires. In other words, <strong>the Street is not fully underwriting the Q4 acceleration; the company is.</strong> If Fiserv delivers the guide, Q4 is a beat versus consensus. If it delivers consensus, it misses its own guide. That asymmetry is why the February print matters more than the November one.</p>
+<p>The Q4 EPS math is equally important: even at the guide midpoint, Q4 adjusted EPS is <strong>down 3.5% year on year</strong>, because the adjusted tax rate rises to ~23% in Q4 from 19% for the full year and the margin recovery is modest. The "return to growth" is a revenue event, not an earnings event. Anyone buying the stock for an immediate EPS inflection is early by at least two quarters.</p>
+<p>Management's medium-term margin framework is consistent with the base case rather than the bull case: on the Q2 2026 call, the CFO committed to approximately <strong>50bp of annual adjusted operating margin expansion starting in 2027</strong>. From 31.25% in 2026, that puts 2028 at roughly <strong>32.3–32.5%</strong> — exactly the base case, and well below the 34.5% bull case. The 37% long-term target requires either a step-up in savings (the Elevate benefits are back-end weighted beyond 2027) or more than 50bp per year; it is not a 2028 number.</p>
+<hr />
+<h2 id="7-competition-not-losing-the-war-not-winning-it-either">7. Competition: not losing the war, not winning it either</h2>
+<p>Fiserv's competitive position is best understood as two different businesses with two different problems.</p>
+<h3 id="71-merchant-clover-is-mid-pack-in-a-market-that-rewards-product-velocity">7.1 Merchant: Clover is mid-pack in a market that rewards product velocity</h3>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where it competes</th>
+<th>Scale / valuation</th>
+<th>Threat to Fiserv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Toast</strong></td>
+<td>Restaurant and hospitality SMB; POS + payments + software</td>
+<td>$20.1B market cap; 20.6x forward P/E; 19% three-year revenue growth forecast</td>
+<td><strong>High</strong> in restaurants; the share gainer in Clover's core</td>
+</tr>
+<tr>
+<td><strong>Square (Block)</strong></td>
+<td>Micro-SMB, retail, services; integrated hardware/software</td>
+<td>Not a clean comparable; seller ecosystem is the closest analog to Clover</td>
+<td><strong>High</strong> at the low end; weaker upmarket</td>
+</tr>
+<tr>
+<td><strong>Shopify POS</strong></td>
+<td>E-commerce-led omnichannel retail</td>
+<td>Embedded in Shopify's merchant base</td>
+<td><strong>Medium</strong> in retail; strong for online-first SMBs</td>
+</tr>
+<tr>
+<td><strong>Stripe / Adyen</strong></td>
+<td>Enterprise, global, platform/e-commerce</td>
+<td>Private / European listed; premium multiples</td>
+<td><strong>Medium</strong> in enterprise; Commerce Hub is the response</td>
+</tr>
+<tr>
+<td><strong>Clover (Fiserv)</strong></td>
+<td>SMB, bank/ISO distribution, integrated payments + capital</td>
+<td>11% GPV growth ex-gateway; VAS 23% of Clover revenue</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: StockAnalysis peer statistics [T3]; Q3 2026 call [T1]; Investing.com/Burry background [T2].</p>
+<p>Clover's <strong>+11% GPV growth ex-gateway</strong> is respectable but at the low end of its own 10–15% medium-term range, and well below Toast's ~19% revenue growth. The more revealing number is <strong>value-added services</strong>: 23% of Clover revenue, down from 26%, and down 3% year on year. If Clover were winning on product, VAS — software, capital, payroll, savings, analytics — should grow faster than payments, not shrink. The decline says Clover is still primarily a payments terminal with attached software, not yet the "business management platform" of the equity story. Management's response is Clover for Enterprise (Commerce Hub) and new products (Clover Capital, High-Yield Savings, PracticePay, DoorDash integration). Those are early: Clover eCommerce has 5,000 merchants, a rounding error against the base.</p>
+<p>The competitive risk is not that Clover loses the small-business market outright. It is that Clover is squeezed between Toast/Square at the low end and Stripe/Adyen at the high end, and that its bank/ISO distribution — the real moat — is a channel that competitors can also rent. The 2027 test is whether Clover revenue reaccelerates to the mid-teens as the non-recurring comparisons lapse, or settles at high single digits with VAS flat.</p>
+<h3 id="72-banking-the-quality-benchmark-is-jack-henry-and-fiserv-is-still-shrinking">7.2 Banking: the quality benchmark is Jack Henry, and Fiserv is still shrinking</h3>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Positioning</th>
+<th>Valuation</th>
+<th>Read-across</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Jack Henry (JKHY)</strong></td>
+<td>Premium bank/core provider; strong retention; 36-year dividend grower</td>
+<td>23.3x forward P/E; 16.7x EV/EBITDA; 6.8% three-year revenue growth forecast</td>
+<td>The quality benchmark; Fiserv's banking segment should be compared to this, not to FIS</td>
+</tr>
+<tr>
+<td><strong>FIS</strong></td>
+<td>Bank/payments processor; restructuring</td>
+<td>5.2x forward P/E; 9.4x EV/EBITDA; −56% over 52 weeks</td>
+<td>Distressed; the "failure" multiple</td>
+</tr>
+<tr>
+<td><strong>Global Payments (GPN)</strong></td>
+<td>Merchant/issuer; take-private speculation</td>
+<td>6.3x forward P/E; 8.9x EV/EBITDA; +23% over 52 weeks</td>
+<td>Distressed but re-rating on deal hopes</td>
+</tr>
+<tr>
+<td><strong>Fiserv Financial</strong></td>
+<td>Core banking (DNA, CoreAdvance, Finxact), issuing, digital payments</td>
+<td>Segment margin 38.1%; organic +2% overall, banking −5%</td>
+<td>Improving leading indicators; revenue still lagging</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: StockAnalysis peer statistics [T3]; Q3 2026 call [T1].</p>
+<p>Fiserv's banking organic revenue fell <strong>5%</strong> while Jack Henry grows mid-single digits. That is share loss, full stop. The mitigating evidence is that the losses are from clients signed away two or three years ago, and the leading indicators have turned: revenue-based core losses down 17% year to date, net attrition down more than 25%, client wins up more than 50%, Finxact above 50 million accounts, and a 75% reduction in client-impacting incidents. Those are the right metrics. They reach revenue in 9–12 months, which puts the banking inflection in the second half of 2027, not in Q4 2026.</p>
+<p>The competitive conclusion is symmetrical: <strong>Fiserv has not lost the franchise, but it has not earned a re-rating on product either.</strong> The moat is switching costs (core banking is hard to rip out), distribution (the company says it supports approximately 40% of the U.S. banking market and serves 80% of U.S. banks and credit unions with at least one product), and scale (a third of U.S. merchant volume). Those are real. They are also the reasons the company can shrink for a while without dying — which is precisely what the market is pricing.</p>
+<hr />
+<h2 id="8-balance-sheet-and-capital-allocation-the-constraint-is-leverage-not-solvency">8. Balance sheet and capital allocation: the constraint is leverage, not solvency</h2>
+<p>Fiserv carries <strong>$27.06B</strong> of debt and <strong>$545M</strong> of balance-sheet cash, for <strong>$26.52B</strong> of net debt. The company reports <strong>3.1x gross debt / adjusted EBITDA</strong>, improved from below 3.2x in Q2 after more than $800M of debt paydown in the quarter. The credit facility covenant is <strong>3.75x</strong>, so there is roughly 0.65x of EBITDA — about $5.7B — of headroom before the covenant binds. This is not a solvency story. It is a capital-allocation constraint.</p>
+<table>
+<thead>
+<tr>
+<th>Debt profile, 30-Sep-2026</th>
+<th style="text-align: right;">$M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short-term and current maturities</td>
+<td style="text-align: right;">1,254</td>
+</tr>
+<tr>
+<td>Long-term debt</td>
+<td style="text-align: right;">25,809</td>
+</tr>
+<tr>
+<td><strong>Total debt</strong></td>
+<td style="text-align: right;"><strong>27,063</strong></td>
+</tr>
+<tr>
+<td>Cash and cash equivalents</td>
+<td style="text-align: right;">545</td>
+</tr>
+<tr>
+<td><strong>Net debt</strong></td>
+<td style="text-align: right;"><strong>26,518</strong></td>
+</tr>
+<tr>
+<td>Gross debt / adjusted EBITDA (company)</td>
+<td style="text-align: right;">3.1x</td>
+</tr>
+<tr>
+<td>Covenant</td>
+<td style="text-align: right;">3.75x</td>
+</tr>
+<tr>
+<td>Net interest expense, 9M</td>
+<td style="text-align: right;">1,050</td>
+</tr>
+<tr>
+<td>Adjusted operating income / net interest (annualized)</td>
+<td style="text-align: right;">~4.4x</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 Form 10-Q, Note 10 [T1]; Q3 2026 call [T1].</p>
+<p>The maturity wall is manageable: about $1.8B due in 2027, $3.5B in 2028, $3.0B in 2029, and $3.0B in 2030, with commercial paper of $1.6B and a $240M revolver draw. The cash interest cost is around 5% (9M net interest of $1.05B annualizes to about $1.4B on roughly $27B of debt), and the company has been refinancing higher-coupon notes at a gain — a rare capital-markets tailwind in a turnaround.</p>
+<h3 id="81-the-buyback-math">8.1 The buyback math</h3>
+<p>The $500M Q4 buyback is about <strong>7.9M shares, or 1.5%</strong> of the count at $63. It is a signal of confidence, not a capital-return program. The authorization has <strong>40.8M shares remaining</strong> (roughly $2.6B at the current price), so the constraint is leverage, not authorization.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Annual buyback</th>
+<th style="text-align: right;">Shares retired / yr</th>
+<th style="text-align: right;">% of shares</th>
+<th style="text-align: right;">2028 share count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">~537M</td>
+</tr>
+<tr>
+<td>Base</td>
+<td style="text-align: right;">$1.25B</td>
+<td style="text-align: right;">17.9M at $70</td>
+<td style="text-align: right;">3.4%</td>
+<td style="text-align: right;">~502M</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td style="text-align: right;">$2.0B</td>
+<td style="text-align: right;">26.7M at $75</td>
+<td style="text-align: right;">5.0%</td>
+<td style="text-align: right;">~484M</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: author calculations. Share counts include 0.5% annual SBC dilution.</p>
+<p>At 3.1x, buybacks compete with debt paydown. The company's stated priority is to end 2026 at ~3.0x gross leverage, which requires roughly $0.9B of additional debt reduction at the current EBITDA. After that, the split between buybacks and debt paydown is a judgment call: each $1B of buyback at $70 retires 14.3M shares (2.7% of the count) and uses about $1B of cash that would otherwise reduce net debt; each $1B of debt paydown reduces leverage by about 0.11x. The base case assumes $1.25B/yr of buybacks after the Q4 2026 payment, which is consistent with $3.5–4.0B of FCF, $1.2–1.4B of interest, and $1.0–1.5B of debt reduction.</p>
+<h3 id="82-divestitures-are-an-option-not-a-number">8.2 Divestitures are an option, not a number</h3>
+<p>The portfolio review has identified <strong>more than a dozen non-core products</strong>; management says it is in conversations with multiple parties, with NDAs and a process in place, but "it is too early to estimate the proceeds." The company has already sold student loan servicing, formed the MoneyPass joint venture (retaining a minority stake), and exited India. Proceeds in 9M were $364M, which is small relative to the $27B debt stack.</p>
+<p>I am not including divestiture proceeds in the base case. Each $1B of after-tax proceeds is worth about <strong>$1.88 per share</strong> of equity value at the current price, so a $3–5B program would be meaningful (6–9% of the market cap) but not transformative. The more important effect is qualitative: a sale at a decent multiple would validate the portfolio-review thesis and give management capital to accelerate buybacks. A sale at a distressed multiple would do the opposite.</p>
+<h3 id="83-capital-allocation-verdict">8.3 Capital allocation verdict</h3>
+<p>Management is doing the right things in the right order: cut costs, stabilize the core, pay down debt, then buy back stock. The $500M Q4 buyback is early relative to the leverage target but small enough to be reversible. The risk is that the buyback is funded by adding back transformation costs to FCF — a cosmetic improvement in leverage — rather than by underlying cash generation. The February print should be read with that in mind: <strong>watch gross leverage and unadjusted FCF together, not the company-defined conversion ratio.</strong></p>
+<hr />
+<h2 id="9-valuation-priced-for-stagnation-not-failure">9. Valuation: priced for stagnation, not failure</h2>
+<h3 id="91-multiples-versus-peers-and-versus-its-own-history">9.1 Multiples versus peers and versus its own history</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">FISV</th>
+<th style="text-align: right;">FIS</th>
+<th style="text-align: right;">GPN</th>
+<th style="text-align: right;">JKHY</th>
+<th style="text-align: right;">TOST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price</td>
+<td style="text-align: right;">$62.88</td>
+<td style="text-align: right;">$28.73</td>
+<td style="text-align: right;">$97.40</td>
+<td style="text-align: right;">$173.23</td>
+<td style="text-align: right;">$34.67</td>
+</tr>
+<tr>
+<td>Market cap</td>
+<td style="text-align: right;">$33.46B</td>
+<td style="text-align: right;">$14.81B</td>
+<td style="text-align: right;">$25.78B</td>
+<td style="text-align: right;">$12.06B</td>
+<td style="text-align: right;">$20.14B</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td style="text-align: right;">$59.97B</td>
+<td style="text-align: right;">$34.92B</td>
+<td style="text-align: right;">$43.91B</td>
+<td style="text-align: right;">$12.16B</td>
+<td style="text-align: right;">$18.26B</td>
+</tr>
+<tr>
+<td>Forward P/E</td>
+<td style="text-align: right;"><strong>8.65x</strong></td>
+<td style="text-align: right;">5.15x</td>
+<td style="text-align: right;">6.29x</td>
+<td style="text-align: right;">23.25x</td>
+<td style="text-align: right;">20.59x</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td style="text-align: right;"><strong>7.3x</strong></td>
+<td style="text-align: right;">9.43x</td>
+<td style="text-align: right;">8.87x</td>
+<td style="text-align: right;">16.67x</td>
+<td style="text-align: right;">31.86x</td>
+</tr>
+<tr>
+<td>Debt / EBITDA</td>
+<td style="text-align: right;">3.1x</td>
+<td style="text-align: right;">5.47x</td>
+<td style="text-align: right;">4.73x</td>
+<td style="text-align: right;">0.16x</td>
+<td style="text-align: right;">0.0x</td>
+</tr>
+<tr>
+<td>52-week price change</td>
+<td style="text-align: right;">−1.8%</td>
+<td style="text-align: right;">−55.6%</td>
+<td style="text-align: right;">+23.0%</td>
+<td style="text-align: right;">+8.4%</td>
+<td style="text-align: right;">−11.2%</td>
+</tr>
+<tr>
+<td>Growth reference</td>
+<td style="text-align: right;">2027E +3.5%</td>
+<td style="text-align: right;">3Y avg 9.9%*</td>
+<td style="text-align: right;">3Y avg 20.9%*</td>
+<td style="text-align: right;">3Y avg 6.8%</td>
+<td style="text-align: right;">3Y avg 19.2%</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: StockAnalysis statistics pages, 6-Nov-2026 [T3]. *FIS and GPN growth forecasts are distorted by divestitures and acquisitions; use them as valuation anchors, not operating comparisons. FISV EV/EBITDA uses the author's adjusted EBITDA of $8.25B (adjusted operating income plus D&amp;A excluding acquired-intangible amortization). On the vendor's EBITDA of $7.31B, FISV is 8.2x.</p>
+<p>The peer table makes the central point: <strong>Fiserv is not the cheapest processor.</strong> FIS at 5.2x forward earnings and GPN at 6.3x are the distressed comparables; Fiserv trades at a 37–68% premium to them on earnings and at a lower EV/EBITDA than FIS (7.3x vs 9.4x) because its leverage is lower and its franchise is growing. Jack Henry, the quality bank-core name, trades at 23.3x forward earnings and 16.7x EBITDA — the multiple Fiserv used to command as a compounder. Fiserv sits in the middle: a damaged franchise with a real growth asset (Clover) and a real structural problem (banking attrition).</p>
+<p>Against its own history, the de-rating is complete:</p>
+<table>
+<thead>
+<tr>
+<th>Fiscal year</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th style="text-align: right;">Forward P/E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td style="text-align: right;">16.3x</td>
+<td style="text-align: right;">16.6x</td>
+</tr>
+<tr>
+<td>2022</td>
+<td style="text-align: right;">12.5x</td>
+<td style="text-align: right;">14.1x</td>
+</tr>
+<tr>
+<td>2023</td>
+<td style="text-align: right;">12.9x</td>
+<td style="text-align: right;">16.0x</td>
+</tr>
+<tr>
+<td>2024</td>
+<td style="text-align: right;">15.8x</td>
+<td style="text-align: right;">21.0x</td>
+</tr>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">7.4x</td>
+<td style="text-align: right;">8.4x</td>
+</tr>
+<tr>
+<td><strong>Current</strong></td>
+<td style="text-align: right;"><strong>7.3x</strong></td>
+<td style="text-align: right;"><strong>8.65x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: StockAnalysis financial ratios [T3].</p>
+<p>The stock lost 69% of its market value in 2025 and is 74% below its March 2025 record of $237.79. The multiple compression, not the earnings decline, did most of the damage. At 7.3x EBITDA, the market is valuing Fiserv below FIS and GPN on EBITDA despite lower leverage — a discount that only makes sense if you believe the earnings are lower-quality (they are) or the franchise is in secular decline (it is not, yet).</p>
+<h3 id="92-reverse-dcf-what-growth-is-already-in-the-price">9.2 Reverse DCF: what growth is already in the price?</h3>
+<p>At an enterprise value of $59.97B and 2026 adjusted FCFF of about <strong>$5.17B</strong>, the EV/FCF multiple is <strong>11.6x</strong>. On a simple perpetuity at an 8% WACC, that implies FCF growth of <strong>−0.6%</strong> — i.e., zero. On a five-year fade with a 2% terminal growth rate, the implied initial growth is negative across the grid:</p>
+<table>
+<thead>
+<tr>
+<th>WACC</th>
+<th style="text-align: right;">Implied initial 5-year FCF growth (adjusted FCFF $5.17B)</th>
+<th style="text-align: right;">Implied growth (cash FCFF $4.55B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.0%</td>
+<td style="text-align: right;">−20.9%</td>
+<td style="text-align: right;">−15.6%</td>
+</tr>
+<tr>
+<td>7.5%</td>
+<td style="text-align: right;">−17.0%</td>
+<td style="text-align: right;">−11.6%</td>
+</tr>
+<tr>
+<td>8.0%</td>
+<td style="text-align: right;">−13.4%</td>
+<td style="text-align: right;">−7.7%</td>
+</tr>
+<tr>
+<td>8.5%</td>
+<td style="text-align: right;">−10.0%</td>
+<td style="text-align: right;">−4.1%</td>
+</tr>
+<tr>
+<td>9.0%</td>
+<td style="text-align: right;">−6.7%</td>
+<td style="text-align: right;">−0.7%</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: author model (<code>model_fisv.py</code>, <code>reverse_dcf.csv</code>). Cash FCFF deducts ~$620M of annual cash restructuring, transformation, and other recurring cash costs from adjusted FCFF.</p>
+<p>The precise number is sensitive to the WACC and the FCF definition, so the honest conclusion is a range: <strong>the market is pricing zero to negative FCF growth for five years, not the 3.5% revenue growth and 9.6% EPS growth that consensus models for 2027.</strong> That is the definition of a credibility discount. It is also the opportunity: if Fiserv merely stabilizes and grows FCF with revenue, the stock is worth more than $63. The risk is that the market is right — that capex, restructuring, and attrition keep FCF flat or declining.</p>
+<p>A simpler reverse test makes the same point: at today's 8.65x multiple, the price implies <strong>2028 EPS of $7.27</strong>, exactly the 2026 guide. The market is paying nothing for two years of consensus growth. If the base case's $8.94 materializes and the multiple stays at 8.65x, the price is <strong>$77.3</strong> (+23%). The entire base-case return can come from earnings growth alone, with no re-rating.</p>
+<h3 id="93-the-burry-buyout-value-is-not-a-fair-value">9.3 The Burry buyout value is not a fair value</h3>
+<p>Michael Burry's 2 November Substack post put a <strong>$100–$120</strong> buyout value on Fiserv, using the reported private-equity interest in Global Payments as a yardstick. The arithmetic:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Price</th>
+<th style="text-align: right;">Equity value</th>
+<th style="text-align: right;">Plus net debt</th>
+<th style="text-align: right;">Enterprise value</th>
+<th style="text-align: right;">EV / 2026 adjusted EBITDA</th>
+<th style="text-align: right;">EV / pre-restructuring EBITDA*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">$100</td>
+<td style="text-align: right;">$53.2B</td>
+<td style="text-align: right;">$26.5B</td>
+<td style="text-align: right;">$79.7B</td>
+<td style="text-align: right;">9.7x</td>
+<td style="text-align: right;">8.2x</td>
+</tr>
+<tr>
+<td style="text-align: right;">$120</td>
+<td style="text-align: right;">$63.8B</td>
+<td style="text-align: right;">$26.5B</td>
+<td style="text-align: right;">$90.3B</td>
+<td style="text-align: right;">10.9x</td>
+<td style="text-align: right;">9.3x</td>
+</tr>
+<tr>
+<td style="text-align: right;">GPN take-private (reported)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">~$40B</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">8.1x</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: author calculations; 24/7 Wall St. and Investing.com on Burry [T2]; StockAnalysis GPN EBITDA [T3]. *Pre-restructuring EBITDA adds back ~$1.4B of transformation, severance, and SBC to the $8.25B adjusted EBITDA.</p>
+<p>On <strong>pre-one-time EBITDA</strong>, Burry's range is 8.2–9.3x, roughly consistent with the GPN yardstick of 8.1x. On <strong>reported adjusted EBITDA</strong>, it is 9.7–10.9x, a clear premium. That is the debate in one line: the buyout math works only if a buyer capitalizes the add-backs and believes the turnaround. The deal would be <strong>$80–91B</strong>, more than twice the size of the GPN transaction, in a sector where the GPN talks have not produced a signed agreement. There is no bidder for Fiserv. The Burry post is a catalyst for sentiment, not a valuation anchor; it explains part of the 21% move from 2 November to 6 November, and it should be treated as an option, not a base case.</p>
+<hr />
+<h2 id="10-scenarios-bear-base-bull-and-what-the-draft-gets-right">10. Scenarios: bear, base, bull — and what the draft gets right</h2>
+<p>The scenario architecture in the draft is correct. The differences are in the inputs: the draft's base case is too conservative on buybacks and margin, and its bull case uses a slightly richer multiple than the evidence supports. Here is the side-by-side.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Draft bear</th>
+<th style="text-align: right;"><strong>Model bear</strong></th>
+<th style="text-align: right;">Draft base</th>
+<th style="text-align: right;"><strong>Model base</strong></th>
+<th style="text-align: right;">Draft bull</th>
+<th style="text-align: right;"><strong>Model bull</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic revenue, 2027–28</td>
+<td style="text-align: right;">flat to −2%/yr</td>
+<td style="text-align: right;"><strong>−1%/yr</strong></td>
+<td style="text-align: right;">+2–4%/yr</td>
+<td style="text-align: right;"><strong>+3.5%/yr</strong></td>
+<td style="text-align: right;">mid-single digits</td>
+<td style="text-align: right;"><strong>+4.5% / +5.0%</strong></td>
+</tr>
+<tr>
+<td>Adjusted operating margin, 2028</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: right;"><strong>30.0%</strong></td>
+<td style="text-align: right;">32–33%</td>
+<td style="text-align: right;"><strong>32.5%</strong></td>
+<td style="text-align: right;">~35%</td>
+<td style="text-align: right;"><strong>34.5%</strong></td>
+</tr>
+<tr>
+<td>Annual buyback</td>
+<td style="text-align: right;">minimal</td>
+<td style="text-align: right;"><strong>$0</strong></td>
+<td style="text-align: right;">$1.5–2.0B</td>
+<td style="text-align: right;"><strong>$1.25B</strong></td>
+<td style="text-align: right;">$2B+</td>
+<td style="text-align: right;"><strong>$2.0B</strong></td>
+</tr>
+<tr>
+<td>2028 adjusted EPS</td>
+<td style="text-align: right;">~$6.50</td>
+<td style="text-align: right;"><strong>$6.79</strong></td>
+<td style="text-align: right;">~$8.25</td>
+<td style="text-align: right;"><strong>$8.94</strong></td>
+<td style="text-align: right;">~$10.00</td>
+<td style="text-align: right;"><strong>$10.24</strong></td>
+</tr>
+<tr>
+<td>Multiple</td>
+<td style="text-align: right;">7x</td>
+<td style="text-align: right;"><strong>7.0x</strong></td>
+<td style="text-align: right;">9x</td>
+<td style="text-align: right;"><strong>9.0x</strong></td>
+<td style="text-align: right;">11x</td>
+<td style="text-align: right;"><strong>10.5x</strong></td>
+</tr>
+<tr>
+<td><strong>Implied price</strong></td>
+<td style="text-align: right;"><strong>~$45</strong></td>
+<td style="text-align: right;"><strong>$47.54</strong></td>
+<td style="text-align: right;"><strong>~$74</strong></td>
+<td style="text-align: right;"><strong>$80.46</strong></td>
+<td style="text-align: right;"><strong>~$110</strong></td>
+<td style="text-align: right;"><strong>$107.47</strong></td>
+</tr>
+<tr>
+<td>Upside vs $62.88</td>
+<td style="text-align: right;">−28%</td>
+<td style="text-align: right;"><strong>−24.4%</strong></td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;"><strong>+28.0%</strong></td>
+<td style="text-align: right;">+75%</td>
+<td style="text-align: right;"><strong>+70.9%</strong></td>
+</tr>
+<tr>
+<td>Probability</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>25%</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>50%</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>25%</strong></td>
+</tr>
+<tr>
+<td>2-year IRR</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>−13.0%</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>+13.1%</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>+30.7%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: author model (<code>model_fisv.py</code>, <code>scenarios.csv</code>); draft assumptions as supplied.</p>
+<p><strong>Probability-weighted value: $78.98 (+25.6%).</strong> A 30/45/25 weighting, which is more consistent with two guidance cuts in twelve months, gives <strong>$77.3 (+23%)</strong>. The conclusion does not depend on the weights.</p>
+<h3 id="101-bear-the-bottom-keeps-moving">10.1 Bear: the bottom keeps moving</h3>
+<p>The bear case does not require a collapse. It requires the status quo: revenue flat to down 1%, margins stuck at 30%, no buybacks because leverage stays at 3.1x, and another goodwill impairment. Merchant growth fades after the Q4 comp; Clover VAS keeps shrinking; banking attrition improves but not fast enough to offset price compression; Elevate savings are reinvested in service and technology. At 7x $6.79, the stock is <strong>$47.54</strong>. If the market applies FIS's 5.2x multiple — the true "failure" multiple — the same EPS gives <strong>$35.31</strong>, a 44% decline. That is the tail the draft's $45 bear understates.</p>
+<h3 id="102-base-slow-repair">10.2 Base: slow repair</h3>
+<p>The base case assumes the Q4 guide is met, 2027 revenue grows 3.5% on easier comps and issuing/Clover momentum, and margins expand 75bp in 2027 and another 50bp in 2028 as Elevate savings begin to bite. Buybacks are $1.25B/yr after the Q4 2026 payment, leverage drifts to 2.9x, and the multiple re-rates from 7.9x 2027E to 9.0x 2028E. That is not a heroic re-rating; it is the market rolling forward one year and paying a mid-single-digit growth multiple. <strong>$80.46.</strong></p>
+<p>The base case's biggest assumption is not revenue or margin. It is the <strong>multiple</strong>. At 8.65x today, the stock is already at 9x 2027E if you roll forward; the base case's 9x 2028E is a 14% expansion from the current 2027E multiple (or 4% from the 2026 multiple). The return is mostly earnings growth, not multiple expansion. That is a healthier setup than the bull case implies.</p>
+<h3 id="103-bull-classic-turnaround-re-rate">10.3 Bull: classic turnaround re-rate</h3>
+<p>The bull case requires Merchant organic growth of 6–8% to persist beyond the Q4 comp, Clover GPV at the upper end of 10–15%, VAS stabilizing above 25% of Clover revenue, banking returning to low-single-digit growth by 2H27, and margins reaching 34.5% by 2028. Buybacks of $2B/yr at $75 retire 5% of the shares annually. At 10.5x $10.24, the stock is <strong>$107.47</strong>. A re-rating to 11–12x — the draft's "even a partial re-rating toward 11–12x roughly doubles the stock" — would require the market to treat Fiserv as a quality compounder again. That is possible if the 2027 guide is clean and the 2028 margin trajectory is credible, but it is not the base case.</p>
+<h3 id="104-sensitivities">10.4 Sensitivities</h3>
+<p>Each 100bp of adjusted operating margin is worth about <strong>$0.33</strong> of 2028 EPS. Each 100bp on the cost of debt is worth about <strong>$0.42</strong> (on $26.5B of net debt). Each $500M of annual buyback is worth about <strong>$0.13</strong>. Each 1x of multiple is worth about <strong>$8.94</strong> per share. The valuation is therefore more sensitive to margin and multiple than to revenue growth: a 1% change in 2028 revenue is worth about $0.11 of EPS, while 100bp of margin is worth $0.33. That is why the margin line — not the organic revenue line — is the variable to watch in 2027.</p>
+<hr />
+<h2 id="11-catalysts-and-kill-criteria-the-february-print-is-the-binary">11. Catalysts and kill criteria: the February print is the binary</h2>
+<p>The next scheduled disclosure is the Q4 2026 results in <strong>early February 2027</strong> (the company has not announced the exact date). It is the most important print since the October 2025 reset because it carries three binaries at once: the Q4 Merchant acceleration, the first 2027 guidance, and the FCF conversion proof.</p>
+<h3 id="111-falsification-table">11.1 Falsification table</h3>
+<table>
+<thead>
+<tr>
+<th>Observable</th>
+<th>Guide / consensus</th>
+<th>Supports the bull case if</th>
+<th>Supports the bear case if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q4 Merchant organic growth</td>
+<td>6–8%</td>
+<td>≥6%, and Q1 2027 ≥4%</td>
+<td>&lt;4%</td>
+</tr>
+<tr>
+<td>Q4 total organic growth</td>
+<td>~+5% (implied)</td>
+<td>≥5%</td>
+<td>&lt;3%</td>
+</tr>
+<tr>
+<td>FY26 adjusted EPS</td>
+<td>$7.20–7.40</td>
+<td>≥$7.35</td>
+<td>&lt;$7.20</td>
+</tr>
+<tr>
+<td>2027 revenue growth guide</td>
+<td>~3.5% consensus</td>
+<td>≥3%</td>
+<td>&lt;2%</td>
+</tr>
+<tr>
+<td>2027 adjusted operating margin guide</td>
+<td>~32% [est]</td>
+<td>≥32.5%</td>
+<td>&lt;32%</td>
+</tr>
+<tr>
+<td>FY26 FCF conversion</td>
+<td>~90% company-defined</td>
+<td>≥90%, and unadjusted ≥65%</td>
+<td>&lt;85% company-defined</td>
+</tr>
+<tr>
+<td>Gross leverage at YE26</td>
+<td>~3.0x</td>
+<td>≤3.0x</td>
+<td>&gt;3.2x</td>
+</tr>
+<tr>
+<td>2027 buyback pace</td>
+<td>$1.25B base</td>
+<td>≥$1.5B</td>
+<td>&lt;$0.75B</td>
+</tr>
+<tr>
+<td>Clover GPV ex-gateway</td>
+<td>10–15%</td>
+<td>≥12%</td>
+<td>&lt;9%</td>
+</tr>
+<tr>
+<td>Clover VAS share</td>
+<td>25%+</td>
+<td>≥25% and growing</td>
+<td>&lt;23%</td>
+</tr>
+<tr>
+<td>Banking organic revenue</td>
+<td>Improving from −5%</td>
+<td>≥−2% by 2Q27</td>
+<td>≤−5%</td>
+</tr>
+<tr>
+<td>Portfolio review</td>
+<td>No proceeds estimate</td>
+<td>Sale at ≥10x EBITDA</td>
+<td>Sale below 8x or process shelved</td>
+</tr>
+<tr>
+<td>Goodwill</td>
+<td>$30.95B remaining</td>
+<td>No further impairment</td>
+<td>Another impairment</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: Q3 2026 release and call [T1]; consensus from StockAnalysis [T3]; author thresholds.</p>
+<h3 id="112-catalysts">11.2 Catalysts</h3>
+<p><strong>Next three months.</strong> Q4 results and 2027 guidance (early February); the first full quarter of the $500M buyback; any divestiture announcement from the portfolio review; the Q4 10-K, which will disclose the 2027 maturity schedule and any change in the goodwill allocation.</p>
+<p><strong>Six to twelve months.</strong> The 2027 guidance cadence (Q1 and Q2 prints); the banking attrition inflection, which management says reaches revenue in 9–12 months; Clover for Enterprise traction (Commerce Hub transactions doubled in Q3); Jana Partners' campaign; a possible strategic review or sale of non-core assets; the 2027 Investor Day, if one is scheduled.</p>
+<p><strong>One to three years.</strong> Margin recovery toward the 37% long-term target; Clover's reacceleration to mid-teens revenue growth; the bank-core modernization cycle (Finxact, agentOS); a potential take-private or merger, for which Burry's $100–$120 is the only public marker.</p>
+<h3 id="113-verdict-and-position-plan">11.3 Verdict and position plan</h3>
+<p><strong>Rating: HOLD / Neutral at $62.88.</strong> Base-case value $80 (+28% over two years, ~13% IRR); bull $107 (+71%); bear $48 (−24%); probability-weighted $79 (+26%). The expected return is adequate for a diversified portfolio, not exceptional for a leveraged turnaround with a two-cut management team.</p>
+<p><strong>If you own it:</strong> hold the core position. The operating bottom is probably in, the Q4 comp is easy, and the February guide is more likely to be conservative than aggressive after two cuts. Trim above $75–80 if the Q4 print does not confirm the Merchant acceleration; reassess below $50, which would break the post-Q3 gap and the 200-day moving average ($54.55). Position size: 2–4% of a diversified portfolio, not more.</p>
+<p><strong>If you do not own it:</strong> do not chase at $63 after a 42% five-week rally, an RSI of 82, and a buyout story with no bidder. The buy zone is <strong>$50–55</strong> — about 6.5x 2027E EPS and 6.5x EV/EBITDA — or wait for the February proof and pay up to $70 if Q4 Merchant growth is ≥6%, the 2027 guide is ≥3% organic with ≥32.5% margins, and FCF conversion is ≥85%. The stock does not need to be bought before the binary; the binary is the information.</p>
+<p><strong>What would make me buy at today's price:</strong> a Q4 Merchant print of 6–8% with Q1 2027 guidance of ≥4%, a 2027 margin guide of ≥32.5%, and a credible divestiture at ≥10x EBITDA. Any two of those would justify a starter position; all three would justify the base case.</p>
+<p><strong>What would make me sell:</strong> Q4 Merchant growth below 4%, a 2027 organic guide below 2%, FCF conversion below 85%, another goodwill impairment, or gross leverage above 3.2x at year-end. Those are the kill criteria; they are written down before the print so the February result cannot be reinterpreted after the fact.</p>
+<p><strong>The honest answer to "would I buy it with my own money?"</strong> Not at $62.88. I would have bought it at $44–50, and I would buy it again at $50–55 or after the February proof. The turnaround is real enough to own; the price already reflects the first chapter of it.</p>
+<hr />
+<h2 id="12-scorecard-and-conclusion">12. Scorecard and conclusion</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th style="text-align: right;">Score /10</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business quality (recurring, mission-critical)</td>
+<td style="text-align: right;">7</td>
+<td>~84% recurring revenue; payments and core banking are non-discretionary</td>
+</tr>
+<tr>
+<td>Moat / scale</td>
+<td style="text-align: right;">7</td>
+<td>~1/3 of U.S. merchant volume; ~40% of the U.S. banking market; third-largest debit network</td>
+</tr>
+<tr>
+<td>Revenue growth</td>
+<td style="text-align: right;">4</td>
+<td>Organic −1% in 2026; +3.5% consensus in 2027; Clover is the only real grower</td>
+</tr>
+<tr>
+<td>Margin trajectory</td>
+<td style="text-align: right;">3</td>
+<td>31.2%, −580bp YoY; 37% target is a 2028+ story</td>
+</tr>
+<tr>
+<td>Earnings quality</td>
+<td style="text-align: right;">3</td>
+<td>$683M of recurring "one-time" costs; 58% unadjusted FCF conversion</td>
+</tr>
+<tr>
+<td>Balance sheet</td>
+<td style="text-align: right;">5</td>
+<td>3.1x gross leverage; 3.75x covenant; $26.5B net debt limits buybacks</td>
+</tr>
+<tr>
+<td>Management execution</td>
+<td style="text-align: right;">4</td>
+<td>Two guidance cuts in twelve months; new CEO has a plan but no proof</td>
+</tr>
+<tr>
+<td>Capital allocation</td>
+<td style="text-align: right;">5</td>
+<td>Debt paydown good; $500M buyback small; divestitures unquantified</td>
+</tr>
+<tr>
+<td>Valuation</td>
+<td style="text-align: right;">7</td>
+<td>8.6x 2026E, 7.9x 2027E, 7.3x EV/EBITDA; cheap, not distressed</td>
+</tr>
+<tr>
+<td>Catalyst path</td>
+<td style="text-align: right;">5</td>
+<td>February 2027 is a clean binary; little else in the next quarter</td>
+</tr>
+<tr>
+<td>Sentiment / positioning</td>
+<td style="text-align: right;">4</td>
+<td>RSI 82; above average PT; Burry hype; 5.3% short interest</td>
+</tr>
+<tr>
+<td>Predictability / disclosure</td>
+<td style="text-align: right;">4</td>
+<td>Argentina, divestitures, and recurring "one-time" costs cloud the model</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>58/100</strong></td>
+<td><strong>Hold: the bottom is real, the bargain is not</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The three factors that matter most: <strong>margin trajectory</strong>, <strong>Clover growth quality (VAS and non-Clover SMB)</strong>, and <strong>FCF conversion</strong>. Revenue is the headline; those three are the thesis.</p>
+<p><strong>Conclusion.</strong> Q3 2026 is the bottom in organic revenue. It is probably the bottom in the share price, which was set at $44.36 on 2 October. It is not the bottom in margins, earnings quality, or credibility. At $62.88, the stock discounts stagnation and a permanent credibility discount; the base case is worth about $80, the bull about $107, and the bear about $48. The expected return is positive but not asymmetric, and the February 2027 Q4 print is the catalyst that will decide which scenario the market adopts. Hold what you own; buy the pullback to $50–55 or the proof, not the hype.</p>
+<hr />
+<h2 id="sources-and-method">Sources and method</h2>
+<h3 id="primary-sources-t1">Primary sources (T1)</h3>
+<ol>
+<li>Fiserv, <em>Fiserv Reports Third Quarter 2026 Results</em>, 3-Nov-2026 — https://www.nasdaq.com/press-release/fiserv-reports-third-quarter-2026-results-2026-11-03</li>
+<li>Fiserv, <em>Form 10-Q for the quarter ended 30-Sep-2026</em>, filed 4-Nov-2026 — https://www.sec.gov/Archives/edgar/data/798354/000079835426000042/fisv-20260930.htm</li>
+<li>Fiserv Q3 2026 earnings call transcript, 3-Nov-2026 — https://www.marketbeat.com/earnings/reports/2026-11-3-fiserv-inc-stock/</li>
+<li>Fiserv Q2 2026 earnings call transcript, 6-Aug-2026 — https://www.marketbeat.com/earnings/reports/2026-8-6-fiserv-inc-stock/</li>
+<li>Fiserv, <em>Fiserv Announces Leadership Transition</em>, 15-Jun-2026 — https://investors.fiserv.com/news-releases/news-release-details/fiserv-announces-leadership-transition</li>
+<li>PaymentExpert, <em>"Not where we want to be": Inside Fiserv's great reset</em>, 30-Oct-2025 — https://paymentexpert.com/2025/10/30/not-where-we-want-to-be-inside-fiservs-great-reset/</li>
+<li>PaymentExpert, <em>Fiserv's new CEO launches portfolio review after outlook cut</em>, 7-Aug-2026 — https://paymentexpert.com/2026/08/07/fiserv-cuts-2026-outlook-q2-earnings/</li>
+<li>Reuters, <em>Activist Jana pushes Fiserv to accelerate cost cuts and tap Palantir</em>, 28-Sep-2026 — https://www.reuters.com/business/activist-jana-pushes-fiserv-accelerate-cost-cuts-tap-palantir-2026-09-28/</li>
+<li>Reuters, <em>Fiserv cuts 3,000 employees and contractor jobs under new CEO</em>, 3-Nov-2026 — https://money.usnews.com/investing/news/articles/2026-11-03/fiserv-cuts-3-000-employees-and-contractor-jobs-under-new-ceo</li>
+</ol>
+<h3 id="secondary-sources-t2">Secondary sources (T2)</h3>
+<ol start="10">
+<li>Investing.com via Yahoo Finance, <em>Michael Burry sees buyout value in Fiserv. Do the numbers agree?</em>, 5-Nov-2026 — https://finance.yahoo.com/markets/stocks/articles/michael-burry-sees-buyout-value-082650490.html</li>
+<li>24/7 Wall St., <em>Michael Burry Is Betting a Buyer Will Pay Up to $120 a Share for Fiserv</em>, 8-Nov-2026 — https://247wallst.com/investing/2026/11/08/michael-burry-is-betting-a-buyer-will-pay-up-to-120-a-share-for-fiserv/</li>
+<li>Reuters, <em>Activist investor Jana Partners builds stake in Fiserv</em>, 17-Feb-2026 — https://www.reuters.com/sustainability/sustainable-finance-reporting/activist-investor-jana-partners-builds-stake-fiserv-wsj-reports-2026-02-17/</li>
+</ol>
+<h3 id="market-and-peer-data-t3">Market and peer data (T3)</h3>
+<ol start="13">
+<li>StockAnalysis, FISV statistics — https://stockanalysis.com/stocks/fisv/statistics/</li>
+<li>StockAnalysis, FISV forecast — https://stockanalysis.com/stocks/fisv/forecast/</li>
+<li>StockAnalysis, FISV ratios — https://stockanalysis.com/stocks/fisv/financials/ratios/</li>
+<li>StockAnalysis, FIS / GPN / JKHY / TOST statistics — https://stockanalysis.com/stocks/fis/statistics/, /gpn/statistics/, /jkhy/statistics/, /tost/statistics/</li>
+<li>Yahoo Finance, FISV historical daily prices, accessed 9-Nov-2026 (method appendix)</li>
+<li>OpenInsider, FISV Form 4 screen, accessed 9-Nov-2026 — http://openinsider.com/search?q=FISV</li>
+</ol>
+<h3 id="method-appendix">Method appendix</h3>
+<ul>
+<li><strong>Price:</strong> $62.88 close on 6-Nov-2026, from Yahoo Finance daily bars, cross-checked against StockAnalysis and MarketBeat. The 52-week closing low is $44.36 (2-Oct-2026); the intraday low is $43.87. The 52-week high is $70.41.</li>
+<li><strong>Shares:</strong> 532.05M outstanding (StockAnalysis current share class); 531.8M diluted GAAP and 533.6M diluted adjusted in the Q3 10-Q. Market cap uses 532.05M; EPS uses the Q3 diluted adjusted count.</li>
+<li><strong>Net debt:</strong> $27,063M face debt (10-Q: $1,254M short-term + $25,809M long-term) minus $545M balance-sheet cash. The cash flow statement's $1,326M ending cash includes ~$781M of settlement cash and is not used for net debt. Settlement assets and obligations ($16.3B each) are excluded as pass-through.</li>
+<li><strong>EBITDA:</strong> adjusted operating income plus depreciation and non-acquisition amortization; 2026E $8.25B. The company's 3.1x gross leverage uses a credit-agreement EBITDA of about $8.7B, which includes add-backs; the difference is disclosed, not hidden.</li>
+<li><strong>FCF:</strong> company-defined $2.039B for 9M-26 (OCF $3.094B − capex $1.438B + $383M of adjustments); unadjusted OCF−capex is $1.656B. Both are shown because the definition changes the conversion ratio from 71% to 58%.</li>
+<li><strong>Model:</strong> <code>model_fisv.py</code> in this directory; outputs <code>scenarios.csv</code>, <code>reverse_dcf.csv</code>, and <code>summary.txt</code>. The inputs are at the top of the script and can be changed without touching the formulas. The model is a three-year P&amp;L with revenue, margin, interest, tax, buyback, and share-count drivers; the reverse DCF uses a five-year fade and a 2% terminal growth rate.</li>
+<li><strong>Limitations:</strong> consensus revenue estimates mix GAAP and adjusted bases across vendors; peer EBITDA definitions vary (FIS and GPN have large amortization and restructuring add-backs); the reverse DCF is sensitive to WACC and FCF definition; the Burry buyout range is a third-party scenario, not a company forecast; the 2027 guidance has not been issued. All estimates marked [est] are the author's, not company guidance. The Q3/Q2 call transcripts are third-party (Quartr/MarketBeat) and AI-generated; management quotes were cross-checked against the releases and 10-Q where possible.</li>
+</ul>
+<p><em>This is an analytical framework and research note, not financial advice. The scenario figures are assumptions; stress-test them in your own model.</em></p>
+</div>
+</body></html>

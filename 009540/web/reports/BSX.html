@@ -1,0 +1,2604 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BSX · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>BSX · 2026-09-16</span></div>
+<div class="wrap">
+<h1 id="boston-scientific-corporation-nyse-bsx">Boston Scientific Corporation (NYSE: BSX)</h1>
+<h2 id="institutional-style-research-report-as-of-16-sep-2026">Institutional-style research report - as of 16-Sep-2026</h2>
+<p><strong>Reference price: $44.36 (16-Sep-2026 intraday; 15-Sep close $43.87). Market cap ~$64.3B (1,449M shares). Net debt $12.1B (Jun-30-26); ~$22-23B pro-forma at Penumbra close. FY26 guidance withdrawn after the Aug-25 cyberattack.</strong></p>
+<p>Compiled from primary sources (SEC filings incl. FY25 10-K and Q1/Q2-26 10-Qs; FDA; ClinicalTrials.gov; peer-reviewed trials; company PRs/decks/transcripts), supplemented by dated trade press. Every material claim is labeled: [FILED]/[FACT] (primary-verified), [MGMT CLAIM], [ANALYST], [ESTIMATE], [ASSUMPTION], [OPINION]. "Data unavailable" = not found in sources reviewed. Not investment advice; no recommendation is given. Working fact banks and source notes: ~/bsx_analysis/ .</p>
+<hr />
+<hr />
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<h2 id="snapshot-16-sep-2026">Snapshot (16-Sep-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price / 52wk range</td>
+<td>$44.36 / $42.20-$105.65</td>
+<td>Yahoo/stockanalysis [T2, 16-Sep-26]</td>
+</tr>
+<tr>
+<td>Market cap</td>
+<td>~$64.1B (1,445M sh)</td>
+<td>[CALC]</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td>~$75.7B current; ~$86B pro-forma Penumbra</td>
+<td>[CALC]</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td>$12.1B (Jun-30-26); ~$22-23B pro-forma at deal close</td>
+<td>10-Q/FILED + deal terms</td>
+</tr>
+<tr>
+<td>TTM revenue / GAAP NI</td>
+<td>$21.0B / $3.67B</td>
+<td>[FILED-derived]</td>
+</tr>
+<tr>
+<td>TTM FCF</td>
+<td>$3.63B (17.3% margin)</td>
+<td>stockanalysis [T2]</td>
+</tr>
+<tr>
+<td>FY26 guidance (last, pre-cyber)</td>
+<td>organic +5-6%; adj EPS $3.28-3.32; "unlikely to meet" (Sep-8)</td>
+<td>8-Ks</td>
+</tr>
+<tr>
+<td>Valuation</td>
+<td>PE 17.8; fwd PE ~13.4; EV/EBITDA 13.25; FCF yield ~5.7%</td>
+<td>[T2]</td>
+</tr>
+<tr>
+<td>Next events</td>
+<td>Q3 + revised FY26 outlook Oct 28; Penumbra close targeted H2-26</td>
+<td>[FILED]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-boston-scientific-is-filed">What Boston Scientific is [FILED]</h2>
+<p>Global medtech (59,000 employees; 127 countries; $20.1B FY25 revenue). Two reportable segments: <strong>MedSurg</strong> (Endoscopy, Urology, Neuromodulation) and <strong>Cardiovascular</strong> (Interventional Cardiology &amp; Vascular Therapies, WATCHMAN, Electrophysiology, Cardiac Rhythm Management, Interventional Oncology &amp; Embolization). US 64% / international 36% of FY25 sales; EMEA $3.45B, APAC $3.08B, LACA $0.68B, emerging markets $2.99B (+11.4%).</p>
+<h2 id="the-2026-story">The 2026 story</h2>
+<p>BSX entered 2026 guiding +10-11% organic growth after a 15.8%-organic 2025. Three shocks broke the model: (1) WATCHMAN standalone procedures turned negative (Bernstein conference, May 27: -10-12% stock day) with H2-26 US declines of mid-to-high single digits and no 2027 growth assumed; (2) EP US share collapsed from ~83-100% PFA share (2023-24) to ~41% (Guidepoint early-2026) as Medtronic/J&amp;J/Abbott all launched; (3) an Aug-25 cyberattack shut manufacturing/distribution for 8 days, and on Sep-8 BSX said it is "unlikely to meet" Q3/FY26 guidance. Guidance was cut three times (10-11% -&gt; 6.5-8% -&gt; 5-6% -&gt; withdrawn). The stock is -50%+ YTD. Layered on: the pending $14.5B Penumbra acquisition (FTC second request; holders approved; close targeted H2-26), a $700-800M restructuring plan, and the first CFO transition in ~13 years (Jonathan Monson, CFO since June 2025).</p>
+<h2 id="growth-engines-what-actually-grows">Growth engines (what actually grows)</h2>
+<ul>
+<li>Now: Neuromodulation (+14.8% 1H), EP (decelerating: +16% 1H but ~flat H2 guided), IO&amp;E (+15%), ICVT (+11.9%), Endoscopy (+8.4%); international EP (+23% Q2) and EM.</li>
+<li>2027-28: FARAWAVE Ultra + ICE entry (H2-27), CRM defib platform + EMPOWER leadless (H2-27), SEISMIQ IVL ramp, FARAFLEX (commercial target 2028), Penumbra thrombectomy (~$1.4B revenue, +17%), MiRus TAVR option (2029+), RDN/ICE/TAVR TAM expansion ($25B+ company claim).</li>
+</ul>
+<h2 id="marginfcfbalance-sheet">Margin/FCF/balance sheet</h2>
+<p>Q2-26 adj gross margin 70.3% (+80bps); adj op margin 28.4%; FY25 segment op margins ~32-33% pre-corporate. FCF $3.66B FY25 (80% conversion), $1.29B in Q2-26 alone. Balance sheet levering for the deal: net debt 12.1 -&gt; ~22-23B; covenants allow 4.75x for four quarters post-close; $3B buyback authorization remains ($2B ASR done at avg ~$50.10, ~40M shares retired).</p>
+<h2 id="valuation-my-dcf-full-assumptions-in-section-18">Valuation (my DCF; full assumptions in Section 18)</h2>
+<p>Bear ~$28 / Base ~$65 / Bull ~$109 per share (pro-forma). At $44.36 the market implies ~0.5-3% perpetual revenue growth - i.e., prices the current damage as structural and gives no credit to the 2027-28 launch cadence. My base embeds recovery to mid-single-digit growth and ~20-21% FCF margins by 2030 - itself below the company's pre-2026 track record.</p>
+<h2 id="the-variables-that-matter-most-for-long-term-equity-value-section-27s-core">The variables that matter most for long-term equity value (Section 27's core)</h2>
+<ol>
+<li>EP share stabilization (can FARAWAVE Ultra/ICE stop the erosion at ~41-50% and return EP to market growth in 2028?).</li>
+<li>WATCHMAN market re-expansion (label update + guideline + CMS path; or continued mid-single-digit decline).</li>
+<li>Penumbra close + integration (value of $14.5B; commercial retention; deleveraging path).</li>
+<li>FCF conversion + capital allocation (buyback vs debt paydown vs more M&amp;A).</li>
+<li>Restructuring delivery ($500M gross savings, &gt;half by end-2027).</li>
+<li>Urology turn (commercial rebuild; China VBP).</li>
+<li>2027-28 launch cadence execution (6-7 launches in 18 months; supply/regulatory risk).</li>
+<li>US healthcare policy (physician fee cut proposal; hospital capex).</li>
+<li>FX (euro-denominated debt; EMEA translation).</li>
+<li>Cyber/reputational: customer recapture + litigation overhang.</li>
+</ol>
+<hr />
+<h2 id="2-business-segment-analysis-company-overview">2. Business Segment Analysis - company overview</h2>
+<h2 id="what-boston-scientific-does-filed">What Boston Scientific does [FILED]</h2>
+<p>Boston Scientific (NYSE: BSX; founded 1979; ~59,000 employees) is a global medical-technology company. It develops, manufactures and markets devices across two reportable segments (as reported in 2026 filings):</p>
+<p><strong>MedSurg</strong> (Endoscopy, Urology, Neuromodulation businesses):
+- Endoscopy: GI diagnosis/treatment - resolution clips, biliary stents, SpyGlass single-use scopes (cholangioscopy), ERCP devices, AXIOS stent system, EXALT delivery systems, electrocautery.
+- Urology: stone management (LithoVue single-use ureteroscopes), BPH (rezum / GreenLight laser), incontinence (eCoin tibial neurostim - Valencia), prostate devices.
+- Neuromodulation: spinal cord stimulation (WaveWriter/Precision), peripheral nerve stimulation (Nalu), DBS (Vercise), sacral neuromodulation for bladder/bowel (InterStim).</p>
+<p><strong>Cardiovascular</strong> (sub-franchises: Cardiac Rhythm Management, Electrophysiology, Interventional Cardiology, Structural Heart, Peripheral Interventions):
+- CRM: pacemakers (INGEVITY), ICDs (EMBLEM), CRT, leadless pacemaker (in development: EMPOWER, H2-2027), remote monitoring (LATITUDE).
+- EP: FARAPULSE/FARAWAVE PFA catheters, OPAL HDx mapping, POLARx cryoablation, INGEVITY+ leads for EP.
+- Interventional Cardiology: coronary stents (SYNERGY), IVUS (AVVIGO), coronary IVL (SEISMIQ 4CE - investigational), complex PCI tools.
+- Structural Heart: WATCHMAN FLX/FLX Pro (LAA closure), ACURATE TAVR (being discontinued - 150bps headwind to 2026 organic growth per Q4-25 call), MiRus SIEGEL TAVR option (invested $1.5B for ~34% stake + exclusive option, Q2-26).
+- Peripheral Interventions: drug-coated balloons, SEISMIQ peripheral IVL (approved above/below knee), embolization (TruSelect), interventional oncology (TheraSphere). Plus pending Penumbra (thrombectomy) acquisition.</p>
+<h2 id="q1-q2-2026-segment-revenue-filed-q1-26-pr-22-apr-2026-q2-26-pr-29-jul-2026">Q1-Q2 2026 segment revenue [FILED: Q1-26 PR 22-Apr-2026; Q2-26 PR 29-Jul-2026]</h2>
+<p>Q1-26: total $5,203M (+11.6% rep, +9.4% op/org)
+- MedSurg $1,701M (+7.8% rep, +5.7% org): Endoscopy $736M (+9.4 rep, +6.8 org); Urology $646M (+2.1 rep, +0.5 org); Neuromodulation $318M (+17.4 rep, +15.4 org)
+- Cardiovascular $3,503M (+13.5% rep, +11.2% org)</p>
+<p>Q2-26: total $5,442M (+7.5% rep, +7.0% op/org)
+- MedSurg $1,818M (+5.9% rep, +5.4% org): Endoscopy $793M (+7.6 rep, +7.0 org); Urology $684M (+1.1 rep, +0.8 org); Neuromodulation $341M (+12.7 rep, +12.2 org)
+- Cardiovascular $3,624M (+8.3% rep, +7.8% org)</p>
+<h2 id="geographic-revenue-filed">Geographic revenue [FILED]</h2>
+<p>Q1-26: US $3,284M +10.9%; EMEA $932M +10.1% rep / +1.2% op; APAC $803M +14.7 rep / +12.0 op; LACA $185M +19.0 rep / +12.0 op.
+Q2-26: US $3,426M +6.2%; EMEA $932M +6.1 rep / +4.2 op; APAC $878M +11.2 op; LACA $206M +22.4 rep / +16.2 op.
+(FY2025 split: pending notes_sec_financials.md)</p>
+<h2 id="2026-event-timeline-core-narrative-filednews">2026 event timeline (core narrative) [FILED/news]</h2>
+<ul>
+<li>Feb 4, 2026 (Q4-25/FY25 results): Q4 sales $5.286B (+15.9% rep, +13% org; EP $890M vs Street ~$933M), adj EPS $0.80 (beat). FY25: $20.074B (+19.9% rep, +15.8% org), adj EPS $3.06 (+22%), FCF $3.659B. FY26 initial guide: organic +10-11%, adj EPS $3.43-3.49, adj op margin +50-75bps. STOCK -17% intraday (steepest single-day drop in 25+ years) on EP miss + deceleration. Citi PT to $102 (Buy).</li>
+<li>Apr 22, 2026 (Q1-26): $5.203B, +9.4% org (in-line), adj EPS $0.80. Cut #1: FY26 organic -&gt; +6.5-8.0%, adj EPS -&gt; $3.34-3.41. Q2 guide: +5-7% org, EPS $0.82-0.84.</li>
+<li>May 18, 2026: $2B accelerated share repurchase (JPM; ~30.4M shares upfront at $52.68 ref; part of $5B authorization; $3B remaining after).</li>
+<li>May 27, 2026: flagged declining WATCHMAN usage; stock -12% to 2+yr lows.</li>
+<li>Jul 21, 2026: Board approved 2026 Restructuring Plan (8-K 27-Jul): $700-800M pretax charges ($600-700M cash), reduce gross annual pretax expenses by ~$500M as realized (substantial portion reinvested); completion by end-2029.</li>
+<li>Jul 29, 2026 (Q2-26): $5.442B, +7.0% org (beat), adj EPS $0.86 (beat; guide was $0.82-0.84). Cut #2: FY26 organic -&gt; +5-6%, adj EPS -&gt; $3.28-3.32, margin +0-25bps; Q3 guide +3-5% org, EPS $0.80-0.82. $2B ASR completed (~40M shares). $1.5B MiRus investment closed (~34% stake + option on TAVR). AVANT GUARD (FARAPULSE vs AAD in persistent AF: all endpoints met, superiority); ELEVATE-PF (FARAFLEX feasibility); FARADIGM pivotal enrolled.</li>
+<li>Aug 25-26, 2026: cyberattack detected; 8-day global manufacturing/distribution shutdown; 8-K Aug 26 (Item 8.01).</li>
+<li>Sep 5-7, 2026: update: effects limited; quality intact; remote-monitoring activations disrupted; systems substantially restored.</li>
+<li>Sep 8, 2026: 8-K (Item 1.05) - incident likely to have MATERIAL impact on Q3+FY26; UNLIKELY to meet guidance; update at Q3 call Oct 28.</li>
+<li>Sep 10, 2026 (Wells Fargo conf): operations fully recovered; recapture rate TBD. WATCHMAN: US market declining mid-to-high single digits H2-26; expects similar 2027; new competitor product coming; BSX to grow below market in 2027; label update hoped 2027; HRS/SCAI draft guideline positive; CMS NCD revisit later. EP: PFA US penetration ~90%; BSX PFA share ~50% (Wells Fargo estimate) and eroding; FARAWAVE Ultra + ICE launches H2-2027; FARAFLEX IDE started; EP growth moderates until then. Penumbra close targeted by year-end; possible divestitures TBD. 2027: minimal EPS growth; 2028: back to WAMGR-ish growth. H2-26 organic implied ~2-4%; "good starting point for 2027."</li>
+</ul>
+<h2 id="market-data-sep-16-2026">Market data (Sep 16, 2026)</h2>
+<ul>
+<li>Price $44.36 (intraday Sep 16; close Sep 15 $43.87); 52wk range $42.20-$105.65; -57% 52wk; YTD 2026 ~-50%.</li>
+<li>Market cap ~$63.6B (stockanalysis, Sep 15 close) / ~$64.3B at $44.36; EV ~$75.7B; shares out ~1.45B (decreased -0.05% YoY; -1.35% QoQ on ASR).</li>
+<li>TTM: revenue $21.0B, net income $3.67B, EPS $2.47; FCF $3.63B; GM 69.2%, op margin 20.5% (GAAP TTM).</li>
+<li>Valuation: PE 17.8 TTM; fwd PE 13.39; EV/EBITDA 13.25; P/FCF ~17.5; PS 3.0; PEG 1.05; ROIC 11.2%, ROE 15.3%.</li>
+<li>Analyst consensus: Buy; PT $62.00 (31 analysts, stockanalysis Sep 2026); 3Y revenue growth forecast 5.87%, EPS growth 7.33%.</li>
+<li>Short interest: 48.17M shares (3.32% of SO; 3.33% float; DTC 2.48) vs prior month 22.28M (doubled).</li>
+<li>Insiders 0.18%; institutions 93.87%.</li>
+<li>Next earnings: Oct 28, 2026 (Q3 + updated FY26 outlook).</li>
+<li>Beta (5Y) 0.57; 50-DMA $46.92; 200-DMA $65.14; RSI ~39.</li>
+</ul>
+<hr />
+<h2 id="2b-sub-franchise-analysis-q21h-2026-detail">2b. Sub-franchise analysis (Q2/1H 2026 detail)</h2>
+<p>Note: In Q4 2025 BSX reorganized its business structure into four operating segments [10-Q Q2-26, Note K]; external reporting continues by the businesses below. Prior periods restated. All figures $M, growth YoY from filed tables.</p>
+<h2 id="q2-26-and-1h-26-by-business-unit-exact-filed">Q2-26 and 1H-26 by business unit (exact, filed)</h2>
+<table>
+<thead>
+<tr>
+<th>Business</th>
+<th>Q2-26 total</th>
+<th>Q2-25</th>
+<th>Q2 growth</th>
+<th>1H-26</th>
+<th>1H-25</th>
+<th>1H growth</th>
+<th>Q2-26 US</th>
+<th>Q2-26 Int'l</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endoscopy</td>
+<td>793</td>
+<td>737</td>
+<td>+7.6%</td>
+<td>1,529</td>
+<td>1,410</td>
+<td>+8.4%</td>
+<td>491</td>
+<td>303</td>
+</tr>
+<tr>
+<td>Urology</td>
+<td>684</td>
+<td>676</td>
+<td>+1.2%</td>
+<td>1,330</td>
+<td>1,310</td>
+<td>+1.5%</td>
+<td>503</td>
+<td>181</td>
+</tr>
+<tr>
+<td>Neuromodulation</td>
+<td>341</td>
+<td>303</td>
+<td>+12.5%</td>
+<td>659</td>
+<td>574</td>
+<td>+14.8%</td>
+<td>257</td>
+<td>84</td>
+</tr>
+<tr>
+<td>MedSurg</td>
+<td>1,818</td>
+<td>1,716</td>
+<td>+5.9%</td>
+<td>3,519</td>
+<td>3,293</td>
+<td>+6.9%</td>
+<td>1,251</td>
+<td>567</td>
+</tr>
+<tr>
+<td>Interventional Cardiology &amp; Vascular Therapies</td>
+<td>1,333</td>
+<td>1,178</td>
+<td>+13.2%</td>
+<td>2,577</td>
+<td>2,302</td>
+<td>+11.9%</td>
+<td>586</td>
+<td>746</td>
+</tr>
+<tr>
+<td>WATCHMAN (LAAC)</td>
+<td>507</td>
+<td>486</td>
+<td>+4.3%</td>
+<td>1,014</td>
+<td>911</td>
+<td>+11.3%</td>
+<td>459</td>
+<td>48</td>
+</tr>
+<tr>
+<td>Electrophysiology</td>
+<td>916</td>
+<td>840</td>
+<td>+9.0%</td>
+<td>1,821</td>
+<td>1,570</td>
+<td>+16.0%</td>
+<td>606</td>
+<td>310</td>
+</tr>
+<tr>
+<td>Cardiac Rhythm Management</td>
+<td>585</td>
+<td>590</td>
+<td>-0.9%</td>
+<td>1,163</td>
+<td>1,168</td>
+<td>-0.4%</td>
+<td>349</td>
+<td>236</td>
+</tr>
+<tr>
+<td>Interventional Oncology &amp; Embolization</td>
+<td>283</td>
+<td>251</td>
+<td>+12.7%</td>
+<td>551</td>
+<td>479</td>
+<td>+15.0%</td>
+<td>175</td>
+<td>108</td>
+</tr>
+<tr>
+<td>Cardiovascular</td>
+<td>3,624</td>
+<td>3,345</td>
+<td>+8.3%</td>
+<td>7,126</td>
+<td>6,430</td>
+<td>+10.8%</td>
+<td>2,175</td>
+<td>1,449</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>5,442</strong></td>
+<td><strong>5,061</strong></td>
+<td><strong>+7.5%</strong></td>
+<td><strong>10,646</strong></td>
+<td><strong>9,724</strong></td>
+<td><strong>+9.5%</strong></td>
+<td>3,426</td>
+<td>2,017</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-structural-reads-calcopinion">Key structural reads [CALC/OPINION]</h2>
+<ol>
+<li><strong>Two speeds.</strong> 1H-26 growth leaders: EP +16%, IO&amp;E +15%, Neuromodulation +14.8%, IC&amp;VT +11.9%, Watchman +11.3% (flattered by a strong Q1), Endoscopy +8.4%. Laggards: CRM -0.4% (structural decline, waiting on 2027 defib platform), Urology +1.5% (commercial/product issues).</li>
+<li><strong>The Q2 deceleration is concentrated in the US:</strong> Watchman US +2.9% (vs +11%+ in Q1), EP US +3.2% (vs high-teens/20%+ earlier), Urology US +0.8%. International: EP +23%, Watchman +20%, Neuro +12% — the competitive damage is a US phenomenon so far.</li>
+<li><strong>Watchman is now the swing franchise:</strong> $507M/quarter (~9.3% of total); growth collapsed from ~30% (2025) to 4.3% (Q2-26). Standalone procedure volumes down to "low teens" per third-party coverage; combination "concomitant" procedures with ablation diluted. Market ~$1.9-2.1B; BSX share ~90% (Abbott CEO statement, Aug 2026).</li>
+<li><strong>EP: the growth engine that's cooling.</strong> $916M/quarter; Q1 +24%, Q2 +9%, H2-26 guided ~flat (US competitive). FARAPULSE share estimates: ~41% (third-party analysis, Jul-2026) to ~50% (Wells Fargo analyst estimate, Sep-10-26) vs near-monopoly at launch (2024-25). 2027 recovery catalysts: FARAWAVE Ultra (H2-27), ICE entry (H2-27), FARAFLEX (IDE started, FARADIGM pivotal enrolling).</li>
+<li><strong>CRM remains a drag</strong> (-0.9%): awaiting defibrillator platform launch (H2-2027 per mgmt) + EMPOWER leadless pacemaker (H2-2027).</li>
+<li><strong>MedSurg growth = Endoscopy + Neuromodulation</strong> carrying Urology. Urology has new products (Asurys fluid mgmt, eCoin/Valencia tibial nerve stim; LithoVue Elite) and mgmt promises 2027 improvement.</li>
+<li><strong>IC&amp;VT and IO&amp;E are quietly strong</strong> (SEISMIQ IVL ramp 2027-28; TheraSphere/embo momentum; TruSelect 510(k) Jul-26).</li>
+</ol>
+<h2 id="fy2025-full-year-context-filed">FY2025 full-year context [FILED]</h2>
+<p>FY25 total $20,074M (+19.9% reported, +19.2% operational, +15.8% organic). Q4-25 EP $890M (missed Street ~$933M). FY25 business units ($M): Endoscopy 2,916; Urology 2,709; Neuromodulation 1,199; MedSurg 6,824; ICVT 4,639; Watchman 1,958; EP 3,325; CRM 2,332; IO&amp;E 996; Cardiovascular 13,250 [10-K Note N]. Segment operating income FY25: MedSurg $2,268M (33.2%); CV $4,303M (32.4%).</p>
+<h2 id="what-is-structurally-growing-faster-than-the-company-1h-26-basis-calc">What is structurally growing faster than the company (1H-26 basis) [CALC]</h2>
+<ul>
+<li>Neuromodulation (+14.8%), EP (+16.0% but decelerating hard), IO&amp;E (+15.0%), IC&amp;VT (+11.9%) &gt; total (+9.5%).</li>
+<li>Endoscopy ~ in line (+8.4%).</li>
+<li>Below: Urology (+1.5%), CRM (-0.4%), and Watchman decelerating (+11.3% 1H but +4.3% Q2, guided negative H2).</li>
+</ul>
+<hr />
+<h2 id="3-organic-growth">3. Organic Growth</h2>
+<h2 id="reported-vs-organic-vs-fx-vs-ma-definitions-filed">Reported vs organic vs FX vs M&amp;A (definitions) [FILED]</h2>
+<ul>
+<li>Reported = as-filed. Operational = constant FX. Organic = constant FX + excludes acquisitions/divestitures with less than a full period of comparable sales.</li>
+</ul>
+<h2 id="annual-series-verified">Annual series (verified)</h2>
+<table>
+<thead>
+<tr>
+<th>FY</th>
+<th>Revenue ($B)</th>
+<th>Reported growth</th>
+<th>Organic growth</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>9.913</td>
+<td>-7.7%</td>
+<td>-7.8%</td>
+<td>-11.3% organic (COVID) [FILED]</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>11.888</td>
+<td>+19.9%</td>
+<td>+18.7%</td>
+<td>operational +18.7% incl. ~$212M M&A; workpapers show organic +18.9% - flagged</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>12.682</td>
+<td>+6.7%</td>
+<td>+11.1%</td>
+<td>+8.7% organic [FILED]; M&amp;A +~2.4pp</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>14.240</td>
+<td>+12.3%</td>
+<td><strong>+12.3%</strong> [FILED, FY24 10-K]</td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>16.747</td>
+<td>+17.6%</td>
+<td><strong>+16.4%</strong> [FILED, FY24 10-K]</td>
+<td>Axonics/Silk Road closed 2024</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>20.074</td>
+<td>+19.9% (19% operational)</td>
+<td><strong>+15.8%</strong> [FILED, Feb-4-26 call]</td>
+<td>target was 15.5%; Q4-25 organic 13% (slowed from 15.3% in Q3)</td>
+</tr>
+<tr>
+<td>2026E (last guide)</td>
+<td>~21.0-21.4 (implied)</td>
+<td>+5.5-6.5% (reported), later "unlikely"</td>
+<td>+5-6%, later "unlikely"</td>
+<td>cut 3x: 10-11% (Feb) -&gt; 6.5-8% (Apr) -&gt; 5-6% (Jul) -&gt; Sep-8: will miss</td>
+</tr>
+<tr>
+<td>2026 actual 1H</td>
+<td>10.646</td>
+<td>+9.5%</td>
+<td>+8.2% blended (Q1 +9.4%, Q2 +7.0%)</td>
+<td>H2 implied ~2-4% per mgmt (Sep-10)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quarterly-organic-series-2026-filed">Quarterly organic series 2026 [FILED]</h2>
+<p>Q1-26 +9.4%; Q2-26 +7.0%; Q3-26 guidance +3-5% (pre-cyber), now "unlikely to meet" + material hit; Q4-26 implied ~1-3% (H2 2-4%).</p>
+<h2 id="growth-decomposition-by-driver-partially-calcopinion">Growth decomposition by driver [partially CALC/OPINION]</h2>
+<ul>
+<li><strong>Procedure volumes:</strong> the base driver; ~85-90% of revenue is procedure-linked consumables (Section 16).</li>
+<li><strong>Market share:</strong> positive 2021-2024 (PFA first-mover, Watchman dominance, Neuro momentum) turning NEGATIVE in 2026 in EP (US) and LAAC (competition + market decline).</li>
+<li><strong>New products:</strong> FARAPULSE (2024-25 super-cycle), next wave = H2-2027 (FARAWAVE Ultra, ICE, FMR defib platform, EMPOWER, FARAFLEX, SEISMIQ IVL, Penumbra thrombectomy).</li>
+<li><strong>Geographic:</strong> US +6.2% (Q2-26), APAC +11.2%, LACA +16.2% op, EMEA +4.2% op — international is the steadier grower now; China NMPA approvals (OPAL HDx) progress.</li>
+<li><strong>Pricing:</strong> positive mix from PFA conversion through 2025 (premium PFA pricing); mgmt expects "some pressure on price" in PFA with competition (Sep-10); Watchman/EP gross margin pressure acknowledged (EPS commentary).</li>
+<li><strong>Acquisitions:</strong> material each year (Axonics/Silk Road added to 2025; Penumbra to add ~$1.4-1.5B revenue in 2027). Organic excludes them, but reported growth is heavily M&amp;A-aided: e.g., 2025 reported 19.9% vs organic 15.8%.</li>
+</ul>
+<h2 id="acceleration-assessment-opinion-evidence-based">Acceleration assessment [OPINION, evidence-based]</h2>
+<ul>
+<li>2021-2024: ACCELERATING (13% -&gt; 12% -&gt; ~15%+ organic).</li>
+<li>2025: PEAK (15.8%) - driven by PFA adoption + strong endoscopy/neuro.</li>
+<li>2026: SHARP DECELERATION (8.2% 1H, ~2-4% H2 implied; cyber excluded ~1-2pp of it).</li>
+<li>Sustainability: management explicitly frames 2026 as "era of consistent double-digit organic growth is likely behind it" (analyst paraphrase, mddionline Jul-30-26); targets WAMGR-ish (~5-6% + ) from 2028; near term (2027) explicitly "minimal EPS growth" with Watchman/EP pressure until H2-2027 launches.</li>
+<li>Key swings to watch: EP share trough (~41-50% now), Watchman market decline (mid-high single digits US), Urology turn (mgmt targets 2027), and the H2-2027 launch wave.</li>
+</ul>
+<hr />
+<h2 id="4-market-size-tam">4. Market Size &amp; TAM</h2>
+<p>BSX does NOT disclose dollar TAM per franchise in filings; decks state market sizes are "BSX internal estimates" [FACT - FY25 10-K has no TAM; Q2-26 FOH deck]. Company internal WAMGR: <strong>~7-8%</strong> (cut ~1pt. in 2026 due to Watchman) [COMPANY CLAIM, Q2-26 call]. Seven major launches target a combined <strong>$25B+ TAM by 2028</strong> [COMPANY CLAIM].</p>
+<h2 id="table-segment-market-size-est-growth-bsx-position-source-labels">Table: Segment | Market size (est.) | Growth | BSX position | Source labels</h2>
+<table>
+<thead>
+<tr>
+<th>Business</th>
+<th>Market (est.)</th>
+<th>Market growth</th>
+<th>BSX FY25 revenue / share position</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EP / PFA</td>
+<td>PFA $2.0B (2026) -&gt; $6.4B (2031); US AF ablation spend $3.8B (2025)</td>
+<td>~26% CAGR PFA; ablation units +20%/yr</td>
+<td>EP $3,325M FY25; US PFA spend share 41% (early-26) vs 83% (2024), 100% (2023)</td>
+<td>Mordor 2026 [EST]; Guidepoint Qsight Jun-26 [EST]</td>
+</tr>
+<tr>
+<td>WATCHMAN/LAAC</td>
+<td>$2.0-2.2B (2025) -&gt; $6.5-7.0B (2031-34)</td>
+<td>~15-20% CAGR (pre-2026 slowdown); near-term US declining</td>
+<td>Watchman $1,958M FY25; ~90% share</td>
+<td>TrendX/Mordor [EST]; Abbott CEO Aug-26 [FACT]</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>$23.2B (2026)</td>
+<td>~5% CAGR</td>
+<td>CRM $2,332M FY25; #3-4 position; leadless gap</td>
+<td>Mordor 2026 [EST]</td>
+</tr>
+<tr>
+<td>ICVT (IC + vascular)</td>
+<td>Coronary IVL $1B+ (2025); DCB $1.2B (2025); TAVR $7B+</td>
+<td>IVL ~15% CAGR; TAVR high-single</td>
+<td>ICVT $4,639M FY25; AGENT first US coronary DCB; SEISMIQ IVL launching</td>
+<td>GMI/SNS/iData [EST]; BSX internal [CLAIM]</td>
+</tr>
+<tr>
+<td>IO&amp;E</td>
+<td>Interventional oncology $2.9B (2026); embolization $2.4B (2026)</td>
+<td>7-11%</td>
+<td>IO&amp;E $996M FY25</td>
+<td>Research&amp;Markets/Mordor [EST]</td>
+</tr>
+<tr>
+<td>Endoscopy</td>
+<td>GI endoscopy devices $22.2B (2026)</td>
+<td>~6.7%</td>
+<td>Endoscopy $2,916M FY25; market leader in many categories</td>
+<td>Mordor [EST]</td>
+</tr>
+<tr>
+<td>Urology</td>
+<td>Urology devices $42B (2026, broad def.)</td>
+<td>~6.4%</td>
+<td>Urology $2,709M FY25; stone leader; Axonics SNM</td>
+<td>MarketDataForecast [EST]</td>
+</tr>
+<tr>
+<td>Neuromodulation</td>
+<td>SCS $3.8B (2025); neurostim $6.7B+</td>
+<td>8-13%</td>
+<td>NM $1,199M FY25; Intracept ~$200M YE25</td>
+<td>DelveInsight/Fortune [EST]</td>
+</tr>
+<tr>
+<td>Thrombectomy (Penumbra, pending)</td>
+<td>$4.1B (2025) -&gt; $10.2B (2034)</td>
+<td>~11%</td>
+<td>Penumbra $1.4B FY25 revenue (+17%)</td>
+<td>MarketIntelo [EST]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tam-expansion-vectors-company-stated-verified">TAM expansion vectors (company-stated + verified)</h2>
+<ol>
+<li><strong>New indications:</strong> Watchman post-CHAMPION addressable expansion ~5M -&gt; up to 20M patients worldwide [COMPANY CLAIM]; FARAPULSE persistent-AF + first-line (AVANT GUARD) labels.</li>
+<li><strong>New geographies:</strong> PFA outside US "far from mature" (mgmt); China NMPA approvals (OPAL HDx, FARAWAVE NAV); EM $2.9B (+11.4% FY25).</li>
+<li><strong>New technologies:</strong> ICE ($1.3B market), renal denervation ($1B+), TAVR via MiRus ($7B+, launch ~2029), circulatory support VITALYST ($1.5B), IVL expansion, next-gen SCS.</li>
+<li><strong>Cross-selling:</strong> Penumbra into BSX vascular call point; FARAWATCH (PFA + LAAC concomitant, ~25% of ablation patients currently get Watchman concurrently).</li>
+<li><strong>Acquisitions:</strong> the historically dominant vector (Section 9).</li>
+</ol>
+<hr />
+<h2 id="5-competitive-analysis">5. Competitive Analysis</h2>
+<table>
+<thead>
+<tr>
+<th>Business</th>
+<th>Market leader(s)</th>
+<th>BSX position</th>
+<th>Main competitors</th>
+<th>Key dynamics [FACT/ESTIMATE labels inline]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EP / PFA</strong></td>
+<td>Medtronic (US PFA spend 48%, early-26) [EST Guidepoint]</td>
+<td>#2, ~41% US PFA share; historically #1 (83-100% 2023-24)</td>
+<td>Medtronic (PulseSelect, Sphere-9, Sphere-360 CE), J&amp;J (VARIPULSE, dual-energy STSF), Abbott (Volt, TactiFlex Duo), Kardium, Pulse Biosciences</td>
+<td>Fast-cycle technological competition; all majors approved 2023-26; switching is physician-driven (low-moderate); ASP pressure beginning; BSX defense = FARAWAVE Ultra + OPAL mapping + ICE + FARAFLEX (H2-27/2028)</td>
+</tr>
+<tr>
+<td><strong>WATCHMAN / LAAC</strong></td>
+<td>BSX (90% share)</td>
+<td>Dominant but market stalling</td>
+<td>Abbott (Amulet, Amulet 360 CE Aug-26), Edwards (ECLIPTIS 510(k) Jun-26), Medtronic/AtriCure (surgical exclusion)</td>
+<td>2026: standalone volumes -low-teens%; referral confusion from CLOSURE-AF/OCEAN; label update + CMS path = the unlock; new entrants arrive 2027; HIGH stakes (9% of revenue)</td>
+</tr>
+<tr>
+<td><strong>CRM</strong></td>
+<td>Medtronic #1, Abbott #2</td>
+<td>#3-ish; flat (-0.4% 1H26)</td>
+<td>MDT, ABT, Biotronik, MicroPort</td>
+<td>Leadless = the growth sub-segment where BSX lacks (EMPOWER H2-27); defib refresh H2-27; pacemaker market ~5% growth, defensible</td>
+</tr>
+<tr>
+<td><strong>ICVT (IC + vascular)</strong></td>
+<td>Abbott (vascular), Medtronic (coronary), J&amp;J (Shockwave/IVL) [EST]</td>
+<td>Top-3 broad IC portfolio</td>
+<td>ABT, MDT, J&amp;J/Shockwave, Philips, Terumo, Penumbra (soon in-house), B. Braun</td>
+<td>Strong 2026 performer (+11.9% 1H); AGENT first-to-market coronary DCB; SEISMIQ IVL challenges Shockwave's monopoly; PCI stable despite hospital budgets</td>
+</tr>
+<tr>
+<td><strong>IO&amp;E</strong></td>
+<td>Sirtex (J&amp;J?), Merit, Guerbet; BSX = TheraSphere leader in Y-90 [EST]</td>
+<td>Leader in radioembolization</td>
+<td>Sirtex, Merit, Teleflex, Terumo</td>
+<td>+15% 1H26; sticky, oncological demand; embolization particles growing 11%</td>
+</tr>
+<tr>
+<td><strong>Endoscopy</strong></td>
+<td>Olympus, Fujifilm (scopes); BSX = leader in many consumable categories (biliary, hemostasis, single-use scopes)</td>
+<td>Top-2 in targeted categories</td>
+<td>Olympus, Fujifilm, Cook, Steris, Fuji; GI devices market ~$22B</td>
+<td>+8.4% 1H26; single-use scopes (EXALT D) converting from reusable; AXIOS/size-removal headwind H1-26; Scivita deal adds scopes</td>
+</tr>
+<tr>
+<td><strong>Urology</strong></td>
+<td>BSX = stone-management leader; Medtronic = SNM leader (InterStim) [EST]</td>
+<td>Leader in stones (Lumenis laser); challenger in SNM (Axonics)</td>
+<td>Olympus, Cook, Karl Storz, Medtronic, Coloplast, Teleflex</td>
+<td>2026 problem child (+1.5% 1H): stone competition (niche entrants + China VBP) + Axonics SNM disruption (~100 reps hired); product refreshes + eCOIN + 2027 expectations</td>
+</tr>
+<tr>
+<td><strong>Neuromodulation</strong></td>
+<td>Medtronic #1 SCS; Abbott; BSX ~#2-3 SCS [EST]</td>
+<td>Strong niche positions (Intracept unique; DBS; SCS)</td>
+<td>MDT, ABB, Nevro, Saluda; SPR (pain), NeuroPace (epilepsy)</td>
+<td>Best 2026 grower (+14.8% 1H); Intracept ~$200M YE25; competitive but structurally growing 8-13%</td>
+</tr>
+<tr>
+<td><strong>Thrombectomy (Penumbra, pending)</strong></td>
+<td>Penumbra #1 in aspiration thrombectomy (neuro + peripheral), Inari/Stryker #2</td>
+<td>Acquiring the leader</td>
+<td>Stryker/Inari ($4.9B deal), Medtronic, Terumo</td>
+<td>11% market growth; consolidation wave; BSX scale + call-point = synergy story; integration execution = the question</td>
+</tr>
+</tbody>
+</table>
+<h2 id="specific-dynamics-non-ranking-commentary">Specific dynamics (non-ranking commentary)</h2>
+<ul>
+<li><strong>EP is the competitive epicenter:</strong> Medtronic's velocity (+124% US ablation growth in a quarter) shows how quickly a validated fast-follower can displace a first mover when switching costs are a physician's preference and no ecosystem lock exists. BSX's response (Ultra ties the ablation catheter to its own mapping workflow) is designed to raise those switching costs - the single most important competitive initiative in the company.</li>
+<li><strong>Watchman is a reference-immunity problem more than a product problem:</strong> the trials' conflicting inference (CLOSURE-AF failure; OCEAN futility) slowed REFERRALS, not implant capability; this can re-open with guidelines/label/NCDs - hence the outsized importance of non-product milestones.</li>
+<li><strong>Hospital purchasing power:</strong> rising GPO discipline + tight budgets = the 2026 macro; BSX's breadth helps contract negotiating, but EP experience shows hospital economics will not shield incumbents from better/clinically-equal offers.</li>
+<li><strong>Regulatory barriers:</strong> real for PMA devices but crossed routinely within 24 months by every major competitor; not a moat.</li>
+</ul>
+<hr />
+<h2 id="6-moat-analysis">6. Moat Analysis</h2>
+<p>For each claimed advantage: what creates it / durability / replicability / direction of travel. [OPINION] unless labeled.</p>
+<ol>
+<li><strong>Physician relationships &amp; procedural know-how.</strong> Deep, decades-old training/proctoring networks (EP, IC, endoscopy, urology). Durability: moderate. The 2024-26 EP share collapse (100%-&gt;41%) is direct evidence that physician loyalty does NOT overcome a well-executed competitive launch when the technology is comparable. Getting STRONGER in endoscopy/urology (training pipelines), WEAKER in EP.</li>
+<li><strong>Hospital relationships / purchasing scale.</strong> BSX sells to virtually every hospital in the developed world, with category breadth that eases contracting. But hospital purchasing power is rising (GPO consolidation; 2026 hospital budget tightening noted by mgmt) and EP proves buyers will champion challengers. Durability: moderate-high; direction: stable.</li>
+<li><strong>Distribution &amp; salesforce.</strong> ~global direct organization; complementary add-ons (Penumbra's thrombectomy sales force to be retained; Silk Road relationships). The Axonics disruption (~100 reps hired to fix) shows execution risk when bolting on. Net: strong asset, integration-sensitive.</li>
+<li><strong>R&amp;D capabilities.</strong> Large (R&amp;D $2.05B, 10.2% FY25) and productive historically (FARAPULSE born from a $295M option play). Gap areas: EP mapping (OPAL early vs CARTO), ICE (entering), leadless pacing (late). Direction: stable-to-improving (2027-28 wave), but no longer clearly ahead in EP.</li>
+<li><strong>Patent portfolio.</strong> Broad but constantly-mixed across franchises; much older-technology base. EP competition arriving on schedule shows IP does not lock the field. [Not independently audited; many products are trade-secret/manufacturing-based moats.] Effectiveness: moderate.</li>
+<li><strong>Regulatory barriers.</strong> PMA pathways for cardiac devices are real but not prohibitive: every major PFA competitor cleared within ~24 months of FARAPULSE. China NMPA approvals (OPAL, FARAWAVE NAV) show BSX navigating ex-US well. Barrier level: moderate, eroding in high-interest fields.</li>
+<li><strong>Product ecosystem.</strong> The strongest defensible piece: FARAPULSE + FARAWAVE NAV/Ultra + OPAL mapping + FARAVIEW + FARAFLEX + access (VersaCross/Baylis) attempts to replicate Medtronic/J&amp;J "one-lab" ecosystems; WATCHMAN pairs with the same EP call point (FARAWATCH concomitant). Watchman+access+ICE strategy is a genuine lock-in attempt. Durability: building, unproven.</li>
+<li><strong>Brand / "category leadership" strategy.</strong> BSX's own operating doctrine: #1 or #2 in every category. It works until a category is contested (EP now). Direction: intact, being tested.</li>
+<li><strong>Switching costs.</strong> Low-moderate in catheters (physician choice), moderate in Neuromodulation/CRM (implanted systems, programming ecosystems), higher in endoscopy workflows (tower/scope consumable ties). Stable.</li>
+<li><strong>Scale &amp; manufacturing.</strong> 30+ facilities, vertical integration, cost advantages; the cyberattack exposed operational concentration (8-day global shutdown; single points of failure). Direction: temporarily damaged, fixable; restructuring includes supply-chain optimization/line transfers.</li>
+<li><strong>Clinical evidence.</strong> Historically a strength (ADVENT/CHAMPION/PROTECT); now table stakes - competitors match with their own trials (SPHERE, VOLT-AF, AdmIRE). The CHAMPION data + post-ablation label remain differentiators vs surgical/simple competitors and support the 2027 label push. Direction: stable, no longer decisive.</li>
+<li><strong>M&amp;A capability (the real moat?).</strong> The strongest empirical argument FOR BSX's moat: it repeatedly buys at early value inflection (FARAPULSE $295M upfront -&gt; &gt;$3B EP revenue; Bolt $475M; SoniVie; Nuvaira? no; Cortex; Penumbra is the counter-example at $14.5B for $1.4B revenue). Scouting/structuring = elite; integration = mixed (Axonics disruption; Silk Road manufacturing move; CEO "you can't afford turnover in that commercial team"). Direction: proven value creation history, now taking more concentrated bet.</li>
+</ol>
+<p><strong>Moat verdict [OPINION]:</strong> BSX's durable advantages are scale + category breadth + a value-creating M&amp;A machine + very strong evidence/regulatory execution. The 2026 events showed none of these is decisive against a well-executed competitor in a high-interest market; the "wide moat" narrative is better described as a <strong>wide-but-contested moat, narrowing at the fastest-growing franchise until the 2027-28 launches prove otherwise.</strong></p>
+<hr />
+<h2 id="7-product-pipeline">7. Product Pipeline</h2>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Technology</th>
+<th>Indication</th>
+<th>Status / expected</th>
+<th>Market (est.)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FARAWAVE Ultra</td>
+<td>3rd-gen PFA catheter (20 electrodes) + mapping integration</td>
+<td>PAF/persistent AF</td>
+<td>Launch H2-2027 [MGMT 9/10/26]</td>
+<td>PFA $2B+ 2026 -&gt; $6.4B 2031</td>
+<td>Defends PFA ASP; ties OPAL mapping; replaces FARAWAVE NAV over time</td>
+</tr>
+<tr>
+<td>ICE catheters (incl. AcuNav 4D w/ Siemens Healthineers)</td>
+<td>Intracardiac echocardiography</td>
+<td>EP procedures (imaging)</td>
+<td>Entry H2-2027</td>
+<td>ICE $1.3B</td>
+<td>BSX "not in ICE today"; partnership announced Q4-25</td>
+</tr>
+<tr>
+<td>FARAFLEX</td>
+<td>Large focal map-and-ablate catheter</td>
+<td>PAF/persistent; complex arrhythmias</td>
+<td>FARADIGM pivotal (Aug-26 start); commercial target 2028</td>
+<td>Complex arrhythmia $3B+ (2028E)</td>
+<td>96.4% PVI durability (optimized) ELEVATE-PF</td>
+</tr>
+<tr>
+<td>FARAPOINT</td>
+<td>Focal PFA catheter</td>
+<td>CTI, complex anatomy adjunct</td>
+<td>Approved Jan-2026 (S012)</td>
+<td>—</td>
+<td>Limited EU release; US adjunct use</td>
+</tr>
+<tr>
+<td>WATCHMAN Elite/next-gen</td>
+<td>Next-gen LAAC</td>
+<td>AF stroke prevention</td>
+<td>Pipeline; "product reiterations and new platforms coming" (Mahoney 9/10/26)</td>
+<td>LAAC ~$2B+</td>
+<td>Defense vs Abbott Amulet 360 / Edwards ECLIPTIS</td>
+</tr>
+<tr>
+<td>CRM defibrillator platform</td>
+<td>Next-gen ICD/CRT</td>
+<td>SCD/CRT</td>
+<td>Launch H2-2027</td>
+<td>CRM $23B total</td>
+<td>"CRM healthier in 2027"</td>
+</tr>
+<tr>
+<td>EMPOWER leadless pacemaker</td>
+<td>Leadless pacing</td>
+<td>Bradycardia</td>
+<td>Launch H2-2027</td>
+<td>High-growth CRM segment</td>
+<td>Closes leadless gap (mgmt: "our gap continues to be in leadless")</td>
+</tr>
+<tr>
+<td>SEISMIQ coronary IVL</td>
+<td>Coronary intravascular lithotripsy</td>
+<td>Calcified coronary disease</td>
+<td>US launch initiated Q4-25; ramp 2027, meaningful 2028</td>
+<td>IVL $1B+</td>
+<td>FRACTURE IDE met endpoints (EuroPCR 2026); vs Shockwave/J&amp;J</td>
+</tr>
+<tr>
+<td>SEISMIQ peripheral</td>
+<td>Peripheral IVL</td>
+<td>PAD (above/below knee)</td>
+<td>Approved/launching</td>
+<td>IVL $1B+</td>
+<td>Inherited Bolt Medical</td>
+</tr>
+<tr>
+<td>Renal denervation (TIVUS)</td>
+<td>Ultrasound RDN</td>
+<td>Hypertension</td>
+<td>Enrollment completing 2026; market entry strategy 2027+</td>
+<td>RDN $1B+</td>
+<td>SoniVie acquisition ($362M net upfront)</td>
+</tr>
+<tr>
+<td>VITALYST</td>
+<td>Circulatory support</td>
+<td>High-risk PCI/cardiogenic shock</td>
+<td>In development</td>
+<td>$1.5B</td>
+<td>"big bet in circulatory support" (Mahoney 9/10/26)</td>
+</tr>
+<tr>
+<td>SIEGEL (MiRus option)</td>
+<td>Balloon-expandable TAVR</td>
+<td>Aortic stenosis</td>
+<td>Option exercised post-trial; launch ~2029</td>
+<td>TAVR $7B+</td>
+<td>Re-enters TAVR after ACURATE discontinuation</td>
+</tr>
+<tr>
+<td>Penumbra platforms (Lightning Flash/Bolt, Indigo, RED)</td>
+<td>Mechanical thrombectomy</td>
+<td>VTE/PE/stroke</td>
+<td>Pending close H2-26; Lightning Flash in IC</td>
+<td>Thrombectomy $4.1B -&gt; $10.2B 2034</td>
+<td>$14.5B deal; EPS -$0.06-0.08 yr1</td>
+</tr>
+<tr>
+<td>eCoin (Valencia)</td>
+<td>Tibial nerve stim</td>
+<td>Urge urinary incontinence</td>
+<td>Closed Apr-2026</td>
+<td>—</td>
+<td>Urology expansion</td>
+</tr>
+<tr>
+<td>Nalu PNS</td>
+<td>Peripheral nerve stim</td>
+<td>Chronic pain</td>
+<td>Closed Jan-2026</td>
+<td>—</td>
+<td>COMFORT 24-mo data published</td>
+</tr>
+<tr>
+<td>Scivita scopes</td>
+<td>Endoscopes</td>
+<td>GI/urology</td>
+<td>Pending ($200M upfront)</td>
+<td>—</td>
+<td>Endoscopy/Urology portfolio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="can-the-pipeline-sustain-historical-growth-opinionassumption">Can the pipeline sustain historical growth? [OPINION/ASSUMPTION]</h2>
+<ul>
+<li>The 2027-28 wave is unusually dense (6+ launches in ~18 months) and directly addresses the two damaged franchises (EP: Ultra/ICE/FARAFLEX; CRM: defib + leadless).</li>
+<li>But: (1) the launches land AFTER a full year of share bleed, so they must both stop erosion and re-grow; (2) none is a "new category" the way FARAPULSE was in 2024 - they are defense/widening plays plus adjacencies (IVL, RDN, TAVR, thrombectomy); (3) company claim: seven launches target $25B+ TAM [MGMT CLAIM].</li>
+<li>Base-case modeling: 2027 = trough growth year (low-single-digit organic; minimal EPS growth per mgmt), with recovery accelerating 2028-29 as launches compound; achieving the pre-2026 15%+ growth rate is not in any credible base case.</li>
+</ul>
+<hr />
+<h2 id="8-pulsed-field-ablation-electrophysiology-deep-dive">8. Pulsed-Field Ablation / Electrophysiology Deep Dive</h2>
+<h2 id="approvals-timeline-all-fact-via-openfdaprs">Approvals timeline (all [FACT] via openFDA/PRs)</h2>
+<ul>
+<li>FARAPULSE PFA (FARAWAVE + FARASTAR + FARADRIVE): FDA PMA P230030, decision 2024-01-30 (PAF); Breakthrough designation 2019; CE 2021.</li>
+<li>Label expansion persistent AF: PMA S007, 2025-07-03.</li>
+<li>FARAPOINT focal catheter added: S012, 2026-01-12 (adjunctive CTI/complex anatomy).</li>
+<li>FARAWAVE NAV + FARAVIEW software: 2024-10-18 (PAF).</li>
+<li>FARAFLEX (map-and-ablate, 19 electrodes): investigational; FIH Feb-2025; FARADIGM pivotal launched Aug-2026 (~25-35 sites; separate PAF/persistent cohorts; primary safety 60 days; efficacy = freedom from AA/redo/cardioversion/AAD escalation at 30mo); commercial target <strong>2028</strong>.</li>
+<li>FARAWAVE Ultra (3rd-gen, 20 electrodes): launch <strong>H2-2027</strong> per mgmt (Sep-10); some sources H1-27 [NEWS].</li>
+<li>ReMATCH IDE (~375 pts; recurrent persistent AF post-ablation).</li>
+</ul>
+<h2 id="clinical-evidence-bsx-vs-competitors-key-numbers">Clinical evidence (BSX vs competitors; key numbers)</h2>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Trial (N)</th>
+<th>Efficacy</th>
+<th>Safety events</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FARAPULSE</td>
+<td>ADVENT (607)</td>
+<td>73.3% vs 71.3% thermal (NI)</td>
+<td>2.1% vs 1.5%</td>
+<td>Approved (PAF)</td>
+</tr>
+<tr>
+<td>FARAPULSE persistent</td>
+<td>ADVANTAGE AF Ph1 (339)</td>
+<td>63.5%; symptomatic-free 85.3%</td>
+<td>2.3%</td>
+<td>Approved (S007)</td>
+</tr>
+<tr>
+<td>FARAPULSE first-line persistent</td>
+<td>AVANT GUARD (310)</td>
+<td>56.0% vs 30.1% AAD; HR 0.46</td>
+<td>5.1%</td>
+<td>HRS/NEJM Apr-2026</td>
+</tr>
+<tr>
+<td>FARAPULSE late outcomes</td>
+<td>ADVENT long-term</td>
+<td>4-yr: better success, fewer repeat ablations vs thermal</td>
+<td>—</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>Medtronic PulseSelect</td>
+<td>PULSED AF (300)</td>
+<td>66.2% PAF / 55.1% persAF</td>
+<td>0.7%</td>
+<td>PV first PFA approval Dec-2023</td>
+</tr>
+<tr>
+<td>Medtronic Sphere-9</td>
+<td>SPHERE Per-AF (420)</td>
+<td>73.8% vs 65.8% (RF)</td>
+<td>1.4% vs 1.0%</td>
+<td>Approved Oct-2024</td>
+</tr>
+<tr>
+<td>J&amp;J VARIPULSE</td>
+<td>AdmIRE (277)</td>
+<td>74.6%</td>
+<td>&lt;3% PAE; 4 neuro events/132 US cases -&gt; Class-1 recall (Z-1205-2025); resumed Feb-2025</td>
+<td>PAF only</td>
+</tr>
+<tr>
+<td>J&amp;J dual-energy STSF</td>
+<td>SmartfIRE</td>
+<td>100% acute; durable 3-mo</td>
+<td>acceptable</td>
+<td>Approved 2026-07-08 (PAF+pers)</td>
+</tr>
+<tr>
+<td>Abbott Volt PFA</td>
+<td>VOLT-AF (392)</td>
+<td>81.1% PAF / 63.3% persAF</td>
+<td>1.9%</td>
+<td>Approved 2025-12-19</td>
+</tr>
+<tr>
+<td>Abbott TactiFlex Duo</td>
+<td>FOCALFLEX (147)</td>
+<td>81% at 6 mo</td>
+<td>1.4%</td>
+<td>Approved 2026-09-08 (dual RF+PFA)</td>
+</tr>
+<tr>
+<td>Kardium Globe PF</td>
+<td>PULSAR (183)</td>
+<td>78% at 12 mo; 95% durable PVI</td>
+<td>—</td>
+<td>Approved 2025-08-27</td>
+</tr>
+<tr>
+<td>Pulse Biosciences nPulse</td>
+<td>IDE Dec-2025</td>
+<td>FIH: 96% procedural success</td>
+<td>—</td>
+<td>Investigational</td>
+</tr>
+</tbody>
+</table>
+<h2 id="market-structure-share">Market structure &amp; share</h2>
+<ul>
+<li>US AFib ablation volume ~250k catheter units in 2025 (+~20% YoY); US ablation catheter spend ~$3.8B (2025) [Guidepoint Qsight, EST]; PFA = 78% of US ablation spend early-2026 (57% of units) [EST]; PFA reached ~<strong>80% of US AFib ablation</strong> [MGMT, Q2-26].</li>
+<li><strong>US PFA spend share, early 2026: Medtronic 48%, BSX 41%, J&amp;J 11%, Abbott ~1%</strong> [Guidepoint Qsight, EST]. BSX was 100% (2023) -&gt; ~83% (2024) -&gt; 41% (early-26). BSX's own framing: "we under-called the competitive pressure in the U.S." (Mahoney).</li>
+<li>Medtronic Q4-FY26: ablation revenue +78% global, <strong>+124% US</strong>, +8pts US share (one quarter!) [FACT].</li>
+<li>International: PFA penetration far from mature (mgmt); BSX int'l EP +23% in Q2-26.</li>
+</ul>
+<h2 id="revenue-opportunity-math-assumptions-labeled">Revenue opportunity math (assumptions labeled)</h2>
+<ul>
+<li>BSX EP segment: FY23 $800M -&gt; FY24 $1,904M -&gt; FY25 $3,325M -&gt; 1H26 $1,821M (+16%). Q2-26 $916M (+9%); H2-26 guided ~flat; mgmt: "will not get back to launch-era growth rates"; aims for market+ growth once Ultra/ICE launch (H2-27).</li>
+<li>Scenario frame [ASSUMPTION]: US+global AF ablation market ~10-14% growth (PFA-driven, guidelines, ASC coverage from 2026); if BSX share stabilizes at 35-45% of a $6-7B PFA market by 2030 (Mordor: $6.4B 2031), EP revenue potential ~$2.5-3.5B incl. mapping/ICE/access attach. Bull: international + FARAFLEX + complex-arrhythmia ($3B+ TAM claim) -&gt; $4B+.</li>
+<li>Key dependency: <strong>FARAWAVE Ultra must tie in OPAL mapping without forcing it</strong> (mgmt: doctors won't be required to use BSX mapping) - the strategy is to defend PFA ASP with a combined map-and-ablate workflow, decoupling catheter growth from total EP market growth.</li>
+<li>What must be true for EP to be a major LT growth driver: (1) share stops falling at &gt;=35-40% (Ultra + ICE + FARAFLEX stop the bleed in 2027-28); (2) persistent-AF/first-line labels monetize; (3) pricing holds (some pressure expected); (4) international PFA conversion continues (+penetration); (5) no new safety class-effect (VARIPULSE-style) contaminating PFA.</li>
+</ul>
+<h2 id="judgment-opinion">Judgment [OPINION]</h2>
+<p>EP is no longer a "hyper-growth" story; it is a <strong>defend-and-widen</strong> story. The franchise remains structurally attractive (procedure growth + PFA conversion + persistent AF), but the era of 100-200% growth is over; realistic LT contribution: mid-single to low-double-digit growth compounding from a ~$3.5B base. The 2026 derating already prices much of the share loss; the un-priced variable is whether Ultra/ICE can stabilize share vs Medtronic's momentum (48% and rising).</p>
+<hr />
+<h2 id="9-ma-strategy">9. M&amp;A Strategy</h2>
+<h2 id="model-cadence-filed">Model &amp; cadence [FILED]</h2>
+<p>BSX is a serial acquirer: cash used for acquisitions (net of cash acquired): 2018 $1.45B; 2019 $4.38B; 2020 $3M; 2021 $2.26B; 2022 $1.54B; 2023 $1.81B; 2024 $4.64B; 2025 $1.59B; H1-26 $0.72B. Typical approach: minority stake -&gt; option -&gt; full buyout (FARAPULSE 27% stake since 2014, bought for $295M upfront 2021; Bolt Medical 26% stake since 2019, $475M 2025; SoniVie 10% since 2022, $362M 2025; Nalu 9% since 2017, $523M 2026; MiRus $1.5B for 33.75% + call option 2026).</p>
+<h2 id="largestvalue-defining-deals-condensed-full-detail-in-working-files">Largest/value-defining deals (condensed; full detail in working files)</h2>
+<table>
+<thead>
+<tr>
+<th>Deal</th>
+<th>Announced/closed</th>
+<th>Price</th>
+<th>Target revenue then</th>
+<th>Subsequent performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BTG</td>
+<td>2018/2019</td>
+<td>$4.02B</td>
+<td>~$0.85B</td>
+<td>Mixed-positive: TheraSphere/EKOS kept; Specialty Pharma sold (~$800M); $73M impairment 2020; BTG contributed ~610bps of Q4-19 growth</td>
+</tr>
+<tr>
+<td>Preventice</td>
+<td>2021</td>
+<td>$925M+$300M CVR</td>
+<td>$158M (+30%)</td>
+<td>Integrated into Rhythm Mgmt; contributed ~950bps CRM growth 2021; became LUX-Dx base</td>
+</tr>
+<tr>
+<td><strong>FARAPULSE</strong></td>
+<td>2021</td>
+<td><strong>$295M upfront (+$92M milestones)</strong></td>
+<td>pre-revenue (CE 2021)</td>
+<td><strong>Home run: EP revenue $0.8B (FY23) -&gt; $3.3B (FY25); &gt;$1B FARAPULSE alone in 2024; &gt;200k patients</strong></td>
+</tr>
+<tr>
+<td>Lumenis surgical</td>
+<td>2021</td>
+<td>$1.07B</td>
+<td>~$200M</td>
+<td>Urology stone engine; MOSES Raydar CE 2025</td>
+</tr>
+<tr>
+<td>Baylis Medical</td>
+<td>2021/2022</td>
+<td>$1.75B</td>
+<td>~$200M (2022E)</td>
+<td>Access platforms now strategic (left-heart access for FARAPULSE/LAAC)</td>
+</tr>
+<tr>
+<td>Apollo Endosurgery</td>
+<td>2022/2023</td>
+<td>~$615M EV</td>
+<td>~$75M</td>
+<td>Endoluminal surgery growth driver; Elevance coverage Dec-2025; no impairment</td>
+</tr>
+<tr>
+<td>Relievant</td>
+<td>2023</td>
+<td>$850M + milestones ($1.07B total)</td>
+<td>&gt;$70M (&gt;50% growth)</td>
+<td>Intracept ~$200M YE25; Neuromod top driver; milestones being paid</td>
+</tr>
+<tr>
+<td><strong>Axonics</strong></td>
+<td>2024</td>
+<td><strong>$3.7B ($71/sh)</strong></td>
+<td>$366M (+34%)</td>
+<td>Closed 10 months later post-FTC; Urology FY25 +23.1% rep but organic ex-deal +4.7%; mid-2026 commercial disruption; ~100 reps hired to fix</td>
+</tr>
+<tr>
+<td>Silk Road Medical</td>
+<td>2024</td>
+<td>$1.26B ($27.50/sh; 38% prem.)</td>
+<td>$177M (+28%)</td>
+<td>TCAR platform; integration "went poorly initially" (CEO 9/10/26); manufacturing moving to Minnesota ("immaterial impact")</td>
+</tr>
+<tr>
+<td>Bolt Medical</td>
+<td>2025</td>
+<td>$475M net + $200M CVR</td>
+<td>pre-revenue</td>
+<td>= SEISMIQ IVL; US launch Q4-25; FRACTURE met endpoints (EuroPCR 2026)</td>
+</tr>
+<tr>
+<td>SoniVie</td>
+<td>2025</td>
+<td>$362M net + $200M CVR</td>
+<td>pre-revenue</td>
+<td>TIVUS RDN; hypertension trial completing enrollment 2026</td>
+</tr>
+<tr>
+<td>Nalu / Cortex / Intera / Anrei / Valencia / Scivita</td>
+<td>2025-26</td>
+<td>$172M-$523M each</td>
+<td>small/private</td>
+<td>Folded into Neuromod/EP/IO/Endo/Uro</td>
+</tr>
+<tr>
+<td><strong>Penumbra</strong></td>
+<td>2026</td>
+<td><strong>$14.5B EV ($374/sh; 73% cash/27% stock)</strong></td>
+<td>~$1.4B (+17%)</td>
+<td>PENDING: FTC second request (Mar-26); holders approved (May-26); close targeted H2-26; EPS -$0.06-0.08 yr1</td>
+</tr>
+<tr>
+<td>MiRus (33.75% + option)</td>
+<td>2026</td>
+<td>$1.5B</td>
+<td>pre-revenue (TAVR)</td>
+<td>Option on SIEGEL TAVR platform; launch ~2029</td>
+</tr>
+</tbody>
+</table>
+<h2 id="financing-of-penumbra-filed-8-k-feb-26">Financing of Penumbra [FILED 8-K Feb-26]</h2>
+<p>$3.0B revolver (2031) + $2.0B 364-day revolver + <strong>$6.0B delayed-draw term loan</strong> ($1B Tranche A + $5B Tranche B, to be refinanced); leverage covenant 3.75x standard, <strong>4.75x for 4 quarters post-close</strong>.</p>
+<h2 id="value-creation-scorecard-opinion-evidence-based">Value creation scorecard [OPINION, evidence-based]</h2>
+<ul>
+<li><strong>Value created:</strong> FARAPULSE alone (bought ~$400-580M total potential vs a &gt;$3B/yr revenue franchise) likely repaid the entire 2019-2026 acquisition program; Relievant/Bolt/SoniVie/Nalu bought early at option prices; BTG partially monetized; integration generally delivers revenue synergies within 2-3 years.</li>
+<li><strong>Value at risk / destruction:</strong> Axonics ($3.7B for $366M revenue = ~10x sales) with demonstrable commercial disruption and now-flat organic growth; Silk Road integration stumbles; <strong>Penumbra at $14.5B for ~$1.4B revenue (~10x sales, EV/FCF ~67x) is the largest and most expensive bet of the Mahoney era</strong> - it needs ~year-2 neutrality and durable 12-17% growth to earn its cost of capital; FTC second request adds timing/conditions risk.</li>
+<li><strong>Aggregate:</strong> no goodwill impairment 2021-25; ~$622M intangible write-offs 2022-25 (incl. Cryterion, superseded by FARAPULSE) and ACURATE TAVR abandonment ($87M) - failed bets small vs winners; BSX had exited neurovascular in 2011 (Penumbra = re-entry) [FILED notes]; but the marginal deal is getting bigger and pricier (deal size trajectory $0.3B -&gt; $14.5B), raising the stakes on integration quality.</li>
+<li><strong>Historical IRRs are not disclosed</strong> and most targets' standalone post-close results are not broken out [FILED note: BSX does not present pro forma results for acquisitions]. ROIC (company ~11.2% per stockanalysis T2) sits mid-pack vs medtech peers (~8-17%), consistent with heavy acquisition accounting.</li>
+</ul>
+<h2 id="future-ma-evidence-constrained">Future M&amp;A (evidence-constrained)</h2>
+<p>Management stance: "agnostic to technology, internal and external" (Mahoney 9/10/26); "8 platforms" incl. internally developed. Logical bolt-on areas by strategy/fit [OPINION - not predictions]: EP mapping/ICE-adjacent assets (widening the EP portfolio is stated priority), urology (stone/BPH), endoscopy AI/imaging (Scivita relationship), neuromodulation/PNS, LAA next-gen. A large new deal is UNLIKELY until Penumbra closes and leverage normalizes (covenant 4.75x window).</p>
+<hr />
+<h2 id="10-financial-analysis">10. Financial Analysis</h2>
+<h2 id="revenue-verified-filed">Revenue (verified [FILED])</h2>
+<table>
+<thead>
+<tr>
+<th>FY</th>
+<th>Revenue $B</th>
+<th>Reported</th>
+<th>Operational</th>
+<th>Organic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>8.386</td>
+<td>—</td>
+<td>—</td>
+<td>organic n/d [NOT FOUND]</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>9.048</td>
+<td>—</td>
+<td>—</td>
+<td>organic n/d [NOT FOUND]</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>9.823</td>
+<td>—</td>
+<td>—</td>
+<td>+7.2% organic</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>10.735</td>
+<td>+9.4%*</td>
+<td>—</td>
+<td>+7.3% organic</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>9.913</td>
+<td>-7.7%</td>
+<td>-7.8%</td>
+<td>-11.3% (COVID)</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>11.888</td>
+<td>+19.9%</td>
+<td>+18.7%</td>
+<td>n/d (operational +18.7% incl. M&A; workpapers show organic +18.9% - conflict flagged)</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>12.682</td>
+<td>+6.7%</td>
+<td>+11.1%</td>
+<td>+8.7% [FILED]</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>14.240</td>
+<td>+12.3%</td>
+<td>+13.1%</td>
+<td><strong>+12.3%</strong></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>16.747</td>
+<td>+17.6%</td>
+<td>+18.5%</td>
+<td><strong>+16.4%</strong></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>20.074</td>
+<td>+19.9%</td>
+<td>+19.2%</td>
+<td><strong>+15.8%</strong></td>
+</tr>
+<tr>
+<td>1H26</td>
+<td>10.646</td>
+<td>+9.5%</td>
+<td>+9.5%</td>
+<td>+8.2% (Q1 +9.4%, Q2 +7.0%)</td>
+</tr>
+<tr>
+<td>*2019 figure not re-verified this pass.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- CAGRs [CALC]: 3Y revenue CAGR FY22-25 ~16.5%; 5Y (FY20-25) ~15.2%; organic avg FY21-25 ~13.3% (using mid FY21). 10-year organic view: FY18 +7.2% / FY19 +7.3% / FY20 -11.3% (COVID) / FY21-25 as above; FY16-17 organic not disclosed [NOT FOUND].</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- M&amp;A contribution: ~+210bps to FY24 growth; ~+330bps to FY25 operational growth [FILED: FY24/FY25 10-K/MD&amp;A]; FX drag: -90bps FY24; small +/- otherwise.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="margins-profitability-filedt2">Margins &amp; profitability [FILED/T2]</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>FY21</th>
+<th>FY22</th>
+<th>FY23</th>
+<th>FY24</th>
+<th>FY25</th>
+<th>1H26 (Q2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gross margin</td>
+<td>68.8%</td>
+<td>68.8%</td>
+<td>69.5%</td>
+<td>68.6%</td>
+<td>69.0%</td>
+<td>70.3% adj (Q2)</td>
+</tr>
+<tr>
+<td>GAAP op margin</td>
+<td>10.1%</td>
+<td>13.0%</td>
+<td>16.5%</td>
+<td>15.5%</td>
+<td>18.0%</td>
+<td>21.4% (1H26)</td>
+</tr>
+<tr>
+<td>Adj op margin</td>
+<td>n/d</td>
+<td>n/d</td>
+<td>n/d</td>
+<td>~27% [T2]</td>
+<td>~28% [CALC]</td>
+<td><strong>28.2% (Q2 28.4%)</strong></td>
+</tr>
+<tr>
+<td>GAAP EPS</td>
+<td>0.69</td>
+<td>0.45</td>
+<td>1.07</td>
+<td>1.25</td>
+<td>1.94</td>
+<td>1.51 (1H)</td>
+</tr>
+<tr>
+<td>Adjusted EPS</td>
+<td>n/d</td>
+<td>n/d</td>
+<td>n/d</td>
+<td>2.51</td>
+<td>3.06</td>
+<td>1.66 (1H)</td>
+</tr>
+<tr>
+<td>FCF $B</td>
+<td>1.32</td>
+<td>0.94</td>
+<td>1.79</td>
+<td>2.65</td>
+<td>3.66</td>
+<td>1H: ~2.0 (Q2 alone 1.29)</td>
+</tr>
+<tr>
+<td>FCF margin</td>
+<td>11.1%</td>
+<td>7.4%</td>
+<td>12.6%</td>
+<td>15.8%</td>
+<td>18.2%</td>
+<td>~19%</td>
+</tr>
+<tr>
+<td>- Operating leverage: GAAP op margin +790bps FY21-&gt;FY25 (10.1% -&gt; 18.0%, filed); adjusted op margin guidance was +50-75bps for 2026 pre-cuts, cut to +0-25bps at Q2; segment op margins FY25: MedSurg 33.2%, CV 32.4% (pre-corporate). Q2-26: MedSurg 32.9%, CV 33.1%.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- R&amp;D: $2,052M FY25 (10.2% of sales); FY24 1,615 (9.6%); FY23 1,414 (9.9%). R&amp;D growth resumed in 2025 (+27%) after 2024 pause.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- SG&amp;A: Q2-26 $1,803M (33.1% of sales); FY25 % not re-verified.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Tax: FY25 effective GAAP rate on adjusted basis ~12.5% guided for 2026 (adj); deferred-tax noise in GAAP.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- ROIC ~11.2%, ROE ~15.3% (TTM, stockanalysis T2).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Interest expense: $96M in Q2-26; rising with deal debt (~$380M annualized run-rate, excl. Penumbra financing).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Net debt: $10.0B (FY25) -&gt; $12.09B (Jun-26) -&gt; ~$22-23B pro-forma at Penumbra close.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="trends-assessment-opinion">Trends &amp; assessment [OPINION]</h2>
+<ul>
+<li>5-year record through 2025: accelerating revenue (6.7% -&gt; 19.9% reported), expanding margins (+790bps GAAP, 10.1% -&gt; 18.0% FY21-25 [FILED]), and FCF nearly tripling (0.94 -&gt; 3.66B). This is the "compounder" the market paid up for.</li>
+<li>2026 breaks the revenue line but NOT the P&amp;L machinery: Q2-26 adj gross margin +80bps, adj op margin +80bps YoY, FCF $1.29B in one quarter. The damage is top-line + balance-sheet (deal leverage), not unit profitability.</li>
+<li>The 2027 issue: minimal EPS growth with gross-margin pressure (Watchman/EP mix) offset by restructuring - i.e., a flat year by design while waiting for launches.</li>
+</ul>
+<hr />
+<h2 id="11-earnings-quality">11. Earnings Quality</h2>
+<h2 id="gaap-vs-adjusted-the-2026-bridge-filed-q1-26-q2-26-earnings-releases">GAAP vs adjusted: the 2026 bridge [FILED: Q1-26 + Q2-26 earnings releases]</h2>
+<p>BSX's adjusted EPS excludes: amortization of acquired intangibles, goodwill/intangibles impairments, acquisition/divestiture-related items, investment portfolio gains/losses, restructuring, litigation, EU MDR costs, deferred-tax effects and discrete tax items, plus (2026) IEEPA tariff refunds. The exclusions are large and persistent - amortization alone runs ~$230M/quarter (~$0.14/quarter of EPS).</p>
+<p><strong>Q2-26 bridge (from reported to adjusted):</strong> GAAP NI attributable $907M / $0.61; add back: amortization +$203M (+0.14), acq/div +$72M (+0.05), restructuring +$37M (+0.02), litigation +$60M (+0.04), investment losses -$2M; remove: IEEPA tariff refund -$77M (-0.05); deferred tax -$70M (+0.05, i.e., a deferred-tax expense added back); = adjusted NI $1,275M / $0.86.
+<strong>Q1-26 bridge:</strong> GAAP $1,341M / $0.90; add back: amortization +$202M (0.14), acq/div +$32M (0.02), restructuring +$33M (0.02); remove: investment gains -$104M (-0.07); deferred tax -$320M (-0.21); = adjusted $1,189M / $0.80.
+<strong>1H-26:</strong> GAAP $2,247M / $1.51 vs adjusted $2,464M / $1.66.</p>
+<p><strong>Quality flags identified:</strong>
+1. <strong>GAAP net income is flattered in 2026 by non-cash deferred-tax benefits:</strong> Q1-26 GAAP tax was a $176M BENEFIT (vs $133M expense Q1-25) including a $320M deferred-tax benefit added back in the adjusted bridge; 1H-26 tax was -$21M (benefit) vs $279M expense 1H-25. The company excludes these (correctly, arguably) from adjusted EPS - but readers looking only at GAAP EPS ($0.90 Q1) would overstate core performance.
+2. <strong>Litigation charges appeared in 2026</strong> ($76M in Q2-26, ~$0.04/sh) - new line item vs 2025; nature/valuation not detailed in the PR (litigation-related; specifics to check in 10-Q notes).
+3. <strong>IEEPA tariff refund</strong> - a $83M benefit in 1H-26 cost of products sold (refund of previously incurred tariffs), excluded from adjusted numbers.
+4. <strong>Restructuring is running hot:</strong> $76M litigation + restructuring charges 1H-26 ($69M net) with a NEW $700-800M program approved July 21, 2026 (2026 Restructuring Plan, completion end-2029). History shows restructuring is quasi-recurring at BSX (charges most years since 2019) - "non-recurring" label deserves skepticism.
+5. <strong>Amortization intensity is structural</strong> (serial acquirer): ~$0.27/quarter of the adjusted-EPS bridge in 1H-26 - large acquisition amortization is a real economic cost of the M&amp;A model (though an accounting artifact of deal structure).
+6. <strong>Contingent consideration net benefit</strong> (-$16M Q2, -$46M 1H26) flows through GAAP opex - acquisition-linked marks; excluded from adjusted.</p>
+<p><strong>Cash conversion [FILED + T2]:</strong> FY2025 FCF $3.659B vs adjusted NI ~$4.5B+ =&gt; ~80% free cash flow conversion (company-labeled, Q4-25 earnings). TTM (Jun-26): OCF $4.53B, capex -$0.90B, FCF $3.63B (stockanalysis). Strong absolute cash generation; conversion below 100% typical due to capex ramp + deal costs.</p>
+<p><strong>Working capital:</strong> TO COMPLETE from 10-K/10-Q notes (DSO/DIO/DPO, receivables/inventory balances) - pending notes_sec_financials.md.</p>
+<p><strong>SBC:</strong> TO COMPLETE (BSX SBC ~$450M+/yr territory; verify from 10-K cash-flow statement) - pending notes_sec_financials.md.</p>
+<p><strong>Verdict so far [OPINION]:</strong> adjusted EPS is defensible as a core-earnings measure (items are largely non-cash or deal-related), but the 2026 series needs three caveats: GAAP is tax-flattered; restructuring/litigation are becoming recurring; and the 2026 adjustments include both add-backs (deferred tax, tariff refunds) that cut both ways. Watch FY27: Penumbra purchase-accounting amortization will inflate the GAAP-to-adjusted gap further.</p>
+<hr />
+<h2 id="12-balance-sheet-stress-tests">12. Balance Sheet &amp; Stress Tests</h2>
+<h2 id="current-position-jun-30-2026-10-q-filed">Current position (Jun-30-2026, 10-Q) [FILED]</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash &amp; equivalents</td>
+<td>$539M</td>
+</tr>
+<tr>
+<td>Long-term debt</td>
+<td>$10,915M (senior notes $11.34B at Dec-25; euro-denominated notes include 2024 €750M 3.375% '29 / €1.25B 3.5% '32; 2025 €850M 3.0% '31 / €650M 3.25% '34)</td>
+</tr>
+<tr>
+<td>Total debt (incl. current + finance leases)</td>
+<td>~$12.6B [T2 calc; long-term + ~$1.6B current + $124M leases]</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td><strong>~$12.09B</strong>; net leverage ~2.2x TTM EBITDA</td>
+</tr>
+<tr>
+<td>Goodwill / intangibles</td>
+<td>$18,640M / $6,918M (total assets $45,216M; equity ~$24-25B)</td>
+</tr>
+<tr>
+<td>Deferred revenue</td>
+<td>$691M (LATITUDE, LUX-Dx service)</td>
+</tr>
+<tr>
+<td>Interest coverage</td>
+<td>~11.8x (T2)</td>
+</tr>
+<tr>
+<td>Receivables / inventory</td>
+<td>$3,049M / $3,235M (inventory +10% H1; watch working capital as revenue slows)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="penumbra-financing-covenants-filed-8-k-feb-26">Penumbra financing &amp; covenants [FILED, 8-K Feb-26]</h2>
+<ul>
+<li>$3.0B revolver (2031) + $2.0B 364-day revolver + <strong>$6.0B delayed-draw term loan</strong> ($1B Tranche A; $5B Tranche B - Tranche B must be refinanced/repaid with equity or debt proceeds).</li>
+<li>Leverage covenant: 3.75x standard; <strong>4.75x for 4 fiscal quarters post-qualified acquisition</strong>.</li>
+<li>Pro-forma net debt ~$22-23B; pro-forma leverage ~3.5-4.0x EBITDA (pre-synergy).</li>
+</ul>
+<h2 id="stress-tests-own-framework-assumption-labeled">Stress tests [own framework; ASSUMPTION-labeled]</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Revenue</th>
+<th>FCF ($B/yr)</th>
+<th>Net leverage</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal growth</td>
+<td>+5-6%</td>
+<td>3.8-4.2</td>
+<td>falls to ~3x by YE27</td>
+<td>Deleveraging without asset sales; buybacks resume 2028</td>
+</tr>
+<tr>
+<td>Recession (-5% volumes, -150bps margins)</td>
+<td>-3-5%</td>
+<td>~2.2-2.6</td>
+<td>~4.5-5.0x</td>
+<td><strong>Covenant pressure</strong>: would need cost action / equity; dividend none to cut; buybacks suspended; this is the key tail risk of the Penumbra structure</td>
+</tr>
+<tr>
+<td>Weak procedures persist (0-2% growth)</td>
+<td>0-2%</td>
+<td>~3.0-3.4</td>
+<td>~4x plateau</td>
+<td>Manageable but no capacity for M&amp;A or meaningful buybacks until 2029</td>
+</tr>
+<tr>
+<td>Margin compression (-200bps FCF margin)</td>
+<td>+4%</td>
+<td>~2.9</td>
+<td>~4x+</td>
+<td>Restructuring savings become the swing factor</td>
+</tr>
+<tr>
+<td>Major new acquisition</td>
+<td>—</td>
+<td>—</td>
+<td>beyond 4.75x window</td>
+<td>Unlikely before leverage normalizes (confirms deal pause)</td>
+</tr>
+<tr>
+<td>- Liquidity: $539M cash + revolvers; commercial paper? [not verified] - liquidity is adequate for ops, not for surprises.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Goodwill $18.6B: watch any EP/Watchman reporting-unit sensitivities (BSX noted a Q1-26 reporting-unit reorganization within Cardiovascular and interim tests passed; annual test Q2-26: no impairment).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Off-balance items: contingent considerations (Relievant milestones being paid, Bolt/SoniVie/Nalu CVRs), litigation (cyber-related potential claims flagged in forward-looking language), Al Mann arbitration assumed with Axonics.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Verdict [OPINION]: balance sheet was a fortress; it is now leveraged but covenant-structured with a clear deleveraging path (FCF ~$3.6B/yr + no dividends). The 2028-29 question is whether management resumes M&amp;A before leverage is restored to &lt;3x - history suggests it will be tempted.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-capital-allocation">13. Capital Allocation</h2>
+<h2 id="uses-of-capital-by-category-filedt2">Uses of capital by category [FILED/T2]</h2>
+<ul>
+<li><strong>M&amp;A: the dominant use.</strong> ~$1.5-4.6B/yr cash 2018-2024; $1.6B 2025; $0.7B H1-26; plus <strong>$14.5B Penumbra pending</strong> (~$11B cash portion, debt-funded) and $1.5B MiRus investment. Cumulative acquisition spend since 2018: ~$18-19B cash + Penumbra.</li>
+<li><strong>R&amp;D: $2.05B FY25 (10.2% of sales)</strong>, up 27% YoY; stable management priority (increased even in the austerity year).</li>
+<li><strong>Buybacks: dormant for years; aggressive in 2026.</strong> (Repurchases were negligible 2019-2025 apart from ~$535M in 2020; none in 1H-2025 [FILED].)</li>
+<li>Feb 18, 2026: +$4.0B to authorization ($5.0B total).</li>
+<li>May-Jun 2026: $2.0B ASR executed at <strong>average $50.10/share (39,922,436 shares)</strong>; $3.0B remains.</li>
+<li>No repurchases in 1H-2025 [FILED]; buybacks have NOT historically been a major return channel vs peers (no dividend, moderate repurchases).</li>
+<li>Mark-to-market note: the ASR's ~$50.10 average vs ~$44.36 now = the tranche is ~12% underwater (~$230M MTM) [CALC]. Timing can only be judged long-term, but it was executed right before the cyber shock.</li>
+<li><strong>Dividends: none</strong> (never paid; consistent with growth-medtech model).</li>
+<li><strong>Debt repayment:</strong> eurobonds used to refinance maturities (€1B 0.75% '25 repaid Feb-25; $504M 3.45% '24 repaid 2024); incremental debt added for Penumbra.</li>
+<li><strong>Strategic investments:</strong> minority stakes as options on future M&amp;A (FARAPULSE 27%-&gt;buy; Bolt 26%-&gt;buy; Nalu 9%-&gt;buy; SoniVie 10%-&gt;buy; MiRus 33.75% + call) - this is arguably a distinct "capital allocation weapon": option-pricing innovation at venture prices.</li>
+</ul>
+<h2 id="shareholder-returns-the-opportunity-cost-question-opinion">Shareholder returns &amp; the opportunity-cost question [OPINION]</h2>
+<ul>
+<li>Total shareholder return over FY19-FY24 was excellent (~130%+ incl. 2024-25 run) driven by compounding; 2026 has given back most of 12-18 months of returns.</li>
+<li><strong>The core capital-allocation debate now:</strong> (1) was $14.5B for Penumbra (10x sales) the right price at the top of the cycle? (2) should the remaining $3B buyback be deployed at ~13x earnings / ~5.7% FCF yield while the stock is depressed, or preserved for deleveraging (covenant-first)? Management has signaled both (restructuring + buyback remaining + deal pause until close). A $3B repurchase at ~$40-45 would retire ~7% of shares and be materially accretive vs the $50.10 tranche.</li>
+<li>Integration track record argues for humility: the two most recent large integrations (Axonics, Silk Road) both had visible commercial disruption; Penumbra retention is the CEO's stated top focus ("you can't afford turnover in that commercial team").</li>
+<li>R&amp;D vs M&amp;A balance: 10% of sales R&amp;D (below pure-play science medtechs like ISRG) but supplemented by buying innovation; the model works only if the scouting edge persists (FARAPULSE proves it can).</li>
+</ul>
+<hr />
+<h2 id="14-management">14. Management</h2>
+<h2 id="team-filed">Team [FILED]</h2>
+<ul>
+<li><strong>Chairman &amp; CEO: Michael F. (Mike) Mahoney</strong> - joined Oct-2011, CEO since Nov-2012, Chairman since May-2016 (~14 years as CEO) [FILED proxy]; architect of the "category leadership + serial M&amp;A" model (FARAPULSE, Watchman, Axonics, Penumbra). Executes personally in investor communications (Bernstein, Wells Fargo conferences 2026).</li>
+<li><strong>EVP &amp; CFO: Jonathan Monson</strong> - CFO since June 2025, succeeding long-time CFO Daniel J. Brennan (retired); signed the FY2025 10-K (filed 2026-02-17) [FILED]. First CFO transition in ~13 years - a governance watch item during a stressed period.</li>
+<li><strong>Chief Medical Officer: Dr. Kenneth Stein</strong> (public face on Watchman/EP evidence strategy).</li>
+<li><strong>Board additions 2026:</strong> Cathy Smith (Starbucks CFO) and Christophe Weber (Takeda CEO) elected Q1-26 [FILED Q1-26 PR]; Chairman separate from CEO per filings? (Mahoney holds both Chairman &amp; CEO titles [FILED, transcripts]).</li>
+<li>Prior CFO Brennan's 2013 offer letter remains an exhibit [10-K FY25].</li>
+</ul>
+<h2 id="compensation-alignment-partial-proxy-details-not-extracted">Compensation &amp; alignment [PARTIAL - proxy details NOT extracted]</h2>
+<ul>
+<li>DEF 14A filed 2026-03-18 (acc 0000885725-26-000025): CEO Mahoney FY2025 total compensation ~$23.5M (summary comp table); annual incentive plan funded at 150% on Adjusted Net Sales/EPS/OIM metrics. Full tables in the working notes.</li>
+<li><strong>Insider behavior 2026 [FILED Form 4s]:</strong> ~$10.0M of open-market purchases in the 3 months to Sep-9-2026, including <strong>CEO Mahoney ~$9.0M @ $48.33 (Aug-3-2026)</strong> plus directors (Habiger, Morano, Pegus, Ludwig; $47-57); zero open-market sells in that window (one planned 10b5-1 sale by Mahoney in Feb-2026, ~$15.0M); the Aug-2026 Form 4 cluster was entirely acquisitions. Insider ownership ~0.2-0.5% (vendor definitions differ).</li>
+<li>Signal read [OPINION]: director cash purchases during a 50% drawdown are a positive alignment data point; tiny absolute ownership stakes remain a structural medtech governance characteristic.</li>
+</ul>
+<h2 id="guidance-track-record-evidence-based">Guidance track record (evidence-based)</h2>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Initial guidance</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2024</td>
+<td>organic ~10-12%</td>
+<td>Delivered 16.4% (raised through year) - BEAT</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>organic ~15.5% target (raised)</td>
+<td>Delivered 15.8%; adj EPS $3.06 vs $3.02-3.04 guide - BEAT</td>
+</tr>
+<tr>
+<td>Q4-25 (Feb-4-26)</td>
+<td>FY26 organic 10-11%; EPS $3.43-3.49</td>
+<td><strong>CUT</strong> (Apr-22): organic 6.5-8.0%; EPS $3.34-3.41</td>
+</tr>
+<tr>
+<td>Q1-26 (Apr-22)</td>
+<td>(same as above)</td>
+<td><strong>CUT</strong> (Jul-29): organic 5-6%; EPS $3.28-3.32</td>
+</tr>
+<tr>
+<td>Q2-26 (Jul-29)</td>
+<td>5-6% organic</td>
+<td><strong>WITHDRAWN</strong> (Sep-8): "unlikely to meet" after cyberattack</td>
+</tr>
+<tr>
+<td>- Track record: <strong>10 consecutive quarters at/above guidance from Q1-2024 through Q2-2026</strong>; FY2020 guidance was withdrawn (COVID); FY2022 landed at the low end. Pattern through 2025: met-or-raised, reliable compounder (JPMorgan: "not the quarter that was hoped for" was the Feb-2026 exception on EP). 2026: three consecutive negative revisions - the single biggest hit to management credibility; CEO acknowledges ("we under-called the competitive pressures", "a frustrating year").</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 2027 framing (already given): <strong>minimal EPS growth; recovery "closer to WAMGR" in 2028</strong> [MGMT 9/10/26] - a deliberate pre-set of low expectations into the January guide.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="governance-events-2026">Governance events 2026</h2>
+<ul>
+<li>Cyberattack disclosure cadence (Aug-26 8-K Item 8.01; Sep-8 Item 1.05; Sep-5 Saturday operational update) - responsive; forward-looking language flags potential litigation/regulatory scrutiny.</li>
+<li>Restructuring program governance: Board-approved Jul-21-26 ($700-800M charges, $500M gross savings target).</li>
+<li>No restatements, no auditor issues, no going-concern language [FILED].</li>
+</ul>
+<hr />
+<h2 id="15-regulatory-reimbursement-risk">15. Regulatory &amp; Reimbursement Risk</h2>
+<h2 id="fdaregulatory-posture-filedfact">FDA/regulatory posture [FILED/FACT]</h2>
+<ul>
+<li>High-volume PMA/510(k) filer; strong approval record (PFA pioneer 2024; persistent-AF labels 2025-26; WATCHMAN post-ablation label S074 Jul-2025; FARAPOINT S012 Jan-2026; China NMPA approvals for OPAL HDx and FARAWAVE NAV).</li>
+<li>Approvals are table stakes now: competitors cleared within ~24 months (PulseSelect Dec-23; Sphere-9 Oct-24; VARIPULSE Nov-24; Volt Dec-25; Kardium Aug-25; dual-energy J&amp;J Jul-26, Abbott Sep-26) - regulatory timing does not protect franchises.</li>
+<li>Watch items: WATCHMAN label update hoped 2027 (CHAMPION-based); pivotal FDA reviews for FARAWAVE Ultra/FARAFLEX/defib platform/EMPOWER all land 2027-28 - the densest review calendar in company history coincides with its most fragile period.</li>
+<li><strong>Recalls/quality:</strong> FDA classified a <strong>Class I recall</strong> of BSX's <strong>Watchman TruSeal access system (classified 2025-07-29; ~340,185 units)</strong> [FILED, notes_business]. A VARIPULSE Class-1 recall affects J&amp;J (competitor). No other company-wide BSX recall event surfaced for 2026 [NOT FOUND]. 2025: $46M intangible impairment unrelated to safety.</li>
+<li><strong>Watchman label status:</strong> as of 2026-08-28, no CHAMPION-AF-based label supplement was on the P130013 file — the current post-ablation indication (S074, Jul-2025) came from OPTION. The anticipated 2027 'label update' therefore requires a new supplement (regulatory-timeline risk).</li>
+</ul>
+<h2 id="reimbursement-exposure-factanalysis">Reimbursement exposure [FACT/ANALYSIS]</h2>
+<ul>
+<li><strong>Physician fee schedule:</strong> CMS proposed ~20% physician fee cut for CY2027 - management says "marginally" negative for standalone Watchman procedures; hospital reimbursement for LAAC "quite strong and getting stronger" (pro-facility incentives intact) [MGMT 9/10/26].</li>
+<li><strong>LAAC coverage:</strong> coverage with evidence development (CMS CED); a key unlock would be the NCD revisit post-CHAMPION - CMO: finalization "not material in 2027" [MGMT].</li>
+<li><strong>ASC shift:</strong> CMS added cardiac catheter ablation to the Medicare ASC-covered list effective Jan-1-2026 - a volume tailwind for EP [T2].</li>
+<li><strong>US hospital budgets:</strong> tightening noted by BSX (IC franchise stable "despite a tighter hospital-budget environment") - deferrable procedures (EP, LAAC, Neuromod trialing) most exposed.</li>
+<li><strong>China:</strong> volume-based procurement (VBP) pressure in stone/urology; NMPA approvals for new products offset; China is growth+price-mix risk.</li>
+<li><strong>EU MDR:</strong> ongoing implementation costs (line item in adjustments; ~$14M 1H26) - manageable, structural.</li>
+<li>Products most exposed to reimbursement changes: WATCHMAN/LAAC (physician fees, CED), EP ablation (ASC/physician), neuromodulation implants (prior-auth environment), urology BPH procedures.</li>
+</ul>
+<hr />
+<h2 id="16-procedure-volume-sensitivity">16. Procedure Volume Sensitivity</h2>
+<h2 id="how-to-think-about-bsx-revenue-vs-procedure-volumes-assumption-labeled-estimates">How to think about BSX revenue vs procedure volumes [ASSUMPTION-labeled estimates]</h2>
+<p>BSX is a procedure-driven business: the large majority of revenue is single-use devices consumed in cath labs, EP labs, endoscopy suites, ORs and clinics, plus a smaller capital-equipment and service component. Management has stated the portfolio is weighted toward single-use consumables rather than big-ticket capital goods (CEO, Sep-10-26: J.P. Morgan comment citing this as a disadvantage during the cyber shutdown - unrecoverable procedure revenue).</p>
+<p><strong>Rule-of-thumb transmission [CALC, assumption]:</strong> a 1% change in global procedure volumes ≈ 0.8-0.9% change in revenue (allowing for ~10-15% of revenue being capital/service/other less volume-elastic), with operating leverage amplifying to ~1.5-2.0x on EPS (given fixed R&amp;D and SG&amp;A bases).</p>
+<h2 id="sensitivity-table-estimate-own-construction-not-company-guidance">Sensitivity table [ESTIMATE - own construction, NOT company guidance]</h2>
+<table>
+<thead>
+<tr>
+<th>Procedure volume scenario</th>
+<th>Revenue impact</th>
+<th>FCF impact (~18% margin, operating leverage)</th>
+<th>EPS impact (adj)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+5%</td>
+<td>~+4.0-4.5%</td>
+<td>~+25-30% Δ</td>
+<td>~+20-25%</td>
+</tr>
+<tr>
+<td>+2%</td>
+<td>~+1.6-1.8%</td>
+<td>~+10-12% Δ</td>
+<td>~+8-10%</td>
+</tr>
+<tr>
+<td>0%</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>-2%</td>
+<td>~-1.6-1.8%</td>
+<td>~-10-12% Δ</td>
+<td>~-8-10%</td>
+</tr>
+<tr>
+<td>-5%</td>
+<td>~-4.0-4.5%</td>
+<td>~-25-30% Δ</td>
+<td>~-20-25%</td>
+</tr>
+<tr>
+<td>-10%</td>
+<td>~-8-9%</td>
+<td>~-45-50% Δ</td>
+<td>~-40-45%</td>
+</tr>
+</tbody>
+</table>
+<p>(Leverage estimate: BSX incremental margins ~35-45% historically per its model; on a -10% volume shock, restructuring actions would partially offset; EPS effects before buybacks.)</p>
+<h2 id="which-procedures-are-most-economically-sensitive">Which procedures are most economically sensitive?</h2>
+<ul>
+<li><strong>Discretionary/elective cardiovascular:</strong> EP ablations, LAAC (Watchman), structural heart interventions - deferrable, sensitive to hospital budgets, physician reimbursement (CY2027 proposed ~20% physician fee cut) and patient confidence. EP/Watchman are the two most sensitive large franchises (evidenced in 2026: they de-rated fastest on demand signals).</li>
+<li><strong>Endoscopy / urology procedures:</strong> mostly medically necessary but discretionary timing (colonoscopy backlog dynamics, stone interventions); moderately resilient.</li>
+<li><strong>Neuromodulation (SCS/DBS/SNM):</strong> trial-and-implant pathway; more sensitive to economic conditions and elective decisions; historically cyclical around recessions (device trialing).</li>
+<li><strong>CRM (pacemakers/ICDs):</strong> least deferrable (life-sustaining) - most defensive.</li>
+<li><strong>Oncology interventions (TheraSphere, embolization):</strong> non-deferrable; resilient.</li>
+</ul>
+<h2 id="defensive-vs-cyclical-classification-opinion-with-evidence">Defensive vs cyclical classification [OPINION with evidence]</h2>
+<p><strong>More defensive than cyclical, but not purely defensive:</strong>
+- Evidence FOR defensiveness: 2020 COVID showed sharp but recoverable procedure deferral; CRM/oncology are inelastic; BSX grew through the 2022 macro. FY21-FY25 organic growth was consistently positive and accelerating.
+- Evidence the market treats it as cyclical-ish NOW: 2026's beta-adjusted decline (-50%+ YTD vs S&amp;P) has been driven by procedure-demand signals (Watchman utilization, EP competition), showing revenue is sensitive to procedure trends and competitive share shifts, not just economy.
+- The 2026 specific shocks (Watchman demand + EP share) are company/idiosyncratic, not macro; but a recession scenario would mainly hit EP/Neuromod/elective endoscopy (~30-35% of sales) vs CRM/oncology/services (~15-20%) as ballast.</p>
+<hr />
+<h2 id="17-international-exposure">17. International Exposure</h2>
+<h2 id="geographic-split-filed">Geographic split [FILED]</h2>
+<ul>
+<li>FY2025: US $12,864M (64%) / International $7,210M (36%): EMEA $3,451M; Asia-Pacific $3,080M; LACA $678M; Emerging Markets $2,985M (+11.4% reported).</li>
+<li>Q1-26: US +10.9%; EMEA +1.2% operational (FX -8.8pp!); APAC +12.0% op; LACA +12.0% op.</li>
+<li>Q2-26: US +6.2%; EMEA +4.2% op; APAC +11.2% op; LACA +16.2% op.</li>
+<li>International is now the STEADIER grower in EP (int'l EP +23% Q2-26 vs US +3.2%) and Watchman (+20% vs US +2.9%).</li>
+</ul>
+<h2 id="fx">FX</h2>
+<ul>
+<li>Euro-denominated debt stack (2024/2025 eurobonds: ~€3.5B total) - natural hedge vs EMEA cash flows; 2026 guidance included ~-$0.03 adj EPS FX drag (Feb-26 assumption).</li>
+<li>EMEA revenue translation: Q1-26 -8.8pp FX headwind in one quarter - material swing factor in reported numbers.</li>
+</ul>
+<h2 id="china-emerging-markets">China &amp; emerging markets</h2>
+<ul>
+<li>China: NMPA approvals progressing (OPAL HDx mapping; FARAWAVE NAV; expanded persistent AF indications [Zacks/T2]); volume-based procurement pressure in urology/stone; geopolitical/tariff language in risk factors (IEEPA tariff episode, refunds recognized).</li>
+<li>EM $2.99B, ~15% of sales, growing low-double-digits - a strategic reinvestment area (also Penumbra's global expansion pool).</li>
+</ul>
+<h2 id="assessment-opinion">Assessment [OPINION]</h2>
+<ul>
+<li>The international book is the stability engine of 2026-27: slower FX noise, earlier-cycle PFA penetration (mgmt: "very far from mature"), and less competitive intensity so far.</li>
+<li>China-specific risk is balanced (VBP vs new-product cycle); the bigger macro swings come from EUR/USD on both revenue and the debt stack.</li>
+<li>Long-term: 36% international with EM growth could rise toward 40%+ as Penumbra (global thrombectomy) consolidates - reducing US-only competitive exposure.</li>
+</ul>
+<hr />
+<h2 id="18-valuation">18. Valuation</h2>
+<h2 id="a-dcf-10-year-my-assumptions">A. DCF (10-year, my assumptions)</h2>
+<p>Method: FCF-margin model on consolidated revenue (incl. Penumbra from close), 10-year explicit horizon, terminal growth, discounted at WACC; equity = EV - pro-forma net debt + MiRus investment (at cost). Pro-forma shares 1,486M (incl. ~40M issued for the stock portion of Penumbra; ~$3.9B).</p>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>Bear</th>
+<th>Base</th>
+<th>Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY26 revenue base</td>
+<td>$20.9B</td>
+<td>$21.0B</td>
+<td>$21.1B</td>
+</tr>
+<tr>
+<td>Revenue CAGR (10y)</td>
+<td>~2.5%</td>
+<td>~5.2%</td>
+<td>~7.2%</td>
+</tr>
+<tr>
+<td>FCF margin path</td>
+<td>17% flat</td>
+<td>18% -&gt; 21.2%</td>
+<td>19% -&gt; 23.2%</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>8.5%</td>
+<td>7.5%</td>
+<td>7.0%</td>
+</tr>
+<tr>
+<td>Terminal growth</td>
+<td>2.5%</td>
+<td>3.0%</td>
+<td>3.5%</td>
+</tr>
+<tr>
+<td>Net debt (pro-forma)</td>
+<td>$22.5B</td>
+<td>$22.5B</td>
+<td>$22.5B</td>
+</tr>
+<tr>
+<td><strong>Equity value</strong></td>
+<td><strong>~$41-44B</strong></td>
+<td><strong>~$93-97B</strong></td>
+<td><strong>~$160-169B</strong></td>
+</tr>
+<tr>
+<td><strong>Value/share</strong></td>
+<td><strong>~$28</strong></td>
+<td><strong>~$65</strong></td>
+<td><strong>~$109</strong></td>
+</tr>
+<tr>
+<td>vs $44.36</td>
+<td>-37%</td>
+<td>+46%</td>
+<td>+146%</td>
+</tr>
+</tbody>
+</table>
+<p>Basis notes: base revenue CAGR is BELOW the FY21-25 record (15%+ organic) and below consensus 3Y (~5.9%); base FCF margin ceiling 21.2% is below FY25's own 18.2% trajectory extended (mgmt model: margin expansion +50-75bp/yr). WACC 7.5% reflects beta 0.57, but higher leverage post-deal; cost of equity ~8.5-9%, blended ~7.5%. Terminal 3% ≈ US medtech long-run. The bear assumes the 2026 problems are structural; the bull assumes recovery to company framework by 2028-29.</p>
+<h2 id="b-evebitda-pe-context">B. EV/EBITDA &amp; P/E context</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>BSX</th>
+<th>MDT</th>
+<th>ABT</th>
+<th>SYK</th>
+<th>EW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forward P/E</td>
+<td>~13.4 (Sep-16-26)</td>
+<td>17.4 (Feb-10-26 snapshot)</td>
+<td>19.1 (Mar-12-26 snapshot)</td>
+<td>18.9 (Sep-4-26)</td>
+<td>29.0 (Aug-18-26)</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>13.25</td>
+<td>15.9</td>
+<td>16.2</td>
+<td>17.4</td>
+<td>24.5</td>
+</tr>
+<tr>
+<td>P/FCF</td>
+<td>~17.5</td>
+<td>25.3</td>
+<td>25.7</td>
+<td>24.7</td>
+<td>36.6</td>
+</tr>
+<tr>
+<td>FCF yield</td>
+<td>~5.7%</td>
+<td>4.0%</td>
+<td>3.9%</td>
+<td>4.0%</td>
+<td>2.7%</td>
+</tr>
+<tr>
+<td>Labels: BSX live (stockanalysis 16-Sep-26); peer snapshots dated as shown (stale-by-vendor-cache; directionally consistent). Historical BSX: traded at 25-35x forward earnings 2021-2025 and 20-30x EV/EBITDA; current multiples are ~50% below its own history and at a discount to every large peer - explained by the broken 2026 narrative (and possibly overdone: the P&amp;FCF of 17.5x vs peer 24-37x is the widest gap).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Does BSX deserve premium/discount vs peers? [OPINION] On normalized growth (recovery to 5-7% by 2028), margins (28%+ adj op) and FCF conversion (~18-21%), a discount to SYK/MDT is justifiable until guidance stabilizes (H1-2027 at the earliest); a 40-50% discount to SYK looks excessive if the 2027-28 launch cadence delivers. NOT labeling the stock cheap or expensive - the question is whether the recovery is real.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="c-peg-growth-adjusted">C. PEG / growth-adjusted</h2>
+<ul>
+<li>PEG ~1.05 (BSX TTM) vs MDT 3.13, ABT 2.01, SYK 1.76, EW 2.38 [T2] - on trailing numbers BSX screens as the cheapest per unit of growth; but trailing growth includes the pre-2026 era. On forward numbers the PEG is distorted by the 2027 EPS air-pocket.</li>
+</ul>
+<h2 id="d-sotp-segment-based-cross-check-assumption-heavy">D. SOTP (segment-based cross-check) [ASSUMPTION-heavy]</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MedSurg (FY25 op income $2,268M x 12-14x)</td>
+<td>$27-32B</td>
+</tr>
+<tr>
+<td>Cardiovascular (FY25 op income $4,303M x 10-13x - contested EP/Watchman vs pipeline)</td>
+<td>$43-56B</td>
+</tr>
+<tr>
+<td>Capitalized corporate costs (~$1.0-1.1B/yr x -10x)</td>
+<td>-$10-11B</td>
+</tr>
+<tr>
+<td>MiRus stake (at cost) + options</td>
+<td>+$1.5B</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td>-$12.1B (current) / -$22.5B pro-forma</td>
+</tr>
+<tr>
+<td><strong>Equity (pre-deal net debt, excl. Penumbra)</strong></td>
+<td><strong>~$49-71B → ~$34-49/share</strong></td>
+</tr>
+<tr>
+<td><strong>Equity (pro-forma, incl. Penumbra value in CV)</strong></td>
+<td>higher by deal value if Penumbra FCF valued separately; range ~$55-75B → $37-50/share</td>
+</tr>
+<tr>
+<td>- Reading: the SOTP range sits BELOW my base DCF ($65) and straddles the market ($44.36) - consistent with "no obvious mispricing either way; growth assumptions decide."</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="e-probability-weighted-view-assumption">E. Probability-weighted view [ASSUMPTION]</h2>
+<p>35% Bear ($28) + 45% Base ($65) + 20% Bull ($109) =&gt; <strong>~$61/share</strong>. (Arithmetic shown; every input is an assumption.) The market at $44.36 sits between bear and base - i.e., it weights the downside more heavily than my distribution, or prices a lower recovery. No recommendation rendered.</p>
+<hr />
+<h2 id="19-valuation-sensitivity">19. Valuation Sensitivity</h2>
+<h2 id="matrix-1-valueshare-frevenue-cagr-fy26-35-fcf-margin-wacc-75-tg-30-net-debt-225b-1486m-shares-calc">Matrix 1: Value/share = f(revenue CAGR FY26-35, FCF margin) - WACC 7.5%, tg 3.0%, net debt $22.5B, 1,486M shares [CALC]</h2>
+<table>
+<thead>
+<tr>
+<th>FCF margin \ CAGR</th>
+<th>3%</th>
+<th>5%</th>
+<th>7%</th>
+<th>9%</th>
+<th>11%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16%</td>
+<td>$38</td>
+<td>$47</td>
+<td>$57</td>
+<td>$70</td>
+<td>$84</td>
+</tr>
+<tr>
+<td>18%</td>
+<td>$44</td>
+<td>$54</td>
+<td>$66</td>
+<td>$80</td>
+<td>$97</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>$51</td>
+<td>$62</td>
+<td>$75</td>
+<td>$91</td>
+<td>$109</td>
+</tr>
+<tr>
+<td>22%</td>
+<td>$57</td>
+<td>$69</td>
+<td>$84</td>
+<td>$101</td>
+<td>$121</td>
+</tr>
+<tr>
+<td>24%</td>
+<td>$63</td>
+<td>$77</td>
+<td>$93</td>
+<td>$112</td>
+<td>$133</td>
+</tr>
+<tr>
+<td>(Current price $44.36 = between the (18%, 3%) and (20%, 3-5%) cells: the market currently pays for ~1-4% growth at 18-20% FCF margins.)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="matrix-2-wacc-x-terminal-growth-revenue-cagr-5-fcf-margin-20-calc">Matrix 2: WACC x terminal growth (revenue CAGR 5%, FCF margin 20%) [CALC]</h2>
+<table>
+<thead>
+<tr>
+<th>WACC \ tg</th>
+<th>2.0%</th>
+<th>2.5%</th>
+<th>3.0%</th>
+<th>3.5%</th>
+<th>4.0%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.5%</td>
+<td>$68</td>
+<td>$75</td>
+<td>$84</td>
+<td>$97</td>
+<td>$114</td>
+</tr>
+<tr>
+<td>7.0%</td>
+<td>$59</td>
+<td>$65</td>
+<td>$72</td>
+<td>$81</td>
+<td>$93</td>
+</tr>
+<tr>
+<td>7.5%</td>
+<td>$52</td>
+<td>$57</td>
+<td>$62</td>
+<td>$69</td>
+<td>$77</td>
+</tr>
+<tr>
+<td>8.0%</td>
+<td>$46</td>
+<td>$50</td>
+<td>$54</td>
+<td>$59</td>
+<td>$66</td>
+</tr>
+<tr>
+<td>8.5%</td>
+<td>$42</td>
+<td>$44</td>
+<td>$48</td>
+<td>$52</td>
+<td>$57</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-matters-most">What matters most</h2>
+<ol>
+<li><strong>Revenue CAGR / durable growth (highest leverage):</strong> ±1pp ≈ ±$5-6/share - the whole 2026 debate is about whether ^5% resumes by 2028 or ~2% is the new normal.</li>
+<li><strong>FCF margin:</strong> ±1pp ≈ ±$8-9/share (operating leverage on a $21B base) - restructuring delivery matters here.</li>
+<li><strong>WACC:</strong> ±50bp ≈ ∓$4-5/share - the post-deal leverage + rate environment keep this in play.</li>
+<li>Terminal growth: ±50bp ≈ ±$4-7/share; least differentiated assumption but dominates the tail.</li>
+<li>EPS growth (indirect): 2027 "minimal EPS" removes the near-term compounding; the EPS path is simply the output of the above four.</li>
+<li>M&amp;A contribution: Penumbra adds ~$1.4B revenue + FCF to the base, but at the cost of ~$11B debt and 1.4% share dilution - roughly NPV-neutral in my base by construction (yr-1 EPS -$0.06-0.08); it becomes value-creating only at &gt;12-15% Penumbra growth with margin expansion.</li>
+</ol>
+<h2 id="cross-checks">Cross-checks</h2>
+<ul>
+<li>At the bear cell (3% CAGR / 18% FM): $44 - i.e., the current price can be rationalized with near-zero perpetual growth attributes ONLY if margins hold; margins are the second lever.</li>
+<li>At the bull cell (7% / 22%): $85-100 - recovery + leverage on the P&amp;L (~+100-125% from here).</li>
+<li>Monte-Carlo style check via the scenario engine: probability-weighted $61 (35/45/20). Market at $44.36 implies the market's mix is closer to 50%+ bear-weighting than to my 35%.</li>
+</ul>
+<h2 id="note-on-the-requested-op-margin-grid-assumption">Note on the requested op-margin grid [ASSUMPTION]</h2>
+<p>The brief requested a matrix across operating margins 20-28%; the model above uses FCF margin (the direct valuation input). Conversion: <strong>FCF margin ≈ adjusted operating margin − 10-11pp</strong> (e.g., op 28% -&gt; FCF 17-18%; op 24% -&gt; FCF ~13-14%). Mapped to the committee's framing: op 20-28% ≈ FCF 10-18% = the lower-left triangle of Matrix 1 (values $30-60/share), i.e., below the current price - the grid's actionable region for a decline scenario. The upper-right region (FCF 20-24% ≈ op 30-34%) is the bull zone ($75-130).</p>
+<hr />
+<h2 id="20-market-implied-expectations">20. Market-Implied Expectations</h2>
+<p>Framework: my DCF (10y, FCF-margin path, WACC, terminal growth) is used in reverse to ask what the CURRENT price ($44.36; mcap ~$64.1B; EV ~$75.7B current / ~$84B pro-forma incl. deal debt) already embeds.</p>
+<h2 id="reverse-engineering-result-calc">Reverse-engineering result [CALC]</h2>
+<p>Using the model's base structure (FCF margin rising 18%-&gt;20.5%; WACC 7.5%; terminal growth 3.0%; pro-forma net debt ~$22.5B; ~1,486M pro-forma shares):
+- $44.36 implies a <strong>10-year revenue CAGR of roughly 0.5-3%</strong> (central ~1.5-2%) vs FY21-25 actual 6-20% annual organic and consensus ~5.9% next 3Y.
+- At higher FCF margins (22%) the implied CAGR is ~0.0-1.9%; at 18% margin ~1.6-4.4%; at 8% WACC ~1.9-4.4%.
+- Stated differently: the market is pricing BSX as a <strong>structurally low-growth medtech</strong> (~1-3% perpetual range), i.e., permanent impairment of the EP/Watchman franchises plus Penumbra integration risk, and/or a higher cost of capital. It is NOT pricing any recovery to the company's stated 2028 "back to WAMGR+" framework, and is well below sell-side consensus ($62-71 avg PT; 24-31 analysts [T2, Sep-2026]).</p>
+<h2 id="what-must-happen-for-the-price-to-be-justified-ie-for-this-to-be-a-no-upside-world">What must happen for the price to be justified (i.e., for this to be a "no-upside" world)</h2>
+<ol>
+<li>H2-2026 weakness (~2-4% organic per mgmt) extends beyond 2027: EP share keeps eroding past the ~41-50% estimates without Ultra/FARAFLEX stabilization; Watchman declines persist beyond the Abbott Amulet 360/Edwards ECLIPTIS entries (i.e., market never returns to growth).</li>
+<li>Urology (0.8% organic Q2-26) and other MedSurg weakness is structural, not commercial-execution related (mgmt blames commercial org maturity; claims 2027 improvement).</li>
+<li>The $500M gross restructuring savings (&gt;half by end-2027) is substantially reinvested/eroded - no net margin expansion beyond 28% adj.</li>
+<li>Penumbra integration underperforms (yr-1 dilution $0.06-0.08 widens; synergies elusive) - BSX has a mixed integration record per its own CEO (Axonics "a lot of commercial disruption", Silk Road "integration went poorly initially").</li>
+<li>FCF stays ~18% of sales; capital stays swallowed by M&amp;A/debt service (net debt ~$21B pro-forma) instead of buybacks.</li>
+<li>Multiple stays derated (fwd PE ~13-14x): consistent with a "broken growth story" repricing, not just a bad year.</li>
+</ol>
+<h2 id="required-metrics-to-justify-price-approx-calc">Required metrics to justify price (approx.) [CALC]</h2>
+<ul>
+<li>Required revenue CAGR: ~1.5-3% (10y) depending on margin/WACC - achievable even in a bear environment; that's why the price may not need "disaster" to be consistent, only mediocrity.</li>
+<li>Required terminal margin: ~18-20% FCF margin (~28% adj op margin) - i.e., NO improvement from today.</li>
+<li>Required ROIC: current ~11% (stockanalysis); no re-rating requires just maintenance.</li>
+<li>Required FCF: ~$3.5-3.8B/yr growing ~2-3%; near current run-rate.</li>
+<li>Required acquisition contribution: Penumbra needs to be approximately value-neutral (its FCF covers the dilution at deal cost of capital); no heroic synergies required.</li>
+</ul>
+<h2 id="assessment-vs-history-and-peers-opinion-data">Assessment vs history and peers [OPINION + data]</h2>
+<ul>
+<li>Historical BSX (2021-2025): organic growth 12.7% (2021), ~9-10% (2022), ~12% (2023), ~15.3% (2024 close), 15.8% (2025). The implied ~1.5% is a break-of-model assumption, not a continuation.</li>
+<li>2026 (post-cuts): organic ~5-6% guided, likely ~4-5% actual after cyber; 2027: minimal EPS growth; company frames 2028 as recovery to "closer to WAMGR" (weighted average market growth ~5-6%).</li>
+<li>Peers trade at fwd PE 17-29x (MDT 17.4 [Feb-26 snapshot], ABT 19.1 [Mar-26], SYK 18.9 [Sep-4-26], EW 29.0 [Aug-18-26]) vs BSX 13.4 - the market treats BSX as the sector's problem child.</li>
+<li>The price is consistent with: (a) no credit for the 2027-28 launch cadence (FARAWAVE Ultra, ICE, FARAFLEX, defib platform, EMPOWER, SEISMIC IVL); (b) no credit for restructuring savings; (c) full skepticism on Penumbra; (d) caution on cyber-related reputational/customer loss.</li>
+</ul>
+<h2 id="balance-of-evidence-opinion">Balance of evidence [OPINION]</h2>
+<ul>
+<li>The implied scenario is NOT absurd - 2026 has genuinely broken the growth model (three guidance cuts in 8 months; a cyberattack; franchise-level competitive pressure). A rational bear can live at $44.</li>
+<li>But the implied numbers also do not require the bull case to be "true" for upside: restoring even mid-single-digit growth (2028+ framework already guided) and flat margins ~doubles the value math vs $44. The debate is timing/recovery probability, not whether $44 requires perfection.</li>
+<li>Key asymmetry note: at these levels, each $1 of durable FCF adds ~$10-13/share of value (WACC 7.5%, tg 3%); conversely each 1pp of permanent organic growth adds ~$8-12/share.</li>
+</ul>
+<hr />
+<h2 id="21-bull-case">21. Bull Case</h2>
+<h2 id="the-strongest-evidence-based-bull-case">The strongest evidence-based bull case</h2>
+<p><strong>1. The 2026 damage is concentrated and identifiable - not a business-model failure.</strong>
+Three named shocks drive the entire derating: (a) Watchman standalone-procedure slowdown/mix shift to concomitant cases; (b) EP US share erosion after an unsustainable ~65% PFA share (competitors all launched); (c) a cyberattack that took out 8 days of a ~$21B revenue business. None of these is a product-safety event, a failed trial, or a manufacturing defect. Quality analyses found no product impairment (Sep-5 update). [FILED]</p>
+<p><strong>2. The franchise fundamentals remain intact where it matters.</strong>
+- Endoscopy +8.4% 1H (market grower, sticky consumables); Neuromodulation +14.8%; IC&amp;VT +11.9% (SEISMIQ IVL exposure); IO&amp;E +15.0%. International EP +23% (US is the competitive battlefield; ex-US PFA penetration is far from mature - management: "very far from mature", Sep-10). [FILED]
+- CRM drag has a dated fix: defib platform + EMPOWER leadless pacemaker both H2-2027. [MGMT, Sep-10]
+- Watchman: $1.9-2.1B market with ~90% share; CHAMPION data support; label update targeted 2027; CMS NCD revisit; HRS/SCAI draft guideline positive; 30-40% of high-risk AF patients remain unprotected (CMO). A market that stops declining + any label unlock = stabilization economics. [FILED/MGMT]
+- EP roadmap is real and multi-part: FARAWAVE Ultra (map-and-ablate; ties OPAL mapping; premium pricing story) + ICE entry (AcuNav 4D ICE with Siemens Healthineers partnership) in H2-2027; FARAFLEX (IDE started mid-2026; FARADIGM pivotal enrolling; ELEVATE-PF durability data clean - no PV stenosis/hemolysis/stroke); AVANT GUARD: FARAPULSE superior to AADs in persistent AF (all endpoints met, Heart Rhythm 2026). [FILED]</p>
+<p><strong>3. A hard, quantified cost lever is already approved.</strong>
+2026 Restructuring Plan: $500M gross annual savings as realized, &gt;half by end-2027; $700-800M charges ($600-700M cash). Even with partial reinvestment, the gross pool roughly offsets the Watchman/EP gross-margin pressure (mgmt frames it as netting out into "minimal EPS growth 2027, recovery 2028"). [FILED]</p>
+<p><strong>4. Penumbra reframes the growth profile in 2027-28.</strong>
+$1.5B TTM revenue growing ~15% (FY21-25 CAGR ~17%; FCF margin ~14-15% and rising); thrombectomy = high-growth adjacency to BSX's vascular/IC call point and to the Silk Road carotid franchise; funded with cash+stock (73/27) and $3.9B of stock at the VWAP of the deal reference period; only $0.06-0.08 yr-1 dilution, neutral-positive yr-2. [FILED/T2]</p>
+<p><strong>5. Physical growth vectors beyond 2027 (mgmt "8 platforms into &gt;$25B new spaces"):</strong>
+SEISMIQ coronary IVL ($1B+ market, single incumbent = Shockwave/J&J; peripheral versions already approved; ramp 2027, "more meaningful" 2028 [MGMT, Sep-10]); TAVR re-entry via MiRus SIEGEL option ($1.5B for ~34% + acquisition option); renal denervation (TIVUS; hypertension trial completing enrollment); leadless pacing; LAA next-gen; ICE. [FILED]</p>
+<p><strong>6. The share count is shrinking while the price is depressed.</strong>
+$2B ASR executed May-June 2026 (~40M shares at ~$50); $3B authorization remaining; zero dividends; FCF $3.6B+/yr. At $44, management can retire ~2.5% of shares/year with just one year's FCF. [FILED]</p>
+<p><strong>7. Valuation asymmetry.</strong>
+At $44.36: fwd P/E ~13.4x vs peers 17-29x; EV/EBITDA 13.25x vs peers 15.9-24.5x; FCF yield 5.7%; the reverse-DCF implies only ~1.5-3% perpetual growth (Section 20), while the company's own 2028 framework is "closer to WAMGR" (~5-6%+) and consensus 3Y growth is ~5.9%. Every 1pp of durable growth ≈ $8-12/share of value in the model; FCF restoration to 20% margin ≈ +$20-25/share. [CALC]</p>
+<p><strong>8. Sentiment/positioning extremes are a setup, not a thesis.</strong>
+Short interest doubled into September (48.2M shares, 3.3%); 31 analysts still at Buy, avg PT $62; the stock trades 57% below its 52-week high on a name that compounded double digits for 5 years. Reputational "show-me" status can flip on two clean quarters. [T2]</p>
+<h2 id="quantified-bull-consequences-my-model-base-to-bull-range-calc">Quantified bull consequences (my model, base-to-bull range) [CALC]</h2>
+<ul>
+<li>Revenue: FY28 ~$24-25B (5-7% CAGR resumed), FY30 ~$27-29B.</li>
+<li>Adjusted op margin: 28.2% (2026) -&gt; 30-31% by 2030 (50-75bp/yr model restored).</li>
+<li>Adj EPS: ~$3.2 (2026) -&gt; $4.5-5.0 (2029-30).</li>
+<li>FCF: $3.6B -&gt; $5.5-6.5B by 2030; FCF margin 18% -&gt; 21-22%.</li>
+<li>Equity value (my DCF, pro-forma): bull ~$109/share; base ~$65; bear ~$28. Sensitivity: ~+$6/share per 1pp of durable growth; ~+$8-9/share per 1pp of FCF margin (central assumptions).</li>
+</ul>
+<hr />
+<h2 id="22-bear-case">22. Bear Case</h2>
+<h2 id="bear-thesis-2026-was-not-bad-luck-it-was-the-bill-for-a-structurally-eroding-growth-model">Bear thesis: 2026 was not bad luck - it was the bill for a structurally eroding growth model</h2>
+<p><strong>1. The EP franchise lost its lead and the fix is 18 months away.</strong>
+US PFA share: ~100% (2023) -&gt; 83% (2024) -&gt; <strong>41% (early 2026)</strong>; Medtronic at 48% and still gaining (+124% US ablation growth, +8pts share in one quarter). BSX admits it "under-called" the competition. The remedy (FARAWAVE Ultra + ICE + FARAFLEX) launches H2-2027 at the earliest, against a Medtronic/Abbott/J&amp;J cohort that already matched FARAPULSE's clinical profile. If share troughs at ~35% rather than stabilizes at 45%, EP - the single biggest value driver of the 2021-24 re-rating - becomes a mid-single-digit grower, worth a fraction of prior expectations.</p>
+<p><strong>2. WATCHMAN's problem is not BSX-specific - it's the market.</strong>
+The "conflicting trials" (CLOSURE-AF FAILED its endpoint; OCEAN stopped for futility pushing "ablate and wait"; CHAMPION-AF positive but endlessly contested) plus referral-chain confusion have stalled a market BSX 90% owns. Management itself will not call 2027 growth ("we don't want to call the market improving until we see it"). A 90%-share franchise in a shrinking market cannot offset EP deterioration, and Abbott (Amulet 360, CE-marked Aug-2026) + Edwards (ECLIPTIS, FDA-cleared Jun-2026) will further compress the prize.</p>
+<p><strong>3. The cyberattack exposed operational and governance fragility.</strong>
+An 8-day global shutdown of manufacturing AND distribution at a $21B company; guidance then withdrawn - in a year with THREE guidance cuts (the last one 6 weeks after the CEO said the trajectory was set). Investors should apply a credibility discount to every forward statement (2027 minimal EPS growth, 2028 recovery) until proven. Litigation/regulatory scrutiny risk is live; the company's own forward-looking language flags "potential litigation related to the cybersecurity incident."</p>
+<p><strong>4. Penumbra is a $14.5B bet with a mixed integration record, taken at the top of a de-rating.</strong>
+~10x sales / ~67x FCF for a ~12-17% grower; $11B of new debt against a $6B term loan structure; covenants eased to 4.75x for four quarters post-close; FTC second request signals conditions/timing risk. The CEO's own integration history: Axonics "a lot of commercial disruption"; Silk Road "went poorly initially." Meanwhile the ASR repurchased ~40M shares at ~$50.10 - 13% above today's price - a visible capital-allocation timing miss.</p>
+<p><strong>5. Estimates and multiples can fall further.</strong>
+Consensus still models ~5-6% 3Y growth vs H2-26 run-rate ~2-4% and a 2027 "minimal EPS growth" guide; sell-side PTs have compressed 4 straight quarters ($80.72 -&gt; $71.46 MarketBeat avg). The stock trades at ~13x forward EPS, but on numbers that may still be cut in October. If the 2028 "recovery" slips another year, the equity is a value trap: 13x a static ~$3.30 EPS with rising net debt and no buyback capacity is not obviously cheap.</p>
+<p><strong>6. Structural cost pressures persist:</strong>
+physician fee schedule proposed ~20% cut (CY2027) pressures standalone procedures; hospital capital discipline; China VBP in stone/urology; FX translation on European revenue and the euro-debt stack.</p>
+<p><strong>Quantified bear case [CALC]:</strong>
+- 2027-28: organic 1-3%; adjusted EPS $3.2-3.5 flat-to-down; FCF plateaus ~$3.5-3.8B (deal costs + interest).
+- Net debt ~$22-23B; leverage ~3.5-4x; buybacks suspended below covenant headroom.
+- My bear DCF: <strong>~$28/share</strong> (WACC 8.5%, terminal 2.5%, FCF margin stuck ~17%); a control of ~-37% vs $44.36.
+- Path: Oct-28 guide-down -&gt; 2027 minimal growth confirmed Jan-2027 -&gt; another PT cut wave -&gt; potential index/passive derisking below $40; if EP share bottoms &lt;35% and Watchman declines persist, $30 by 2028 is coherent.</p>
+<hr />
+<h2 id="23-red-team-analysis">23. Red-Team Analysis</h2>
+<h2 id="assume-the-bull-thesis-is-wrong-strongest-evidence-against-it">Assume the BULL thesis is wrong - strongest evidence against it</h2>
+<ol>
+<li>[FACT] Three guidance cuts in eight months (Feb 10-11% organic -&gt; Apr 6.5-8% -&gt; Jul 5-6% -&gt; Sep withdrawn). Companies that cut this many times in one cycle usually have not found the bottom of the revision cycle at the first re-guide; the Sept-8 "unlikely to meet" explicitly leaves magnitude open until Oct-28.</li>
+<li>[FACT] The PFA share collapse (100%-&gt;83%-&gt;41% of US spend) was predicted by no one at BSX within 12 months; the "Ultra/ICE will fix it" story is the same "next year" narrative that failed in 2026. Wells Fargo's own estimate (~50% share) still leaves BSX BELOW Medtronic (48% and rising +124% US ablation growth).</li>
+<li>[FACT] Watchman: management explicitly will NOT assume market growth in 2027 ("we don't want to call the market improving until we see it"), and competitors (Abbott Amulet 360 CE Aug-26; Edwards ECLIPTIS cleared Jun-26) arrive in 2027 regardless. [FACT] CLOSURE-AF failed (NEJM) and OCEAN futility - the clinical-inference environment is hostile.</li>
+<li>[FACT] Penumbra: ~$14.5B = ~10x sales, ~67x FCF; FTC second request unresolved; financing $6B term loan with a covenant step-up to 4.75x; integration precedents (Axonics, Silk Road) were visible failures of commercial continuity. [ANALYST] Multiple analysts questioned the price at announcement.</li>
+<li>[FACT] The ASR bought 40M shares at $50.10 - 13% above the price a quarter later; capital allocation into the decline did not anticipate the cyber shock. A company with better timing information (it knew of EP/Watchman weakness before May) chose size over flexibility.</li>
+<li>[FACT/MGMT] 2027 = "minimal EPS growth" by management's own words; the recovery is a 2028 promise - a long time for a $64B company with 3.3% short float, ~$3B buyback (not yet deployed), and falling estimate revisions.</li>
+<li>[FACT] Cyberattack operational fragility: all plants and distribution centers shut for 8 days - a concentration risk that could recur (sector-wide attacks: Abbott, Stryker, Medtronic, Novo all hit recently [FACT, Reuters]).</li>
+</ol>
+<h2 id="assume-the-bear-thesis-is-wrong-strongest-evidence-against-it">Assume the BEAR thesis is wrong - strongest evidence against it</h2>
+<ol>
+<li>[FACT] Q2-26 printed $1.29B of FCF in ONE quarter; adj. gross margin expanded +80bps and adj. op margin +80bps YoY. The P&amp;L engine still works even with the top-line shock - the bear requires margins to ALSO break, which has not happened.</li>
+<li>[FACT] The two damaged franchises are (a) share-loss in a GROWING market (US AFib ablations +20%/yr; international PFA far from mature) and (b) a slowdown in a market BSX owns 90% of - both are recoverable categories, not obsolescence. Contrast with a true bear case (product curve-outs, safety catastrophe) - none occurred.</li>
+<li>[FACT] Clinical/data position remains best-in-class where it counts: CHAMPION-AF met ALL endpoints (bleeding 10.9% vs 19.0%, 45% RRR) [FACT NEJM]; AVANT GUARD superiority in persistent AF [FACT NEJM]; FARAFLEX durability 96.4% optimized [FACT]; ADVENT 4-yr outcomes superior to thermal [FACT]. The label-update path for Watchman (2027) is evidence-backed.</li>
+<li>[FACT] Insider behavior contradicts the bear: ~$10M of open-market purchases in the three months into September (including CEO Mahoney's $9.0M at $48.33 on Aug-3), zero open-market sells in the window. Directors and the CEO see the same data and bought.</li>
+<li>[FACT] Pipeline density 2027-28 is exceptional (FARAWAVE Ultra, ICE incl. AcuNav 4D w/ Siemens, CRM defib platform, EMPOWER leadless, FARAFLEX/FARADIGM, SEISMIQ IVL, RDN) - an unusually high count of shots, in markets exceeding $25B combined [MGMT CLAIM, TAM partially third-party-verified].</li>
+<li>[FACT] CHAMPION-AF offers a potential addressable-population expansion from ~5M to ~20M patients (if label/guidelines expand) - a structural upside that the market is not paying for at $44.</li>
+<li>[FACT/ESTIMATE] Peer-relative valuation: fwd P/E 13.4 vs peers 17-29; P/FCF 17.5 vs 24-37; FCF yield 5.7% vs 2.7-4.0%. The bear case must explain why BSX permanently deserves a 40-50% discount to slower-growing peers like MDT/SYK - and the answer must be more than a bad year; the Penumbra leverage and EP share loss are the honest candidates, and both are time-bounded in the base view.</li>
+<li>[FACT] The market's own pattern: short interest spiked to 48M (3.35%) INTO the September lows while directors bought - both sides are acting on conviction; the bear bet requires CONTINUED negative revisions beyond what Q2 already discounted.</li>
+</ol>
+<h2 id="adjudication-note-no-winner-declared">Adjudication note (no winner declared)</h2>
+<p>The bull case rests on: intact margins/FCF, growing markets, dense pipeline, insider actions, extreme multiple discount. The bear case rests on: revision momentum, credible competitive saturation of PFA economics, a large debt-funded deal into a downturn, and a demonstrated inability to forecast its own year. The decisive dataset arrives at the Oct-28 Q3 print (recapture rate + 2027 framing) and the Jan-2027 guide - not today.</p>
+<hr />
+<h2 id="24-catalyst-calendar">24. Catalyst Calendar</h2>
+<h2 id="0-3-months-sep-dec-2026">0-3 months (Sep-Dec 2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Catalyst</th>
+<th>Timing</th>
+<th>What to watch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q3-26 earnings + updated FY26 outlook (cyber impact + recapture rate)</td>
+<td><strong>Oct 28, 2026</strong> (company-announced)</td>
+<td>The single most important near-term event: size of cyber hit, revised organic growth/EPS, early 2027 framework</td>
+</tr>
+<tr>
+<td>Penumbra deal close (targeted end-2026)</td>
+<td>Q4-26</td>
+<td>Any FTC/antitrust conditions/divestitures; terms intact (73/27 cash-stock)</td>
+</tr>
+<tr>
+<td>CMS Physician Fee Schedule final rule (CY2027) - proposed ~20% physician fee cut pending</td>
+<td>Nov 2026 (typical)</td>
+<td>Impact on standalone Watchman/EP procedures</td>
+</tr>
+<tr>
+<td>ASH/other medical conferences</td>
+<td>Dec 2026</td>
+<td>FARAPULSE/Watchman data updates</td>
+</tr>
+<tr>
+<td>Remaining $3B buyback authorization</td>
+<td>ongoing</td>
+<td>Deployment pace at depressed prices</td>
+</tr>
+<tr>
+<td>Possible index/positioning effects (short interest doubled into Sep: 48.2M sh)</td>
+<td>ongoing</td>
+<td>Squeeze potential on good news</td>
+</tr>
+<tr>
+<td>Restructuring program execution start ($700-800M charges; &gt;half of savings by end-2027)</td>
+<td>Q4-26 onward</td>
+<td>Charge timing; savings credibility</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-6-months-jan-mar-2027">3-6 months (Jan-Mar 2027)</h2>
+<table>
+<thead>
+<tr>
+<th>Catalyst</th>
+<th>Timing</th>
+<th>What to watch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JPM Healthcare Conference + official FY27 guidance (Jan 2027)</td>
+<td>Jan 2027</td>
+<td>Management has said 2027 = minimal EPS growth; the guide frames the recovery story</td>
+</tr>
+<tr>
+<td>Q4-26 earnings</td>
+<td>Feb 2027</td>
+<td>2027 organic growth starting point (mgmt flagged H2-26 ~2-4% as "good starting point")</td>
+</tr>
+<tr>
+<td>Watchman label update filing/decision (hoped 2027; CHAMPION data)</td>
+<td>2027</td>
+<td>Would re-open standalone LAAC adoption</td>
+</tr>
+<tr>
+<td>HRS/SCAI guideline finalization (draft positive)</td>
+<td>2027</td>
+<td>Referral expansion for LAAC</td>
+</tr>
+<tr>
+<td>Abbott Amulet 360 US approval (CE mark Aug 2026; FDA pending)</td>
+<td>2027?</td>
+<td>Timing of the "new competitor" impact</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-12-months-apr-sep-2027">6-12 months (Apr-Sep 2027)</h2>
+<table>
+<thead>
+<tr>
+<th>Catalyst</th>
+<th>Timing</th>
+<th>What to watch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FARAWAVE Ultra launch (PFA + mapping; US approval)</td>
+<td>H2-2027</td>
+<td>EP share stabilization; premium pricing defense</td>
+</tr>
+<tr>
+<td>ICE (intracardiac echo) market entry</td>
+<td>H2-2027</td>
+<td>Portfolio widening; ASP control</td>
+</tr>
+<tr>
+<td>CRM defibrillator platform launch</td>
+<td>H2-2027</td>
+<td>CRM "healthier" per mgmt</td>
+</tr>
+<tr>
+<td>EMPOWER leadless pacemaker</td>
+<td>H2-2027</td>
+<td>New growth vector vs Abbott/Medtronic leadless</td>
+</tr>
+<tr>
+<td>FARADIGM pivotal data (FARAFLEX)</td>
+<td>2027-28</td>
+<td>Next-gen PFA wave</td>
+</tr>
+<tr>
+<td>SEISMIQ coronary IVL ramp ($1B+ market; single incumbent)</td>
+<td>2027-28</td>
+<td>New IC revenue driver</td>
+</tr>
+<tr>
+<td>Penumbra integration/first consolidated quarters</td>
+<td>2027</td>
+<td>Commercial retention; accretion vs $0.06-0.08 yr-1 dilution</td>
+</tr>
+<tr>
+<td>MiRus SIEGEL TAVR trial progress</td>
+<td>2027+</td>
+<td>Re-entry into TAVR (new $10B+ market claim)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-24-months-2027-2028">12-24 months (2027-2028)</h2>
+<table>
+<thead>
+<tr>
+<th>Catalyst</th>
+<th>Timing</th>
+<th>What to watch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"8 platforms into &gt;$25B new market spaces" (mgmt claim, WF conf) - multi-year pipeline wave</td>
+<td>2027-2029</td>
+<td>Credibility check vs capital constraints</td>
+</tr>
+<tr>
+<td>Watchman FLX Pro next-gen / market growth recovery</td>
+<td>2028</td>
+<td>Whether the LAAC market returns to growth</td>
+</tr>
+<tr>
+<td>Renal denervation (TIVUS/SoniVie) hypertension trial completion + strategy</td>
+<td>enrollment completion 2026; data 2027</td>
+<td>Reimbursement economics improving per mgmt</td>
+</tr>
+<tr>
+<td>Return to "traditional" margin expansion + EPS growth (mgmt: 2028 target)</td>
+<td>2028</td>
+<td>The recovery thesis' key milestone</td>
+</tr>
+<tr>
+<td>Penumbra pipeline synergies (neurovascular + peripheral thrombectomy)</td>
+<td>2027-28</td>
+<td>Cross-selling with Silk Road/IC franchise</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="25-key-risks">25. Key Risks</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Current evidence</th>
+<th>Impact mechanism</th>
+<th>Detectability (early signals)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Competitive (EP/PFA saturation)</strong></td>
+<td>Share 100%-&gt;83%-&gt;41%; Medtronic 48% +124% growth; incremental entrants dual-energy</td>
+<td>Revenue/margin mix erosion; kills the biggest multiple-supporting growth engine</td>
+<td>HIGH: monthly share trackers (Guidepoint-type), Medtronic/Abbott EP growth prints, price commentary</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Watchman market/clinical-inference risk</strong></td>
+<td>Standalone US volumes -low-teens%; CLOSURE-AF failure; referral confusion; new products 2027</td>
+<td>9% of revenues + halo effect on CV growth credibility; label push is binary-ish</td>
+<td>HIGH: quarterly Watchman growth, guideline/NCD milestones, Abbott Amulet 360 US approval timing</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>M&amp;A/deal risk (Penumbra)</strong></td>
+<td>$14.5B, ~10x sales; FTC second request; 4.75x covenant; integration precedents mixed</td>
+<td>Balance sheet + EPS dilution + potential divestitures; $0.06-0.08+ yr-1 hit; ROIC drag</td>
+<td>MED-HIGH: FTC clearance terms; close timing; Penumbra standalone growth/retention data</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Balance-sheet/leverage risk</strong></td>
+<td>Net debt to ~$22-23B PF; covenant step-up; no dividend buffer</td>
+<td>In a revenue shock, refinancing/covenant pressure limits strategy; forced asset actions</td>
+<td>MED-HIGH: quarterly leverage vs covenant; term-loan Tranche B refinancing terms</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Cyber/operational resilience</strong></td>
+<td>8-day global shutdown; sector attack wave</td>
+<td>Lost sales (partially recoverable), costs, litigation, customer defections to competitors</td>
+<td>MED: Oct-28 recapture disclosure; any new incidents; customer win-back data</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Guidance/credibility risk (already materialized)</strong></td>
+<td>3 cuts; PT compression 4 quarters; "lost year" narrative</td>
+<td>Persistent multiple discount until 2+ clean quarters; talent/board pressure</td>
+<td>HIGH (visible)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Reimbursement/policy</strong></td>
+<td>CY2027 proposed ~20% physician fee cut; hospital budgets tight; China VBP</td>
+<td>Procedure volume sensitivity in EP/LAAC/Neuromod; pricing/mix</td>
+<td>MED: CMS final rule Nov-Dec 2026; utilization data</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>FX</strong></td>
+<td>EMEA -8.8pp operational-FX swing in Q1-26; €3.5B debt stack</td>
+<td>Reported revenue/EPS noise; balance-sheet translation</td>
+<td>HIGH: monthly FX</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Technology shift risk (mid-term)</strong></td>
+<td>PFA commoditization (5+ systems); dual-energy; novel energies (nPulse, Field Medical)</td>
+<td>ASP/margin pressure in the category that powered 2024-25</td>
+<td>MED: pricing commentary, next-gen trials (FARADIGM etc.)</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Valuation/momentum risk</strong></td>
+<td>-50% YTD; 200-DMA $65 vs price $44; crowded narrative both ways (short 3.35%)</td>
+<td>Further estimate cuts can re-rate even after -50%; index/fund flows</td>
+<td>HIGH (price/estimates visible)</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Clinical/regulatory risk (pipeline)</strong></td>
+<td>6+ PMA-critical launches 2027-28; FARADIGM outcome unknown</td>
+<td>Launch slips push recovery beyond the covenant window</td>
+<td>MED: FDA review milestones, FARADIGM enrollment/timeline</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Key-person risk</strong></td>
+<td>Mahoney era 15 years; new CFO settling in</td>
+<td>Strategy discontinuity risk (low but non-zero)</td>
+<td>LOW-MED</td>
+</tr>
+</tbody>
+</table>
+<p>No numerical probabilities are assigned where unsupported; the qualitative ranking mixes demonstrated (1, 6), structural (3, 4) and bounded (8, 12) risks. The two most consequential are #1 (revenue engine) and #3-4 (deal balance sheet), because they can compound.</p>
+<hr />
+<h2 id="26-thesis-changing-data">26. Thesis-Changing Data</h2>
+<ol>
+<li><strong>Q3-26 results + recapture disclosure (Oct 28, 2026)</strong>
+   - Positive: cyber impact quantified modestly (&lt;$250M revenue, mostly recovered via backlog); organic ex-cyber tracking near low end of old guide; 2027 framework &gt;=3% organic with margin expansion.
+   - Neutral: impact as expected (~$300-450M); 2027 framework 2-4% organic, flat EPS.
+   - Negative: &gt;$500M impact, recapture &lt;50%, no 2027 framework or framework &lt;2% organic.</li>
+<li><strong>January 2027 official guide</strong>
+   - Positive: organic &gt;=4%; adj EPS growth &gt;=3%; margin +50bp.
+   - Neutral: organic 2-3%; EPS flat; margin 0-25bp.
+   - Negative: organic &lt;2% or EPS decline (beyond $0.06-0.08 Penumbra dilution).</li>
+<li><strong>EP share trajectory (quarterly; Guidepoint-type trackers + Medtronic prints)</strong>
+   - Positive: BSX PFA share stabilizes &gt;=45% for 2 quarters; EP US organic back &gt;5% pre-Ultra.
+   - Neutral: share 40-45% stable; EP flat.
+   - Negative: share &lt;38%; EP US organic negative; Medtronic share &gt;50%.</li>
+<li><strong>Watchman quarterly trajectory + label events</strong>
+   - Positive: US sequential growth returns (even low-single); label update filed/accepted; NCD revisit scheduled.
+   - Neutral: US flat sequentially; label update slips but guidance held.
+   - Negative: mid-teens declines persist into H1-27; label delayed beyond 2027; Abbott Amulet 360 US approval lands with fast adoption.</li>
+<li><strong>FARAWAVE Ultra / ICE launch execution (H2-2027)</strong>
+   - Positive: earlier-than-expected approval; label includes mapping efficiencies; ASP defended.
+   - Neutral: on-time launch, gradual adoption.
+   - Negative: slip to 2028 (already the outer risk case in bear).</li>
+<li><strong>Penumbra close terms &amp; integration</strong>
+   - Positive: unconditional FTC clearance; close by YE26; retention of top commercial/R&amp;D leadership; standalone growth &gt;15%.
+   - Neutral: clearance with modest divestitures; close Q4-26; growth 12-15%.
+   - Negative: second request extends past H1-27; divestitures of key assets; key-person departures; growth &lt;10%.</li>
+<li><strong>Restructuring delivery</strong>
+   - Positive: charges within $700-800M; &gt;half of $500M savings by YE27 visible in op margin.
+   - Neutral: on plan but reinvested (no net margin visible).
+   - Negative: charges overrun; savings partially offset by inflation; second program needed.</li>
+<li><strong>Capital allocation choices (buyback vs debt)</strong>
+   - Positive: remaining $3B deployed below $45 with leverage path intact; or held for deleveraging discipline.
+   - Neutral: phased deployment.
+   - Negative: new large M&amp;A before leverage &lt;3x; equity issuance at $40s.</li>
+<li><strong>Litigation/regulatory items (cyber-related claims, Axonics arbitration, tariffs)</strong>
+   - Positive: no material claims; tariffs net neutral.
+   - Neutral: disclosed but immaterial.
+   - Negative: material claims beyond reserves; regulatory sanction.</li>
+<li><strong>Sector policy: CMS physician fee final rule (Nov-Dec 2026) + hospital capex surveys</strong><ul>
+<li>Positive: cut softened/mitigated; ASC coverage expands further.</li>
+<li>Neutral: cut finalized as proposed (~20%) with utilization resilience.</li>
+<li>Negative: deeper cuts or site-of-service disruption; hospital budget surveys deteriorating into 2027.</li>
+</ul>
+</li>
+</ol>
+<p>Watch priority order: #1, #2, #3 (they carry most of the model's weight); #6 and #8 are the swing items for the balance sheet path.</p>
+<hr />
+<h2 id="27-final-investment-framework-incl-closing-tables">27. Final Investment Framework (incl. closing tables)</h2>
+<h2 id="what-the-current-valuation-4436-assumes">What the current valuation ($44.36) assumes</h2>
+<ul>
+<li>~0.5-3% perpetual revenue growth (reverse-DCF), i.e., permanence of the 2026 damage; zero credit for the 2027-28 launch wave; skeptical Penumbra (value-neutral at best); and a cost of capital consistent with a leveraged, contested medtech (~7.5-8.5%).</li>
+</ul>
+<h2 id="what-must-happen-for-those-assumptions-to-prove-too-pessimistic">What must happen for those assumptions to prove too pessimistic</h2>
+<ul>
+<li>EP share floor &gt;=40-45% and Ultra/ICE land H2-2027; Watchman stops declining by 2028; restructuring delivers &gt;=half of $500M by end-2027; Penumbra grows 12-15%+ post-close with retained commercial teams; guidance credibility rebuilt via 2+ clean quarters (first checkpoint Oct-28).</li>
+</ul>
+<h2 id="evidence-supporting-contradicting">Evidence supporting / contradicting</h2>
+<ul>
+<li>Supporting: margins/FCF intact; markets growing; pipeline dense; insiders buying; extreme peer discount. Contradicting: 3 cuts; share collapse; Watchman declines; deal leverage; integration history; policy/UI headwinds.</li>
+</ul>
+<h2 id="updown-sources">Up/down sources</h2>
+<ul>
+<li>Upside: EP stabilization + Watchman label/NCD + Penumbra execution + buyback at lows + sector re-rating. Downside: further share loss (Medtronic &gt;50%), Watchman declines persist into 2028, deal conditions/dilution, covenant stress in a recession, another cyber/operational event.</li>
+</ul>
+<h2 id="kpis-to-monitor-quarterly">KPIs to monitor (quarterly)</h2>
+<ul>
+<li>EP US organic &amp; PFA share; Watchman US sequential; Urology organic; adjusted op margin vs +50bp path; FCF conversion; net leverage vs covenant; Penumbra standalone growth; guidance revisions (count + direction).</li>
+</ul>
+<h2 id="most-important-catalysts">Most important catalysts</h2>
+<ul>
+<li>Oct-28 Q3/recapture/2027-framework; Jan-2027 guide (JPM); FTC Penumbra clearance; Watchman label update; FARAWAVE Ultra FDA + launch; CMS fee final rule; HRS/ACC 2027 data.</li>
+</ul>
+<h2 id="most-important-competitive-threats">Most important competitive threats</h2>
+<ul>
+<li>Medtronic EP momentum; Abbott Amulet 360 US entry; Edwards ECLIPTIS; dual-energy (J&amp;J/Abbott) ASP pressure; Penumbra-competing thrombectomy consolidation (Stryker/Inari $4.9B).</li>
+</ul>
+<h2 id="most-important-valuation-assumptions">Most important valuation assumptions</h2>
+<ul>
+<li>10y revenue CAGR (highest leverage), FCF margin trajectory, WACC/terminal, net debt pro-forma (~$22.5B), and the Penumbra steady-state FCF contribution.</li>
+</ul>
+<hr />
+<h2 id="final-table-1-metric-bear-base-bull">FINAL TABLE 1 - Metric | Bear | Base | Bull</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Bear</th>
+<th>Base</th>
+<th>Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue CAGR (10y, $21B base)</td>
+<td>~2.5%</td>
+<td>~5.2%</td>
+<td>~7.2%</td>
+</tr>
+<tr>
+<td>Organic growth (steady state)</td>
+<td>1-3%</td>
+<td>4-6%</td>
+<td>6-7%</td>
+</tr>
+<tr>
+<td>Operating margin (adj, terminal)</td>
+<td>~27%</td>
+<td>~29%</td>
+<td>~31%</td>
+</tr>
+<tr>
+<td>EPS CAGR (10y, adj)</td>
+<td>~0-1%</td>
+<td>~7-8%</td>
+<td>~10-11%</td>
+</tr>
+<tr>
+<td>FCF CAGR (10y)</td>
+<td>~3%</td>
+<td>~8%</td>
+<td>~10-11%</td>
+</tr>
+<tr>
+<td>Terminal growth</td>
+<td>2.5%</td>
+<td>3.0%</td>
+<td>3.5%</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>8.5%</td>
+<td>7.5%</td>
+<td>7.0%</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td>~$64B</td>
+<td>~$118B</td>
+<td>~$182B</td>
+</tr>
+<tr>
+<td>Equity value</td>
+<td>~$42B</td>
+<td>~$97B</td>
+<td>~$161B</td>
+</tr>
+<tr>
+<td>Implied value/share</td>
+<td><strong>~$28</strong></td>
+<td><strong>~$65</strong></td>
+<td><strong>~$108</strong></td>
+</tr>
+<tr>
+<td>vs $44.36</td>
+<td>-37%</td>
+<td>+46%</td>
+<td>+144%</td>
+</tr>
+</tbody>
+</table>
+<p>Scenario probabilities: 35% / 45% / 20% [ASSUMPTION -&gt; weighted ~$61/share; arithmetic shown in Section 18]. EVs are pro-forma (incl. Penumbra debt/shares). All inputs are assumptions, not facts; NOT a price target, no recommendation.</p>
+<h2 id="final-table-2-kpi-current-3y-history-5y-history-bull-assumption-bear-assumption">FINAL TABLE 2 - KPI | Current | 3Y history | 5Y history | Bull assumption | Bear assumption</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Current</th>
+<th>3Y history (FY23-25)</th>
+<th>5Y history (FY21-25)</th>
+<th>Bull</th>
+<th>Bear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic growth</td>
+<td>~4-5% (FY26E; guide withdrawn; 1H 8.2%)</td>
+<td>12.3% / 16.4% / 15.8% (avg ~14.8%)</td>
+<td>~13% avg (FY21 ~13% est; FY22 ~8-9% est)</td>
+<td>6-7%</td>
+<td>1-3%</td>
+</tr>
+<tr>
+<td>Gross margin</td>
+<td>70.3% adj (Q2-26); 68.8% FY25 GAAP</td>
+<td>~68.8% avg</td>
+<td>~68.5% avg</td>
+<td>71-72%</td>
+<td>67-68%</td>
+</tr>
+<tr>
+<td>Operating margin (adj)</td>
+<td>28.2% (1H26)</td>
+<td>~27-28% [EST]</td>
+<td>~26-27% [EST]</td>
+<td>30-31%</td>
+<td>26-27%</td>
+</tr>
+<tr>
+<td>FCF margin</td>
+<td>18.2% (FY25); TTM 17.3%</td>
+<td>12.6 / 15.8 / 18.2 (avg ~15.5%)</td>
+<td>~13% avg</td>
+<td>21-22%</td>
+<td>~17%</td>
+</tr>
+<tr>
+<td>ROIC</td>
+<td>~11.2% (TTM, T2)</td>
+<td>~10-11% [EST]</td>
+<td>~9-10% [EST]</td>
+<td>13%+</td>
+<td>~9%</td>
+</tr>
+<tr>
+<td>EPS growth (adj)</td>
+<td>FY26: +7-8% pre-cyber (withdrawn); FY25 +22%</td>
+<td>FY24 adj EPS 2.51 -&gt; FY25 3.06</td>
+<td>adj data pre-2024 not extracted [data unavailable]</td>
+<td>+10-12%/yr from 2028</td>
+<td>~flat</td>
+</tr>
+<tr>
+<td>Net leverage</td>
+<td>~2.2x now; ~3.5-4x pro-forma</td>
+<td>~1.5-1.8x [EST]</td>
+<td>~1.6-2.2x [EST]</td>
+<td>&lt;1.5x by 2029</td>
+<td>4.5-5x stress</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sources-methodology">Sources &amp; Methodology</h2>
+<p><strong>SEC filings (EDGAR CIK 0000885725):</strong> FY2025 10-K (acc 0000885725-26-000010, filed 2026-02-17); FY2024 10-K (…-25-000011); FY2021 10-K; Q2-2026 10-Q (…-26-000053, filed 2026-08-03); Q1-2026 10-Q (…-26-000033); Q4-2025 earnings 8-K ex-99.1 (…-26-000006); Q1-2026 earnings 8-K ex-99.1 (…-26-000031); Q2-2026 earnings 8-K ex-99.1 (…-26-000051, filed 2026-07-29; release doc q22026earningsrelease.htm); 8-K 2026-07-27 restructuring (…-26-000049); 8-K 2026-05-18 ASR (…-26-000042); 8-K 2026-02-26 financing (revolvers/term loan); 8-K 2026-08-26 cyber Item 8.01 (…-26-000056); 8-K 2026-09-08 cyber Item 1.05 (…-26-000059); Penumbra merger 8-K ex-99.1 + ex-2.1 (2026-01-15); 8-K 2026-02-05 officer change; DEF 14A 2026 (…-26-000025, filed 2026-03-18).
+<strong>FDA:</strong> openFDA PMA database (P230030 FARAPULSE + supplements S007/S012; P240006 VARIPULSE; P250022 Volt; P240013 Sphere-9; P240044 Kardium; P230017 PulseSelect); FDA recall database (VARIPULSE Class-1 Z-1205-2025).
+<strong>ClinicalTrials.gov (API v2, accessed 2026-09-16):</strong> NCT04612244 (ADVENT), NCT05443594 (ADVANTAGE AF), NCT03795298 (OPTION), NCT04394546 (CHAMPION-AF), NCT04226547 (CATALYST), NCT06521463 (SIMPLAAFY), FARADIGM/ReMATCH entries, NCT05293639 (AdmIRE), NCT04527991 (TROPiCS-04 context).
+<strong>Peer-reviewed:</strong> NEJM: ADVENT (2023;389:1660), OPTION (NEJMoa2408308), CHAMPION-AF (NEJMoa2517213), CLOSURE-AF (NEJMoa2513310), OCEAN (NEJMoa2509688), AVANT GUARD (NEJMoa2600929); Circulation (ADVANTAGE AF Ph2; AdmIRE; Amulet IDE 2021); JACC (ADVANTAGE AF Ph1; Kardium PULSAR); Nature Medicine (SPHERE Per-AF); JAMA (ALONE-AF).
+<strong>Company materials:</strong> Q2-2026 and Q1-2026 earnings decks/FOH (investors.bostonscientific.com); Q2-26 earnings call transcript (2026-07-29); Wells Fargo 21st Annual Healthcare Conference fireside chat transcript (2026-09-10); Q4-2025 earnings call (2026-02-04); Bernstein Strategic Decisions Conference coverage (2026-05-27).
+<strong>Trade/market press (T2, dated in-line):</strong> Reuters, WSJ, Barron's, Bloomberg-syndicated (Quartz/Yahoo), MedTech Dive, MassDevice, MD+DI, TCTMD, Medscape, Healio, BioWorld/Citeline, StockTitan, StreetInsider, Investing.com; Guidepoint Qsight PFA share blog (Jun-2026); short-interest trackers (MarketWatch/MarketBeat/shortinteresthistory.com, Aug-Sep 2026); analyst notes as cited (BTIG, TD Cowen, Truist, Stifel, Citi, Jefferies, Mizuho, Raymond James, JPMorgan, Wells Fargo, Wolfe, Baird, Daiwa, Argus, Zacks).
+<strong>Market data:</strong> Yahoo Finance (BSX quote/price history, 2026-09-16); stockanalysis.com (statistics, financials, peer pages; snapshots dated where stale).</p>
+<h2 id="method-limitations">Method &amp; limitations</h2>
+<ul>
+<li>Labels: [FILED]/[FACT] primary; [MGMT CLAIM]; [ANALYST]; [ESTIMATE]; [ASSUMPTION]; [OPINION]; [NOT FOUND]/"data unavailable" where searches failed.</li>
+<li>Peer multiples mixed snapshot dates (vendor caching); flagged in Section 18. FY2016-2018 revenue/10y organic not re-verified (older 10-Ks not retrieved) - flagged. Proxy compensation tables not extracted - flagged. Some aggregator call-summary quotes (T3) were corroborated against transcripts where possible; unverifiable items marked.</li>
+<li>This is a research exercise, not investment advice, not a recommendation; scenario probabilities and valuation inputs are the author's assumptions.</li>
+</ul>
+</div>
+</body></html>

@@ -1,0 +1,1552 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUST · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>OUST · 2026-11-13</span></div>
+<div class="wrap">
+<h1 id="ouster-inc-nasdaq-oust-physical-ai-equity-research">Ouster, Inc. (NASDAQ: OUST) — Physical AI Equity Research</h1>
+<p><strong>Price used for valuation:</strong> $33.48 (Nasdaq close, 13 Nov 2026, −8.5% on the day). Market cap $2.44B; enterprise value $2.04B; net cash $404.4M [$5.54/share].
+<strong>Fiscal year:</strong> calendar. Q3 FY2026 ended 30 Sep 2026, reported 3 Nov 2026.
+<strong>Analyst stance:</strong> research, not financial advice. FACTS, MANAGEMENT CLAIMS and OPINION are labelled separately. Every figure is dated.</p>
+<hr />
+<h2 id="0-classification-mandatory">0. Classification (mandatory)</h2>
+<p><strong>Profile C — growth, near adjusted-EBITDA break-even.</strong> Q3 FY2026 revenue $59.3M, GAAP gross margin 42.6%, operating margin −32.5% and FCF −$35.0M; net cash $404.4M. The company is not pre-revenue, but GAAP profitability is not close; the equity is valued on EV/sales and unit economics.
+<strong>Business model:</strong> digital-lidar hardware plus Perception/BlueCity software, sold to industrial, robotics, automotive and defence customers.
+<strong>Metrics that matter:</strong> units, ASP, gross margin, adjusted EBITDA and cash burn.</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive summary</h2>
+<ul>
+<li><strong>The growth is real, and it is faster than any peer.</strong> Q3 FY2026 revenue $59.3M (+50.1% YoY, +8.6% QoQ), the 15th consecutive quarter of product-revenue growth, on &gt;27,000 sensors shipped (≈7,000 lidar + 20,000 cameras) — both records (<a href="https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm">Q3 FY2026 release</a>, 3 Nov 2026). Q4 guidance is $61–64M, implying FY2026 revenue of $223.5–226.5M (+32–34% total, <strong>+~48% ex-royalties</strong>). Consensus FY2027 is $299.5M (+34.7%) (<a href="https://stockanalysis.com/stocks/oust/forecast/">stockanalysis</a>).</li>
+<li><strong>But the reported growth is not what it looks like.</strong> FY2025 included <strong>$22.8M of patent royalties at 100% gross margin</strong>, of which $16.1M was a one-time catch-up booked in Q4 FY2025 (FY2025 10-K). TTM royalties are $26.7M, <strong>11.9% of revenue</strong> — so FY2026's +33% headline is really +48% on product. Strip the royalties and the <em>product</em> gross margin is <strong>39.1%, not 46.3%</strong>. That is the single most important adjustment in this file.</li>
+<li><strong>Lidar unit volume is roughly flat; the incremental growth is cameras and systems.</strong> FY2025 shipped &gt;25,000 lidar units for $146.6M of product revenue ≈ <strong>$5,860 per lidar</strong>. Q3 FY2026 shipped ~7,000 lidar — <em>fewer than Q4 FY2025's 8,100</em> — alongside 20,000 Stereolabs cameras. The stereovision acquisition (closed 4 Feb 2026, $32.4M cash + 1.85M shares) is now a material and under-modelled part of the story.</li>
+<li><strong>Operating leverage is appearing in opex, not gross margin.</strong> GAAP gross margin was 42.6% in Q3 FY2026 vs 42.2% a year earlier and ~39% underlying in Q2 FY2026 (ex the $5.4M tariff refund). Opex grew 8.8% against 50% revenue growth, so GAAP operating margin improved from −61.4% to −32.5%. <strong>Adjusted EBITDA loss narrowed to −$3.4M</strong> (−$8.4M a year ago) — adjusted EBITDA breakeven is ~$66.6M/quarter, i.e. roughly Q1 2027. <strong>GAAP operating breakeven is ~$103M/quarter, i.e. 2028.</strong></li>
+<li><strong>The balance sheet is strong; the dilution habit is not.</strong> $421.2M cash and investments, $15.4M of debt (all leases), $404.4M net cash = <strong>16.5% of market cap</strong>. But the company has raised <strong>~$385M across three equity facilities in 18 months</strong> ($95.6M at $20.88, $98.0M at $27.40, $191.8M at $55.22) and shares are <strong>+21.8% YoY</strong> (59.95M → 73.00M). Authorised shares were doubled from 100M to 200M on 17 Jun 2026. Management now says it does "not expect to need additional capital."</li>
+<li><strong>The valuation already discounts a lot.</strong> At $33.48 the stock trades at <strong>9.1x EV/TTM sales, 9.1x EV/FY2026E sales, 6.8x EV/FY2027E sales and 26.3x EV/product gross profit</strong>. That is <strong>3.6x Hesai's 2.5x</strong> despite Hesai being 2.4x larger, and near the top of Ouster's own post-SPAC range (P/S 3.8x in FY2023, 5.5x FY2024, 7.7x FY2025, 10.9x now). Free cash flow is −$97.5M TTM (−43% margin).</li>
+<li><strong>Concentration and competition are unresolved.</strong> One customer (Customer E) was <strong>25% of 9M FY2026 revenue</strong> (26% in 9M FY2025) — persistent, not transient (10-Q Note 2). Benchmark Electronics is a single-source manufacturer at 25% of purchases. Hesai and RoboSense compete on price at 1.9–2.5x EV/sales and 2–4x the unit volume.</li>
+</ul>
+<p><strong>Verdict: NEUTRAL — conviction Medium.</strong> This is the best-executing pure-play Western lidar franchise, with a genuine technology lead in native-colour lidar and a regulatory moat (NDAA/BABA/Blue UAS) that excludes Chinese competitors from US defence and drone procurement. It is also a 9x-sales, cash-burning hardware company whose volume growth is now coming from cameras rather than lidar, trading at a 3.6x premium to the scale leader. Probability-weighted fair value is <strong>~$32.6 — about 3% below today's price</strong>. I would want either ~$22–24 (≈6x FY2027 sales) or two quarters of positive adjusted EBITDA before turning constructive.</p>
+<hr />
+<h2 id="2-business-overview">2. Business overview</h2>
+<h3 id="what-they-sell">What they sell</h3>
+<p>Ouster sells <strong>sensing and perception hardware plus software</strong> to machines that need to see. Four product families:</p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Status (Nov 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rev8 / OS series lidar</strong></td>
+<td>Digital SPAD+VCSEL lidar; <strong>Rev8 is the first "native colour" lidar</strong> (fused RGB point cloud from one device); OS0/OS1/OS2/OSDome + OS1 Max for long range</td>
+<td>Launched May 2026; "hundreds" of units shipped in Q3, "thousands" guided for Q4, "tens of thousands by end FY2027" (management)</td>
+</tr>
+<tr>
+<td><strong>Rev6 / Rev7 lidar</strong></td>
+<td>Prior generations; still shipping in volume</td>
+<td>Volume today; Rev7 Blue-UAS certified</td>
+</tr>
+<tr>
+<td><strong>Stereolabs ZED cameras</strong></td>
+<td>Stereo and mono depth cameras for robots; ZED SDK</td>
+<td>Acquired 4 Feb 2026; <strong>20,000 cameras shipped in Q3 FY2026</strong>, &gt;2x QoQ (record)</td>
+</tr>
+<tr>
+<td><strong>ZED Box / edge AI compute</strong></td>
+<td>NVIDIA Jetson Orin and <strong>Jetson Thor</strong>-based industrial edge computers; up to 8 sensors</td>
+<td>ZED Box 2 series launched 27 Oct 2026</td>
+</tr>
+<tr>
+<td><strong>Gemini / BlueCity software</strong></td>
+<td>Lidar-based perception: Gemini for security, yard and crowd analytics; BlueCity for DOT traffic detection and signal actuation</td>
+<td>"Several million-dollar wins" in Utah, Washington, Florida, Ontario; a 100-intersection expansion with a leading DOT (Q3 call)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="to-whom-and-how-they-get-paid">To whom, and how they get paid</h3>
+<p>Sales are <strong>direct and through distributors</strong> to OEMs, integrators, government DOTs and defence primes. Revenue is almost entirely <strong>product revenue recognised at shipment</strong> ($157.0M of $162.5M in 9M FY2026, 96.6%); software is bundled into hardware or sold as a term licence and is not separately disclosed. The one non-product line is <strong>patent royalties</strong>.</p>
+<h3 id="the-royalty-line-read-this-before-any-gross-margin-chart">The royalty line — read this before any gross-margin chart</h3>
+<p>Ouster collects royalties under long-term IP licences, "primarily in the Asia and Pacific region." The FY2025 10-K discloses that the Hesai arbitration tribunal ruled on 15 Sep 2025 that Ouster is bound by the 2020 <strong>Velodyne–Hesai global cross-licence</strong>, which "requires Hesai Photonics to pay royalties" (10-Q Note 7; Ouster separately paid $6.4M of arbitration fees). The royalties are therefore, with high confidence, <strong>paid by Ouster's largest Chinese competitor</strong> — a genuine IP asset, but one the company itself says is non-core: "we do not consider this revenue to be reflective of the core operations of our business… we expect that the amounts recognized in the year ended December 31, 2025 will likely exceed amounts recognized in future annual periods" (FY2025 10-K, MD&amp;A). Management guides ~$3M/quarter in Q4 FY2026.</p>
+<h3 id="segments-and-geographic-mix">Segments and geographic mix</h3>
+<p>One reportable segment. Geography (10-Q Note 12):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Q3 FY2026</th>
+<th>Q3 FY2025</th>
+<th>9M FY2026</th>
+<th>9M FY2025</th>
+<th>% of 9M FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Americas</td>
+<td>$34.77M</td>
+<td>$26.35M</td>
+<td>$102.99M</td>
+<td>$66.31M</td>
+<td>63.4%</td>
+</tr>
+<tr>
+<td>Asia &amp; Pacific</td>
+<td>$15.31M</td>
+<td>$7.46M</td>
+<td>$35.86M</td>
+<td>$26.09M</td>
+<td>22.1%</td>
+</tr>
+<tr>
+<td>EMEA</td>
+<td>$9.25M</td>
+<td>$5.72M</td>
+<td>$23.68M</td>
+<td>$14.80M</td>
+<td>14.6%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$59.33M</strong></td>
+<td><strong>$39.53M</strong></td>
+<td><strong>$162.53M</strong></td>
+<td><strong>$107.21M</strong></td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>United States was 55% of Q3 FY2026 revenue</strong> (65% a year earlier), so international is growing faster. Note that APAC includes the royalties — FY2025 APAC revenue grew 169% almost entirely on the $22.8M royalty recognition (10-K MD&amp;A).</p>
+<h3 id="revenue-by-vertical-not-disclosed">Revenue by vertical — not disclosed</h3>
+<p><strong>Ouster does not report revenue by end market.</strong> The 10-K names four target markets (industrial, robotics, smart infrastructure, automotive) and gives no split; the only quantitative steer is ordinal. My estimate for FY2026E ($225M), flagged as an <strong>estimate, not a reported figure</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Vertical</th>
+<th>FY2026E est.</th>
+<th>%</th>
+<th>Basis for estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Industrial automation</strong> (AMRs/AGVs, forklifts, mining, construction, agriculture, ports, defence ground vehicles)</td>
+<td>~$90M</td>
+<td>~40%</td>
+<td>"Industrials led our revenue mix" (Q3 call); Forterra, GUSS/John Deere, Flyability disclosed</td>
+</tr>
+<tr>
+<td><strong>Robotics</strong> (incl. Stereolabs cameras, drones, humanoids, mapping)</td>
+<td>~$80M</td>
+<td>~35%</td>
+<td>"followed by robotics"; 20,000 cameras/qtr at low ASP; drone mapping names (GeoCue, Seneca)</td>
+</tr>
+<tr>
+<td><strong>Smart infrastructure</strong> (BlueCity, Gemini, tolling, security)</td>
+<td>~$45M</td>
+<td>~20%</td>
+<td>"several million-dollar BlueCity wins"; Indra tolling (10 Nov 2026); Gemini &gt;500 sites</td>
+</tr>
+<tr>
+<td><strong>Automotive / ADAS / AV</strong></td>
+<td>~$10M</td>
+<td>~5%</td>
+<td>Management: "we really do not expect to be a player in the Chinese automotive market"; no disclosed DF-series production programme</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OPINION:</strong> the fact that a company which IPO'd as an automotive lidar story no longer discloses an automotive split is itself information. Automotive has gone from the pitch to a rounding error, and the investor narrative has been re-based onto industrial/robotics/defence — a smaller but more real market.</p>
+<hr />
+<h2 id="3-physical-ai-exposure">3. Physical AI exposure</h2>
+<h3 id="where-it-sits-in-the-stack">Where it sits in the stack</h3>
+<p><code>SENSING              COMPUTE / SILICON        DATA                SOFTWARE / PERCEPTION      SYSTEMS / DEPLOYMENT
+Lidar (own digital   ZED Box edge AI          None. No REM-like   Gemini, BlueCity,          None. Sells components
+SPAD SoC + VCSEL)    computers on NVIDIA      crowdsourced map;   ZED SDK, Isaac ROS         and software; does not
+Cameras (Stereolabs  Jetson Orin / Thor       no proprietary      integration, ML            operate fleets or
+stereo + mono)                                fleet data asset    training pipeline          networks</code></p>
+<p>Ouster occupies <strong>three of five layers — and is anchored in the bottom one.</strong> That is the honest read. It is a <em>sensing</em> company that has bolted on compute and perception software to raise content per machine. It has no data network effect (unlike Mobileye's REM), no silicon of its own beyond the lidar SoC (the ZED Box uses NVIDIA silicon), and no deployment/systems business.</p>
+<p>The strategic logic of the Stereolabs deal is precisely to escape the sensor commodity trap: "if NVIDIA is the brain of a robot, then we are the eyes and the visual cortex" (Pacala, Q3 call). That framing is honest about the position — eyes, not brain.</p>
+<h3 id="of-revenue-tied-to-physical-ai">% of revenue tied to Physical AI</h3>
+<p>Definition used here: revenue from products that let a machine perceive — and in most cases act on — the physical world.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>TTM (Sep 2026)</th>
+<th>%</th>
+<th>FY2029E (my model)</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lidar sensors (all verticals)</td>
+<td>~$170M</td>
+<td>~76%</td>
+<td>~$330M</td>
+<td>~62%</td>
+</tr>
+<tr>
+<td>Cameras + edge compute (Stereolabs)</td>
+<td>~$28M</td>
+<td>~12%</td>
+<td>~$120M</td>
+<td>~23%</td>
+</tr>
+<tr>
+<td>Perception software (Gemini/BlueCity, bundled)</td>
+<td>~$0M disclosed (inside hardware)</td>
+<td>n/m</td>
+<td>~$40M</td>
+<td>~8%</td>
+</tr>
+<tr>
+<td>Patent royalties (Hesai cross-licence)</td>
+<td>$26.7M</td>
+<td><strong>11.9%</strong></td>
+<td>~$10M</td>
+<td>~2%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$224.7M</strong></td>
+<td>100%</td>
+<td><strong>~$530M</strong></td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Physical-AI product revenue</strong></td>
+<td><strong>~$198M</strong></td>
+<td><strong>88%</strong></td>
+<td><strong>~$520M</strong></td>
+<td><strong>~98%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reasoning for the 3-year figure.</strong> Lidar units grow from ~28k in FY2026 to ~55k by FY2029 at roughly flat $6,000 ASP against capacity of 100k units at Benchmark by end-2027 — that is the company's own capacity guide, heavily haircut. Cameras scale from ~$28M to ~$120M as Stereolabs OEM wins convert; the Q3 run-rate of 20,000 units/quarter annualises to 80,000 at ~$350, i.e. ~$28M, and management says the step-change in demand is structural. Software is my estimate of BlueCity/Gemini reaching ~8% of revenue as DOT contracts mature; Ouster has never broken it out. <strong>I would not underwrite more than 60% of that software number.</strong></p>
+<p>So: <strong>~97% of revenue is tied to Physical AI today (88% shipped product, 12% lidar patent royalties), and ~96–98% in three years</strong> — the mix barely changes because the whole company is Physical AI. The more useful question is the <em>sub-split</em>: roughly <strong>75% of revenue is from machines that move</strong> (industrial, robotics, automotive) and <strong>~20–25% from fixed infrastructure</strong>, and that ratio is unlikely to shift much.</p>
+<h3 id="key-end-markets">Key end markets</h3>
+<table>
+<thead>
+<tr>
+<th>End market</th>
+<th>Exposure today</th>
+<th>Evidence</th>
+<th>My view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Industrial automation</strong></td>
+<td>~40% of revenue</td>
+<td>"Industrials led our revenue mix" (Q3 FY2026 call); Forterra Lancer AGVs completed 1,426 missions and 88 casualty evacuations in Ukraine on Rev7 (21 Oct 2026); GUSS/John Deere orchard machines on Rev8</td>
+<td>The core. Real, sticky, price-insensitive where reliability matters. Defence is the fastest-growing sliver.</td>
+</tr>
+<tr>
+<td><strong>Robotics / humanoids</strong></td>
+<td>~35% (mostly cameras)</td>
+<td>20,000 ZED cameras in Q3; humanoids are "camera-centric" per management; palm/wrist-mounted stereo demand</td>
+<td>Highest-growth, lowest-ASP. Humanoid revenue today is effectively zero; the camera content per humanoid is $1–3k, not $30k.</td>
+</tr>
+<tr>
+<td><strong>Drones / defence</strong></td>
+<td>~5% (inside industrial/robotics)</td>
+<td>Rev7 Blue UAS certification; Rev8 NDAA and BABA compliant; Seneca wildfire drones; GeoCue TrueView payloads</td>
+<td>The best structural story: Chinese lidar is effectively excluded from US government procurement. Small today.</td>
+</tr>
+<tr>
+<td><strong>Smart infrastructure</strong></td>
+<td>~20%</td>
+<td>BlueCity wins in UT, WA, FL, ON; 100-intersection expansion; Indra electronic tolling (10 Nov 2026); Gemini &gt;500 sites</td>
+<td>Lumpy, budget-dependent, but genuinely recurring once installed.</td>
+</tr>
+<tr>
+<td><strong>Automotive / ADAS / AV</strong></td>
+<td>~5%</td>
+<td>No disclosed DF-series SOP; "the automotive customers are fundamentally different… we have a lot of them today" (Pacala)</td>
+<td>Optionality, not a business. Robotaxi is a 2027+ call option.</td>
+</tr>
+<tr>
+<td><strong>Space</strong></td>
+<td><strong>0%</strong></td>
+<td>No product, no disclosed customer</td>
+<td>Not a factor.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scepticism check.</strong> "Physical AI" is doing heavy marketing work here — the phrase appears in the first sentence of every press release. But unlike most claimants, <strong>Ouster's revenue is genuinely 100% physical-AI product</strong>: there is no legacy non-AI business to strip out, no services arm, no licensing model to net off. The problem is not purity; it is <strong>size, margin and price</strong>. A $225M-revenue sensor company at 9x sales needs the <em>unit economics</em> to work, and today they do not: 39% product gross margin, negative $97M free cash flow.</p>
+<hr />
+<h2 id="4-competitive-position-moat">4. Competitive position &amp; moat</h2>
+<h3 id="market-position">Market position</h3>
+<p>There is no reliable third-party share data for non-automotive lidar, and I will not invent one. The observable facts:</p>
+<ul>
+<li><strong>Ouster:</strong> ~28k lidar units/year, ~$190M lidar revenue, 46% blended / 39% product gross margin, 9.1x EV/sales.</li>
+<li><strong>Hesai (HSAI):</strong> <strong>$538M TTM revenue (+31% in CNY), 40.4% gross margin, $48M net income, EV $1.36B, 2.50x EV/sales</strong> (<a href="https://stockanalysis.com/stocks/hsai/statistics/">stockanalysis</a>, 13 Nov 2026). Roughly <strong>2.4x Ouster's revenue at 0.27x the multiple</strong>.</li>
+<li><strong>RoboSense (2498.HK):</strong> ~HKD 2.51B revenue (~$322M), 24.5% gross margin, loss-making, EV HKD 4.87B ≈ $625M, <strong>1.94x EV/sales</strong>.</li>
+<li><strong>Luminar:</strong> <strong>bankrupt.</strong> Now LAZRQ at $0.018, market cap $1.5M, EV $95M, revenue $66M, gross margin −118% (<a href="https://stockanalysis.com/stocks/lazrq/statistics/">stockanalysis</a>). This is the most important competitive datapoint in the sector: the automotive lidar TAM did not materialise at the assumed price points, and the best-capitalised Western pure-play went to zero.</li>
+<li><strong>Aeva:</strong> $24.7M revenue, 31% gross margin, 28x EV/sales (FMCW, mostly defence/industrial).</li>
+<li><strong>Innoviz:</strong> $50M revenue, ~0% gross margin, 0.57x EV/sales — effectively a distressed asset.</li>
+</ul>
+<h3 id="the-moat-narrower-than-the-narrative-wider-than-the-bear-case">The moat: narrower than the narrative, wider than the bear case</h3>
+<table>
+<thead>
+<tr>
+<th>Source of advantage</th>
+<th>Strength</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NDAA / BABA / Blue UAS compliance</strong></td>
+<td><strong>Strong</strong></td>
+<td>Chinese lidar is excluded from US federal, defence and drone procurement. Ouster has Rev7 Blue UAS certification and NDAA/BABA-compliant Rev8, and is explicitly marketing it (GeoCue, Seneca, Forterra). This is a regulatory moat that no amount of Chinese cost advantage crosses. It is the single most durable thing Ouster owns.</td>
+</tr>
+<tr>
+<td><strong>Digital lidar architecture (SPAD SoC + VCSEL)</strong></td>
+<td>Medium-strong</td>
+<td>Two chips instead of hundreds of discrete parts; cost curve tracks CMOS. Real, patented, and the reason Ouster can sell at $5–6k with 39% product margin. But the PTAB invalidated three of four challenged patents (one survived, IPR2023-01422) — the IP estate is less impregnable than the pitch.</td>
+</tr>
+<tr>
+<td><strong>Native colour (Rev8)</strong></td>
+<td>Medium, decaying</td>
+<td>First-to-market fused RGB+3D is genuinely differentiated for survey, agriculture, defence and mapping. But it is an engineering lead, not a physical law; expect 12–24 months before a Chinese competitor ships something comparable.</td>
+</tr>
+<tr>
+<td><strong>Ruggedness / reliability</strong></td>
+<td>Medium</td>
+<td>Real and hard-won (the "only thing still working after the robot crashed" anecdotes). Matters in mining, ports, defence.</td>
+</tr>
+<tr>
+<td><strong>Switching costs</strong></td>
+<td><strong>Weak-to-medium</strong></td>
+<td>A lidar is a component. Integration takes 6–24 months, but re-sourcing is routine and Chinese vendors actively design out incumbent sensors. There is no software lock-in comparable to Mobileye's REM or a CUDA-style toolchain.</td>
+</tr>
+<tr>
+<td><strong>ZED SDK developer ecosystem</strong></td>
+<td>Medium</td>
+<td>Hundreds of thousands of robotics developers use ZED; Isaac ROS native support helps. A modest network effect, not a fortress.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Customer concentration.</strong> Customer E was <strong>25% of 9M FY2026 revenue and 15% of Q3</strong>; it was 26% of 9M FY2025. Two customers exceeded 10% in FY2025. Customer E is not named in any filing — <strong>unverified</strong>. A 25%-of-revenue customer with no long-term contract disclosed is the largest single fundamental risk in the equity.</p>
+<p><strong>Supplier concentration.</strong> Supplier B (Benchmark Electronics, named in the risk factors) was <strong>25% of Q3 FY2026 purchases and 52% of accounts payable</strong>. Single-source contract manufacturing is a real execution risk during a Rev8 ramp that is supposed to 3.5x capacity by end-2027.</p>
+<hr />
+<h2 id="5-financials">5. Financials</h2>
+<h3 id="last-8-quarters-usd-millions-except-per-share">Last 8 quarters (USD millions except per share)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Q4 FY24</th>
+<th>Q1 FY25</th>
+<th>Q2 FY25</th>
+<th>Q3 FY25</th>
+<th>Q4 FY25</th>
+<th>Q1 FY26</th>
+<th>Q2 FY26</th>
+<th>Q3 FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>30.09</td>
+<td>32.63</td>
+<td>35.05</td>
+<td>39.53</td>
+<td>62.18</td>
+<td>48.58</td>
+<td>54.63</td>
+<td>59.33</td>
+</tr>
+<tr>
+<td>YoY growth</td>
+<td>+23.1%</td>
+<td>+25.8%</td>
+<td>+29.9%</td>
+<td>+40.8%</td>
+<td>+106.6%</td>
+<td>+48.9%</td>
+<td>+55.9%</td>
+<td>+50.1%</td>
+</tr>
+<tr>
+<td>of which royalties</td>
+<td>0.00</td>
+<td>1.53</td>
+<td>0.03</td>
+<td>0.04</td>
+<td>21.21</td>
+<td>0.35</td>
+<td>1.86</td>
+<td>3.29</td>
+</tr>
+<tr>
+<td>Product revenue</td>
+<td>30.09</td>
+<td>31.11</td>
+<td>35.02</td>
+<td>39.49</td>
+<td>40.97</td>
+<td>48.23</td>
+<td>52.76</td>
+<td>56.03</td>
+</tr>
+<tr>
+<td>Gross margin (GAAP)</td>
+<td>43.8%</td>
+<td>41.3%</td>
+<td>40.4%</td>
+<td>42.2%</td>
+<td><strong>59.1%</strong>¹</td>
+<td>42.9%</td>
+<td><strong>39.0%</strong>²</td>
+<td>42.6%</td>
+</tr>
+<tr>
+<td>Gross margin (non-GAAP)</td>
+<td>n/v</td>
+<td>n/v</td>
+<td>n/v</td>
+<td>47.4%</td>
+<td><strong>62%</strong>¹</td>
+<td>n/v</td>
+<td><strong>52.9%</strong>²</td>
+<td>46.7%</td>
+</tr>
+<tr>
+<td>Operating margin (GAAP)</td>
+<td>−85.1%</td>
+<td>−73.0%</td>
+<td>−91.9%</td>
+<td>−61.4%</td>
+<td><strong>−1.0%</strong>¹</td>
+<td>−39.6%</td>
+<td>−46.6%</td>
+<td>−32.5%</td>
+</tr>
+<tr>
+<td>EPS diluted (GAAP)</td>
+<td>−0.48</td>
+<td>−0.42</td>
+<td>−0.38</td>
+<td>−0.37</td>
+<td><strong>+0.06</strong>¹</td>
+<td>−0.28</td>
+<td>−0.27</td>
+<td>−0.20</td>
+</tr>
+<tr>
+<td>Adj. EBITDA</td>
+<td>n/v</td>
+<td>n/v</td>
+<td>n/v</td>
+<td>−8.37</td>
+<td><strong>+11.0</strong>¹</td>
+<td>−6.88³</td>
+<td>−4.45</td>
+<td>−3.39</td>
+</tr>
+<tr>
+<td>Free cash flow</td>
+<td>−4.01</td>
+<td>−5.43</td>
+<td>−2.20</td>
+<td>−20.04</td>
+<td>−37.18</td>
+<td>−9.84</td>
+<td>−15.41</td>
+<td>−35.02</td>
+</tr>
+<tr>
+<td>SBC ($M)</td>
+<td>8.84</td>
+<td>8.50</td>
+<td>13.23</td>
+<td>11.83</td>
+<td>7.27</td>
+<td>7.49</td>
+<td>11.39</td>
+<td>11.49</td>
+</tr>
+<tr>
+<td>SBC % of revenue</td>
+<td>29.4%</td>
+<td>26.0%</td>
+<td>37.7%</td>
+<td>29.9%</td>
+<td>11.7%</td>
+<td>15.4%</td>
+<td>20.8%</td>
+<td>19.4%</td>
+</tr>
+<tr>
+<td>Cash &amp; investments</td>
+<td>172.0</td>
+<td>168.2</td>
+<td>226.5</td>
+<td>244.5</td>
+<td>208.6</td>
+<td>173.1</td>
+<td>261.1</td>
+<td>419.8</td>
+</tr>
+<tr>
+<td>Total debt (leases)</td>
+<td>20.3</td>
+<td>19.0</td>
+<td>17.7</td>
+<td>15.9</td>
+<td>17.1</td>
+<td>17.4</td>
+<td>16.4</td>
+<td>15.4</td>
+</tr>
+<tr>
+<td>Shares (period end, M)</td>
+<td>52.56</td>
+<td>53.79</td>
+<td>57.80</td>
+<td>59.95</td>
+<td>60.95</td>
+<td>63.46</td>
+<td>68.49</td>
+<td>73.00</td>
+</tr>
+</tbody>
+</table>
+<p>¹ Q4 FY2025 includes $21.2M of royalties, of which $16.1M was a one-time cumulative catch-up — the sole reason the quarter was GAAP-positive and adjusted-EBITDA-positive (+$11M).
+² Q2 FY2026 includes a <strong>$5.4M import-duty (IEEPA tariff) refund</strong> worth ~1,000bps of gross margin; underlying Q2 gross margin was ~39% GAAP / ~43% non-GAAP.
+³ Derived: 9M FY2026 adj. EBITDA −$14.73M less Q2 −$4.45M less Q3 −$3.39M.
+n/v = not verified from a primary filing. Sources: quarterly 8-K Exhibit 99.1 and 10-Q/10-K; FCF = operating cash flow − capex, per <a href="https://stockanalysis.com/stocks/oust/financials/?p=quarterly">stockanalysis quarterly data</a>.</p>
+<h3 id="last-3-fiscal-years-usd-millions">Last 3 fiscal years (USD millions)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FY2023</th>
+<th>FY2024</th>
+<th>FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>83.28</td>
+<td>111.10</td>
+<td>169.38</td>
+</tr>
+<tr>
+<td>YoY growth</td>
+<td>+103.0%</td>
+<td>+33.4%</td>
+<td>+52.5%</td>
+</tr>
+<tr>
+<td>of which royalties</td>
+<td>0.00</td>
+<td>0.00</td>
+<td><strong>22.81</strong></td>
+</tr>
+<tr>
+<td>Product revenue</td>
+<td>83.28</td>
+<td>111.10</td>
+<td>146.58</td>
+</tr>
+<tr>
+<td>Gross margin (GAAP)</td>
+<td>10.0%</td>
+<td>36.4%</td>
+<td>47.8%</td>
+</tr>
+<tr>
+<td>Gross margin (non-GAAP)</td>
+<td>n/v</td>
+<td>~42%</td>
+<td>54%</td>
+</tr>
+<tr>
+<td>Operating margin (GAAP)</td>
+<td>−215.0%</td>
+<td>−93.8%</td>
+<td>−47.8%</td>
+</tr>
+<tr>
+<td>Net loss</td>
+<td>−374.11</td>
+<td>−97.05</td>
+<td>−60.38</td>
+</tr>
+<tr>
+<td>EPS diluted (GAAP)</td>
+<td>−10.10</td>
+<td>−2.08</td>
+<td>−1.07</td>
+</tr>
+<tr>
+<td>Adj. EBITDA</td>
+<td>n/v</td>
+<td>−41.0</td>
+<td>−12.0</td>
+</tr>
+<tr>
+<td>Free cash flow</td>
+<td>−140.9</td>
+<td>−37.5</td>
+<td>−64.9</td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>−137.9</td>
+<td>−33.7</td>
+<td>−40.0</td>
+</tr>
+<tr>
+<td>SBC ($M)</td>
+<td>57.73</td>
+<td>40.46</td>
+<td>40.82</td>
+</tr>
+<tr>
+<td>SBC % of revenue</td>
+<td>69.3%</td>
+<td>36.4%</td>
+<td>24.1%</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>n/v</td>
+<td>n/v</td>
+<td>$177M (book-to-bill 1.2x)</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: FY2025 10-K, <a href="https://www.sec.gov/Archives/edgar/data/1816581/000119312526085444/d78060dex991.htm">FY2025 results release</a> (2 Mar 2026), FY2024 10-K.</p>
+<h3 id="what-the-numbers-say">What the numbers say</h3>
+<ol>
+<li><strong>Revenue has compounded at 43% over three years</strong> ($83M → $111M → $169M → ~$225M) — genuinely rare in hardware. Fifteen consecutive quarters of product growth is an execution record, not luck.</li>
+<li><strong>Gross margin has stopped improving.</strong> 47.8% in FY2025 was royalty-inflated; the underlying 2026 run-rate is <strong>~42–43% GAAP / ~47% non-GAAP</strong>, flat year-on-year through a 50% revenue increase. There is <em>no</em> gross-margin operating leverage — the company says it is "committed" to a 35–40% long-term gross margin framework, which is below where it trades today and a tacit admission that mix is getting <em>worse</em>, not better, as cameras and systems grow.</li>
+<li><strong>All the leverage is in opex, and it is real.</strong> Q3 FY2026 GAAP opex $44.5M, +8.8% YoY against +50% revenue. FY2026 opex is guided +5–8%. This is why operating margin went from −61% to −33%.</li>
+<li><strong>The breakeven math is now specific.</strong> Adjusted EBITDA breakeven ≈ $66.6M/quarter at a 46.7% incremental margin — i.e. <strong>Q1 FY2027</strong>. GAAP operating breakeven ≈ $103M/quarter at 43% gross margin — i.e. <strong>~2028</strong>, and that is before the $46M/yr SBC burden. Investors who treat "adjusted EBITDA positive" as "profitable" are being sold a $0.63/share non-cash addback.</li>
+<li><strong>Cash conversion is poor and getting worse.</strong> Q3 FY2026 operating cash flow −$29.4M against a $14.2M net loss: a ~$15M working-capital drag from inventory (+$11.0M in 9M) and receivables, plus $5.7M capex. FCF −$35.0M in the quarter is the worst since Q4 FY2025's building purchase. Growth is consuming cash.</li>
+<li><strong>The FY2025 "record" was an accounting event.</strong> Q4 FY2025's +$11M adjusted EBITDA and +$4M GAAP net income exist because $16.1M of previously deferred royalties were recognised once the Hesai arbitration resolved. Absent that, FY2025 adjusted EBITDA was roughly −$23M and the company has never had a profitable quarter.</li>
+</ol>
+<hr />
+<h2 id="6-balance-sheet-dilution-risk">6. Balance sheet &amp; dilution risk</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>30 Sep 2026</th>
+<th>31 Dec 2025</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash &amp; equivalents</td>
+<td>$88.9M</td>
+<td>$67.4M</td>
+<td></td>
+</tr>
+<tr>
+<td>Short-term investments</td>
+<td>$330.9M</td>
+<td>$141.2M</td>
+<td></td>
+</tr>
+<tr>
+<td>Restricted cash</td>
+<td>$1.4M</td>
+<td>$2.6M</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Cash, equivalents, restricted cash &amp; ST investments</strong></td>
+<td><strong>$421.2M</strong></td>
+<td><strong>$211.2M</strong></td>
+<td>+$210M</td>
+</tr>
+<tr>
+<td>Total debt</td>
+<td>$15.4M</td>
+<td>$17.1M</td>
+<td><strong>Operating leases only. No funded debt, no convertibles.</strong></td>
+</tr>
+<tr>
+<td><strong>Net cash</strong></td>
+<td><strong>$404.4M</strong></td>
+<td><strong>$191.5M</strong></td>
+<td>$5.54/share; 16.5% of market cap</td>
+</tr>
+<tr>
+<td>Goodwill</td>
+<td>$38.5M</td>
+<td>—</td>
+<td>Stereolabs only</td>
+</tr>
+<tr>
+<td>Intangibles</td>
+<td>$30.8M</td>
+<td>$13.3M</td>
+<td>Amortising $7–8M/yr</td>
+</tr>
+<tr>
+<td>Total equity</td>
+<td>$561.3M</td>
+<td>$261.7M</td>
+<td>Book $7.69/share; P/B 4.35x</td>
+</tr>
+<tr>
+<td>Current ratio</td>
+<td>7.13x</td>
+<td>3.93x</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="runway">Runway</h3>
+<p>At the TTM free-cash burn of <strong>−$97.5M</strong> and $404.4M of net cash, runway is <strong>~4.1 years</strong> — but that understates the risk, because the burn is <em>rising</em> (Q3 FY2026 alone was −$35.0M as inventory and Rev8 tooling build) and because the 100,000-unit capacity expansion at Benchmark will consume capex through 2027. Management's claim that it will "not need additional capital to achieve our operating objectives" is credible only if adjusted EBITDA turns positive in Q1–Q2 2027 and working capital stops absorbing cash. <strong>I would treat that claim as a MANAGEMENT CLAIM, not a fact</strong> — this management team has raised equity in each of the last two years.</p>
+<h3 id="dilution-the-structural-problem">Dilution — the structural problem</h3>
+<table>
+<thead>
+<tr>
+<th>Facility</th>
+<th>Shares</th>
+<th>Avg price</th>
+<th>Gross</th>
+<th>Net</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Former ATM (12 May 2025)</td>
+<td>4,671,406</td>
+<td>$20.88</td>
+<td>$97.5M</td>
+<td>$95.6M</td>
+<td>Terminated May 2026, fully used</td>
+</tr>
+<tr>
+<td>New ATM (8 May 2026)</td>
+<td>3,649,000</td>
+<td>$27.40</td>
+<td>$100.0M</td>
+<td>$98.0M</td>
+<td><strong>Fully used, no remaining capacity</strong></td>
+</tr>
+<tr>
+<td>Underwritten offering (6 Jul 2026)</td>
+<td>3,621,876</td>
+<td>$55.22</td>
+<td>$200.0M</td>
+<td>$191.8M</td>
+<td>Over-allotment expired unexercised</td>
+</tr>
+<tr>
+<td>Stereolabs acquisition (4 Feb 2026)</td>
+<td>1,847,677</td>
+<td>$19.18</td>
+<td>—</td>
+<td>—</td>
+<td>660,005 subject to 4-year lock-up</td>
+</tr>
+<tr>
+<td><strong>Total, 18 months</strong></td>
+<td><strong>13.79M</strong></td>
+<td></td>
+<td><strong>~$398M</strong></td>
+<td><strong>~$385M</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Share count: 59.95M (30 Sep 2025) → 73.00M (30 Sep 2026) = +21.8%.</strong> Weighted-average diluted went 57.98M → 71.47M (+23.3%).</li>
+<li><strong>Authorised shares were doubled</strong> from 100M to 200M on 17 Jun 2026 (10-Q Note 8). With $421M of cash and a $2.4B market cap, the board has pre-authorised roughly 127M more shares. That is not a neutral act.</li>
+<li><strong>Amazon warrant:</strong> 3,290,094 shares at $50.30 (4.5% of shares out), expiring 4 Feb 2030; 3,225,731 already vested; vests further on up to $100M of Amazon purchases. The anti-dilution ratchet has already cut the strike from $50.71. This is both a potential 4.5% dilution and a <em>de facto</em> Amazon commercial relationship.</li>
+<li><strong>SBC:</strong> $46M/yr annualised = <strong>20% of revenue and 1.9% of market cap per year</strong>. There is no buyback offset.</li>
+<li><strong>Positive note on capital allocation:</strong> the three raises were priced at $20.88 → $27.40 → $55.22, i.e. each was done at a higher price than the last. Whatever else one says, management sold stock well.</li>
+</ul>
+<p><strong>Verdict on the balance sheet:</strong> strong enough that solvency is not the question. The question is <strong>how much of the equity the growth is bought with</strong>. At ~20% share growth per year, a shareholder needs ~20% annual market-cap growth simply to hold their per-share value flat.</p>
+<hr />
+<h2 id="7-valuation">7. Valuation</h2>
+<p><strong>Price $33.48 (13 Nov 2026 close).</strong> 73.00M shares; market cap <strong>$2.44B</strong>; net cash $404.4M; <strong>EV $2.04B</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>OUST</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV/Sales (TTM)</td>
+<td><strong>9.08x</strong></td>
+<td>$2.04B / $224.7M</td>
+</tr>
+<tr>
+<td>EV/Sales (FY2026E)</td>
+<td><strong>9.06x</strong></td>
+<td>$2.04B / $225.0M (guidance midpoint)</td>
+</tr>
+<tr>
+<td>EV/Sales (FY2027E)</td>
+<td><strong>6.81x</strong></td>
+<td>$2.04B / $299.5M (consensus)</td>
+</tr>
+<tr>
+<td>P/Sales (TTM)</td>
+<td>10.88x</td>
+<td></td>
+</tr>
+<tr>
+<td>EV/Gross profit (TTM)</td>
+<td><strong>19.6x</strong></td>
+<td>$2.04B / $104.1M</td>
+</tr>
+<tr>
+<td>EV/<strong>Product</strong> gross profit (TTM)</td>
+<td><strong>26.3x</strong></td>
+<td>$2.04B / $77.4M</td>
+</tr>
+<tr>
+<td>EV/adj. EBITDA</td>
+<td>n/m</td>
+<td>negative</td>
+</tr>
+<tr>
+<td>P/E (fwd, non-GAAP)</td>
+<td>n/m</td>
+<td>consensus adj. EPS −$0.34</td>
+</tr>
+<tr>
+<td>P/FCF</td>
+<td>n/m</td>
+<td>FCF −$97.5M TTM</td>
+</tr>
+<tr>
+<td>P/B</td>
+<td>4.35x</td>
+<td>Book $561.3M, $7.69/share</td>
+</tr>
+<tr>
+<td>FCF yield</td>
+<td>−4.0%</td>
+<td></td>
+</tr>
+<tr>
+<td>Net cash / market cap</td>
+<td><strong>16.5%</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="peer-comparison-all-data-13-nov-2026-stockanalysiscom">Peer comparison (all data 13 Nov 2026, stockanalysis.com)</h3>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Price</th>
+<th>Market cap</th>
+<th>EV</th>
+<th>EV/Sales</th>
+<th>Rev growth (TTM)</th>
+<th>Gross margin</th>
+<th>FCF margin</th>
+<th>52-wk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ouster (OUST)</strong></td>
+<td><strong>$33.48</strong></td>
+<td><strong>$2.44B</strong></td>
+<td><strong>$2.04B</strong></td>
+<td><strong>9.08x</strong></td>
+<td><strong>+63.7%</strong></td>
+<td><strong>46.3%</strong></td>
+<td><strong>−43.4%</strong></td>
+<td><strong>+37%</strong></td>
+</tr>
+<tr>
+<td>Hesai (HSAI)</td>
+<td>$14.42</td>
+<td>$2.26B</td>
+<td>$1.36B</td>
+<td>2.50x</td>
+<td>+31.4%</td>
+<td>40.4%</td>
+<td>−1.6%</td>
+<td>−33%</td>
+</tr>
+<tr>
+<td>RoboSense (2498.HK)</td>
+<td>HK$15.17</td>
+<td>HK$7.15B</td>
+<td>HK$4.87B</td>
+<td>1.94x</td>
+<td>n/v</td>
+<td>24.5%</td>
+<td>−30.1%</td>
+<td>−54%</td>
+</tr>
+<tr>
+<td>Aeva (AEVA)</td>
+<td>$10.58</td>
+<td>$0.74B</td>
+<td>$0.69B</td>
+<td>28.1x</td>
+<td>n/v</td>
+<td>31.2%</td>
+<td>n/m</td>
+<td>−6%</td>
+</tr>
+<tr>
+<td>Innoviz (INVZ)</td>
+<td>$0.17</td>
+<td>$0.05B</td>
+<td>$0.03B</td>
+<td>0.57x</td>
+<td>n/v</td>
+<td>−0.1%</td>
+<td>n/m</td>
+<td>−89%</td>
+</tr>
+<tr>
+<td>Luminar (LAZRQ)</td>
+<td>$0.018</td>
+<td>$0.002B</td>
+<td>$0.10B</td>
+<td>n/m</td>
+<td>n/m</td>
+<td>−118%</td>
+<td>n/m</td>
+<td>−99.7%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading the table.</strong> Ouster is the fastest grower and has the second-best gross margin in the group, and it is the only one with a genuinely fortress balance sheet relative to its burn. But it trades at <strong>3.6x Hesai's EV/sales</strong> while being <strong>2.4x smaller</strong>, and at <strong>4.7x RoboSense's</strong>. The premium is defensible on three grounds — (i) 2x the growth rate, (ii) non-Chinese supply chain with NDAA/BABA access to US defence, (iii) 6pts higher gross margin — but 9x sales for a company with a −43% FCF margin is pricing a lot of that in. At Hesai's 2.5x TTM sales, Ouster would be worth <strong>~$13.20/share</strong>; at 2.5x FY2027 sales, ~$15.80.</p>
+<h3 id="historical-multiple-range-own-history-ps-at-fiscal-year-end">Historical multiple range (own history, P/S at fiscal year-end)</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>P/S</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021</td>
+<td>26.6x</td>
+<td>SPAC-era peak</td>
+</tr>
+<tr>
+<td>FY2022</td>
+<td>3.9x</td>
+<td>Post-de-rating</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>3.8x</td>
+<td>Trough</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>5.5x</td>
+<td>Recovery begins</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>7.7x</td>
+<td>+52% revenue year</td>
+</tr>
+<tr>
+<td>Q1 FY2026</td>
+<td>6.2x</td>
+<td></td>
+</tr>
+<tr>
+<td>Q2 FY2026</td>
+<td><strong>19.4x</strong></td>
+<td>Peak — stock ~$55–63, July offering at $55.22</td>
+</tr>
+<tr>
+<td><strong>Now (13 Nov 2026)</strong></td>
+<td><strong>10.9x</strong></td>
+<td>$33.48</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OPINION:</strong> the stock is not at a bubble multiple, but it is at the <strong>top of its post-SPAC range excluding the Q2 FY2026 spike</strong>, and the July 2026 offering at $55.22 marked the high. The de-rating from $63.79 to $33.48 (−47%) has taken the multiple from 19x to 11x sales without any deterioration in the fundamentals — a reminder that this stock's price is driven by multiple, not by earnings revisions. A 9x sales multiple on a hardware company with flat gross margins requires continued 30%+ growth; any deceleration compounds badly.</p>
+<hr />
+<h2 id="8-catalysts-next-12-months">8. Catalysts (next 12 months)</h2>
+<table>
+<thead>
+<tr>
+<th>Date / window</th>
+<th>Catalyst</th>
+<th>What to watch</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Early Mar 2027</strong></td>
+<td>Q4 FY2026 results + <strong>FY2027 guidance</strong> (FY2025 was reported 2 Mar 2026)</td>
+<td>FY2027 revenue guide (consensus $299M); first adjusted-EBITDA-positive quarter; Rev8 unit count ("thousands" promised for Q4)</td>
+<td><strong>Very high</strong></td>
+</tr>
+<tr>
+<td>Q4 FY2026 – H1 FY2027</td>
+<td><strong>Adjusted EBITDA breakeven</strong></td>
+<td>Breakeven is ~$66.6M/quarter; Q1 2027 is the credible window</td>
+<td><strong>Very high</strong> — the whole "path to profitability" narrative</td>
+</tr>
+<tr>
+<td>Through FY2027</td>
+<td><strong>Rev8 volume ramp</strong> ("hundreds" Q3 → "thousands" Q4 → "tens of thousands by end FY2027")</td>
+<td>Actual units, not adjectives; gross margin through the ramp</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>End 2027</td>
+<td><strong>Benchmark 100,000-unit annual lidar capacity</strong> installed</td>
+<td>Capex spend, qualification, any slippage</td>
+<td>High</td>
+</tr>
+<tr>
+<td>18 Nov 2026 / 16 Dec 2026</td>
+<td>ROTH Technology Conference; Northland Growth Conference</td>
+<td>Any intra-quarter colour on Rev8 and Q4</td>
+<td>Low-medium</td>
+</tr>
+<tr>
+<td>Jan 2027</td>
+<td><strong>CES 2027</strong></td>
+<td>New SKUs, humanoid design wins, ZED Thor products</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Ongoing</td>
+<td><strong>BlueCity / DOT contract awards</strong></td>
+<td>Utah, Washington, Florida, Ontario; the 100-intersection expansion; Indra tolling rollout across global ETC projects</td>
+<td>Medium-high — proves software attach</td>
+</tr>
+<tr>
+<td>Ongoing</td>
+<td><strong>Defence</strong>: Rev8 Blue UAS certification; Forterra/Ukraine expansion; a US DoD programme of record</td>
+<td>Any contract with a dollar figure attached</td>
+<td><strong>High</strong> — the NDAA moat is the best asset</td>
+</tr>
+<tr>
+<td>8 Dec 2026</td>
+<td><strong>Hesai IPR appeal hearing</strong> (IPR2023-01421)</td>
+<td>Patent upheld or not — affects the royalty stream and the cross-licence leverage</td>
+<td>Low-medium</td>
+</tr>
+<tr>
+<td>H1 2027</td>
+<td><strong>Humanoid design wins</strong> (cameras + ZED Box)</td>
+<td>Named OEM; content per robot</td>
+<td>Medium — option value</td>
+</tr>
+<tr>
+<td>Any time</td>
+<td><strong>Another equity raise / new ATM</strong></td>
+<td>Dilution at 20%/yr already; a fourth facility would be read badly</td>
+<td>High (negative)</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>Index inclusion (S&amp;P SmallCap 600 / Russell reconstitution)</td>
+<td>Market cap $2.4B; float 70.8M</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Any time</td>
+<td><strong>M&amp;A</strong> — Ouster as target for a Tier-1 (Benchmark? Continental?) or defence prime</td>
+<td>Strategic value of NDAA-compliant lidar + cameras + compute</td>
+<td>Medium (speculative)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-risks-ranked-by-probability-impact">9. Risks (ranked by probability × impact)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Prob.</th>
+<th>Impact</th>
+<th>Score</th>
+<th>Evidence / comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Multiple compression</strong> (9x sales → 5–6x)</td>
+<td>High (60%)</td>
+<td>High</td>
+<td><strong>9</strong></td>
+<td>Trades 3.6x Hesai. A de-rate to 6x FY2027 sales = $23/share (−31%). No earnings floor to catch the stock.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Dilution</strong></td>
+<td>High (65%)</td>
+<td>Medium-high</td>
+<td><strong>8</strong></td>
+<td>+21.8% shares YoY; three facilities in 18 months; authorised capital doubled to 200M (Jun 2026); SBC 20% of revenue; FCF −$97M TTM.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Customer concentration</strong> — Customer E = 25% of 9M FY2026 revenue</td>
+<td>Medium (35% of a loss event)</td>
+<td>Very high</td>
+<td><strong>8</strong></td>
+<td>Unnamed, no long-term contract disclosed. Was 26% in 9M FY2025, so it is structural, not a one-off. Loss would take ~$55M/yr of revenue.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>China price competition in industrial/robotics</strong> (Hesai, RoboSense)</td>
+<td>High (70%)</td>
+<td>Medium</td>
+<td><strong>7</strong></td>
+<td>Hesai: $538M revenue, 40% GM, profitable, 2.5x EV/sales. RoboSense: $322M at 24.5% GM. Both can undercut on price; Ouster's answer is NDAA compliance and native colour, which do not help in Europe or Asia.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Gross margin stall / royalty cliff</strong></td>
+<td>High (60%)</td>
+<td>Medium</td>
+<td><strong>7</strong></td>
+<td>Royalties are 11.9% of TTM revenue at 100% margin and management says FY2025 will "likely exceed" future years. Losing $20M of royalty revenue at zero cost cuts blended GM by ~500bps and EBITDA by $20M.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Rev8 ramp execution</strong> (single-source Benchmark, 25% of purchases)</td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td><strong>6</strong></td>
+<td>Capacity must go from ~28k to 100k units/yr by end-2027. Any yield, tooling or supplier failure hits both revenue and margin.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Industrial / capex cycle</strong></td>
+<td>Medium (40%)</td>
+<td>Medium</td>
+<td><strong>6</strong></td>
+<td>Industrial automation led Q3 revenue. A manufacturing capex downturn hits AMR/forklift/agriculture demand directly; 2026's growth is not acyclical.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Cash burn forces a raise before breakeven</strong></td>
+<td>Medium (40%)</td>
+<td>Medium-high</td>
+<td><strong>6</strong></td>
+<td>Related to #2 but distinct: if Q1 2027 adjusted EBITDA does not turn, the "no additional capital" claim fails and the stock discounts a raise.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Technology substitution</strong> (camera-only, 4D radar, FMCW)</td>
+<td>Low near-term (15%), high long-term (50%)</td>
+<td>High</td>
+<td><strong>5</strong></td>
+<td>Luminar's bankruptcy is what happens when the auto lidar TAM does not arrive. Ouster has already retreated from auto, which limits this risk.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Tariffs / trade policy</strong></td>
+<td>Medium (45%)</td>
+<td>Low-medium</td>
+<td><strong>4</strong></td>
+<td>A $5.4M IEEPA duty refund flattered Q2 FY2026; the underlying exposure cuts both ways and is a live swing factor on gross margin.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Key-person risk (Angus Pacala)</strong></td>
+<td>Low (10%)</td>
+<td>High</td>
+<td><strong>3</strong></td>
+<td>Founder-CEO, inventor of the core technology, principal external voice. No disclosed succession.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Litigation / IP</strong></td>
+<td>Low (15%)</td>
+<td>Low-medium</td>
+<td><strong>3</strong></td>
+<td>Hesai IPR appeal 8 Dec 2026; three of four challenged patents were invalidated at the PTAB, which weakens the royalty negotiating position.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-ownership-sentiment">10. Ownership &amp; sentiment</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Date / source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Institutional ownership</td>
+<td><strong>52.17%</strong> of shares out</td>
+<td>stockanalysis, 13 Nov 2026</td>
+</tr>
+<tr>
+<td>Insider ownership</td>
+<td>2.96%</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>70.84M shares (97.0% of shares out)</td>
+<td>stockanalysis</td>
+</tr>
+<tr>
+<td><strong>Short interest</strong></td>
+<td><strong>6.34M shares = 8.68% of shares out, 8.95% of float, 2.67 days to cover</strong> (prior month 7.35M)</td>
+<td>stockanalysis, Nov 2026</td>
+</tr>
+<tr>
+<td>Analyst consensus</td>
+<td><strong>Strong Buy</strong> — 6 analysts (6 Strong Buy, 0 Buy, 0 Hold, 0 Sell)</td>
+<td>S&amp;P Global via stockanalysis</td>
+</tr>
+<tr>
+<td>Price target</td>
+<td><strong>Average $50.83; median $51.50; range $40–$60</strong></td>
+<td>same</td>
+</tr>
+<tr>
+<td>Recent actions</td>
+<td>Roth MKM $50→<strong>$75</strong> (4 Nov); Cantor Fitzgerald upgrade Neutral→<strong>Overweight, $45</strong> (4 Nov); Rosenblatt $53 (26 Aug); Northland $60 (7 Aug); Oppenheimer $57 (7 Aug)</td>
+<td>stockanalysis ratings page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note the inconsistency:</strong> Roth's 4 Nov PT of $75 is <em>above</em> the stated $40–$60 high/low range, so the S&amp;P poll has not yet absorbed it. If it had, the average would be ~$55. Treat the $50.83 average as stale. <strong>The sell side is uniformly bullish and has been raising targets into a stock that is down 47% from its July high</strong> — a classic pattern in high-beta names and not, by itself, evidence.</p>
+<h3 id="insider-activity-form-4s-1-may-13-nov-2026">Insider activity (Form 4s, 1 May – 13 Nov 2026)</h3>
+<ul>
+<li><strong>Open-market purchases: essentially none.</strong> One buy: director Virginia Boulet, <strong>1,658 shares for ~$42k at $25.16–25.35 on 12 May 2026</strong>. That is the entire insider buying in six months.</li>
+<li><strong>Sales: heavy and broad-based.</strong></li>
+<li><strong>CTO Mark Frichtl</strong> sold <strong>~600,000 shares in May 2026</strong> across three Form 4s at prices from $30.00 to $45.00 (~$22–23M), alongside option exercises at $2.13 and $14.22. This is the largest insider disposal and it came <em>before</em> the July offering at $55.22.</li>
+<li><strong>COO Darien Spencer</strong> sold 30,000 at $45.00 (5 Aug) and 12,808 at $33.96 (16 Sep).</li>
+<li><strong>CFO Ken Gianella</strong> sold 39,999 at $44.65–47.09 (19 Aug) and 15,686 at $33.96 (16 Sep).</li>
+<li><strong>CEO Angus Pacala</strong> sold 29,797 at $38.82 (16 Jun) and 30,385 at $33.96 (16 Sep) — consistent with sell-to-cover on RSU vesting rather than discretionary selling.</li>
+<li><strong>Directors:</strong> Skaggs 5,000 at $34.00 (10 Nov), Heystee 7,551 at $37.44 (12 Nov), plus earlier sales at $34.81 (May), $49.83 (Jul) and $44.12 (Oct).</li>
+<li><strong>Grants:</strong> annual director RSU grants of 4,725 shares each on 22 Jun 2026 — compensation, not conviction.</li>
+</ul>
+<p><strong>Read:</strong> the float is large and liquid (97% of shares out), short interest is elevated but not extreme at 8.7% — a very different setup from a squeeze candidate. The insider signal is <strong>unambiguously negative</strong>: one $42k buy against tens of millions of dollars of sales, including a ~$23M CTO disposal near the top. Sell-side euphoria plus insider distribution is a combination that warrants scepticism, not conviction.</p>
+<hr />
+<h2 id="11-technical-snapshot-13-nov-2026">11. Technical snapshot (13 Nov 2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price</td>
+<td>$33.48 (−8.52% on the day)</td>
+</tr>
+<tr>
+<td>50-day MA</td>
+<td>$35.61 — <strong>price 6.0% below</strong></td>
+</tr>
+<tr>
+<td>200-day MA</td>
+<td>$32.87 — <strong>price 1.9% above</strong></td>
+</tr>
+<tr>
+<td>52-week range</td>
+<td><strong>$16.40 – $63.79</strong> (−47.5% from high, +104% above low)</td>
+</tr>
+<tr>
+<td>RSI (14)</td>
+<td>48.4 — neutral</td>
+</tr>
+<tr>
+<td>Beta (5Y)</td>
+<td><strong>3.49</strong> — extreme</td>
+</tr>
+<tr>
+<td>20-day average volume</td>
+<td>2.85M shares (~$95M/day)</td>
+</tr>
+<tr>
+<td>52-week change</td>
+<td><strong>+37.2%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relative strength.</strong> Ouster is the clear relative winner among lidar peers over 52 weeks: <strong>OUST +37% vs Hesai −33%, RoboSense −54%, Aeva −6%, Innoviz −89%, Luminar −99.7%</strong>. That is exactly what a "winner-takes-most" narrative looks like, and it is part of why the multiple is where it is.</p>
+<p><strong>OPINION:</strong> the stock is in a <strong>corrective range between a rising 200-day ($32.87) and a falling 50-day ($35.61)</strong>, having failed at $63.79 in July. The 200-day is the line that matters — a weekly close below ~$32 would break the uptrend that has been in place since early 2025. A reclaim of $35.61 is the first sign of stabilisation; $45 (the August shelf) is the next real resistance. With a 3.49 beta and $95M of daily turnover, expect ±15% moves on no news.</p>
+<hr />
+<h2 id="12-scenarios-1224-months-to-end-fy2028">12. Scenarios (12–24 months, to end-FY2028)</h2>
+<p>All scenarios use ~78M shares (assuming continued modest issuance) and a net cash build from $404M. "Implied price" = (EV + net cash) / shares. Revenue, margin and multiple assumptions are <strong>mine</strong>, not guidance.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Bear (35%)</strong></th>
+<th><strong>Base (45%)</strong></th>
+<th><strong>Bull (20%)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assumptions</strong></td>
+<td>Rev8 ramp slips; cameras decelerate as the initial Stereolabs step-change annualises; industrial capex softens; Hesai/RoboSense take European robotics share; royalties fall to ~$8M; ongoing equity issuance</td>
+<td>Rev8 reaches ~40k units by FY2028 at ~$6,000 ASP; cameras double to ~$60M; software ~$30M; royalties fade to $10M; gross margin 43–45%; adjusted EBITDA positive from 2027 but GAAP still negative</td>
+<td>Rev8 exceeds 55k units; a US defence programme of record lands; humanoid camera+compute content scales; BlueCity reaches $60M+; gross margin 47%+; GAAP profitable in FY2028; multiple re-rates toward "platform"</td>
+</tr>
+<tr>
+<td>FY2028 revenue</td>
+<td>$320M</td>
+<td>$400M</td>
+<td>$460M</td>
+</tr>
+<tr>
+<td>Gross margin</td>
+<td>39%</td>
+<td>43%</td>
+<td>47%</td>
+</tr>
+<tr>
+<td>Adj. EBITDA margin</td>
+<td>2%</td>
+<td>9%</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>EV/Sales applied</td>
+<td>3.5x</td>
+<td>5.5x</td>
+<td>8.0x</td>
+</tr>
+<tr>
+<td>Implied EV</td>
+<td>$1.12B</td>
+<td>$2.20B</td>
+<td>$3.68B</td>
+</tr>
+<tr>
+<td>+ net cash</td>
+<td>$0.35B</td>
+<td>$0.45B</td>
+<td>$0.50B</td>
+</tr>
+<tr>
+<td><strong>Implied price</strong></td>
+<td><strong>$18.8</strong></td>
+<td><strong>$34.0</strong></td>
+<td><strong>$53.6</strong></td>
+</tr>
+<tr>
+<td>Upside / downside</td>
+<td><strong>−44%</strong></td>
+<td><strong>+1.5%</strong></td>
+<td><strong>+60%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Probability-weighted value: 0.35 × $18.8 + 0.45 × $34.0 + 0.20 × $53.6 = $32.6.</strong></p>
+<p><strong>That is ~3% below today's price of $33.48.</strong> The distribution is wide (−44% to +60%) but roughly symmetric around the quote.</p>
+<p><strong>Sanity checks on the multiple assumptions.</strong> 5.5x FY2028 sales for a 43%-gross-margin, 9%-EBITDA-margin hardware/software hybrid implies ~12.8x gross profit and ~61x EBITDA — generous for a company that will still be GAAP loss-making. I am paying for growth. Conversely 3.5x in the bear case is not a liquidation multiple: with net cash, the floor is closer to $12–15 than zero. The bear case does not require fraud or insolvency, only deceleration — which is what happened to every other name in this peer set.</p>
+<hr />
+<h2 id="13-physical-ai-scorecard">13. Physical AI scorecard</h2>
+<p>Weights are fixed across the watchlist for comparability: <strong>Purity 20% · Growth 15% · Profitability 15% · Balance sheet 10% · Moat 15% · Valuation 15% · Management/execution 10%.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1–10)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical-AI purity</strong></td>
+<td><strong>9</strong></td>
+<td>~97% of revenue is physical-AI (88% shipped sensors/cameras/compute, 12% lidar patent royalties). There is no legacy business to strip out. The only knock: ~20% of revenue is fixed infrastructure (traffic/security) where the "action" is an alert or a signal phase, not a moving machine.</td>
+</tr>
+<tr>
+<td><strong>Growth</strong></td>
+<td><strong>8</strong></td>
+<td>+50% YoY, 15 straight quarters, FY2026 +48% ex-royalties, consensus +35% in FY2027. Not a 10 because lidar <em>units</em> are roughly flat YoY and a material slice of growth is the Stereolabs acquisition, not organic volume.</td>
+</tr>
+<tr>
+<td><strong>Profitability</strong></td>
+<td><strong>3</strong></td>
+<td>GAAP operating margin −32.5%, net margin −23.9%, FCF margin −59% in Q3. Adjusted EBITDA −$3.4M is close to breakeven — but that metric excludes $46M/yr of SBC (19% of revenue). Product gross margin is 39%.</td>
+</tr>
+<tr>
+<td><strong>Balance sheet</strong></td>
+<td><strong>8</strong></td>
+<td>$404M net cash, no funded debt, 7.1x current ratio, 4.1 years of runway. Docked two points for a demonstrated willingness to issue 20% of the share count annually.</td>
+</tr>
+<tr>
+<td><strong>Moat</strong></td>
+<td><strong>6</strong></td>
+<td>NDAA/BABA/Blue UAS compliance is a genuinely durable regulatory moat in US defence procurement; the digital SPAD/VCSEL architecture and native colour are real. But switching costs are low, three of four patents were invalidated at the PTAB, and Chinese competitors operate at 2–4x the volume with a 3.6x cheaper multiple.</td>
+</tr>
+<tr>
+<td><strong>Valuation</strong></td>
+<td><strong>3</strong></td>
+<td>9.1x EV/sales, 6.8x FY2027 sales, 26.3x product gross profit, negative FCF, 3.6x Hesai's multiple. Not a zero — the 16.5% net-cash cushion and 35% growth are worth something — but the price already assumes the bull case executes.</td>
+</tr>
+<tr>
+<td><strong>Management / execution</strong></td>
+<td><strong>7</strong></td>
+<td>Founder-CEO who invented the technology; 15 consecutive growth quarters; opex discipline (+5–8% against +48% revenue); a well-timed, sensibly-priced acquisition; three equity raises each at a higher price than the last. Docked for the dilution record and for a "no additional capital needed" claim that has not yet survived a full cycle.</td>
+</tr>
+<tr>
+<td><strong>Weighted total</strong></td>
+<td><strong>6.30 / 10</strong></td>
+<td>1.80 + 1.20 + 0.45 + 0.80 + 0.90 + 0.45 + 0.70 = <strong>6.30</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>The scorecard measures Physical-AI quality and valuation support, not expected 12-month return. Ouster scores like what it is: an excellent small Physical-AI franchise at a price that already reflects the excellence.</em></p>
+<hr />
+<p><strong>Normalised score: 63/100</strong> (6.30/10 weighted on the scorecard above).</p>
+<hr />
+<h2 id="14-what-would-change-my-mind">14. What would change my mind</h2>
+<p><strong>Bullish signals (would move me to Buy):</strong>
+1. <strong>Two consecutive quarters of positive adjusted EBITDA <em>and</em> positive operating cash flow</strong> — Q4 FY2026 and Q1 FY2027 — without a working-capital build. That would prove the model scales and retire the dilution risk.
+2. <strong>Lidar units above 10,000/quarter with Rev8 more than half the mix and gross margin ≥47% non-GAAP.</strong> This is the specific test of whether Rev8 is a genuine step-up in value (native colour at a premium) or just a product cycle that dilutes margin.
+3. <strong>A named US defence programme of record, or a Tier-1/OEM design win, worth &gt;$50M</strong> — the NDAA/BABA moat converted into contracted dollars. This is the highest-quality version of the bull case and the one the market is not pricing.
+4. <strong>BlueCity/Gemini disclosed at &gt;$50M annualised</strong> — proof that the software attach is real and that revenue can become recurring rather than lumpy.
+5. <strong>A price below ~$22–24</strong> (≈6x FY2027 sales, ≈18x product gross profit) with the growth thesis intact. Cheapness alone is not a thesis, but at 6x sales the risk/reward inverts.</p>
+<p><strong>Bearish signals (would move me to Sell):</strong>
+1. <strong>Gross margin below 40% GAAP for two consecutive quarters</strong> as Rev8 and cameras ramp — proof that mix is structurally dilutive and the 35–40% framework is a ceiling, not a floor.
+2. <strong>A fourth equity facility (new ATM or offering) before adjusted EBITDA turns positive</strong> — the "no additional capital" claim fails, and 20%/yr dilution continues into a de-rating.
+3. <strong>Customer E declining below 20% of revenue without replacement</strong> — the concentration risk materialising in the worst way.
+4. <strong>Rev8 shipments below "thousands" in Q4 FY2026</strong>, or the 100k-unit Benchmark capacity slipping past 2027 — the ramp is the whole 2027 story.
+5. <strong>Royalty revenue falling below $2M/quarter while gross margin does not improve</strong> — confirms that the 2025–26 margin profile was an artefact.</p>
+<hr />
+<h3 id="entry-zones-invalidation-and-position-size">Entry zones, invalidation and position size</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Price</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggressive</td>
+<td>$33–34</td>
+<td>At the 200-day ($32.87); ~8.4x FY2027E sales</td>
+</tr>
+<tr>
+<td>Ideal</td>
+<td>$29–31</td>
+<td>7.4–7.9x FY2027E sales</td>
+</tr>
+<tr>
+<td>Margin of safety</td>
+<td>$24–26</td>
+<td>6.1–6.6x FY2027E sales; near bear value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invalidation:</strong> a weekly close below $28 (below the 200-day and the August low) or Rev8 slipping out of FY2028. <strong>Size:</strong> 1–1.5%; high beta (3.49) and a 24.8% short interest in the peer set.</p>
+<hr />
+<h2 id="15-sources">15. Sources</h2>
+<p>All accessed 13 November 2026 unless noted.</p>
+<ol>
+<li>Ouster, Inc., <strong>Q3 FY2026 earnings release</strong> (3 Nov 2026), SEC 8-K Ex-99.1 — https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm</li>
+<li>Ouster, Inc., <strong>Form 10-Q for the quarter ended 30 Sep 2026</strong> (filed 3 Nov 2026) — https://www.sec.gov/Archives/edgar/data/1816581/000162828026069640/oust-20260930.htm</li>
+<li>Ouster, Inc., <strong>Form 10-K for FY2025</strong> (filed 2 Mar 2026) — https://www.sec.gov/Archives/edgar/data/1816581/000162828026013313/oust-20251231.htm</li>
+<li>Ouster, Inc., <strong>Q4 &amp; FY2025 earnings release</strong> (2 Mar 2026), SEC 8-K Ex-99.1 — https://www.sec.gov/Archives/edgar/data/1816581/000119312526085444/d78060dex991.htm</li>
+<li>Ouster, Inc., <strong>Form 10-Q for the quarter ended 30 Sep 2025</strong> (filed 5 Nov 2025) — https://www.sec.gov/Archives/edgar/data/1816581/000162828025049640/oust-20250930.htm</li>
+<li>Ouster, Inc., <strong>Form 10-Q for the quarter ended 30 Sep 2024</strong> (filed 8 Nov 2024) — https://www.sec.gov/Archives/edgar/data/1816581/000162828024046736/oust-20240930.htm</li>
+<li>Ouster, Inc., <strong>Form 10-K for FY2024</strong> (filed 21 Mar 2025) — https://www.sec.gov/Archives/edgar/data/1816581/000162828025014318/oust-20241231.htm</li>
+<li>Ouster <strong>Q3 FY2026 earnings call transcript</strong> (3 Nov 2026) — https://stockanalysis.com/stocks/oust/transcripts/726846-q3-2026/</li>
+<li>Ouster <strong>Form 4 filings</strong>, 1 May – 13 Nov 2026, SEC EDGAR CIK 0001816581 (Frichtl, Spencer, Gianella, Pacala, Jacquemet, Chung, Skaggs, Heystee, Boulet, Tewksbury) — parsed from https://data.sec.gov/submissions/CIK0001816581.json</li>
+<li>Ouster, Inc., <strong>SEC submissions index</strong> — https://data.sec.gov/submissions/CIK0001816581.json</li>
+<li>StockAnalysis.com — <strong>OUST statistics</strong> (price, market cap, EV, short interest, moving averages, beta) — https://stockanalysis.com/stocks/oust/statistics/</li>
+<li>StockAnalysis.com — <strong>OUST quarterly financials</strong> — https://stockanalysis.com/stocks/oust/financials/?p=quarterly</li>
+<li>StockAnalysis.com — <strong>OUST annual financials</strong> — https://stockanalysis.com/stocks/oust/financials/</li>
+<li>StockAnalysis.com — <strong>OUST analyst forecast &amp; ratings</strong> — https://stockanalysis.com/stocks/oust/forecast/ ; https://stockanalysis.com/stocks/oust/ratings/</li>
+<li>StockAnalysis.com — <strong>OUST revenue history &amp; segment breakdown</strong> — https://stockanalysis.com/stocks/oust/revenue/</li>
+<li>StockAnalysis.com — <strong>peer statistics</strong>: Hesai (HSAI), RoboSense (HKG:2498), Aeva (AEVA), Innoviz (INVZ), Luminar (LAZRQ) — https://stockanalysis.com/stocks/hsai/statistics/ etc.</li>
+<li>Business Wire — <strong>"Ouster Announces Results for Third Quarter 2026"</strong> (3 Nov 2026) — https://www.businesswire.com/news/home/20261103164281/en/Ouster-Announces-Results-for-Third-Quarter-2026/</li>
+<li>Business Wire — <strong>"Indra Selects Ouster's Digital Lidar for Its Global Electronic Toll Collection Projects"</strong> (10 Nov 2026) — https://www.businesswire.com/news/home/20261110036886/en/</li>
+<li>Business Wire — <strong>"Stereolabs Launches ZED Box 2 Series for Physical AI and Vision in Production Robots"</strong> (27 Oct 2026) — https://www.businesswire.com/news/home/20261027977847/en/</li>
+<li>Business Wire — <strong>"Ouster Sensors Play Key Role in Forterra's Lancer Completing 1,426 Missions and 88 Casualty Evacuation Operations in Ukraine"</strong> (21 Oct 2026) — https://www.businesswire.com/news/home/20261021344872/en/</li>
+<li>Business Wire — <strong>"Ouster Raises the Bar on High-Altitude Drone Mapping… REV8 OS1 Max"</strong> (14 Sep 2026) — https://www.businesswire.com/news/home/20260914891265/en/</li>
+<li>The Robot Report — <strong>"Ouster releases REV8 OS sensor family with native-color lidar"</strong> (4 May 2026).</li>
+<li>TipRanks / TheFly — <strong>"Ouster upgraded to Overweight at Cantor Fitzgerald"</strong> and <strong>"Ouster price target raised to $75 from $50 at Roth"</strong> (4 Nov 2026).</li>
+<li>Yahoo Finance — <strong>"Ouster (OUST) Stock Still Looks Overvalued Despite Ukraine Defense Missions"</strong> (22 Oct 2026) — bearish counterpoint; headline verified via Google News, full text not read.</li>
+</ol>
+<h3 id="verification-flags">Verification flags</h3>
+<ul>
+<li><strong>Revenue by vertical (§2) is my estimate, not company disclosure.</strong> Ouster reports one segment and gives only ordinal guidance ("industrial led, robotics second"). The 40/35/20/5 split is built from management commentary and named customers and should be treated as ±10 points.</li>
+<li><strong>The royalty counterparty is inferred to be Hesai.</strong> The 10-Q states the royalties come from "long-term IP license agreements primarily in the Asia and Pacific region" and separately discloses that the Velodyne–Hesai arbitration requires Hesai to pay royalties. The link is strong but Ouster does not name the counterparty. <strong>High-confidence inference, not fact.</strong></li>
+<li><strong>FY2029 revenue mix (§3) is my model.</strong> Ouster has published no multi-year revenue outlook beyond a "long-term financial framework" of 35–40% gross margin.</li>
+<li><strong>Adjusted EBITDA for Q1–Q2 FY2025 and FY2023 is marked n/v</strong> rather than estimated. Q1 FY2026 adj. EBITDA is derived by subtraction from the 9M total and Q2/Q3.</li>
+<li><strong>The analyst average PT ($50.83) appears stale</strong> — it excludes Roth's 4 Nov raise to $75, which sits above the stated $60 high.</li>
+<li><strong>SBC for Q1 FY2026 ($7.49M) and Q4 FY2025 ($7.27M) is derived</strong> by subtracting reported 9M figures from full-year totals, not read directly from a quarterly statement.</li>
+<li><strong>Customer E is not named in any filing.</strong> Its 25% revenue share is a disclosed fact; its identity is unknown.</li>
+<li><strong>No revenue is attributed to space</strong> — Ouster has no disclosed space product or customer.</li>
+</ul>
+<p><em>This is research, not financial advice. No position-sizing recommendations are made.</em></p>
+</div>
+</body></html>

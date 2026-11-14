@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DND · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>DND.TO · 2026-11-09</span></div>
+<div class="wrap">
+<h1 id="dye-durham-limited-tsx-dnd-equity-as-an-option-on-a-leveraged-turnaround">Dye &amp; Durham Limited (TSX: DND) — Equity as an Option on a Leveraged Turnaround</h1>
+<p><strong>Report date:</strong> 9 November 2026 · <strong>Balance date:</strong> 30 June 2026 (audited) · <strong>Price:</strong> C$1.62 (TSX close, 6 Nov 2026)
+<strong>All figures C$ millions unless stated.</strong> Number convention: US (1,242.4; 48.4%). Model: <code>model_DND.py</code> (prints every table in §5–§10).</p>
+<p><strong>Evidence tags:</strong> [F] primary filing (audited FS, MD&amp;A, AIF) · [C] company press release · [M] market data · [E] own estimate/model · [U] third-party reporting, not independently verified.</p>
+<hr />
+<h2 id="verdict">Verdict</h2>
+<p><strong>Neutral. Central value C$1.60 (price C$1.62, −1.5%).</strong> Bear C$0.00 · Base C$1.10 · Bull C$7.70, probabilities 45/40/15.</p>
+<p>The equity is not a claim on earnings; it is a 2.2-year call option on enterprise value, struck at 6.25x EBITDA. At C$1.62 the market capitalisation is C$108.8M against C$1,351M of enterprise value — the shares are 8.0% of the capital structure. Every turn of EBITDA multiple is worth roughly C$3 per share, and 0.5x of multiple compression is worth the entire market cap. The option is roughly fairly priced today: the 6.8x the market pays is 0.55x above the level at which shareholders are wiped out.</p>
+<p>What the option needs to pay off is not heroics, but it is not in the current numbers either: EBITDA back above C$215M (from C$198.8M) <em>and</em> a re-rating to 8x, or a sale at that level. What kills it is a multiple of 5.5x or a covenant amendment that pulls the lenders into the room.</p>
+<hr />
+<h2 id="key-numbers-all-verified">Key numbers (all verified)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>FY2026</th>
+<th>FY2025</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>410.7</td>
+<td>440.7</td>
+<td>−6.8% (−6% ex-Credas)</td>
+</tr>
+<tr>
+<td>Adjusted EBITDA</td>
+<td>198.8</td>
+<td>232.8</td>
+<td>−14.6% (−14% ex-Credas)</td>
+</tr>
+<tr>
+<td>Adjusted EBITDA margin</td>
+<td>48.4%</td>
+<td>52.8%</td>
+<td>−4.4 pts</td>
+</tr>
+<tr>
+<td>Net loss (audited statements)</td>
+<td>(38.5)</td>
+<td>(88.0)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>153.4</td>
+<td>148.2</td>
+<td>+3.5%</td>
+</tr>
+<tr>
+<td>Cash interest paid</td>
+<td>(117.3)</td>
+<td>(122.4)</td>
+<td>−4.2%</td>
+</tr>
+<tr>
+<td>FCF after interest, capex and leases</td>
+<td><strong>8.8</strong></td>
+<td>(1.1) [E]</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FCF after legacy M&amp;A holdbacks</td>
+<td><strong>(26.7)</strong></td>
+<td>(47.1) [E]</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Total debt (incl. converts)</td>
+<td>1,283.8</td>
+<td>1,586.9</td>
+<td>−19.1%</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td>1,242.4</td>
+<td>1,358.8¹</td>
+<td>−8.6%</td>
+</tr>
+<tr>
+<td>First-lien net leverage (covenant basis)</td>
+<td>5.17x</td>
+<td>n/a</td>
+<td>limit 5.80x</td>
+</tr>
+</tbody>
+</table>
+<p>¹ Including the C$185.0M of restricted investments held against the original converts, which were liquidated during FY26. Note: the 29 September release also shows a C$43.3M net loss in its detailed statement-of-operations table; the audited statements, the release's own key-metrics table and the MD&amp;A all show C$38.5M (§3).</p>
+<table>
+<thead>
+<tr>
+<th>Market</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price / shares / market cap</td>
+<td>C$1.62 / 67.18M / C$108.8M</td>
+</tr>
+<tr>
+<td>52-week range</td>
+<td>C$0.45 – C$5.40</td>
+</tr>
+<tr>
+<td>Enterprise value (mcap + net debt)</td>
+<td>C$1,351.2M</td>
+</tr>
+<tr>
+<td>EV / FY26 adjusted EBITDA</td>
+<td><strong>6.80x</strong></td>
+</tr>
+<tr>
+<td>Breakeven multiple (equity = 0)</td>
+<td><strong>6.25x</strong></td>
+</tr>
+<tr>
+<td>Sell-side targets</td>
+<td>BMO C$1.25 · Raymond James C$1.75 · CIBC C$2.00; consensus C$1.67 (Hold) [M]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="executive-summary">Executive summary</h2>
+<ol>
+<li><strong>The balance sheet is the company.</strong> C$1,283.8M of debt and converts sit above C$198.8M of EBITDA. Cash interest of C$117.3M consumes 59% of EBITDA and 76% of operating cash flow. Interest cover is 1.69x; after capex it is 1.52x.</li>
+<li><strong>Deleveraging in FY26 was an asset sale, not cash generation.</strong> Net debt fell C$116.4M; the Credas disposal contributed C$142.1M net. Operations, after interest, capex, leases and C$35.5M of legacy acquisition holdbacks, were C$26.7M cash-negative. The tie is exact to within C$1.0M (§6).</li>
+<li><strong>The covenant is no longer theoretical.</strong> The 5.80x first-lien test only applies when revolver drawings exceed 35% of the C$105M facility (C$36.75M). At 30 June drawings were C$29.5M (28.1%); after year-end the company drew a further C$31.0M, taking drawings to C$60.5M (57.6%). <strong>The covenant is live at the 30 September 2026 test date</strong> — the quarter reported in tomorrow's print — and the company says it is holding the cash.</li>
+<li><strong>Covenant headroom is thinner than the 5.17x headline implies.</strong> Back-solving the ratio gives a covenant EBITDA of C$220.1M — 10.8% above reported adjusted EBITDA, consistent with the C$19.9M of run-rate cost savings the credit agreement allows as an add-back. A 10.9% fall in covenant EBITDA breaches 5.80x. The business fell 14.6% last year.</li>
+<li><strong>The accounting is not yet clean.</strong> FY26 carries a material weakness in internal controls (disclosed with the Q4 print), a C$32.5M restatement of Q3 FY26 net income booked through Q4, a clean but going-concern-flagged audit (the auditor named "preparation on a going concern basis" as a key audit matter), and a C$1,061.5M goodwill balance that was tested twice because book value exceeded market cap. The auditor's opinion is unmodified; the process around it is not.</li>
+</ol>
+<h2 id="1-what-the-brief-gets-right-and-what-needs-correcting">1. What the brief gets right, and what needs correcting</h2>
+<p>The framing in the originating brief — "not a legal-software compounder; a leveraged turnaround where the equity is a small slice on top of a large debt stack" — is correct and is the right lens. Twelve of its factual premises check out against the filings. Two are wrong, four need qualification, and two omissions change the risk picture materially.</p>
+<table>
+<thead>
+<tr>
+<th>Claim in the brief</th>
+<th>Status</th>
+<th>Verified position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY26 revenue C$410.7M, −7%</td>
+<td>✅</td>
+<td>410.677 vs 440.730; −6% excluding Credas [F]</td>
+</tr>
+<tr>
+<td>Adjusted EBITDA C$198.8M, −15%, margin ~48% vs ~53%</td>
+<td>✅</td>
+<td>198.753; margin 48.4% vs 52.8% [F]</td>
+</tr>
+<tr>
+<td>Q4 revenue +4% and EBITDA +18% ex-Credas</td>
+<td>✅</td>
+<td>Revenue 104.171 (−1%; +3.5M/+4% ex-Credas); EBITDA 55.099 (+15%; +18% ex-Credas) [F]</td>
+</tr>
+<tr>
+<td>"Operating cash flow C$65.6M, up 15%"</td>
+<td>❌</td>
+<td>That is <strong>Q4</strong> (65.175, +14.7%). FY26 OCF was <strong>C$153.4M, +3.5%</strong> [F]</td>
+</tr>
+<tr>
+<td>"Start from operating cash flow (C$153M in FY26)"</td>
+<td>✅</td>
+<td>Correct — the two figures in the brief are different periods, not alternatives</td>
+</tr>
+<tr>
+<td>First-lien net leverage ~5.17x</td>
+<td>✅</td>
+<td>5.17x at 30 June; covenant max 5.80x [F]</td>
+</tr>
+<tr>
+<td>Moody's cut to Caa1 from B3 in June</td>
+<td>✅</td>
+<td>25 June 2026 [U]; S&amp;P cut to <strong>CCC+ from B−</strong> on 12 June 2026 [U] — the brief omits this</td>
+</tr>
+<tr>
+<td>Lenders hired Houlihan Lokey</td>
+<td>✅</td>
+<td>Bloomberg, 27 July 2026 [U]</td>
+</tr>
+<tr>
+<td>Standstill with Plantro/EdgePoint, ~36%, until September 2027, litigation dismissed</td>
+<td>✅</td>
+<td>Support agreements dated 5 Nov 2026 [C]</td>
+</tr>
+<tr>
+<td>Raymond James target C$1.75</td>
+<td>✅</td>
+<td>But it is a <strong>Hold</strong>, cut from C$4.00 on 1 Oct, and sits <em>above</em> the C$1.62 price [M]</td>
+</tr>
+<tr>
+<td>"Shares fell 14.7% after the Q4 results"</td>
+<td>❌</td>
+<td>The 29 Sep print sent the stock <strong>+144%</strong> (C$0.475 → C$1.16, 4.1M shares). It gave back 13.8% the next session, to C$1.00, after the call and the material-weakness disclosure. From the 28 Sep low the stock is <strong>+241%</strong> [M]</td>
+</tr>
+<tr>
+<td>Net debt ~C$1.25B (C$1.28B debt − C$35M cash)</td>
+<td>⚠️</td>
+<td>Debt 1,283.8 ✅; cash is <strong>C$41.4M</strong>, so net debt is <strong>C$1,242.4M</strong> [F]</td>
+</tr>
+<tr>
+<td>~67M shares</td>
+<td>✅</td>
+<td>67.18M weighted average basic [F]</td>
+</tr>
+<tr>
+<td>Repaid C$185M converts; C$129.8M of Credas proceeds to debt</td>
+<td>✅</td>
+<td>185.0 principal; 30.0 + 62.2 + 37.6 = 129.8 exactly [F]</td>
+</tr>
+<tr>
+<td>Q4 opex ~C$49M flat vs Q3, revenue +C$13M</td>
+<td>✅</td>
+<td>C$49.1M vs ~C$49M (company: −2%); revenue 104.2 vs 91.2 [F]</td>
+</tr>
+<tr>
+<td>Q1 FY27 results 10 November 2026</td>
+<td>⚠️</td>
+<td>Vendor calendar (StockAnalysis "Est. Earnings"); <strong>no company notice located</strong> as of 9 Nov [M]</td>
+</tr>
+<tr>
+<td>Competition Bureau investigation status</td>
+<td>⚠️</td>
+<td><strong>Discontinued</strong> — the Commissioner informed the company the inquiry was discontinued with no further investigatory steps contemplated (announced early 2026; exact date not located) [U]</td>
+</tr>
+<tr>
+<td>"Lawyer Done" competitor</td>
+<td>⚠️</td>
+<td><strong>LawyerDoneDeal Corp (LDD)</strong>, per the AIF's competitor list [F]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two omissions that change the picture:</strong></p>
+<ul>
+<li><strong>Material weakness in ICFR.</strong> The FY26 MD&amp;A discloses that the CEO and CFO concluded internal control over financial reporting was <strong>not effective</strong> at 30 June 2026, and that the same weakness existed at 31 March 2026. This is what the market traded on 30 September, not the EBITDA line.</li>
+<li><strong>The covenant is springing, and it has sprung.</strong> The 5.80x test is only tested when revolver drawings exceed 35% of the facility. Post-year-end drawings are 57.6%. The 30 September test date is the one in tomorrow's print.</li>
+</ul>
+<p>Two further items the brief does not carry: the dividend was <strong>suspended indefinitely</strong> on 19 May 2026, and the <strong>C$160.4M face value</strong> of the 6.5% converts is carried at C$104.4M — the balance sheet shows 65 cents on the dollar of a claim that must be paid at par or converted.</p>
+<hr />
+<h2 id="2-business-model-revenue-mix-and-seasonality">2. Business model, revenue mix and seasonality</h2>
+<p>Dye &amp; Durham sells workflow software and transaction data to law firms and lenders. Two product lines, four reported geographies [F]:</p>
+<ul>
+<li><strong>Legal Software.</strong> <em>Legal practice management</em> (matter management, accounting, document automation) and <em>Data Insights &amp; Due Diligence</em> (corporate searches, land and property reports, entity management, due-diligence reports). This is the sticky, subscription-heavy core.</li>
+<li><strong>Financial Technology.</strong> Payments infrastructure (CANACT BillPay), digital mortgage processing, settlement and registry services for roughly 100 financial institutions in Canada and Australia. Infrastructure-like, contract-based, lower growth, high margin.</li>
+</ul>
+<p>Geographic mix (FY26 revenue): Canada 58%, UK &amp; Ireland 23%, Australia 17%, South Africa 2% [F].</p>
+<p><strong>The revenue is not one business with one risk.</strong> Conveyancing and search revenue is transactional and moves with Canadian real-estate volumes; practice management is recurring seats; financial technology is contracted with the large banks. The company last disclosed contracted annual recurring revenue (ARR) at <strong>C$136.7M as of Q4 FY2024</strong> — about 30% of that year's revenue — and has not updated it in the two years since, through a period in which revenue fell 9% [F, AIF; absence of an FY25/FY26 figure verified across the FY26 MD&amp;A and AIF]. Management describes the majority of revenue as earned "on a highly recurring transactional-fee basis", which is a definitional sleight of hand: a fee that recurs because the transaction recurs is not the same as a subscription. The practical consequence is that an investor cannot underwrite the "sticky franchise" claim with a disclosed retention metric — only with the segment revenue trend, which is negative in every region, and an ARR disclosure that stopped when the growth did.</p>
+<p><strong>Seasonality is real and is the timing risk for the covenant</strong> [F, MD&amp;A "Summary of Quarterly Results"]:</p>
+<table>
+<thead>
+<tr>
+<th>Quarter (fiscal)</th>
+<th>Calendar</th>
+<th>Revenue pattern</th>
+<th>Adj. EBITDA margin FY26</th>
+<th>FY25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 (Sep)</td>
+<td>Jul–Sep</td>
+<td>Peak (spring/summer conveyancing)</td>
+<td>46.6%</td>
+<td>58.0%</td>
+</tr>
+<tr>
+<td>Q2 (Dec)</td>
+<td>Oct–Dec</td>
+<td>Slow</td>
+<td>47.0%</td>
+<td>55.9%</td>
+</tr>
+<tr>
+<td>Q3 (Mar)</td>
+<td>Jan–Mar</td>
+<td>Trough (winter)</td>
+<td>47.0%</td>
+<td>51.1%</td>
+</tr>
+<tr>
+<td>Q4 (Jun)</td>
+<td>Apr–Jun</td>
+<td>Peak</td>
+<td><strong>52.9%</strong></td>
+<td>45.4%</td>
+</tr>
+</tbody>
+</table>
+<p>The company states plainly that conveyancing peaks in Q4 and Q1 and slows in Q2 and Q3. Two consequences: (i) the September and June quarters are when EBITDA — and therefore covenant headroom — is strongest; (ii) the March quarter is when a weak year shows up first. The margin path (58% → 56% → 51% → 45% in FY25; 47% → 47% → 47% → 53% in FY26) shows a business that lost 11 points of margin year-on-year in Q1 and regained 7.5 in Q4. That is a cost story, not yet a revenue story.</p>
+<h2 id="3-fy2026-results-a-cost-story-wearing-a-growth-costume">3. FY2026 results: a cost story wearing a growth costume</h2>
+<p>The full-year P&amp;L, audited [F]:</p>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>FY26</th>
+<th>FY25</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>410.7</td>
+<td>440.7</td>
+<td>−30.1</td>
+</tr>
+<tr>
+<td>Direct costs</td>
+<td>(33.4)</td>
+<td>(37.2)</td>
+<td>+3.7</td>
+</tr>
+<tr>
+<td>Technology &amp; operations</td>
+<td>(107.6)</td>
+<td>(105.0)</td>
+<td>−2.6</td>
+</tr>
+<tr>
+<td>General &amp; administrative</td>
+<td>(49.6)</td>
+<td>(47.3)</td>
+<td>−2.4</td>
+</tr>
+<tr>
+<td>Sales &amp; marketing</td>
+<td>(21.2)</td>
+<td>(18.5)</td>
+<td>−2.8</td>
+</tr>
+<tr>
+<td>Stock-based compensation</td>
+<td>(4.1)</td>
+<td>41.0</td>
+<td>−45.1</td>
+</tr>
+<tr>
+<td>Finance costs, net</td>
+<td>(147.9)</td>
+<td>(132.8)</td>
+<td>−15.1</td>
+</tr>
+<tr>
+<td>Amortisation, depreciation &amp; impairment</td>
+<td>(127.6)</td>
+<td>(177.6)</td>
+<td>+50.0</td>
+</tr>
+<tr>
+<td>Gain on disposal (Credas)</td>
+<td>81.5</td>
+<td>—</td>
+<td>+81.5</td>
+</tr>
+<tr>
+<td>Acquisition, restructuring &amp; other</td>
+<td>(49.7)</td>
+<td>(70.7)</td>
+<td>+21.0</td>
+</tr>
+<tr>
+<td>Loss before tax</td>
+<td>(49.1)</td>
+<td>(107.3)</td>
+<td>+58.2</td>
+</tr>
+<tr>
+<td>Income tax recovery</td>
+<td>5.8</td>
+<td>19.4</td>
+<td>−13.5</td>
+</tr>
+<tr>
+<td><strong>Net loss</strong></td>
+<td><strong>(38.5)</strong></td>
+<td><strong>(88.0)</strong></td>
+<td><strong>+49.5</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Three things sit inside that table and none of them is operational improvement:</p>
+<ul>
+<li><strong>The C$81.5M gain on the Credas disposal is the reason the net loss "narrowed 56%."</strong> Strip it out and the pre-tax loss is C$130.6M, worse than FY25's C$107.3M. The headline "loss narrows" is an asset-sale artefact.</li>
+<li><strong>The C$45.1M swing in stock-based compensation</strong> (a C$41.0M recovery in FY25 reversing to a C$4.1M expense) is an accounting reversal, not a cost increase. It is added back in both years' Adjusted EBITDA, so it does not distort the EBITDA comparison — but it does distort any net-income comparison.</li>
+<li><strong>Revenue fell in every region and the cost base did not fall enough.</strong> Technology and operations, G&amp;A and sales and marketing together rose C$7.7M (to C$178.5M) while direct costs fell C$3.7M — net operating costs up C$4.0M against a C$30.1M revenue decline. Management attributes the increase to "strategic reinvestments necessary to stabilize the business — labour, IT infrastructure, and lower capitalization rates in the first half as the Company temporarily shifted certain expenditures from capitalized projects to maintenance expense" [F]. That last clause matters: part of the FY26 opex increase is capitalised software that moved above the line. It flatters nothing, but it means the "cost savings" and the "reinvestment" are partly the same dollars moving between buckets.</li>
+</ul>
+<h3 id="the-quarter-that-changed-the-story">The quarter that changed the story</h3>
+<p>Q4 is the only period that supports the bull case, and it is genuinely better [F]:</p>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>Q4 FY26</th>
+<th>Q4 FY25</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>104.2</td>
+<td>105.2</td>
+<td>−1.0% (+4% ex-Credas)</td>
+</tr>
+<tr>
+<td>Direct + tech/ops + G&amp;A + S&amp;M</td>
+<td>49.1</td>
+<td>57.4</td>
+<td>−8.4 (−14.5%)</td>
+</tr>
+<tr>
+<td>Adjusted EBITDA</td>
+<td>55.1</td>
+<td>47.7</td>
+<td>+7.4 (+15%)</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>52.9%</td>
+<td>45.4%</td>
+<td>+7.5 pts</td>
+</tr>
+<tr>
+<td>Operating cash flow</td>
+<td>65.2</td>
+<td>56.8</td>
+<td>+8.4 (+14.7%)</td>
+</tr>
+</tbody>
+</table>
+<p>Revenue was flat-to-down; <strong>the entire C$7.4M of EBITDA improvement came from C$8.4M of cost reduction.</strong> That is a real achievement — it is the first quarter where the cost programme shows up in the margin — but it is not operating leverage on growth. The company's own framing ("operating costs flat at C$49M while revenue rose C$13M sequentially") is true quarter-on-quarter and misleading year-on-year: costs fell C$8.4M against a year-ago quarter in which revenue was C$1.0M higher.</p>
+<p>The FY26 cost programme delivered <strong>C$19.9M of annualised savings</strong>, ahead of the C$11.0M identified for FY26, with a further <strong>C$6.0–8.0M</strong> to be executed in FY27 for FY28 [F]. If all of the remaining savings land, the run-rate cost base falls another ~4% — roughly 2 points of margin, or C$7M of EBITDA. That is the entire organic EBITDA growth currently visible in the plan.</p>
+<h3 id="quarterly-series-restated">Quarterly series (restated)</h3>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>Q1 FY26</th>
+<th>Q2 FY26</th>
+<th>Q3 FY26</th>
+<th>Q4 FY26</th>
+<th>FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>108.3</td>
+<td>107.0</td>
+<td>91.2</td>
+<td>104.2</td>
+<td>410.7</td>
+</tr>
+<tr>
+<td>Adjusted EBITDA</td>
+<td>50.4</td>
+<td>50.4</td>
+<td>42.9</td>
+<td>55.1</td>
+<td>198.8</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>46.6%</td>
+<td>47.0%</td>
+<td>47.0%</td>
+<td>52.9%</td>
+<td>48.4%</td>
+</tr>
+<tr>
+<td>Net income (loss)</td>
+<td>(38.3)</td>
+<td>(21.8)</td>
+<td>41.4</td>
+<td>(19.9)</td>
+<td>(38.5)</td>
+</tr>
+</tbody>
+</table>
+<p>Q3's C$41.4M profit is the Credas gain; Q1's C$38.3M loss is the trough of the margin collapse. The four quarters sum to the annual figure on revenue and EBITDA, and the net income series reconciles to the audited C$38.5M loss — but only after the Q3 restatement described in §7.</p>
+<p><strong>One documentation error worth flagging now:</strong> the 29 September press release contains two different FY26 net losses. The key-metrics table says C$38.5M (EPS −C$0.57), matching the audited statements and the MD&A; the detailed "Consolidated Results of Operations" table says C$43.3M (EPS −C$0.64). The C$4.8M difference is an error in the detailed table, published in the same document that discloses a material weakness in internal control. It does not change cash flow or EBITDA. It does change how much weight a reader should put on the company's own arithmetic.</p>
+<h2 id="4-capital-structure-one-wall-three-doors-and-a-january-2029-trap">4. Capital structure: one wall, three doors, and a January 2029 trap</h2>
+<p>All balances are carrying values at 30 June 2026 [F, Note 12 and Note 14].</p>
+<table>
+<thead>
+<tr>
+<th>Tranche</th>
+<th>Face / commitment</th>
+<th>Carrying</th>
+<th>Coupon</th>
+<th>Maturity</th>
+<th>Rank</th>
+<th>FY26 cash interest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senior Secured 2029 Notes</td>
+<td>USD 555.0M (C$790.0M), USD 45.7M repaid</td>
+<td>731.2</td>
+<td>8.625% fixed</td>
+<td><strong>15 Apr 2029</strong></td>
+<td>First lien, pari passu</td>
+<td>63.0</td>
+</tr>
+<tr>
+<td>Term Loan B</td>
+<td>USD 350.0M (C$498.3M), USD 29.2M repaid</td>
+<td>418.4</td>
+<td>Term SOFR + adjustment + margin (floating)</td>
+<td>11 Apr 2031</td>
+<td>First lien, pari passu</td>
+<td>33.6</td>
+</tr>
+<tr>
+<td>New Revolving Facility</td>
+<td>C$105.0M</td>
+<td>29.8</td>
+<td>Term CORRA + margin</td>
+<td>11 Apr 2029</td>
+<td>First lien, pari passu</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td><strong>Senior secured total</strong></td>
+<td></td>
+<td><strong>1,179.4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>99.9</strong></td>
+</tr>
+<tr>
+<td>6.5% convertible debentures</td>
+<td><strong>C$160.4M notional</strong></td>
+<td>104.4 (fair value)</td>
+<td>6.5%</td>
+<td><strong>1 Nov 2028</strong></td>
+<td>Unsecured</td>
+<td>10.4</td>
+</tr>
+<tr>
+<td><strong>Total debt</strong></td>
+<td></td>
+<td><strong>1,283.8</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>117.3</strong>¹</td>
+</tr>
+</tbody>
+</table>
+<p>¹ Total cash interest per the cash-flow statement, including C$6.9M on the 3.75% original converts repaid during the year.</p>
+<p><strong>The dates are not what they look like.</strong> If the 2029 notes are not paid, extended, refinanced or replaced before maturity, <strong>the Term Loan B and the revolver each accelerate to 91 days before 15 April 2029 — approximately 14 January 2029</strong> [F, Note 12(a)]. The "2031 term loan" is therefore a 2029 obligation in disguise. Working backwards: the converts mature <strong>1 November 2028</strong>, the acceleration date is <strong>mid-January 2029</strong>, and the notes mature <strong>15 April 2029</strong>. The company has 26 months to refinance or sell, and its free cash flow after interest is roughly C$9M a year.</p>
+<p><strong>Priority.</strong> The notes, the TLB and the revolver share a first-ranking general security agreement over all present and after-acquired property. The converts are senior unsecured. There is no second-lien tranche and no off-balance-sheet financing [F].</p>
+<p><strong>Three measures of net debt, because the balance sheet hides one:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>C$M</th>
+<th>EV/EBITDA at C$1.62</th>
+<th>Breakeven multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. Financial net debt (debt − cash)</td>
+<td>1,242.4</td>
+<td>6.80x</td>
+<td>6.25x</td>
+</tr>
+<tr>
+<td>B. A + leases (13.8) + acquisition holdbacks (30.1)</td>
+<td>1,286.3</td>
+<td>7.02x</td>
+<td>6.47x</td>
+</tr>
+<tr>
+<td>C. B + converts at face rather than fair value (+56.0)</td>
+<td>1,342.3</td>
+<td>7.30x</td>
+<td>6.75x</td>
+</tr>
+</tbody>
+</table>
+<p>Measure C is the economically correct one for a solvent outcome: the converts are carried at C$104.4M, but the contractual claim is C$160.4M. If the company pays them in cash or refinances them at par, shareholders fund the difference; if they convert, shareholders fund it in dilution. The C$56.0M gap is C$0.83 per share — 51% of the current share price. Every per-share number in §10 uses measure A (consistent with the market convention and the brief), and the memo grid shows B.</p>
+<p><strong>The converts are the real dilution risk, and the brief does not carry it.</strong> At a C$1.62 conversion price the C$160.4M face would issue 99.0M new shares — <strong>+147%</strong>, taking the count to 166.2M. At C$2.00 it is +119%; at C$3.00, +80%. The strike is C$40.00, so this is not voluntary conversion — it is a negotiated exchange or a discounted refinancing in November 2028, both of which transfer value from common shareholders. The company's own model marks the converts at 65 cents on the dollar, which is a credit opinion embedded in its own accounts.</p>
+<p><strong>Reporting covenants were breached in form, waived in fact.</strong> FY26 began with the company late on its FY25 audited statements and its Q1 FY26 interim statements. It obtained waivers under the Senior Credit Agreement, paid consent fees to lenders, and paid an extra 25bp on the 2029 notes until the statements were delivered [F]. That episode is why the lenders now have advisers.</p>
+<h2 id="5-liquidity-and-covenant-headroom-the-test-that-just-switched-on">5. Liquidity and covenant headroom: the test that just switched on</h2>
+<p><strong>The covenant is a springing one, and it has sprung.</strong> The Senior Credit Agreement requires a consolidated first-lien net leverage ratio no higher than <strong>5.80x</strong> at each fiscal quarter-end — but only if revolver drawings have exceeded the "Specified Threshold", which the financial statements define as <strong>35% of the C$105.0M facility, or C$36.75M</strong> [F, Note 12(c)].</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Revolver drawn</th>
+<th>% of facility</th>
+<th>Covenant tested?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30 Jun 2026</td>
+<td>29.5</td>
+<td>28.1%</td>
+<td>No (below threshold)</td>
+</tr>
+<tr>
+<td>Post-year-end draw</td>
+<td>+31.0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>30 Sep 2026</td>
+<td><strong>60.5</strong> [E]</td>
+<td><strong>57.6%</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The MD&amp;A is explicit: the C$31.0M was drawn "given the timing of semi-annual payments on its debt", and the company "expects that the additional draw will be held in cash at the end of the three months ended September 30, 2026" [F]. In plain terms: <strong>the company borrowed on the revolver to make the October interest payment and is holding the proceeds so that net debt does not rise at the test date.</strong> That is a liquidity-management fact, not a growth decision, and it is the single most important thing to read in tomorrow's balance sheet.</p>
+<p><strong>Headroom is narrower than 5.17x versus 5.80x sounds.</strong> Back-solving the reported ratio gives the covenant EBITDA the lenders are actually using:</p>
+<ul>
+<li>Net first-lien debt = 1,179.4 − 41.4 = <strong>C$1,138.0M</strong></li>
+<li>Reported ratio 5.17x → <strong>covenant EBITDA = C$220.1M</strong></li>
+<li>Reported adjusted EBITDA = C$198.8M → the covenant definition is <strong>10.8% higher</strong>, consistent with the C$19.9M of run-rate cost savings added back (198.8 + 19.9 = 218.7)</li>
+</ul>
+<p>Consequences:</p>
+<ul>
+<li><strong>Breach point:</strong> covenant EBITDA of C$196.2M (1,138.0 ÷ 5.80). That is roughly <strong>C$176M of reported adjusted EBITDA — an 11.3% decline</strong> from FY26.</li>
+<li><strong>Debt capacity:</strong> C$138.7M of additional net first-lien debt before 5.80x, assuming EBITDA holds.</li>
+<li><strong>Context:</strong> adjusted EBITDA fell 14.6% in FY26 and 7.9% in FY25. One more year at the FY26 rate breaches the covenant. One year at half that rate does not.</li>
+</ul>
+<p><strong>Liquidity [E, from the FY26 balance sheet plus the post-year-end draw]:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>C$M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash at 30 Jun 2026</td>
+<td>41.4</td>
+</tr>
+<tr>
+<td>Revolver drawn post-year-end (held as cash)</td>
+<td>31.0</td>
+</tr>
+<tr>
+<td>Undrawn revolver (105.0 − 60.5)</td>
+<td>44.5</td>
+</tr>
+<tr>
+<td><strong>Total liquidity, before Q1 operating cash flow</strong></td>
+<td><strong>~116.9</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Against ~C$110M of annual cash interest, that is roughly one year of debt service with zero operating cash flow — and the revolver is now 58% drawn. A second C$31M draw to fund the April 2027 coupon would take utilisation to 87%, at which point the facility is effectively closed and the company is dependent on the sale process or an amendment.</p>
+<p><strong>Seasonality cuts both ways.</strong> Conveyancing peaks in the June and September quarters, so the 30 September test is the easiest of the year and the 31 March 2027 test is the hardest. A company that is compliant in Q1 and tight in Q3 is the normal pattern here — which is why one good September quarter (Q4 FY26 was June; Q1 FY27 is September) cannot be extrapolated.</p>
+<p><strong>What the lenders' adviser means.</strong> Bloomberg reported on 27 July 2026 that the lenders had retained Houlihan Lokey [U]. Advisers to a lender group are retained for one of three reasons: to negotiate an amendment (benign), to prepare for a liability-management exercise (dilutive), or to shop the debt (neutral for equity, bad for the multiple). The company has since disclosed a material weakness, missed consensus EPS by a wide margin, and drawn further on the revolver. None of that shortens the odds of the second outcome.</p>
+<h2 id="6-real-free-cash-flow-c88m-and-c267m-negative-after-the-legacy-bills">6. Real free cash flow: C$8.8M, and C$26.7M negative after the legacy bills</h2>
+<p>The company reports operating cash flow of C$153.4M and calls it strong. It is a real number, but it is before the two things that actually consume the cash: interest and the deferred consideration on the acquisitions that built the business.</p>
+<p><strong>The bridge, audited line items [F, cash-flow statement]; components rounded, exact FCF C$8.764M:</strong></p>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>FY26</th>
+<th>FY25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating cash flow</td>
+<td>153.4</td>
+<td>148.2</td>
+</tr>
+<tr>
+<td>Cash interest paid</td>
+<td>(117.3)</td>
+<td>(122.4)</td>
+</tr>
+<tr>
+<td>Capitalised software / intangibles</td>
+<td>(19.5)</td>
+<td>(16.3)</td>
+</tr>
+<tr>
+<td>Property &amp; equipment</td>
+<td>(0.9)</td>
+<td>(4.2)</td>
+</tr>
+<tr>
+<td>Lease payments</td>
+<td>(7.0)</td>
+<td>(6.4)</td>
+</tr>
+<tr>
+<td><strong>FCF after interest, capex and leases</strong></td>
+<td><strong>8.8</strong></td>
+<td><strong>(1.1)</strong></td>
+</tr>
+<tr>
+<td>Settlement of acquisition holdbacks &amp; contingent consideration</td>
+<td>(35.5)</td>
+<td>(46.0)</td>
+</tr>
+<tr>
+<td><strong>FCF after legacy M&amp;A obligations</strong></td>
+<td><strong>(26.7)</strong></td>
+<td><strong>(47.1)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Three observations:</p>
+<ol>
+<li><strong>Interest consumes 76% of operating cash flow.</strong> C$117.3M of C$153.4M. Interest cover on EBITDA is 1.69x; after capex it is 1.52x. For a business with a 48% EBITDA margin, that is a bond-like cash profile with equity volatility.</li>
+<li><strong>Operating cash flow is flattered by working capital and low cash taxes.</strong> Receivables fell C$27.4M (from 88.1 to 71.0), contributing most of a C$10.7M net working-capital release; cash taxes were only C$7.7M because the group is carrying losses [F]. Neither repeats indefinitely.</li>
+<li><strong>The holdbacks are not optional.</strong> C$30.1M remains on the balance sheet as current, and the FY26 payment was C$35.5M. These are contractual liabilities from the 2021–2024 acquisition programme, sitting in investing activities where they do not touch EBITDA or "operating" cash flow. They are the difference between a company that breaks even and one that burns.</li>
+</ol>
+<h3 id="where-the-deleveraging-actually-came-from">Where the deleveraging actually came from</h3>
+<p>This is the tie that decides the story [F, E]:</p>
+<table>
+<thead>
+<tr>
+<th>Change in net debt (C$M)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net debt 30 June 2025 (incl. C$185.0M restricted investments)</td>
+<td>1,358.8</td>
+</tr>
+<tr>
+<td>Credas net proceeds</td>
+<td>(142.1)</td>
+</tr>
+<tr>
+<td>FCF after interest, capex and leases</td>
+<td>(8.8)</td>
+</tr>
+<tr>
+<td>Legacy holdbacks paid</td>
+<td>35.5</td>
+</tr>
+<tr>
+<td>Other / working capital / FX</td>
+<td>(1.0)</td>
+</tr>
+<tr>
+<td><strong>Net debt 30 June 2026</strong></td>
+<td><strong>1,242.4</strong></td>
+</tr>
+<tr>
+<td><strong>Reduction</strong></td>
+<td><strong>116.4</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The entire C$116.4M reduction is the Credas sale less the cash the business consumed on its legacy obligations.</strong> Operations contributed C$8.8M and then took back C$35.5M. Without the disposal, net debt would have risen by roughly C$26M.</p>
+<p>Two supporting facts make the picture sharper:</p>
+<ul>
+<li><strong>The term-debt paydown was funded by the asset sale; the revolver was a swing line.</strong> Term debt and notes were repaid C$102.2M, of which C$99.8M came from the Credas proceeds. The revolver saw C$52.5M of draws and C$70.5M of repayments — a net C$18.0M reduction — so it was used for timing, not for deleveraging. The C$31.0M draw after year-end is the same pattern one quarter later [F].</li>
+<li><strong>The asset-sale prepayment was compulsory.</strong> The 2029 notes indenture required an excess-proceeds offer after the Credas disposal; the company ran it and announced the results on 12 March 2026 [C]. That is why the notes balance fell by C$62.2M rather than the cash being retained.</li>
+</ul>
+<p>At 0.65% of enterprise value, free cash flow is not a valuation input — it is a constraint. It cannot repay C$1.28B of debt, and at C$9M a year it repays 0.7% of the principal annually. <strong>Deleveraging from here requires either another asset sale, an EBITDA recovery, or a refinancing that lowers the cost of debt. The first is finite (the FS division is the remaining candidate), the second is not in the current numbers, and the third depends on the same EBITDA the equity depends on.</strong></p>
+<h2 id="7-quality-of-earnings-a-clean-opinion-around-an-unclean-process">7. Quality of earnings: a clean opinion around an unclean process</h2>
+<p>The FY26 audit opinion is <strong>unmodified</strong> — the financial statements present fairly, in all material respects, under IFRS [F]. The auditor signed in Toronto on 28 September 2026 (engagement partner Stephanie Lamont). That is the good news. Everything around the opinion is less comfortable.</p>
+<h3 id="the-accounting-record-in-sequence">The accounting record, in sequence</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2024</td>
+<td>Interim periods restated; FY2025 annual and Q1 2024/Q1 2025 interim statements refiled after a filing failure</td>
+<td>[F] reference in Note 18 to "delayed filing … for the three months ended September 30, 2025, and 2024"</td>
+</tr>
+<tr>
+<td>Nov–Dec 2025</td>
+<td>Failure-to-file cease trade order; company warns of potential default if statements not filed by 18 Dec</td>
+<td>[C][U]</td>
+</tr>
+<tr>
+<td>2 Feb 2026</td>
+<td>Financial statements filed; CTO revoked 6 Feb</td>
+<td>[C]</td>
+</tr>
+<tr>
+<td>29 Sep 2026</td>
+<td>Q3 FY26 restated: net income cut from C$66.0M to C$41.4M</td>
+<td>[F]</td>
+</tr>
+<tr>
+<td>29 Sep 2026</td>
+<td><strong>Material weakness in ICFR disclosed</strong> at 30 Jun 2026 and 31 Mar 2026</td>
+<td>[F]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Q3 correction.</strong> A C$29.9M stock-based compensation recovery was reversed — it had been recorded on vested options of former employees that were forfeited or expired — plus C$2.6M of finance costs relating to the convertible-debenture credit-risk remeasurement and a settlement loss on the TLB/notes prepayments. Net effect: Q3 net income down C$24.6M to C$41.4M, with the offsetting entries landing in Q4 [F]. Revenue, operating cash flow and Adjusted EBITDA were unaffected.</p>
+<p><strong>The material weakness.</strong> The CEO and CFO concluded that internal control over financial reporting was <strong>not effective</strong> at 30 June 2026, and that the same weakness existed at 31 March 2026. The company describes remediation but does not quantify it [F, MD&amp;A]. A material weakness is not a restatement; it is a statement that the process that produces the numbers cannot be relied on to catch errors of this size. It arrived in the same release as the C$4.8M discrepancy in the FY26 net loss described in §3 — which is exactly the kind of error a working control set is meant to catch.</p>
+<p><strong>The auditor's two key audit matters are the two things an equity holder should worry about</strong> [F]:</p>
+<ol>
+<li><strong>Goodwill impairment.</strong> C$1,061.5M of goodwill, tested at 1 April 2026 with no impairment, then re-tested at 30 June 2026 because "the Company's book value of net assets exceeded its market capitalization". Discount rates 10.8%–18.8%, terminal growth 2.0%–3.0%. No impairment recorded.</li>
+<li><strong>Preparation on a going concern basis.</strong> The auditor states that evaluating management's assessment "involved significant auditor judgement in understanding management's overall plans, specifically the key assumptions … in developing future cash flow forecasts and <strong>forecast of leverage levels to meet required debt covenants</strong>".</li>
+</ol>
+<p>That second KAM is the balance-sheet risk stated in the auditor's own words. Management concluded there is no material uncertainty; the auditor did not dissent, but it did not treat the question as routine either.</p>
+<h3 id="the-goodwill-wedge">The goodwill wedge</h3>
+<p>At 30 June 2026 the company's book equity was C$280.4M against a market capitalisation of roughly C$93M. That is an impairment trigger, and the test passed only because value-in-use — a management DCF at a 10.8%–18.8% discount rate — produced recoverable amounts above carrying values. Aggregate carrying value of the CGUs is roughly <strong>C$1,596M</strong> [E: goodwill + intangibles + PP&amp;E + right-of-use + net working capital], which implies the DCF is valuing the enterprise at <strong>at least 8.0x FY26 EBITDA</strong>. The market is at 6.8x.</p>
+<p>That gap is the whole argument in one number: <strong>management's own model says the business is worth at least 15% more than the market pays, and the market says management's model is too generous.</strong> One of them will be marked to reality — the next annual test is 1 April 2027, and the Q4 FY27 accounts will force the comparison again.</p>
+<h3 id="what-adjusted-means-here">What "adjusted" means here</h3>
+<p>FY26 Adjusted EBITDA of C$198.8M is struck after adding back C$49.7M of "acquisition, restructuring and other costs" — 25% of the reported figure. The composition, per Note 18: professional fees and integration costs, <strong>filing and waiver costs</strong>, severance and executive separation costs, fair-value movements on contingent consideration (C$1.4M, the only clearly non-cash item), and legal and advisory fees associated with board changes and the delayed filings [F].</p>
+<p>Almost all of that is cash, and almost all of it has recurred every year since 2021. Two consequences:</p>
+<ul>
+<li>The C$8.8M of free cash flow in §6 already bears these costs. That is why the cash number and the EBITDA number tell different stories: <strong>the EBITDA line excludes what the bank account pays.</strong></li>
+<li>If you charge the business even C$20–25M of normalised public-company and restructuring costs, EBITDA is C$174–179M and the EV/EBITDA at C$1.62 rises to 7.5–7.8x — above the multiple a strategic buyer is likely to pay for a shrinking asset.</li>
+</ul>
+<p>Adjusted EBITDA is a legitimate measure of the operating business. It is not a measure of what shareholders own.</p>
+<h2 id="8-segments-and-competitive-position">8. Segments and competitive position</h2>
+<h3 id="segment-economics">Segment economics</h3>
+<p>Segment Adjusted EBITDA is struck <strong>before corporate cost allocation</strong> — the allocation column nets to zero — so the margins below overstate what each region earns after head office. The consolidated 48.4% is the only margin that includes corporate costs [F].</p>
+<p><strong>FY2026</strong></p>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>Revenue</th>
+<th>% of total</th>
+<th>Segment EBITDA</th>
+<th>Margin</th>
+<th>FY25 margin</th>
+<th>Revenue change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canada</td>
+<td>238.6</td>
+<td>58%</td>
+<td>131.7</td>
+<td>55.2%</td>
+<td>61.5%</td>
+<td>−5.4%</td>
+</tr>
+<tr>
+<td>UK &amp; Ireland</td>
+<td>94.8</td>
+<td>23%</td>
+<td>33.8</td>
+<td>35.7%</td>
+<td>36.7%</td>
+<td>−13.2%</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>69.1</td>
+<td>17%</td>
+<td>31.7</td>
+<td>46.0%</td>
+<td>48.3%</td>
+<td>−0.9%</td>
+</tr>
+<tr>
+<td>South Africa</td>
+<td>8.2</td>
+<td>2%</td>
+<td>1.5</td>
+<td>17.7%</td>
+<td>41.6%</td>
+<td>−15.2%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>410.7</strong></td>
+<td><strong>100%</strong></td>
+<td><strong>198.8</strong></td>
+<td><strong>48.4%</strong></td>
+<td><strong>52.8%</strong></td>
+<td><strong>−6.8%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Q4 FY2026 vs Q4 FY2025</strong></p>
+<table>
+<thead>
+<tr>
+<th>C$M</th>
+<th>Revenue</th>
+<th>Change</th>
+<th>Segment EBITDA</th>
+<th>Change</th>
+<th>Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canada</td>
+<td>65.5</td>
+<td><strong>+8.7%</strong></td>
+<td>39.8</td>
+<td>+13.3%</td>
+<td>60.7%</td>
+</tr>
+<tr>
+<td>UK &amp; Ireland</td>
+<td>20.8</td>
+<td>−17.1%</td>
+<td>8.2</td>
+<td>+14.2%</td>
+<td>39.2%</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>17.1</td>
+<td>−7.0%</td>
+<td>8.1</td>
+<td>+36.6%</td>
+<td>47.7%</td>
+</tr>
+<tr>
+<td>South Africa</td>
+<td>0.7</td>
+<td>−46.9%</td>
+<td>(1.0)</td>
+<td>n/m</td>
+<td>n/m</td>
+</tr>
+</tbody>
+</table>
+<p>What the split says:</p>
+<ul>
+<li><strong>Canada is the franchise and the only growth engine.</strong> +8.7% in Q4, driven by practice management and payment infrastructure, with segment EBITDA +13.3%. But Canada's full-year margin fell 6.3 points, and Canada's revenue still declined 5.4% for the year — the Q4 recovery is one quarter off a very low base (Q4 FY25 was itself down).</li>
+<li><strong>The UK is the source of the decline.</strong> −13.2% for the year, though part of that is Credas (sold 6 January 2026) and part is the earlier TM Group divestiture. Q4's −17.1% on a 39.2% margin is the cleanest read on the remaining UK business: revenue shrinking, costs being cut faster.</li>
+<li><strong>Australia has stabilised but not grown.</strong> Flat revenue, margin down 2.3 points for the year, strong Q4 EBITDA (+36.6%) on lower revenue — again cost-driven.</li>
+<li><strong>South Africa is immaterial and was fully impaired</strong> in FY25 (C$4.2M goodwill write-off, 20.6% discount rate).</li>
+</ul>
+<h3 id="competitive-position">Competitive position</h3>
+<p>The AIF names the competition: in legal practice management and conveyancing workflow, <strong>LEAP Legal Software, Clio, Actionstep, The Access Group, Advanced Legal, LawyerDoneDeal Corp, PracticeEvolve, Closer, Goveyance and Osprey</strong>; in data insights and due diligence, <strong>ESC Corporate Services</strong> in Canada and <strong>InfoTrack</strong> in Australia, with Teranet the incumbent registry operator in Ontario [F].</p>
+<p>The moat is real but narrower than the bull case implies:</p>
+<ul>
+<li><strong>Practice management is the sticky layer.</strong> Trust accounting, matter files, precedent libraries and billing history are embedded in daily workflow; switching is an operational project for a law firm, not a click. This is where Dye &amp; Durham earns its 55–60% Canadian segment margins.</li>
+<li><strong>Data insights and conveyancing search are less sticky and more price-sensitive.</strong> Searches are largely a pass-through of public-record data with a workflow wrapper. InfoTrack and Teranet compete on price and integration, and the customer can multi-source. This is the segment where the company's earlier price increases did damage: FY26's revenue decline is attributed by management to "lower volumes and pricing from both the loss of customers and contract renewals" in practice management and data insights [F].</li>
+<li><strong>The pricing model has already been retreated from.</strong> On the Q4 call management said churn is decreasing, transaction volumes are stabilising, and the company has moved away from minimum monthly commitments toward more market-based pricing [U]. That is the right commercial decision and a permanent hit to revenue per user — the growth that the 2021–2023 model assumed is not coming back.</li>
+</ul>
+<p><strong>Two regulatory overhangs, one resolved and one benign:</strong></p>
+<ul>
+<li>The <strong>Competition Bureau</strong> inquiry into the company's position in the conveyancing software market (court order for records, November 2024) has been <strong>discontinued</strong>; the Commissioner confirmed no further investigatory steps are contemplated [U]. A tail risk that was in the 2024–25 bear case is gone.</li>
+<li>The <strong>Ontario government</strong> awarded the company a <strong>four-year contract for electronic business registry services</strong> in March 2026 [C]. That re-bases a chunk of the data-insights franchise and is the single most concrete commercial win of the year.</li>
+</ul>
+<p><strong>What cannot be verified:</strong> there is no disclosed ARR, net revenue retention, customer count or churn rate in the FY26 MD&amp;A or AIF [F: absence]. The "Unity" platform launches (next-generation legal workflow and due diligence platforms in May 2026; Unity conveyancing in British Columbia in February 2026) carry no adoption metrics [C]. Any claim that the new platforms are gaining traction is, as of today, unfalsifiable — which is why the Q1 disclosure on revenue mix matters more than the platform press releases.</p>
+<h2 id="9-governance-holders-and-the-sale-process">9. Governance, holders and the sale process</h2>
+<h3 id="the-timeline-that-produced-todays-board">The timeline that produced today's board</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feb 2025</td>
+<td>Plantro (Matthew Proud) makes an unsolicited ~C$940M go-private proposal [U]</td>
+</tr>
+<tr>
+<td>Jul 2025</td>
+<td>Plantro requisitions a special meeting; cooperation agreement signed 29 July; David Danziger appointed to the board [F]</td>
+</tr>
+<tr>
+<td>Oct 2025</td>
+<td>Plantro withdraws its bid; CIBC backs out of leading the sale process; stock at all-time low [U]</td>
+</tr>
+<tr>
+<td>Nov–Dec 2025</td>
+<td>OneMove nominates five directors; Proud sues the company; board overhaul; company warns of default if FY25 statements are not filed by 18 December [U]</td>
+</tr>
+<tr>
+<td>29 Dec 2025</td>
+<td><strong>Sale process launched</strong> for the whole company and for the Canadian Financial Services division; credit agreement amended [C]</td>
+</tr>
+<tr>
+<td>2–6 Feb 2026</td>
+<td>FY25 statements filed; failure-to-file CTO revoked [C]</td>
+</tr>
+<tr>
+<td>31 Mar / 8 Apr 2026</td>
+<td>Shareholder rights plan adopted to "protect the integrity of the ongoing sales process"; effective 8 April [C]</td>
+</tr>
+<tr>
+<td>25 May 2026</td>
+<td>Mary Filippelli and Tyler Proud appointed to the board; interim CFO change (Steve Waszak) [F]</td>
+</tr>
+<tr>
+<td>23 Jun 2026</td>
+<td>CEO George Tsivin departs; <strong>Transformation Committee</strong> (Tyler Proud, Filippelli, Angela Zhang) assumes the Office of the CEO [F]</td>
+</tr>
+<tr>
+<td>31 Aug 2026</td>
+<td>Transformation Committee dissolved; <strong>Angela Zhang chair</strong> (the fifth chair in under a year [U]); <strong>Todd Schulte interim CEO</strong>; Filippelli leaves the board [C]</td>
+</tr>
+<tr>
+<td>5 Nov 2026</td>
+<td><strong>Support agreements with Plantro and EdgePoint (~36% combined)</strong>, standstill and voting support until September 2027, litigation dismissed; Proud, Matheson and Brimm appointed; Patrick Dennis (ex-Avaya CEO) board observer [C]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-standstill-actually-does">What the standstill actually does</h3>
+<p>The 5 November agreements are the most consequential governance event of the year, and they cut both ways:</p>
+<ul>
+<li><strong>For the bull case:</strong> 36% of the register is now contractually locked into supporting the board and any transaction through September 2027. A sale needs a majority of the minority in practice; with 36% committed, the approval hurdle is materially lower. The litigation that consumed board time is dismissed. EdgePoint — a long-only value manager — has a board seat and a stated interest in "operating performance and balance sheet discipline."</li>
+<li><strong>For the bear case:</strong> a standstill prevents Plantro from making or increasing a bid. The most plausible natural buyer of this company — the founder who tried in 2025 — is now inside the tent and contractually barred from bidding until September 2027. If anyone hoped for a Proud rescue premium, the agreement removes it.</li>
+</ul>
+<h3 id="the-sale-process-is-alive-on-paper-and-stale-in-fact">The sale process is alive on paper and stale in fact</h3>
+<p>The MD&amp;A dated 28 September says the process "is ongoing", overseen by a Strategic Committee of the board [F]. On the Q4 call, six weeks ago, the interim CEO said the review had been delayed by management changes but was "close to completion" [U]. Nothing has been announced since. <strong>A process launched on 29 December 2025 that has produced no transaction, no stalking-horse and no update for eleven months is not a catalyst; it is a background condition.</strong> The rights plan and the voting support make a deal easier to execute, but they do not create a buyer.</p>
+<p>Three readings are consistent with the evidence: (i) a sale of the Canadian FS division is being negotiated and will land; (ii) the board has priced the company above what bidders will pay and is waiting for EBITDA to recover; (iii) the lenders' adviser is now the fulcrum and any transaction will be a recapitalisation rather than a sale. The company's behaviour — drawing the revolver to pay interest rather than selling an asset — is more consistent with (ii) or (iii) than with (i).</p>
+<h3 id="the-people-problem">The people problem</h3>
+<p>The company has had, in twelve months: five board chairs [U], two CEOs plus a board committee running the office of the CEO (Tsivin, the Transformation Committee, Schulte), two interim CFOs (Bell, Waszak), and a board that now includes the founder, his holding company's nominee, and an activist-nominated director. The interim CEO is a career software operating executive and the interim CFO is managing cash conservatively [U] — both are credible caretakers, neither is a permanent answer. <strong>The permanent CEO search is the single cheapest positive catalyst available to the equity, and it has now run for eight months.</strong></p>
+<h3 id="alignment-and-conflicts">Alignment and conflicts</h3>
+<p>Two structural features deserve flagging:</p>
+<ul>
+<li>The <strong>Investor Rights Agreement</strong> gives Plantro and OneMove nomination rights, pre-emptive rights and demand registration rights, and entitles Plantro's nominee to serve as Chair (with a carve-out preventing Matthew Proud from chairing while he is CEO) [F, AIF]. That is an unusual concentration of board-level influence for a holder that is also a potential counterparty.</li>
+<li>The board is running a sale process that could sell the Canadian FS division to a financial buyer while the founder's holding company sits on the board with a standstill. There is no evidence of impropriety; there is a clear requirement for an independent committee, and the existence of a Strategic Committee is the mitigation.</li>
+</ul>
+<p><strong>Governance verdict: improving at the margin, still a discount item.</strong> The standstill and the litigation settlement are genuine progress. Five chairs, two CEOs plus a board committee, and an interim finance function in one year are not.</p>
+<h2 id="10-valuation-an-option-priced-about-right">10. Valuation: an option, priced about right</h2>
+<h3 id="why-not-a-dcf">Why not a DCF</h3>
+<p>A discounted cash flow on this company would produce a number and no information. Free cash flow after interest is C$8.8M — 0.65% of enterprise value — and is negative after legacy obligations. The value of the equity is not the present value of that stream; it is the residual of enterprise value over a fixed claim. So the right instrument is a multiple on EBITDA, applied to the whole enterprise, with the debt subtracted.</p>
+<h3 id="the-option-arithmetic">The option arithmetic</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Market capitalisation</td>
+<td>C$108.8M</td>
+</tr>
+<tr>
+<td>Net debt (measure A)</td>
+<td>C$1,242.4M</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td>C$1,351.2M</td>
+</tr>
+<tr>
+<td>EV / FY26 adjusted EBITDA</td>
+<td><strong>6.80x</strong></td>
+</tr>
+<tr>
+<td>Multiple at which equity = 0</td>
+<td><strong>6.25x</strong></td>
+</tr>
+<tr>
+<td>Premium the market pays over the wipeout line</td>
+<td><strong>0.55x</strong></td>
+</tr>
+<tr>
+<td>Value of one turn of multiple</td>
+<td><strong>C$2.96/share</strong></td>
+</tr>
+<tr>
+<td>Strike (net debt per share)</td>
+<td>C$18.49</td>
+</tr>
+<tr>
+<td>Equity as % of enterprise value</td>
+<td>8.0%</td>
+</tr>
+</tbody>
+</table>
+<p>At C$1.62 the market is paying 6.80x for a business that earned 6.25x of EBITDA against its debt. Half a turn of multiple — C$1.62 — is the entire equity. That is the definition of a levered option: the premium is small in multiple terms and enormous in percentage terms.</p>
+<h3 id="sensitivity-equity-value-per-share-c-net-debt-c12424m-6718m-shares">Sensitivity: equity value per share (C$), net debt C$1,242.4M, 67.18M shares</h3>
+<table>
+<thead>
+<tr>
+<th>EBITDA →</th>
+<th>160</th>
+<th>175</th>
+<th>190</th>
+<th>199</th>
+<th>215</th>
+<th>230</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5.00x</strong></td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td><strong>5.75x</strong></td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.19</td>
+</tr>
+<tr>
+<td><strong>6.25x</strong></td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>1.51</td>
+<td>2.90</td>
+</tr>
+<tr>
+<td><strong>6.80x</strong></td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.74</td>
+<td>1.65</td>
+<td>3.27</td>
+<td>4.79</td>
+</tr>
+<tr>
+<td><strong>7.50x</strong></td>
+<td>0.00</td>
+<td>1.04</td>
+<td>2.72</td>
+<td>3.72</td>
+<td>5.51</td>
+<td>7.18</td>
+</tr>
+<tr>
+<td><strong>8.50x</strong></td>
+<td>1.75</td>
+<td>3.65</td>
+<td>5.55</td>
+<td>6.68</td>
+<td>8.71</td>
+<td>10.61</td>
+</tr>
+</tbody>
+</table>
+<p>With leases and holdbacks deducted (net debt C$1,286.3M), every figure above falls by C$0.65; marking the converts to their C$160.4M face takes the total deduction to C$1.49.</p>
+<p>Read the grid as a map, not a forecast:</p>
+<ul>
+<li><strong>The left column is death.</strong> At 5.0x the common is worthless at every EBITDA in the table; at 5.5x it is worth C$0.34 at C$230M of EBITDA and nothing below C$225M.</li>
+<li><strong>The diagonal is the status quo.</strong> At 6.8x and C$199M, the equity is worth C$1.65 — today's price. The market is not pricing a recovery, a sale, or a wipeout; it is pricing the current EBITDA at the current multiple.</li>
+<li><strong>The top-right corner is the bull case</strong>, and it requires both things to go right: EBITDA up 8–15% <em>and</em> a re-rating to 8x+.</li>
+</ul>
+<h3 id="reverse-view-what-does-c162-require">Reverse view: what does C$1.62 require?</h3>
+<p>Holding the multiple at 7.0x, an EV of C$1,351M requires EBITDA of <strong>C$193M</strong> — 3% below FY26. At 8.0x it requires C$169M. <strong>The current price embeds no growth, no re-rating, and no default.</strong> It is a fair price for a flat business with a solvency question attached. That is why the stock could double on a quarter that merely beat a low consensus (§1) — the starting point was a price that assumed nothing.</p>
+<h3 id="scenarios-24-month-view">Scenarios (24-month view)</h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Probability</th>
+<th>FY27–28 EBITDA</th>
+<th>Multiple</th>
+<th>EV</th>
+<th>Equity</th>
+<th>Per share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bear</strong> — revenue −5%/yr, margin stuck at 44%, multiple compresses as refinancing looms</td>
+<td>45%</td>
+<td>165</td>
+<td>5.25x</td>
+<td>866</td>
+<td>0</td>
+<td><strong>C$0.00</strong></td>
+</tr>
+<tr>
+<td><strong>Base</strong> — revenue flat, cost savings land, margin ~48%, multiple unchanged</td>
+<td>40%</td>
+<td>195</td>
+<td>6.75x</td>
+<td>1,316</td>
+<td>74</td>
+<td><strong>C$1.10</strong></td>
+</tr>
+<tr>
+<td><strong>Bull</strong> — Canada recovers, savings compound, sale or re-rating at 8x</td>
+<td>15%</td>
+<td>220</td>
+<td>8.00x</td>
+<td>1,760</td>
+<td>518</td>
+<td><strong>C$7.70</strong></td>
+</tr>
+<tr>
+<td><strong>Probability-weighted</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>C$1.60</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Probabilities are subjective [E]. The distribution is the point: <strong>a 45% chance of zero and a 15% chance of 4.8x your money.</strong> The expected value is C$1.60 against a C$1.62 price — a market that is pricing the option efficiently, not mispricing it.</p>
+<h3 id="if-it-restructures-instead">If it restructures instead</h3>
+<p>The most likely non-zero bear outcome is not liquidation but a debt-for-equity exchange, most plausibly at the November 2028 convert maturity or the January 2029 acceleration:</p>
+<table>
+<thead>
+<tr>
+<th>Debt equitised</th>
+<th>Debt remaining</th>
+<th>Equity at EV 1,350</th>
+<th>Common at 10–20% retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C$200M</td>
+<td>1,084</td>
+<td>266</td>
+<td>C$0.40 – 0.79</td>
+</tr>
+<tr>
+<td>C$300M</td>
+<td>984</td>
+<td>366</td>
+<td>C$0.55 – 1.09</td>
+</tr>
+<tr>
+<td>C$400M</td>
+<td>884</td>
+<td>466</td>
+<td>C$0.69 – 1.39</td>
+</tr>
+</tbody>
+</table>
+<p>A restructuring that removes C$300M of debt and leaves common holders 10–20% of the residual produces C$0.55–1.09 per share — <strong>below today's price.</strong> That is the asymmetry the market is wrestling with: the good outcomes are large, the mediocre outcomes are below spot, and the bad outcome is zero.</p>
+<h3 id="the-paths-that-would-create-value-ranked-by-credibility">The paths that would create value, ranked by credibility</h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Arithmetic</th>
+<th>Per share</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refinance the 2029 notes 100bp cheaper</td>
+<td>1,179 × 1.0% = C$11.8M/yr, capitalised at 7x = C$83M</td>
+<td><strong>+C$1.23</strong></td>
+<td>High credibility, medium term; the cheapest catalyst available</td>
+</tr>
+<tr>
+<td>EBITDA recovers to C$220M, multiple holds at 7.5x</td>
+<td>1,650 − 1,242</td>
+<td><strong>C$6.07</strong></td>
+<td>Requires Canada housing recovery + full cost programme</td>
+</tr>
+<tr>
+<td>Sale of the company at 8x</td>
+<td>1,591 − 1,242</td>
+<td><strong>C$5.20</strong></td>
+<td>Process has run 11 months without a deal</td>
+</tr>
+<tr>
+<td>Sale of the Canadian FS division at ~9x on ~C$50M EBITDA [E]</td>
+<td>net debt falls to ~C$792M; equity at 7x on C$149M EBITDA</td>
+<td><strong>C$3.74</strong></td>
+<td>The most plausible strategic action; FS is the asset a bank or payments buyer would want</td>
+</tr>
+<tr>
+<td>Convert equitisation</td>
+<td>+99M shares at C$1.62 (+147%)</td>
+<td><strong>dilutive</strong></td>
+<td>Near-certain in any non-sale scenario by Nov 2028</td>
+</tr>
+</tbody>
+</table>
+<p>The refinancing line is the one the market underweights: <strong>C$1.23 per share of value from 100 basis points on the debt, with no operational improvement required.</strong> It requires a lender group willing to reprice a credit currently rated Caa1/CCC+ — which is precisely why Houlihan Lokey is in the room.</p>
+<h3 id="sell-side">Sell-side</h3>
+<p>BMO C$1.25 (Market Perform, 1 Oct), Raymond James C$1.75 (Hold, cut from C$4.00, 1 Oct), CIBC C$2.00 (Neutral, cut from C$2.50, 14 Oct); consensus C$1.67 [M]. The lowest target is 23% below the current price and the highest is 23% above it; all three are Holds. <strong>The analyst community has converged on the same conclusion as this report: the equity is fairly valued and the outcome depends on events, not on earnings.</strong></p>
+<h2 id="11-the-bull-case-in-its-strongest-form">11. The bull case, in its strongest form</h2>
+<p><strong>1. The operating leverage is now visible in the numbers, not just in the deck.</strong> Q4 revenue +4% ex-Credas produced EBITDA +18% and a 53% margin, with operating costs down C$8.4M year on year. Because the cost base is largely fixed, the incremental margin on recovered revenue is close to 90%. A return to FY25 revenue (C$440M) on the FY26 cost base would produce roughly C$225M of EBITDA — 13% above today — without a single new customer. The company has already delivered C$19.9M of annualised savings against an C$11.0M target, and has identified another C$6–8M for FY27.</p>
+<p><strong>2. Canada is the engine and it has turned.</strong> Canada grew 8.7% in Q4 with segment EBITDA +13.3%, driven by practice management and payment infrastructure. Canada is 58% of revenue and its end market — Canadian residential transactions — is at a multi-decade low. Any normalisation of housing volumes drops through at very high incremental margins.</p>
+<p><strong>3. The balance sheet has already improved materially, and the maturity profile is better than the headline.</strong> Total debt fell from C$1,587M to C$1,284M in twelve months. The Term Loan B has <strong>no further principal amortisation before 2031</strong>, because the Credas proceeds prepaid the remaining instalments. The 3.75% converts are gone. Cash interest fell from C$122.4M to C$117.3M in a year of rising rates.</p>
+<p><strong>4. Governance risk has collapsed.</strong> 36% of the register is contractually locked into supporting the board until September 2027; the litigation is dismissed; the board now has a long-only value investor (EdgePoint) and an operator with public-company CEO experience (Dennis, as observer). A sale, if agreed, is now approvable. The "founder versus company" discount that has hung over the stock for two years should compress.</p>
+<p><strong>5. The option is cheap in the only unit that matters.</strong> The equity is 8% of the capital structure and sits 0.55x of EBITDA above the wipeout line. Each turn of multiple is worth C$2.96 per share — 1.8x the current price. A 100bp reduction in the cost of debt, with no operational change at all, is worth C$1.23 per share.</p>
+<p><strong>6. The assets are strategic.</strong> Roughly 100 financial-institution relationships, the Ontario electronic business registry contract, and mission-critical workflow software with high switching costs. A strategic buyer with synergies can pay 8x and still earn its cost of capital; the Canadian FS division alone is the kind of asset a bank or payments processor would buy.</p>
+<h2 id="12-the-bear-case-in-its-strongest-form">12. The bear case, in its strongest form</h2>
+<p><strong>1. The arithmetic is unforgiving.</strong> Breakeven is 6.25x EBITDA; the stock trades at 6.80x. A 5.5x multiple — normal for a shrinking, levered software company with a material weakness — makes the equity worthless at any EBITDA in the plausible range. The market is not paying for the business; it is paying half a turn of optimism.</p>
+<p><strong>2. The business does not generate enough cash to service its own debt, let alone repay it.</strong> FCF after interest, capex and leases was C$8.8M; after the C$35.5M of legacy acquisition holdbacks it was <strong>negative C$26.7M</strong>. Interest consumes 76% of operating cash flow, cover is 1.69x, and the company <strong>drew C$31M on the revolver to fund the October coupon</strong>. That is the behaviour of a company managing liquidity, not a company deleveraging. FY26's C$116M reduction in net debt came entirely from selling Credas.</p>
+<p><strong>3. Every region is shrinking and the growth was bought with price.</strong> FY26 revenue −6% ex-Credas; Canada −5.4%, UK −13.2%, Australia −0.9%, South Africa −15.2%. Management attributes the decline to lost customers and contract renewals in practice management and data insights — the price increases of 2022–24 cost volume. The Q4 improvement is one quarter off a trough, in the seasonally strongest quarter of the year.</p>
+<p><strong>4. The numbers are not yet trustworthy.</strong> A material weakness in internal control at both 31 March and 30 June 2026; a C$24.6M restatement of Q3 net income; two different FY26 net losses (C$38.5M and C$43.3M) in the same press release; and an auditor who made going-concern assessment and goodwill impairment the two key audit matters. A buyer, a lender and a convert holder will all price that.</p>
+<p><strong>5. Governance is better, not good.</strong> Five chairs in under a year, an interim CEO and an interim CFO, the founder whose acquisition programme created the leverage back on the board, and a standstill that <strong>prevents the most plausible buyer from bidding until September 2027</strong>. The sale process has run eleven months and produced nothing.</p>
+<p><strong>6. The covenant is live with ~11% of EBITDA headroom, and the convert wall is behind it.</strong> Reported adjusted EBITDA can fall to roughly C$176M before 5.80x is breached — one more year at the FY26 rate of decline. A breach hands the lenders the initiative: an amendment at a price, or a liability-management exercise in which the C$160.4M of converts (marked at 65 cents by the company itself) and possibly part of the senior debt convert into equity ahead of the common.</p>
+<p><strong>7. The end markets do not help.</strong> Canadian housing volumes remain subdued, the UK is contracting, Australia is flat, and refinancing is expensive — the US 10-year is at 4.84% [M]. Nothing in the macro picture accelerates the deleveraging.</p>
+<h3 id="where-the-two-cases-actually-disagree">Where the two cases actually disagree</h3>
+<p>They agree the asset is good and the margins are structurally high. They disagree on exactly two things:</p>
+<ol>
+<li><strong>What multiple a shrinking, levered, low-FCF software company deserves</strong> — 5.5x or 8.0x. That single judgement moves the equity from C$0 to C$7.</li>
+<li><strong>Whether a transaction happens</strong> — a sale, a division sale, or a refinancing. The operational difference between C$190M and C$215M of EBITDA at a constant 6.8x is worth C$2.53 per share; the difference between 6.25x and 8.0x on the same C$199M of EBITDA is worth C$5.18.</li>
+</ol>
+<p><strong>The debate is not about the business. It is about the price of the business and the willingness of a lender or a buyer to set it.</strong></p>
+<h2 id="13-what-to-watch-in-tomorrows-q1-fy2027-print">13. What to watch in tomorrow's Q1 FY2027 print</h2>
+<p>The company has not published a notice for the Q1 call that I could locate; the vendor calendar shows <strong>10 November 2026</strong> as the estimated date [M]. Treat the date as expected, not confirmed.</p>
+<p><strong>Update, 10 November 2026:</strong> the company's notice, issued that morning, sets the release for <strong>Thursday 12 November 2026</strong> with the call at <strong>12:00 p.m. ET</strong> — two days later than the vendor calendar implied, and not 08:00 ET. The stock closed at C$1.96 on 9 November (+21.0% on 1.72M shares) and traded at C$1.88 intraday on 10 November; at C$1.88 the EV/EBITDA is 6.89x. Nothing in this section is testable until the 12 November print.</p>
+<p>This is the first quarter in which the <strong>5.80x covenant is live</strong> (revolver drawings above 35%) and the first clean comparison of the post-Credas business against a post-Credas base. Baseline is Q1 FY26: revenue C$108.3M, Adjusted EBITDA C$50.4M, margin 46.6%.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Observable</th>
+<th>Baseline</th>
+<th>Bull if</th>
+<th>Bear if</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Revenue, ex-Credas growth</td>
+<td>~C$103M [E]</td>
+<td>≥C$105M (+2%)</td>
+<td>&lt;C$100M (−3%)</td>
+<td>Tests whether Q4's +4% was real</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Adjusted EBITDA margin</td>
+<td>46.6%</td>
+<td>≥48%</td>
+<td>&lt;44%</td>
+<td>Q1 is a peak quarter; the Q4 53% margin must not collapse</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Interest and accretion expense (quarterly run-rate)</td>
+<td>~C$33M [E]</td>
+<td>≤C$31M</td>
+<td>≥C$35M</td>
+<td>Cost of debt; reveals repricing or extra revolver use</td>
+</tr>
+<tr>
+<td>4</td>
+<td>FCF after interest, capex, leases</td>
+<td>n/a</td>
+<td>≥C$15M</td>
+<td>≤C$0</td>
+<td>The only number that pays debt</td>
+</tr>
+<tr>
+<td>5</td>
+<td>First-lien net leverage</td>
+<td>5.17x (Jun)</td>
+<td>≤5.20x</td>
+<td>≥5.50x</td>
+<td>Covenant headroom is 0.63x</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Revolver drawn / available</td>
+<td>60.5 (57.6%)</td>
+<td>≤60.5, cash held</td>
+<td>&gt;70 or a new draw</td>
+<td>Liquidity is ~C$117M</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Covenant language</td>
+<td>"below threshold"</td>
+<td>"tested and compliant"</td>
+<td>"amendment", "waiver", "forbearance"</td>
+<td>The binary that sets the equity's value</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Holdbacks / contingent consideration paid</td>
+<td>30.1 outstanding</td>
+<td>≤C$10M paid</td>
+<td>&gt;C$15M paid</td>
+<td>Cash leakage below EBITDA</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sale process and CEO search</td>
+<td>ongoing / interim</td>
+<td>permanent CEO named or transaction signed</td>
+<td>no update on either</td>
+<td>The two re-rating catalysts</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Goodwill and going-concern language</td>
+<td>no impairment</td>
+<td>unchanged</td>
+<td>any new trigger language</td>
+<td>Book equity is 2.6x market cap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The single most important line is #7.</strong> If the company reports the 30 September test as passed with leverage at or below ~5.2x and no amendment, the bear case loses its nearest catalyst and the option keeps its 26-month runway. If it discloses an amendment, a waiver, or a leverage figure above 5.5x, the lenders' adviser stops being advisory.</p>
+<p><strong>A sequential margin decline plus refinancing language is the bear case confirming itself.</strong> Growth plus leverage below 5.0x would be the bull case confirming itself — and on the arithmetic, 5.0x requires EBITDA of about C$228M, so a genuine move to 5.0x in one quarter is not available without a debt paydown. Treat any claim of "leverage falling toward 4.5x" as a two-year story: 4.5x requires C$253M of covenant EBITDA, above FY25's level.</p>
+<hr />
+<h2 id="14-signposts-what-confirms-and-what-kills-each-case">14. Signposts: what confirms and what kills each case</h2>
+<h3 id="bull-case-confirmations-required">Bull case — confirmations required</h3>
+<ol>
+<li><strong>Two consecutive quarters of positive organic revenue growth</strong> (Q1 and Q2 FY27), not one.</li>
+<li><strong>Adjusted EBITDA margin ≥48% in Q1 and ≥50% in Q4 FY27</strong>, with costs flat or lower in absolute terms.</li>
+<li><strong>At least C$15M of FCF after interest in each of the two peak quarters</strong> (Q1 and Q4), and no new revolver draw beyond the C$31M already taken.</li>
+<li><strong>First-lien leverage ≤5.0x by Q4 FY27</strong> — requires EBITDA ≥C$228M or C$100M+ of debt reduction.</li>
+<li><strong>A named permanent CEO</strong> with software operating experience, before the FY27 year-end.</li>
+<li><strong>A transaction</strong>: either a signed sale of the Canadian FS division at ≥8x, or a refinancing of the 2029 notes extending the wall beyond 2031 at ≤9.5%.</li>
+<li><strong>The remaining C$6–8M of cost savings</strong> delivered on schedule, with no offsetting reinvestment above the line.</li>
+</ol>
+<h3 id="bear-case-confirmations-required">Bear case — confirmations required</h3>
+<ol>
+<li><strong>Revenue below C$100M in Q1 or Q2 FY27</strong> (i.e., a return to decline after one good quarter).</li>
+<li><strong>Margin below 44% in a peak quarter</strong>, which would mean the Q4 cost savings were seasonal or one-off.</li>
+<li><strong>Any covenant amendment, waiver or forbearance</strong>, or first-lien leverage ≥5.5x.</li>
+<li><strong>A third restatement or a further material-weakness disclosure</strong>; any auditor language on going concern.</li>
+<li><strong>The converts exchanged at a discount to par</strong> (a debt-for-equity swap), which transfers value from common.</li>
+<li><strong>No permanent CEO and no transaction update by the Q2 FY27 print</strong> (February 2027).</li>
+<li><strong>A further revolver draw above C$70M</strong> (66% utilisation) before the April 2027 coupon.</li>
+</ol>
+<h3 id="kill-conditions-thesis-dead-exit-regardless-of-price">Kill conditions (thesis dead, exit regardless of price)</h3>
+<ul>
+<li>A covenant breach that is not cured within the grace period.</li>
+<li>Any restructuring announcement that equitises the converts or the senior debt without a fulsome common-shareholder recovery.</li>
+<li>Loss of the Ontario registry contract or a major bank relationship.</li>
+<li>A going-concern modification in the audit opinion.</li>
+</ul>
+<hr />
+<h2 id="15-quarterly-checklist">15. Quarterly checklist</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Improving</th>
+<th>Stable</th>
+<th>Deteriorating</th>
+<th>FY26 position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic revenue growth (ex-divestitures)</td>
+<td>&gt;+3%</td>
+<td>0 to +3%</td>
+<td>&lt;0%</td>
+<td>−6%</td>
+</tr>
+<tr>
+<td>Adj. EBITDA margin</td>
+<td>&gt;50%</td>
+<td>46–50%</td>
+<td>&lt;46%</td>
+<td>48.4%</td>
+</tr>
+<tr>
+<td>Cash interest / EBITDA</td>
+<td>&lt;50%</td>
+<td>50–60%</td>
+<td>&gt;60%</td>
+<td>59%</td>
+</tr>
+<tr>
+<td>FCF after interest and capex</td>
+<td>&gt;C$30M/yr</td>
+<td>C$0–30M</td>
+<td>&lt;C$0</td>
+<td>C$8.8M</td>
+</tr>
+<tr>
+<td>First-lien net leverage</td>
+<td>&lt;5.0x</td>
+<td>5.0–5.4x</td>
+<td>&gt;5.4x</td>
+<td>5.17x</td>
+</tr>
+<tr>
+<td>Revolver utilisation</td>
+<td>&lt;35%</td>
+<td>35–60%</td>
+<td>&gt;60%</td>
+<td>57.6% [E]</td>
+</tr>
+<tr>
+<td>Holdbacks outstanding</td>
+<td>&lt;C$15M</td>
+<td>C$15–30M</td>
+<td>&gt;C$30M</td>
+<td>C$30.1M</td>
+</tr>
+<tr>
+<td>Goodwill cover (book equity / market cap)</td>
+<td>&lt;1.0x</td>
+<td>1.0–3.0x</td>
+<td>&gt;3.0x</td>
+<td>2.6x [E]</td>
+</tr>
+<tr>
+<td>CEO / CFO permanence</td>
+<td>Both permanent</td>
+<td>One interim</td>
+<td>Both interim</td>
+<td>Both interim</td>
+</tr>
+<tr>
+<td>Sale-process disclosure</td>
+<td>Signed transaction</td>
+<td>"Ongoing"</td>
+<td>Silent for &gt;2 quarters</td>
+<td>"Ongoing", 11 months</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-scorecard">16. Scorecard</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Score /10</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business quality and moat</td>
+<td>7</td>
+<td>Mission-critical workflow; high switching costs in practice management; weaker in data/search</td>
+</tr>
+<tr>
+<td>Revenue durability and growth</td>
+<td>3</td>
+<td>−6% organic; every region down; no disclosed retention metric</td>
+</tr>
+<tr>
+<td>Margin quality</td>
+<td>7</td>
+<td>48% through a downturn; 53% in Q4; but 25% of EBITDA is added back</td>
+</tr>
+<tr>
+<td>Free cash flow conversion</td>
+<td>2</td>
+<td>C$8.8M after interest; negative after legacy holdbacks</td>
+</tr>
+<tr>
+<td>Balance sheet</td>
+<td>2</td>
+<td>6.25x breakeven; convert wall Nov-2028; acceleration Jan-2029</td>
+</tr>
+<tr>
+<td>Covenant headroom</td>
+<td>4</td>
+<td>0.63x, but the covenant just sprang and headroom is 11% of EBITDA</td>
+</tr>
+<tr>
+<td>Management execution</td>
+<td>3</td>
+<td>Cost programme delivered; revenue not stabilised; interim CEO/CFO</td>
+</tr>
+<tr>
+<td>Capital allocation</td>
+<td>2</td>
+<td>The acquisition programme created the leverage; now selling assets to service it</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>3</td>
+<td>Standstill is progress; five chairs, founder back, 11-month sale process</td>
+</tr>
+<tr>
+<td>Accounting quality</td>
+<td>2</td>
+<td>Material weakness, Q3 restatement, two net losses in one release</td>
+</tr>
+<tr>
+<td>Valuation and risk-reward</td>
+<td>4</td>
+<td>Fairly priced option: +C$0.00 expected, 45% chance of zero</td>
+</tr>
+<tr>
+<td>Catalyst visibility</td>
+<td>5</td>
+<td>Dated: Q1 print, covenant test, CEO search, sale process — but none under company control</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>44/100</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The three factors that matter most:</strong> balance sheet (2), FCF conversion (2) and catalyst visibility (5) — which is another way of saying that nothing about the operating business will determine the share price over the next twelve months. The debt and the transaction will.</p>
+<hr />
+<h2 id="17-verdict">17. Verdict</h2>
+<p><strong>Rating: Neutral. Central value C$1.60 (price C$1.62).</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>C$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear (45%)</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Base (40%)</td>
+<td>1.10</td>
+</tr>
+<tr>
+<td>Bull (15%)</td>
+<td>7.70</td>
+</tr>
+<tr>
+<td><strong>Probability-weighted</strong></td>
+<td><strong>1.60</strong></td>
+</tr>
+<tr>
+<td>Current price</td>
+<td>1.62</td>
+</tr>
+<tr>
+<td>Implied upside</td>
+<td>−1.5%</td>
+</tr>
+<tr>
+<td>Confidence in the central value</td>
+<td><strong>55%</strong> — the outcome is event-driven, not earnings-driven</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why neutral and not a buy</strong>, given a 4.8x bull case: the expected value sits at the price, the distribution is bimodal, and the probability of a total loss is roughly three times the probability of the good outcome. A 4.8x tail with a 45% chance of zero and no expected-value edge is not a risk premium; it is a lottery ticket priced at fair value. The market has done its job here.</p>
+<p><strong>Why not a sell</strong>, given a 6.25x wipeout line: the company has 26 months before the acceleration date, C$117M of liquidity, a lender group with an adviser (which implies negotiation, not liquidation), a live sale process, and an asset base that a strategic buyer values above the public market. A short at C$1.62 risks being run over by a single announcement.</p>
+<p><strong>If you own it:</strong> hold, size it as a binary (≤1% of a portfolio), and review at the Q1 print against the table in §13. The stock has already tripled off the September low; the easy money was made by buying the panic, not by buying the price.</p>
+<p><strong>If you do not own it:</strong> the entry zone is <strong>C$1.00–1.10</strong> — the level at which you are paying ~6.6x, roughly a third of a turn above the wipeout line, and the probability-weighted value is 45–60% above your cost. Above C$1.40 you are paying the market's own estimate of fair value for a governance-discounted, covenant-constrained, cash-negative business.</p>
+<p><strong>Would I buy it with my own money at C$1.62? No.</strong> At C$1.05, as a small option with a two-year horizon, yes.</p>
+<h3 id="what-would-change-the-rating">What would change the rating</h3>
+<table>
+<thead>
+<tr>
+<th>To <strong>Buy</strong></th>
+<th>To <strong>Avoid/Sell</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signed sale of the Canadian FS division at ≥8x EBITDA</td>
+<td>Any covenant amendment, waiver or forbearance</td>
+</tr>
+<tr>
+<td>Refinancing of the 2029 notes beyond 2031 at ≤9.5%</td>
+<td>Convert exchange at a discount to par</td>
+</tr>
+<tr>
+<td>Two quarters of organic growth with margin ≥48%</td>
+<td>Leverage ≥5.5x or a second restatement</td>
+</tr>
+<tr>
+<td>A permanent CEO with a software operating record</td>
+<td>Going-concern language in the FY27 audit</td>
+</tr>
+<tr>
+<td>Price below C$1.10 with the covenant intact</td>
+<td>Loss of the Ontario registry contract</td>
+</tr>
+</tbody>
+</table>
+<h2 id="18-method-limitations-and-how-to-update">18. Method, limitations and how to update</h2>
+<p><strong>Method.</strong> Enterprise value = market capitalisation + net debt; equity value = EV − net debt. Multiples are applied to Adjusted EBITDA as reported by the company, with a memo grid on a fully-loaded net debt. The DCF is deliberately not used: free cash flow after interest is C$8.8M and negative after legacy obligations, so a DCF would be a present-value calculation dominated by assumptions about a terminal value 10 years after the debt matures. The optionality is in the capital structure, so the model prices the capital structure.</p>
+<p><strong>Bases fixed once, used everywhere:</strong> price C$1.62 (TSX close, 6 November 2026, Yahoo Finance); shares 67.18M (FY26 weighted average basic; the count has not moved materially in two years); balance date 30 June 2026 (audited); all figures in Canadian dollars, no FX conversion of the USD-denominated debt (carrying values are used as presented).</p>
+<p><strong>Model.</strong> <code>model_DND.py</code> in this folder reproduces every table in §4–§10 from hard-coded filing inputs and prints to <code>model_output.txt</code>. To update after tomorrow's print: replace OCF, cash interest, capex, leases, holdbacks, debt and cash with the Q1 figures; re-run; the sensitivity grid, scenario table and covenant back-solve refresh automatically. The covenant back-solve (<code>covenant EBITDA = net first-lien debt ÷ reported ratio</code>) is the first thing to re-check.</p>
+<p><strong>Limitations and unverified items.</strong></p>
+<ul>
+<li>The <strong>Q1 FY27 results date (10 November 2026)</strong> comes from the vendor calendar; no company notice was located [M].</li>
+<li><strong>Individual ownership percentages</strong> for Plantro and EdgePoint are not disclosed in the sources reviewed; only the ~36% combined figure from the 5 November release is verified [C].</li>
+<li>The <strong>exact date of the Competition Bureau discontinuance</strong> was not located; the substance (inquiry discontinued, no further steps) is from a TheFly summary of the company's announcement [U].</li>
+<li>The <strong>converts' fair value</strong> (C$104.4M) is a Level 3 model output reflecting the company's own credit-risk assumption, not a traded price [F, Note 14/Note 20]. It is used as a market signal, not as a mark.</li>
+<li>The <strong>Canadian FS division EBITDA (~C$50M)</strong> used in the divestiture illustration is an estimate; the company reports geography, not the FS/non-FS split [E].</li>
+<li><strong>Scenario probabilities are subjective</strong> [E]. They are stated so the reader can substitute their own and re-derive the central value.</li>
+<li>The <strong>adjusted EPS miss</strong> quoted in market coverage (a loss of C$0.66 versus a forecast near breakeven) is a vendor-defined measure; the audited net loss per share is C$0.57. The difference is finance-cost and FX marks, not cash [M][F].</li>
+</ul>
+<hr />
+<h2 id="19-sources">19. Sources</h2>
+<p><strong>Primary filings (T1)</strong>
+1. Dye &amp; Durham Limited — Audited Consolidated Financial Statements, FY2026 (28 Sep 2026). https://dyedurham.com/wp-content/uploads/2026/09/DD-FY2026-Audited-Annual-Financial-Statements-Filing-Version.pdf
+2. Dye &amp; Durham Limited — FY2026 Management's Discussion &amp; Analysis (28 Sep 2026). https://dyedurham.com/wp-content/uploads/2026/09/DD-FY2026-Annual-MDA-Filing-Version.pdf
+3. Dye &amp; Durham Limited — Annual Information Form, FY2026. https://dyedurham.com/wp-content/uploads/2026/09/DD-FY2026-AIF-Filing-Version.pdf</p>
+<p><strong>Company releases (T1 for events, guidance and management claims)</strong>
+4. Q4 and year-end FY2026 results (29 Sep 2026). https://dyedurham.com/dye-durham-reports-fourth-quarter-and-year-end-fiscal-2026-financial-results/
+5. Support agreements with Plantro and EdgePoint (5 Nov 2026). https://dyedurham.com/dye-durham-announces-support-agreements-with-plantro-and-edgepoint-strengthening-governance-with-new-appointments/
+6. Conclusion of Transformation Committee; interim CEO and new chair (31 Aug 2026). https://dyedurham.com/dye-durham-announces-conclusion-of-transformation-committee-and-announces-appointment-of-interim-ceo-and-new-board-chair/
+7. CEO transition (23 Jun 2026). https://dyedurham.com/dye-durham-announces-ceo-transition/
+8. Q4 FY2026 results presentation (30 Sep 2026). https://dyedurham.com/wp-content/uploads/2026/02/Q4-26-DND-Investor-Presentation_Sept28.pdf
+9. Shareholder rights plan (31 Mar 2026) and special-meeting results (9 Jun 2026); excess-proceeds offer results (12 Mar 2026); Ontario registry contract (2 Mar 2026); Unity platform launches (9 Feb and 12 May 2026) — all at https://dyedurham.com/media/</p>
+<p><strong>Market and third-party (T2/T3)</strong>
+10. Q4 FY2026 earnings call transcript, Investing.com (30 Sep 2026). https://ca.investing.com/news/stock-market-news/earnings-call-transcript-dye--durham-q4-2026-revenue-beats-but-eps-miss-hits-shares-93CH-4860881
+11. "Why is Dye &amp; Durham stock collapsing today?", Investing.com (30 Sep 2026). https://ca.investing.com/news/stock-market-news/why-is-dye--durham-stock-collapsing-today-93CH-4860481
+12. Moody's downgrade to Caa1, Investing.com (25 Jun 2026); S&amp;P downgrade to CCC+, Investing.com (12 Jun 2026); lenders retain Houlihan Lokey, Bloomberg via Investing.com (27 Jul 2026). https://ca.investing.com/equities/dye-durham-ltd-news
+13. StockAnalysis — quote, market cap, forecast and analyst targets. https://stockanalysis.com/quote/tsx/DND/ and /forecast/
+14. Globe and Mail — "Dye &amp; Durham appoints fifth chair in less than a year as stock plumbs record lows" (31 Aug 2026); "Dye &amp; Durham ex-CEO Matthew Proud rejoins board" (5 Nov 2026).
+15. TheFly via TipRanks — "Dye &amp; Durham announces discontinuance of competition inquiry". https://www.tipranks.com/news/the-fly/dye-durham-announces-discontinuance-of-competition-inquiry-thefly
+16. MarketScreener — Q4 revenue C$104.2M vs FactSet estimate C$94.9M (29 Sep 2026).
+17. Reuters — "Software maker Dye &amp; Durham gets unsolicited $940 mln go-private offer" (25 Feb 2025).
+18. Yahoo Finance chart API — daily OHLCV for DND.TO, used for all price and volume references (method appendix; not cited as a page).</p>
+<p><strong>Consulted, not cited:</strong> Kalkine Q4 recap; Quartr company page; AllInvestView earnings page; ad-hoc-news FY2026 summary; thestockobserver Q4 call notes (superseded by the full transcript).</p>
+<hr />
+<p><em>This is analysis, not investment advice. The author holds no position in DND.TO. Figures are drawn from the sources above; estimates are tagged [E] and unverified third-party reports [U].</em></p>
+</div>
+</body></html>

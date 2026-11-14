@@ -1,0 +1,1598 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MGY · informe</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>MGY · 2026-10-03</span></div>
+<div class="wrap">
+<h1 id="mgy-magnolia-oil-gas-corporation-analisis-exhaustivo">MGY · Magnolia Oil &amp; Gas Corporation — Análisis exhaustivo</h1>
+<p><strong>Fecha del informe:</strong> 3-oct-2026 · <strong>Datos de mercado:</strong> cierre del 2-oct-2026 (NYSE) · <strong>Carácter:</strong> análisis educativo; no es consejo de inversión.</p>
+<h2 id="metodologia-y-convenciones">Metodología y convenciones</h2>
+<ul>
+<li>Jerarquía de evidencia: <strong>[V]</strong> verificado en fuente primaria (comunicado de la compañía, filing SEC, API oficial) · <strong>[S]</strong> fuente secundaria/agregador (prensa financiera, stockanalysis.com, Enverus vía prensa) · <strong>[E]</strong> estimación propia de este análisis · <strong>[NF]</strong> no encontrado / no verificable.</li>
+<li>En todo el informe se distingue <strong>standalone</strong> (Magnolia pre-WildFire) de <strong>pro-forma</strong> (post-adquisición, cerrada el 10-sep-2026; primer trimestre completo pro-forma = Q4-26).</li>
+<li>Fuentes principales: PRs de magnoliaoilgas.com, 10-K FY2025, 10-Qs 2026, 8-Ks jul–oct 2026, Yahoo Finance (precios), stockanalysis.com (agregados), Enverus vía prensa sectorial.</li>
+<li>Cifras en USD salvo indicación. Producción en boe/d. «Oil» = crudo. Convención numérica US: miles con coma, decimales con punto (p. ej. $1,311.8M).</li>
+</ul>
+<h2 id="cronologia-corporativa-2026-el-ano-que-lo-cambia-todo">Cronología corporativa 2026 (el año que lo cambia todo)</h2>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20-jul</td>
+<td>Anuncio de adquisición de WildFire Energy ($4.06B incl. deuda). Lanzamiento de offering de equity $1.0B+. Dividendo +9% a $0.18/trimestre. La acción cae −6.35% ese día. [V]/[S]</td>
+</tr>
+<tr>
+<td>20–21-jul</td>
+<td>Pricing del offering: 46.315.790 accs @ $23.75 + opción de 6.947.368 accs (ejercida) = 53.263.158 accs (~$1.265B). Cierre 22-jul. [V]</td>
+</tr>
+<tr>
+<td>22-jul</td>
+<td>Pricing de $500M en notas senior 6.625% vencimiento 2034 (cierre 5-ago). [V]</td>
+</tr>
+<tr>
+<td>5-ago</td>
+<td>Resultados Q2-26: NI $181.8M, EBITDAX $370.3M, FCF $234.6M; guía standalone FY26 sube de +5% a +6%. [V]</td>
+</tr>
+<tr>
+<td>10-sep</td>
+<td><strong>Cierre de la adquisición de WildFire</strong>: $2.57B en cash + 32.203.000 acciones + asunción de $600M en notas 7.50% de 2029. [V]/[S]</td>
+</tr>
+<tr>
+<td>30-sep/1-oct</td>
+<td>Update interino post-cierre: deuda neta ~$1.9B, ~267M acciones, guía Q4-26 pro-forma, nuevos hedges, ventas non-core. [V]</td>
+</tr>
+<tr>
+<td>4–5-nov</td>
+<td>Resultados Q3-26 (call el 5-nov, 10:00 CT). [V]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ficha-rapida-datos-al-2-oct-2026">Ficha rápida (datos al 2-oct-2026)</h2>
+<ul>
+<li>Precio: <strong>$24.07</strong> · Rango 52s: $21.07–$32.76 → <strong>−26.5% desde el máximo</strong> · YTD <strong>+12.1%</strong> · 52 semanas: ≈+0.5% [S].</li>
+<li>Acciones: <strong>~267M</strong> (fin de Q3-26, post-deal) [V]. El conteo pasó de ~181.7M (30-jun) a ~267M: +53.26M del offering, +32.20M de la consideración a WildFire, neteado por recompras del trimestre (~2.3M) y vesting.</li>
+<li>Market cap ≈ <strong>$6.4B</strong> [E: 267M × $24.07] · Deuda neta ≈ <strong>$1.9B</strong> [V] · <strong>EV ≈ $8.3B</strong> [E].</li>
+<li>Retorno de capital: dividendo $0.18/trim ($0.72 anualizado ≈ 3.0% de yield) + programa de recompras ≥1% de acciones por trimestre [V].</li>
+<li>Consenso sell-side: <strong>Buy</strong>; precio objetivo medio <strong>$33.18</strong> (19 analistas; Truist $35, Siebert Williams $32, Roth $29) [S].</li>
+<li>Beta (5a) 0.70 [S]. Insiders ~0.8%, institucionales ~89% [S, pre-deal; 13F a 30-jun].</li>
+<li>Short interest: 25.12M acciones ≈ <strong>9.4% del capital</strong> (~10.8% de un float estimado de ~233M; ~6.4 días de cobertura) [V FINRA].</li>
+<li>Referencias de mercado (2-oct): <strong>WTI $91.11</strong> (rango 52s $54.98–$119.48) · Brent $102.25 · Henry Hub $3.04 (rango 52s $2.48–$7.83) [V Yahoo].</li>
+</ul>
+<blockquote>
+<p>Lectura de una frase: Magnolia ha duplicado su escala (producción pro-forma ~158–160 Mboe/d) comprando WildFire en su propio barrio (Giddings/Austin Chalk), financiado con equity+deuda, con la deuda neta ya en ~$1.9B (≈1,0x EBITDA 2027E, objetivo ≤0,5x) y un libro de hedges que protege ~la mitad del crudo hasta mid-2027. La pregunta central del informe es si $24.07 paga ese nuevo perfil — y qué precio del petróleo lo justifica.</p>
+</blockquote>
+<hr />
+<h1 id="resumen-ejecutivo">Resumen ejecutivo</h1>
+<p><strong>Magnolia Oil &amp; Gas (NYSE: MGY)</strong> es un E&amp;P independiente de South Texas (Eagle Ford + Austin Chalk; áreas de Giddings y Karnes) que cotiza a <strong>$24.07</strong> con ~<strong>267M acciones</strong> (market cap ≈ $6.4B; deuda neta ≈ $1.9B; <strong>EV ≈ $8.3B</strong>).</p>
+<p><strong>El año bisagra.</strong> El 10-sep-2026 Magnolia cerró la compra de <strong>WildFire Energy por ~$4.06B incluyendo deuda</strong>, financiada con equity ($1.27B: 53.3M acciones a $23.75), notas nuevas ($500M 6.625%/2034) y deuda asumida ($600M 7.50%/2029). El deal <strong>duplica la escala</strong> (producción pro-forma ~158–160 Mboe/d vs 106 standalone; inventario +70% → &gt;1.000 localizaciones), más que dobla Giddings y promete <strong>&gt;$100M/año de sinergias</strong>. El conteo de acciones pasó de 183.7M a ~267M (+45%) y la deuda neta de ~$0.1B a ~$1.9B. La empresa mantiene su marco: reinversión &lt;55% del EBITDAX, dividendo creciente ($0.72/año) y recompras ≥1%/trimestre, con el exceso de caja a desapalancar hasta ≤0.5x.</p>
+<p><strong>El hallazgo central de este análisis.</strong> Construí un modelo bottom-up pro-forma (calibrado contra los resultados reales de Q2-26 con error &lt;0.2% en ingresos) que aplica el libro real de hedges (&gt;50% del oil cubierto hasta Q2-27). Resultado:</p>
+<ul>
+<li>A un WTI sostenido de <strong>$75–85</strong> (≈ strip 2027), MGY vale <strong>$26–40/acción</strong> según múltiplo (4.0–5.0x EBITDAX); central ~<strong>$32–33</strong>.</li>
+<li>El precio actual ($24.07) <strong>descuenta un WTI sostenido de ~$55–71</strong> (banda de múltiplos), o bien solo ~3.8–4.1x EBITDAX sobre el strip. Es decir: <strong>el mercado ya cotiza, aproximadamente, mi caso bear.</strong></li>
+<li>El sell-side (19 analistas, PT medio <strong>$33.18</strong>; Truist $35) modela ~$80–90 sostenido con re-rating completo: la brecha mercado-calle (~30–40%) es la discrepancia a resolver.</li>
+<li>Valor ponderado por probabilidades (bear 18% / base 47% / bull 25% / cola 10%): <strong>≈ $34–35 (+44%)</strong>, con rango $28–42 según múltiplo. Downside severo solo si el crudo rompe &lt;$55 sostenido (a $55 @4.0x: $17.85, −26%).</li>
+</ul>
+<p><strong>Argumentos a favor:</strong> inventario profundo y contiguo en una cuenca que MGY conoce (Austin Chalk probada; upside Woodbine), sinergias cuantificadas ($700M NPV), FCF 2027E a $80 ≈ <strong>$1.04B (16% del market cap actual)</strong>, desapalancamiento a ≤0.5x alcanzable en 2027 en escenario base, opción 2028 sin hedges sobre crudo alto, dividendo +80% en 5 años.</p>
+<p><strong>Argumentos en contra:</strong> el deal se pagó con equity a $23.75 (cerca de mínimos de 52s) y con el crudo en la zona alta ($91); el FCF 2027 está <strong>truncado por las coberturas</strong> (−$127M a $85, −$187M a $91); integración de un 2x de tamaño pendiente de validación empírica (primer test: Q4-26 con 159–161 Mboe/d y 49–50% oil); short interest elevado (~10.8% del float); la acción está −26.5% desde máximos de 52s ($32.76) y bajo las medias de 50/200 días.</p>
+<p><strong>Catalizadores inmediatos:</strong> resultados Q3-26 el <strong>4–5 nov</strong> (primera foto pro-forma, guía), confirmación de sinergias (≥1/3 para dic-26), ampliación esperable de la autorización de recompra, y el 10-K FY26 (feb-27) con reservas pro-forma y primer trimestre completo del negocio integrado.</p>
+<p><strong>Veredicto (detalle en §11):</strong> calidad alta (75/100 en el scorecard), precio que descuenta un mundo adverso que mi análisis considera improbable (~18%). Convicción media (65%), condicionada a que el crudo no se rompa y la integración entregue. <em>No es consejo de inversión.</em></p>
+<hr />
+<h1 id="1-la-empresa-modelo-de-negocio-y-activos">§1 · La empresa: modelo de negocio y activos</h1>
+<h2 id="que-es-magnolia-oil-gas-mgy">Qué es Magnolia Oil &amp; Gas (MGY)</h2>
+<ul>
+<li>E&amp;P independiente con sede en Houston (NYSE: MGY), centrada en <strong>South Texas</strong>: núcleo del <strong>Eagle Ford Shale</strong> y la <strong>Austin Chalk</strong>. ~262 empleados (2025/26, pre-deal) [S]. Constituida 2017; cotiza desde may-2017. [S]</li>
+<li>Historia societaria: formada con sponsorship de EnerVest/NGP; la clase B (unidades de Magnolia LLC) se ha ido extinguiendo — en H1-26 la compañía compró y canceló el remanente por $19.8M; el promedio ponderado de clase B en Q2-26 es ya cero. [V]</li>
+<li>Clase única cotizada (Class A). CEO y Chairman: <strong>Chris Stavros</strong>. [V]</li>
+</ul>
+<h2 id="posicion-de-activos-pro-forma-tras-wildfire">Posición de activos (pro-forma, tras WildFire)</h2>
+<p><strong>Giddings (motor de crecimiento — Austin Chalk / Eagle Ford / Woodbine)</strong>
+- &gt;<strong>1.25M acres netos</strong> (1.55M+ brutos) — WildFire aportó ~810k netos en 9 condados al este de Texas: Brazos, Burleson, Fayette, Grimes, Lee, Madison, Milam, Robertson, Washington. [V]/[S]
+- Producción standalone Q2-26: <strong>85.5 Mboe/d</strong> = 81% del volumen total del trimestre standalone, +10% YoY (oil +7%). [V]
+- Múltiples benches: Austin Chalk (foco histórico de MGY desde 2018), Eagle Ford (desarrollo histórico de WildFire), <strong>Woodbine</strong> (upside de appraisal). [V]
+- Infraestructura adquirida: <strong>&gt;500 millas de gas gathering</strong> + <strong>mina de arena in-basin</strong> que cubre ~80% del consumo anual de arena pro-forma (100% de WildFire + ventas a terceros). [V]</p>
+<p><strong>Karnes (base core — Eagle Ford)</strong>
+- Acreage contiguo con WI operado ~98% tras el intercambio con la venta de Dimmit/Zavala (616 acres recibidos en Gonzales; bloque consolidado en Q1-26). [V]
+- Producción implícita standalone: ~20.6 Mboe/d por diferencia (106.1 − 85.5) [E].</p>
+<h2 id="el-modelo-diferenciado-y-que-queda-de-el-tras-el-deal">El modelo «diferenciado» (y qué queda de él tras el deal)</h2>
+<ol>
+<li><strong>Reinversión baja</strong>: D&amp;C ≤55% del EBITDAX ajustado (pro-forma). En Q2-26 standalone el capex D&amp;C fue $125M = <strong>34% del EBITDAX</strong>. [V]</li>
+<li><strong>Crecimiento moderado y consistente</strong>: 4–5% anual pro-forma (oil y total); FY26 standalone revisado a +6%. [V]</li>
+<li><strong>Retorno de capital fuerte</strong>: dividendo creciente + recompras ≥1%/trimestre; el exceso de FCF va a reducir deuda (objetivo <strong>≤0.5x deuda neta/EBITDA</strong>). La deuda del deal se declara «temporal». [V]</li>
+</ol>
+<h2 id="metricas-de-calidad-del-negocio-standalone-q2-26">Métricas de calidad del negocio (standalone Q2-26)</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Q2-26</th>
+<th>Q2-25</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producción total</td>
+<td>106.1 Mboe/d</td>
+<td>98.2</td>
+<td>+8% YoY [V]</td>
+</tr>
+<tr>
+<td>Oil</td>
+<td>41.9 Mbbl/d</td>
+<td>40.0</td>
+<td>+5% YoY [V]</td>
+</tr>
+<tr>
+<td>Mix (boe): oil / NGL / gas</td>
+<td>39.5% / 29.1% / 31.4%</td>
+<td>—</td>
+<td>[E, calc]</td>
+</tr>
+<tr>
+<td>Realización oil</td>
+<td>$98.13/bbl (<strong>106% del WTI</strong>)</td>
+<td>$62.20 (98%)</td>
+<td>Premium Golfo por exportación [V]</td>
+</tr>
+<tr>
+<td>Realización NGL</td>
+<td>$23.25/bbl</td>
+<td>$19.94</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Realización gas</td>
+<td>$2.18/mcf (75% HH)</td>
+<td>$2.55 (74%)</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>LOE</td>
+<td>$5.01/boe</td>
+<td>$4.88</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>GP&amp;T</td>
+<td>$1.78/boe</td>
+<td>$1.84</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Impuestos ≠ renta</td>
+<td>$2.36/boe</td>
+<td>$2.10</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>DD&amp;A</td>
+<td>$12.07/boe</td>
+<td>$11.98</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>G&amp;A</td>
+<td>$29.2M ($3.0/boe)</td>
+<td>$23.3M</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Margen operativo pre-tax</td>
+<td><strong>50% de ingresos</strong></td>
+<td>—</td>
+<td>[V]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="por-que-importa-el-premium-de-la-costa-del-golfo">Por qué importa el «premium de la Costa del Golfo»</h2>
+<p>La posición de MGY está cerca de los mercados de exportación del Golfo (MEH/LLS-linked): en Q2-26 realizó el <strong>106% del WTI</strong> por su crudo, cuando los productores del Pérmico suelen sufrir diferenciales negativos. Es una ventaja estructural del activo (calidad de crudo + logística), citada expresamente como argumento del deal («premium pricing for our products»). En la guía Q4-26 la compañía asume una realización pre-hedge de MEH menos $2.00/bbl. [V]</p>
+<h2 id="advertencia-de-lectura">Advertencia de lectura</h2>
+<p>Tras el cierre del 10-sep-2026, toda comparación per-share debe hacerse sobre <strong>~267M acciones</strong> (no las ~184M históricas) y toda comparación de producción sobre la base <strong>pro-forma ~158–160 Mboe/d</strong>. El mercado ha penalizado el cambio de escala (ver §3 y §10).</p>
+<hr />
+<h1 id="2-el-evento-central-la-compra-de-wildfire-energy-406b">§2 · El evento central: la compra de WildFire Energy ($4.06B)</h1>
+<h2 id="terminos-del-acuerdo">Términos del acuerdo</h2>
+<ul>
+<li><strong>Anunciada</strong> el 20-jul-2026; <strong>cerrada</strong> el 10-sep-2026 (antes de lo previsto). [V]</li>
+<li>Valor: <strong>~$4.06B incluyendo deuda</strong>; al cierre: <strong>$2.57B en cash + 32.203.000 acciones de Clase A + asunción de $600M en notas senior 7.50% con vencimiento 2029</strong> de WildFire. [V]/[S]</li>
+<li>Vendedores: WildFire Energy I LLC — plataforma respaldada por private equity (<strong>Warburg Pincus y Kayne Anderson</strong>). [S]</li>
+<li>Asesores: J.P. Morgan / Moelis / Citigroup (Magnolia); Jefferies / BofA (WildFire); Kirkland &amp; Ellis y Troutman Pepper Locke (legal). [V]</li>
+<li>Contexto sectorial (Enverus/Dittmar): la mayor operación «pure-play» del Eagle Ford en más de una década; quinta en superar $3B en la cuenca; una de las últimas plataformas PE de escala en shale USA. [S]</li>
+</ul>
+<h2 id="financiacion-el-kit-completo">Financiación (el kit completo)</h2>
+<table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Importe</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equity offering (Clase A)</td>
+<td><strong>~$1.265B</strong></td>
+<td>46.315.790 accs @ $23.75 + opción de 6.947.368 accs ejercida (total 53.263.158). Cierre 22-jul. [V]</td>
+</tr>
+<tr>
+<td>Notas senior nuevas</td>
+<td><strong>$500M</strong></td>
+<td>6.625% venc. 2034; cierre 5-ago. [V]</td>
+</tr>
+<tr>
+<td>Deuda de WildFire asumida</td>
+<td><strong>$600M</strong></td>
+<td>Notas 7.50% venc. 2029. [V]/[S]</td>
+</tr>
+<tr>
+<td>Revolver (RBL 3ª A&amp;R)</td>
+<td>$2.25B compromisos / $2.0B base / <strong>$1.75B capacidad</strong></td>
+<td>Reemplaza la anterior ($1.5B); condicionado al cierre; disponible junto a caja para el remanente. [V]</td>
+</tr>
+<tr>
+<td>Bridge facility</td>
+<td>hasta <strong>$1.5B</strong> (364 días)</td>
+<td>Backstop comprometido (JPM/Citi/WF); mgmt no espera disponer. [V]</td>
+</tr>
+<tr>
+<td>Caja en balance</td>
+<td>—</td>
+<td>$295.9M a 30-jun. [V]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resultado en balance (30-sep, pro-forma):</strong> deuda neta ≈ <strong>$1.9B</strong> — «por debajo de 1,0x deuda neta / EBITDA 2027E a precios de strip», más de un año antes de lo previsto en la transacción. Objetivo declarado: <strong>≤0.5x</strong>. [V]</p>
+<h2 id="que-compro-exactamente">Qué compró exactamente</h2>
+<ul>
+<li><strong>~810.000 acres netos</strong> en Giddings → posición pro-forma &gt;1.25M acres netos (1.55M+ brutos) en 9 condados. [V]</li>
+<li><strong>~53 Mboe/d de producción (~70% oil)</strong>, decline base del oil del ~29% (bajo). Base PDP «oily» de baja declinación con desarrollo histórico en Eagle Ford; upside en Austin Chalk y Woodbine. [V]</li>
+<li>Infra: &gt;500 millas de gas gathering + mina de arena. [V]</li>
+<li>Inventario: +~70% de localizaciones según Enverus → <strong>&gt;1.000 netas a laterales de 10.000'</strong>. [S]</li>
+<li>Sinergias: <strong>&gt;$100M/año</strong> run-rate (NPV ~$700M); ≥1/3 realizadas para fin de 2026. Fuentes: laterales más largos, subsuperficie combinada, infraestructura compartida, arena propia, supply chain y G&amp;A. [V]</li>
+</ul>
+<h2 id="metricas-de-precio-implicitas-calculos-propios-e">Métricas de precio implícitas (cálculos propios [E])</h2>
+<ul>
+<li>~$76.6k por boe/d de capacidad (flowing) — $4.06B / 53 Mboe/d.</li>
+<li>~$5.0k por acre neto ($4.06B / 810k acres).</li>
+<li>EBITDAX normalizado asumiendo márgenes tipo MGY: ~$0.6–0.7B → <strong>~6x EBITDAX pagado; ~5x ajustado por sinergias</strong>. El mercado no lo consideró barato el día del anuncio (acción −6.35%). [E]</li>
+</ul>
+<h2 id="ajustes-de-cartera-inmediatos-portfolio-optimization">Ajustes de cartera inmediatos (portfolio optimization)</h2>
+<ul>
+<li><strong>Venta de non-core en Dimmit y Zavala</strong> (sur de Texas): $47.5M en cash + 616 acres netos en Gonzales (eleva WI operado en el bloque contiguo a 98%). Producción vendida: ~1.4 Mboe/d (~84% oil). [V]</li>
+<li>Costes one-off esperados en Q3-26: $65–75M de transacción/integración + $14M de sísmica 3D (exploración). [V]</li>
+</ul>
+<h2 id="hitos-alcanzados-ya-update-del-1-oct">Hitos alcanzados ya (update del 1-oct)</h2>
+<ol>
+<li>Venta non-core cerrada (arriba). 2. Deuda neta ~$1.9B (&lt;1.0x 2027E EBITDA, un año+ antes de lo previsto). 3. Nuevos hedges («collars» a precios atractivos; &gt;50% del oil cubierto hasta Q2-27). 4. ≥1/3 de sinergias para fin de 2026. [V]</li>
+</ol>
+<h2 id="pro-forma-financiero-y-contabilidad-de-la-compra-v">Pro forma financiero y contabilidad de la compra [V]</h2>
+<ul>
+<li><strong>Pro forma (Ex-99.4, 8-K del 14-sep-2026; como si el cierre hubiera sido el 1-ene-2025):</strong> ingresos H1-26 <strong>$1,473.5M</strong>; beneficio neto H1-26 <strong>$355.3M</strong> (EPS PF ~$1.30 atrib. Clase A). FY2025 PF: ingresos <strong>$2,199.1M</strong>; beneficio neto <strong>$710.3M</strong> (~$2.55/acción PF diluido). Es decir: a precios de 2025, el deal resultaba ya accretivo por acción pese a la dilución del 45%. [V]</li>
+<li><strong>Contabilidad de compra (preliminar, estimación 31-ago-2026):</strong> consideración total <strong>$3,514.7M</strong> (= $2,650M cash + $864.7M en acciones valoradas a $26.85); propiedades O&amp;G +<strong>$4,262.5M</strong>; deuda asumida $600.0M. Escrow de $200M al firmar; fecha efectiva económica: <strong>1-jun-2026</strong>. El cash final se ajustó a <strong>$2,570M</strong> al cierre. [V]</li>
+<li>El libro de derivados heredado de WildFire se valoró en <strong>−$22.8M neto (pasivo)</strong> en la compra — coherente con swaps bajo mercado [V, Ex-99.4].</li>
+</ul>
+<h2 id="lectura-del-mercado-hasta-ahora">Lectura del mercado (hasta ahora)</h2>
+<ul>
+<li><strong>Reacción al anuncio: −6.35%</strong> ese día; el offering se precio a $23.75 (descuento). [S]</li>
+<li>Desde el cierre de julio ($25.53) hasta hoy ($24.07): <strong>−5.7%</strong>, en un contexto de WTI $91 (frente a picos de ~$119 en marzo). [V]</li>
+<li>Sell-side: <strong>Truist subió a Buy</strong> con $33 y ha ido elevando ($34 → $35); Siebert Williams a Buy $32; Roth $29. [S]</li>
+<li>Short interest ~25.1M acciones (~9.4% del capital; ~10.8% del float estimado): nivel elevado — compatible con coberturas de flujos de equity offering/arbitraje de la operación; a vigilar en §7. [V FINRA]</li>
+</ul>
+<h2 id="preguntas-abiertas-del-deal-a-resolver-con-datos-de-los-proximos-trimestres">Preguntas abiertas del deal (a resolver con datos de los próximos trimestres)</h2>
+<ol>
+<li><strong>Integración y sinergias</strong>: ¿se cumplen los $100M/año (1/3 ya para dic-26)?</li>
+<li><strong>Productividad de pozos</strong> Giddings pro-forma (laterales más largos: datos IP30/IP90 en Q4-26).</li>
+<li><strong>Desapalancamiento real</strong>: del ~1.0x a ≤0.5x — ¿en cuántos trimestres y con qué petróleo?</li>
+<li><strong>Recompras con deuda alta</strong>: mgmt promete ≥1%/trimestre <em>y</em> reducir deuda — la aritmética del FCF manda.</li>
+</ol>
+<hr />
+<h1 id="3-el-libro-de-hedges-suelo-puesto-techo-vendido">§3 · El libro de hedges: suelo puesto, techo vendido</h1>
+<p><strong>Contexto de política:</strong> Magnolia no cubría su producción de forma significativa antes de 2026 (modelo «unhedged» clásico del E&amp;P disciplinado). Con la adquisición de WildFire: (1) <strong>hereda swaps de crudo de WildFire</strong> y (2) <strong>añade collars de coste cero</strong> en Q3-26 «para proteger la ejecución del modelo mientras se reduce deuda, manteniendo exposición a precios más altos». Resultado: <strong>&gt;50% del crudo cubierto hasta Q2-27</strong>. [V]</p>
+<h2 id="collares-anadidos-por-magnolia-coste-cero-v">Collares añadidos por Magnolia (coste cero) [V]</h2>
+<table>
+<thead>
+<tr>
+<th>Crudo — collars</th>
+<th>Sep-26</th>
+<th>Q4-26</th>
+<th>Q1-27</th>
+<th>Q2-27</th>
+<th>Q3-27</th>
+<th>Q4-27</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volumen (Bbl)</td>
+<td>900.000</td>
+<td>3.680.000</td>
+<td>2.700.000</td>
+<td>2.275.000</td>
+<td>920.000</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Suelo medio ($/Bbl)</td>
+<td>$72.50</td>
+<td>$73.75</td>
+<td>$70.83</td>
+<td>$70.00</td>
+<td>$70.00</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Techo medio ($/Bbl)</td>
+<td>$98.09</td>
+<td>$90.97</td>
+<td>$88.68</td>
+<td>$82.31</td>
+<td>$80.08</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="swaps-heredados-de-wildfire-v">Swaps heredados de WildFire [V]</h2>
+<table>
+<thead>
+<tr>
+<th>Crudo — swaps</th>
+<th>Sep-26</th>
+<th>Q4-26</th>
+<th>Q1-27</th>
+<th>Q2-27</th>
+<th>Q3-27</th>
+<th>Q4-27</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volumen (Bbl)</td>
+<td>773.754</td>
+<td>2.261.947</td>
+<td>2.066.605</td>
+<td>1.982.790</td>
+<td>893.666</td>
+<td>866.955</td>
+</tr>
+<tr>
+<td>Precio fijo medio ($/Bbl)</td>
+<td>$64.16</td>
+<td>$63.85</td>
+<td>$63.46</td>
+<td>$65.02</td>
+<td>$67.37</td>
+<td>$66.34</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cobertura-sobre-el-oil-pro-forma-calculo-propio-e">Cobertura sobre el oil pro-forma (cálculo propio [E])</h2>
+<table>
+<thead>
+<tr>
+<th>Periodo</th>
+<th>Oil cubierto (M Bbl)</th>
+<th>% del oil pro-forma estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q4-26</td>
+<td>5.94</td>
+<td><strong>82%</strong></td>
+</tr>
+<tr>
+<td>Q1-27</td>
+<td>4.77</td>
+<td><strong>66%</strong></td>
+</tr>
+<tr>
+<td>Q2-27</td>
+<td>4.26</td>
+<td><strong>58%</strong></td>
+</tr>
+<tr>
+<td>Q3-27</td>
+<td>1.81</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Q4-27</td>
+<td>0.87</td>
+<td>12%</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Base: guía del 1-oct — Q4-26 ~160 Mboe/d con 49–50% oil; 2027 ~80 Mbo/d. El roll-off de cobertura durante 2027 es el «reloj» del caso: 2028 llega prácticamente sin coberturas.)</em></p>
+<h2 id="pl-del-libro-a-distintos-wti-sostenidos-e-calculado-sobre-las-tablas-v">P&amp;L del libro a distintos WTI sostenidos ([E], calculado sobre las tablas [V])</h2>
+<p><em>(+ = ganancia/ingreso extra del hedge; − = lastre frente a vender todo a mercado)</em></p>
+<table>
+<thead>
+<tr>
+<th>WTI</th>
+<th>2S-2026 (M$)</th>
+<th>2027 (M$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$55</td>
+<td>+112</td>
+<td>+149</td>
+</tr>
+<tr>
+<td>$60</td>
+<td>+74</td>
+<td>+90</td>
+</tr>
+<tr>
+<td>$65</td>
+<td>+36</td>
+<td>+32</td>
+</tr>
+<tr>
+<td>$70</td>
+<td>−2</td>
+<td>−27</td>
+</tr>
+<tr>
+<td>$75</td>
+<td>−34</td>
+<td>−58</td>
+</tr>
+<tr>
+<td>$80</td>
+<td>−49</td>
+<td>−87</td>
+</tr>
+<tr>
+<td>$85</td>
+<td>−64</td>
+<td>−127</td>
+</tr>
+<tr>
+<td><strong>$91 (spot)</strong></td>
+<td><strong>−82</strong></td>
+<td><strong>−187</strong></td>
+</tr>
+<tr>
+<td>$100</td>
+<td>−145</td>
+<td>−292</td>
+</tr>
+<tr>
+<td>$110</td>
+<td>−221</td>
+<td>−409</td>
+</tr>
+<tr>
+<td>$120</td>
+<td>−297</td>
+<td>−526</td>
+</tr>
+</tbody>
+</table>
+<h2 id="como-leerlo-para-el-caso-de-tesis-petroleo-alto">Cómo leerlo (para el caso de tesis «petróleo alto»)</h2>
+<ol>
+<li><strong>El libro es un seguro pagado con techo vendido</strong>: protege la caja si el petróleo rompe a la baja (floors $70–74 + swaps $64–67 cubren ~2/3 del oil hasta Q1-27), pero <strong>limita la participación al alza</strong>: a $91 sostenido, el lastre es ≈ −$0.70/acción anualizado (≈2.9% del market cap) [E].</li>
+<li><strong>2027 es el año del techo</strong>: ~58–66% del oil cubierto con techos efectivos entre $80 y $89 (collars) y swaps fijos a $63–67. Escenarios de $100+ rinden bastante menos FCF que un MGY «sin cubrir».</li>
+<li><strong>2028 es el año de la beta</strong>: coberturas ≈ cero → Magnolia recupera exposición completa al crudo. Para la tesis alcista de Sergio (crudo en máximos sin timeline), <strong>el vehículo MGY participa de verdad a partir de 2028</strong>, no antes.</li>
+<li><strong>Asimetría del libro</strong>: el lastre a $110–120 (−$409M/−$526M en 2027) es mayor que la protección a $55–60 (+$149M/+$90M). Es el precio pagado por collares coste cero negociados con skew a favor del banco — dato relevante para calibrar escenarios, no una «mala decisión» per se (protegen un plan de desapalancamiento).</li>
+<li><strong>Los swaps heredados no son un error nuevo de management</strong>: eran parte del paquete WildFire; su valor (y su lastre contra spot) estaba en el precio del deal. Contra WTI $91, ese tramo «bloquea» ~40–45% del oil de WildFire a ~$64–67 hasta 2027. [E]</li>
+<li><strong>Datos primarios del libro [V]:</strong> MGY estaba <strong>sin coberturas</strong> hasta mediados de 2026 — sin derivados en balance a 30-jun-26; los collares se ejecutaron en julio-2026 (10-Q Q2-26). El libro heredado de WildFire se valoró en <strong>−$22.8M neto (pasivo)</strong> en la contabilidad preliminar de la compra (Ex-99.4). No hay coberturas de gas [NF]. Declaración de la compañía: «&gt;50% del oil cubierto hasta Q2-2027». [V]</li>
+</ol>
+<hr />
+<h1 id="4-financieros-cinco-anos-verificados-y-el-q2-26">§4 · Financieros: cinco años verificados y el Q2-26</h1>
+<p><em>Base: PRs anuales, 10-Ks y 10-Qs [V]; formato US (miles con coma). Cifras standalone salvo indicación.</em></p>
+<h2 id="serie-anual-usd-m-salvo-indicacion-v">Serie anual (USD M salvo indicación) [V]</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>FY21</th>
+<th>FY22</th>
+<th>FY23</th>
+<th>FY24</th>
+<th>FY25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ingresos</td>
+<td>1,078.4</td>
+<td>1,694.5</td>
+<td>1,227.0</td>
+<td>1,315.9</td>
+<td>1,311.8</td>
+</tr>
+<tr>
+<td>Beneficio neto total</td>
+<td>559.7</td>
+<td>1,050.2</td>
+<td>442.6</td>
+<td>397.3</td>
+<td>337.3</td>
+</tr>
+<tr>
+<td>— atribuible a Clase A</td>
+<td>417.3</td>
+<td>893.8</td>
+<td>388.3</td>
+<td>366.0</td>
+<td>325.3</td>
+</tr>
+<tr>
+<td>EBITDAX ajustado</td>
+<td>828.9</td>
+<td>1,345.3</td>
+<td>899.2</td>
+<td>953.3</td>
+<td>906.1</td>
+</tr>
+<tr>
+<td>Flujo de caja operativo</td>
+<td>788.5</td>
+<td>1,296.7</td>
+<td>855.8</td>
+<td>920.9</td>
+<td>878.6</td>
+</tr>
+<tr>
+<td>Capex D&amp;C</td>
+<td>231.9</td>
+<td>459.8</td>
+<td>421.6</td>
+<td>477.0</td>
+<td>460.7</td>
+</tr>
+<tr>
+<td>FCF (definición compañía)</td>
+<td>555.9</td>
+<td>823.5</td>
+<td>412.9</td>
+<td>430.2</td>
+<td>426.6</td>
+</tr>
+<tr>
+<td>Recompras de acciones (cash)</td>
+<td>297.3</td>
+<td>352.2</td>
+<td>205.3</td>
+<td>273.0</td>
+<td>205.5</td>
+</tr>
+<tr>
+<td>Dividendos pagados</td>
+<td>14.1</td>
+<td>75.2</td>
+<td>88.1</td>
+<td>97.6</td>
+<td>113.1</td>
+</tr>
+<tr>
+<td>Producción (Mboe/d)</td>
+<td>66.0</td>
+<td>75.4</td>
+<td>82.3</td>
+<td>89.7</td>
+<td>99.8</td>
+</tr>
+<tr>
+<td>— % oil (sobre boe)</td>
+<td>46%</td>
+<td>44%</td>
+<td>42%</td>
+<td>43%</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>Capex D&amp;C / EBITDAX</td>
+<td>28%</td>
+<td>34%</td>
+<td>47%</td>
+<td>50%</td>
+<td>51%</td>
+</tr>
+<tr>
+<td>Acciones diluidas medias (M)</td>
+<td>239.3</td>
+<td>220.7</td>
+<td>210.2</td>
+<td>200.0</td>
+<td>191.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lecturas:</strong>
+- Crecimiento de producción sostenido (~+9%/año medio 2021–25) con FCF positivo todos los años; retorno al accionista del 54–88% del FCF cada año.
+- La disciplina de reinversión se mantiene: D&amp;C nunca &gt;51% del EBITDAX (FY22 34% en precios de ciclo alto).
+- El conteo de acciones diluidas bajó de 239M (2021) a 191M (2025): <strong>−20% en cinco años</strong> — el motor del valor per-share. En 2026 esa serie se rompe al alza por el deal (abajo).
+- 2022 fue el pico: EBITDAX $1,345M con WTI medio ~$94; 2025 el valle reciente: $906M con WTI ~$65.</p>
+<h2 id="ultimo-trimestre-reportado-q2-26-standalone-v">Último trimestre reportado (Q2-26, standalone) [V]</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Q2-26</th>
+<th>Q2-25</th>
+<th>Δ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ingresos</td>
+<td>$478.8M</td>
+<td>$319.0M</td>
+<td>+50%</td>
+</tr>
+<tr>
+<td>EBITDAX ajustado</td>
+<td>$370.3M</td>
+<td>$223.2M</td>
+<td>+66%</td>
+</tr>
+<tr>
+<td>Beneficio neto (Clase A)</td>
+<td>$181.8M</td>
+<td>$78.1M</td>
+<td>+133%</td>
+</tr>
+<tr>
+<td>EPS diluido</td>
+<td>$0.97</td>
+<td>$0.41</td>
+<td>+137%</td>
+</tr>
+<tr>
+<td>OCF</td>
+<td>$384.0M</td>
+<td>$198.7M</td>
+<td>+93%</td>
+</tr>
+<tr>
+<td>D&amp;C capex</td>
+<td>$125.0M</td>
+<td>$95.2M</td>
+<td>+31%</td>
+</tr>
+<tr>
+<td><strong>FCF</strong></td>
+<td><strong>$234.6M</strong></td>
+<td>$107.5M</td>
+<td>+118%</td>
+</tr>
+<tr>
+<td>Recompras (acciones)</td>
+<td>1.7M ($49.3M)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Dividendos pagados</td>
+<td>$30.8M</td>
+<td>$28.4M</td>
+<td>+8%</td>
+</tr>
+<tr>
+<td>Caja final</td>
+<td>$295.9M</td>
+<td>$251.8M</td>
+<td>+18%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Margen operativo pre-tax del 50%. Reinversión D&amp;C = 34% del EBITDAX. Costes por boe: LOE $4.92 (aj.), GP&amp;T $1.78, impuestos ≠ renta $2.36, cash G&amp;A $2.14 [V].</em></p>
+<h2 id="el-antesdespues-del-conteo-de-acciones-2026-v">El antes/después del conteo de acciones (2026) [V]</h2>
+<table>
+<thead>
+<tr>
+<th>Hito</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30-jun-2026 (10-Q)</td>
+<td>183.703M</td>
+</tr>
+<tr>
+<td>+ Equity offering (22-jul)</td>
+<td>+53.263M → 236.969M (cover 3-ago)</td>
+</tr>
+<tr>
+<td>+ Consideración WildFire (10-sep)</td>
+<td>+32.203M → ~269.2M</td>
+</tr>
+<tr>
+<td>− Recompras Q3 (≈2.3M)</td>
+<td><strong>≈267M (30-sep)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Nota: la autorización de recompra tenía 9.9M acciones restantes a 30-jun-26 (sobre 60M autorizadas); con el conteo nuevo esa capacidad equivale a <strong>~3.7 trimestres (~1 año)</strong> de compra al ritmo comprometido (≥1%/trimestre ≈ 2.7M accs) → ampliación de autorización esperable en 2027. [V/E]</li>
+<li>Compras de 2026 (pre-deal): ene 1.235M @ $25.97; abr @ $29.56; may @ $28.85; jun @ $27.55 — <strong>por encima del precio actual ($24.07)</strong>: el programa compró más caro que el mercado de hoy. [V]</li>
+</ul>
+<h2 id="retorno-de-capital-acumulado-v-componentes-e-suma">Retorno de capital acumulado [V componentes / E suma]</h2>
+<ul>
+<li>Programa iniciado en 2019; 50.1M acciones acumuladas a 6/30/26.</li>
+<li>Dividendo: 5 subidas anuales consecutivas (2022: $0.40/año → 2026: $0.72/año, +80%). Actual $0.18/trimestre.</li>
+<li>Retorno acumulado 2019–H1/2026 ≈ <strong>$2.06B</strong> (recompras $1.54B + dividendos $0.45B + distribuciones NCI $0.06B) [E].</li>
+</ul>
+<h2 id="balance-deuda-y-liquidez">Balance, deuda y liquidez</h2>
+<ul>
+<li><strong>30-jun-26 (pre-deal):</strong> caja $295.9M; única deuda: $400M notas 6.875% venc. dic-2032; liquidez total $745.9M; RBL sin disponer. [V]</li>
+<li><strong>30-sep-26 (pro forma):</strong> notas por $1,500M en total ($400M 2032 @6.875% + $500M 2034 @6.625% + $600M WildFire 2029 @7.500%) + RBL ($2.25B compromisos / $2.0B base / $1.75B capacidad; saldo dispuesto exacto [NF] hasta el 10-Q de Q3). <strong>Deuda neta ≈ $1.9B.</strong> [V]</li>
+<li>Objetivo de leverage: ≤0.5x deuda neta/EBITDA; la subida a ~1.0x se declara «temporal». [V]</li>
+<li>Sin warrants, convertibles ni híbridos; Clase B extinguida (feb-26). Estructura simple. [V]</li>
+</ul>
+<h2 id="calidad-contable">Calidad contable</h2>
+<ul>
+<li>SBC moderado (~2% del EBITDAX). [E]</li>
+<li>Tasa fiscal efectiva ~21%, pero <strong>tasa de caja 0–2%</strong> (NOLs/deferred): el FCF está protegido fiscalmente. [V]</li>
+<li>One-offs esperados en Q3-26: $65–75M de transacción/integración + $14M de sísmica 3D. [V]</li>
+<li>Autocartera: 47.7M acciones a 6/30/26 ($928.7M de coste). [V]</li>
+</ul>
+<h2 id="reservas-ye2025-standalone-v-10-k">Reservas (YE2025, standalone) [V, 10-K]</h2>
+<ul>
+<li>Proved totales: <strong>210.2 MMboe</strong> (38% oil); 79% desarrolladas; reemplazo 151% de la producción 2025; F&amp;D orgánico PD $9.25/boe (media 3 años $9.85).</li>
+<li>Medida estandarizada SEC (descontada, después de impuestos): <strong>$2,518.5M</strong> a precios SEC 2025 ($64.59/bbl oil, $2.67/Mcf gas, $20.25/bbl NGL).</li>
+<li><strong>Reservas WildFire (YE2025, del 8-K del deal): 271.2 MMboe probadas (196.5 MMBbl de crudo; PDP 139.8 MMboe)</strong> → <strong>pro-forma ≈ 481 MMboe probadas</strong> [E suma] — más que duplica la base standalone. La auditoría combinada completa llegará con el 10-K FY2026 (feb-27). La contabilidad de compra valoró las propiedades WildFire en +$4,262.5M (preliminar). [V]</li>
+</ul>
+<hr />
+<h1 id="5-valoracion-que-descuenta-el-mercado-y-que-vale-mgy-a-cada-precio-del-crudo">§5 · Valoración: qué descuenta el mercado y qué vale MGY a cada precio del crudo</h1>
+<h2 id="51-la-foto-de-hoy-v-datos-e-calculos">5.1 La foto de hoy [V datos / E cálculos]</h2>
+<ul>
+<li>Precio <strong>$24.07</strong> (2-oct) · <strong>267M acciones</strong> → <strong>market cap ≈ $6.43B</strong> · deuda neta ≈ $1.9B → <strong>EV ≈ $8.33B</strong> (EV sobre deuda neta YE26 ≈ $8.2B).</li>
+<li>EBITDAX 2027E (modelo propio, ver 5.2): <strong>~$2.14B a WTI $80</strong>; ~$2.36B a $90; ~$1.89B a $70. [E]</li>
+<li><strong>Múltiplo implícito del mercado: ~3.8–4.1x EBITDAX 2027E en la zona $75–85 de WTI</strong> — por debajo del rango histórico propio (~3.6–5.2x, media ~4.5x) y con la mitad del crudo cubierta a techo ~$80–91. [E]</li>
+<li>En picos de ciclo MGY ha llegado a ~5x; en valles, ~3.5x. [E]</li>
+</ul>
+<h2 id="52-tabla-maestra-wti-sostenido-valor-por-escenario-motor-bottom-up-e">5.2 Tabla maestra: WTI sostenido → valor por escenario (motor bottom-up) [E]</h2>
+<p><em>Método: producción 2027 de 165 Mboe/d (guía +4–5% sobre base PF de 158), 49.5% oil; realizaciones oil = WTI + $3 (Q2-26 real: +$5.3; guía: MEH −$2), NGL 24% del oil, gas $2.60/Mcf; costes LOE $6.0, GP&amp;T $1.95, impuestos 6% de ingresos, cash G&amp;A $120M; capex $950M; intereses $150M; tasa de caja ~0; <strong>libro de hedges aplicado (real, §3)</strong>; dividendo $190M + recompras $265M/año; la deuda neta rueda con el FCF. Calibrado contra Q2-26 real (error revenue &lt;0.2%).</em></p>
+<table>
+<thead>
+<tr>
+<th>WTI ($/bbl)</th>
+<th>EBITDAX 2027 ($M)</th>
+<th>Hedge P&amp;L ($M)</th>
+<th>FCF 2027 ($M)</th>
+<th>Deuda neta fin-27 ($M)</th>
+<th>Valor @4.0x</th>
+<th><strong>@4.5x</strong></th>
+<th>@5.0x</th>
+<th>FCF yield @4.5x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>55</td>
+<td>1,600</td>
+<td>+149</td>
+<td>500</td>
+<td>1,797</td>
+<td>$17.85</td>
+<td><strong>$20.95</strong></td>
+<td>$24.05</td>
+<td>9.3%</td>
+</tr>
+<tr>
+<td>60</td>
+<td>1,697</td>
+<td>+90</td>
+<td>597</td>
+<td>1,693</td>
+<td>$19.75</td>
+<td><strong>$23.04</strong></td>
+<td>$26.33</td>
+<td>10.0%</td>
+</tr>
+<tr>
+<td>65</td>
+<td>1,794</td>
+<td>+32</td>
+<td>694</td>
+<td>1,588</td>
+<td>$21.65</td>
+<td><strong>$25.13</strong></td>
+<td>$28.60</td>
+<td>10.7%</td>
+</tr>
+<tr>
+<td>70</td>
+<td>1,890</td>
+<td>−27</td>
+<td>790</td>
+<td>1,483</td>
+<td>$23.55</td>
+<td><strong>$27.22</strong></td>
+<td>$30.88</td>
+<td>11.3%</td>
+</tr>
+<tr>
+<td>75</td>
+<td>2,014</td>
+<td>−58</td>
+<td>914</td>
+<td>1,347</td>
+<td>$26.00</td>
+<td><strong>$29.91</strong></td>
+<td>$33.81</td>
+<td>11.8%</td>
+</tr>
+<tr>
+<td><strong>80</strong></td>
+<td><strong>2,140</strong></td>
+<td><strong>−87</strong></td>
+<td><strong>1,040</strong></td>
+<td><strong>1,194</strong></td>
+<td><strong>$28.55</strong></td>
+<td><strong>$32.70</strong></td>
+<td><strong>$36.84</strong></td>
+<td><strong>12.3%</strong></td>
+</tr>
+<tr>
+<td>85</td>
+<td>2,255</td>
+<td>−127</td>
+<td>1,155</td>
+<td>1,052</td>
+<td>$30.89</td>
+<td><strong>$35.26</strong></td>
+<td>$39.63</td>
+<td>12.7%</td>
+</tr>
+<tr>
+<td>90</td>
+<td>2,362</td>
+<td>−175</td>
+<td>1,262</td>
+<td>919</td>
+<td>$33.05</td>
+<td><strong>$37.63</strong></td>
+<td>$42.21</td>
+<td>13.0%</td>
+</tr>
+<tr>
+<td>95</td>
+<td>2,458</td>
+<td>−234</td>
+<td>1,358</td>
+<td>811</td>
+<td>$34.97</td>
+<td><strong>$39.73</strong></td>
+<td>$44.50</td>
+<td>13.2%</td>
+</tr>
+<tr>
+<td>100</td>
+<td>2,555</td>
+<td>−292</td>
+<td>1,455</td>
+<td>706</td>
+<td>$36.87</td>
+<td><strong>$41.82</strong></td>
+<td>$46.77</td>
+<td>13.5%</td>
+</tr>
+<tr>
+<td>105</td>
+<td>2,651</td>
+<td>−351</td>
+<td>1,551</td>
+<td>601</td>
+<td>$38.77</td>
+<td><strong>$43.91</strong></td>
+<td>$49.05</td>
+<td>13.7%</td>
+</tr>
+<tr>
+<td>110</td>
+<td>2,748</td>
+<td>−409</td>
+<td>1,648</td>
+<td>497</td>
+<td>$40.68</td>
+<td><strong>$46.00</strong></td>
+<td>$51.33</td>
+<td>13.9%</td>
+</tr>
+<tr>
+<td>120</td>
+<td>2,941</td>
+<td>−526</td>
+<td>1,841</td>
+<td>287</td>
+<td>$44.48</td>
+<td><strong>$50.18</strong></td>
+<td>$55.88</td>
+<td>14.2%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Zonas: bear $60–65 · base $75–85 · bull $90–105 · cola $110+. Spot WTI hoy: $91.11. A $91 el hedge resta ~$187M (interpolando).</em></p>
+<p><strong>Referencias rápidas:</strong>
+- <strong>FCF 2027 a $80 ≈ $1.04B ≈ 16% del market cap actual</strong>; a $90 ≈ $1.26B ≈ 20%. El desapalancamiento hacia ≤0.5x se logra en 2027 en la zona $80+ (deuda neta fin-27 ~$1.2B a $80 → ~0.55x EBITDAX; ~$0.92B a $90 → ~0.39x).
+- <strong>2028 (sin hedges):</strong> FCF ≈ $1.18B a $80; ~$1.66B a $95; ~$2.15B a $110 [E] — el año en que MGY recupera participación plena al alza.</p>
+<h2 id="53-el-test-inverso-que-petroleo-lleva-descontado-el-precio-actual">5.3 El test inverso: ¿qué petróleo lleva descontado el precio actual?</h2>
+<ul>
+<li>Con la banda de múltiplos 4.0–5.0x, $24.07 implica un <strong>WTI sostenido de ~$55–71</strong>; a 4.5x central: <strong>~$62–63</strong>. [E]</li>
+<li>Alternativa de lectura: si se cree el strip 2027 (~$72–78), el mercado paga solo <strong>~3.8–4.0x</strong> EBITDAX — un descuento vs la media histórica (~4.5x) y vs comparables (ver §6).</li>
+<li>Cross-check con la propia compañía: su mensaje «deuda neta &lt;1.0x del EBITDAX 2027E a strip» exige EBITDAX ≥ $1.9B → WTI ≳ <strong>$70–72</strong> en mi modelo. <strong>La empresa planifica sobre ~$70s; el equity cotiza como si fueran $55–71.</strong></li>
+<li>Cross-check con el sell-side: PT medio <strong>$33.18</strong> (19 analistas) ≈ mi fila $80–85 @4.25–4.5x; Truist $35 ≈ $85–90; Roth $29 ≈ $75–77. <strong>La calle modela ~$80–90 sostenido + re-rating completo; el mercado no lo compra.</strong> La brecha (~30–40%) es la discrepancia central del caso. [S/E]</li>
+</ul>
+<h2 id="54-anclas-del-multiplo-por-que-4050x">5.4 Anclas del múltiplo (por qué 4.0–5.0x)</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Dirección</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modelo de reinversión baja + retorno de capital creciente</td>
+<td>Prima</td>
+<td>Histórico ~4.5–5x en precios medios [E]</td>
+</tr>
+<tr>
+<td>Escala duplicada con base más profunda (inventario +70%)</td>
+<td>Prima potencial</td>
+<td>Reducción de riesgo de "inventario corto" [S]</td>
+</tr>
+<tr>
+<td>Apalancamiento ~1.0x (temporal) y dilución +45% reciente</td>
+<td>Descuento</td>
+<td>Sobresale hasta que baje de ~0.7x</td>
+</tr>
+<tr>
+<td>Coberturas que truncan el FCF 2027 (~$127–187M a $85–91)</td>
+<td>Descuento</td>
+<td>Se disuelve en 2028</td>
+</tr>
+<tr>
+<td>Sinergias $100M/año (≥1/3 ya en 2026)</td>
+<td>Prima si se ejecuta</td>
+<td>NPV ~$700M = ~15% del EV actual [V/E]</td>
+</tr>
+<tr>
+<td>Riesgo de integración / ejecución de un 2x de tamaño</td>
+<td>Descuento</td>
+<td>Datos IP30 en Q4-26</td>
+</tr>
+</tbody>
+</table>
+<p>Sensibilidades: <strong>±$1 WTI ≈ ±$0.4/acción</strong> (≈±1.7%) vía EBITDAX 2027; <strong>±0.5x múltiplo ≈ ±$5.4/acción</strong> (±22%). [E]</p>
+<h2 id="55-casos-bear-base-bull-con-probabilidades-e-juicio-analitico-no-implicito-de-mercado">5.5 Casos bear / base / bull con probabilidades [E — juicio analítico, NO implícito de mercado]</h2>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>WTI sostenido</th>
+<th>Narrativa</th>
+<th>Rango valor (4.0–5.0x)</th>
+<th>Central @4.5x</th>
+<th>Prob.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bear</strong></td>
+<td>$60–65</td>
+<td>Recesión global; OPEC+ defiende cuota; prima geopolítica se evapora</td>
+<td>$19.8–28.6</td>
+<td>~$24</td>
+<td>18%</td>
+</tr>
+<tr>
+<td><strong>Base</strong></td>
+<td>$75–85</td>
+<td>Desescalada con OPEP ordenada; demanda estable; spare capacity ~3–4 mb/d</td>
+<td>$26.0–39.6</td>
+<td>~$33</td>
+<td>47%</td>
+</tr>
+<tr>
+<td><strong>Bull</strong></td>
+<td>$90–105</td>
+<td>Tesis «crudo a máximos sin timeline»: shock de oferta o demanda más fuerte</td>
+<td>$33.1–49.1</td>
+<td>~$41</td>
+<td>25%</td>
+</tr>
+<tr>
+<td><strong>Cola</strong></td>
+<td>$110–120</td>
+<td>Escalada grave; spare agotada (precedente 52s: $119.48)</td>
+<td>$40.7–55.9</td>
+<td>~$48</td>
+<td>10%</td>
+</tr>
+<tr>
+<td><strong>Ponderado</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>≈ $34–35</strong></td>
+<td>vs $24.07 → <strong>+44%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observaciones críticas:</strong>
+- Incluso el caso bear central (~$24) queda ≈ el precio actual: <strong>el mercado ya cotiza, aproximadamente, mi caso bear.</strong> El margen de seguridad depende de que el crudo no se rompa &lt;$55 sostenido (a $55 @4.0x: $17.85, −26%).
+- El valor ponderado de los mundos NO-cola (bear+base ~65% prob.) ya da ~$30 → <strong>el upside no vive solo en la cola alcista</strong>; vive en que el crudo se mantenga en $75–85 (strip actual) y el múltiplo normalice.
+- En el caso bull NO incluyo extensión de múltiplo a 5.5–6x (posible en picos) ni el valor del inventario Woodbine ni 2028 sin hedges: sesgo conservador declarado.</p>
+<h2 id="56-cross-check-por-reservas-y-fcf-yield">5.6 Cross-check por reservas y FCF yield</h2>
+<ul>
+<li>Medida estandarizada SEC YE25 (standalone): $2,518.5M descontado después de impuestos a precios SEC ($64.59 oil) para 210 MMboe. Es un suelo referencial dependiente de precio, no un techo: a spot ($91) el mismo inventario vale sustancialmente más. Reservas pro-forma: [NF] hasta feb-2027.</li>
+<li>FCF yield 2027E: 12.3% sobre equity @4.5x a $80 (16.2% sobre el market cap actual); 13–14% en $90+. Frente a un coste de capital ~8–9% (WACC publicado ~8%), el spread es amplio. [E/S]</li>
+</ul>
+<h2 id="57-caveats-del-modelo-honestidad-metodologica">5.7 Caveats del modelo (honestidad metodológica)</h2>
+<ol>
+<li>Producción <strong>constante por escenario</strong> (sin respuesta de actividad al precio); costes constantes salvo lo indicado; sin M&amp;A ni ventas de activos adicionales; capital circulante ~neutral.</li>
+<li>EBITDAX en base «cash» (excluye add-back de SBC ~$40M/año → múltiplos ~2% conservadores).</li>
+<li>Hedge book aplicado tal cual (fijo hasta Q4-27); no se re-hedgean años futuros.</li>
+<li>Realización oil WTI+$3 (sensible: ±$1 = ±$30M EBITDAX); gas $2.60 plano (HH hoy $3.04).</li>
+<li>Probabilidades y bandas de múltiplo = <strong>estimación analítica</strong>, no market-implied. Todo escenario asume NO recesión severa (&gt;2 años).</li>
+</ol>
+<hr />
+<h1 id="6-operaciones-comparables-y-sell-side">§6 · Operaciones, comparables y sell-side</h1>
+<h2 id="61-programa-operativo-standalone-pro-forma-v">6.1 Programa operativo (standalone → pro-forma) [V]</h2>
+<ul>
+<li>Plan 2026: <strong>2 rigs + 1 equipo de completions</strong> — cadencia constante desde 2021 con &gt;50% de crecimiento de producción acumulado; ~75–80% de la actividad en Giddings. En 2025: <strong>53 pozos netos terminados, 0 secos</strong>.</li>
+<li>Capex: FY26 standalone <strong>$440–480M</strong> (reiterado; H1 ejecutado $253.7M) → Q3-26 PF $155–165M (incluye WildFire desde el 10-sep) → Q4-26 PF ~$235M → <strong>2027: $900–950M</strong>, «con una modesta inflación de servicios incorporada».</li>
+<li>Actividad inorgánica reciente: bolt-on Q1-26 (~$155M por ~6,200 acres netos y ~500 boe/d, ~45% oil; eleva el WI del bloque a ~93%); venta non-core Q3-26 (Dimmit/Zavala, $47.5M + 616 acres → WI ~98% en el bloque Gonzales); WildFire (~$4.06B).</li>
+<li>Base de pozos a fin-2025: 2,867 gross (1,948 net); inventario pro-forma estimado &gt;1,000 localizaciones netas a 10k pies (Enverus) [S]; &gt;500 millas de gathering + mina de arena incorporadas con el deal.</li>
+</ul>
+<h2 id="62-comparables-grupo-verificado-datos-q2-26-v-multiplos-e">6.2 Comparables (grupo verificado, datos Q2-26) [V; múltiplos E]</h2>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Precio (2-oct)</th>
+<th>Prod. (Mboe/d)</th>
+<th>Oil %</th>
+<th>Deuda neta ($B)</th>
+<th>ND/EBITDA¹</th>
+<th>Recompra Q2-26</th>
+<th>Div. yield</th>
+<th>Acciones y/y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRGY</td>
+<td>$13.39</td>
+<td>335</td>
+<td>41.8%</td>
+<td>4.90</td>
+<td>1.6x (LTM)</td>
+<td>$0</td>
+<td>3.6%</td>
+<td>+29.8% (Vital)</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>$22.12</td>
+<td>376.4</td>
+<td>52.6%</td>
+<td>2.89</td>
+<td>0.5x (LQA)</td>
+<td>$0</td>
+<td>2.9%</td>
+<td>+4.6%</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>$35.24</td>
+<td>439.7</td>
+<td>52.3%</td>
+<td>6.25</td>
+<td>~1.1x</td>
+<td>$84M</td>
+<td>2.5%</td>
+<td>+106.9% (Civitas)</td>
+</tr>
+<tr>
+<td>CHRD</td>
+<td>$137.01</td>
+<td>286.4</td>
+<td>57.8%</td>
+<td>0.89</td>
+<td>~0.24x</td>
+<td>$147M</td>
+<td>3.8%</td>
+<td>−4.5%</td>
+</tr>
+<tr>
+<td>MTDR</td>
+<td>$53.50</td>
+<td>215.6</td>
+<td>58.5%</td>
+<td>4.19</td>
+<td>~1.3x</td>
+<td>$11M</td>
+<td>2.8%</td>
+<td>−0.6%</td>
+</tr>
+<tr>
+<td>NOG</td>
+<td>$23.83</td>
+<td>145.7</td>
+<td>46.9%</td>
+<td>2.68</td>
+<td>~1.7x</td>
+<td>$60M</td>
+<td>7.6%</td>
+<td>+9.2%</td>
+</tr>
+<tr>
+<td>EOG</td>
+<td>$141.38</td>
+<td>1,410.4</td>
+<td>38.9%</td>
+<td>3.02</td>
+<td>~0.16x</td>
+<td>$1,299M</td>
+<td>2.9%</td>
+<td>−3.9%</td>
+</tr>
+<tr>
+<td><strong>MGY (PF)</strong></td>
+<td><strong>$24.07</strong></td>
+<td><strong>~158–160</strong></td>
+<td><strong>~49.5%</strong></td>
+<td><strong>1.9</strong></td>
+<td><strong>~0.95x²</strong></td>
+<td><strong>~$55M³</strong></td>
+<td><strong>~3.0%</strong></td>
+<td><strong>+45% (deal)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>¹ Declarado por la compañía cuando existe; si no, (deuda−caja) ÷ (4×EBITDA Q2-26), marcado [E]. Bases no idénticas entre filas (LTM vs trimestre anualizado) — usar como orden de magnitud. Div. yields [S].
+² MGY sin declarar: 1.9B ÷ EBITDAX 2027E (~$2.0B a strip) [E].
+³ Q3-26: ~2.3M acciones (~$55M estimado); YTD ≈ $157M.</p>
+<p><strong>EvCompuestos orientativos (fwd, fórmula homogénea [E] sobre datos [S/V]):</strong> CHRD ~2.8x · SM ~3.1x · CRGY ~4.0x · PR/MTDR/NOG ~4.3x · EOG ~4.7x · <strong>MGY ~4.4x sobre ancla 2027E</strong> (mi modelo: ~3.9x a $80 y ~4.2x al strip 2027; la base FY26E no es comparable por el timing del cierre).</p>
+<p><strong>Lectura honesta:</strong> el sector cotiza <strong>comprimido</strong> (miedos de techo de ciclo + casos particulares en el fondo del rango). MGY no es el más barato del grupo — su caso no es «descuento de comparables», sino <strong>calidad del modelo + desapalancamiento + re-rating hacia su propio histórico (~4.5x)</strong>. Si el sector se queda en ~3.5x, el valor base de MGY a $80 de WTI cae hacia ~$24–26 (≈ precio actual). Dato clave para calibrar el riesgo del caso.</p>
+<h2 id="63-sell-side-s">6.3 Sell-side [S]</h2>
+<ul>
+<li><strong>Consenso:</strong> Buy/Moderate Buy; <strong>PT medio ~$32–33</strong> (19 analistas; rango $26–38); dispersión entre proveedores: stockanalysis $33.18 · Zacks $33.06 (ABR 1.52) · TipRanks $32.67 · MarketBeat $31.88. FY26 EPS est. ~$2.75 (fwd P/E ~8.7x). Distribución (sep-26): 11 Strong Buy / 2 Buy / 6 Hold / 0 Sell.</li>
+<li><strong>Secuencia jul→oct:</strong> primeras reacciones al deal: recortes de objetivo (UBS 38→34, Mizuho 35→33, Roth 30→29, Citi 29→27, GS 27→26) → <strong>giro positivo desde agosto</strong>: JPM upgrade a Overweight ($33), Truist a Buy y subiendo hasta <strong>$35</strong> (2-oct), Siebert Williams upgrade ($32), Johnson Rice Hold→Accumulate, Clear Street $37, Susquehanna $37, KeyBanc $38, UBS $34.</li>
+<li><strong>Voces bajistas:</strong> Goldman Sachs <strong>Hold $27</strong>, Citi <strong>Hold $27</strong>, Seaport Global (inicio sep-2/3) <strong>Hold $27</strong>. El rango bajo-mitad ($26–29) viene de casas que no creen en el re-rating (por leverage post-deal o inventario).</li>
+<li><strong>Lectura:</strong> la calle (~$33) ≈ mi escenario base-bull ($80–85 sostenido + re-rating a ~4.5x). El tape cotiza mi bear. La resolución de esa discrepancia es, esencialmente, el trade.</li>
+</ul>
+<h2 id="64-noticias-materiales-agooct-resumen-vs">6.4 Noticias materiales ago–oct (resumen) [V/S]</h2>
+<ul>
+<li><strong>Q2-26 (5-ago):</strong> beat; acción +4.3% al día siguiente (tras −3.5% el día del reporte).</li>
+<li><strong>Cierre WildFire (10-sep)</strong> y <strong>update interino (1-oct, +2.5%)</strong> — ver §2.</li>
+<li><strong>Shelf S-3ASR (15-sep):</strong> capacidad de emisión corporativa reabierta <strong>y shelf de reventa para las 32.2M acciones de los vendedores de WildFire (lock-up de 30 días)</strong> → overhang a vigilar desde mediados de octubre.</li>
+<li><strong>Dividendo:</strong> récord 10-ago, pago 1-sep ($0.18).</li>
+<li><strong>Sin noticias M&amp;A adicionales, litigios o regulatorias materiales [NF]</strong> (rutina: un permiso RRC menor; un pleito antiguo de pozo de asignación solo como background).</li>
+</ul>
+<hr />
+<h1 id="7-posicionamiento-gobernanza-y-gestion">§7 · Posicionamiento, gobernanza y gestión</h1>
+<h2 id="71-estructura-de-propiedad-y-flujos">7.1 Estructura de propiedad y flujos</h2>
+<ul>
+<li><strong>Vendedores de WildFire: 32,203,000 acciones = 11.96% del capital</strong> (13G del 16-sep; certificación <strong>pasiva</strong> 13d-1(c)): Warburg Pincus (Hawkwood), Kayne Anderson y WildFire Energy I LLC [V]. Acciones <strong>no registradas</strong> (8-K, item 3.02) con <strong>shelf de reventa S-3ASR del 15-sep y lock-up de 30 días</strong> [V/S] → <strong>overhang a vigilar desde mediados de octubre</strong>. Sin detalles adicionales de registration rights [NF].</li>
+<li><strong>Institucionales (13F a 30-jun, PRE-ampliación; % sobre ~267M actuales):</strong> BlackRock 31.97M (~12.0%), Vanguard (2 entidades, 23.0M ≈ 8.6%), American Century 11.0M (4.1%), State Street 9.9M (3.7%), Dimensional 7.1M (2.7%), <strong>Jupiter Topco LLC 6.4M (posición nueva)</strong>, Janus Henderson 6.3M (2.4%), Arrowstreet 5.5M (2.0%), T. Rowe 5.2M (1.9%). Flujos Q1→Q2: <strong>226 incrementos vs 199 recortes; 59 posiciones nuevas</strong> (neto comprador). [V/S]</li>
+<li><strong>Insiders ~0.8% (~2.18M accs).</strong> Dos señales direccionales opuestas: <strong>(a) ventas agrupadas en marzo-2026</strong> — los tres NEOs (Stavros $3.5M; Yang $4.4M; Corales $1.0M) + tres consejeros (~$1.6M), total ≈ <strong>$10.9M a $29–32</strong>, cerca del máximo de 52 semanas; <strong>sin planes 10b5-1 declarados</strong> [V]; <strong>(b) compras de consejeros en ago–sep-26</strong> (Khani $200K, Ropp $123K — pequeñas, alrededor del deal; hoy bajo agua) [V]. Contexto histórico: Chazen (fundador) compró &gt;$5M en 2017–21; EnerVest vendió ~88.6M acciones / $1.71B en secundarias 2021–24 y salió del todo en feb-26 [V].</li>
+<li><strong>Short interest: 25.12M acciones</strong> (settlement 15-sep; el del 30-sep se publica ~13-oct) <strong>≈ 9.4% del capital y ~10.8% de un float estimado de ~233M</strong> (el «12.4% of float» de los agregadores usa una base obsoleta de ~203M). Racha: <strong>+34% desde abr-30</strong> (18.7M → 25.1M) — entrada de merger-arb alrededor del anuncio/cierre; días de cobertura ~6.4. La resolución del arb post-cierre sería un viento de cola mecánico. [V, FINRA]</li>
+<li>Técnico: precio bajo MM50 ($25.86) y MM200 ($26.76); RSI ~39; −26.5% desde el máximo de 52s. [S]</li>
+</ul>
+<h2 id="72-gobernanza-def-14a-2026-v">7.2 Gobernanza (DEF 14A 2026) [V]</h2>
+<p><strong>Lo bueno:</strong>
+- Consejo de <strong>8 miembros, 7 independientes</strong>; comités 100% independientes; auditoría con 3 expertos financieros; sin interlocks. Elección <strong>anual</strong> de todos los consejeros; sin poison pill; un voto por acción; sin clase con super-voto.
+- Compensación bien alineada: <strong>~87% del objetivo del CEO en riesgo</strong>; PSUs vs TSR relativo de 12 pares E&amp;P (niveles pagados al percentil 74 = 140% para el ciclo 2023); 50%+ del LTI en performance; <strong>prohibido el hedging</strong>; pledging requiere consentimiento; clawback; doble trigger en cambio de control; guidelines de propiedad (CEO 5x salario, cumplidas); say-on-pay &gt;98% y engagement con &gt;60% del capital.</p>
+<p><strong>Lo mejorable:</strong>
+- <strong>Chairman y CEO combinados</strong> desde jul-2025 (mitigado por Lead Independent Director con funciones definidas).
+- <strong>Votación por pluralidad</strong> en elecciones (no mayoría).
+- <strong>Skin in the game bajo</strong>: insiders ~0.8% — la alineación descansa en compensación, no en capital propio.
+- PSU máximo elevado a 200% (2026) y retirada del cap de TSR absoluto: más incentivo, también más riesgo de pago en picos.</p>
+<h2 id="73-gestion-y-track-record-lo-mejor-del-caso-v">7.3 Gestión y track record (lo mejor del caso) [V]</h2>
+<ul>
+<li><strong>Chris Stavros (62):</strong> CEO desde sep-2022, Chairman desde jul-2025; <strong>CFO de Magnolia desde su fundación (2018)</strong>; antes CFO de Occidental Petroleum (2014–17) y analista senior de energía en UBS. 35+ años en el sector.</li>
+<li><strong>Brian Corales (46):</strong> SVP &amp; CFO desde nov-2022; previamente VP de Relaciones con Inversores de Magnolia; ex-analista (Johnson Rice) y banca de inversión (Scotia Howard Weil).</li>
+<li><strong>Timothy Yang (54):</strong> EVP Legal y Comercial; ex-General Counsel de Newfield Exploration.</li>
+</ul>
+<p><strong>Track record de guidance (8 trimestres auditados Q3-24 → Q2-26):</strong>
+- <strong>Producción: meet o beat en 8/8 trimestres — nunca un miss</strong> (beats de +0.6% a +2.8%; los dos "meets" fueron −0.3% por paradas de midstream de terceros y +0.1%).
+- <strong>Guía de producción elevada 4 veces</strong> en la ventana; <strong>ningún recorte</strong>. Capex: <strong>dentro del rango anual los 3 años</strong> ($477M en $450–480M; $460.7M en $430–470M; FY26 en curso $440–480M).
+- Retorno al accionista <strong>57–110% del FCF cada trimestre</strong> salvo Q2-26 (34%, por la caja destinada al deal).</p>
+<p><strong>Lectura:</strong> ejecución histórica de primer nivel y comunicación conservadora. El riesgo no es «¿saben ejecutar?» sino <strong>«¿escala el modelo a 2x?»</strong> — la integración de WildFire (Q4-26/feb-27) es el test empírico.</p>
+<h2 id="74-sintesis-de-posicionamiento">7.4 Síntesis de posicionamiento</h2>
+<p>Caso de flujos: <strong>overhang</strong> (vendedores PE ~12% con shelf de reventa activándose desde mediados de octubre, short ~10.8% del float, acciones nuevas del offering ~20% del capital en manos de fondos a $23.75) contra <strong>fundamentos que no deterioran</strong> (beats, sinergias en marcha, desapalancamiento adelantado). Posible resolución: 2–3 trimestres de ejecución → covers + entrada institucional (los flujos 13F ya venían comprando pre-deal).</p>
+<hr />
+<h1 id="8-red-flags-y-puntos-ciegos-lo-que-un-bull-no-deberia-ignorar">§8 · Red flags y puntos ciegos (lo que un bull no debería ignorar)</h1>
+<ol>
+<li><strong>Dilución +45% en un año.</strong> 85.5M acciones nuevas (53.3M del offering + 32.2M del deal). Aunque financiaron +53 Mboe/d (~+50% de producción) y +70% de inventario — aproximadamente neutral por unidad de flujo — <strong>cualquier tropiezo de integración se paga ahora sobre una base un 45% mayor</strong>. El "accretivo por acción" prometido ($2.55 PF FY25 vs $1.73 standalone) exige que las sinergias y la producción lleguen.</li>
+<li><strong>Timing cíclico incómodo.</strong> Se pagó con equity a $23.75 (cerca de mínimos de 52 semanas) y contraprestación valorada en un entorno de crudo alto ($91; pico 52s $119). Si el crudo vuelve a $60s y se queda ahí, el comprador está pagando expansion múltiple sobre el techo del ciclo. (Mitigante: hedges + FCF positivo incluso a $55–60; mitigante 2: el vendedor PE aceptó ~$26.85/acción en acciones para el vendedor — skin in the game temporal.)</li>
+<li><strong>Coberturas que truncan la opción al alza 2027.</strong> −$127M a $85 sostenido y −$187M a $91 en EBITDAX 2027 (vs sin cubrir). El inversor que compra MGY por "petróleo alto" está comprando, hasta Q2-27, una opción capada.</li>
+<li><strong>Integración de un 2x de tamaño.</strong> 810k acres nuevos en 9 condados, ~53 Mboe/d de otro operador, 500+ millas de infra y una mina de arena. El test público llega con Q4-26 (159–161 Mboe/d, costo LOE $5.80–6.20/boe). Historial de MGY: excelente, pero a escala mitad.</li>
+<li><strong>Short interest ~10.8% del float (~9.4% del capital).</strong> Consistente con overhang post-deal y operativa de flujos (merger-arb); también es un riesgo de volatilidad en ambas direcciones. A vigilar en los settlements FINRA (§7).</li>
+<li><strong>¿Por qué cae la acción −26.5% desde máximos con WTI a $91?</strong> Hipótesis no excluyentes: (a) de-rating sectorial tras la prima de guerra (WTI $119→$91); (b) sobrehang de la ampliación (acciones nuevas de fondos que rotan); (c) escepticismo sobre el timing del deal; (d) salida de posiciones heredadas (EnerVest completó su salida en Q1-26). No hay evidencia de deterioro operativo en los datos: Q2 batió y subió guía. [V/E]</li>
+<li><strong>Concentración geográfica total.</strong> Monocuenca South Texas; sin diversificación de cuenca. También: realizations de gas flojas (75% de HH en Q2; 65% en H1) y gas débil en el strip.</li>
+<li><strong>Autorización de recompra casi agotada.</strong> 9.9M acciones restantes a 30-jun (sobre 60M) vs ritmo comprometido de ~2.7M/trimestre → o la amplían (esperable) o el programa se frena justo cuando el precio está bajo.</li>
+<li><strong>Riesgo de precio de la propia lógica:</strong> el caso pende de que el crudo se mantenga ≥$70–75; el modelo no incluye respuesta de actividad a la baja (podría hacerlo mejor recortando capex; margen de protección).</li>
+<li><strong>Gobernanza y alineación</strong> — Stavros acumula Chairman + CEO; insiders ~0.8% del capital; <strong>ventas agrupadas de los tres NEOs y tres consejeros en marzo-26 (~$10.9M a $29–32, sin planes 10b5-1)</strong> cerca de la zona alta; compras posteriores solo testimoniales (~$0.33M). Ampliado en §7. [V]</li>
+<li><strong>Concentración de clientes:</strong> dos compradores representaron el <strong>41% y el 20%</strong> de los ingresos FY25 (estándar en E&amp;P por la comercialización física; a vigilar en el 10-K FY26). [V]</li>
+</ol>
+<hr />
+<h1 id="9-bull-vs-bear-las-versiones-mas-fuertes-de-cada-tesis">§9 · Bull vs bear (las versiones más fuertes de cada tesis)</h1>
+<h2 id="la-tesis-bull-version-mas-fuerte">La tesis bull (versión más fuerte)</h2>
+<ol>
+<li><strong>Escala + inventario en la mejor cuenca que conocen.</strong> &gt;1.25M acres netos contiguos en Giddings (Austin Chalk probada por 8 años de MGY; Eagle Ford de WildFire ya desarrollada; Woodbine como opción gratuita). &gt;1,000 localizaciones netas a 10k pies: ninguna necesidad de M&amp;A para una década a ~165–200 pozos/año. [V/S]</li>
+<li><strong>El modelo no ha cambiado — y ahora tiene más caja.</strong> Reinversión &lt;55% del EBITDAX, crecimiento 4–5%, dividendo creciente y recompras: con FCF 2027E ≈ $1.0–1.3B a $80–90, MGY puede <strong>pagar todo el programa de retorno, bajar deuda a ≤0.5x y aún sobrar</strong> (a $85: FCF $1.16B vs $455M de retorno → ~$700M a deuda). El desapalancamiento es la vía a la recuperación del múltiplo histórico.</li>
+<li><strong>Sinergias concretas y ya empezando.</strong> $100M/año run-rate (NPV $700M; ≥1/3 en 2026): laterales más largos, arena propia, infra compartida, G&amp;A. Historial de la casa: prometen poco y suelen batir.</li>
+<li><strong>Valoración: el bear ya está pagado.</strong> A $24.07 el mercado implícita ~$55–71 de WTI o ~3.8–4.1x strip EBITDAX. Incluso el caso bear central (~$24) vale el precio actual. Los tres mundos no-colapsistas valen más.</li>
+<li><strong>Opción 2028 y segunda derivada del crudo.</strong> La tesis de crudo estructuralmente alto de Sergio (imports chinos &gt;10 mb/d + inventarios US en días de covertura) tendría en MGY un vehículo <em>sin coberturas</em> a partir de 2028, con base de producción ya 60% mayor que en 2025 y comprando acciones a ritmo &gt;4%/año del capital (recompras 1%/trim).</li>
+<li><strong>La calle se está moviendo a favor:</strong> upgrades post-deal (Truist 33→34→35, Siebert a Buy $32) con PT medio $33.18 (19 analistas). El "follow the leader" institucional suele llegar tras los 2–3 trimestres de validación. [S]</li>
+</ol>
+<h2 id="la-tesis-bear-version-mas-fuerte">La tesis bear (versión más fuerte)</h2>
+<ol>
+<li><strong>Compraron el ciclo.</strong> WildFire salió de un fondo PE (Warburg/Kayne) en el mejor momento del vendedor: crudo a EPS de ciclo ($91 de WTI medio en la primera mitad del año de cierre), y MGY pagó con acciones a $23.75 — la parte más baja de su rango — regalando 45% de la compañía. La quinta operación &gt;$3B "en una década" en el Eagle Ford no es barata: ~$77k/boe/d y ~$5k/acre. [S/E]</li>
+<li><strong>Los números PF no son tan buenos per-share como se venden.</strong> El "+47% de EPS PF" ($2.55 vs $1.73) se calcula <strong>a precios de 2025</strong> ($64–66). A precios de hoy la dilución es neutral-max; a $60s el apalancamiento del deal (~$1.9B de deuda) roba retorno: los mismos accionistas tienen 45% más de papel sobre flujo similar de bajo precio.</li>
+<li><strong>Coberturas malas para el comprador de fuera.</strong> Los swaps de WildFire ($64–67) están "vendidos" — el upside que capturaron los inventarios ya no está; y los collares venden los $85–98 de 2027. El FCF 2027 no "opciona" al crudo en la zona donde la tesis bull vive ($95–120): −$234M a $95, −$409M a $110.</li>
+<li><strong>Riesgo de integración infravalorado.</strong> Duplicar tamaño en 12 meses con 262 empleados, un solo completions crew adicional y un área nueva (9 condados). Cada trimestre de ramp lento empuja el desapalancamiento y la recompra.</li>
+<li><strong>El mercado tiene razón hasta que se demuestre lo contrario.</strong> −26.5% desde máximos, bajo MM50/200, short ~10.8% del float, y los accionistas 2026 (los fondos nuevos de $23.75) están en pérdidas → sobrehang; los propios directivos, además, vendieron ~$11M en la zona alta en marzo (ver §7). El caso "cheap on strip" podía hacerse igual a $28–30 (jun-26) y la acción cayó: hay algo que el tape sabe y el modelo no. [E, cuasi-psicológico — declarado]</li>
+<li><strong>Gas como drag estructural y diferencial MEH en riesgo.</strong> Realización gas al 65–75% de HH; si el Brent-WTI se estrecha o MEH se normaliza, los "premium pricing" de South Texas sufren (guía ya asume MEH−$2).</li>
+</ol>
+<h2 id="sintesis-del-choque">Síntesis del choque</h2>
+<p>Bull y bear <strong>no discuten los datos</strong> — discuten el precio del crudo implícito y el timing. El mercado cotiza el mundo del bear (~$60s); la calle y el modelo cotizan $80–90. La pregunta correcta no es "¿es buena empresa?" (lo es) sino <strong>"¿a qué precio del crudo deja de serlo?"</strong> — y la respuesta del modelo: pierde dinero permanente solo por debajo de ~$55–60 sostenido con múltiplo &lt;4x. Entre $60 y $75 hay un mundo gris de FCF modesto y desapalancamiento lento, donde el equity vale aproximadamente lo que cuesta hoy.</p>
+<hr />
+<h1 id="10-catalizadores-y-checklist-trimestral">§10 · Catalizadores y checklist trimestral</h1>
+<h2 id="catalizadores-con-senal-bullbear-y-que-confirmainvalida">Catalizadores (con señal bull/bear y qué confirma/invalida)</h2>
+<p><strong>0–3 meses</strong></p>
+<table>
+<thead>
+<tr>
+<th>Fecha/evento</th>
+<th>Qué mirar</th>
+<th>Sesgo</th>
+<th>Confirma / invalida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>4–5 nov: Q3-26 results + call</strong> (primer reporte post-deal)</td>
+<td>Producción ~116–118 Mboe/d (~42% oil); D&amp;C $155–165M; ND ~$1.9B ya pre-anunciado; guía Q4-26 reiterada; detalle financiación RBL; posible actualización 2027</td>
+<td>Bull si reitera/mejora</td>
+<td><em>Confirma:</em> ejecución del ramp + costes. <em>Invalida:</em> slippage de producción o costes &gt;guía</td>
+</tr>
+<tr>
+<td>Anuncio ampliación de autorización de recompra (9.9M restantes agotándose)</td>
+<td>Tamaño de la nueva autorización; ritmo de compra</td>
+<td>Bull</td>
+<td>Ampliación ≥20M = señal de agresividad en precio bajo</td>
+</tr>
+<tr>
+<td>Confirmación ≥1/3 de sinergias para fin de 2026 (hitos de arena/infra/F&amp;A)</td>
+<td>Detalle cuantificado en el 8-K/PR</td>
+<td>Bull</td>
+<td>Retrasos = descuento de credibilidad</td>
+</tr>
+<tr>
+<td>Settlements FINRA de short interest (bisemanal)</td>
+<td>¿Baja desde ~10.8% del float?</td>
+<td>Neutral/bull</td>
+<td>Coverings = soporte técnico</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6–12 meses</strong></p>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Qué mirar</th>
+<th>Sesgo</th>
+<th>Confirma / invalida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Feb-27: resultados Q4/FY26 + 10-K con reservas pro-forma</strong></td>
+<td>Primer trimestre PF completo (159–161 Mboe/d, 49–50% oil); reservas YE26 (WildFire); PV-10/medida SEC</td>
+<td>Clave</td>
+<td><em>Confirma:</em> sinergias en números + reservas que validan el precio pagado</td>
+</tr>
+<tr>
+<td>Desapalancamiento</td>
+<td>ND/EBITDA pasando de ~1.0x hacia ≤0.7x–0.5x; próximo dividendo (¿otra subida en jul-27?)</td>
+<td>Bull</td>
+<td>Si &lt;0.7x rápido → re-rating; frenadas = bear</td>
+</tr>
+<tr>
+<td>Datos de pozos Giddings PF (IP30/IP90; laterales largos)</td>
+<td>Productividad vs inventario prometido</td>
+<td>Bull</td>
+<td>Pozos por debajo de tipo = invalida el caso de crecimiento</td>
+</tr>
+<tr>
+<td>Crudo: evolución tras roll-off de hedges hacia 2028</td>
+<td>Mercado empezando a valorar exposición completa</td>
+<td>Bull (si crudo ≥$85)</td>
+<td>Si crudo &lt;$70 en 2S27, el bear pierde la coartada de los hedges</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1–3 años</strong></p>
+<ul>
+<li>Cierre del programa de desapalancamiento (≤0.5x) y reorientación del exceso de FCF a recompras &gt;1%/trimestre.</li>
+<li>Aprobación/desarrollo del bench Woodbine (opción no valorada hoy).</li>
+<li>Con corto estructural de crudo (tesis de máximos): captura completa 2028+ sobre una base de ~170 Mboe/d y ~250M acciones.</li>
+</ul>
+<h2 id="checklist-trimestral-10-metricas-con-umbral-que-mejoradeteriora">Checklist trimestral (10 métricas con umbral que mejora/deteriora)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Métrica</th>
+<th>Mejora</th>
+<th>Deteriora</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Producción total vs guía</td>
+<td>Dentro o arriba del rango</td>
+<td>&lt;125 Mboe/d en Q4-26 (rango 159–161 esperado PF completo)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Oil % del mix</td>
+<td>&gt;50% (PF)</td>
+<td>&lt;45% en Q4-26</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D&amp;C vs presupuesto ($235M Q4; $900–950M 2027)</td>
+<td>≤ presupuesto con misma producción</td>
+<td>Sobre-coste &gt;10%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>LOE $/boe</td>
+<td>≤$6.00</td>
+<td>&gt;$6.20</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Deuda neta / EBITDAX27E</td>
+<td>&lt;0.8x y bajando</td>
+<td>&gt;1.1x o plan de desapalancamiento retrasado</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Sinergias acumuladas</td>
+<td>≥1/3 a dic-26; ritmo anualizado &gt;$100M</td>
+<td>Sin cuantificar en Q4-26</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Recompras</td>
+<td>≥1% del capital/trimestre</td>
+<td>Paradas por restricción/prioridad deuda</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Dividendo</td>
+<td>Subida anual en jul-27</td>
+<td>Congelado</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Short interest</td>
+<td>Descenso desde ~10.8% del float</td>
+<td>&gt;12% sostenido</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Reservas/F&amp;D (feb-27)</td>
+<td>Reemplazo &gt;130%; F&amp;D &lt;$12/boe</td>
+<td>Reemplazo &lt;100%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="11-veredicto-y-scorecard">§11 · Veredicto y scorecard</h1>
+<h2 id="veredicto">Veredicto</h2>
+<p><strong>Rating: Compra moderada (Buy con condiciones).</strong> Convicción: <strong>65%</strong> (el resto es, casi enteramente, incertidumbre sobre la trayectoria del crudo y la integración).</p>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>WTI sostenido</th>
+<th>Valor/acción (central)</th>
+<th>vs $24.07</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear</td>
+<td>$60–65</td>
+<td>~$24 (rango $19.8–28.6)</td>
+<td>~0% (−18% en el extremo duro $55)</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>$75–85</td>
+<td>~$33 (rango $26–40)</td>
+<td>+37%</td>
+</tr>
+<tr>
+<td>Bull</td>
+<td>$90–105</td>
+<td>~$41 (rango $33–49)</td>
+<td>+70%</td>
+</tr>
+<tr>
+<td>Cola</td>
+<td>$110–120</td>
+<td>~$48 (rango $41–56)</td>
+<td>+99%</td>
+</tr>
+<tr>
+<td><strong>Ponderado</strong></td>
+<td>—</td>
+<td><strong>~$34–35</strong></td>
+<td><strong>+44%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Horizonte: 12–24 meses. Valores modelados con EBITDAX 2027E y múltiplo 4.0–5.0x; incluyen hedges reales, retorno de capital y desapalancamiento. [E]</li>
+<li><em>Lectura alternativa del tape:</em> si el sector permanece comprimido (~3.5x), el caso base a $80 vale ≈ $24–26 — es decir, el precio actual también es coherente con «base + múltiplo castigado». La tesis exige, o crudo ≥$75–85, o normalización parcial del múltiplo de MGY hacia su histórico. [E]</li>
+<li><strong>¿Compraría con mi propio dinero? Sí — pero escalonado y por qué:</strong> el precio actual cotiza (casi literalmente) mi escenario bear, mientras los tres escenarios restantes valen bastante más; el negocio genera caja en todos los escenarios del deck ($55+), el dividendo está cubierto con holgura incluso en bear, y el desapalancamiento + roll-off de coberturas son catalizadores mecánicos, no promesas. Los motivos para NO comprar: si se piensa que el crudo se asienta &lt;$65, o que la integración se va a torcer, este es el sitio equivocado; y la volatilidad (beta 0.70 pero 52s de $21 a $33) es alta. No es consejo de inversión.</li>
+<li><strong>Lo que mataría la tesis (kill triggers):</strong> (1) crudo &lt;$60 sostenido &gt;12 meses; (2) fallo de integración visible por 2 trimestres (producción &lt;156 Mboe/d en 2027-WA o costes &gt;$7/boe sin justificación); (3) sinergias revisadas a la baja (&gt;30% de recorte); (4) nueva dilución para más M&amp;A sin sinergias claras; (5) reparo financiero: ND/EBITDA &gt;1.5x.</li>
+<li><strong>Lo que la aceleraría (confirm triggers):</strong> Q4-26 en la parte alta del rango con LOE ≤$6.00; sinergias materializándose a ritmo &gt;$100M anualizados ya en 2027; ND/EBITDA ≤0.5x antes de fin-2027; recompras &gt;2%/trimestre; datos Woodbine positivos.</li>
+</ul>
+<h2 id="scorecard-12-factores-010">Scorecard (12 factores, 0–10)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Factor</th>
+<th>Score</th>
+<th>Comentario breve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Calidad de activos / inventario</td>
+<td>8</td>
+<td>Giddings probada; Woodbine opción; mix menos oil que pares</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ejecución operativa histórica</td>
+<td>9</td>
+<td>Guías batidas consistentemente; producción +9%/año medio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Modelo de negocio / reinversión</td>
+<td>9</td>
+<td>&lt;55% EBITDAX; diferenciado en small/mid-cap</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Retorno al accionista</td>
+<td>8</td>
+<td>$0.72 + recompras; –1 punto por dilución 2026</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Balance / resistencia financiera</td>
+<td>6</td>
+<td>~1.0x hoy; cubierto; objetivo 0.5x; la palanca que queda</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Valoración relativa</td>
+<td>8</td>
+<td>~3.8–4.1x strip; bear descontado; descuento vs historia</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Calidad y honestidad de gestión</td>
+<td>8</td>
+<td>Pista sólida; el timing del deal se juzgará en 2 años</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Crecimiento</td>
+<td>7</td>
+<td>4–5%; suficiente, no espectacular</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Calidad del FCF / contabilidad</td>
+<td>8</td>
+<td>Cash taxes 0–2%; SBC moderado; FCF 16% del mcap a $80</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Riesgo commodity / upside capture</td>
+<td>6</td>
+<td>Hedges truncan 2027; monocuenca</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Transparencia / reporting</td>
+<td>7</td>
+<td>Comunicación detallada; reservas PF ~481 MMboe [E suma]</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Riesgo específico (integración, short, gobernanza)</td>
+<td>6</td>
+<td>2x de tamaño; short ~10.8% del float; chairman-CEO combinado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 90/120 = 75/100 — "calidad alta, precio de escepticismo".</strong></p>
+<p><strong>Los 3 factores que más importan (y cómo seguirlos):</strong>
+1. <strong>Crudo sostenido ≥$70–75</strong> (todo el equity es una opción sobre esto; seguirlo con la disciplina de indicadores físicos: imports China, inventarios US en días de cobertura).
+2. <strong>Ejecución de la integración</strong> (producción/costes Q4-26 y FY27; sinergias cuantificadas en feb-27).
+3. <strong>Desapalancamiento a ≤0.5x sin frenar los retornos</strong> (ND/EBITDA trimestral; recompras ≥1%/trimestre).</p>
+<p><em>Metodología y límites: ver §5.7. Este documento es análisis educativo. No es consejo de inversión.</em></p>
+<hr />
+<h1 id="anexo-fuentes-clave-y-verificabilidad">Anexo · Fuentes clave y verificabilidad</h1>
+<p><strong>Datos de mercado (2-oct-2026):</strong> Yahoo Finance chart API (precio, 52s, históricos) · stockanalysis.com (estadísticas, tenencia, consenso) · finviz (reacción de precio del 20-jul) · API de Nasdaq/FINRA (short interest).</p>
+<p><strong>Documentos primarios de la compañía (EDGAR CIK 0001698990):</strong>
+- 10-K FY2025 (filed 2026-02-12, acc. 0001698990-26-000005); 10-Qs Q1/Q2-2026 (0001698990-26-000010 / -26-000019).
+- 8-K WildFire: firma (2026-07-20, 0001104659-26-084859, con PSA y presentación), equity offering (2026-07-23, -086291), notas (2026-07-22, -085611/-085832), <strong>cierre (2026-09-14, -107498; Ex-99.4 pro forma)</strong>.
+- 8-K update interino (2026-10-01, 0001104659-26-112532; Ex-99.1 con guía Q4-26 y tabla de hedges).
+- PRs trimestrales: q2 2026 (2026-08-05), q1 2026 (2026-05-06), FY2025 (2026-02-05), y anteriores (q3-24 → q4-25) para el track record.
+- DEF 14A 2026 (filed 2026-03-24) — gobernanza y compensación.</p>
+<p><strong>Cálculos propios [E]:</strong> modelo de escenarios WTI (script <code>mgy_model.py</code>), P&amp;L del libro de hedges (<code>hedge_pnl.json</code>), reconciliación de superávit déficit de acciones (183.7M → 267M), múltiplos sobre datos [V]/[S].</p>
+<p><strong>Convenciones:</strong> [V] primario · [S] secundario · [E] estimación · [NF] no encontrado. Formato US de números. Todos los precios en USD.</p>
+<p><strong>Limitaciones declaradas:</strong> ver §5.7. Este informe es un análisis independiente con fines educativos; no constituye asesoramiento de inversión.</p>
+</div>
+</body></html>
