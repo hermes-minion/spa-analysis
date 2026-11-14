@@ -1,0 +1,3 @@
+# Ficheros que no deben publicarse en el Worker de assets.
+entries_generated.json
+cf_setup_subdomain.py

@@ -87,7 +87,16 @@ En 2026 Cloudflare crea los sitios estáticos como **Worker con static assets** 
 | Deploy command | `npx wrangler deploy` (el valor por defecto) |
 | Root directory | *(vacío: la config está en la raíz del repo)* |
 
-Resultado: `https://spa-analysis.<subdominio>.workers.dev`. Sin `wrangler.jsonc`, `wrangler deploy` dispara *autoconfig* y abre un PR en vez de desplegar: ese era el fallo.
+Resultado: **https://spa-analysis.sergiovalle.workers.dev** (desplegado 14-nov-2026; el Worker se llama `spa-analysis` y sirve `009540/web` como assets). Sin `wrangler.jsonc`, `wrangler deploy` dispara *autoconfig* y abre un PR en vez de desplegar.
+
+Despliegue manual desde el servidor (necesita un token con **Workers Scripts: Edit**; con solo lectura la API devuelve 403 `No access to the specified resource`):
+
+```bash
+cd ~/stocks && CLOUDFLARE_API_TOKEN=*** CLOUDFLARE_ACCOUNT_ID=92cdc275ad658f9f2dd89c50d2296ebb \
+  npx wrangler@latest deploy
+```
+
+Notas del Worker: `_headers` sí se respeta (el manifiesto va con `no-cache`); `.assetsignore` excluye `entries_generated.json` y `cf_setup_subdomain.py` del sitio publicado; y Cloudflare redirige `reporte.html` → `reporte` con un 307 (el navegador lo sigue solo, los enlaces de la SPA no cambian).
 
 **Si en tu panel sigues en la pestaña Pages clásica:**
 
