@@ -83,8 +83,8 @@ Ajustes al conectar el repo en Pages:
 |---|---|
 | Framework preset | None |
 | Build command | *(vacío)* |
-| Build output directory | `/` |
-| Root directory | `009540/web` |
+| Build output directory | `009540/web` |
+| Root directory | *(vacío)* |
 
 Sin build: son ficheros estáticos y las rutas `#/` y `#/a/<TICKER>` funcionan tal cual. `_headers` evita que el CDN cachee `analyses.json`. Cada `git push` a `main` redespliega.
 
