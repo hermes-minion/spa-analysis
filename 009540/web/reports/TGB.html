@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ten good businesses · auditoría</title><style>:root{--bg:#0b0f14;--panel:#111823;--line:#22303f;--ink:#e8eef6;--muted:#8fa3b8;
+--dim:#5d7186;--acc:#5eead4;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+padding:14px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;
+background:rgba(11,15,20,.9);backdrop-filter:blur(8px);z-index:5}
+.top a{color:var(--acc);text-decoration:none;font-size:13px;font-weight:600}
+.top span{color:var(--dim);font-size:11.5px;font-family:var(--mono)}
+h1{font-size:34px;line-height:1.15;letter-spacing:-.6px;margin:26px 0 4px}
+h2{font-size:22px;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:-.2px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px}
+a{color:var(--acc)}
+strong{color:#fff}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--acc);background:var(--panel);color:#c8d5e3}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+code{font-family:var(--mono);font-size:.9em;background:#0a111a;padding:1px 5px;border-radius:5px}
+pre{background:#0a111a;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.45}
+pre code{background:none;padding:0}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+small,.note{color:var(--dim)}
+@media print{
+  body{background:#fff;color:#111}
+  .top{display:none}
+  h2{border-top-color:#ddd}
+  th{background:#f4f4f4;color:#333}
+  td,th{border-color:#ccc}
+  a{color:#111}
+  pre{background:#f7f7f7;border-color:#ddd}
+}
+</style></head>
+<body>
+<div class="top"><a href="../index.html">← Índice de cobertura</a><span>TGB · 2026-11-14</span></div>
+<div class="wrap">
+<h1 id="ten-good-businesses-at-marked-down-prices-auditoria-critica">Ten good businesses at marked-down prices — auditoría crítica</h1>
+<p><strong>Nota original:</strong> <em>Ten good businesses at marked-down prices</em>, investment note, 13 de noviembre de 2026. 24 páginas, 11.488 compañías cribadas, 10 nombres principales, 8 en el banquillo, 4 exclusiones explícitas. El autor declara posiciones en varias de las empresas.</p>
+<p><strong>Qué he hecho:</strong> verificar la capa factual contra el cierre del 13-nov, reconstruir la aritmética del modelo de valoración, y valorar los diez nombres con un método propio para comparar. No he reauditado los 10-K: las cifras de negocio de la nota (noches de habitación, AUM, márgenes) se toman como T2 y no se han comprobado una a una.</p>
+<hr />
+<h2 id="veredicto">Veredicto</h2>
+<blockquote>
+<p>La capa factual es sólida: precios, descuentos desde máximos y el cambio de consejero delegado de Adobe se confirman. La capa de valoración no lo es. La nota atribuye al miedo a la IA una caída de múltiplos que explica, casi exactamente, la subida del tipo de descuento: el mediano pasó de 24x a 17x, que es lo que hace un WACC del 6% al 9% con crecimiento terminal del 3%. Con el 10 años al 5,15%, el múltiplo mediano de la bolsa no está deprimido: está donde le toca.</p>
+<p>El resultado práctico: los valores razonables de la nota están un 31% por encima de los míos (mediana), su upside mediano es +52% frente a +19% del mío, y cuatro de sus nueve DCF están topados exactamente al doble del precio, incluido el de Adobe, cuyo "+100%" es un techo y no una estimación. Es una lista de seguimiento excelente con precios de entrada razonables, no una cartera para comprar a estos precios: mi escenario probabilístico le da un +12% en 3-5 años, por debajo del 5,15% libre de riesgo.</p>
+</blockquote>
+<hr />
+<h2 id="1-verificacion-lo-que-aguanta-y-lo-que-no">1. Verificación: lo que aguanta y lo que no</h2>
+<p>Precios de la nota contra el cierre del viernes 13-nov-2026 (Yahoo Finance, último cruce verificado):</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">Precio nota</th>
+<th style="text-align: right;">Cierre 13-nov</th>
+<th style="text-align: right;">Desvío</th>
+<th style="text-align: right;">Máx. 52s nota</th>
+<th style="text-align: right;">Máx. 52s real</th>
+<th style="text-align: right;">Desvío real</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADBE</td>
+<td style="text-align: right;">238,50</td>
+<td style="text-align: right;">243,08</td>
+<td style="text-align: right;">+1,9%</td>
+<td style="text-align: right;">−34%</td>
+<td style="text-align: right;">−33,0%</td>
+<td style="text-align: right;">+1,0 pp</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td style="text-align: right;">340,20</td>
+<td style="text-align: right;">341,70</td>
+<td style="text-align: right;">+0,4%</td>
+<td style="text-align: right;">−50%</td>
+<td style="text-align: right;">−49,9%</td>
+<td style="text-align: right;">+0,1 pp</td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td style="text-align: right;">161,20</td>
+<td style="text-align: right;">159,58</td>
+<td style="text-align: right;">−1,0%</td>
+<td style="text-align: right;">−27%</td>
+<td style="text-align: right;">−27,7%</td>
+<td style="text-align: right;">−0,7 pp</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td style="text-align: right;">62,70</td>
+<td style="text-align: right;">62,15</td>
+<td style="text-align: right;">−0,9%</td>
+<td style="text-align: right;">−46%</td>
+<td style="text-align: right;">−46,1%</td>
+<td style="text-align: right;">−0,1 pp</td>
+</tr>
+<tr>
+<td>APP</td>
+<td style="text-align: right;">393,70</td>
+<td style="text-align: right;">409,10</td>
+<td style="text-align: right;">+3,9%</td>
+<td style="text-align: right;">−47%</td>
+<td style="text-align: right;">−44,6%</td>
+<td style="text-align: right;">+2,4 pp</td>
+</tr>
+<tr>
+<td>REGN</td>
+<td style="text-align: right;">951,20</td>
+<td style="text-align: right;">955,47</td>
+<td style="text-align: right;">+0,4%</td>
+<td style="text-align: right;">−4%</td>
+<td style="text-align: right;">−3,7%</td>
+<td style="text-align: right;">+0,3 pp</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td style="text-align: right;">88,00</td>
+<td style="text-align: right;">87,60</td>
+<td style="text-align: right;">−0,5%</td>
+<td style="text-align: right;">−2%</td>
+<td style="text-align: right;">−3,0%</td>
+<td style="text-align: right;">−1,0 pp</td>
+</tr>
+<tr>
+<td>EXPN</td>
+<td style="text-align: right;">2.967p</td>
+<td style="text-align: right;">2.967p</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">−15%</td>
+<td style="text-align: right;">−15,5%</td>
+<td style="text-align: right;">−0,5 pp</td>
+</tr>
+<tr>
+<td>DTE</td>
+<td style="text-align: right;">26,70</td>
+<td style="text-align: right;">26,60</td>
+<td style="text-align: right;">−0,4%</td>
+<td style="text-align: right;">−22%</td>
+<td style="text-align: right;">−22,6%</td>
+<td style="text-align: right;">−0,6 pp</td>
+</tr>
+<tr>
+<td>SCHW</td>
+<td style="text-align: right;">91,70</td>
+<td style="text-align: right;">92,98</td>
+<td style="text-align: right;">+1,4%</td>
+<td style="text-align: right;">−20%</td>
+<td style="text-align: right;">−18,8%</td>
+<td style="text-align: right;">+1,2 pp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lo que se confirma.</strong> Nueve de diez precios caen dentro del ±2% del cierre; el único desvío relevante es APP (+3,9%), y se explica porque la nota usó un precio intradía (el rango del día fue 237,94–243,78 en Adobe, y 238,50 cae dentro). Los descuentos desde máximos de 52 semanas coinciden con un error máximo de 2,4 puntos. El cambio de consejero delegado de Adobe también es real: Anil Chakravarthy, anunciado el 3-sep-2026 y efectivo el 1-dic-2026.</p>
+<p><strong>Consecuencia menor.</strong> Al usar precios intradía y no cierres, los upside de la nota están sobrestimados entre 0,4 y 3,9 puntos. Trivial, pero indica que la nota se montó durante la sesión: los "precios de hoy" no son ejecutables.</p>
+<p><strong>Consecuencia mayor.</strong> La nota mezcla tres universos sin reconciliarlos: 11.488 compañías cribadas, 5.537 "que pudimos analizar" y 5.229 "rankeadas". No es un error, pero el embudo no se explica y los rankings sectoriales (389 en software, 330 en salud, 1.200 en financieras, 102 en telecom) no son comparables entre sí: el "rank 23 de 1.200" de Schwab no vale lo mismo que el "rank 10 de 389" de Adobe.</p>
+<p><strong>Un detalle de encuadre.</strong> El título dice "marked-down prices", pero Regeneron está a un 3,7% de su máximo y Sanofi al 3,0%. Dos de los diez no están rebajados: están baratos en beneficio forward. La lista es un cribado de P/E, no una lista de caídas.</p>
+<hr />
+<h2 id="2-el-error-de-atribucion-no-es-miedo-a-la-ia-es-el-tipo-de-descuento">2. El error de atribución: no es miedo a la IA, es el tipo de descuento</h2>
+<p>La nota abre con el dato central: la compañía típica cotizaba a 24x hace cinco años y a 17x ahora. Y lo atribuye a que "el mercado teme que la IA sustituya a estas empresas".</p>
+<p>Es cierto en la dispersión, no en el nivel. Con crecimiento terminal del 3%:</p>
+<ul>
+<li>WACC 6% → 1 / (0,06 − 0,03) = <strong>33x</strong></li>
+<li>WACC 9% → 1 / (0,09 − 0,03) = <strong>17x</strong></li>
+</ul>
+<p>La caída de 24x a 17x es, casi punto por punto, lo que hace un WACC que pasa del 6% al 9%. Y eso es lo que ha pasado: el 10 años americano cerró el 13-nov en <strong>5,154%</strong> (máximo de 52 semanas: 5,364%), frente al 1,5% de 2021. Para que el múltiplo mediano volviera a 24x haría falta un WACC del 7,17%, es decir, un 10 años en torno al <strong>3,5%</strong> asumiendo una prima de riesgo del 3,7%. Son 165 puntos básicos de recortes.</p>
+<p>De ahí sale la pregunta que la nota nunca responde: <strong>¿el upside viene de que baje el tipo, o de que el crecimiento aguante?</strong> Son dos apuestas distintas con horizontes distintos. Si es lo primero, no es una tesis sobre diez empresas, es una apuesta a que la Fed recorta; si es lo segundo, hay que demostrar durabilidad del crecimiento nombre por nombre, y la nota solo la afirma.</p>
+<p>Esto no invalida la lista. La reencuadra: en un mundo con el 10 años al 5,15%, el múltiplo mediano del 17x es normal, y lo que queda es la parte idiosincrática — dónde el mercado está descontando una disrupción que los números no muestran. Ahí sí hay tesis, y algunas son buenas. Pero el "han bajado los múltiplos, luego están baratas" no lo es.</p>
+<p><strong>El steelman, para ser justos.</strong> La cesta cotiza a un P/E forward mediano de 13,7x con un crecimiento mediano esperado del 12,5%, frente al 17x y 9% del mercado. En términos ajustados por crecimiento, el cribado sí produce un descuento del 20% al 27%. El problema no es que el cribado esté mal; es que el descuento es la prima de riesgo de disrupción, y la nota lo trata como un error del mercado en lugar de como una hipótesis a demostrar.</p>
+<hr />
+<h2 id="3-la-aritmetica-del-modelo-cuatro-dcf-topados-y-un-blend-inclinado">3. La aritmética del modelo: cuatro DCF topados y un blend inclinado</h2>
+<p>Aquí está el hallazgo más incómodo, y sale de los propios números de la nota.</p>
+<p><strong>Cuatro de los nueve DCF están exactamente al doble del precio.</strong> No "cerca": exactamente.</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">Precio</th>
+<th style="text-align: right;">Valor DCF</th>
+<th style="text-align: right;">DCF / precio</th>
+<th>¿Topado?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADBE</td>
+<td style="text-align: right;">238,50</td>
+<td style="text-align: right;">477,1</td>
+<td style="text-align: right;">2,000</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td style="text-align: right;">340,20</td>
+<td style="text-align: right;">680,3</td>
+<td style="text-align: right;">2,000</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td style="text-align: right;">88,00</td>
+<td style="text-align: right;">176,1</td>
+<td style="text-align: right;">2,001</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>DTE</td>
+<td style="text-align: right;">26,70</td>
+<td style="text-align: right;">53,4</td>
+<td style="text-align: right;">2,000</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td style="text-align: right;">161,20</td>
+<td style="text-align: right;">222,7</td>
+<td style="text-align: right;">1,38</td>
+<td>No</td>
+</tr>
+<tr>
+<td>REGN</td>
+<td style="text-align: right;">951,20</td>
+<td style="text-align: right;">1.210</td>
+<td style="text-align: right;">1,27</td>
+<td>No</td>
+</tr>
+<tr>
+<td>APP</td>
+<td style="text-align: right;">393,70</td>
+<td style="text-align: right;">452,4</td>
+<td style="text-align: right;">1,15</td>
+<td>No</td>
+</tr>
+<tr>
+<td>EXPN</td>
+<td style="text-align: right;">2.967p</td>
+<td style="text-align: right;">2.904p</td>
+<td style="text-align: right;">0,98</td>
+<td>No</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td style="text-align: right;">62,70</td>
+<td style="text-align: right;">59,2</td>
+<td style="text-align: right;">0,94</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Un tope que se activa en el 44% de la muestra no está recortando valores extremos: está tapando un problema de calibración. Si el DCF dice que Adobe vale más del doble que su precio, el DCF no está midiendo, está proyectando. Con el 10 años al 5,15%, un WACC del 7% implicaría una prima de riesgo de 1,85 puntos: demasiado baja para una acción con riesgo de disrupción. La nota no publica WACC, ni crecimiento terminal, ni horizonte. Sin esos tres números el DCF no es falsable.</p>
+<p><strong>El blend no es un promedio y no está declarado.</strong> Reconstruyendo el peso implícito del DCF en cada nombre (w tal que FV = w·DCF + (1−w)·múltiplos):</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">Peso DCF implícito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BKNG</td>
+<td style="text-align: right;">48,5%</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td style="text-align: right;">45,7%</td>
+</tr>
+<tr>
+<td>REGN</td>
+<td style="text-align: right;">40,1%</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td style="text-align: right;">40,0%</td>
+</tr>
+<tr>
+<td>APP</td>
+<td style="text-align: right;">40,0%</td>
+</tr>
+<tr>
+<td>EXPN</td>
+<td style="text-align: right;">40,0%</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td style="text-align: right;">39,8%</td>
+</tr>
+<tr>
+<td>DTE</td>
+<td style="text-align: right;">28,8%</td>
+</tr>
+</tbody>
+</table>
+<p>Es un 40/60 en la mayoría, con desviaciones ad hoc. Y en cinco de los nueve nombres la pata de múltiplos es la más generosa, así que el 60% de peso va sistemáticamente al método que más valora. Eso no es un blend: es un sesgo con dos decimales.</p>
+<p><strong>El valor final no reproduce.</strong> En cinco de nueve casos el FV no es la media de sus dos componentes: Netflix sale un 5,6% por encima de su media, Experian un 4,7%, AppLovin un 4,2%, Regeneron un 2,8%. Nada de esto es grave por separado; junto significa que el "fair value" no es reproducible con la información publicada.</p>
+<p><strong>El caso Adobe.</strong> DCF = múltiplos = FV = 477,1, y el upside sale exactamente +100%. Es el techo del método, no una estimación. La nota lo admite ("each method is capped at twice the price, which is why Adobe shows exactly +100%"), pero entonces el nombre de mayor convicción de la lista es el único cuyo valor no se puede leer. Ironía útil: la nota es más honesta en la letra pequeña que en la tabla.</p>
+<hr />
+<h2 id="4-el-test-correcto-que-multiplo-de-salida-hace-falta-en-tres-anos">4. El test correcto: qué múltiplo de salida hace falta en tres años</h2>
+<p>El FV es un valor de hoy, pero el horizonte declarado es de 3 a 5 años. El test justo no es "qué P/E implica hoy" sino "qué P/E hace falta al final, con el beneficio que la propia nota proyecta". Con el crecimiento del primer año aplicado plano tres años (generoso con la nota):</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">P/E forward</th>
+<th style="text-align: right;">EPS hoy</th>
+<th style="text-align: right;">EPS en 3 años</th>
+<th style="text-align: right;">P/E de salida necesario</th>
+<th style="text-align: right;">Upside nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADBE</td>
+<td style="text-align: right;">8,9x</td>
+<td style="text-align: right;">26,8</td>
+<td style="text-align: right;">37,6</td>
+<td style="text-align: right;"><strong>12,7x</strong></td>
+<td style="text-align: right;">+100%</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td style="text-align: right;">17,5x</td>
+<td style="text-align: right;">3,6</td>
+<td style="text-align: right;">5,2</td>
+<td style="text-align: right;"><strong>16,7x</strong></td>
+<td style="text-align: right;">+38%</td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td style="text-align: right;">13,7x</td>
+<td style="text-align: right;">11,8</td>
+<td style="text-align: right;">14,0</td>
+<td style="text-align: right;"><strong>17,6x</strong></td>
+<td style="text-align: right;">+53%</td>
+</tr>
+<tr>
+<td>DTE</td>
+<td style="text-align: right;">9,8x</td>
+<td style="text-align: right;">2,7</td>
+<td style="text-align: right;">3,1</td>
+<td style="text-align: right;"><strong>16,1x</strong></td>
+<td style="text-align: right;">+84%</td>
+</tr>
+<tr>
+<td>SCHW</td>
+<td style="text-align: right;">12,3x</td>
+<td style="text-align: right;">7,5</td>
+<td style="text-align: right;">11,3</td>
+<td style="text-align: right;"><strong>11,0x</strong></td>
+<td style="text-align: right;">+36%</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td style="text-align: right;">8,0x</td>
+<td style="text-align: right;">11,0</td>
+<td style="text-align: right;">17,2</td>
+<td style="text-align: right;"><strong>9,7x</strong></td>
+<td style="text-align: right;">+89%</td>
+</tr>
+<tr>
+<td>EXPN</td>
+<td style="text-align: right;">19,4x</td>
+<td style="text-align: right;">152,9p</td>
+<td style="text-align: right;">203,5p</td>
+<td style="text-align: right;"><strong>19,5x</strong></td>
+<td style="text-align: right;">+34%</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td style="text-align: right;">14,8x</td>
+<td style="text-align: right;">23,0</td>
+<td style="text-align: right;">29,8</td>
+<td style="text-align: right;"><strong>22,1x</strong></td>
+<td style="text-align: right;">+93%</td>
+</tr>
+<tr>
+<td>APP¹</td>
+<td style="text-align: right;">20,1x</td>
+<td style="text-align: right;">19,6</td>
+<td style="text-align: right;">38,3</td>
+<td style="text-align: right;"><strong>15,6x</strong></td>
+<td style="text-align: right;">+52%</td>
+</tr>
+<tr>
+<td>REGN²</td>
+<td style="text-align: right;">11,9x</td>
+<td style="text-align: right;">79,9</td>
+<td style="text-align: right;">112,3</td>
+<td style="text-align: right;"><strong>12,9x</strong></td>
+<td style="text-align: right;">+52%</td>
+</tr>
+</tbody>
+</table>
+<p>¹ Con el 52% de crecimiento que da la nota serían 8,7x; he usado un 25% anual, más realista para tres años.
+² Con el 31% de la nota serían 8,1x; he usado un 12%, porque el salto de 2026 es un cambio de reparto de beneficio, no una tasa sostenible.</p>
+<p>Esto ordena la lista de otra manera, y es más útil que el upside:</p>
+<ul>
+<li><strong>Seis nombres necesitan un múltiplo de salida normal (11-17x).</strong> Ahí el upside no depende de que la IA tenga razón o no, solo de que el beneficio crezca. Es el grupo defendible.</li>
+<li><strong>INTU (22,1x) y EXPN (19,5x) necesitan múltiplos premium.</strong> En Intuit, un 22x para un negocio que baja la guía del 14% al 9-10% es exigente. En Experian, 19,5x con crecimiento del 10% es el múltiplo de hoy: no hay re-rating, hay que ganárselo con beneficio.</li>
+<li><strong>DTE necesita 16,1x sobre un crecimiento del 4%.</strong> No hay beneficio que lo justifique: es puro cierre del descuento de holding. Sin catalizador, es una apuesta a que el mercado cambie de opinión.</li>
+</ul>
+<hr />
+<h2 id="5-mi-valoracion-con-el-metodo-a-la-vista">5. Mi valoración, con el método a la vista</h2>
+<p>Para no criticar sin proponer: valoro cada nombre como <strong>P/E de salida a tres años × EPS en tres años, descontado al 9%</strong>. El P/E de salida es juicio, no fórmula: lo fijo por durabilidad de la franquicia (poder de fijación de precios, riesgo de disrupción, ROIC, dependencia de un producto), no por el múltiplo histórico. Con el 10 años al 5,15%, un 9% de descuento implica una prima de riesgo de 3,85 puntos, razonable para esta cesta.</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">FV nota</th>
+<th style="text-align: right;"><strong>Mi FV</strong></th>
+<th style="text-align: right;">Tu ficha</th>
+<th style="text-align: right;">Nota / mío</th>
+<th style="text-align: right;">Mi upside</th>
+<th style="text-align: right;">Upside nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADBE</td>
+<td style="text-align: right;">477,1</td>
+<td style="text-align: right;"><strong>287</strong></td>
+<td style="text-align: right;">286</td>
+<td style="text-align: right;">1,66x</td>
+<td style="text-align: right;">+20%</td>
+<td style="text-align: right;">+100%</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td style="text-align: right;">658,0</td>
+<td style="text-align: right;"><strong>423</strong></td>
+<td style="text-align: right;">416</td>
+<td style="text-align: right;">1,56x</td>
+<td style="text-align: right;">+24%</td>
+<td style="text-align: right;">+93%</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td style="text-align: right;">166,1</td>
+<td style="text-align: right;"><strong>111</strong></td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">1,49x</td>
+<td style="text-align: right;">+27%</td>
+<td style="text-align: right;">+89%</td>
+</tr>
+<tr>
+<td>DTE</td>
+<td style="text-align: right;">49,2</td>
+<td style="text-align: right;"><strong>33</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,49x</td>
+<td style="text-align: right;">+24%</td>
+<td style="text-align: right;">+84%</td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td style="text-align: right;">246,2</td>
+<td style="text-align: right;"><strong>184</strong></td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">1,34x</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+53%</td>
+</tr>
+<tr>
+<td>REGN</td>
+<td style="text-align: right;">1.448</td>
+<td style="text-align: right;"><strong>1.127</strong></td>
+<td style="text-align: right;">1.120</td>
+<td style="text-align: right;">1,28x</td>
+<td style="text-align: right;">+19%</td>
+<td style="text-align: right;">+52%</td>
+</tr>
+<tr>
+<td>APP</td>
+<td style="text-align: right;">596,7</td>
+<td style="text-align: right;"><strong>470</strong></td>
+<td style="text-align: right;">469</td>
+<td style="text-align: right;">1,27x</td>
+<td style="text-align: right;">+20%</td>
+<td style="text-align: right;">+52%</td>
+</tr>
+<tr>
+<td>EXPN</td>
+<td style="text-align: right;">3.967p</td>
+<td style="text-align: right;"><strong>3.200p</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,24x</td>
+<td style="text-align: right;">+8%</td>
+<td style="text-align: right;">+34%</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td style="text-align: right;">86,4</td>
+<td style="text-align: right;"><strong>72</strong></td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">1,21x</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+38%</td>
+</tr>
+<tr>
+<td>SCHW</td>
+<td style="text-align: right;">124,8</td>
+<td style="text-align: right;"><strong>107</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,16x</td>
+<td style="text-align: right;">+17%</td>
+<td style="text-align: right;">+36%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mediana: mi FV está un 31% por debajo del de la nota; mi upside mediano es +19%, el suyo +52,5%.</strong></p>
+<p>Dos advertencias sobre mi propio método. Primera: el P/E de salida es el 80% del resultado; cinco puntos de múltiplo mueven el valor un 25%. Segunda: mis valores caen dentro del ±3% de tus fichas existentes en seis de los siete nombres que ya cubres (ADBE 287 vs 286; INTU 423 vs 416; BKNG 184 vs 179; NFLX 72 vs 68; APP 470 vs 469; REGN 1.127 vs 1.120; SAN 111 vs 101). Eso no es una confirmación independiente —elegí múltiplos de salida después de ver los datos, no de ver tus fichas— pero sí indica que tu modelo y un método distinto convergen, y que la nota es la que se sale de rango.</p>
+<hr />
+<h2 id="6-nombre-por-nombre">6. Nombre por nombre</h2>
+<h3 id="adobe-adbe-89x-fv-nota-4771-100">Adobe (ADBE) — 8,9x, FV nota 477,1 (+100%)</h3>
+<p><strong>Qué compras:</strong> el estándar de creación y documentos, 41% de margen FCF, deuda neta 0,1x EBITDA, un 26% de la capitalización autorizado para recompra. El suelo mecánico es real.</p>
+<p><strong>Dónde discrepo:</strong> el +100% no es una estimación, es el techo del método (DCF y múltiplos topados). El caso base de la nota exige 12% de crecimiento <em>y</em> un múltiplo de salida de 12,7x, mientras su propio "what could go wrong" dice que si la IA permite a un diseñador hacer el trabajo de tres, se necesitan menos asientos. Las dos cosas no pueden ser verdad a la vez: o el crecimiento es del 12%, o el riesgo de asientos existe. La nota no modela el segundo. Mi valor, con 5% de crecimiento y 12x, es 287: coincide con tu ficha. La diferencia entre 287 y 477 es exactamente el crecimiento de asientos.</p>
+<p><strong>Invalidante:</strong> dos trimestres con ARR neto nuevo negativo, o que el consejero delegado que entra el 1-dic recorte la guía FY27. <strong>P(alcanzar 477 en 3-5 años): 25%.</strong> El catalizador real no es la IA: es el primer trimestre con Chakravarthy al mando.</p>
+<h3 id="intuit-intu-148x-fv-658-93">Intuit (INTU) — 14,8x, FV 658 (+93%)</h3>
+<p><strong>Qué compras:</strong> QuickBooks como sistema de registro de millones de pymes, con el contable dentro. Eso no se migra. TurboTax es otra cosa: la decisión se toma cada primavera.</p>
+<p><strong>Dónde discrepo:</strong> la nota llama "elegida" a la desaceleración del 14% al 9-10%. Puede serlo, pero TurboTax es la franquicia más expuesta a la IA de toda la lista —un modelo general hace una declaración simple— y la propia nota puntúa "is it hard to replace?" admitiendo que TurboTax es fácil de abandonar. Un 22,1x de salida para un negocio que desacelera y tiene esa pregunta abierta no es un +93%: es un múltiplo premium. Credit Karma y Mailchimp no ayudan. Mi valor: 423.</p>
+<p><strong>Invalidante:</strong> que la bajada de guía sea estructural y no comprada, o que Mailchimp siga encogiendo dos trimestres más. <strong>P(658): 15%.</strong></p>
+<h3 id="booking-bkng-137x-fv-246-53">Booking (BKNG) — 13,7x, FV 246 (+53%)</h3>
+<p><strong>Qué compras:</strong> la mayor agencia online del mundo, 33% de margen FCF, 72% de ROIC, 2.400 M$ devueltos en el trimestre. La ventaja es la oferta: las diez mayores cadenas son una parte baja de dos dígitos de sus noches; el resto son hoteles independientes sin otro canal global.</p>
+<p><strong>Dónde discrepo:</strong> el riesgo no es que la IA sustituya a Booking, es que se quede con la puerta de entrada. Hoy la IA le manda menos del 1% de las reservas, pero la ventaja de Booking es distribución, y la distribución es exactamente lo que un asistente desintermedia. Aun así, es el nombre donde la nota y yo estamos más cerca: 17,6x de salida con 6% de crecimiento es defendible para un negocio con 72% de ROIC. Mi valor: 184 (+14%). El upside de la nota exige que el múltiplo suba <em>y</em> que el crecimiento no se rompa.</p>
+<p><strong>Invalidante:</strong> que el marketing suba del 4,8% de las reservas o que las noches se estanquen por debajo del 3%. <strong>P(246): 30%.</strong></p>
+<h3 id="netflix-nflx-175x-fv-864-38">Netflix (NFLX) — 17,5x, FV 86,4 (+38%)</h3>
+<p><strong>Qué compras:</strong> 325 M de membresías, 34,6% de margen operativo, 2% de cancelación mensual.</p>
+<p><strong>Dónde discrepo:</strong> el propio DCF de la nota dice 59,2, por debajo del precio de 62,7. Promediar un método que dice "sobrevalorada" con otro anclado a un P/E de 108x de hace cinco años no es evidencia, es aritmética. Y el +38% necesita 16,7x de salida con el negocio publicitario por debajo de plan, el crecimiento en el 12% más bajo en tres años y el consumo en EE.UU. cayendo. Mi valor: 72 (+14%), en línea con tu ficha (68). La nota acierta al reducir el peso; se queda corta al ponerle un precio.</p>
+<p><strong>Invalidante:</strong> que la guía de enero para 2027 implique menos de 10% de ingresos o que el margen operativo baje del 33%. <strong>P(86,4): 20%.</strong></p>
+<h3 id="applovin-app-201x-fv-5967-52">AppLovin (APP) — 20,1x, FV 596,7 (+52%)</h3>
+<p><strong>Qué compras:</strong> 95/100 de calidad (el ranking más alto de la nota), 84% de margen EBITDA ajustado, 64% de margen FCF, 85% de ROIC, 52% de crecimiento esperado. Sobre PEG, es lo más barato de la lista.</p>
+<p><strong>Dónde discrepo:</strong> el propio modelo de la nota lo reconoce: es el nombre menos diversificado y más contestado, con demanda, denuncia y dependencia de cada versión de un solo modelo. Un negocio cuyo producto es un modelo que se puede replicar no merece 30,5x de salida (que es lo que implica el FV) sino un múltiplo de crecimiento con descuento de cola. Mi valor, con 25% de crecimiento y 18x, es 470 —tu ficha, otra vez. La nota lo pone a medio peso, y hace bien; el problema es que el FV no refleja ese medio peso.</p>
+<p><strong>Invalidante:</strong> un cambio de reglas de privacidad de Apple o Google, o que el crecimiento del cuarto trimestre se quede por debajo del 43%. <strong>P(596,7): 25%.</strong></p>
+<h3 id="regeneron-regn-119x-fv-1448-52">Regeneron (REGN) — 11,9x, FV 1.448 (+52%)</h3>
+<p><strong>Qué compras:</strong> Dupixent (6.500 M$ en el trimestre, +35%), Eylea de dosis alta (+62%), Libtayo (+51%), caja neta, y un socio (Sanofi) que acaba de pagar 1.000 M$ por cuatro anticuerpos. Ojo: no es una acción caída —está a un 3,7% de su máximo y sube un 40% en el año.</p>
+<p><strong>Dónde discrepo:</strong> poco. Es el nombre donde la nota y yo estamos más alineados. El 11,9x es barato para un beneficio que acaba de dar un salto del 70% por el cambio de reparto de Dupixent, y el 12,9x de salida es exigente pero alcanzable. El riesgo real es de concentración: dos franquicias hacen casi todo el beneficio y Dupixent pierde patente a principios de los 30.</p>
+<p><strong>Invalidante:</strong> que Eylea de dosis alta se estanque o que la revisión de precios de Medicare llegue a Dupixent. <strong>P(1.448): 30%.</strong> Es el mejor riesgo/retorno de la lista a 2-3 años.</p>
+<h3 id="sanofi-san-80x-fv-1661-89">Sanofi (SAN) — 8,0x, FV 166,1 (+89%)</h3>
+<p><strong>Qué compras:</strong> 4,7% de dividendo, 8,4% de retorno total al accionista, Dupixent y vacunas.</p>
+<p><strong>Dónde discrepo:</strong> el descuento es racional, no un error. Un DCF con un acantilado de patente en 2032 tiene que mostrar deterioro terminal; el DCF de la nota (176,1) asume implícitamente un reemplazo que su propio caso bajista niega ("nothing in the pipeline, or bought in, replaces Dupixent in time"). No se pueden tener las dos. Un 9,7x de salida para un negocio con 5% de ROIC y un acantilado conocido es generoso. Mi valor: 111 (+27%), con tu ficha en 101. Es una posición de dividendo, no una idea de +89%. Y si se tienen Regeneron y Sanofi, el 20% del capital está en la misma medicina.</p>
+<p><strong>Invalidante:</strong> una adquisición cara que tape el hueco, o que las vacunas sigan cayendo. <strong>P(166,1): 20%.</strong></p>
+<h3 id="experian-expn-194x-fv-3967p-34">Experian (EXPN) — 19,4x, FV 3.967p (+34%)</h3>
+<p><strong>Qué compras:</strong> la mejor franquicia de la lista según la propia nota (23/25), el mayor buró de crédito del mundo, datos que no se pueden copiar porque los aportan miles de prestamistas. 26% de margen FCF, 15% de ROIC, 1,8x de deuda neta.</p>
+<p><strong>Dónde discrepo:</strong> es el descuento más pequeño de los diez y su DCF está <em>por debajo</em> del precio (2.904p vs 2.967p). Todo el upside sale de la pata de múltiplos (4.675p, un 26x). El 19,5x de salida es el múltiplo de hoy: no hay re-rating que capturar, solo crecimiento del 10% y compras. Mi valor: 3.200p (+8%). Es una compounder para tener a 2.800p, no una idea de +34%.</p>
+<p><strong>Catalizador cercano:</strong> resultados semestrales el 18-nov. <strong>Invalidante:</strong> que el crecimiento orgánico baje del 6% o que la división de consumo en EE.UU. siga contrayéndose. <strong>P(3.967p): 30%.</strong></p>
+<h3 id="deutsche-telekom-dte-98x-fv-492-84">Deutsche Telekom (DTE) — 9,8x, FV 49,2 (+84%)</h3>
+<p><strong>Qué compras:</strong> el 55% de T-Mobile US, que vale unos 100.000 M$ —el 70% de la capitalización de DT— más el negocio alemán y 134.000 M€ de deuda neta con leases.</p>
+<p><strong>Dónde discrepo:</strong> el descuento de holding es real y estructural. Un 16,1x de salida sobre un crecimiento del 4% no lo justifica el beneficio: es puro cierre del descuento, y para eso hace falta un catalizador (una separación, una venta, una recompra agresiva) que la nota no identifica. El Estado alemán y los sindicatos en el capital no ayudan. Mi valor: 33 (+24%). Tu criterio de inversión pide catalizador: este nombre no lo pasa.</p>
+<p><strong>Invalidante:</strong> una guerra de precios de SpaceX o del cable en EE.UU., o que el tipo de interés encarezca la deuda. <strong>P(49,2): 15%.</strong></p>
+<h3 id="charles-schwab-schw-123x-fv-1248-36">Charles Schwab (SCHW) — 12,3x, FV 124,8 (+36%)</h3>
+<p><strong>Qué compras:</strong> 13,3 billones de dólares de activos de clientes, 48,6 M de cuentas, 21% de ROE, 3,5x valor contable, 190.000 M$ de activos netos nuevos en el trimestre (+38%).</p>
+<p><strong>Dónde discrepo:</strong> poco, pero con matiz. La nota acierta al valorarlo por ROE y no por FCF. El riesgo es que el 39% de crecimiento esperado en beneficio sea un rebote cíclico de tipos, no una tendencia: la mitad de los ingresos es interés sobre la caja de clientes. Un 11,0x de salida es perfectamente alcanzable con 10% de crecimiento. Mi valor: 107 (+17%). Es el nombre con menos riesgo narrativo de la lista: no depende de que la IA sea buena o mala.</p>
+<p><strong>Invalidante:</strong> recortes de tipos que compriman el margen de intereses (3,04% ahora) o una migración de caja a fondos monetarios como en 2023. <strong>P(124,8): 30%.</strong></p>
+<hr />
+<h2 id="7-banquillo-y-exclusiones-la-parte-mas-valiosa-de-la-nota">7. Banquillo y exclusiones: la parte más valiosa de la nota</h2>
+<p><strong>Los ocho del banquillo.</strong> La nota los presenta como sustitutos, no como añadidos. Pero cinco repiten apuestas que los diez ya hacen (Autodesk, Salesforce y ServiceNow en software; Expedia en viajes; T-Mobile a través de Deutsche Telekom). En la práctica el banquillo son tres nombres nuevos, y dos de ellos son "no ahora".</p>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th style="text-align: right;">Calidad</th>
+<th style="text-align: right;">P/E fwd</th>
+<th style="text-align: right;">FV</th>
+<th style="text-align: right;">Upside</th>
+<th>Mi lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADSK</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">20,0x</td>
+<td style="text-align: right;">394,5</td>
+<td style="text-align: right;">+52%</td>
+<td>Misma apuesta IA-software. 3.600 M$ por MaintainX y objetivo de FCF recortado: duda de asignación de capital. Resultados 24-nov.</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">14,8x</td>
+<td style="text-align: right;">392,8</td>
+<td style="text-align: right;">+81%</td>
+<td>El 392,8 implica 26,7x con crecimiento del 11%, parte comprado. Deuda neta 2,3x y el doble de EPS por plusvalías de inversiones, no por operaciones. No.</td>
+</tr>
+<tr>
+<td>NOW</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">22,1x</td>
+<td style="text-align: right;">161,8</td>
+<td style="text-align: right;">+61%</td>
+<td>22x ajustado pero 72x reportado, dilución del 1,4% anual y 9.200 M$ en compras en nueve meses. El más caro y el de peor calidad contable. No.</td>
+</tr>
+<tr>
+<td>EXPE</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">10,7x</td>
+<td style="text-align: right;">507,8</td>
+<td style="text-align: right;">+95%</td>
+<td>Booking es la versión mejor del mismo negocio. Duplicar viajes no aporta. No.</td>
+</tr>
+<tr>
+<td>TMUS</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">12,7x</td>
+<td style="text-align: right;">281,6</td>
+<td style="text-align: right;">+65%</td>
+<td>Ya se tiene vía DTE. Solo como sustituto de DTE, para tener EE.UU. sin Alemania.</td>
+</tr>
+<tr>
+<td>CPRT</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">19,7x</td>
+<td style="text-align: right;">39,9</td>
+<td style="text-align: right;">+25%</td>
+<td>El descuento más pequeño y cotiza por encima de su propio precio de compra (32,0 vs 31,9). Esperar.</td>
+</tr>
+<tr>
+<td>DECK</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">10,8x</td>
+<td style="text-align: right;">140,1</td>
+<td style="text-align: right;">+66%</td>
+<td>La protección más débil de la nota (14/25): nadie está atado a un zapato. Último trimestre inflado por 46 M$ de aranceles devueltos. Posición pequeña como máximo.</td>
+</tr>
+<tr>
+<td>2914</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">14,0x</td>
+<td style="text-align: right;">10.315</td>
+<td style="text-align: right;">+74%</td>
+<td>El modelo es anterior al decreto ruso del 5-nov: un quinto del beneficio está en juego. No ahora.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Las cuatro exclusiones.</strong> Aquí la nota está mejor que en la lista principal, porque explica por qué <em>no</em> compra:</p>
+<ul>
+<li><strong>Munich Re:</strong> el modelo la quiere (+51%, calidad 71), pero el precio del reaseguro cae (9% menos negocio en los renovaciones de julio, a precios un 5,5% más bajos) y el beneficio lo sostiene un año tranquilo de catástrofes. Comprar aseguradoras con precios en subida: correcto.</li>
+<li><strong>Edenred:</strong> barata en todo (+92%, calidad 78), pero los gobiernos de sus mayores mercados han topado las comisiones de los vales de comida. "No se puede valorar un negocio cuyo precio lo fija un decreto". Esta es la exclusión más relevante para ti: <strong>tú tienes Edenred como Bullish con un +11% (25,52 € → 28 €)</strong>. Tu ficha no menciona el riesgo regulatorio. Merece una revisión.</li>
+<li><strong>Halozyme:</strong> primera de 330 en su sector (+100%, calidad 90), pero las patentes originales empiezan a caducar en 2027. Los números miran atrás.</li>
+<li><strong>Micron, Broadcom, Vertiv, Comfort Systems:</strong> márgenes muy por encima de su propia historia; un P/E bajo sobre márgenes récord es una advertencia, no una ganga. <strong>Esto coincide exactamente con tus fichas Hugo:</strong> MU +8%, VRT +2%, AVGO +11%, FIX +17% de upside. Dos métodos independientes llegan a la misma conclusión: no queda margen. Es la confirmación más útil de toda la nota.</li>
+</ul>
+<hr />
+<h2 id="8-cartera-diez-posiciones-seis-apuestas">8. Cartera: diez posiciones, seis apuestas</h2>
+<p>La nota lo dice en la página 23 ("know what is the same bet"), pero no lo cuantifica. Con pesos iguales:</p>
+<table>
+<thead>
+<tr>
+<th>Apuesta</th>
+<th>Nombres</th>
+<th style="text-align: right;">Peso</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software frente a la IA</td>
+<td>ADBE, INTU (+ADSK, CRM, NOW en banquillo)</td>
+<td style="text-align: right;">20%</td>
+<td>Un solo factor: que la IA no sustituya al software. Los cinco se mueven juntos.</td>
+</tr>
+<tr>
+<td>Viajes online</td>
+<td>BKNG (+EXPE)</td>
+<td style="text-align: right;">10%</td>
+<td>La misma desintermediación como riesgo.</td>
+</tr>
+<tr>
+<td>Streaming / atención</td>
+<td>NFLX</td>
+<td style="text-align: right;">5%</td>
+<td>El peso reducido es correcto.</td>
+</tr>
+<tr>
+<td>Ad-tech</td>
+<td>APP</td>
+<td style="text-align: right;">5%</td>
+<td>Riesgo binario de plataforma y regulación.</td>
+</tr>
+<tr>
+<td>Dupixent</td>
+<td>REGN + SAN</td>
+<td style="text-align: right;">20%</td>
+<td>Un solo fármaco, una sola patente. Es la mayor concentración involuntaria de la lista.</td>
+</tr>
+<tr>
+<td>Telecom</td>
+<td>DTE (55% TMUS)</td>
+<td style="text-align: right;">10%</td>
+<td>Un solo activo.</td>
+</tr>
+<tr>
+<td>Buró de crédito</td>
+<td>EXPN</td>
+<td style="text-align: right;">10%</td>
+<td>La apuesta más descorrelacionada.</td>
+</tr>
+<tr>
+<td>Broker</td>
+<td>SCHW</td>
+<td style="text-align: right;">10%</td>
+<td>Sensible a tipos y al mercado.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Seis apuestas efectivas, no diez.</strong> Y el 20% en Dupixent es el doble de lo que la nota sugiere cuando dice que Regeneron y Sanofi comparten medicina.</p>
+<p><strong>Exposición a dólar:</strong> 7 de 10 en USD. Con el EUR/USD en 1,1028, una caída del 10% del dólar se come un tercio del upside mediano de la nota.</p>
+<p><strong>Fiscalidad para un residente español:</strong> retención del 15% en EE.UU. (con W-8BEN), 12,8% en Francia, 15% en Alemania por tratado, 0% en Reino Unido. El dividendo neto de Sanofi baja del 4,7% al 4,1%; el retorno total de DTE, del 5,4% a ~4,3%.</p>
+<p><strong>El punto que la nota no menciona y que importa más que todo lo anterior:</strong> España no tiene tratado de sucesiones con EE.UU. Las acciones estadounidenses en cartera directa por encima de 60.000 $ están expuestas al impuesto de sucesiones americano, con tipos de hasta el 40% y sin exención prorrateada. Siete de estos diez nombres son activos sitos en EE.UU. Para una cartera de tamaño relevante, la estructura (fondo irlandés, o aceptar el riesgo) pesa más que el 10% de diferencia en el FV.</p>
+<hr />
+<h2 id="9-que-haria-con-esta-lista">9. Qué haría con esta lista</h2>
+<p><strong>Como cesta, no la compro.</strong> Escenarios para una cesta equiponderada a 100 (precios del 13-nov), a 3-5 años:</p>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th style="text-align: right;">Probabilidad</th>
+<th style="text-align: right;">Índice</th>
+<th style="text-align: right;">Retorno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Re-rating completo hasta los FV de la nota</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">152,5</td>
+<td style="text-align: right;">+52%</td>
+</tr>
+<tr>
+<td>La mitad del hueco (mi caso base)</td>
+<td style="text-align: right;">45%</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">+26%</td>
+</tr>
+<tr>
+<td>La tesis de disrupción se impone</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">−28%</td>
+</tr>
+<tr>
+<td><strong>Esperado</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>112,4</strong></td>
+<td style="text-align: right;"><strong>+12%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Un +12% en 3-5 años es un 2,5-4% anualizado, por debajo del 5,15% del bono americano. <strong>A estos precios, la cesta no bate el libre de riesgo en términos esperados.</strong> Eso no significa que no haya nombres que comprar; significa que no hay una cartera que comprar.</p>
+<p><strong>Ordenados por retorno que no necesita re-rating</strong> (de mejor a peor):</p>
+<ol>
+<li><strong>EXPN</strong> — 19,5x de salida, el múltiplo de hoy. Todo el retorno es crecimiento. +8% solamente, pero es el más probable.</li>
+<li><strong>SCHW</strong> — 11,0x de salida con 10% de crecimiento. El menos dependiente de la narrativa. +17%.</li>
+<li><strong>BKNG</strong> — 17,6x con 72% de ROIC. +14%.</li>
+<li><strong>REGN</strong> — 12,9x con el beneficio ya saltado. +19%. El mejor riesgo/retorno.</li>
+<li><strong>ADBE</strong> — 12,7x si crees en el 12%; 287 si no. +20%.</li>
+<li><strong>APP</strong> — el múltiplo no es el problema, la durabilidad sí. +20%.</li>
+<li><strong>SAN</strong> — 9,7x con acantilado en 2032. +27% óptico, dividendo real.</li>
+<li><strong>DTE</strong> — 16,1x sobre 4% de crecimiento, sin catalizador. +24% óptico.</li>
+<li><strong>INTU</strong> — 22,1x con desaceleración y TurboTax expuesto. +24% óptico.</li>
+<li><strong>NFLX</strong> — el DCF dice que está cara. +14%.</li>
+</ol>
+<p><strong>Precios de entrada que usaría</strong> (no los "buy below" de la nota, que son el 80% de un FV inflado): ADBE 220, INTU 300, BKNG 150, NFLX 55, APP 360, REGN 900, SAN 82, EXPN 2.800p, DTE 24, SCHW 85.</p>
+<p><strong>Calendario de catalizadores que la nota da y conviene usar:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Nombre</th>
+<th>Qué mirar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18-nov</td>
+<td>EXPN</td>
+<td>Resultados semestrales; crecimiento orgánico</td>
+</tr>
+<tr>
+<td>18-nov</td>
+<td>CPRT</td>
+<td>Coches vendidos para aseguradoras</td>
+</tr>
+<tr>
+<td>24-nov</td>
+<td>ADSK</td>
+<td>FCF frente al objetivo recortado de ~2.700 M$</td>
+</tr>
+<tr>
+<td>1-dic</td>
+<td>ADBE</td>
+<td>Toma de posesión del nuevo consejero delegado</td>
+</tr>
+<tr>
+<td>2-dic</td>
+<td>CRM</td>
+<td>Ingresos contratados, guiados al ~14%</td>
+</tr>
+<tr>
+<td>dic</td>
+<td>ADBE</td>
+<td>Primeros resultados con Chakravarthy</td>
+</tr>
+<tr>
+<td>ene</td>
+<td>NFLX</td>
+<td>Guía 2027 y horas de visionado</td>
+</tr>
+<tr>
+<td>27-ene</td>
+<td>NOW</td>
+<td>Crecimiento de ingresos contratados</td>
+</tr>
+<tr>
+<td>3-feb</td>
+<td>TMUS</td>
+<td>Altas y ingreso por cuenta</td>
+</tr>
+<tr>
+<td>4-feb</td>
+<td>DECK</td>
+<td>Hoka en tiendas propias</td>
+</tr>
+<tr>
+<td>10-feb</td>
+<td>2914</td>
+<td>Cualquier declaración sobre Rusia</td>
+</tr>
+<tr>
+<td>11-feb</td>
+<td>EXPE</td>
+<td>Reservas de consumo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qué me haría cambiar de opinión:</strong> (1) dos trimestres consecutivos de múltiplos de software estabilizados con retención neta por encima del 110%, que indicaría que la IA es canal y no sustituto; (2) que Adobe muestre crecimiento de asientos, no solo de precio por asiento; (3) un 10 años por debajo del 3,5%, que es el nivel al que el múltiplo mediano vuelve a 24x; (4) que Booking y Expedia mantengan take rate con los asistentes de IA como canal.</p>
+<hr />
+<h2 id="10-limites-de-este-analisis">10. Límites de este análisis</h2>
+<p><strong>Verificado (T1):</strong> los diez precios contra el cierre del 13-nov, los diez descuentos desde máximos de 52 semanas, el 10 años al 5,154%, el EUR/USD en 1,1028, el nombramiento de Anil Chakravarthy (comunicado de Adobe del 3-sep-2026), la ausencia de tratado de sucesiones España-EE.UU., y la aritmética interna de la nota (topes, pesos implícitos, medias).</p>
+<p><strong>No verificado (T2/T3):</strong> los P/E de hace cinco años (la nota los reconstruye y admite que son aproximados), los crecimientos esperados (consenso de analistas, no auditado), los quality scores (fórmula no publicada), las capitalizaciones, la deuda neta por nombre, y todas las cifras de negocio (noches, AUM, cuentas, suscriptores).</p>
+<p><strong>No encontrado (NOT-FOUND):</strong> los parámetros del DCF (WACC, crecimiento terminal, horizonte), los pesos del blend, los valores de escenario bajista por nombre, la fórmula del quality score y las capitalizaciones que cita la nota. Sin ellos, la valoración no es reproducible ni falsable.</p>
+<p><strong>Sesgo del analista:</strong> valoro con múltiplos de salida fijados por juicio, y mi marco de tipos (10 años al 5,15%) hace que sea más exigente que la nota. Si los tipos bajan 150 puntos, la mitad de este informe se vuelve demasiado conservador. Es una hipótesis falsable, y he escrito arriba cuál es el nivel exacto que la invalidaría.</p>
+<hr />
+<p><em>Auditoría preparada el 14 de noviembre de 2026. Datos de precio: cierre del 13-nov-2026. No es una recomendación de inversión.</em></p>
+</div>
+</body></html>

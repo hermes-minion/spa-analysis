@@ -1544,6 +1544,107 @@
       "kind": null
     },
     {
+      "ticker": "TGB",
+      "exchange": "Nota externa",
+      "name": "Ten good businesses at marked-down prices — auditoría",
+      "country": "—",
+      "sector": "Cartera · 18 nombres",
+      "date": "2026-11-13",
+      "status": "published",
+      "rating": "Revisión",
+      "rating_class": "hold",
+      "price": 100,
+      "currency": "IDX",
+      "central": 112.4,
+      "expected": 112.4,
+      "bear": 72,
+      "bull": 152.5,
+      "upside": 0.124,
+      "expected_upside": 0.124,
+      "dividend_yield": null,
+      "score": null,
+      "score_max": 100,
+      "report": "reports/TGB.html",
+      "kind": "Nota",
+      "tags": [
+        "nota externa",
+        "cartera",
+        "valoración",
+        "IA",
+        "tipos"
+      ],
+      "summary": "Auditoría de la nota del 13-nov-2026 (10 nombres + 8 en el banquillo). Precios, descuentos desde máximos y el cambio de consejero delegado de Adobe se verifican contra el cierre del 13-nov; la valoración no: los FV dependen de múltiplos de 2021 con un 10 años al 5,15%, cuatro de los nueve DCF están topados exactamente al doble del precio y el blend pesa hacia el método más generoso. Mi valor mediano queda un 31% por debajo del suyo (+19% de upside frente a +52,5%). Como cesta equiponderada: +12% esperado en 3-5 años, por debajo del libre de riesgo.",
+      "thesis": [
+        "La caída del múltiplo mediano de 24x a 17x es lo que hace un WACC que pasa del 6% al 9% con g=3%: es reprecio por tipos, no miedo a la IA. Con el 10 años al 5,15%, el mercado no está deprimido, está donde le toca.",
+        "Cuatro de los nueve DCF están topados exactamente al doble del precio (ADBE, INTU, SAN, DTE). En Adobe, DCF = múltiplos = FV = 477,1: el +100% es un techo del método, no una estimación.",
+        "El blend es 40/60 DCF/múltiplos, no declarado, y en cinco de nueve nombres la pata de múltiplos es la más generosa. El FV mediano de la nota está un 31% por encima del mío.",
+        "La cesta son seis apuestas, no diez: 20% en Dupixent (REGN+SAN), 20% en software frente a la IA, 7 de 10 en USD. Escenario esperado +12% en 3-5 años, por debajo del bono al 5,15%."
+      ],
+      "metrics": [
+        {
+          "label": "Nombres",
+          "value": "18 (10 + 8 banquillo)"
+        },
+        {
+          "label": "Apuestas independientes",
+          "value": "6"
+        },
+        {
+          "label": "P/E forward mediano",
+          "value": "13,7x"
+        },
+        {
+          "label": "Upside mediano nota",
+          "value": "+52,5%"
+        },
+        {
+          "label": "Upside mediano propio",
+          "value": "+19,0%"
+        },
+        {
+          "label": "FV nota / FV propio",
+          "value": "1,31x"
+        },
+        {
+          "label": "DCF topados al 2x",
+          "value": "4 de 9"
+        },
+        {
+          "label": "Peso en USD",
+          "value": "7 de 10"
+        },
+        {
+          "label": "10 años EE.UU.",
+          "value": "5,154%"
+        },
+        {
+          "label": "Retorno esperado cesta",
+          "value": "+12% en 3-5 años"
+        }
+      ],
+      "scenarios": [
+        {
+          "name": "Re-rating completo (FV nota)",
+          "prob": 0.2,
+          "value": 152.5,
+          "ret": 0.525
+        },
+        {
+          "name": "Base: la mitad del hueco",
+          "prob": 0.45,
+          "value": 126.0,
+          "ret": 0.26
+        },
+        {
+          "name": "La disrupción se impone",
+          "prob": 0.35,
+          "value": 72.0,
+          "ret": -0.28
+        }
+      ],
+      "scenario_note": "Índice equiponderado de los 10 nombres, base 100 al cierre del 13-nov-2026. Probabilidades subjetivas; el valor esperado (112,4) equivale a +2,5-4% anualizado a 3-5 años."
+    },
+    {
       "ticker": "VPG",
       "exchange": "NYSE",
       "name": "Vishay Precision Group, Inc.",
