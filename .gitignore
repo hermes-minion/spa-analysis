@@ -5,6 +5,7 @@
 
 /*
 !/.gitignore
+!/.env.example
 !/package.json
 !/package-lock.json
 !/wrangler.jsonc
