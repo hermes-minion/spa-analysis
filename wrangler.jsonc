@@ -1,0 +1,10 @@
+{
+  // Worker de sólo assets: Cloudflare sirve 009540/web tal cual (SPA con hash router).
+  // Con este fichero, `npx wrangler deploy` no dispara autoconfig ni abre un PR.
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "spa-analysis",
+  "compatibility_date": "2026-11-14",
+  "assets": {
+    "directory": "./009540/web"
+  }
+}

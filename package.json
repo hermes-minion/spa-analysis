@@ -1,0 +1,8 @@
+{
+  "name": "spa-analysis",
+  "private": true,
+  "description": "SPA de Equity Coverage — sitio estático en 009540/web",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  }
+}

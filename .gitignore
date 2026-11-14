@@ -5,6 +5,9 @@
 
 /*
 !/.gitignore
+!/package.json
+!/package-lock.json
+!/wrangler.jsonc
 
 !/009540/
 /009540/*

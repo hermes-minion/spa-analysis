@@ -73,11 +73,23 @@ Estado (14-nov-2026): **aplazado por decisión del usuario** — se mantiene la 
 
 Alternativa sin DNS propio: desplegar `web/` como Cloudflare Pages (`wrangler pages deploy web`), que da un `*.pages.dev` estable.
 
-## Despliegue en Cloudflare Pages (GitHub)
+## Despliegue en Cloudflare
 
-Este directorio es lo único versionado en `git@github.com:hermes-minion/spa-analysis.git`; el resto de `~/stocks` está excluido por `.gitignore` (1,8 GB de 10-Ks y cotizaciones). La clave SSH del servidor es `~/.ssh/spa_analysis_ed25519` (deploy key con permiso de escritura).
+Este directorio es lo único versionado en `git@github.com:hermes-minion/spa-analysis.git`; el resto de `~/stocks` está excluido por `.gitignore` (1,8 GB de 10-Ks y cotizaciones). La clave SSH del servidor es `~/.ssh/spa_analysis_ed25519`.
 
-Ajustes al conectar el repo en Pages:
+En 2026 Cloudflare crea los sitios estáticos como **Worker con static assets** (Workers & Pages → Create application → GitHub), no como proyecto Pages clásico. El repo ya trae la configuración que hace falta: `wrangler.jsonc` en la raíz con `assets.directory = ./009540/web`, más `package.json` y `package-lock.json` para que el build resuelva dependencias sin ambigüedad.
+
+**Ajustes al conectar el repo (Workers Builds):**
+
+| Ajuste | Valor |
+|---|---|
+| Build command | *(vacío)* |
+| Deploy command | `npx wrangler deploy` (el valor por defecto) |
+| Root directory | *(vacío: la config está en la raíz del repo)* |
+
+Resultado: `https://spa-analysis.<subdominio>.workers.dev`. Sin `wrangler.jsonc`, `wrangler deploy` dispara *autoconfig* y abre un PR en vez de desplegar: ese era el fallo.
+
+**Si en tu panel sigues en la pestaña Pages clásica:**
 
 | Ajuste | Valor |
 |---|---|
@@ -86,6 +98,6 @@ Ajustes al conectar el repo en Pages:
 | Build output directory | `009540/web` |
 | Root directory | *(vacío)* |
 
-Sin build: son ficheros estáticos y las rutas `#/` y `#/a/<TICKER>` funcionan tal cual. `_headers` evita que el CDN cachee `analyses.json`. Cada `git push` a `main` redespliega.
+En ambos casos `_headers` desactiva la caché de `analyses.json` y cada `git push` a `main` redespliega.
 
 Flujo de publicación: `python3 ~/stocks/_data/build_all.py` (o el `build_report.py` del ticker) → `./publish.sh` → `git add -A && git commit && git push`.
